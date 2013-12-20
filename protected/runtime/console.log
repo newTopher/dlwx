@@ -1,0 +1,1204 @@
+2013/12/20 23:01:30 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:01:31 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:01:31 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:03:46 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:03:46 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:03:46 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:03:46 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:03:46 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (142)
+2013/12/20 23:03:46 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:03:47 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:03:47 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:03:47 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:03:47 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:03:47 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (142)
+2013/12/20 23:03:47 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:03:52 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:03:52 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:03:52 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:03:52 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:03:52 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:03:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:03:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:03:56 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:03:56 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:03:56 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:03:56 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:03:56 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (142)
+2013/12/20 23:03:56 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:04:07 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:04:07 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:04:07 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:04:07 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:04:07 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:04:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:04:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:04:11 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:04:11 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:04:11 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:04:11 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:04:11 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (142)
+2013/12/20 23:04:11 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:04:25 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:04:25 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:04:25 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:04:25 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:04:26 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (142)
+2013/12/20 23:04:26 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:04:27 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:04:27 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:04:27 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:04:27 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:04:27 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (142)
+2013/12/20 23:04:27 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:04:30 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:04:30 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:04:30 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:04:30 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:04:30 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:04:31 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:04:31 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:04:42 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:04:42 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:04:42 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:04:42 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:04:42 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (142)
+2013/12/20 23:04:42 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:05:29 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:05:29 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:05:29 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:05:29 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:05:29 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (142)
+2013/12/20 23:05:29 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:05:33 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:05:33 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:05:33 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:05:33 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:05:33 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:05:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:05:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:05:37 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:05:37 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:05:37 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:05:37 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:05:37 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (142)
+2013/12/20 23:05:37 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:06:33 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:06:33 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:06:33 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:06:33 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:06:33 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (142)
+2013/12/20 23:06:33 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:07:18 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:07:18 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:07:18 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:07:18 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:07:18 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (142)
+2013/12/20 23:07:18 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:07:20 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:07:20 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:07:20 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:07:20 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:07:20 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (142)
+2013/12/20 23:07:20 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:07:24 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:07:24 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:07:24 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:07:24 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:07:24 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:07:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:07:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:07:28 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:07:28 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:07:28 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:07:28 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:07:28 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (142)
+2013/12/20 23:07:28 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:10:04 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:10:04 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:10:04 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:10:04 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:10:04 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (142)
+2013/12/20 23:10:04 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:10:06 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:10:06 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:10:06 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:10:06 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:10:06 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (142)
+2013/12/20 23:10:06 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:10:10 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:10:10 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:10:10 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:10:10 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:10:10 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:10:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:10:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:10:11 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.insert()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (37)
+2013/12/20 23:10:11 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `agent_wx_user` (`puid`, `wx_account`, `wx_password`, `add_time`, `update_time`, `status`, `token`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (37)
+2013/12/20 23:10:14 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:10:14 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:10:14 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:10:14 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:10:14 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (142)
+2013/12/20 23:10:14 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:11:41 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:11:41 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:11:41 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:11:41 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:11:41 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (142)
+2013/12/20 23:11:41 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:11:54 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:11:54 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:11:54 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:11:54 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:11:54 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:11:55 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:11:55 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:11:56 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.insert()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (38)
+2013/12/20 23:11:56 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `agent_wx_user` (`puid`, `wx_account`, `wx_password`, `add_time`, `update_time`, `status`, `token`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (38)
+2013/12/20 23:11:59 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:11:59 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:11:59 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:11:59 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:11:59 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (142)
+2013/12/20 23:11:59 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:17:15 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:17:15 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:17:15 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:17:15 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:17:15 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:17:15 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:17:24 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:17:24 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:17:24 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:17:24 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:17:24 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:17:24 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:21:12 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:21:12 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:21:12 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:21:12 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:21:12 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:21:12 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:21:13 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:21:13 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:21:13 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:21:13 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2013/12/20 23:21:13 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:21:13 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:28:17 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:28:17 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:28:17 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:28:17 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2013/12/20 23:28:17 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:28:17 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:37:29 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:37:29 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:37:29 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:37:29 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:37:29 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:37:30 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:37:30 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:37:30 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.findAll()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:37:30 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_wx_user` `t`
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:37:30 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2013/12/20 23:37:30 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:37:30 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (43)
+2013/12/20 23:43:10 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:43:10 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:43:10 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:43:10 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:43:10 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:43:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:43:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:43:11 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.findAll()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:43:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_wx_user` `t`
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:43:11 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2013/12/20 23:43:11 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:43:11 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (43)
+2013/12/20 23:43:52 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:43:52 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:43:52 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:43:52 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:43:52 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:43:52 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:44:09 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:44:09 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:44:09 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:44:09 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:44:09 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:44:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:44:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:44:10 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.insert()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (38)
+2013/12/20 23:44:10 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `agent_wx_user` (`puid`, `wx_account`, `wx_password`, `add_time`, `update_time`, `status`, `token`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (38)
+2013/12/20 23:44:13 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:44:13 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:44:13 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:44:13 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:44:13 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:44:13 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:44:15 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:44:15 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:44:15 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:44:15 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:44:15 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:44:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:44:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:44:16 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.findAll()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:44:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_wx_user` `t`
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:44:16 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2013/12/20 23:44:16 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:44:16 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (43)
+2013/12/20 23:44:30 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:44:30 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:44:30 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:44:30 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:44:30 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:44:30 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:44:40 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:44:40 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:44:40 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:44:40 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:44:40 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:44:41 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:44:41 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:44:41 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.insert()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (38)
+2013/12/20 23:44:41 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `agent_wx_user` (`puid`, `wx_account`, `wx_password`, `add_time`, `update_time`, `status`, `token`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (38)
+2013/12/20 23:44:44 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:44:44 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:44:44 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:44:44 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:44:44 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:44:44 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:45:01 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:45:01 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:45:01 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:45:01 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:45:01 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:45:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:45:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:45:02 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.findAll()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:45:02 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_wx_user` `t`
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:45:02 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2013/12/20 23:45:02 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:45:02 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (43)
+2013/12/20 23:45:33 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:45:33 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:45:33 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:45:33 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:45:33 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:45:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:45:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:45:34 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.findAll()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:45:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_wx_user` `t`
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:45:34 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2013/12/20 23:45:34 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:45:34 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (43)
+2013/12/20 23:46:22 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:46:22 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:46:22 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:46:22 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:46:22 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:46:23 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:46:23 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:46:23 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.findAll()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:46:23 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_wx_user` `t`
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:46:23 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2013/12/20 23:46:23 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:46:23 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (43)
+2013/12/20 23:49:39 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:49:39 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:49:39 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:49:39 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:49:39 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:49:39 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:49:40 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:49:40 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:49:40 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:49:40 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:49:40 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:49:41 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:49:41 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:49:41 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.findAll()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:49:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_wx_user` `t`
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:49:41 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2013/12/20 23:49:41 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:49:41 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (43)
+2013/12/20 23:54:52 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:54:52 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:54:52 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:54:52 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:54:52 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:54:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:54:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:54:53 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.findAll()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:54:53 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_wx_user` `t`
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:54:53 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2013/12/20 23:54:53 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:54:53 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (43)
+2013/12/20 23:55:22 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:55:22 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:55:22 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:55:22 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:55:22 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:55:22 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:55:29 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:55:29 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:55:29 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:55:29 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:55:29 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:55:30 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:55:30 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:55:30 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.insert()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (38)
+2013/12/20 23:55:30 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `agent_wx_user` (`puid`, `wx_account`, `wx_password`, `add_time`, `update_time`, `status`, `token`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (38)
+2013/12/20 23:55:33 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:55:33 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:55:33 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:55:33 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:55:33 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:55:33 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:55:34 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:55:34 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:55:34 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:55:35 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:55:35 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:55:36 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:55:36 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:55:36 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.findAll()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:55:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_wx_user` `t`
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:55:36 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2013/12/20 23:55:36 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:55:36 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (43)
+2013/12/20 23:56:38 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:56:38 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:56:38 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:56:38 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:56:38 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:56:38 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:56:47 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:56:47 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:56:47 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:56:47 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:56:47 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:56:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:56:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:56:48 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.findAll()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:56:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_wx_user` `t`
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:56:48 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2013/12/20 23:56:48 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:56:48 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (43)
+2013/12/20 23:58:10 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:10 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:10 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:10 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:58:10 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:58:10 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:58:16 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:16 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:16 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:16 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:58:16 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:58:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:58:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:58:17 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.insert()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (38)
+2013/12/20 23:58:17 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `agent_wx_user` (`puid`, `wx_account`, `wx_password`, `add_time`, `update_time`, `status`, `token`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (38)
+2013/12/20 23:58:21 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:21 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:21 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:21 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:58:21 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:58:21 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:58:33 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:33 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:33 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:33 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:58:33 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:58:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:58:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:58:34 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.insert()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (38)
+2013/12/20 23:58:34 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `agent_wx_user` (`puid`, `wx_account`, `wx_password`, `add_time`, `update_time`, `status`, `token`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (38)
+2013/12/20 23:58:37 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:37 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:37 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:37 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:58:37 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:58:37 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:58:42 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:42 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:42 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:42 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:58:42 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:58:43 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:58:43 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:58:43 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.insert()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (38)
+2013/12/20 23:58:43 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `agent_wx_user` (`puid`, `wx_account`, `wx_password`, `add_time`, `update_time`, `status`, `token`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (38)
+2013/12/20 23:58:46 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:46 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:46 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:46 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:58:46 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:58:46 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:58:51 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:51 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:51 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:51 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:58:51 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:58:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:58:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:58:52 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.insert()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (38)
+2013/12/20 23:58:52 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `agent_wx_user` (`puid`, `wx_account`, `wx_password`, `add_time`, `update_time`, `status`, `token`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (38)
+2013/12/20 23:58:55 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:55 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:55 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:58:55 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:58:55 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:58:55 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:59:01 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:59:01 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:59:01 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:59:01 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:59:01 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:59:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:59:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:59:02 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.insert()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (38)
+2013/12/20 23:59:02 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `agent_wx_user` (`puid`, `wx_account`, `wx_password`, `add_time`, `update_time`, `status`, `token`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (38)
+2013/12/20 23:59:05 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:59:05 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:59:05 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:59:05 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:59:05 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:59:05 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:59:06 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:59:06 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:59:06 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:59:06 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:59:06 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:59:07 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:59:07 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:59:07 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.findAll()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:59:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_wx_user` `t`
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:59:07 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2013/12/20 23:59:07 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:59:07 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (43)
+2013/12/20 23:59:40 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:59:40 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:59:40 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:59:40 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:59:40 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:59:41 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:59:41 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/20 23:59:41 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.findAll()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:59:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_wx_user` `t`
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/20 23:59:41 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2013/12/20 23:59:41 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:59:41 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (43)
+2013/12/20 23:59:50 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:59:50 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:59:50 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:59:50 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:59:50 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:59:50 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/20 23:59:55 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:59:55 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:59:55 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:59:55 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:59:55 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:59:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:59:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/20 23:59:56 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.insert()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (38)
+2013/12/20 23:59:56 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `agent_wx_user` (`puid`, `wx_account`, `wx_password`, `add_time`, `update_time`, `status`, `token`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (38)
+2013/12/20 23:59:59 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:59:59 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:59:59 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/20 23:59:59 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/20 23:59:59 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/20 23:59:59 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/21 00:00:03 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:00:03 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:00:03 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:00:03 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/21 00:00:03 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/21 00:00:04 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/21 00:00:04 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (28)
+2013/12/21 00:00:04 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.insert()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (38)
+2013/12/21 00:00:04 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `agent_wx_user` (`puid`, `wx_account`, `wx_password`, `add_time`, `update_time`, `status`, `token`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (38)
+2013/12/21 00:00:07 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:00:07 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:00:07 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:00:07 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/21 00:00:07 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/21 00:00:07 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/21 00:00:08 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:00:08 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:00:08 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:00:08 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/21 00:00:08 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/21 00:00:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/21 00:00:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/21 00:00:09 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.findAll()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/21 00:00:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_wx_user` `t`
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/21 00:00:09 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2013/12/21 00:00:09 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/21 00:00:09 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (43)
+2013/12/21 00:06:43 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:06:43 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:06:43 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:06:43 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/21 00:06:43 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/21 00:06:43 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/21 00:07:44 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:07:44 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:07:44 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:07:44 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/21 00:07:44 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/21 00:07:44 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/21 00:07:46 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:07:46 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:07:46 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:07:46 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/21 00:07:46 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/21 00:07:46 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/21 00:07:47 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:07:47 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:07:47 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:07:47 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/21 00:07:47 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/21 00:07:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/21 00:07:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/21 00:07:48 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.findAll()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/21 00:07:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_wx_user` `t`
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/21 00:07:48 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2013/12/21 00:07:48 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/21 00:07:48 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (43)
+2013/12/21 00:09:14 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:09:14 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:09:14 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:09:14 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/21 00:09:14 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/21 00:09:15 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/21 00:09:15 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/21 00:09:15 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.findAll()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/21 00:09:15 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_wx_user` `t`
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/21 00:09:15 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2013/12/21 00:09:15 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/21 00:09:15 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (43)
+2013/12/21 00:09:16 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:09:16 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:09:16 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:09:16 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (14)
+2013/12/21 00:09:16 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/21 00:09:16 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (16)
+2013/12/21 00:10:28 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:10:28 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:10:28 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/21 00:10:28 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/21 00:10:28 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/21 00:10:29 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/21 00:10:29 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_wx_user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (41)
+2013/12/21 00:10:29 [trace] [system.db.ar.CActiveRecord] AgentWxUserModel.findAll()
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/21 00:10:29 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_wx_user` `t`
+in E:\Apache2.2\htdocs\weixin\protected\models\AgentWxUserModel.php (49)
+2013/12/21 00:10:29 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2013/12/21 00:10:29 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (143)
+2013/12/21 00:10:29 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\AgentController.php (43)

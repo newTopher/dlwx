@@ -79,8 +79,8 @@
         <div class="well nav-collapse sidebar-nav">
             <ul class="nav nav-tabs nav-stacked main-menu">
                 <li class="nav-header hidden-tablet">个人中心</li>
-                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Account/set"><i class="icon-home"></i><span class="hidden-tablet">账户设置</span></a></li>
-                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Account/pwdset"><i class="icon-home"></i><span class="hidden-tablet">密码修改</span></a></li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/set"><i class="icon-home"></i><span class="hidden-tablet">账户设置</span></a></li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/pwdset"><i class="icon-home"></i><span class="hidden-tablet">密码修改</span></a></li>
             </ul>
         </div><!--/.well -->
 
@@ -90,6 +90,7 @@
             <ul class="nav nav-tabs nav-stacked main-menu">
                 <li class="nav-header hidden-tablet">代理商专区</li>
                 <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/addUser"><i class="icon-home"></i><span class="hidden-tablet">添加客户</span></a></li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/applyList"><i class="icon-home"></i><span class="hidden-tablet">客户申请管理</span></a></li>
             </ul>
         </div><!--/.well -->
     </div>

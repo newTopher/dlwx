@@ -22,22 +22,23 @@
             <ul id="myTab" class="nav nav-tabs">
                 <li class="active"><a href="#home" data-toggle="tab">已注册公众号</a></li>
                 <li class=""><a href="#profile" data-toggle="tab">未注册公众号</a></li>
-                <li class=""><a href="#profile2" data-toggle="tab">客户自主绑定微信</a></li>
             </ul>
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade active in" id="home">
-                    <form class="form-horizontal">
+                    <form method="post" action="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/AddWexinAccount" class="form-horizontal">
+                        <input class="input-xlarge focused" name="token" type="hidden" value="<?php echo $token; ?>">
+                        <input class="input-xlarge focused" name="puid" type="hidden" value="<?php echo $puid; ?>">
                         <fieldset>
                             <div class="control-group">
-                                <label class="control-label" for="focusedInput">公众账号用户名</label>
+                                <label class="control-label" for="focusedInput">微信用户名</label>
                                 <div class="controls">
-                                    <input class="input-xlarge focused" name="tel" id="focusedInput" type="text" value="">
+                                    <input class="input-xlarge focused" name="wx_account" id="focusedInput" type="text" value=""> <span class="help-inline">请填写已注册的公众号账号</span>
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label class="control-label" for="focusedInput">公众账号密码</label>
+                                <label class="control-label" for="focusedInput">微信密码</label>
                                 <div class="controls">
-                                    <input class="input-xlarge focused" name="tel" id="focusedInput" type="text" value="">
+                                    <input class="input-xlarge focused" name="wx_password" id="focusedInput" type="password" value=""> <span class="help-inline">请填写已注册的公众号账号密码</span>
                                 </div>
                             </div>
 
@@ -170,14 +171,6 @@
                             <button class="btn">取消</button>
                         </div>
                     </form>
-                </div>
-
-                <div class="tab-pane fade" id="profile2">
-                    <div class="alert alert-block ">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <h4 class="alert-heading">提示信息!</h4>
-                        <p>此模式下绑定微信操作步骤较多,不建议使用.</p>
-                    </div>
                 </div>
             </div>
         </div>
