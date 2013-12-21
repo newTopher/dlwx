@@ -45,8 +45,40 @@ class AgentWxUserModel extends CActiveRecord{
         }
     }
 
+    public function updateAgentUser(){
+        if(!empty($this->wx_account) && !empty($this->wx_password)){
+            $this->add_time=time();
+            if(self::model()->updateByPk($this->id,array(
+                'wx_account'=>$this->wx_account,
+                'wx_password'=>$this->wx_password,
+                'add_time'=>$this->add_time,
+                'status'=>0
+            ))){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
+    }
+
+    public function delAgentUser(){
+        if(self::model()->deleteByPk($this->id)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     public function getAgentWxUser(){
-        return self::model()->findAll();
+        $criteria =new CDbCriteria();
+        $criteria->order = 'add_time DESC';
+        return self::model()->findAll($criteria);
+    }
+
+    public function getFailReason($id){
+        return self::model()->findByPk($id);
     }
 
 }

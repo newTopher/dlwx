@@ -43,5 +43,39 @@ class AgentController extends Controller{
         $this->render('applylist',array('agentWxUserData'=>$agentWxUserData));
     }
 
+    public function actionCatFailReason(){
+        $agentWxUserModel = new AgentWxUserModel();
+        $reasonData = $agentWxUserModel->getFailReason(Yii::app()->request->getParam('id',''));
+        $this->render('failreason',array('reasonData'=>$reasonData));
+    }
+
+    public function actionResubmit(){
+        $agentWxUserModel = new AgentWxUserModel();
+        $data = $agentWxUserModel->getFailReason(Yii::app()->request->getParam('id',''));
+        $this->render('resubmit',array('data'=>$data));
+    }
+
+    public function actionDoresubmit(){
+        $agentWxUserModel = new AgentWxUserModel();
+        $agentWxUserModel->wx_account=Yii::app()->request->getParam('wx_account','');
+        $agentWxUserModel->wx_password=Yii::app()->request->getParam('wx_password','');
+        $agentWxUserModel->id=Yii::app()->request->getParam('id','');
+        if($agentWxUserModel->updateAgentUser()){
+            $this->redirect_message('重新提交成功,等待审核','success',2,Yii::app()->getBaseUrl()."/Agent/ApplyList");
+        }else{
+            $this->redirect_message('添加失败','error',2,Yii::app()->getBaseUrl()."/Agent/Resubmit");
+        }
+    }
+
+    public function actionDel(){
+        $agentWxUserModel = new AgentWxUserModel();
+        $agentWxUserModel->id=Yii::app()->request->getParam('id','');
+        if($agentWxUserModel->delAgentUser()){
+            $this->redirect_message('删除成功','success',2,Yii::app()->getBaseUrl()."/Agent/ApplyList");
+        }else{
+            $this->redirect_message('删除失败','error',2,Yii::app()->getBaseUrl()."/Agent/ApplyList");
+        }
+    }
+
 
 }

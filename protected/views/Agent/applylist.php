@@ -24,11 +24,11 @@
                     <table class="table table-striped table-bordered bootstrap-datatable datatable dataTable" id="DataTables_Table_0" aria-describedby="DataTables_Table_0_info">
                         <thead>
                         <tr role="row">
-                            <th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Username: activate to sort column descending" style="width: 166px;">编号</th>
-                            <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Date registered: activate to sort column ascending" style="width: 165px;">微信公众号</th>
-                            <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending" style="width: 78px;">申请时间</th>
-                            <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 91px;">审核状态</th>
-                            <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Actions: activate to sort column ascending" style="width: 316px;">操作</th></tr>
+                            <th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending"  style="width: 50px;">编号</th>
+                            <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 100px;">微信公众号</th>
+                            <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"  style="width: 50px;">申请时间</th>
+                            <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 80px;">审核状态</th>
+                            <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"  style="width: 100px;">操作</th></tr>
                         </thead>
 
                         <tbody role="alert" aria-live="polite" aria-relevant="all">
@@ -50,22 +50,22 @@
                             </td>
                             <td class="center ">
                                 <?php if($v->status==1): ?>
-                                <a class="btn btn-info" href="#">
+                                <a class="btn btn-info btn-small" href="#">
                                     <i class="icon-edit icon-white"></i>
                                     完善资料
                                 </a>
                                 <?php endif; ?>
 
                                 <?php if($v->status==2): ?>
-                                    <a class="btn btn-success" href="#">
+                                    <a class="btn btn-success btn-small" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/CatFailReason/id/<?php echo $v->id; ?>">
                                         <i class="icon-zoom-in icon-white"></i>
                                         查看原因
                                     </a>
-                                    <a class="btn btn-info" href="#">
+                                    <a class="btn btn-info btn-small" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/Resubmit/id/<?php echo $v->id; ?>">
                                         <i class="icon-edit icon-white"></i>
                                         重新提交
                                     </a>
-                                    <a class="btn btn-danger" href="#">
+                                    <a class="btn btn-danger btn-small" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/Del/id/<?php echo $v->id; ?>" onclick="return confirm('确定删除此条申请记录吗?')">
                                         <i class="icon-trash icon-white"></i>
                                         删除
                                     </a>
