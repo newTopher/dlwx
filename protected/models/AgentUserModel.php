@@ -30,10 +30,15 @@ class AgentUserModel extends CActiveRecord{
 
         );
     }
-
+    public function rules(){
+        return array(
+            array("email,agent_name","required"),
+            array("","")
+        );
+    }
     public function insertUser(){
         if(!empty($this->email) && !empty($this->password) && !empty($this->agent_name) && strpos($this->email,'@wapwei')){
-            $this->password=md5($this->password);
+
             if($this->insert()){
                 return true;
             }else{
@@ -42,6 +47,12 @@ class AgentUserModel extends CActiveRecord{
         }else{
             return false;
         }
+    }
+    public function selectUser(){
+
+        $AgentUser=self::model()->findAll();
+        return $AgentUser;
+
     }
 
 }

@@ -28,7 +28,8 @@ class AgentManageController extends Controller{
     }
 
     public function actionList(){
-        $this->render('list');
+        $agentUserModel = new AgentUserModel();
+        $attributes=$agentUserModel->selectUser();
+        $this->render('list',array('list'=>$attributes));
     }
-
 }
