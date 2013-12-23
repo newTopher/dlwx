@@ -16,6 +16,7 @@ class AgentWxUserModel extends CActiveRecord{
     public $add_time;
     public $update_time;
     public $status=0;
+    public $mark;
 
     public static function model($className=__CLASS__){
         return parent::model($className);
@@ -63,6 +64,23 @@ class AgentWxUserModel extends CActiveRecord{
         }
     }
 
+    public function updateAgentUserByAdmin(){
+        if(!empty($this->id)){
+            $this->update_time=time();
+            if(self::model()->updateByPk($this->id,array(
+                'status'=>$this->status,
+                'update_time'=>$this->add_time,
+                'mark'=>$this->mark
+            ))){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
+    }
+
     public function delAgentUser(){
         if(self::model()->deleteByPk($this->id)){
             return true;
@@ -71,7 +89,14 @@ class AgentWxUserModel extends CActiveRecord{
         }
     }
 
-    public function getAgentWxUser(){
+    public function getAgentWxUser($puid){
+        $criteria =new CDbCriteria();
+        $criteria->addCondition("puid=".$puid);
+        $criteria->order = 'add_time DESC';
+        return self::model()->findAll($criteria);
+    }
+
+    public function getAllAgentWxUser(){
         $criteria =new CDbCriteria();
         $criteria->order = 'add_time DESC';
         return self::model()->findAll($criteria);

@@ -38,8 +38,9 @@ class AgentController extends Controller{
     }
 
     public function actionApplyList(){
+        $puid = Yii::app()->session['user']->id;
         $agentWxUserModel = new AgentWxUserModel();
-        $agentWxUserData = $agentWxUserModel->getAgentWxUser();
+        $agentWxUserData = $agentWxUserModel->getAgentWxUser($puid);
         $this->render('applylist',array('agentWxUserData'=>$agentWxUserData));
     }
 
@@ -61,9 +62,9 @@ class AgentController extends Controller{
         $agentWxUserModel->wx_password=Yii::app()->request->getParam('wx_password','');
         $agentWxUserModel->id=Yii::app()->request->getParam('id','');
         if($agentWxUserModel->updateAgentUser()){
-            $this->redirect_message('重新提交成功,等待审核','success',2,Yii::app()->getBaseUrl()."/Agent/ApplyList");
+            $this->redirect(Yii::app()->getBaseUrl()."/Agent/ApplyList");
         }else{
-            $this->redirect_message('添加失败','error',2,Yii::app()->getBaseUrl()."/Agent/Resubmit");
+            $this->redirect(Yii::app()->getBaseUrl()."/Agent/Resubmit");
         }
     }
 

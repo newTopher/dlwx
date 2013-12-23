@@ -50,15 +50,15 @@
                                     <?php endif?>
                                 </td>
                                 <td class="center ">
-                                    <a class="btn btn-success" href="#">
+                                    <a class="btn btn-success btn-small" href="#">
                                         <i class="icon-zoom-in icon-white"></i>
                                         查看
                                     </a>
-                                    <a class="btn btn-info" href="#">
+                                    <a class="btn btn-info btn-small" href="#">
                                         <i class="icon-edit icon-white"></i>
                                         编辑
                                     </a>
-                                    <a class="btn btn-danger" href="#">
+                                    <a class="btn btn-danger btn-small" href="#">
                                         <i class="icon-trash icon-white"></i>
                                         删除
                                     </a>
