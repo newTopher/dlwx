@@ -1,0 +1,896 @@
+2013/12/24 23:11:41 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:11:41 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:11:41 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:11:41 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\user\home.php (2)
+2013/12/24 23:11:41 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2013/12/24 23:11:41 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:11:41 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:11:41 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:11:41 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:11:41 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:11:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/User/home
+---
+2013/12/24 23:11:41 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 23:11:41 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2013/12/24 23:11:41 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2013/12/24 23:23:40 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:23:40 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:23:40 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:23:40 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\user\home.php (2)
+2013/12/24 23:23:40 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2013/12/24 23:23:40 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:23:40 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:23:40 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:23:40 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:23:40 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:23:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/User/home
+---
+2013/12/24 23:23:40 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 23:23:40 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2013/12/24 23:23:40 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2013/12/24 23:44:55 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:44:55 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:44:55 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:44:55 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:44:55 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:44:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:44:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:44:56 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (15)
+2013/12/24 23:44:56 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:44:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:44:56 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2013/12/24 23:44:56 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (17)
+2013/12/24 23:44:57 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:44:57 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:44:57 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:44:57 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:44:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/User/home
+---
+2013/12/24 23:44:57 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 23:44:57 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2013/12/24 23:44:57 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2013/12/24 23:45:28 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:45:28 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:45:28 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:45:28 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:45:28 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:45:29 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:45:29 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:45:29 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (15)
+2013/12/24 23:45:29 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:45:29 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:45:29 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2013/12/24 23:45:29 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (17)
+2013/12/24 23:45:30 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:45:30 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:45:30 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:45:30 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:45:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/User/home
+---
+2013/12/24 23:45:30 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 23:45:30 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2013/12/24 23:45:30 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2013/12/24 23:45:55 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:45:55 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:45:55 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:45:55 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:45:55 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:45:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:45:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:45:56 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (15)
+2013/12/24 23:45:56 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:45:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:45:56 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2013/12/24 23:45:56 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (17)
+2013/12/24 23:45:56 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:45:56 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:45:56 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:45:56 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:45:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/User/home
+---
+2013/12/24 23:45:56 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 23:45:56 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2013/12/24 23:45:56 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2013/12/24 23:46:59 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:46:59 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:46:59 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:46:59 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:46:59 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:47:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:47:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:47:00 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (15)
+2013/12/24 23:47:00 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:47:00 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:47:00 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2013/12/24 23:47:00 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (17)
+2013/12/24 23:47:00 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:47:00 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:47:00 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:47:00 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:47:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/User/home
+---
+2013/12/24 23:47:00 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 23:47:00 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2013/12/24 23:47:00 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2013/12/24 23:50:19 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:50:19 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:50:19 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:50:19 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:50:19 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:50:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:50:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:50:20 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (15)
+2013/12/24 23:50:21 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:50:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:50:21 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2013/12/24 23:50:21 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (17)
+2013/12/24 23:50:21 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:50:21 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:50:21 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:50:21 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:50:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/User/home
+---
+2013/12/24 23:50:21 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 23:50:21 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2013/12/24 23:50:21 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2013/12/24 23:50:59 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:50:59 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:50:59 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:00 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:51:00 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:51:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:51:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:51:01 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (15)
+2013/12/24 23:51:01 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:51:01 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:51:01 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2013/12/24 23:51:01 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (17)
+2013/12/24 23:51:01 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:01 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:01 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:01 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/User/home
+---
+2013/12/24 23:51:01 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 23:51:01 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2013/12/24 23:51:01 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2013/12/24 23:51:03 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:03 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:03 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:03 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:51:03 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:51:04 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:51:04 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:51:04 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (15)
+2013/12/24 23:51:04 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:51:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:51:04 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2013/12/24 23:51:04 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (17)
+2013/12/24 23:51:04 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:04 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:04 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:04 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/User/home
+---
+2013/12/24 23:51:04 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 23:51:04 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2013/12/24 23:51:04 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2013/12/24 23:51:18 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:18 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:18 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:18 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:51:18 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:51:19 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:51:19 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:51:19 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (15)
+2013/12/24 23:51:19 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:51:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:51:19 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2013/12/24 23:51:19 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (17)
+2013/12/24 23:51:19 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:19 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:19 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:19 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/User/home
+---
+2013/12/24 23:51:19 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 23:51:19 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2013/12/24 23:51:19 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2013/12/24 23:51:56 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:56 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:56 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:56 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:51:56 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:51:57 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:51:57 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:51:57 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (15)
+2013/12/24 23:51:57 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:51:57 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:51:57 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2013/12/24 23:51:57 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (17)
+2013/12/24 23:51:57 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:57 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:57 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:57 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:51:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/User/home
+---
+2013/12/24 23:51:57 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 23:51:57 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2013/12/24 23:51:57 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2013/12/24 23:52:20 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:52:20 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:52:20 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:52:20 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:52:20 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:52:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:52:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:52:21 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (15)
+2013/12/24 23:52:21 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:52:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:52:21 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2013/12/24 23:52:21 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (17)
+2013/12/24 23:52:21 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:52:21 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:52:21 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:52:21 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:52:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/User/home
+---
+2013/12/24 23:52:21 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 23:52:21 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2013/12/24 23:52:21 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2013/12/24 23:53:32 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:53:32 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:53:32 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:53:32 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:53:32 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:53:33 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:53:33 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:53:33 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (15)
+2013/12/24 23:53:33 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:53:33 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:53:33 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2013/12/24 23:53:33 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (17)
+2013/12/24 23:53:33 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:53:33 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:53:33 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:53:33 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:53:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/User/home
+---
+2013/12/24 23:53:33 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 23:53:33 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2013/12/24 23:53:33 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2013/12/24 23:55:09 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:09 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:09 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:09 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:55:09 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:55:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:55:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:55:10 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (15)
+2013/12/24 23:55:10 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:55:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:55:10 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2013/12/24 23:55:10 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (17)
+2013/12/24 23:55:10 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:10 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:10 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:10 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/User/home
+---
+2013/12/24 23:55:10 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 23:55:10 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2013/12/24 23:55:10 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2013/12/24 23:55:13 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:13 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:13 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:13 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:55:13 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:55:14 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:55:14 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:55:14 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (15)
+2013/12/24 23:55:14 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:55:14 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:55:14 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2013/12/24 23:55:14 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (17)
+2013/12/24 23:55:14 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:14 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:14 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:14 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/User/home
+---
+2013/12/24 23:55:14 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 23:55:14 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2013/12/24 23:55:14 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2013/12/24 23:55:24 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:24 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:24 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:24 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:55:24 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:55:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:55:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:55:25 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (15)
+2013/12/24 23:55:25 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:55:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:55:25 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2013/12/24 23:55:25 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (17)
+2013/12/24 23:55:25 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:25 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:25 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:25 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/User/home
+---
+2013/12/24 23:55:25 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 23:55:25 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2013/12/24 23:55:25 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2013/12/24 23:55:44 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:44 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:44 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:44 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:55:44 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:55:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:55:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:55:45 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (15)
+2013/12/24 23:55:45 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:55:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:55:45 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2013/12/24 23:55:45 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (17)
+2013/12/24 23:55:45 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:45 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:45 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:45 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:55:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/User/home
+---
+2013/12/24 23:55:45 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 23:55:45 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2013/12/24 23:55:45 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2013/12/24 23:56:22 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:56:22 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:56:22 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:56:22 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:56:22 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:56:23 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:56:23 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:56:23 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (15)
+2013/12/24 23:56:23 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:56:23 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:56:23 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2013/12/24 23:56:23 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (17)
+2013/12/24 23:56:23 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:56:23 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:56:23 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:56:23 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:56:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/User/home
+---
+2013/12/24 23:56:23 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 23:56:23 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2013/12/24 23:56:23 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2013/12/24 23:56:42 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:56:42 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:56:42 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:56:42 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:56:42 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:56:43 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:56:43 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:56:43 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (15)
+2013/12/24 23:56:43 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:56:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:56:43 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2013/12/24 23:56:43 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (17)
+2013/12/24 23:56:43 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:56:43 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:56:43 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:56:43 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:56:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/User/home
+---
+2013/12/24 23:56:43 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 23:56:43 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2013/12/24 23:56:43 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2013/12/24 23:57:10 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:57:10 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:57:10 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:57:10 [trace] [system.CModule] Loading "db" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:57:10 [trace] [system.db.CDbConnection] Opening DB connection
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:57:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:57:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (14)
+2013/12/24 23:57:11 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (15)
+2013/12/24 23:57:11 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:57:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in E:\Apache2.2\htdocs\weixin\protected\models\UserModel.php (59)
+2013/12/24 23:57:11 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2013/12/24 23:57:11 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\UserController.php (17)
+2013/12/24 23:57:11 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:57:11 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:57:11 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:57:11 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2013/12/24 23:57:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/User/home
+---
+2013/12/24 23:57:11 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 23:57:11 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2013/12/24 23:57:11 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)

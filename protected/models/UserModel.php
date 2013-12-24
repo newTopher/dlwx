@@ -55,6 +55,10 @@ class UserModel extends CActiveRecord{
         }
     }
 
+    public function getUserById(){
+        return self::model()->findByPk($this->id);
+    }
+
 
 
 }

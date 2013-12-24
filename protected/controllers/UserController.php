@@ -11,7 +11,10 @@ class UserController extends Controller{
     public $layout='//layouts/column3';
 
     public function actionHome(){
-        $this->render('home');
+        $userModel = new UserModel();
+        $userModel->id = Yii::app()->session['user']->id;
+        $userdata = $userModel->getUserById();
+        $this->render('home',array('userdata'=>$userdata));
     }
 
 }
