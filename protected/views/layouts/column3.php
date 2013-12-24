@@ -99,30 +99,42 @@
     <div class="span2 main-menu-span">
         <div class="well nav-collapse sidebar-nav">
             <ul class="nav nav-tabs nav-stacked main-menu">
-                <li class="nav-header hidden-tablet">微信网站</li>
-                <li><a class="ajax-link" href="index.html"><i class="icon-home"></i><span class="hidden-tablet">微信对接</span></a></li>
-                <li><a class="ajax-link" href="index.html"><i class="icon-home"></i><span class="hidden-tablet">基础设置</span></a></li>
-                <li><a class="ajax-link" href="index.html"><i class="icon-home"></i><span class="hidden-tablet">网站样式</span></a></li>
-                <li><a class="ajax-link" href="index.html"><i class="icon-home"></i><span class="hidden-tablet">栏目设置</span></a></li>
+                <li class="nav-header hidden-tablet">我的万普微盟</li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/addUser"><i class="icon-user"></i><span class="hidden-tablet">我的首页</span></a></li>
+                <li><a class="ajax-link" href="index.html"><i class="icon-asterisk"></i><span class="hidden-tablet">个人设置</span></a></li>
+                <li><a class="ajax-link" href="index.html"><i class="icon-edit"></i><span class="hidden-tablet">修改密码</span></a></li>
             </ul>
         </div><!--/.well -->
         <div class="well nav-collapse sidebar-nav">
             <ul class="nav nav-tabs nav-stacked main-menu">
-                <li class="nav-header hidden-tablet">微信粉丝</li>
-                <li><a class="ajax-link" href="index.html"><i class="icon-home"></i><span class="hidden-tablet">粉丝管理</span></a></li>
-                <li><a class="ajax-link" href="index.html"><i class="icon-home"></i><span class="hidden-tablet">定向推送</span></a></li>
-                <li><a class="ajax-link" href="index.html"><i class="icon-home"></i><span class="hidden-tablet">用户消息</span></a></li>
+                <li class="nav-header hidden-tablet">微官网</li>
+                <li><a class="ajax-link" href="index.html"><i class="icon-info-sign"></i><span class="hidden-tablet">基本信息</span></a></li>
+                <li><a class="ajax-link" href="index.html"><i class="icon-list-alt"></i><span class="hidden-tablet">菜单管理</span></a></li>
             </ul>
         </div><!--/.well -->
         <div class="well nav-collapse sidebar-nav">
             <ul class="nav nav-tabs nav-stacked main-menu">
-                <li class="nav-header hidden-tablet">微信推广</li>
-                <li><a class="ajax-link" href="index.html"><i class="icon-home"></i><span class="hidden-tablet">互推联盟</span></a></li>
-                <li><a class="ajax-link" href="index.html"><i class="icon-home"></i><span class="hidden-tablet">我的请求</span></a></li>
-                <li><a class="ajax-link" href="index.html"><i class="icon-home"></i><span class="hidden-tablet">我的任务</span></a></li>
+                <li class="nav-header hidden-tablet">微信基础服务</li>
+                <li><a class="ajax-link" href="index.html"><i class="icon-resize-horizontal"></i><span class="hidden-tablet">自动回复</span></a></li>
+                <li><a class="ajax-link" href="index.html"><i class="icon-comment"></i><span class="hidden-tablet">消息管理</span></a></li>
+                <li><a class="ajax-link" href="index.html"><i class="icon-pencil"></i><span class="hidden-tablet">自定义菜单</span></a></li>
+                <li><a class="ajax-link" href="index.html"><i class="icon-thumbs-up"></i><span class="hidden-tablet">微信助手</span></a></li>
             </ul>
         </div><!--/.well -->
-
+        <div class="well nav-collapse sidebar-nav">
+            <ul class="nav nav-tabs nav-stacked main-menu">
+                <li class="nav-header hidden-tablet">粉丝互动中心</li>
+                <li><a class="ajax-link" href="index.html"><i class="icon-star"></i><span class="hidden-tablet">微信粉丝</span></a></li>
+                <li><a class="ajax-link" href="index.html"><i class="icon-comment"></i><span class="hidden-tablet">消息管理</span></a></li>
+                <li><a class="ajax-link" href="index.html"><i class="icon-random"></i><span class="hidden-tablet">粉丝互动助手</span></a></li>
+            </ul>
+        </div><!--/.well -->
+        <div class="well nav-collapse sidebar-nav">
+            <ul class="nav nav-tabs nav-stacked main-menu">
+                <li class="nav-header hidden-tablet">微网站版本</li>
+                <li><a class="ajax-link" href="index.html"><i class="icon-star"></i><span class="hidden-tablet">门店管理</span></a></li>
+            </ul>
+        </div><!--/.well -->
         <div class="well nav-collapse sidebar-nav">
             <ul class="nav nav-tabs nav-stacked main-menu">
                 <li class="nav-header hidden-tablet">数据统计</li>
@@ -152,6 +164,7 @@
     </div><!--/.fluid-container-->
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.8.21.custom.min.js"></script>
         <!-- transition / effect library -->
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap-transition.js"></script>
         <!-- alert enhancer library -->
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap-alert.js"></script>
