@@ -161,7 +161,7 @@
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap-dropdown.js"></script>
         <!-- scrolspy library -->
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap-scrollspy.js"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/formcheck.js"></script>
+
         <!-- library for creating tabs -->
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap-tab.js"></script>
         <!-- library for advanced tooltip -->

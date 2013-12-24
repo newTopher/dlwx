@@ -20,7 +20,7 @@ class AgentUserModel extends CActiveRecord{
     public $member=1;
     public $update_time=1;
     public $level=2;
-    public $status=1;
+    public $status;
     public $money = 0;
 
     public static function model($className=__CLASS__){
@@ -58,6 +58,10 @@ class AgentUserModel extends CActiveRecord{
         $AgentUser=self::model()->findAll();
         return $AgentUser;
 
+    }
+    public function AgentUserClose($email){
+        if(self::model()->updateAll(array('statues=0'),array('email'=>$email)))
+        return true;
     }
 
 }

@@ -23,14 +23,17 @@ class AgentManageController extends Controller{
         $agentUserModel->mobilephone = Yii::app()->request->getParam('mobilephone','');
         $agentUserModel->money = Yii::app()->request->getParam('money','');
         $agentUserModel->login_time=time();
+        $login_time=$agentUserModel->login_time;
         $deadline = Yii::app()->request->getParam('deadline','');
         if($deadline=="试用7天"){
-          $agentUserModel->end_time=$agentUserModel->login_time+7*3600*24;
-
+          $agentUserModel->end_time=$login_time+7*3600*24;
+          $agentUserModel->status=2;
         }elseif($deadline=="使用一年"){
-          $agentUserModel->end_time=$agentUserModel->login_time+365*3600*24;
+          $agentUserModel->end_time=$login_time+365*3600*24;
+          $agentUserModel->status=1;
         }elseif($deadline=="长期有效"){
           $agentUserModel->end_time=1;
+          $agentUserModel->status=1;
         }
         $agentUserModel->token_sub=$this->genSubToken();
         if($agentUserModel->insertUser()){
@@ -46,5 +49,11 @@ class AgentManageController extends Controller{
         $agentUserModel = new AgentUserModel();
         $attributes=$agentUserModel->selectUser();
         $this->render('list',array('list'=>$attributes));
+    }
+
+    public function actionClose(){
+        $email = Yii::app()->request->getParam('email');
+        $agentUserModel = new AgentUserModel();
+        $agentUserModel->AgentUserClose($email);
     }
 }
