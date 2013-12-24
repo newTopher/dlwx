@@ -72,14 +72,15 @@
                                         <i class="icon-edit icon-white"></i>
                                         编辑
                                     </a>
-                                    <a class="btn btn-danger" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/Close?email=<?php echo $val->email?>">
+                                    <a class="btn btn-danger" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/Close?id=<?php echo $val->id?>">
                                         <i class="icon-trash icon-white"></i>
                                         停用
                                     </a>
                                     <?php elseif($status==0):?>
                                     &nbsp;&nbsp;&nbsp;<span class="label">查看</span>
                                     &nbsp;&nbsp;&nbsp;<span class="label">编辑</span>
-                                    &nbsp;&nbsp;&nbsp;<a class="btn btn-danger" href="">
+                                    &nbsp;&nbsp;&nbsp;
+                                    <a class="btn btn-danger" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/Close?id=<?php echo $val->id?>&status=<?php echo $status?>">
                                         <i class="icon-trash icon-white"></i>
                                         开启
                                     </a>

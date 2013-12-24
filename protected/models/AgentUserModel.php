@@ -59,9 +59,19 @@ class AgentUserModel extends CActiveRecord{
         return $AgentUser;
 
     }
-    public function AgentUserClose($email){
-        if(self::model()->updateAll(array('statues=0'),array('email'=>$email)))
-        return true;
+    public function AgentUserClose(){
+        if(self::model()->updateByPk($this->id,array('status'=>0,'update_time'=>time()))){
+            return true;
+        }else{
+            return false;
+        }
     }
 
+    public function AgentUserOpen(){
+        if(self::model()->updateByPk($this->id,array('status'=>$this->status,'update_time'=>time()))){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

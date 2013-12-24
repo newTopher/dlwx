@@ -8972,3 +8972,1243 @@ in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
 in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
 2013/12/24 22:17:07 [trace] [system.CModule] Loading "clientScript" application component
 in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:22:02 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:22:02 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:22:02 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:22:02 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:22:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.html".' in D:\doudou1\weixin\dlwx\framework\web\CController.php:483
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CController.php(270): CController->missingAction('index.html')
+#1 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): CController->run('index.html')
+#2 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('AgentManage/ind...')
+#3 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\doudou1\weixin\dlwx\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/dlwx/AgentManage/index.html
+HTTP_REFERER=http://www.weixin.com/dlwx/AgentManage/list
+---
+2013/12/24 22:22:02 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 22:22:02 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column1.php (2)
+2013/12/24 22:22:02 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\SiteController.php (45)
+2013/12/24 22:22:04 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:22:04 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:22:04 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:22:04 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:04 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:05 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:22:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:22:05 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:22:05 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:22:05 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:22:08 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:22:08 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:22:08 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:22:08 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:08 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:09 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:22:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:22:09 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:22:09 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:22:09 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:22:12 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:22:12 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:22:12 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:22:12 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:12 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:13 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:22:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:22:13 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:22:13 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:22:13 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:22:20 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:22:20 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:22:20 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:22:20 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:20 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:21 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:22:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:22:21 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:22:21 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:22:21 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:22:34 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:22:34 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:22:34 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:22:34 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:34 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:35 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:35 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:35 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:22:35 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:22:35 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:22:35 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:22:35 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:22:47 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:22:47 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:22:47 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:22:47 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:47 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:22:48 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:22:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:22:48 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:22:48 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:22:48 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:23:17 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:23:17 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:23:17 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:23:17 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:23:17 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:23:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:23:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:23:18 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:23:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:23:18 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:23:18 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:23:18 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:23:45 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:23:45 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:23:45 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:23:45 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:23:45 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:23:46 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:23:46 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:23:46 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:23:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:23:46 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:23:46 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:23:46 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:24:42 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:24:42 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:24:42 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:24:42 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:24:42 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:24:43 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:24:43 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:24:43 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:24:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:24:43 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:24:43 [error] [php] Trying to get property of non-object (D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php:35)
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CController.php(784): AgentManageController->renderFile()
+#1 D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php(51): AgentManageController->render()
+#2 D:\doudou1\weixin\dlwx\framework\web\actions\CInlineAction.php(49): AgentManageController->actionList()
+#3 D:\doudou1\weixin\dlwx\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 D:\doudou1\weixin\dlwx\framework\web\CController.php(286): AgentManageController->runAction()
+#5 D:\doudou1\weixin\dlwx\framework\web\CController.php(265): AgentManageController->runActionWithFilters()
+#6 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): AgentManageController->run()
+#7 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\doudou1\weixin\dlwx\index.php(13): CWebApplication->run()
+REQUEST_URI=/dlwx/AgentManage/list
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:24:43 [trace] [system.CModule] Loading "errorHandler" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:24:55 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:24:55 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:24:55 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:24:55 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column1.php (2)
+2013/12/24 22:24:55 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\LoginController.php (27)
+2013/12/24 22:25:11 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:11 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:11 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:11 [trace] [system.CModule] Loading "user" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\LoginController.php (16)
+2013/12/24 22:25:11 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\LoginController.php (16)
+2013/12/24 22:25:11 [trace] [system.db.ar.CActiveRecord] AdminUserModel.find()
+in D:\doudou1\weixin\dlwx\protected\components\UserIdentity.php (24)
+2013/12/24 22:25:11 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\components\UserIdentity.php (24)
+2013/12/24 22:25:11 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\components\UserIdentity.php (24)
+2013/12/24 22:25:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `admin_user`
+in D:\doudou1\weixin\dlwx\protected\components\UserIdentity.php (24)
+2013/12/24 22:25:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `admin_user`
+in D:\doudou1\weixin\dlwx\protected\components\UserIdentity.php (24)
+2013/12/24 22:25:12 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `admin_user` `t` WHERE LOWER(email)=? LIMIT 1
+in D:\doudou1\weixin\dlwx\protected\components\UserIdentity.php (24)
+2013/12/24 22:25:12 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:13 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:13 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:13 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\main\index.php (12)
+2013/12/24 22:25:13 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:25:13 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\MainController.php (25)
+2013/12/24 22:25:16 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:16 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:16 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:16 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:16 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:17 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:25:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:25:17 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:25:17 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:25:17 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:25:40 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:40 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:40 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:40 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:40 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:41 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:41 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:41 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:25:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:25:41 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:25:41 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:25:41 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:25:44 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:44 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:44 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:44 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:44 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:45 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:25:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:25:45 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:25:45 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:25:45 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:25:46 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:46 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:46 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:46 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:46 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:47 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:47 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:47 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:25:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:25:47 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:25:47 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:25:47 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:25:50 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:50 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:50 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:50 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:25:50 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:25:50 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (14)
+2013/12/24 22:25:51 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:51 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:51 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:51 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:51 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:52 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:25:52 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:25:52 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:25:52 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:25:52 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:25:54 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:54 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:54 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:54 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:25:54 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:25:54 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (14)
+2013/12/24 22:25:55 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:55 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:55 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:25:55 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:55 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:25:56 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:25:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:25:56 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:25:56 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:25:56 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:26:52 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:26:52 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:26:52 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:26:52 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:26:52 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:26:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:26:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:26:53 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:26:53 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:26:53 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:26:53 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:26:53 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:29:18 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:29:18 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:29:18 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:29:18 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:29:18 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:29:18 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (14)
+2013/12/24 22:29:17 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:29:17 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:29:17 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:29:17 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:29:17 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:29:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:29:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:29:18 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:29:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:29:18 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:29:18 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:29:18 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:29:34 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:29:34 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:29:34 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:29:34 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:29:34 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:29:34 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (14)
+2013/12/24 22:29:36 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:29:36 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:29:36 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:29:36 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:29:36 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:29:36 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (14)
+2013/12/24 22:29:38 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:29:38 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:29:38 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:29:38 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:29:38 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:29:39 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:29:39 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:29:39 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:29:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:29:39 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:29:39 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:29:39 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:29:41 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:29:41 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:29:41 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:29:41 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:29:41 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:29:41 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (14)
+2013/12/24 22:29:45 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:29:45 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:29:45 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:29:45 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:29:45 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:29:46 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:29:46 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:29:46 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:29:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:29:46 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:29:46 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:29:46 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:32:07 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:32:07 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:32:07 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:32:07 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:32:07 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:32:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:32:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:32:08 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:32:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:32:08 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:32:08 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:32:08 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:32:10 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:32:10 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:32:10 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:32:10 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:32:10 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:32:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:32:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:32:11 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:32:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:32:11 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:32:11 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:32:11 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:32:14 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:32:14 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:32:14 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:32:14 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:32:14 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:32:15 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:32:15 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:32:15 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:32:15 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:32:15 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:32:15 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:32:15 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:32:20 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:32:20 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:32:20 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:32:20 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:32:20 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:32:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:32:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:32:21 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:32:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:32:21 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:32:21 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:32:21 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:32:45 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:32:45 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:32:45 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:32:45 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (56)
+2013/12/24 22:32:45 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (56)
+2013/12/24 22:32:46 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (56)
+2013/12/24 22:32:46 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (56)
+2013/12/24 22:32:46 [trace] [system.db.ar.CActiveRecord] AgentUserModel.updateAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:32:46 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:32:46 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.email" is not defined.' in D:\doudou1\weixin\dlwx\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\db\schema\CDbCriteria.php(160): CComponent->__set('email', '??????@wapwei')
+#1 D:\doudou1\weixin\dlwx\framework\db\schema\CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 D:\doudou1\weixin\dlwx\framework\db\ar\CActiveRecord.php(1764): CDbCommandBuilder->createCriteria(Array, Array)
+#3 D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php(63): CActiveRecord->updateAll(Array, Array)
+#4 D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php(57): AgentUserModel->AgentUserClose('??????@wapwei')
+#5 D:\doudou1\weixin\dlwx\framework\web\actions\CInlineAction.php(49): AgentManageController->actionClose()
+#6 D:\doudou1\weixin\dlwx\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\doudou1\weixin\dlwx\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 D:\doudou1\weixin\dlwx\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): CController->run('Close')
+#10 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('AgentManage/Clo...')
+#11 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 D:\doudou1\weixin\dlwx\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/dlwx/AgentManage/Close?email=%E6%90%9C%E7%B4%A2@wapwei
+HTTP_REFERER=http://www.weixin.com/dlwx/AgentManage/list
+---
+2013/12/24 22:32:46 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 22:35:05 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:35:05 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:35:05 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:35:05 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (56)
+2013/12/24 22:35:05 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (56)
+2013/12/24 22:35:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (56)
+2013/12/24 22:35:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (56)
+2013/12/24 22:35:06 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:35:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t` WHERE 搜索@wapwei
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:35:06 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:35:06 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@wapwei' at line 1. The SQL statement executed was: SELECT * FROM `agent_user` `t` WHERE 搜索@wapwei.
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:35:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@wapwei' at line 1. The SQL statement executed was: SELECT * FROM `agent_user` `t` WHERE 搜索@wapwei' in D:\doudou1\weixin\dlwx\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\doudou1\weixin\dlwx\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 D:\doudou1\weixin\dlwx\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php(63): CActiveRecord->findAll('??????@wapwei')
+#4 D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php(57): AgentUserModel->AgentUserClose('??????@wapwei')
+#5 D:\doudou1\weixin\dlwx\framework\web\actions\CInlineAction.php(49): AgentManageController->actionClose()
+#6 D:\doudou1\weixin\dlwx\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\doudou1\weixin\dlwx\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 D:\doudou1\weixin\dlwx\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): CController->run('Close')
+#10 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('AgentManage/Clo...')
+#11 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 D:\doudou1\weixin\dlwx\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/dlwx/AgentManage/Close?email=%E6%90%9C%E7%B4%A2@wapwei
+HTTP_REFERER=http://www.weixin.com/dlwx/AgentManage/list
+---
+2013/12/24 22:35:06 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 22:37:05 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:37:05 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:37:05 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:37:05 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (56)
+2013/12/24 22:37:05 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (56)
+2013/12/24 22:37:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (56)
+2013/12/24 22:37:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (56)
+2013/12/24 22:37:06 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:37:07 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:37:07 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.email" is not defined.' in D:\doudou1\weixin\dlwx\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\db\schema\CDbCriteria.php(160): CComponent->__set('email', '??????@wapwei')
+#1 D:\doudou1\weixin\dlwx\framework\db\schema\CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 D:\doudou1\weixin\dlwx\framework\db\ar\CActiveRecord.php(1469): CDbCommandBuilder->createCriteria(Array, Array)
+#3 D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php(63): CActiveRecord->findAll(Array)
+#4 D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php(57): AgentUserModel->AgentUserClose('??????@wapwei')
+#5 D:\doudou1\weixin\dlwx\framework\web\actions\CInlineAction.php(49): AgentManageController->actionClose()
+#6 D:\doudou1\weixin\dlwx\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\doudou1\weixin\dlwx\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 D:\doudou1\weixin\dlwx\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): CController->run('Close')
+#10 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('AgentManage/Clo...')
+#11 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 D:\doudou1\weixin\dlwx\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/dlwx/AgentManage/Close?email=%E6%90%9C%E7%B4%A2@wapwei
+HTTP_REFERER=http://www.weixin.com/dlwx/AgentManage/list
+---
+2013/12/24 22:37:07 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 22:39:08 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:39:08 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:39:08 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:39:08 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (56)
+2013/12/24 22:39:08 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (56)
+2013/12/24 22:39:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (56)
+2013/12/24 22:39:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (56)
+2013/12/24 22:39:09 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:39:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t` WHERE email=:email
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:39:09 [error] [php] Attempt to assign property of non-object (D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php:64)
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\doudou1\weixin\dlwx\framework\web\CController.php(286): AgentManageController->runAction()
+#2 D:\doudou1\weixin\dlwx\framework\web\CController.php(265): AgentManageController->runActionWithFilters()
+#3 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): AgentManageController->run()
+#4 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\doudou1\weixin\dlwx\index.php(13): CWebApplication->run()
+REQUEST_URI=/dlwx/AgentManage/Close?email=%E6%90%9C%E7%B4%A2@wapwei
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (64)
+2013/12/24 22:39:09 [trace] [system.CModule] Loading "errorHandler" application component
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (64)
+2013/12/24 22:40:12 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:40:12 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:40:12 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:40:12 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (56)
+2013/12/24 22:40:12 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (56)
+2013/12/24 22:40:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (56)
+2013/12/24 22:40:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (56)
+2013/12/24 22:40:13 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findByAttributes()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:40:13 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:40:13 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.:email" is not defined.' in D:\doudou1\weixin\dlwx\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\db\schema\CDbCriteria.php(160): CComponent->__set(':email', '??????@wapwei')
+#1 D:\doudou1\weixin\dlwx\framework\db\schema\CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 D:\doudou1\weixin\dlwx\framework\db\schema\CDbCommandBuilder.php(661): CDbCommandBuilder->createCriteria(Array, Array)
+#3 D:\doudou1\weixin\dlwx\framework\db\ar\CActiveRecord.php(1518): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), 'email=:email', Array, Array, '`t`.')
+#4 D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php(63): CActiveRecord->findByAttributes('email=:email', Array)
+#5 D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php(57): AgentUserModel->AgentUserClose('??????@wapwei')
+#6 D:\doudou1\weixin\dlwx\framework\web\actions\CInlineAction.php(49): AgentManageController->actionClose()
+#7 D:\doudou1\weixin\dlwx\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 D:\doudou1\weixin\dlwx\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 D:\doudou1\weixin\dlwx\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): CController->run('Close')
+#11 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('AgentManage/Clo...')
+#12 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 D:\doudou1\weixin\dlwx\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/dlwx/AgentManage/Close?email=%E6%90%9C%E7%B4%A2@wapwei
+HTTP_REFERER=http://www.weixin.com/dlwx/AgentManage/list
+---
+2013/12/24 22:40:13 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/24 22:48:34 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:48:34 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:48:34 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:48:34 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:48:34 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:48:35 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:48:35 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:48:35 [trace] [system.db.ar.CActiveRecord] AgentUserModel.updateByPk()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:48:35 [trace] [system.db.CDbCommand] Executing SQL: UPDATE `agent_user` SET `status`=:yp0, `update_time`=:yp1 WHERE `agent_user`.`id`=0
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:51:44 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:51:44 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:51:44 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:51:44 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:51:44 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:51:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:51:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:51:45 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:51:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:51:45 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:51:45 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:51:45 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:51:51 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:51:51 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:51:51 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:51:51 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:51:51 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:51:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:51:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:51:52 [trace] [system.db.ar.CActiveRecord] AgentUserModel.updateByPk()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:51:52 [trace] [system.db.CDbCommand] Executing SQL: UPDATE `agent_user` SET `status`=:yp0, `update_time`=:yp1 WHERE `agent_user`.`id`=14
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:51:52 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:51:52 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:51:52 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:51:52 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:51:52 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:51:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:51:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:51:53 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:51:53 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:51:53 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:51:53 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:51:53 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:52:00 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:52:00 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:52:00 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:52:00 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:52:00 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:52:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:52:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:52:01 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:52:01 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:52:01 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:52:01 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:52:01 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:57:27 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:57:27 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:57:27 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:57:27 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:57:27 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:57:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:57:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:57:28 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:57:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:57:28 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:57:28 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:57:28 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:57:34 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:57:34 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:57:34 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:57:34 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:57:34 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:57:35 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:57:35 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:57:35 [trace] [system.db.ar.CActiveRecord] AgentUserModel.updateByPk()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:57:35 [trace] [system.db.CDbCommand] Executing SQL: UPDATE `agent_user` SET `status`=:yp0, `update_time`=:yp1 WHERE `agent_user`.`id`=15
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:57:35 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:57:35 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:57:35 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:57:35 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:57:35 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:57:36 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:57:36 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:57:36 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:57:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:57:36 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:57:36 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:57:36 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:57:57 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:57:57 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:57:57 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:57:57 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:57:57 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:57:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:57:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:57:58 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:57:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:57:58 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:57:58 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:57:58 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:58:01 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:58:01 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:58:01 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:58:01 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:58:01 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:58:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:58:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:58:02 [trace] [system.db.ar.CActiveRecord] AgentUserModel.updateByPk()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:58:02 [trace] [system.db.CDbCommand] Executing SQL: UPDATE `agent_user` SET `status`=:yp0, `update_time`=:yp1 WHERE `agent_user`.`id`=14
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:58:03 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:58:03 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:58:03 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:58:03 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:58:03 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:58:04 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:58:04 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:58:04 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:58:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:58:04 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:58:04 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:58:04 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:58:07 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:58:07 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:58:07 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:58:07 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:58:07 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:58:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:58:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:58:09 [trace] [system.db.ar.CActiveRecord] AgentUserModel.updateByPk()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:58:09 [trace] [system.db.CDbCommand] Executing SQL: UPDATE `agent_user` SET `status`=:yp0, `update_time`=:yp1 WHERE `agent_user`.`id`=15
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:58:09 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:58:09 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:58:09 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:58:09 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:58:09 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:58:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:58:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:58:10 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:58:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:58:10 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:58:10 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:58:10 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:59:11 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:59:11 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:59:11 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:59:11 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:59:11 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:59:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:59:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:59:12 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:59:12 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:59:12 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:59:12 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:59:12 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)
+2013/12/24 22:59:15 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:59:15 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:59:15 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:59:15 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:59:15 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:59:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:59:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (55)
+2013/12/24 22:59:16 [trace] [system.db.ar.CActiveRecord] AgentUserModel.updateByPk()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:59:16 [trace] [system.db.CDbCommand] Executing SQL: UPDATE `agent_user` SET `status`=:yp0, `update_time`=:yp1 WHERE `agent_user`.`id`=14
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (63)
+2013/12/24 22:59:16 [trace] [system.CModule] Loading "log" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:59:16 [trace] [system.CModule] Loading "request" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:59:16 [trace] [system.CModule] Loading "urlManager" application component
+in D:\doudou1\weixin\dlwx\index.php (13)
+2013/12/24 22:59:16 [trace] [system.CModule] Loading "db" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:59:16 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:59:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:59:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `agent_user`
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (49)
+2013/12/24 22:59:17 [trace] [system.db.ar.CActiveRecord] AgentUserModel.findAll()
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:59:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `agent_user` `t`
+in D:\doudou1\weixin\dlwx\protected\models\AgentUserModel.php (58)
+2013/12/24 22:59:17 [trace] [system.CModule] Loading "session" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (35)
+2013/12/24 22:59:17 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\doudou1\weixin\dlwx\protected\views\layouts\column3.php (143)
+2013/12/24 22:59:17 [trace] [system.CModule] Loading "clientScript" application component
+in D:\doudou1\weixin\dlwx\protected\controllers\AgentManageController.php (51)

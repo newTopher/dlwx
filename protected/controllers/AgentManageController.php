@@ -52,8 +52,17 @@ class AgentManageController extends Controller{
     }
 
     public function actionClose(){
-        $email = Yii::app()->request->getParam('email');
         $agentUserModel = new AgentUserModel();
-        $agentUserModel->AgentUserClose($email);
+        $agentUserModel->id = Yii::app()->request->getParam('id','');
+        $agentUserModel->AgentUserClose();
+        $this->redirect(Yii::app()->getBaseUrl().'/AgentManage/list');
+    }
+
+    public function actionOpen(){
+        $agentUserModel = new AgentUserModel();
+        $agentUserModel->id = Yii::app()->request->getParam('id','');
+        $agentUserModel->status = Yii::app()->request->getParam('status','');
+        echo   $agentUserModel->status;exit;
+        $agentUserModel->AgentUserOpen();
     }
 }
