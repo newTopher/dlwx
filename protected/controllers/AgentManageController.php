@@ -16,14 +16,29 @@ class AgentManageController extends Controller{
 
     public function actionInsert(){
         $agentUserModel = new AgentUserModel();
-        $agentUserModel->email = Yii::app()->request->getParam('email','');
-        $agentUserModel->password = Yii::app()->request->getParam('password','');
+        $agentUserModel->email = Yii::app()->request->getParam('email','')."@wapwei";
+        $agentUserModel->password = md5(Yii::app()->request->getParam('password',''));
         $agentUserModel->agent_name = Yii::app()->request->getParam('agent_name','');
+        $agentUserModel->telephone = Yii::app()->request->getParam('telephone','');
+        $agentUserModel->mobilephone = Yii::app()->request->getParam('mobilephone','');
+        $agentUserModel->money = Yii::app()->request->getParam('money','');
+        $agentUserModel->login_time=time();
+        $deadline = Yii::app()->request->getParam('deadline','');
+        if($deadline=="试用7天"){
+          $agentUserModel->end_time=$agentUserModel->login_time+7*3600*24;
+
+        }elseif($deadline=="使用一年"){
+          $agentUserModel->end_time=$agentUserModel->login_time+365*3600*24;
+        }elseif($deadline=="长期有效"){
+          $agentUserModel->end_time=1;
+        }
         $agentUserModel->token_sub=$this->genSubToken();
         if($agentUserModel->insertUser()){
             $this->redirect_message('添加成功','success',2,Yii::app()->getBaseUrl()."/AgentManage/add");
         }else{
             $this->redirect_message('添加失败','error',2,Yii::app()->getBaseUrl()."/AgentManage/add");
+            exit;
+
         }
     }
 

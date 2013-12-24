@@ -27,9 +27,10 @@
                             <th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Username: activate to sort column descending" style="width: 166px;">用户名</th>
                             <th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Username: activate to sort column descending" style="width: 100px;">固话</th>
                             <th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Username: activate to sort column descending" style="width: 100px;">手机</th>
-                            <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Date registered: activate to sort column ascending" style="width: 150px;">注册日期</th>
+                            <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Date registered: activate to sort column ascending" style="width: 120px;">注册日期</th>
+                            <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Actions: activate to sort column ascending" style="width: 120px;">续费日期</th>
                             <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending" style="width: 78px;">金额</th>
-                            <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 70px;">状态</th>
+                            <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 50px;">状态</th>
                             <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Actions: activate to sort column ascending" style="width: 316px;">操作</th>
                         </tr>
                         </thead>
@@ -41,12 +42,16 @@
                                 <td class=" sorting_1"><?php echo $val->telephone;?></td>
                                 <td class=" sorting_1"><?php echo $val->mobilephone;?></td>
                                 <td class="center "><?php echo $val->login_time;?></td>
+                                <td class="center "><?php echo $val->update_time?></td>
                                 <td class="center "><?php echo $val->money?></td>
+
                                 <td class="center ">
                                     <?php if($val->status==1):?>
                                         <span class="label label-success">运行</span>
-                                    <?php else: ?>
+                                    <?php elseif($val->status==0): ?>
                                         <span class="label label-failure">暂停</span>
+                                    <?php elseif($val->status==2):?>
+                                    <span class="label label-warning">试用</span>
                                     <?php endif?>
                                 </td>
                                 <td class="center ">

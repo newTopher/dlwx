@@ -12,7 +12,13 @@ class AgentUserModel extends CActiveRecord{
     public $email;
     public $password;
     public $agent_name;
+    public $telephone;
+    public $mobilephone;
+    public $login_time;
+    public $end_time;
     public $token_sub;
+    public $member=1;
+    public $update_time=1;
     public $level=2;
     public $status=1;
     public $money = 0;
@@ -32,15 +38,14 @@ class AgentUserModel extends CActiveRecord{
     }
     public function rules(){
         return array(
-            array("email,agent_name","required"),
-            array("","")
+
         );
     }
     public function insertUser(){
         if(!empty($this->email) && !empty($this->password) && !empty($this->agent_name) && strpos($this->email,'@wapwei')){
-
             if($this->insert()){
                 return true;
+
             }else{
                 return false;
             }
