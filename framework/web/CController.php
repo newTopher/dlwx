@@ -1229,8 +1229,7 @@ class CController extends CBaseController
 		$output=str_replace(CHtml::pageStateField(''),CHtml::pageStateField($value),$output);
 	}
 
-    public function redirect_message($message='成功', $status='success',$time=3, $url=false )
-    {
+    public function redirect_message($message='成功', $status='success',$time=3, $url=false ){
 
         $back_color ='#ff0000';
 
