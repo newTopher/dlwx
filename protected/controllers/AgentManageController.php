@@ -28,12 +28,15 @@ class AgentManageController extends Controller{
         if($deadline=="试用7天"){
           $agentUserModel->end_time=$login_time+7*3600*24;
           $agentUserModel->status=2;
+          $agentUserModel->type=2;
         }elseif($deadline=="使用一年"){
           $agentUserModel->end_time=$login_time+365*3600*24;
           $agentUserModel->status=1;
+          $agentUserModel->type=1;
         }elseif($deadline=="长期有效"){
           $agentUserModel->end_time=1;
           $agentUserModel->status=1;
+          $agentUserModel->type=0;
         }
         $agentUserModel->token_sub=$this->genSubToken();
         if($agentUserModel->insertUser()){
@@ -61,8 +64,13 @@ class AgentManageController extends Controller{
     public function actionOpen(){
         $agentUserModel = new AgentUserModel();
         $agentUserModel->id = Yii::app()->request->getParam('id','');
-        $agentUserModel->status = Yii::app()->request->getParam('status','');
-        echo   $agentUserModel->status;exit;
+        $agentUserModel->type = Yii::app()->request->getParam('type','');
         $agentUserModel->AgentUserOpen();
+
+        $this->redirect(Yii::app()->getBaseUrl().'/AgentManage/list');
+    }
+
+    public function actionView(){
+        $this->render('view');
     }
 }

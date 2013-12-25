@@ -64,23 +64,19 @@
                                 </td>
                                 <td class="center ">
                                     <?php if($status==1||$status==2):?>
-                                    <a class="btn btn-success" href="#">
+                                    <a class="btn btn-success" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/view">
                                         <i class="icon-zoom-in icon-white"></i>
-                                        查看
-                                    </a>
-                                    <a class="btn btn-info" href="#">
-                                        <i class="icon-edit icon-white"></i>
-                                        编辑
+                                       编辑
                                     </a>
                                     <a class="btn btn-danger" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/Close?id=<?php echo $val->id?>">
                                         <i class="icon-trash icon-white"></i>
                                         停用
                                     </a>
                                     <?php elseif($status==0):?>
-                                    &nbsp;&nbsp;&nbsp;<span class="label">查看</span>
-                                    &nbsp;&nbsp;&nbsp;<span class="label">编辑</span>
+                                    &nbsp;&nbsp;&nbsp;<span class="label" href="">编辑</span>
+
                                     &nbsp;&nbsp;&nbsp;
-                                    <a class="btn btn-danger" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/Close?id=<?php echo $val->id?>&status=<?php echo $status?>">
+                                    <a class="btn btn-danger" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/Open?id=<?php echo $val->id?>&type=<?php echo $val->type?>">
                                         <i class="icon-trash icon-white"></i>
                                         开启
                                     </a>

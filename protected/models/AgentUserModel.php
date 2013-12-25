@@ -22,6 +22,7 @@ class AgentUserModel extends CActiveRecord{
     public $level=2;
     public $status;
     public $money = 0;
+    public $type;
 
     public static function model($className=__CLASS__){
         return parent::model($className);
@@ -68,10 +69,18 @@ class AgentUserModel extends CActiveRecord{
     }
 
     public function AgentUserOpen(){
-        if(self::model()->updateByPk($this->id,array('status'=>$this->status,'update_time'=>time()))){
+        if($this->type==1||$this->type==0){
+            $status=1;
+        }elseif($this->type==2){
+            $status=2;
+        }
+        if(self::model()->updateByPk($this->id,array('status'=>$status,'update_time'=>time()))){
             return true;
         }else{
             return false;
         }
+    }
+    public function AgentUserView(){
+
     }
 }
