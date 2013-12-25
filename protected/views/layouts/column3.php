@@ -100,7 +100,7 @@
         <div class="well nav-collapse sidebar-nav">
             <ul class="nav nav-tabs nav-stacked main-menu">
                 <li class="nav-header hidden-tablet">我的万普微盟</li>
-                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/addUser"><i class="icon-user"></i><span class="hidden-tablet">我的首页</span></a></li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/User/home"><i class="icon-user"></i><span class="hidden-tablet">我的首页</span></a></li>
                 <li><a class="ajax-link" href="index.html"><i class="icon-asterisk"></i><span class="hidden-tablet">个人设置</span></a></li>
                 <li><a class="ajax-link" href="index.html"><i class="icon-edit"></i><span class="hidden-tablet">修改密码</span></a></li>
             </ul>

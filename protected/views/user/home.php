@@ -41,12 +41,87 @@
         </div>
         <div class="box-content">
             <dl class="dl-horizontal">
-                <h4>我的账号信息</h4>
-                <hr>
-                <dt>登陆账号</dt>
-                <dd>designer</dd>
-                <dt>服务商</dt>
-                <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th class="info"><h3>账号信息</h3></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td width="200px;">登陆账号</td>
+                        <td><?php echo $userdata->email; ?></td>
+                    </tr>
+                    <tr>
+                        <td>账号状态</td>
+                        <td>
+                            <?php if($userdata->status == 1): ?>
+                                <span style="font-weight: bold;" class="green">运行中</span>
+                            <?php endif; ?>
+                            <?php if($userdata->status == 0): ?>
+                                <span style="font-weight: bold;" class="red">已暂停</span>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>账号类型</td>
+                        <td>
+                            <?php if($userdata->type > 0): ?>
+                                <span style="font-weight: bold;" class="blue">正式账号</span>
+                            <?php endif; ?>
+                            <?php if($userdata->type == 0): ?>
+                                <span style="font-weight: bold;" class="blue">测试账号</span>
+                                <button class="btn btn-mini btn-primary">申请正式账号</button>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>到期时间</td>
+                        <td>2013-12-12,还剩余23天</td>
+                    </tr>
+                    <tr>
+                        <td>账户余额</td>
+                        <td>100元</td>
+                    </tr>
+                    <tr>
+                        <td>我的微盟版本</td>
+                        <td>基础版</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </dl>
+
+            <dl class="dl-horizontal">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th class="info"><h3>微信公众号信息</h3></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td width="200px;">公众账号用户名</td>
+                        <td>Jacob</td>
+                    </tr>
+                    <tr>
+                        <td>token</td>
+                        <td>ggdgsgsdgdsghs</td>
+                    </tr>
+                    <tr>
+                        <td>url</td>
+                        <td>2013-12-12,还剩余23天</td>
+                    </tr>
+                    <tr>
+                        <td>绑定时间</td>
+                        <td>2013-12-12,还剩余23天</td>
+                    </tr>
+                    <tr>
+                        <td>绑定状态</td>
+                        <td>开启</td>
+                    </tr>
+                    </tbody>
+                </table>
 
             </dl>
             <div class="clearfix"></div>
