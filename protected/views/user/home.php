@@ -77,15 +77,28 @@
                     </tr>
                     <tr>
                         <td>到期时间</td>
-                        <td>2013-12-12,还剩余23天</td>
+                        <td><?php echo date("Y-m-d H:i:s",$userdata->deadline_date); ?> 还剩余<span style="font-weight: bold;" class="red"><?php echo ceil($userdata->deadline_date-$userdata->add_time)/(3600*24) ?></span>天</td>
                     </tr>
                     <tr>
                         <td>账户余额</td>
-                        <td>100元</td>
+                        <td><?php echo $userdata->money; ?>元   <button class="btn btn-mini btn-success">充值</button></td>
                     </tr>
                     <tr>
                         <td>我的微盟版本</td>
-                        <td>基础版</td>
+                        <?php if($userdata->web_type == 1): ?>
+                        <td>V-领先版</td>
+                        <?php endif; ?>
+                        <?php if($userdata->web_type == 2): ?>
+                            <td>微餐饮版</td>
+                        <?php endif; ?>
+                        <?php if($userdata->web_type == 3): ?>
+                            <td>微房产版</td>
+                        <?php endif; ?>
+                        <?php if($userdata->web_type == 4): ?>
+                            <td>高级版</td>
+                        <?php endif; ?>
+
+
                     </tr>
                     </tbody>
                 </table>
@@ -102,27 +115,53 @@
                     <tbody>
                     <tr>
                         <td width="200px;">公众账号用户名</td>
-                        <td>Jacob</td>
+                        <td><?php echo $userdata->wx_account; ?></td>
+
                     </tr>
+                    <?php if($userdata->open_weixin == 1): ?>
                     <tr>
                         <td>token</td>
-                        <td>ggdgsgsdgdsghs</td>
+                        <td><?php echo $userdata->wx_token; ?></td>
                     </tr>
                     <tr>
                         <td>url</td>
-                        <td>2013-12-12,还剩余23天</td>
+                        <td><?php echo 'http://www.wapwei.com/api/'.$userdata->wx_token; ?></td>
                     </tr>
+                    <?php endif; ?>
                     <tr>
                         <td>绑定时间</td>
-                        <td>2013-12-12,还剩余23天</td>
+                        <?php if($userdata->open_weixin == 1): ?>
+                        <td><?php echo date("Y-m-d H:i:s",$userdata->bind_wx_time); ?></td>
+                        <?php endif; ?>
+                        <?php if($userdata->open_weixin == 0): ?>
+                            <td>您还没有绑定微信公众号</td>
+                        <?php endif; ?>
                     </tr>
                     <tr>
                         <td>绑定状态</td>
-                        <td>开启</td>
+                        <?php if($userdata->open_weixin == 1): ?>
+                        <td><span style="font-weight: bold;" class="green">已绑定</span></td>
+                        <?php endif; ?>
+                        <?php if($userdata->open_weixin == 0): ?>
+                        <td><span style="font-weight: bold;" class="red">未绑定</span>  <button class="btn btn-mini btn-primary" data-toggle="modal" data-target="#myModal">点击绑定</button></td>
+                        <?php endif; ?>
                     </tr>
                     </tbody>
                 </table>
-
+                <?php if($userdata->open_weixin == 0): ?>
+                <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 id="myModalLabel">如何绑定微信公众号呢</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>One fine body…</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+                    </div>
+                </div>
+                <?php endif; ?>
             </dl>
             <div class="clearfix"></div>
         </div>

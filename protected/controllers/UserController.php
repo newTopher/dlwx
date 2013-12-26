@@ -17,4 +17,8 @@ class UserController extends Controller{
         $this->render('home',array('userdata'=>$userdata));
     }
 
+    public function actionSet(){
+        $this->render('set');
+    }
+
 }
