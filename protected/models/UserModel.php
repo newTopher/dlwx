@@ -59,6 +59,24 @@ class UserModel extends CActiveRecord{
         return self::model()->findByPk($this->id);
     }
 
+    public function updateUser(){
+        if(self::model()->updateByPk($this->id,array('name'=>$this->name,
+        'tel'=>$this->tel,'trade_id'=>$this->trade_id,'update_time'=>time()
+        ))){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public function updateUserPwd(){
+        if(self::model()->updateByPk($this->id,array('password'=>$this->password,'update_time'=>time()))){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 
 
 }
