@@ -80,7 +80,19 @@ class AgentUserModel extends CActiveRecord{
             return false;
         }
     }
-    public function AgentUserView(){
 
+    public function AgentUserView(){
+        if($AgentUser=self::model()->findByPk($this->id)){
+            return $AgentUser;
+        }else{
+            return false;
+        }
     }
+
+    public function changePassword(){
+        if(self::model()->updateByPk($this->id,array('password'=>$this->password,'update_time'=>time()))){
+            return true;
+        }
+    }
+
 }

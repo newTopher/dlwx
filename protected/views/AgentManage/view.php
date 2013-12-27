@@ -13,7 +13,7 @@
 <div class="row-fluid">
     <div class="box span12">
         <div class="box-header well">
-            <h2><i class="icon-info-sign"></i>填写用户信息</h2>
+            <h2><i class="icon-info-sign"></i>填写代理商信息</h2>
             <div class="box-icon">
                 <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
                 <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
@@ -26,20 +26,48 @@
             </ul>
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade active in" id="home">
-                    <form method="post" action="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/AddWexinAccount" class="form-horizontal">
+                    <form method="post" action="<?php echo Yii::app()->getBaseUrl(); ?>/AgentManage/ChangePassword?id=<?php echo 18?>" class="form-horizontal">
                         <input class="input-xlarge focused" name="token" type="hidden" value="">
                         <input class="input-xlarge focused" name="puid" type="hidden" value="">
                         <fieldset>
+                            <?php
+                            $e=Yii::app()->request->getParam('e');
+                            if($e){
+                                $e='提交出错';
+                            }else{
+                                $e=null;
+                            }
+                            switch($e){
+                                case 3:$e="请确认您的两次输入的新密码一致，请重新修改！";break;
+                                case 1:$e="密码修改成功！";break;
+                                case 2:$e="您的旧密码输入有误，请确认后再输！";break;
+                            }
+                            ?>
+                            <span class="help-inline" style="{color:red;}"><?php echo $e; ?></span>
+
                             <div class="control-group">
                                 <label class="control-label" for="focusedInput">登录用户名</label>
                                 <div class="controls">
-                                    <input class="input-xlarge focused" name="wx_account" id="focusedInput" type="text" value=""> <span class="help-inline">请填写已注册的公众号账号</span>
+                                    <span class="input-xlarge uneditable-input"><?php echo $list->email?></span>
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label class="control-label" for="focusedInput">登录密码</label>
+                                <label class="control-label" for="focusedInput">旧登录密码</label>
                                 <div class="controls">
-                                    <input class="input-xlarge focused" name="wx_password" id="focusedInput" type="password" value=""> <span class="help-inline">请填写已注册的公众号账号密码</span>
+                                    <input class="input-xlarge focused" name="old_password" id="focusedInput" type="password" value=""> <span class="help-inline">请填写旧的登录密码</span>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label" for="focusedInput">新登录密码</label>
+                                <div class="controls">
+                                    <input class="input-xlarge focused" name="wx_password" id="focusedInput" type="password" value=""> <span class="help-inline">请填写新的登录密码</span>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="focusedInput">确认密码</label>
+                                <div class="controls">
+                                    <input class="input-xlarge focused" name="wx_password1" id="focusedInput" type="password" value=""> <span class="help-inline">请重新确认新的登录密码</span>
                                 </div>
                             </div>
 
@@ -51,54 +79,66 @@
                     </form>
                 </div>
                 <div class="tab-pane fade" id="profile">
-                    <h3>企业资料</h3>
+                    <h3>代理商信息</h3>
                     <hr>
                     <form class="form-horizontal">
                         <fieldset>
                             <div class="control-group">
-                                <label class="control-label" for="focusedInput">企业名称</label>
+                                <label for="optionsCheckbox2" class="control-label">平台余额</label>
                                 <div class="controls">
-                                    <input class="input-xlarge focused" name="tel" id="focusedInput" type="text" value="">
+                                    <span class="add-on">￥</span><input style="{width:100px;}" type="text" disabled="" placeholder="<?php echo $list->money;?>" id="disabledInput" class="input-xlarge disabled">
+                                    <span class="add-on">.00</span>
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label class="control-label" for="focusedInput">企业邮箱</label>
+                                <label for="optionsCheckbox2" class="control-label">代理商登录账号</label>
                                 <div class="controls">
-                                    <input class="input-xlarge focused" name="tel" id="focusedInput" type="text" value="">
+                                <input type="text" disabled="" placeholder="<?php echo $list->email;?>" id="disabledInput" class="input-xlarge disabled">
+
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label class="control-label" for="focusedInput">企业地址</label>
+                                <label for="optionsCheckbox2" class="control-label">代理商名称</label>
                                 <div class="controls">
-                                    <input class="input-xlarge focused" name="tel" id="focusedInput" type="text" value="">
+                                    <input class="input-xlarge focused" name="tel" id="focusedInput" type="text" value="<?php echo $list->agent_name;?>">
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label for="optionsCheckbox2" class="control-label">联系手机</label>
+                                <div class="controls">
+
+                                    <input type="text" value="<?php echo $list->mobilephone;?>" id="focusedInput" class="input-xlarge focused">
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label class="control-label" for="focusedInput">邮编</label>
+                                <label for="optionsCheckbox2" class="control-label">联系固话</label>
                                 <div class="controls">
-                                    <input class="input-xlarge focused" name="tel" id="focusedInput" type="text" value="">
+                                    <input class="input-xlarge focused" name="tel" id="focusedInput" type="text" value="<?php echo $list->telephone;?>">
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label class="control-label" for="focusedInput">营业执照注册号</label>
+                                <label for="optionsCheckbox2" class="control-label">注册时间</label>
                                 <div class="controls">
-                                    <input class="input-xlarge focused" name="tel" id="focusedInput" type="text" value="">
+                                    <input type="text" disabled="" placeholder="<?php echo date("Y-m-d H:i:s",$list->login_time);?>" id="disabledInput" class="input-xlarge disabled">
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label class="control-label" for="focusedInput">注册资本</label>
+                                <label for="optionsCheckbox2" class="control-label">上次更新时间</label>
                                 <div class="controls">
-                                    <div class="input-prepend input-append">
-                                        <span class="add-on">￥</span><input id="appendedPrependedInput" size="18" type="text"><span class="add-on">万元</span>
-                                    </div>
+                                    <input type="text" disabled="" placeholder="<?php echo date("Y-m-d H:i:s",$list->update_time);?>" id="disabledInput" class="input-xlarge disabled">
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label class="control-label" for="focusedInput">组织机构代码</label>
+                                <label for="optionsCheckbox2" class="control-label">代理续费时间</label>
                                 <div class="controls">
-                                    <input class="input-xlarge focused" name="tel" id="focusedInput" type="text" value="">
+                                    <input type="text" disabled="" placeholder="<?php echo date("Y-m-d H:i:s",$list->end_time);?>" id="disabledInput" class="input-xlarge disabled">
                                 </div>
                             </div>
+                            <li class="thumbnail" id="image-2">
+                                <a href="img/gallery/2.jpg" title="Sample Image 2" style="background:url(img/gallery/thumbs/2.jpg)" class="cboxElement"><img alt="Sample Image 2" src="img/gallery/thumbs/2.jpg" class="grayscale" style="display: block;"></a>
+                            </li>
+
                             <div class="control-group">
                                 <label class="control-label" for="fileInput">印业执照副本扫描件</label>
                                 <div class="controls">

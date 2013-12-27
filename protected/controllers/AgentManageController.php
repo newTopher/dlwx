@@ -71,6 +71,35 @@ class AgentManageController extends Controller{
     }
 
     public function actionView(){
-        $this->render('view');
+        $agentUserModel = new AgentUserModel();
+        $agentUserModel->id=Yii::app()->request->getParam('id','');
+        $list=$agentUserModel->AgentUserView();
+        $this->render('view',array('list'=>$list));
+    }
+
+    public function actionChangePassword(){
+        $agentUserModel = new AgentUserModel();
+        $agentUserModel->id=Yii::app()->request->getParam('id','');
+        $oldpass=Yii::app()->request->getParam('old_password','');
+        $List=$agentUserModel->AgentUserView();
+        echo $List->password;
+        if($List->password==$oldpass){
+            $e=1;
+        }else{
+            $e=2;
+        }
+
+        $pass=Yii::app()->request->getParam('wx_password','');
+        $pass1=Yii::app()->request->getParam('wx_password1','');
+        if(!empty($pass1)&&!empty($pass)&&$pass==$pass1){
+            $agentUserModel->id=Yii::app()->request->getParam('id','');
+            $agentUserModel->password=$pass;
+            $agentUserModel->changePassword();
+            $e=1;
+            $this->redirect(Yii::app()->getBaseUrl().'/AgentManage/view?id='.$agentUserModel->id.'&e='.$e);
+        }else{
+            $e=3;
+            $this->redirect(Yii::app()->getBaseUrl().'/AgentManage/view?id='.$agentUserModel->id.'&e='.$e);
+        }
     }
 }

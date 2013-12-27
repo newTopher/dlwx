@@ -64,7 +64,7 @@
                                 </td>
                                 <td class="center ">
                                     <?php if($status==1||$status==2):?>
-                                    <a class="btn btn-success" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/view">
+                                    <a class="btn btn-success" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/view?id=<?php echo $val->id;?>">
                                         <i class="icon-zoom-in icon-white"></i>
                                        编辑
                                     </a>
