@@ -1033,7 +1033,8 @@ select:focus:required:invalid:focus {
 }
 .help-block,
 .help-inline {
-  color: #555555;
+    color: #669533;
+    font-size: 10px;
 }
 .help-block {
   display: block;
