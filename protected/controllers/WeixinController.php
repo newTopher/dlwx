@@ -54,7 +54,7 @@ class WeixinController extends Controller{
                     $this->redirect(Yii::app()->getBaseUrl()."/Weixin/Base");
                 }
             }else{
-
+                $this->redirect(Yii::app()->getBaseUrl()."/Weixin/Base");
             }
         }else{
             if($wxWebsiteModel->addWxWeb()){
@@ -63,6 +63,11 @@ class WeixinController extends Controller{
                 $this->redirect(Yii::app()->getBaseUrl()."/Weixin/Base");
             }
         }
+    }
+
+    public function actionMenuset(){
+
+        $this->render('menuset');
     }
 
 
