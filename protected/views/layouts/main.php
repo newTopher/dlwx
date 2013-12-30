@@ -6,6 +6,7 @@
 
     <!-- blueprint CSS framework -->
     <script src="<?php echo Yii::app()->getBaseUrl(); ?>/js/jquery-1.7.2.min.js"></script>
+    <script src="<?php echo Yii::app()->getBaseUrl(); ?>/js/jquery.validator.js"></script>
     <link id="bs-css" href="<?php echo Yii::app()->getBaseUrl(); ?>/css/bootstrap-cerulean.css" rel="stylesheet">
     <style type="text/css">
         body {
@@ -31,6 +32,7 @@
     <link href='<?php echo Yii::app()->getBaseUrl(); ?>/css/jquery.iphone.toggle.css' rel='stylesheet'>
     <link href='<?php echo Yii::app()->getBaseUrl(); ?>/css/opa-icons.css' rel='stylesheet'>
     <link href='<?php echo Yii::app()->getBaseUrl(); ?>/css/uploadify.css' rel='stylesheet'>
+    <link href='<?php echo Yii::app()->getBaseUrl(); ?>/css/jquery.validator.css' rel='stylesheet'>
 </head>
 
 <body>
