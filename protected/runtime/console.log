@@ -2299,3 +2299,476 @@ HTTP_REFERER=http://weixin.test.local:8080/User/home
 in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
 2013/12/25 23:43:36 [trace] [system.CModule] Loading "clientScript" application component
 in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2013/12/26 03:45:27 [trace] [system.CModule] Loading "log" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:45:27 [trace] [system.CModule] Loading "request" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:45:27 [trace] [system.CModule] Loading "urlManager" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:45:28 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\views\layouts\column1.php (2)
+2013/12/26 03:45:28 [trace] [system.CModule] Loading "clientScript" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\LoginController.php (27)
+2013/12/26 03:45:28 [trace] [system.CModule] Loading "log" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:45:28 [trace] [system.CModule] Loading "request" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:45:28 [trace] [system.CModule] Loading "urlManager" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:45:28 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:45:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/12/26 03:45:28 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/26 03:45:28 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\views\layouts\column1.php (2)
+2013/12/26 03:45:28 [trace] [system.CModule] Loading "clientScript" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\SiteController.php (45)
+2013/12/26 03:45:45 [trace] [system.CModule] Loading "log" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:45:45 [trace] [system.CModule] Loading "request" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:45:45 [trace] [system.CModule] Loading "urlManager" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:45:45 [trace] [system.CModule] Loading "user" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\LoginController.php (16)
+2013/12/26 03:45:45 [trace] [system.CModule] Loading "session" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\LoginController.php (16)
+2013/12/26 03:45:45 [trace] [system.CModule] Loading "securityManager" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\LoginController.php (16)
+2013/12/26 03:45:45 [trace] [system.CModule] Loading "statePersister" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\LoginController.php (16)
+2013/12/26 03:45:45 [trace] [system.db.ar.CActiveRecord] UserModel.find()
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\components\UserIdentity.php (26)
+2013/12/26 03:45:45 [trace] [system.CModule] Loading "db" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\components\UserIdentity.php (26)
+2013/12/26 03:45:45 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\components\UserIdentity.php (26)
+2013/12/26 03:45:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\components\UserIdentity.php (26)
+2013/12/26 03:45:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\components\UserIdentity.php (26)
+2013/12/26 03:45:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE LOWER(email)=? LIMIT 1
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\components\UserIdentity.php (26)
+2013/12/26 03:45:45 [trace] [system.CModule] Loading "log" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:45:45 [trace] [system.CModule] Loading "request" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:45:45 [trace] [system.CModule] Loading "urlManager" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:45:45 [trace] [system.CModule] Loading "session" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\views\main\index.php (2)
+2013/12/26 03:45:45 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\views\layouts\column3.php (155)
+2013/12/26 03:45:45 [trace] [system.CModule] Loading "clientScript" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\MainController.php (25)
+2013/12/26 03:45:45 [trace] [system.CModule] Loading "log" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:45:45 [trace] [system.CModule] Loading "request" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:45:45 [trace] [system.CModule] Loading "urlManager" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:45:45 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:45:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local/main
+---
+2013/12/26 03:45:45 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/26 03:45:45 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\views\layouts\column1.php (2)
+2013/12/26 03:45:45 [trace] [system.CModule] Loading "clientScript" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\SiteController.php (45)
+2013/12/26 03:45:50 [trace] [system.CModule] Loading "log" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:45:50 [trace] [system.CModule] Loading "request" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:45:50 [trace] [system.CModule] Loading "urlManager" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:45:50 [trace] [system.CModule] Loading "db" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 03:45:50 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 03:45:50 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 03:45:50 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 03:45:50 [trace] [system.CModule] Loading "session" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (15)
+2013/12/26 03:45:50 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\models\UserModel.php (59)
+2013/12/26 03:45:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\models\UserModel.php (59)
+2013/12/26 03:45:50 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\views\user\home.php (58)
+2013/12/26 03:45:50 [error] [exception.CException] exception 'CException' with message 'Property "UserModel.status" is not defined.' in D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\ar\CActiveRecord.php(145): CComponent->__get('status')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\protected\views\user\home.php(58): CActiveRecord->__get('status')
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CBaseController.php(126): require('D:\Apache2.2\ht...')
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\Apache2.2\ht...', Array, true)
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(869): CBaseController->renderFile('D:\Apache2.2\ht...', Array, true)
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(782): CController->renderPartial('home', Array, true)
+#6 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php(17): CController->render('home', Array)
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): UserController->actionHome()
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('home')
+#12 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('User/home')
+#13 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 D:\Apache2.2\htdocs\leiphone\weixin\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/User/home
+HTTP_REFERER=http://weixin.test.local/main
+---
+2013/12/26 03:45:50 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/26 03:46:28 [trace] [system.CModule] Loading "log" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:46:28 [trace] [system.CModule] Loading "request" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:46:28 [trace] [system.CModule] Loading "urlManager" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:46:28 [trace] [system.CModule] Loading "db" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 03:46:28 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 03:46:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 03:46:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 03:46:28 [trace] [system.CModule] Loading "session" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (15)
+2013/12/26 03:46:28 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\models\UserModel.php (59)
+2013/12/26 03:46:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\models\UserModel.php (59)
+2013/12/26 03:46:28 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\views\user\home.php (80)
+2013/12/26 03:46:28 [error] [exception.CException] exception 'CException' with message 'Property "UserModel.deadline_date" is not defined.' in D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\ar\CActiveRecord.php(145): CComponent->__get('deadline_date')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\protected\views\user\home.php(80): CActiveRecord->__get('deadline_date')
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CBaseController.php(126): require('D:\Apache2.2\ht...')
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\Apache2.2\ht...', Array, true)
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(869): CBaseController->renderFile('D:\Apache2.2\ht...', Array, true)
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(782): CController->renderPartial('home', Array, true)
+#6 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php(17): CController->render('home', Array)
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): UserController->actionHome()
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('home')
+#12 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('User/home')
+#13 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 D:\Apache2.2\htdocs\leiphone\weixin\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/User/home
+HTTP_REFERER=http://weixin.test.local/main
+---
+2013/12/26 03:46:28 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/26 03:46:29 [trace] [system.CModule] Loading "log" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:46:29 [trace] [system.CModule] Loading "request" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:46:29 [trace] [system.CModule] Loading "urlManager" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 03:46:29 [trace] [system.CModule] Loading "db" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 03:46:29 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 03:46:29 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 03:46:29 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 03:46:29 [trace] [system.CModule] Loading "session" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (15)
+2013/12/26 03:46:29 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\models\UserModel.php (59)
+2013/12/26 03:46:29 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\models\UserModel.php (59)
+2013/12/26 03:46:29 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\views\user\home.php (80)
+2013/12/26 03:46:29 [error] [exception.CException] exception 'CException' with message 'Property "UserModel.deadline_date" is not defined.' in D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\ar\CActiveRecord.php(145): CComponent->__get('deadline_date')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\protected\views\user\home.php(80): CActiveRecord->__get('deadline_date')
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CBaseController.php(126): require('D:\Apache2.2\ht...')
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\Apache2.2\ht...', Array, true)
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(869): CBaseController->renderFile('D:\Apache2.2\ht...', Array, true)
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(782): CController->renderPartial('home', Array, true)
+#6 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php(17): CController->render('home', Array)
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): UserController->actionHome()
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('home')
+#12 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('User/home')
+#13 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 D:\Apache2.2\htdocs\leiphone\weixin\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/User/home
+HTTP_REFERER=http://weixin.test.local/main
+---
+2013/12/26 03:46:29 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/26 04:54:12 [trace] [system.CModule] Loading "log" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 04:54:12 [trace] [system.CModule] Loading "request" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 04:54:12 [trace] [system.CModule] Loading "urlManager" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 04:54:12 [trace] [system.CModule] Loading "db" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 04:54:12 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 04:54:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 04:54:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 04:54:12 [trace] [system.CModule] Loading "session" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (15)
+2013/12/26 04:54:12 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\models\UserModel.php (59)
+2013/12/26 04:54:12 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\models\UserModel.php (59)
+2013/12/26 04:54:12 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\views\user\home.php (84)
+2013/12/26 04:54:12 [error] [exception.CException] exception 'CException' with message 'Property "UserModel.money" is not defined.' in D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\ar\CActiveRecord.php(145): CComponent->__get('money')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\protected\views\user\home.php(84): CActiveRecord->__get('money')
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CBaseController.php(126): require('D:\Apache2.2\ht...')
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\Apache2.2\ht...', Array, true)
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(869): CBaseController->renderFile('D:\Apache2.2\ht...', Array, true)
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(782): CController->renderPartial('home', Array, true)
+#6 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php(17): CController->render('home', Array)
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): UserController->actionHome()
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('home')
+#12 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('User/home')
+#13 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 D:\Apache2.2\htdocs\leiphone\weixin\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/User/home
+HTTP_REFERER=http://weixin.test.local/main
+---
+2013/12/26 04:54:12 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/26 04:54:44 [trace] [system.CModule] Loading "log" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 04:54:44 [trace] [system.CModule] Loading "request" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 04:54:44 [trace] [system.CModule] Loading "urlManager" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 04:54:44 [trace] [system.CModule] Loading "db" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 04:54:44 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 04:54:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 04:54:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 04:54:44 [trace] [system.CModule] Loading "session" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (15)
+2013/12/26 04:54:44 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\models\UserModel.php (59)
+2013/12/26 04:54:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\models\UserModel.php (59)
+2013/12/26 04:54:44 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\views\layouts\column3.php (155)
+2013/12/26 04:54:44 [trace] [system.CModule] Loading "clientScript" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (17)
+2013/12/26 04:54:44 [trace] [system.CModule] Loading "log" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 04:54:44 [trace] [system.CModule] Loading "request" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 04:54:44 [trace] [system.CModule] Loading "urlManager" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 04:54:44 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 04:54:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local/User/home
+---
+2013/12/26 04:54:44 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/26 04:54:44 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\views\layouts\column1.php (2)
+2013/12/26 04:54:44 [trace] [system.CModule] Loading "clientScript" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\SiteController.php (45)
+2013/12/26 04:55:01 [trace] [system.CModule] Loading "log" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 04:55:01 [trace] [system.CModule] Loading "request" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 04:55:01 [trace] [system.CModule] Loading "urlManager" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 04:55:01 [trace] [system.CModule] Loading "session" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\views\layouts\column3.php (35)
+2013/12/26 04:55:01 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\views\layouts\column3.php (155)
+2013/12/26 04:55:01 [trace] [system.CModule] Loading "clientScript" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (21)
+2013/12/26 04:55:01 [trace] [system.CModule] Loading "log" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 04:55:01 [trace] [system.CModule] Loading "request" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 04:55:01 [trace] [system.CModule] Loading "urlManager" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 04:55:01 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 04:55:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local/User/set
+---
+2013/12/26 04:55:01 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/26 04:55:01 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\views\layouts\column1.php (2)
+2013/12/26 04:55:01 [trace] [system.CModule] Loading "clientScript" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\SiteController.php (45)
+2013/12/26 07:58:02 [trace] [system.CModule] Loading "log" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 07:58:02 [trace] [system.CModule] Loading "request" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 07:58:02 [trace] [system.CModule] Loading "urlManager" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 07:58:02 [trace] [system.CModule] Loading "db" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 07:58:02 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 07:58:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 07:58:02 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 07:58:02 [trace] [system.CModule] Loading "session" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (15)
+2013/12/26 07:58:02 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\models\UserModel.php (59)
+2013/12/26 07:58:02 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\models\UserModel.php (59)
+2013/12/26 07:58:02 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\views\layouts\column3.php (155)
+2013/12/26 07:58:02 [trace] [system.CModule] Loading "clientScript" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (17)
+2013/12/26 07:58:02 [trace] [system.CModule] Loading "log" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 07:58:02 [trace] [system.CModule] Loading "request" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 07:58:02 [trace] [system.CModule] Loading "urlManager" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 07:58:02 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 07:58:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local/User/home
+---
+2013/12/26 07:58:02 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/26 07:58:02 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\views\layouts\column1.php (2)
+2013/12/26 07:58:02 [trace] [system.CModule] Loading "clientScript" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\SiteController.php (45)
+2013/12/26 07:58:06 [trace] [system.CModule] Loading "log" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 07:58:06 [trace] [system.CModule] Loading "request" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 07:58:06 [trace] [system.CModule] Loading "urlManager" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 07:58:06 [trace] [system.CModule] Loading "session" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\views\layouts\column3.php (35)
+2013/12/26 07:58:06 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\views\layouts\column3.php (155)
+2013/12/26 07:58:06 [trace] [system.CModule] Loading "clientScript" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (21)
+2013/12/26 07:58:06 [trace] [system.CModule] Loading "log" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 07:58:06 [trace] [system.CModule] Loading "request" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 07:58:06 [trace] [system.CModule] Loading "urlManager" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 07:58:06 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 07:58:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local/User/set
+---
+2013/12/26 07:58:06 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/26 07:58:06 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\views\layouts\column1.php (2)
+2013/12/26 07:58:06 [trace] [system.CModule] Loading "clientScript" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\SiteController.php (45)
+2013/12/26 08:40:00 [trace] [system.CModule] Loading "log" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 08:40:00 [trace] [system.CModule] Loading "request" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 08:40:00 [trace] [system.CModule] Loading "urlManager" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 08:40:00 [trace] [system.CModule] Loading "db" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 08:40:00 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 08:40:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `user`
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 08:40:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `user`
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (14)
+2013/12/26 08:40:00 [trace] [system.CModule] Loading "session" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (15)
+2013/12/26 08:40:00 [trace] [system.db.ar.CActiveRecord] UserModel.findByPk()
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\models\UserModel.php (59)
+2013/12/26 08:40:00 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `user` `t` WHERE `t`.`id`=2 LIMIT 1
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\models\UserModel.php (59)
+2013/12/26 08:40:00 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\views\layouts\column3.php (155)
+2013/12/26 08:40:00 [trace] [system.CModule] Loading "clientScript" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\UserController.php (17)
+2013/12/26 08:40:00 [trace] [system.CModule] Loading "log" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 08:40:00 [trace] [system.CModule] Loading "request" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 08:40:00 [trace] [system.CModule] Loading "urlManager" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 08:40:00 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\index.php (13)
+2013/12/26 08:40:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local/User/home
+---
+2013/12/26 08:40:00 [trace] [system.CModule] Loading "errorHandler" application component
+2013/12/26 08:40:00 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\views\layouts\column1.php (2)
+2013/12/26 08:40:00 [trace] [system.CModule] Loading "clientScript" application component
+in D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\SiteController.php (45)
