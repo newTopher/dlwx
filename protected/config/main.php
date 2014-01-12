@@ -15,6 +15,9 @@ return array(
     'import'=>array(
         'application.models.*',
         'application.components.*',
+        'application.utils.*',
+        'application.extensions.image.*',
+        'application.extensions.helpers.*',
     ),
     'defaultController'=>"Index",
     'modules'=>array(
@@ -48,10 +51,11 @@ return array(
                 '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
             ),
         ),
-
+        /*
         'db'=>array(
             'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
         ),
+        */
         // uncomment the following to use a MySQL database
         /**/
         'db'=>array(
@@ -61,6 +65,12 @@ return array(
             'password' => '09270815',
             'charset' => 'utf8',
             'tablePrefix'=>''
+        ),
+        'image'=>array(
+            'class'=>'application.extensions.image.CImageComponent',
+            // GD or ImageMagick
+            'driver'=>'GD',
+            // ImageMagick setup path
         ),
 
         'errorHandler'=>array(
