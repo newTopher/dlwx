@@ -57,6 +57,22 @@
                 <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/AgentManage/list"><i class="icon-home"></i><span class="hidden-tablet">代理商列表</span></a></li>
             </ul>
         </div><!--/.well -->
+        <div class="well nav-collapse sidebar-nav">
+        <ul class="nav nav-tabs nav-stacked main-menu">
+            <li class="nav-header hidden-tablet">模版管理</li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Template/show"><i class="icon-home"></i><span class="hidden-tablet">标准模版</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/addUser"><i class="icon-home"></i><span class="hidden-tablet">行业模版</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/addUser"><i class="icon-home"></i><span class="hidden-tablet">活动管理</span></a></li>
+        </ul>
+    </div><!--/.well -->
+        <div class="well nav-collapse sidebar-nav">
+            <ul class="nav nav-tabs nav-stacked main-menu">
+                <li class="nav-header hidden-tablet">微信用户管理</li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/user/userlist"><i class="icon-home"></i><span class="hidden-tablet">微信用户列表</span></a></li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/AgentUserCheck/list"><i class="icon-home"></i><span class="hidden-tablet">微信用户审核</span></a></li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/addUser"><i class="icon-home"></i><span class="hidden-tablet">微信用户添加</span></a></li>
+            </ul>
+        </div><!--/.well -->
 
         <div class="well nav-collapse sidebar-nav">
             <ul class="nav nav-tabs nav-stacked main-menu">

@@ -136,8 +136,9 @@
                                 </div>
                             </div>
                             <li class="thumbnail" id="image-2">
-                                <a href="img/gallery/2.jpg" title="Sample Image 2" style="background:url(img/gallery/thumbs/2.jpg)" class="cboxElement"><img alt="Sample Image 2" src="img/gallery/thumbs/2.jpg" class="grayscale" style="display: block;"></a>
+                                <a href="<?php echo Yii::app()->getBaseUrl().'/upload/license/'.$list->license?>" title="Sample Image 2" style="width:300px;background:url(<?php echo Yii::app()->getBaseUrl().'/upload/license/'.$list->license?>)" class="cboxElement"><img style="{width:300px;}" alt="Sample Image 2" src="<?php echo Yii::app()->getBaseUrl().'/upload/license/'.$list->license?>" class="grayscale" style="display: block;"></a>
                             </li>
+
 
                             <div class="control-group">
                                 <label class="control-label" for="fileInput">印业执照副本扫描件</label>

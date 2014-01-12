@@ -48,6 +48,36 @@ class AgentManageController extends Controller{
         }
     }
 
+    public function actionUpdate(){
+        $agentUserModel = new AgentUserModel();
+        $agentUserModel->update_time=time();
+        $login_time=time();
+        $agentUserModel->id = Yii::app()->request->getParam('id','');
+        $agentUserModel->money = Yii::app()->request->getParam('add_money','');
+        $agentUserModel->rate = Yii::app()->request->getParam('rate','');
+        $deadline = Yii::app()->request->getParam('deadline','');
+
+        if($deadline=="试用7天"){
+            $agentUserModel->end_time=$login_time+7*3600*24;
+            $agentUserModel->status=2;
+            $agentUserModel->type=2;
+        }elseif($deadline=="使用一年"){
+            $agentUserModel->end_time=$login_time+365*3600*24;
+            $agentUserModel->status=1;
+            $agentUserModel->type=1;
+        }elseif($deadline=="长期有效"){
+            $agentUserModel->end_time=1;
+            $agentUserModel->status=1;
+            $agentUserModel->type=0;
+        }
+        if($agentUserModel->UpdateUser()){
+            $this->redirect(Yii::app()->getBaseUrl()."/AgentManage/renew?id=".$agentUserModel->id."&meg=1");
+        }else{
+            $this->redirect(Yii::app()->getBaseUrl()."/AgentManage/renew?id=".$agentUserModel->id."&meg=2");
+            exit;
+        }
+
+    }
     public function actionList(){
         $agentUserModel = new AgentUserModel();
         $attributes=$agentUserModel->selectUser();
@@ -66,7 +96,6 @@ class AgentManageController extends Controller{
         $agentUserModel->id = Yii::app()->request->getParam('id','');
         $agentUserModel->type = Yii::app()->request->getParam('type','');
         $agentUserModel->AgentUserOpen();
-
         $this->redirect(Yii::app()->getBaseUrl().'/AgentManage/list');
     }
 
@@ -101,5 +130,23 @@ class AgentManageController extends Controller{
             $e=3;
             $this->redirect(Yii::app()->getBaseUrl().'/AgentManage/view?id='.$agentUserModel->id.'&e='.$e);
         }
+    }
+
+    public function actionRenew(){
+        $agentUserModel = new AgentUserModel();
+        $agentUserModel->id = Yii::app()->request->getParam('id','');
+        $meg = Yii::app()->request->getParam('meg','');
+        if($meg==1){
+            $meg="充值成功";
+        }elseif($meg==2){
+            $meg="充值失败";
+        }else{
+            $meg=null;
+        }
+        $AgentList=$agentUserModel->AgentUserView();
+        $agentUserModel->id = Yii::app()->request->getParam('id','');
+        $agentUserModel->money=Yii::app()->request->getParam('money','');
+        $this->render('renew',array('list'=>$AgentList,'meg'=>$meg));
+
     }
 }

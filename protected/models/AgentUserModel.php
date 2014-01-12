@@ -54,8 +54,19 @@ class AgentUserModel extends CActiveRecord{
             return false;
         }
     }
-    public function selectUser(){
+    public function updateUser(){
+        if(!empty($this->id) && !empty($this->money) && !empty($this->rate)){
+            if(self::model()->updateByPk($this->id,array('money'=>$this->money,'end_time'=>$this->end_time,'rate'=>$this->rate,'update_time'=>$this->rate))){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
+    }
 
+    public function selectUser(){
         $AgentUser=self::model()->findAll();
         return $AgentUser;
 
