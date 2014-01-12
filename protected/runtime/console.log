@@ -28789,3 +28789,207 @@ HTTP_REFERER=http://weixin.test.local:8080/Source/base
 in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
 2014/01/12 20:18:32 [trace] [system.CModule] Loading "clientScript" application component
 in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2014/01/12 20:27:30 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:27:30 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:27:30 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:27:30 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2014/01/12 20:27:30 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2014/01/12 20:27:30 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SourceController.php (14)
+2014/01/12 20:27:30 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:27:30 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:27:30 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:27:30 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:27:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/Source/base
+---
+2014/01/12 20:27:30 [trace] [system.CModule] Loading "errorHandler" application component
+2014/01/12 20:27:31 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2014/01/12 20:27:31 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2014/01/12 20:35:01 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:35:01 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:35:01 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:35:01 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2014/01/12 20:35:01 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2014/01/12 20:35:01 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SourceController.php (14)
+2014/01/12 20:35:01 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:35:01 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:35:01 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:35:01 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:35:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/Source/base
+---
+2014/01/12 20:35:01 [trace] [system.CModule] Loading "errorHandler" application component
+2014/01/12 20:35:01 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2014/01/12 20:35:01 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2014/01/12 20:35:10 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:35:10 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:35:10 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:35:10 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2014/01/12 20:35:10 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2014/01/12 20:35:10 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SourceController.php (14)
+2014/01/12 20:35:10 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:35:10 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:35:10 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:35:10 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:35:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/Source/base
+---
+2014/01/12 20:35:10 [trace] [system.CModule] Loading "errorHandler" application component
+2014/01/12 20:35:10 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2014/01/12 20:35:10 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2014/01/12 20:36:03 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:36:03 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:36:03 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:36:03 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2014/01/12 20:36:03 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2014/01/12 20:36:03 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SourceController.php (14)
+2014/01/12 20:36:03 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:36:03 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:36:03 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:36:03 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:36:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/Source/base
+---
+2014/01/12 20:36:03 [trace] [system.CModule] Loading "errorHandler" application component
+2014/01/12 20:36:03 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2014/01/12 20:36:03 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2014/01/12 20:39:19 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:39:19 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:39:19 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:39:19 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2014/01/12 20:39:19 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2014/01/12 20:39:19 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SourceController.php (14)
+2014/01/12 20:39:19 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:39:19 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:39:19 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:39:19 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:39:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/Source/base
+---
+2014/01/12 20:39:19 [trace] [system.CModule] Loading "errorHandler" application component
+2014/01/12 20:39:19 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2014/01/12 20:39:19 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)
+2014/01/12 20:40:58 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:40:58 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:40:58 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:40:58 [trace] [system.CModule] Loading "session" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (35)
+2014/01/12 20:40:58 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column3.php (155)
+2014/01/12 20:40:58 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SourceController.php (14)
+2014/01/12 20:40:58 [trace] [system.CModule] Loading "log" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:40:58 [trace] [system.CModule] Loading "request" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:40:58 [trace] [system.CModule] Loading "urlManager" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:40:58 [trace] [system.CModule] Loading "coreMessages" application component
+in E:\Apache2.2\htdocs\weixin\index.php (13)
+2014/01/12 20:40:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://weixin.test.local:8080/Source/base
+---
+2014/01/12 20:40:58 [trace] [system.CModule] Loading "errorHandler" application component
+2014/01/12 20:40:58 [trace] [system.CModule] Loading "widgetFactory" application component
+in E:\Apache2.2\htdocs\weixin\protected\views\layouts\column1.php (2)
+2014/01/12 20:40:58 [trace] [system.CModule] Loading "clientScript" application component
+in E:\Apache2.2\htdocs\weixin\protected\controllers\SiteController.php (45)

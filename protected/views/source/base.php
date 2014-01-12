@@ -1,3 +1,4 @@
+<link id="bs-css" href="<?php echo Yii::app()->getBaseUrl(); ?>/css/msg.css" rel="stylesheet">
 <div class="row-fluid">
     <div class="box span12">
         <div class="box-header well">
@@ -9,8 +10,10 @@
         </div>
         <div class="box-content">
             <div class="box-content">
-
-
+                <span class="create_access">
+                    <button class="btn btn-large btn-primary">单图文消息</button>
+                    <button style="margin-left:20px;" class="btn btn-large btn-primary">多图文消息</button>
+                </span>
             </div>
         </div>
     </div>
