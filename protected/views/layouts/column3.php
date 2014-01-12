@@ -115,8 +115,8 @@
         <div class="well nav-collapse sidebar-nav">
             <ul class="nav nav-tabs nav-stacked main-menu">
                 <li class="nav-header hidden-tablet">微信基础服务</li>
-                <li><a class="ajax-link" href="index.html"><i class="icon-resize-horizontal"></i><span class="hidden-tablet">自动回复</span></a></li>
-                <li><a class="ajax-link" href="index.html"><i class="icon-comment"></i><span class="hidden-tablet">消息管理</span></a></li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/AutoReplay/base"><i class="icon-resize-horizontal"></i><span class="hidden-tablet">自动回复</span></a></li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Source/base"><i class="icon-comment"></i><span class="hidden-tablet">素材管理</span></a></li>
                 <li><a class="ajax-link" href="index.html"><i class="icon-pencil"></i><span class="hidden-tablet">自定义菜单</span></a></li>
                 <li><a class="ajax-link" href="index.html"><i class="icon-thumbs-up"></i><span class="hidden-tablet">微信助手</span></a></li>
             </ul>

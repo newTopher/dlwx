@@ -66,8 +66,122 @@ class WeixinController extends Controller{
     }
 
     public function actionMenuset(){
+        $wxBaseMenuModel = new WxBaseMenuModel();
+        $wxSliderModel = new WxSliderModel();
+        $wxBaseMenuModel->uid = Yii::app()->session['user']->id;
+        $wxSliderModel->uid = Yii::app()->session['user']->id;
+        $menuData = $wxBaseMenuModel->getMenu();
+        $sliderData = $wxSliderModel->getSlider();
+        $this->render('menuset',array('menuData'=>$menuData,'sliderData'=>$sliderData));
+    }
 
-        $this->render('menuset');
+    public function actionSlideradd(){
+        $this->render('slideradd');
+    }
+
+    public function actionSlideredit(){
+        $wxSliderModel = new WxSliderModel();
+        $wxSliderModel->id = Yii::app()->request->getParam('id');
+        $sliderData = $wxSliderModel->getSliderById();
+        $this->render('slideredit',array('sliderData'=>$sliderData));
+    }
+
+    public function actionSliderinsert(){
+        $wxWebsiteModel = new WxWebsiteModel();
+        $wxSliderModel = new WxSliderModel();
+        $wxWebsiteModel->id = Yii::app()->session['user']->id;
+        $webdata = $wxWebsiteModel->getWxWebById();
+        $wxSliderModel->site_id = $webdata->id;
+        $wxSliderModel->uid = Yii::app()->session['user']->id;
+        $wxSliderModel->is_index = Yii::app()->request->getParam('is_index',0);
+        $wxSliderModel->title = Yii::app()->request->getParam('title','');
+        $wxSliderModel->url = Yii::app()->request->getParam('url','');
+
+        if(isset($_FILES['image'])){
+            $msgImageUrl = '';
+            $dir = 'wxwebsite';
+            $name = $_FILES['image']['name']; //上传图片原名
+            $type = $_FILES['image']['type']; //上传图片mime类型
+            $tmp_name = $_FILES['image']['tmp_name']; //上传图片临时存放位置
+            $msgImageUrl = Upload::createImageLink($name, $type, $tmp_name,$dir);
+            $wxSliderModel->image = $msgImageUrl;
+        }
+
+        if($wxSliderModel->addSlider()){
+            $this->redirect(Yii::app()->getBaseUrl()."/Weixin/Menuset");
+        }else{
+            $this->redirect(Yii::app()->getBaseUrl()."/Weixin/Slideradd");
+        }
+
+
+    }
+
+    public function actionSliderdel(){
+        $wxSliderModel = new WxSliderModel();
+        $wxSliderModel->id = Yii::app()->request->getParam('id');
+        $sliderData = $wxSliderModel->getSliderById();
+        if($wxSliderModel->delSlider()){
+            if(file_exists(Yii::getPathOfAlias('webroot').'/upload/wxwebsite/'.$sliderData->image)){
+                unlink(Yii::getPathOfAlias('webroot').'/upload/wxwebsite/'.$sliderData->image);
+            }
+            $this->redirect(Yii::app()->getBaseUrl()."/Weixin/Menuset");
+        }else{
+            $this->redirect(Yii::app()->getBaseUrl()."/Weixin/Menuset");
+        }
+    }
+
+    public function actionSliderupdate(){
+        $wxSliderModel = new WxSliderModel();
+        $wxSliderModel->is_index = Yii::app()->request->getParam('is_index',0);
+        $wxSliderModel->title = Yii::app()->request->getParam('title','');
+        $wxSliderModel->url = Yii::app()->request->getParam('url','');
+        $wxSliderModel->id = Yii::app()->request->getParam('id','');
+
+        if(isset($_FILES['image'])){
+            $msgImageUrl = '';
+            $dir = 'wxwebsite';
+            $name = $_FILES['image']['name']; //上传图片原名
+            $type = $_FILES['image']['type']; //上传图片mime类型
+            $tmp_name = $_FILES['image']['tmp_name']; //上传图片临时存放位置
+            $msgImageUrl = Upload::createImageLink($name, $type, $tmp_name,$dir);
+            $wxSliderModel->image = $msgImageUrl;
+        }
+
+        if($wxSliderModel->updateSlider()){
+            $this->redirect(Yii::app()->getBaseUrl()."/Weixin/Menuset");
+        }else{
+            $this->redirect(Yii::app()->getBaseUrl()."/Weixin/Slideredit/id/".$wxSliderModel->id);
+        }
+
+
+    }
+
+    public function actionMenuedit(){
+        $wxBaseMenuModel = new WxBaseMenuModel();
+        $wxBaseMenuModel->id = Yii::app()->request->getParam('id');
+        $data = $wxBaseMenuModel->getMenuById();
+        $this->render('menuedit',array('menudata'=>$data));
+    }
+
+    public function actionMenuupdate(){
+        $wxBaseMenuModel = new WxBaseMenuModel();
+        $wxBaseMenuModel->id = Yii::app()->request->getParam('id');
+        $wxBaseMenuModel->menu_name = Yii::app()->request->getParam('menu_name');
+        $wxBaseMenuModel->text = Yii::app()->request->getParam('text');
+        if(isset($_FILES['with_image'])){
+            $msgImageUrl = '';
+            $dir = 'wxwebsite';
+            $name = $_FILES['with_image']['name']; //上传图片原名
+            $type = $_FILES['with_image']['type']; //上传图片mime类型
+            $tmp_name = $_FILES['with_image']['tmp_name']; //上传图片临时存放位置
+            $msgImageUrl = Upload::createImageLink($name, $type, $tmp_name,$dir);
+            $wxBaseMenuModel->with_image = $msgImageUrl;
+        }
+        if($wxBaseMenuModel->updateMenuById()){
+            $this->redirect(Yii::app()->getBaseUrl()."/Weixin/Menuset");
+        }else{
+            $this->redirect(Yii::app()->getBaseUrl()."/Weixin/Menuedit/id/".$wxBaseMenuModel->id);
+        }
     }
 
 
