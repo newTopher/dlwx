@@ -59,6 +59,6 @@ class Controller extends CController
     }
 
     public function genSubToken(){
-        return md5(time());
+        return rand(10000,99999);
     }
 }

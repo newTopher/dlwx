@@ -73,7 +73,7 @@ class UserModel extends CActiveRecord{
     }
 
     public function updateByToken(){
-        if(self::model()->updateAll(array('puid'=>$this->puid,'open_weixin'=>1,'bind_wx_time'=>time()),'wx_token=:wx_token',array(':wx_token'=>$this->wx_token))){
+        if(self::model()->updateAll(array('open_weixin'=>1,'bind_wx_time'=>time()),'wx_token=:wx_token',array(':wx_token'=>$this->wx_token))){
             return true;
         }else{
             return false;
@@ -90,6 +90,14 @@ class UserModel extends CActiveRecord{
 
     public function updateApp(){
         if(self::model()->updateByPk($this->id,array('wx_appid'=>$this->wx_appid,'wx_appsecret'=>$this->wx_appsecret,'update_time'=>time()))){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    static public function findByToken($wx_token){
+        if(self::model()->findByAttributes(array('wx_token'=>$wx_token,'open_weixin'=>1))){
             return true;
         }else{
             return false;

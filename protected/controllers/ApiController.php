@@ -8,25 +8,39 @@
  */
 class ApiController extends Controller {
 
-    private $token = null;
+    public $token = null;
 
     public function actionBind(){
         $t=Yii::app()->request->getParam('t','');
         if(!empty($t)){
             $temp = substr($t,0,2).hexdec(substr($t,2));
-            $agentUserModel =  new AgentUserModel();
-            $agentUserModel->token_sub = substr($temp,0,7);
-            $result = $agentUserModel->findByTokenSub();
-            if($result !== null){
-                $userModel = new UserModel();
-                $userModel->wx_token = $temp;
-                $userModel->puid = $result->puid;
-                if($userModel->updateByToken()){
-                    $this->token = $temp;
-                    $this->valid();
+            $this->token = dechex($temp);
+            if(!$this->checkSignature()){
+                echo CJSON::encode(array('status'=>'-1','msg'=>'msg is error'));
+                exit;
+            }else{
+                $this->valid();exit;
+                if(userModel::findByToken($temp)){
+                    $this->valid();exit;
                 }else{
-                    return false;
+                    $agentUserModel =  new AgentUserModel();
+                    $agentUserModel->token_sub = substr($temp,2,5);
+                    $result = $agentUserModel->findByTokenSub();
+                    if($result !== null){
+                        $userModel = new UserModel();
+                        $userModel->wx_token = $temp;
+                        $userModel->puid = $result->id;
+                        if($userModel->updateByToken()){
+                            return true;
+                        }else{
+                            return false;
+                        }
+                    }
+                    $this->valid();
                 }
+
+
+
             }
         }
     }
@@ -49,9 +63,6 @@ class ApiController extends Controller {
 
     public function valid(){
         $echoStr = Yii::app()->request->getParam('echostr');
-        if(!$this->checkSignature()){
-            echo CJSON::encode(array('status'=>'-1','msg'=>'msg is error'));
-        }
         echo $echoStr;
     }
 

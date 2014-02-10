@@ -121,7 +121,7 @@
                     <?php if($userdata->open_weixin == 1): ?>
                     <tr>
                         <td>token</td>
-                        <td><?php echo $userdata->wx_token; ?></td>
+                        <td><?php echo dechex($userdata->wx_token); ?></td>
                     </tr>
                     <tr>
                         <td>url</td>
@@ -156,7 +156,7 @@
                     </div>
                     <div class="modal-body">
                         <p>参见绑定微信教程</p>
-                        token : <?php echo $userdata->wx_token; ?>
+                        token : <?php echo dechex($userdata->wx_token); ?>
                         url : <?php echo 'http://wapwei.top400.com.cn/index.php/api/bind/t/'.substr($userdata->wx_token,0,2).dechex(substr($userdata->wx_token,2)); ?>
                     </div>
                     <div class="modal-footer">
