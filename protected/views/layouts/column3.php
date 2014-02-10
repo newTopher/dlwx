@@ -57,6 +57,22 @@
                 <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/AgentManage/list"><i class="icon-home"></i><span class="hidden-tablet">代理商列表</span></a></li>
             </ul>
         </div><!--/.well -->
+        <div class="well nav-collapse sidebar-nav">
+        <ul class="nav nav-tabs nav-stacked main-menu">
+            <li class="nav-header hidden-tablet">模版管理</li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Template/show"><i class="icon-home"></i><span class="hidden-tablet">标准模版</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/addUser"><i class="icon-home"></i><span class="hidden-tablet">行业模版</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/addUser"><i class="icon-home"></i><span class="hidden-tablet">活动管理</span></a></li>
+        </ul>
+    </div><!--/.well -->
+        <div class="well nav-collapse sidebar-nav">
+            <ul class="nav nav-tabs nav-stacked main-menu">
+                <li class="nav-header hidden-tablet">微信用户管理</li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/user/userlist"><i class="icon-home"></i><span class="hidden-tablet">微信用户列表</span></a></li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/AgentUserCheck/list"><i class="icon-home"></i><span class="hidden-tablet">微信用户审核</span></a></li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/addUser"><i class="icon-home"></i><span class="hidden-tablet">微信用户添加</span></a></li>
+            </ul>
+        </div><!--/.well -->
 
         <div class="well nav-collapse sidebar-nav">
             <ul class="nav nav-tabs nav-stacked main-menu">
@@ -109,14 +125,14 @@
             <ul class="nav nav-tabs nav-stacked main-menu">
                 <li class="nav-header hidden-tablet">微官网</li>
                 <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/base"><i class="icon-info-sign"></i><span class="hidden-tablet">基本信息</span></a></li>
-                <li><a class="ajax-link" href="index.html"><i class="icon-list-alt"></i><span class="hidden-tablet">菜单管理</span></a></li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/menuset"><i class="icon-list-alt"></i><span class="hidden-tablet">菜单管理</span></a></li>
             </ul>
         </div><!--/.well -->
         <div class="well nav-collapse sidebar-nav">
             <ul class="nav nav-tabs nav-stacked main-menu">
                 <li class="nav-header hidden-tablet">微信基础服务</li>
-                <li><a class="ajax-link" href="index.html"><i class="icon-resize-horizontal"></i><span class="hidden-tablet">自动回复</span></a></li>
-                <li><a class="ajax-link" href="index.html"><i class="icon-comment"></i><span class="hidden-tablet">消息管理</span></a></li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/AutoReplay/base"><i class="icon-resize-horizontal"></i><span class="hidden-tablet">自动回复</span></a></li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Source/base"><i class="icon-comment"></i><span class="hidden-tablet">素材管理</span></a></li>
                 <li><a class="ajax-link" href="index.html"><i class="icon-pencil"></i><span class="hidden-tablet">自定义菜单</span></a></li>
                 <li><a class="ajax-link" href="index.html"><i class="icon-thumbs-up"></i><span class="hidden-tablet">微信助手</span></a></li>
             </ul>
@@ -174,6 +190,7 @@
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap-dropdown.js"></script>
         <!-- scrolspy library -->
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap-scrollspy.js"></script>
+
         <!-- library for creating tabs -->
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap-tab.js"></script>
         <!-- library for advanced tooltip -->

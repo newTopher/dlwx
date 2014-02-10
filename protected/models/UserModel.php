@@ -42,7 +42,7 @@ class UserModel extends CActiveRecord{
 
     public function relations(){
         return array(
-
+            'agent_user'=>array(self::BELONGS_TO,'AgentUserModel','puid')
         );
     }
 
