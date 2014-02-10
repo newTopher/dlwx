@@ -69,6 +69,14 @@ class UserModel extends CActiveRecord{
         }
     }
 
+    public function updateByToken(){
+        if(self::model()->updateAll(array('puid'=>$this->puid,'open_weixin'=>1,'bind_wx_time'=>time()),'wx_token=:wx_token',array(':wx_token'=>$this->wx_token))){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     public function updateUserPwd(){
         if(self::model()->updateByPk($this->id,array('password'=>$this->password,'update_time'=>time()))){
             return true;

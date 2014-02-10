@@ -106,4 +106,8 @@ class AgentUserModel extends CActiveRecord{
         }
     }
 
+    public function findByTokenSub(){
+        return self::model()->findByAttributes(array('token_sub'=>$this->token_sub));
+    }
+
 }

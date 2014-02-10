@@ -125,7 +125,7 @@
                     </tr>
                     <tr>
                         <td>url</td>
-                        <td><?php echo 'http://www.wapwei.com/api/'.$userdata->wx_token; ?></td>
+                        <td><?php echo 'http://wapwei.top400.com.cn/index.php/api/'.substr($userdata->wx_token,0,2).dechex(substr($userdata->wx_token,2)); ?></td>
                     </tr>
                     <?php endif; ?>
                     <tr>
@@ -155,7 +155,9 @@
                         <h3 id="myModalLabel">如何绑定微信公众号呢</h3>
                     </div>
                     <div class="modal-body">
-                        <p>One fine body…</p>
+                        <p>参见绑定微信教程</p>
+                        token : <?php echo $userdata->wx_token; ?>
+                        url : <?php echo 'http://wapwei.top400.com.cn/index.php/api/bind/t/'.substr($userdata->wx_token,0,2).dechex(substr($userdata->wx_token,2)); ?>
                     </div>
                     <div class="modal-footer">
                         <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>

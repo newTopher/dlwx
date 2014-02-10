@@ -8,7 +8,6 @@
 return array(
     'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
     'name'=>'weixin',
-
     // preloading 'log' component
     'preload'=>array('log'),
     // autoloading model and component classes
@@ -62,7 +61,7 @@ return array(
             'connectionString' => 'mysql:host=localhost;dbname=wapwei',
             'emulatePrepare' => true,
             'username' => 'root',
-            'password' => '09270815',
+            'password' => 'root',
             'charset' => 'utf8',
             'tablePrefix'=>''
         ),
