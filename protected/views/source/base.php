@@ -3,16 +3,13 @@
     <div class="box span12">
         <div class="box-header well">
             <h2><i class="icon-info-sign"></i> 素材管理 </h2>
-            <div class="box-icon">
-                <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
-                <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
-            </div>
         </div>
         <div class="box-content">
             <div class="box-content">
                 <span class="create_access">
-                    <button class="btn btn-large btn-primary">单图文消息</button>
-                    <button style="margin-left:20px;" class="btn btn-large btn-primary">多图文消息</button>
+                    <a href="<?php echo Yii::app()->getBaseUrl(); ?>/Source/AddSingleMsg" class="btn btn-large btn-primary">单图文消息</a>
+                    <a href="<?php echo Yii::app()->getBaseUrl(); ?>/Source/AddMutilMsg" style="margin-left:20px;" class="btn btn-large btn-primary">多图文消息</a>
+                    <a href="<?php echo Yii::app()->getBaseUrl(); ?>/Source/AddSingleMsg" style="margin-left:20px;" class="btn btn-large btn-primary">自定义链接</a>
                 </span>
             </div>
         </div>

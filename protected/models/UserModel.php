@@ -31,6 +31,9 @@ class UserModel extends CActiveRecord{
     public $add_time;
     public $last_login_time;
     public $update_time;
+    public $appid;
+    public $wx_appid;
+    public $wx_appsecret;
 
     public static function model($className=__CLASS__){
         return parent::model($className);
@@ -71,6 +74,14 @@ class UserModel extends CActiveRecord{
 
     public function updateUserPwd(){
         if(self::model()->updateByPk($this->id,array('password'=>$this->password,'update_time'=>time()))){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public function updateApp(){
+        if(self::model()->updateByPk($this->id,array('wx_appid'=>$this->wx_appid,'wx_appsecret'=>$this->wx_appsecret,'update_time'=>time()))){
             return true;
         }else{
             return false;

@@ -2,10 +2,7 @@
     <div class="box span12">
         <div class="box-header well">
             <h2><i class="icon-info-sign"></i> 菜单管理 </h2>
-            <div class="box-icon">
-                <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
-                <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
-            </div>
+
         </div>
         <div class="box-content">
             <div class="box-content">
@@ -15,7 +12,6 @@
                 <div class="span8">
                     <ul id="myTab" class="nav nav-tabs">
                         <li class="active"><a href="#home" data-toggle="tab">基础菜单</a></li>
-                        <li class=""><a href="#profile" data-toggle="tab">弹出菜单</a></li>
                         <li class=""><a href="#slider" data-toggle="tab">轮播图片</a></li>
                     </ul>
                     <div id="myTabContent" class="tab-content">
@@ -41,9 +37,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="tab-pane fade" id="profile">
 
-                        </div>
                         <div class="tab-pane fade" id="slider">
                             <a href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Slideradd" class="btn btn-small btn-primary">添加图片</a>
                             <table class="table table-striped">
