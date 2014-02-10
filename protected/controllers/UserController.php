@@ -55,11 +55,32 @@ class UserController extends Controller{
         }else{
             $userModel->password = md5($npassword);
             if($userModel->updateUserPwd()){
-                $this->redirect(Yii::app()->getBaseUrl()."/User/set");
+                $this->redirect(Yii::app()->request->getBaseUrl()."/User/set");
             }else{
-                $this->redirect(Yii::app()->getBaseUrl()."/User/set");
+                $this->redirect(Yii::app()->request->getBaseUrl()."/User/set");
             }
         }
     }
 
+    public function actionUserlist(){
+        $criteria=new CDbCriteria();
+        if($email=Yii::app()->request->getParam('email','')){
+            $criteria->addSearchCondition('email',$email);
+            $criteria->order="deadline_date desc";
+        }else{
+            $criteria->order="deadline_date desc";
+        }
+        $count=UserModel::model()->count($criteria);
+        $pager=new CPagination($count);
+        $pager->pageSize=30;
+        $pager->applyLimit($criteria);
+        $UserList=UserModel::model()->with('agent_user')->findall($criteria);
+        foreach ($UserList as $l){
+            $list=array();
+            $list['user']=$l->attributes;
+            $list['agent_user']=$l->getRelated('agent_user')->attributes;
+            $userlist[]=$list;
+        }
+        $this->render('userlist',array('list'=>$userlist,'pages'=>$pager));
+    }
 }

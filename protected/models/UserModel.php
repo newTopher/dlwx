@@ -45,7 +45,7 @@ class UserModel extends CActiveRecord{
 
     public function relations(){
         return array(
-
+            'agent_user'=>array(self::BELONGS_TO,'AgentUserModel','puid')
         );
     }
 
@@ -66,6 +66,14 @@ class UserModel extends CActiveRecord{
         if(self::model()->updateByPk($this->id,array('name'=>$this->name,
         'tel'=>$this->tel,'trade_id'=>$this->trade_id,'update_time'=>time()
         ))){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public function updateByToken(){
+        if(self::model()->updateAll(array('puid'=>$this->puid,'open_weixin'=>1,'bind_wx_time'=>time()),'wx_token=:wx_token',array(':wx_token'=>$this->wx_token))){
             return true;
         }else{
             return false;
