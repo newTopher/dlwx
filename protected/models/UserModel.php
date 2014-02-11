@@ -97,8 +97,8 @@ class UserModel extends CActiveRecord{
     }
 
     static public function findByToken($wx_token){
-        if(self::model()->findByAttributes(array('wx_token'=>$wx_token,'open_weixin'=>1))){
-            return true;
+        if($res = self::model()->findByAttributes(array('wx_token'=>$wx_token,'open_weixin'=>1))){
+            return $res;
         }else{
             return false;
         }

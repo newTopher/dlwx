@@ -36,6 +36,10 @@ class WxWebsiteModel extends CActiveRecord{
         return self::model()->findByPk($this->id);
     }
 
+    static public function getWxWebByUid($uid){
+        return self::model()->findByAttributes(array('uid'=>$uid));
+    }
+
     public function updateWxWebById(){
         $data=array(
             'uid'=>$this->uid,
