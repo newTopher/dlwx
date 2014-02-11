@@ -6,7 +6,11 @@ class TemplateModel extends CActiveRecord{
     public $path_url;
     public $trade_id;
     public $attr_setting_id;
+    public $nail_url;
     public $id;
+    public $money;
+    public $template_image;
+    public $china_name;
 
     public static function model($className=__CLASS__){
         return parent::model($className);
@@ -22,14 +26,32 @@ class TemplateModel extends CActiveRecord{
         );
     }
 
-    public function SelectTemplate(){
-        $temp=self::model()->findall();
+    public static function Select(){
+        return self::model()->findAllByAttributes(array("status"=>1));
+    }
+
+    public function selectMoney($tid){
+        return self::model()->findAllByAttributes(array("id"=>$tid));
+    }
+    public function SelectTemplate($trade_id){
+        $temp=self::model()->findAllByAttributes(array("status"=>1,"trade_id"=>$trade_id));
         return $temp;
     }
 
+    public function SelectTrade(){
+        return  self::model()->findAllBySql("select  distinct trade_id from template_list");
+    }
+
     public function InsertTemplate(){
-        if($temp=self::model()->insert()){
-            return $temp;
+        if($this->insert()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public function DeleteTemplate(){
+        if(self::model()->updateByPk($this->id,array('status'=>0))){
+            return true;
         }else{
             return false;
         }
