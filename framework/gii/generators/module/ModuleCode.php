@@ -7,9 +7,9 @@ class ModuleCode extends CCodeModel
 	public function rules()
 	{
 		return array_merge(parent::rules(), array(
-			array('moduleID', 'filter', 'filter'=>'trim'),
-			array('moduleID', 'required'),
-			array('moduleID', 'match', 'pattern'=>'/^\w+$/', 'message'=>'{attribute} should only contain word characters.'),
+		array('moduleID', 'filter', 'filter'=>'trim'),
+		array('moduleID', 'required'),
+		array('moduleID', 'match', 'pattern'=>'/^\w+$/', 'message'=>'{attribute} should only contain word characters.'),
 		));
 	}
 
@@ -23,7 +23,7 @@ class ModuleCode extends CCodeModel
 	public function successMessage()
 	{
 		if(Yii::app()->hasModule($this->moduleID))
-			return 'The module has been generated successfully. You may '.CHtml::link('try it now', Yii::app()->createUrl($this->moduleID), array('target'=>'_blank')).'.';
+		return 'The module has been generated successfully. You may '.CHtml::link('try it now', Yii::app()->createUrl($this->moduleID), array('target'=>'_blank')).'.';
 
 		$output=<<<EOD
 <p>The module has been generated successfully.</p>
@@ -50,36 +50,36 @@ EOD;
 		$moduleTemplateFile=$templatePath.DIRECTORY_SEPARATOR.'module.php';
 
 		$this->files[]=new CCodeFile(
-			$modulePath.'/'.$this->moduleClass.'.php',
-			$this->render($moduleTemplateFile)
+		$modulePath.'/'.$this->moduleClass.'.php',
+		$this->render($moduleTemplateFile)
 		);
 
 		$files=CFileHelper::findFiles($templatePath,array(
 			'exclude'=>array(
 				'.svn',
 				'.gitignore'
-			),
-		));
+				),
+				));
 
-		foreach($files as $file)
-		{
-			if($file!==$moduleTemplateFile)
-			{
-				if(CFileHelper::getExtension($file)==='php')
-					$content=$this->render($file);
-				elseif(basename($file)==='.yii')  // an empty directory
+				foreach($files as $file)
 				{
-					$file=dirname($file);
-					$content=null;
+					if($file!==$moduleTemplateFile)
+					{
+						if(CFileHelper::getExtension($file)==='php')
+						$content=$this->render($file);
+						elseif(basename($file)==='.yii')  // an empty directory
+						{
+							$file=dirname($file);
+							$content=null;
+						}
+						else
+						$content=file_get_contents($file);
+						$this->files[]=new CCodeFile(
+						$modulePath.substr($file,strlen($templatePath)),
+						$content
+						);
+					}
 				}
-				else
-					$content=file_get_contents($file);
-				$this->files[]=new CCodeFile(
-					$modulePath.substr($file,strlen($templatePath)),
-					$content
-				);
-			}
-		}
 	}
 
 	public function getModuleClass()

@@ -106,7 +106,7 @@ EOD;
 			$controllerFile=($middle===''?'':$middle.'/').$controllerClass.'.php';
 			$controllerID=$middle===''?$last:$middle.'/'.$last;
 			if(($m=Yii::app()->getModule($first))!==null)
-				$module=$m;
+			$module=$m;
 			else
 			{
 				$controllerFile=$first.'/'.$controllerClass.'.php';
@@ -122,12 +122,12 @@ EOD;
 		$templatePath=$this->templatePath===null?YII_PATH.'/cli/views/shell/controller':$this->templatePath;
 
 		$list=array(
-			basename($controllerFile)=>array(
+		basename($controllerFile)=>array(
 				'source'=>$templatePath.DIRECTORY_SEPARATOR.'controller.php',
 				'target'=>$controllerFile,
 				'callback'=>array($this,'generateController'),
 				'params'=>array($controllerClass, $actions),
-			),
+		),
 		);
 
 		$viewPath=$module->viewPath.DIRECTORY_SEPARATOR.str_replace('/',DIRECTORY_SEPARATOR,$controllerID);
@@ -144,14 +144,14 @@ EOD;
 		$this->copyFiles($list);
 
 		if($module instanceof CWebModule)
-			$moduleID=$module->id.'/';
+		$moduleID=$module->id.'/';
 		else
-			$moduleID='';
+		$moduleID='';
 
 		echo <<<EOD
 
 Controller '{$controllerID}' has been created in the following file:
-    $controllerFile
+$controllerFile
 
 You may access it in the browser using the following URL:
     http://hostname/path/to/index.php?r={$moduleID}{$controllerID}
@@ -162,14 +162,14 @@ EOD;
 	public function generateController($source,$params)
 	{
 		if(!is_file($source))  // fall back to default ones
-			$source=YII_PATH.'/cli/views/shell/controller/'.basename($source);
+		$source=YII_PATH.'/cli/views/shell/controller/'.basename($source);
 		return $this->renderFile($source,array('className'=>$params[0],'actions'=>$params[1]),true);
 	}
 
 	public function generateAction($source,$params)
 	{
 		if(!is_file($source))  // fall back to default ones
-			$source=YII_PATH.'/cli/views/shell/controller/'.basename($source);
+		$source=YII_PATH.'/cli/views/shell/controller/'.basename($source);
 		return $this->renderFile($source,$params,true);
 	}
 }

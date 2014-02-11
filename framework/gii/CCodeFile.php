@@ -52,11 +52,11 @@ class CCodeFile extends CComponent
 		$this->path=strtr($path,array('/'=>DIRECTORY_SEPARATOR,'\\'=>DIRECTORY_SEPARATOR));
 		$this->content=$content;
 		if(is_file($path))
-			$this->operation=file_get_contents($path)===$content ? self::OP_SKIP : self::OP_OVERWRITE;
+		$this->operation=file_get_contents($path)===$content ? self::OP_SKIP : self::OP_OVERWRITE;
 		elseif($content===null)  // is dir
-			$this->operation=is_dir($path) ? self::OP_SKIP : self::OP_NEW;
+		$this->operation=is_dir($path) ? self::OP_SKIP : self::OP_NEW;
 		else
-			$this->operation=self::OP_NEW;
+		$this->operation=self::OP_NEW;
 	}
 
 	/**
@@ -116,9 +116,9 @@ class CCodeFile extends CComponent
 	public function getRelativePath()
 	{
 		if(strpos($this->path,Yii::app()->basePath)===0)
-			return substr($this->path,strlen(Yii::app()->basePath)+1);
+		return substr($this->path,strlen(Yii::app()->basePath)+1);
 		else
-			return $this->path;
+		return $this->path;
 	}
 
 	/**
@@ -127,8 +127,8 @@ class CCodeFile extends CComponent
 	public function getType()
 	{
 		if(($pos=strrpos($this->path,'.'))!==false)
-			return substr($this->path,$pos+1);
+		return substr($this->path,$pos+1);
 		else
-			return 'unknown';
+		return 'unknown';
 	}
 }

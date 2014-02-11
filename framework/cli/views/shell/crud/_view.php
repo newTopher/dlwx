@@ -7,23 +7,19 @@
  * - $columns: a list of column schema objects
  */
 ?>
-<div class="view">
-
-<?php
+<div class="view"><?php
 echo "\t<b><?php echo CHtml::encode(\$data->getAttributeLabel('{$ID}')); ?>:</b>\n";
 echo "\t<?php echo CHtml::link(CHtml::encode(\$data->{$ID}), array('view', 'id'=>\$data->{$ID})); ?>\n\t<br />\n\n";
 $count=0;
 foreach($columns as $column)
 {
 	if($column->isPrimaryKey)
-		continue;
+	continue;
 	if(++$count==7)
-		echo "\t<?php /*\n";
+	echo "\t<?php /*\n";
 	echo "\t<b><?php echo CHtml::encode(\$data->getAttributeLabel('{$column->name}')); ?>:</b>\n";
 	echo "\t<?php echo CHtml::encode(\$data->{$column->name}); ?>\n\t<br />\n\n";
 }
 if($count>=7)
-	echo "\t*/ ?>\n";
-?>
-
-</div>
+echo "\t*/ ?>\n";
+?></div>

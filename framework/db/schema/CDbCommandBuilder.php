@@ -59,9 +59,9 @@ class CDbCommandBuilder extends CComponent
 	{
 		$this->ensureTable($table);
 		if($table->sequenceName!==null)
-			return $this->_connection->getLastInsertID($table->sequenceName);
+		return $this->_connection->getLastInsertID($table->sequenceName);
 		else
-			return null;
+		return null;
 	}
 
 	/**
@@ -76,7 +76,7 @@ class CDbCommandBuilder extends CComponent
 		$this->ensureTable($table);
 		$select=is_array($criteria->select) ? implode(', ',$criteria->select) : $criteria->select;
 		if($criteria->alias!='')
-			$alias=$criteria->alias;
+		$alias=$criteria->alias;
 		$alias=$this->_schema->quoteTableName($alias);
 
 		// issue 1432: need to expand * when SQL has JOIN
@@ -85,7 +85,7 @@ class CDbCommandBuilder extends CComponent
 			$prefix=$alias.'.';
 			$select=array();
 			foreach($table->getColumnNames() as $name)
-				$select[]=$prefix.$this->_schema->quoteColumnName($name);
+			$select[]=$prefix.$this->_schema->quoteColumnName($name);
 			$select=implode(', ',$select);
 		}
 
@@ -112,14 +112,14 @@ class CDbCommandBuilder extends CComponent
 	{
 		$this->ensureTable($table);
 		if($criteria->alias!='')
-			$alias=$criteria->alias;
+		$alias=$criteria->alias;
 		$alias=$this->_schema->quoteTableName($alias);
 
 		if(!empty($criteria->group) || !empty($criteria->having))
 		{
 			$select=is_array($criteria->select) ? implode(', ',$criteria->select) : $criteria->select;
 			if($criteria->alias!='')
-				$alias=$criteria->alias;
+			$alias=$criteria->alias;
 			$sql=($criteria->distinct ? 'SELECT DISTINCT':'SELECT')." {$select} FROM {$table->rawName} $alias";
 			$sql=$this->applyJoin($sql,$criteria->join);
 			$sql=$this->applyCondition($sql,$criteria->condition);
@@ -130,22 +130,22 @@ class CDbCommandBuilder extends CComponent
 		else
 		{
 			if(is_string($criteria->select) && stripos($criteria->select,'count')===0)
-				$sql="SELECT ".$criteria->select;
+			$sql="SELECT ".$criteria->select;
 			elseif($criteria->distinct)
 			{
 				if(is_array($table->primaryKey))
 				{
 					$pk=array();
 					foreach($table->primaryKey as $key)
-						$pk[]=$alias.'.'.$key;
+					$pk[]=$alias.'.'.$key;
 					$pk=implode(', ',$pk);
 				}
 				else
-					$pk=$alias.'.'.$table->primaryKey;
+				$pk=$alias.'.'.$table->primaryKey;
 				$sql="SELECT COUNT(DISTINCT $pk)";
 			}
 			else
-				$sql="SELECT COUNT(*)";
+			$sql="SELECT COUNT(*)";
 			$sql.=" FROM {$table->rawName} $alias";
 			$sql=$this->applyJoin($sql,$criteria->join);
 			$sql=$this->applyCondition($sql,$criteria->condition);
@@ -159,7 +159,7 @@ class CDbCommandBuilder extends CComponent
 			$params2=array();
 			preg_match_all('/(:\w+)/',$this->applyOrder($sql,$criteria->order),$params2);
 			foreach(array_diff($params2[0],$params1[0]) as $param)
-				unset($criteria->params[$param]);
+			unset($criteria->params[$param]);
 		}
 
 		// Do the same for SELECT part.
@@ -170,7 +170,7 @@ class CDbCommandBuilder extends CComponent
 			$params2=array();
 			preg_match_all('/(:\w+)/',$sql.' '.(is_array($criteria->select) ? implode(', ',$criteria->select) : $criteria->select),$params2);
 			foreach(array_diff($params2[0],$params1[0]) as $param)
-				unset($criteria->params[$param]);
+			unset($criteria->params[$param]);
 		}
 
 		$command=$this->_connection->createCommand($sql);
@@ -221,7 +221,7 @@ class CDbCommandBuilder extends CComponent
 				{
 					$placeholders[]=$value->expression;
 					foreach($value->params as $n=>$v)
-						$values[$n]=$v;
+					$values[$n]=$v;
 				}
 				else
 				{
@@ -244,7 +244,7 @@ class CDbCommandBuilder extends CComponent
 		$command=$this->_connection->createCommand($sql);
 
 		foreach($values as $name=>$value)
-			$command->bindValue($name,$value);
+		$command->bindValue($name,$value);
 
 		return $command;
 	}
@@ -277,15 +277,15 @@ class CDbCommandBuilder extends CComponent
 	protected function composeMultipleInsertCommand($table,array $data,array $templates=array())
 	{
 		$templates=array_merge(
-			array(
+		array(
 				'main'=>'INSERT INTO {{tableName}} ({{columnInsertNames}}) VALUES {{rowInsertValues}}',
 				'columnInsertValue'=>'{{value}}',
 				'columnInsertValueGlue'=>', ',
 				'rowInsertValue'=>'({{columnInsertValues}})',
 				'rowInsertValueGlue'=>', ',
 				'columnInsertNameGlue'=>', ',
-			),
-			$templates
+		),
+		$templates
 		);
 		$this->ensureTable($table);
 		$tableName=$this->getDbConnection()->quoteTableName($table->name);
@@ -299,12 +299,12 @@ class CDbCommandBuilder extends CComponent
 			foreach($rowData as $columnName=>$columnValue)
 			{
 				if(!in_array($columnName,$columns,true))
-					if($table->getColumn($columnName)!==null)
-						$columns[]=$columnName;
+				if($table->getColumn($columnName)!==null)
+				$columns[]=$columnName;
 			}
 		}
 		foreach($columns as $name)
-			$columnInsertNames[$name]=$this->getDbConnection()->quoteColumnName($name);
+		$columnInsertNames[$name]=$this->getDbConnection()->quoteColumnName($name);
 		$columnInsertNamesSqlPart=implode($templates['columnInsertNameGlue'],$columnInsertNames);
 
 		foreach($data as $rowKey=>$rowData)
@@ -318,7 +318,7 @@ class CDbCommandBuilder extends CComponent
 				{
 					$columnInsertValue=$columnValue->expression;
 					foreach($columnValue->params as $columnValueParamName=>$columnValueParam)
-						$params[$columnValueParamName]=$columnValueParam;
+					$params[$columnValueParamName]=$columnValueParam;
 				}
 				else
 				{
@@ -345,7 +345,7 @@ class CDbCommandBuilder extends CComponent
 		$command=$this->getDbConnection()->createCommand($sql);
 
 		foreach($params as $name=>$value)
-			$command->bindValue($name,$value);
+		$command->bindValue($name,$value);
 
 		return $command;
 	}
@@ -373,7 +373,7 @@ class CDbCommandBuilder extends CComponent
 				{
 					$fields[]=$column->rawName.'='.$value->expression;
 					foreach($value->params as $n=>$v)
-						$values[$n]=$v;
+					$values[$n]=$v;
 				}
 				elseif($bindByPosition)
 				{
@@ -389,8 +389,8 @@ class CDbCommandBuilder extends CComponent
 			}
 		}
 		if($fields===array())
-			throw new CDbException(Yii::t('yii','No columns are being updated for table "{table}".',
-				array('{table}'=>$table->name)));
+		throw new CDbException(Yii::t('yii','No columns are being updated for table "{table}".',
+		array('{table}'=>$table->name)));
 		$sql="UPDATE {$table->rawName} SET ".implode(', ',$fields);
 		$sql=$this->applyJoin($sql,$criteria->join);
 		$sql=$this->applyCondition($sql,$criteria->condition);
@@ -421,9 +421,9 @@ class CDbCommandBuilder extends CComponent
 			{
 				$value=(float)$value;
 				if($value<0)
-					$fields[]="{$column->rawName}={$column->rawName}-".(-$value);
+				$fields[]="{$column->rawName}={$column->rawName}-".(-$value);
 				else
-					$fields[]="{$column->rawName}={$column->rawName}+".$value;
+				$fields[]="{$column->rawName}={$column->rawName}+".$value;
 			}
 		}
 		if($fields!==array())
@@ -438,8 +438,8 @@ class CDbCommandBuilder extends CComponent
 			return $command;
 		}
 		else
-			throw new CDbException(Yii::t('yii','No counter columns are being updated for table "{table}".',
-				array('{table}'=>$table->name)));
+		throw new CDbException(Yii::t('yii','No counter columns are being updated for table "{table}".',
+		array('{table}'=>$table->name)));
 	}
 
 	/**
@@ -464,9 +464,9 @@ class CDbCommandBuilder extends CComponent
 	public function applyJoin($sql,$join)
 	{
 		if($join!='')
-			return $sql.' '.$join;
+		return $sql.' '.$join;
 		else
-			return $sql;
+		return $sql;
 	}
 
 	/**
@@ -478,9 +478,9 @@ class CDbCommandBuilder extends CComponent
 	public function applyCondition($sql,$condition)
 	{
 		if($condition!='')
-			return $sql.' WHERE '.$condition;
+		return $sql.' WHERE '.$condition;
 		else
-			return $sql;
+		return $sql;
 	}
 
 	/**
@@ -492,9 +492,9 @@ class CDbCommandBuilder extends CComponent
 	public function applyOrder($sql,$orderBy)
 	{
 		if($orderBy!='')
-			return $sql.' ORDER BY '.$orderBy;
+		return $sql.' ORDER BY '.$orderBy;
 		else
-			return $sql;
+		return $sql;
 	}
 
 	/**
@@ -508,9 +508,9 @@ class CDbCommandBuilder extends CComponent
 	public function applyLimit($sql,$limit,$offset)
 	{
 		if($limit>=0)
-			$sql.=' LIMIT '.(int)$limit;
+		$sql.=' LIMIT '.(int)$limit;
 		if($offset>0)
-			$sql.=' OFFSET '.(int)$offset;
+		$sql.=' OFFSET '.(int)$offset;
 		return $sql;
 	}
 
@@ -523,9 +523,9 @@ class CDbCommandBuilder extends CComponent
 	public function applyGroup($sql,$group)
 	{
 		if($group!='')
-			return $sql.' GROUP BY '.$group;
+		return $sql.' GROUP BY '.$group;
 		else
-			return $sql;
+		return $sql;
 	}
 
 	/**
@@ -537,9 +537,9 @@ class CDbCommandBuilder extends CComponent
 	public function applyHaving($sql,$having)
 	{
 		if($having!='')
-			return $sql.' HAVING '.$having;
+		return $sql.' HAVING '.$having;
 		else
-			return $sql;
+		return $sql;
 	}
 
 	/**
@@ -550,18 +550,18 @@ class CDbCommandBuilder extends CComponent
 	public function bindValues($command, $values)
 	{
 		if(($n=count($values))===0)
-			return;
+		return;
 		if(isset($values[0])) // question mark placeholders
 		{
 			for($i=0;$i<$n;++$i)
-				$command->bindValue($i+1,$values[$i]);
+			$command->bindValue($i+1,$values[$i]);
 		}
 		else // named placeholders
 		{
 			foreach($values as $name=>$value)
 			{
 				if($name[0]!==':')
-					$name=':'.$name;
+				$name=':'.$name;
 				$command->bindValue($name,$value);
 			}
 		}
@@ -582,9 +582,9 @@ class CDbCommandBuilder extends CComponent
 	public function createCriteria($condition='',$params=array())
 	{
 		if(is_array($condition))
-			$criteria=new CDbCriteria($condition);
+		$criteria=new CDbCriteria($condition);
 		elseif($condition instanceof CDbCriteria)
-			$criteria=clone $condition;
+		$criteria=clone $condition;
 		else
 		{
 			$criteria=new CDbCriteria;
@@ -613,16 +613,16 @@ class CDbCommandBuilder extends CComponent
 		$this->ensureTable($table);
 		$criteria=$this->createCriteria($condition,$params);
 		if($criteria->alias!='')
-			$prefix=$this->_schema->quoteTableName($criteria->alias).'.';
+		$prefix=$this->_schema->quoteTableName($criteria->alias).'.';
 		if(!is_array($pk)) // single key
-			$pk=array($pk);
+		$pk=array($pk);
 		if(is_array($table->primaryKey) && !isset($pk[0]) && $pk!==array()) // single composite key
-			$pk=array($pk);
+		$pk=array($pk);
 		$condition=$this->createInCondition($table,$table->primaryKey,$pk,$prefix);
 		if($criteria->condition!='')
-			$criteria->condition=$condition.' AND ('.$criteria->condition.')';
+		$criteria->condition=$condition.' AND ('.$criteria->condition.')';
 		else
-			$criteria->condition=$condition;
+		$criteria->condition=$condition;
 
 		return $criteria;
 	}
@@ -660,19 +660,19 @@ class CDbCommandBuilder extends CComponent
 		$this->ensureTable($table);
 		$criteria=$this->createCriteria($condition,$params);
 		if($criteria->alias!='')
-			$prefix=$this->_schema->quoteTableName($criteria->alias).'.';
+		$prefix=$this->_schema->quoteTableName($criteria->alias).'.';
 		$bindByPosition=isset($criteria->params[0]);
 		$conditions=array();
 		$values=array();
 		$i=0;
 		if($prefix===null)
-			$prefix=$table->rawName.'.';
+		$prefix=$table->rawName.'.';
 		foreach($columns as $name=>$value)
 		{
 			if(($column=$table->getColumn($name))!==null)
 			{
 				if(is_array($value))
-					$conditions[]=$this->createInCondition($table,$name,$value,$prefix);
+				$conditions[]=$this->createInCondition($table,$name,$value,$prefix);
 				elseif($value!==null)
 				{
 					if($bindByPosition)
@@ -688,19 +688,19 @@ class CDbCommandBuilder extends CComponent
 					}
 				}
 				else
-					$conditions[]=$prefix.$column->rawName.' IS NULL';
+				$conditions[]=$prefix.$column->rawName.' IS NULL';
 			}
 			else
-				throw new CDbException(Yii::t('yii','Table "{table}" does not have a column named "{column}".',
-					array('{table}'=>$table->name,'{column}'=>$name)));
+			throw new CDbException(Yii::t('yii','Table "{table}" does not have a column named "{column}".',
+			array('{table}'=>$table->name,'{column}'=>$name)));
 		}
 		$criteria->params=array_merge($values,$criteria->params);
 		if(isset($conditions[0]))
 		{
 			if($criteria->condition!='')
-				$criteria->condition=implode(' AND ',$conditions).' AND ('.$criteria->condition.')';
+			$criteria->condition=implode(' AND ',$conditions).' AND ('.$criteria->condition.')';
 			else
-				$criteria->condition=implode(' AND ',$conditions);
+			$criteria->condition=implode(' AND ',$conditions);
 		}
 		return $criteria;
 	}
@@ -722,25 +722,25 @@ class CDbCommandBuilder extends CComponent
 	{
 		$this->ensureTable($table);
 		if(!is_array($keywords))
-			$keywords=preg_split('/\s+/u',$keywords,-1,PREG_SPLIT_NO_EMPTY);
+		$keywords=preg_split('/\s+/u',$keywords,-1,PREG_SPLIT_NO_EMPTY);
 		if(empty($keywords))
-			return '';
+		return '';
 		if($prefix===null)
-			$prefix=$table->rawName.'.';
+		$prefix=$table->rawName.'.';
 		$conditions=array();
 		foreach($columns as $name)
 		{
 			if(($column=$table->getColumn($name))===null)
-				throw new CDbException(Yii::t('yii','Table "{table}" does not have a column named "{column}".',
-					array('{table}'=>$table->name,'{column}'=>$name)));
+			throw new CDbException(Yii::t('yii','Table "{table}" does not have a column named "{column}".',
+			array('{table}'=>$table->name,'{column}'=>$name)));
 			$condition=array();
 			foreach($keywords as $keyword)
 			{
 				$keyword='%'.strtr($keyword,array('%'=>'\%', '_'=>'\_')).'%';
 				if($caseSensitive)
-					$condition[]=$prefix.$column->rawName.' LIKE '.$this->_connection->quoteValue('%'.$keyword.'%');
+				$condition[]=$prefix.$column->rawName.' LIKE '.$this->_connection->quoteValue('%'.$keyword.'%');
 				else
-					$condition[]='LOWER('.$prefix.$column->rawName.') LIKE LOWER('.$this->_connection->quoteValue('%'.$keyword.'%').')';
+				$condition[]='LOWER('.$prefix.$column->rawName.') LIKE LOWER('.$this->_connection->quoteValue('%'.$keyword.'%').')';
 			}
 			$conditions[]=implode(' AND ',$condition);
 		}
@@ -760,23 +760,23 @@ class CDbCommandBuilder extends CComponent
 	public function createInCondition($table,$columnName,$values,$prefix=null)
 	{
 		if(($n=count($values))<1)
-			return '0=1';
+		return '0=1';
 
 		$this->ensureTable($table);
 
 		if($prefix===null)
-			$prefix=$table->rawName.'.';
+		$prefix=$table->rawName.'.';
 
 		$db=$this->_connection;
 
 		if(is_array($columnName) && count($columnName)===1)
-			$columnName=reset($columnName);
+		$columnName=reset($columnName);
 
 		if(is_string($columnName)) // simple key
 		{
 			if(!isset($table->columns[$columnName]))
-				throw new CDbException(Yii::t('yii','Table "{table}" does not have a column named "{column}".',
-				array('{table}'=>$table->name, '{column}'=>$columnName)));
+			throw new CDbException(Yii::t('yii','Table "{table}" does not have a column named "{column}".',
+			array('{table}'=>$table->name, '{column}'=>$columnName)));
 			$column=$table->columns[$columnName];
 
 			$values=array_values($values);
@@ -784,20 +784,20 @@ class CDbCommandBuilder extends CComponent
 			{
 				$value=$column->typecast($value);
 				if(is_string($value))
-					$value=$db->quoteValue($value);
+				$value=$db->quoteValue($value);
 			}
 			if($n===1)
-				return $prefix.$column->rawName.($values[0]===null?' IS NULL':'='.$values[0]);
+			return $prefix.$column->rawName.($values[0]===null?' IS NULL':'='.$values[0]);
 			else
-				return $prefix.$column->rawName.' IN ('.implode(', ',$values).')';
+			return $prefix.$column->rawName.' IN ('.implode(', ',$values).')';
 		}
 		elseif(is_array($columnName)) // composite key: $values=array(array('pk1'=>'v1','pk2'=>'v2'),array(...))
 		{
 			foreach($columnName as $name)
 			{
 				if(!isset($table->columns[$name]))
-					throw new CDbException(Yii::t('yii','Table "{table}" does not have a column named "{column}".',
-					array('{table}'=>$table->name, '{column}'=>$name)));
+				throw new CDbException(Yii::t('yii','Table "{table}" does not have a column named "{column}".',
+				array('{table}'=>$table->name, '{column}'=>$name)));
 
 				for($i=0;$i<$n;++$i)
 				{
@@ -805,27 +805,27 @@ class CDbCommandBuilder extends CComponent
 					{
 						$value=$table->columns[$name]->typecast($values[$i][$name]);
 						if(is_string($value))
-							$values[$i][$name]=$db->quoteValue($value);
+						$values[$i][$name]=$db->quoteValue($value);
 						else
-							$values[$i][$name]=$value;
+						$values[$i][$name]=$value;
 					}
 					else
-						throw new CDbException(Yii::t('yii','The value for the column "{column}" is not supplied when querying the table "{table}".',
-							array('{table}'=>$table->name,'{column}'=>$name)));
+					throw new CDbException(Yii::t('yii','The value for the column "{column}" is not supplied when querying the table "{table}".',
+					array('{table}'=>$table->name,'{column}'=>$name)));
 				}
 			}
 			if(count($values)===1)
 			{
 				$entries=array();
 				foreach($values[0] as $name=>$value)
-					$entries[]=$prefix.$table->columns[$name]->rawName.($value===null?' IS NULL':'='.$value);
+				$entries[]=$prefix.$table->columns[$name]->rawName.($value===null?' IS NULL':'='.$value);
 				return implode(' AND ',$entries);
 			}
 
 			return $this->createCompositeInCondition($table,$values,$prefix);
 		}
 		else
-			throw new CDbException(Yii::t('yii','Column name must be either a string or an array.'));
+		throw new CDbException(Yii::t('yii','Column name must be either a string or an array.'));
 	}
 
 	/**
@@ -839,10 +839,10 @@ class CDbCommandBuilder extends CComponent
 	{
 		$keyNames=array();
 		foreach(array_keys($values[0]) as $name)
-			$keyNames[]=$prefix.$table->columns[$name]->rawName;
+		$keyNames[]=$prefix.$table->columns[$name]->rawName;
 		$vs=array();
 		foreach($values as $value)
-			$vs[]='('.implode(', ',$value).')';
+		$vs[]='('.implode(', ',$value).')';
 		return '('.implode(', ',$keyNames).') IN ('.implode(', ',$vs).')';
 	}
 
@@ -856,8 +856,8 @@ class CDbCommandBuilder extends CComponent
 	protected function ensureTable(&$table)
 	{
 		if(is_string($table) && ($table=$this->_schema->getTable($tableName=$table))===null)
-			throw new CDbException(Yii::t('yii','Table "{table}" does not exist.',
-				array('{table}'=>$tableName)));
+		throw new CDbException(Yii::t('yii','Table "{table}" does not exist.',
+		array('{table}'=>$tableName)));
 	}
 
 	/**

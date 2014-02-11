@@ -46,8 +46,8 @@ class CFileCacheDependency extends CCacheDependency
 	protected function generateDependentData()
 	{
 		if($this->fileName!==null)
-			return @filemtime($this->fileName);
+		return @filemtime($this->fileName);
 		else
-			throw new CException(Yii::t('yii','CFileCacheDependency.fileName cannot be empty.'));
+		throw new CException(Yii::t('yii','CFileCacheDependency.fileName cannot be empty.'));
 	}
 }

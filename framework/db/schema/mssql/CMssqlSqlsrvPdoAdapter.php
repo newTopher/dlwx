@@ -30,7 +30,7 @@ class CMssqlSqlsrvPdoAdapter extends PDO
 	public function lastInsertId($sequence=null)
 	{
 		if(!$sequence)
-			return parent::lastInsertId();
+		return parent::lastInsertId();
 		return parent::lastInsertId($sequence);
 	}
 }

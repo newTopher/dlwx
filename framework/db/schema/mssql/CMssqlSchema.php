@@ -91,17 +91,17 @@ class CMssqlSchema extends CDbSchema
 	public function resetSequence($table,$value=null)
 	{
 		if($table->sequenceName===null)
-			return;
+		return;
 		if($value!==null)
-			$value=(int)($value)-1;
+		$value=(int)($value)-1;
 		else
-			$value=(int)$this->getDbConnection()
-				->createCommand("SELECT MAX([{$table->primaryKey}]) FROM {$table->rawName}")
-				->queryScalar();
+		$value=(int)$this->getDbConnection()
+		->createCommand("SELECT MAX([{$table->primaryKey}]) FROM {$table->rawName}")
+		->queryScalar();
 		$name=strtr($table->rawName,array('['=>'',']'=>''));
 		$this->getDbConnection()
-			->createCommand("DBCC CHECKIDENT ('$name',RESEED,$value)")
-			->execute();
+		->createCommand("DBCC CHECKIDENT ('$name',RESEED,$value)")
+		->execute();
 	}
 
 	private $_normalTables=array();  // non-view tables
@@ -115,7 +115,7 @@ class CMssqlSchema extends CDbSchema
 	{
 		$enable=$check ? 'CHECK' : 'NOCHECK';
 		if(!isset($this->_normalTables[$schema]))
-			$this->_normalTables[$schema]=$this->findTableNames($schema,false);
+		$this->_normalTables[$schema]=$this->findTableNames($schema,false);
 		$db=$this->getDbConnection();
 		foreach($this->_normalTables[$schema] as $tableName)
 		{
@@ -141,7 +141,7 @@ class CMssqlSchema extends CDbSchema
 			return $table;
 		}
 		else
-			return null;
+		return null;
 	}
 
 	/**
@@ -287,7 +287,7 @@ EOD;
 			$columnsTable = $table->catalogName.'.'.$columnsTable;
 		}
 		if (isset($table->schemaName))
-			$where[]="t1.TABLE_SCHEMA='".$table->schemaName."'";
+		$where[]="t1.TABLE_SCHEMA='".$table->schemaName."'";
 
 		$sql="SELECT t1.*, columnproperty(object_id(t1.table_schema+'.'+t1.table_name), t1.column_name, 'IsIdentity') AS IsIdentity, ".
 			 "CONVERT(VARCHAR, t2.value) AS Comment FROM ".$this->quoteTableName($columnsTable)." AS t1 ".
@@ -298,7 +298,7 @@ EOD;
 		{
 			$columns=$this->getDbConnection()->createCommand($sql)->queryAll();
 			if(empty($columns))
-				return false;
+			return false;
 		}
 		catch(Exception $e)
 		{
@@ -309,14 +309,14 @@ EOD;
 		{
 			$c=$this->createColumn($column);
 			if (is_array($table->primaryKey))
-				$c->isPrimaryKey=in_array($c->name, $table->primaryKey);
+			$c->isPrimaryKey=in_array($c->name, $table->primaryKey);
 			else
-				$c->isPrimaryKey=strcasecmp($c->name,$table->primaryKey)===0;
+			$c->isPrimaryKey=strcasecmp($c->name,$table->primaryKey)===0;
 
 			$c->isForeignKey=isset($table->foreignKeys[$c->name]);
 			$table->columns[$c->name]=$c;
 			if ($c->autoIncrement && $table->sequenceName===null)
-				$table->sequenceName=$table->name;
+			$table->sequenceName=$table->name;
 		}
 		return true;
 	}
@@ -339,9 +339,9 @@ EOD;
 			$c->scale=$column['NUMERIC_SCALE']!==null?(int)$column['NUMERIC_SCALE']:null;
 		}
 		elseif ($column['DATA_TYPE']=='image' || $column['DATA_TYPE']=='text')
-			$c->size=$c->precision=null;
+		$c->size=$c->precision=null;
 		else
-			$c->size=$c->precision=($column['CHARACTER_MAXIMUM_LENGTH']!== null)?(int)$column['CHARACTER_MAXIMUM_LENGTH']:null;
+		$c->size=$c->precision=($column['CHARACTER_MAXIMUM_LENGTH']!== null)?(int)$column['CHARACTER_MAXIMUM_LENGTH']:null;
 		$c->autoIncrement=$column['IsIdentity']==1;
 		$c->comment=$column['Comment']===null ? '' : $column['Comment'];
 
@@ -359,11 +359,11 @@ EOD;
 	protected function findTableNames($schema='',$includeViews=true)
 	{
 		if($schema==='')
-			$schema=self::DEFAULT_SCHEMA;
+		$schema=self::DEFAULT_SCHEMA;
 		if($includeViews)
-			$condition="TABLE_TYPE in ('BASE TABLE','VIEW')";
+		$condition="TABLE_TYPE in ('BASE TABLE','VIEW')";
 		else
-			$condition="TABLE_TYPE='BASE TABLE'";
+		$condition="TABLE_TYPE='BASE TABLE'";
 		$sql=<<<EOD
 SELECT TABLE_NAME FROM [INFORMATION_SCHEMA].[TABLES]
 WHERE TABLE_SCHEMA=:schema AND $condition
@@ -375,9 +375,9 @@ EOD;
 		foreach ($rows as $row)
 		{
 			if ($schema == self::DEFAULT_SCHEMA)
-				$names[]=$row['TABLE_NAME'];
+			$names[]=$row['TABLE_NAME'];
 			else
-				$names[]=$schema.'.'.$row['TABLE_NAME'];
+			$names[]=$schema.'.'.$row['TABLE_NAME'];
 		}
 
 		return $names;
@@ -432,8 +432,8 @@ EOD;
 	{
 		$type=$this->getColumnType($type);
 		$sql='ALTER TABLE ' . $this->quoteTableName($table) . ' ALTER COLUMN '
-			. $this->quoteColumnName($column) . ' '
-			. $this->getColumnType($type);
+		. $this->quoteColumnName($column) . ' '
+		. $this->getColumnType($type);
 		return $sql;
 	}
 }

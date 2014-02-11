@@ -30,15 +30,15 @@ class COciColumnSchema extends CDbColumnSchema
 			{
 				$values=explode(',',$matches[1]);
 				if(isset($values[1]) and (((int)$values[1]) > 0))
-					return 'double';
+				return 'double';
 				else
-					return 'integer';
+				return 'integer';
 			}
 			else
-				return 'double';
+			return 'double';
 		}
 		else
-			return 'string';
+		return 'string';
 	}
 
 	/**
@@ -58,8 +58,8 @@ class COciColumnSchema extends CDbColumnSchema
 	protected function extractDefault($defaultValue)
 	{
 		if(stripos($defaultValue,'timestamp')!==false)
-			$this->defaultValue=null;
+		$this->defaultValue=null;
 		else
-			parent::extractDefault($defaultValue);
+		parent::extractDefault($defaultValue);
 	}
 }

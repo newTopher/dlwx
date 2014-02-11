@@ -51,7 +51,7 @@ class CStack extends CComponent implements IteratorAggregate,Countable
 	public function __construct($data=null)
 	{
 		if($data!==null)
-			$this->copyFrom($data);
+		$this->copyFrom($data);
 	}
 
 	/**
@@ -80,7 +80,7 @@ class CStack extends CComponent implements IteratorAggregate,Countable
 			}
 		}
 		elseif($data!==null)
-			throw new CException(Yii::t('yii','Stack data must be an array or an object implementing Traversable.'));
+		throw new CException(Yii::t('yii','Stack data must be an array or an object implementing Traversable.'));
 	}
 
 	/**
@@ -110,9 +110,9 @@ class CStack extends CComponent implements IteratorAggregate,Countable
 	public function peek()
 	{
 		if($this->_c)
-			return $this->_d[$this->_c-1];
+		return $this->_d[$this->_c-1];
 		else
-			throw new CException(Yii::t('yii','The stack is empty.'));
+		throw new CException(Yii::t('yii','The stack is empty.'));
 	}
 
 	/**
@@ -128,7 +128,7 @@ class CStack extends CComponent implements IteratorAggregate,Countable
 			return array_pop($this->_d);
 		}
 		else
-			throw new CException(Yii::t('yii','The stack is empty.'));
+		throw new CException(Yii::t('yii','The stack is empty.'));
 	}
 
 	/**

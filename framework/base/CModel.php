@@ -152,16 +152,16 @@ abstract class CModel extends CComponent implements IteratorAggregate, ArrayAcce
 	public function validate($attributes=null, $clearErrors=true)
 	{
 		if($clearErrors)
-			$this->clearErrors();
+		$this->clearErrors();
 		if($this->beforeValidate())
 		{
 			foreach($this->getValidators() as $validator)
-				$validator->validate($this,$attributes);
+			$validator->validate($this,$attributes);
 			$this->afterValidate();
 			return !$this->hasErrors();
 		}
 		else
-			return false;
+		return false;
 	}
 
 	/**
@@ -173,7 +173,7 @@ abstract class CModel extends CComponent implements IteratorAggregate, ArrayAcce
 	protected function afterConstruct()
 	{
 		if($this->hasEventHandler('onAfterConstruct'))
-			$this->onAfterConstruct(new CEvent($this));
+		$this->onAfterConstruct(new CEvent($this));
 	}
 
 	/**
@@ -244,7 +244,7 @@ abstract class CModel extends CComponent implements IteratorAggregate, ArrayAcce
 	public function getValidatorList()
 	{
 		if($this->_validators===null)
-			$this->_validators=$this->createValidators();
+		$this->_validators=$this->createValidators();
 		return $this->_validators;
 	}
 
@@ -257,7 +257,7 @@ abstract class CModel extends CComponent implements IteratorAggregate, ArrayAcce
 	public function getValidators($attribute=null)
 	{
 		if($this->_validators===null)
-			$this->_validators=$this->createValidators();
+		$this->_validators=$this->createValidators();
 
 		$validators=array();
 		$scenario=$this->getScenario();
@@ -266,7 +266,7 @@ abstract class CModel extends CComponent implements IteratorAggregate, ArrayAcce
 			if($validator->applyTo($scenario))
 			{
 				if($attribute===null || in_array($attribute,$validator->attributes,true))
-					$validators[]=$validator;
+				$validators[]=$validator;
 			}
 		}
 		return $validators;
@@ -284,10 +284,10 @@ abstract class CModel extends CComponent implements IteratorAggregate, ArrayAcce
 		foreach($this->rules() as $rule)
 		{
 			if(isset($rule[0],$rule[1]))  // attributes, validator name
-				$validators->add(CValidator::createValidator($rule[1],$this,$rule[0],array_slice($rule,2)));
+			$validators->add(CValidator::createValidator($rule[1],$this,$rule[0],array_slice($rule,2)));
 			else
-				throw new CException(Yii::t('yii','{class} has an invalid validation rule. The rule must specify attributes to be validated and the validator name.',
-					array('{class}'=>get_class($this))));
+			throw new CException(Yii::t('yii','{class} has an invalid validation rule. The rule must specify attributes to be validated and the validator name.',
+			array('{class}'=>get_class($this))));
 		}
 		return $validators;
 	}
@@ -304,7 +304,7 @@ abstract class CModel extends CComponent implements IteratorAggregate, ArrayAcce
 		foreach($this->getValidators($attribute) as $validator)
 		{
 			if($validator instanceof CRequiredValidator)
-				return true;
+			return true;
 		}
 		return false;
 	}
@@ -332,9 +332,9 @@ abstract class CModel extends CComponent implements IteratorAggregate, ArrayAcce
 	{
 		$labels=$this->attributeLabels();
 		if(isset($labels[$attribute]))
-			return $labels[$attribute];
+		return $labels[$attribute];
 		else
-			return $this->generateAttributeLabel($attribute);
+		return $this->generateAttributeLabel($attribute);
 	}
 
 	/**
@@ -345,9 +345,9 @@ abstract class CModel extends CComponent implements IteratorAggregate, ArrayAcce
 	public function hasErrors($attribute=null)
 	{
 		if($attribute===null)
-			return $this->_errors!==array();
+		return $this->_errors!==array();
 		else
-			return isset($this->_errors[$attribute]);
+		return isset($this->_errors[$attribute]);
 	}
 
 	/**
@@ -358,9 +358,9 @@ abstract class CModel extends CComponent implements IteratorAggregate, ArrayAcce
 	public function getErrors($attribute=null)
 	{
 		if($attribute===null)
-			return $this->_errors;
+		return $this->_errors;
 		else
-			return isset($this->_errors[$attribute]) ? $this->_errors[$attribute] : array();
+		return isset($this->_errors[$attribute]) ? $this->_errors[$attribute] : array();
 	}
 
 	/**
@@ -397,10 +397,10 @@ abstract class CModel extends CComponent implements IteratorAggregate, ArrayAcce
 			if(is_array($error))
 			{
 				foreach($error as $e)
-					$this->addError($attribute, $e);
+				$this->addError($attribute, $e);
 			}
 			else
-				$this->addError($attribute, $error);
+			$this->addError($attribute, $error);
 		}
 	}
 
@@ -411,9 +411,9 @@ abstract class CModel extends CComponent implements IteratorAggregate, ArrayAcce
 	public function clearErrors($attribute=null)
 	{
 		if($attribute===null)
-			$this->_errors=array();
+		$this->_errors=array();
 		else
-			unset($this->_errors[$attribute]);
+		unset($this->_errors[$attribute]);
 	}
 
 	/**
@@ -440,17 +440,17 @@ abstract class CModel extends CComponent implements IteratorAggregate, ArrayAcce
 	{
 		$values=array();
 		foreach($this->attributeNames() as $name)
-			$values[$name]=$this->$name;
+		$values[$name]=$this->$name;
 
 		if(is_array($names))
 		{
 			$values2=array();
 			foreach($names as $name)
-				$values2[$name]=isset($values[$name]) ? $values[$name] : null;
+			$values2[$name]=isset($values[$name]) ? $values[$name] : null;
 			return $values2;
 		}
 		else
-			return $values;
+		return $values;
 	}
 
 	/**
@@ -464,14 +464,14 @@ abstract class CModel extends CComponent implements IteratorAggregate, ArrayAcce
 	public function setAttributes($values,$safeOnly=true)
 	{
 		if(!is_array($values))
-			return;
+		return;
 		$attributes=array_flip($safeOnly ? $this->getSafeAttributeNames() : $this->attributeNames());
 		foreach($values as $name=>$value)
 		{
 			if(isset($attributes[$name]))
-				$this->$name=$value;
+			$this->$name=$value;
 			elseif($safeOnly)
-				$this->onUnsafeAttribute($name,$value);
+			$this->onUnsafeAttribute($name,$value);
 		}
 	}
 
@@ -484,9 +484,9 @@ abstract class CModel extends CComponent implements IteratorAggregate, ArrayAcce
 	public function unsetAttributes($names=null)
 	{
 		if($names===null)
-			$names=$this->attributeNames();
+		$names=$this->attributeNames();
 		foreach($names as $name)
-			$this->$name=null;
+		$this->$name=null;
 	}
 
 	/**
@@ -500,7 +500,7 @@ abstract class CModel extends CComponent implements IteratorAggregate, ArrayAcce
 	public function onUnsafeAttribute($name,$value)
 	{
 		if(YII_DEBUG)
-			Yii::log(Yii::t('yii','Failed to set unsafe attribute "{attribute}" of "{class}".',array('{attribute}'=>$name, '{class}'=>get_class($this))),CLogger::LEVEL_WARNING);
+		Yii::log(Yii::t('yii','Failed to set unsafe attribute "{attribute}" of "{class}".',array('{attribute}'=>$name, '{class}'=>get_class($this))),CLogger::LEVEL_WARNING);
 	}
 
 	/**
@@ -549,17 +549,17 @@ abstract class CModel extends CComponent implements IteratorAggregate, ArrayAcce
 			if(!$validator->safe)
 			{
 				foreach($validator->attributes as $name)
-					$unsafe[]=$name;
+				$unsafe[]=$name;
 			}
 			else
 			{
 				foreach($validator->attributes as $name)
-					$attributes[$name]=true;
+				$attributes[$name]=true;
 			}
 		}
 
 		foreach($unsafe as $name)
-			unset($attributes[$name]);
+		unset($attributes[$name]);
 		return array_keys($attributes);
 	}
 

@@ -305,7 +305,7 @@ class CDbConnection extends CApplicationComponent
 	{
 		parent::init();
 		if($this->autoConnect)
-			$this->setActive(true);
+		$this->setActive(true);
 	}
 
 	/**
@@ -327,9 +327,9 @@ class CDbConnection extends CApplicationComponent
 		if($value!=$this->_active)
 		{
 			if($value)
-				$this->open();
+			$this->open();
 			else
-				$this->close();
+			$this->close();
 		}
 	}
 
@@ -367,7 +367,7 @@ class CDbConnection extends CApplicationComponent
 		if($this->_pdo===null)
 		{
 			if(empty($this->connectionString))
-				throw new CDbException('CDbConnection.connectionString cannot be empty.');
+			throw new CDbException('CDbConnection.connectionString cannot be empty.');
 			try
 			{
 				Yii::trace('Opening DB connection','system.db.CDbConnection');
@@ -380,7 +380,7 @@ class CDbConnection extends CApplicationComponent
 				if(YII_DEBUG)
 				{
 					throw new CDbException('CDbConnection failed to open the DB connection: '.
-						$e->getMessage(),(int)$e->getCode(),$e->errorInfo);
+					$e->getMessage(),(int)$e->getCode(),$e->errorInfo);
 				}
 				else
 				{
@@ -417,19 +417,19 @@ class CDbConnection extends CApplicationComponent
 		{
 			$driver=strtolower(substr($this->connectionString,0,$pos));
 			if($driver==='mssql' || $driver==='dblib')
-				$pdoClass='CMssqlPdoAdapter';
+			$pdoClass='CMssqlPdoAdapter';
 			elseif($driver==='sqlsrv')
-				$pdoClass='CMssqlSqlsrvPdoAdapter';
+			$pdoClass='CMssqlSqlsrvPdoAdapter';
 		}
 
 		if(!class_exists($pdoClass))
-			throw new CDbException(Yii::t('yii','CDbConnection is unable to find PDO class "{className}". Make sure PDO is installed correctly.',
-				array('{className}'=>$pdoClass)));
+		throw new CDbException(Yii::t('yii','CDbConnection is unable to find PDO class "{className}". Make sure PDO is installed correctly.',
+		array('{className}'=>$pdoClass)));
 
 		@$instance=new $pdoClass($this->connectionString,$this->username,$this->password,$this->_attributes);
 
 		if(!$instance)
-			throw new CDbException(Yii::t('yii','CDbConnection failed to open the DB connection.'));
+		throw new CDbException(Yii::t('yii','CDbConnection failed to open the DB connection.'));
 
 		return $instance;
 	}
@@ -444,17 +444,17 @@ class CDbConnection extends CApplicationComponent
 	{
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		if($this->emulatePrepare!==null && constant('PDO::ATTR_EMULATE_PREPARES'))
-			$pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES,$this->emulatePrepare);
+		$pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES,$this->emulatePrepare);
 		if($this->charset!==null)
 		{
 			$driver=strtolower($pdo->getAttribute(PDO::ATTR_DRIVER_NAME));
 			if(in_array($driver,array('pgsql','mysql','mysqli')))
-				$pdo->exec('SET NAMES '.$pdo->quote($this->charset));
+			$pdo->exec('SET NAMES '.$pdo->quote($this->charset));
 		}
 		if($this->initSQLs!==null)
 		{
 			foreach($this->initSQLs as $sql)
-				$pdo->exec($sql);
+			$pdo->exec($sql);
 		}
 	}
 
@@ -490,7 +490,7 @@ class CDbConnection extends CApplicationComponent
 		if($this->_transaction!==null)
 		{
 			if($this->_transaction->getActive())
-				return $this->_transaction;
+			return $this->_transaction;
 		}
 		return null;
 	}
@@ -515,15 +515,15 @@ class CDbConnection extends CApplicationComponent
 	public function getSchema()
 	{
 		if($this->_schema!==null)
-			return $this->_schema;
+		return $this->_schema;
 		else
 		{
 			$driver=$this->getDriverName();
 			if(isset($this->driverMap[$driver]))
-				return $this->_schema=Yii::createComponent($this->driverMap[$driver], $this);
+			return $this->_schema=Yii::createComponent($this->driverMap[$driver], $this);
 			else
-				throw new CDbException(Yii::t('yii','CDbConnection does not support reading schema for {driver} database.',
-					array('{driver}'=>$driver)));
+			throw new CDbException(Yii::t('yii','CDbConnection does not support reading schema for {driver} database.',
+			array('{driver}'=>$driver)));
 		}
 	}
 
@@ -557,13 +557,13 @@ class CDbConnection extends CApplicationComponent
 	public function quoteValue($str)
 	{
 		if(is_int($str) || is_float($str))
-			return $str;
+		return $str;
 
 		$this->setActive(true);
 		if(($value=$this->_pdo->quote($str))!==false)
-			return $value;
+		return $value;
 		else  // the driver doesn't support quote (e.g. oci)
-			return "'" . addcslashes(str_replace("'", "''", $str), "\000\n\r\\\032") . "'";
+		return "'" . addcslashes(str_replace("'", "''", $str), "\000\n\r\\\032") . "'";
 	}
 
 	/**
@@ -693,7 +693,7 @@ class CDbConnection extends CApplicationComponent
 	public function getDriverName()
 	{
 		if(($pos=strpos($this->connectionString, ':'))!==false)
-			return strtolower(substr($this->connectionString, 0, $pos));
+		return strtolower(substr($this->connectionString, 0, $pos));
 		// return $this->getAttribute(PDO::ATTR_DRIVER_NAME);
 	}
 
@@ -773,9 +773,9 @@ class CDbConnection extends CApplicationComponent
 	public function setAttribute($name,$value)
 	{
 		if($this->_pdo instanceof PDO)
-			$this->_pdo->setAttribute($name,$value);
+		$this->_pdo->setAttribute($name,$value);
 		else
-			$this->_attributes[$name]=$value;
+		$this->_attributes[$name]=$value;
 	}
 
 	/**
@@ -798,7 +798,7 @@ class CDbConnection extends CApplicationComponent
 	public function setAttributes($values)
 	{
 		foreach($values as $name=>$value)
-			$this->_attributes[$name]=$value;
+		$this->_attributes[$name]=$value;
 	}
 
 	/**

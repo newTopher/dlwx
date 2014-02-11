@@ -130,14 +130,14 @@ abstract class CApplication extends CModule
 
 		// set basePath at early as possible to avoid trouble
 		if(is_string($config))
-			$config=require($config);
+		$config=require($config);
 		if(isset($config['basePath']))
 		{
 			$this->setBasePath($config['basePath']);
 			unset($config['basePath']);
 		}
 		else
-			$this->setBasePath('protected');
+		$this->setBasePath('protected');
 		Yii::setPathOfAlias('application',$this->getBasePath());
 		Yii::setPathOfAlias('webroot',dirname($_SERVER['SCRIPT_FILENAME']));
 		if(isset($config['extensionPath']))
@@ -146,7 +146,7 @@ abstract class CApplication extends CModule
 			unset($config['extensionPath']);
 		}
 		else
-			Yii::setPathOfAlias('ext',$this->getBasePath().DIRECTORY_SEPARATOR.'extensions');
+		Yii::setPathOfAlias('ext',$this->getBasePath().DIRECTORY_SEPARATOR.'extensions');
 		if(isset($config['aliases']))
 		{
 			$this->setAliases($config['aliases']);
@@ -175,11 +175,11 @@ abstract class CApplication extends CModule
 	public function run()
 	{
 		if($this->hasEventHandler('onBeginRequest'))
-			$this->onBeginRequest(new CEvent($this));
+		$this->onBeginRequest(new CEvent($this));
 		register_shutdown_function(array($this,'end'),0,false);
 		$this->processRequest();
 		if($this->hasEventHandler('onEndRequest'))
-			$this->onEndRequest(new CEvent($this));
+		$this->onEndRequest(new CEvent($this));
 	}
 
 	/**
@@ -193,9 +193,9 @@ abstract class CApplication extends CModule
 	public function end($status=0,$exit=true)
 	{
 		if($this->hasEventHandler('onEndRequest'))
-			$this->onEndRequest(new CEvent($this));
+		$this->onEndRequest(new CEvent($this));
 		if($exit)
-			exit($status);
+		exit($status);
 	}
 
 	/**
@@ -227,9 +227,9 @@ abstract class CApplication extends CModule
 	public function getId()
 	{
 		if($this->_id!==null)
-			return $this->_id;
+		return $this->_id;
 		else
-			return $this->_id=sprintf('%x',crc32($this->getBasePath().$this->name));
+		return $this->_id=sprintf('%x',crc32($this->getBasePath().$this->name));
 	}
 
 	/**
@@ -259,8 +259,8 @@ abstract class CApplication extends CModule
 	public function setBasePath($path)
 	{
 		if(($this->_basePath=realpath($path))===false || !is_dir($this->_basePath))
-			throw new CException(Yii::t('yii','Application base path "{path}" is not a valid directory.',
-				array('{path}'=>$path)));
+		throw new CException(Yii::t('yii','Application base path "{path}" is not a valid directory.',
+		array('{path}'=>$path)));
 	}
 
 	/**
@@ -270,7 +270,7 @@ abstract class CApplication extends CModule
 	public function getRuntimePath()
 	{
 		if($this->_runtimePath!==null)
-			return $this->_runtimePath;
+		return $this->_runtimePath;
 		else
 		{
 			$this->setRuntimePath($this->getBasePath().DIRECTORY_SEPARATOR.'runtime');
@@ -286,8 +286,8 @@ abstract class CApplication extends CModule
 	public function setRuntimePath($path)
 	{
 		if(($runtimePath=realpath($path))===false || !is_dir($runtimePath) || !is_writable($runtimePath))
-			throw new CException(Yii::t('yii','Application runtime path "{path}" is not valid. Please make sure it is a directory writable by the Web server process.',
-				array('{path}'=>$path)));
+		throw new CException(Yii::t('yii','Application runtime path "{path}" is not valid. Please make sure it is a directory writable by the Web server process.',
+		array('{path}'=>$path)));
 		$this->_runtimePath=$runtimePath;
 	}
 
@@ -308,8 +308,8 @@ abstract class CApplication extends CModule
 	public function setExtensionPath($path)
 	{
 		if(($extensionPath=realpath($path))===false || !is_dir($extensionPath))
-			throw new CException(Yii::t('yii','Extension path "{path}" does not exist.',
-				array('{path}'=>$path)));
+		throw new CException(Yii::t('yii','Extension path "{path}" does not exist.',
+		array('{path}'=>$path)));
 		Yii::setPathOfAlias('ext',$extensionPath);
 	}
 
@@ -383,11 +383,11 @@ abstract class CApplication extends CModule
 	public function findLocalizedFile($srcFile,$srcLanguage=null,$language=null)
 	{
 		if($srcLanguage===null)
-			$srcLanguage=$this->sourceLanguage;
+		$srcLanguage=$this->sourceLanguage;
 		if($language===null)
-			$language=$this->getLanguage();
+		$language=$this->getLanguage();
 		if($language===$srcLanguage)
-			return $srcFile;
+		return $srcFile;
 		$desiredFile=dirname($srcFile).DIRECTORY_SEPARATOR.$language.DIRECTORY_SEPARATOR.basename($srcFile);
 		return is_file($desiredFile) ? $desiredFile : $srcFile;
 	}
@@ -555,9 +555,9 @@ abstract class CApplication extends CModule
 	{
 		$url=$this->createUrl($route,$params,$ampersand);
 		if(strpos($url,'http')===0)
-			return $url;
+		return $url;
 		else
-			return $this->getRequest()->getHostInfo($schema).$url;
+		return $this->getRequest()->getHostInfo($schema).$url;
 	}
 
 	/**
@@ -580,12 +580,12 @@ abstract class CApplication extends CModule
 		if($this->_homeUrl===null)
 		{
 			if($this->getUrlManager()->showScriptName)
-				return $this->getRequest()->getScriptUrl();
+			return $this->getRequest()->getScriptUrl();
 			else
-				return $this->getRequest()->getBaseUrl().'/';
+			return $this->getRequest()->getBaseUrl().'/';
 		}
 		else
-			return $this->_homeUrl;
+		return $this->_homeUrl;
 	}
 
 	/**
@@ -608,11 +608,11 @@ abstract class CApplication extends CModule
 	public function getGlobalState($key,$defaultValue=null)
 	{
 		if($this->_globalState===null)
-			$this->loadGlobalState();
+		$this->loadGlobalState();
 		if(isset($this->_globalState[$key]))
-			return $this->_globalState[$key];
+		return $this->_globalState[$key];
 		else
-			return $defaultValue;
+		return $defaultValue;
 	}
 
 	/**
@@ -628,7 +628,7 @@ abstract class CApplication extends CModule
 	public function setGlobalState($key,$value,$defaultValue=null)
 	{
 		if($this->_globalState===null)
-			$this->loadGlobalState();
+		$this->loadGlobalState();
 
 		$changed=$this->_stateChanged;
 		if($value===$defaultValue)
@@ -646,7 +646,7 @@ abstract class CApplication extends CModule
 		}
 
 		if($this->_stateChanged!==$changed)
-			$this->attachEventHandler('onEndRequest',array($this,'saveGlobalState'));
+		$this->attachEventHandler('onEndRequest',array($this,'saveGlobalState'));
 	}
 
 	/**
@@ -669,7 +669,7 @@ abstract class CApplication extends CModule
 	{
 		$persister=$this->getStatePersister();
 		if(($this->_globalState=$persister->load())===null)
-			$this->_globalState=array();
+		$this->_globalState=array();
 		$this->_stateChanged=false;
 		$this->detachEventHandler('onEndRequest',array($this,'saveGlobalState'));
 	}
@@ -711,13 +711,13 @@ abstract class CApplication extends CModule
 
 		$category='exception.'.get_class($exception);
 		if($exception instanceof CHttpException)
-			$category.='.'.$exception->statusCode;
+		$category.='.'.$exception->statusCode;
 		// php <5.2 doesn't support string conversion auto-magically
 		$message=$exception->__toString();
 		if(isset($_SERVER['REQUEST_URI']))
-			$message.="\nREQUEST_URI=".$_SERVER['REQUEST_URI'];
+		$message.="\nREQUEST_URI=".$_SERVER['REQUEST_URI'];
 		if(isset($_SERVER['HTTP_REFERER']))
-			$message.="\nHTTP_REFERER=".$_SERVER['HTTP_REFERER'];
+		$message.="\nHTTP_REFERER=".$_SERVER['HTTP_REFERER'];
 		$message.="\n---";
 		Yii::log($message,CLogger::LEVEL_ERROR,$category);
 
@@ -729,9 +729,9 @@ abstract class CApplication extends CModule
 			{
 				// try an error handler
 				if(($handler=$this->getErrorHandler())!==null)
-					$handler->handle($event);
+				$handler->handle($event);
 				else
-					$this->displayException($exception);
+				$this->displayException($exception);
 			}
 		}
 		catch(Exception $e)
@@ -786,22 +786,22 @@ abstract class CApplication extends CModule
 			$trace=debug_backtrace();
 			// skip the first 3 stacks as they do not tell the error position
 			if(count($trace)>3)
-				$trace=array_slice($trace,3);
+			$trace=array_slice($trace,3);
 			foreach($trace as $i=>$t)
 			{
 				if(!isset($t['file']))
-					$t['file']='unknown';
+				$t['file']='unknown';
 				if(!isset($t['line']))
-					$t['line']=0;
+				$t['line']=0;
 				if(!isset($t['function']))
-					$t['function']='unknown';
+				$t['function']='unknown';
 				$log.="#$i {$t['file']}({$t['line']}): ";
 				if(isset($t['object']) && is_object($t['object']))
-					$log.=get_class($t['object']).'->';
+				$log.=get_class($t['object']).'->';
 				$log.="{$t['function']}()\n";
 			}
 			if(isset($_SERVER['REQUEST_URI']))
-				$log.='REQUEST_URI='.$_SERVER['REQUEST_URI'];
+			$log.='REQUEST_URI='.$_SERVER['REQUEST_URI'];
 			Yii::log($log,CLogger::LEVEL_ERROR,'php');
 
 			try
@@ -813,9 +813,9 @@ abstract class CApplication extends CModule
 				{
 					// try an error handler
 					if(($handler=$this->getErrorHandler())!==null)
-						$handler->handle($event);
+					$handler->handle($event);
 					else
-						$this->displayError($code,$message,$file,$line);
+					$this->displayError($code,$message,$file,$line);
 				}
 			}
 			catch(Exception $e)
@@ -891,18 +891,18 @@ abstract class CApplication extends CModule
 			$trace=debug_backtrace();
 			// skip the first 3 stacks as they do not tell the error position
 			if(count($trace)>3)
-				$trace=array_slice($trace,3);
+			$trace=array_slice($trace,3);
 			foreach($trace as $i=>$t)
 			{
 				if(!isset($t['file']))
-					$t['file']='unknown';
+				$t['file']='unknown';
 				if(!isset($t['line']))
-					$t['line']=0;
+				$t['line']=0;
 				if(!isset($t['function']))
-					$t['function']='unknown';
+				$t['function']='unknown';
 				echo "#$i {$t['file']}({$t['line']}): ";
 				if(isset($t['object']) && is_object($t['object']))
-					echo get_class($t['object']).'->';
+				echo get_class($t['object']).'->';
 				echo "{$t['function']}()\n";
 			}
 
@@ -942,9 +942,9 @@ abstract class CApplication extends CModule
 	protected function initSystemHandlers()
 	{
 		if(YII_ENABLE_EXCEPTION_HANDLER)
-			set_exception_handler(array($this,'handleException'));
+		set_exception_handler(array($this,'handleException'));
 		if(YII_ENABLE_ERROR_HANDLER)
-			set_error_handler(array($this,'handleError'),error_reporting());
+		set_error_handler(array($this,'handleError'),error_reporting());
 	}
 
 	/**
@@ -958,31 +958,31 @@ abstract class CApplication extends CModule
 				'class'=>'CPhpMessageSource',
 				'language'=>'en_us',
 				'basePath'=>YII_PATH.DIRECTORY_SEPARATOR.'messages',
-			),
+		),
 			'db'=>array(
 				'class'=>'CDbConnection',
-			),
+		),
 			'messages'=>array(
 				'class'=>'CPhpMessageSource',
-			),
+		),
 			'errorHandler'=>array(
 				'class'=>'CErrorHandler',
-			),
+		),
 			'securityManager'=>array(
 				'class'=>'CSecurityManager',
-			),
+		),
 			'statePersister'=>array(
 				'class'=>'CStatePersister',
-			),
+		),
 			'urlManager'=>array(
 				'class'=>'CUrlManager',
-			),
+		),
 			'request'=>array(
 				'class'=>'CHttpRequest',
-			),
+		),
 			'format'=>array(
 				'class'=>'CFormatter',
-			),
+		),
 		);
 
 		$this->setComponents($components);

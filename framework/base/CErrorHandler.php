@@ -100,14 +100,14 @@ class CErrorHandler extends CApplicationComponent
 			foreach(ob_list_handlers() as $h)
 			{
 				if(strpos($h,'gzhandler')!==false)
-					$gzHandler=true;
+				$gzHandler=true;
 			}
 			// the following manual level counting is to deal with zlib.output_compression set to On
 			// for an output buffer created by zlib.output_compression set to On ob_end_clean will fail
 			for($level=ob_get_level();$level>0;--$level)
 			{
 				if(!@ob_end_clean())
-					ob_clean();
+				ob_clean();
 			}
 			// reset headers in case there was an ob_start("ob_gzhandler") before
 			if($gzHandler && !headers_sent() && ob_list_handlers()===array())
@@ -126,9 +126,9 @@ class CErrorHandler extends CApplicationComponent
 		}
 
 		if($event instanceof CExceptionEvent)
-			$this->handleException($event->exception);
+		$this->handleException($event->exception);
 		else // CErrorEvent
-			$this->handleError($event);
+		$this->handleError($event);
 	}
 
 	/**
@@ -175,13 +175,13 @@ class CErrorHandler extends CApplicationComponent
 			foreach($trace as $i=>$t)
 			{
 				if(!isset($t['file']))
-					$trace[$i]['file']='unknown';
+				$trace[$i]['file']='unknown';
 
 				if(!isset($t['line']))
-					$trace[$i]['line']=0;
+				$trace[$i]['line']=0;
 
 				if(!isset($t['function']))
-					$trace[$i]['function']='unknown';
+				$trace[$i]['function']='unknown';
 
 				unset($trace[$i]['object']);
 			}
@@ -198,20 +198,20 @@ class CErrorHandler extends CApplicationComponent
 			);
 
 			if(!headers_sent())
-				header("HTTP/1.0 {$data['code']} ".$this->getHttpHeader($data['code'], get_class($exception)));
+			header("HTTP/1.0 {$data['code']} ".$this->getHttpHeader($data['code'], get_class($exception)));
 
 			if($exception instanceof CHttpException || !YII_DEBUG)
-				$this->render('error',$data);
+			$this->render('error',$data);
 			else
 			{
 				if($this->isAjaxRequest())
-					$app->displayException($exception);
+				$app->displayException($exception);
 				else
-					$this->render('exception',$data);
+				$this->render('exception',$data);
 			}
 		}
 		else
-			$app->displayException($exception);
+		$app->displayException($exception);
 	}
 
 	/**
@@ -223,22 +223,22 @@ class CErrorHandler extends CApplicationComponent
 		$trace=debug_backtrace();
 		// skip the first 3 stacks as they do not tell the error position
 		if(count($trace)>3)
-			$trace=array_slice($trace,3);
+		$trace=array_slice($trace,3);
 		$traceString='';
 		foreach($trace as $i=>$t)
 		{
 			if(!isset($t['file']))
-				$trace[$i]['file']='unknown';
+			$trace[$i]['file']='unknown';
 
 			if(!isset($t['line']))
-				$trace[$i]['line']=0;
+			$trace[$i]['line']=0;
 
 			if(!isset($t['function']))
-				$trace[$i]['function']='unknown';
+			$trace[$i]['function']='unknown';
 
 			$traceString.="#$i {$trace[$i]['file']}({$trace[$i]['line']}): ";
 			if(isset($t['object']) && is_object($t['object']))
-				$traceString.=get_class($t['object']).'->';
+			$traceString.=get_class($t['object']).'->';
 			$traceString.="{$trace[$i]['function']}()\n";
 
 			unset($trace[$i]['object']);
@@ -280,16 +280,16 @@ class CErrorHandler extends CApplicationComponent
 				'traces'=>$trace,
 			);
 			if(!headers_sent())
-				header("HTTP/1.0 500 Internal Server Error");
+			header("HTTP/1.0 500 Internal Server Error");
 			if($this->isAjaxRequest())
-				$app->displayError($event->code,$event->message,$event->file,$event->line);
+			$app->displayError($event->code,$event->message,$event->file,$event->line);
 			elseif(YII_DEBUG)
-				$this->render('exception',$data);
+			$this->render('exception',$data);
 			else
-				$this->render('error',$data);
+			$this->render('error',$data);
 		}
 		else
-			$app->displayError($event->code,$event->message,$event->file,$event->line);
+		$app->displayError($event->code,$event->message,$event->file,$event->line);
 	}
 
 	/**
@@ -314,7 +314,7 @@ class CErrorHandler extends CApplicationComponent
 		{
 			// property access exception
 			if(isset($trace['function']) && ($trace['function']==='__get' || $trace['function']==='__set'))
-				return $trace;
+			return $trace;
 		}
 		return null;
 	}
@@ -328,7 +328,7 @@ class CErrorHandler extends CApplicationComponent
 	protected function render($view,$data)
 	{
 		if($view==='error' && $this->errorAction!==null)
-			Yii::app()->runController($this->errorAction);
+		Yii::app()->runController($this->errorAction);
 		else
 		{
 			// additional information to be passed to view
@@ -348,18 +348,18 @@ class CErrorHandler extends CApplicationComponent
 	protected function getViewFile($view,$code)
 	{
 		$viewPaths=array(
-			Yii::app()->getTheme()===null ? null :  Yii::app()->getTheme()->getSystemViewPath(),
-			Yii::app() instanceof CWebApplication ? Yii::app()->getSystemViewPath() : null,
-			YII_PATH.DIRECTORY_SEPARATOR.'views',
+		Yii::app()->getTheme()===null ? null :  Yii::app()->getTheme()->getSystemViewPath(),
+		Yii::app() instanceof CWebApplication ? Yii::app()->getSystemViewPath() : null,
+		YII_PATH.DIRECTORY_SEPARATOR.'views',
 		);
 
 		foreach($viewPaths as $i=>$viewPath)
 		{
 			if($viewPath!==null)
 			{
-				 $viewFile=$this->getViewFileInternal($viewPath,$view,$code,$i===2?'en_us':null);
-				 if(is_file($viewFile))
-				 	 return $viewFile;
+				$viewFile=$this->getViewFileInternal($viewPath,$view,$code,$i===2?'en_us':null);
+				if(is_file($viewFile))
+				return $viewFile;
 			}
 		}
 	}
@@ -379,10 +379,10 @@ class CErrorHandler extends CApplicationComponent
 		{
 			$viewFile=$app->findLocalizedFile($viewPath.DIRECTORY_SEPARATOR."error{$code}.php",$srcLanguage);
 			if(!is_file($viewFile))
-				$viewFile=$app->findLocalizedFile($viewPath.DIRECTORY_SEPARATOR.'error.php',$srcLanguage);
+			$viewFile=$app->findLocalizedFile($viewPath.DIRECTORY_SEPARATOR.'error.php',$srcLanguage);
 		}
 		else
-			$viewFile=$viewPath.DIRECTORY_SEPARATOR."exception.php";
+		$viewFile=$viewPath.DIRECTORY_SEPARATOR."exception.php";
 		return $viewFile;
 	}
 
@@ -397,10 +397,10 @@ class CErrorHandler extends CApplicationComponent
 		{
 			$version='<a href="http://www.yiiframework.com/">Yii Framework</a>/'.Yii::getVersion();
 			if(isset($_SERVER['SERVER_SOFTWARE']))
-				$version=$_SERVER['SERVER_SOFTWARE'].' '.$version;
+			$version=$_SERVER['SERVER_SOFTWARE'].' '.$version;
 		}
 		else
-			$version='';
+		$version='';
 		return $version;
 	}
 
@@ -422,29 +422,29 @@ class CErrorHandler extends CApplicationComponent
 			if($count>=5)
 			{
 				if($count>5)
-					unset($args[$key]);
+				unset($args[$key]);
 				else
-					$args[$key]='...';
+				$args[$key]='...';
 				continue;
 			}
 
 			if(is_object($value))
-				$args[$key] = get_class($value);
+			$args[$key] = get_class($value);
 			elseif(is_bool($value))
-				$args[$key] = $value ? 'true' : 'false';
+			$args[$key] = $value ? 'true' : 'false';
 			elseif(is_string($value))
 			{
 				if(strlen($value)>64)
-					$args[$key] = '"'.substr($value,0,64).'..."';
+				$args[$key] = '"'.substr($value,0,64).'..."';
 				else
-					$args[$key] = '"'.$value.'"';
+				$args[$key] = '"'.$value.'"';
 			}
 			elseif(is_array($value))
-				$args[$key] = 'array('.$this->argumentsToString($value).')';
+			$args[$key] = 'array('.$this->argumentsToString($value).')';
 			elseif($value===null)
-				$args[$key] = 'null';
+			$args[$key] = 'null';
 			elseif(is_resource($value))
-				$args[$key] = 'resource';
+			$args[$key] = 'resource';
 
 			if(is_string($key))
 			{
@@ -486,7 +486,7 @@ class CErrorHandler extends CApplicationComponent
 	{
 		$errorLine--;	// adjust line number to 0-based from 1-based
 		if($errorLine<0 || ($lines=@file($file))===false || ($lineCount=count($lines))<=$errorLine)
-			return '';
+		return '';
 
 		$halfLines=(int)($maxLines/2);
 		$beginLine=$errorLine-$halfLines>0 ? $errorLine-$halfLines:0;
@@ -499,9 +499,9 @@ class CErrorHandler extends CApplicationComponent
 			$isErrorLine = $i===$errorLine;
 			$code=sprintf("<span class=\"ln".($isErrorLine?' error-ln':'')."\">%0{$lineNumberWidth}d</span> %s",$i+1,CHtml::encode(str_replace("\t",'    ',$lines[$i])));
 			if(!$isErrorLine)
-				$output.=$code;
+			$output.=$code;
 			else
-				$output.='<span class="error">'.$code.'</span>';
+			$output.='<span class="error">'.$code.'</span>';
 		}
 		return '<div class="code"><pre>'.$output.'</pre></div>';
 	}
@@ -514,65 +514,65 @@ class CErrorHandler extends CApplicationComponent
 	protected function getHttpHeader($httpCode, $replacement='')
 	{
 		$httpCodes = array(
-			100 => 'Continue',
-			101 => 'Switching Protocols',
-			102 => 'Processing',
-			118 => 'Connection timed out',
-			200 => 'OK',
-			201 => 'Created',
-			202 => 'Accepted',
-			203 => 'Non-Authoritative',
-			204 => 'No Content',
-			205 => 'Reset Content',
-			206 => 'Partial Content',
-			207 => 'Multi-Status',
-			210 => 'Content Different',
-			300 => 'Multiple Choices',
-			301 => 'Moved Permanently',
-			302 => 'Found',
-			303 => 'See Other',
-			304 => 'Not Modified',
-			305 => 'Use Proxy',
-			307 => 'Temporary Redirect',
-			310 => 'Too many Redirect',
-			400 => 'Bad Request',
-			401 => 'Unauthorized',
-			402 => 'Payment Required',
-			403 => 'Forbidden',
-			404 => 'Not Found',
-			405 => 'Method Not Allowed',
-			406 => 'Not Acceptable',
-			407 => 'Proxy Authentication Required',
-			408 => 'Request Time-out',
-			409 => 'Conflict',
-			410 => 'Gone',
-			411 => 'Length Required',
-			412 => 'Precondition Failed',
-			413 => 'Request Entity Too Large',
-			414 => 'Request-URI Too Long',
-			415 => 'Unsupported Media Type',
-			416 => 'Requested range unsatisfiable',
-			417 => 'Expectation failed',
-			418 => 'I’m a teapot',
-			422 => 'Unprocessable entity',
-			423 => 'Locked',
-			424 => 'Method failure',
-			425 => 'Unordered Collection',
-			426 => 'Upgrade Required',
-			449 => 'Retry With',
-			450 => 'Blocked by Windows Parental Controls',
-			500 => 'Internal Server Error',
-			501 => 'Not Implemented',
-			502 => 'Bad Gateway ou Proxy Error',
-			503 => 'Service Unavailable',
-			504 => 'Gateway Time-out',
-			505 => 'HTTP Version not supported',
-			507 => 'Insufficient storage',
-			509 => 'Bandwidth Limit Exceeded',
+		100 => 'Continue',
+		101 => 'Switching Protocols',
+		102 => 'Processing',
+		118 => 'Connection timed out',
+		200 => 'OK',
+		201 => 'Created',
+		202 => 'Accepted',
+		203 => 'Non-Authoritative',
+		204 => 'No Content',
+		205 => 'Reset Content',
+		206 => 'Partial Content',
+		207 => 'Multi-Status',
+		210 => 'Content Different',
+		300 => 'Multiple Choices',
+		301 => 'Moved Permanently',
+		302 => 'Found',
+		303 => 'See Other',
+		304 => 'Not Modified',
+		305 => 'Use Proxy',
+		307 => 'Temporary Redirect',
+		310 => 'Too many Redirect',
+		400 => 'Bad Request',
+		401 => 'Unauthorized',
+		402 => 'Payment Required',
+		403 => 'Forbidden',
+		404 => 'Not Found',
+		405 => 'Method Not Allowed',
+		406 => 'Not Acceptable',
+		407 => 'Proxy Authentication Required',
+		408 => 'Request Time-out',
+		409 => 'Conflict',
+		410 => 'Gone',
+		411 => 'Length Required',
+		412 => 'Precondition Failed',
+		413 => 'Request Entity Too Large',
+		414 => 'Request-URI Too Long',
+		415 => 'Unsupported Media Type',
+		416 => 'Requested range unsatisfiable',
+		417 => 'Expectation failed',
+		418 => 'I’m a teapot',
+		422 => 'Unprocessable entity',
+		423 => 'Locked',
+		424 => 'Method failure',
+		425 => 'Unordered Collection',
+		426 => 'Upgrade Required',
+		449 => 'Retry With',
+		450 => 'Blocked by Windows Parental Controls',
+		500 => 'Internal Server Error',
+		501 => 'Not Implemented',
+		502 => 'Bad Gateway ou Proxy Error',
+		503 => 'Service Unavailable',
+		504 => 'Gateway Time-out',
+		505 => 'HTTP Version not supported',
+		507 => 'Insufficient storage',
+		509 => 'Bandwidth Limit Exceeded',
 		);
 		if(isset($httpCodes[$httpCode]))
-			return $httpCodes[$httpCode];
+		return $httpCodes[$httpCode];
 		else
-			return $replacement;
+		return $replacement;
 	}
 }

@@ -87,7 +87,7 @@ class CCodeGenerator extends CController
 			));
 		}
 		else
-			throw new CHttpException(404,'Unable to find the code you requested.');
+		throw new CHttpException(404,'Unable to find the code you requested.');
 	}
 
 	/**
@@ -104,11 +104,11 @@ class CCodeGenerator extends CController
 		{
 			$file=$model->files[$_GET['id']];
 			if(!in_array($file->type,array('php', 'txt','js','css')))
-				$diff=false;
+			$diff=false;
 			elseif($file->operation===CCodeFile::OP_OVERWRITE)
-				$diff=TextDiff::compare(file_get_contents($file->path), $file->content);
+			$diff=TextDiff::compare(file_get_contents($file->path), $file->content);
 			else
-				$diff='';
+			$diff='';
 
 			$this->renderPartial('/common/diff',array(
 				'file'=>$file,
@@ -116,7 +116,7 @@ class CCodeGenerator extends CController
 			));
 		}
 		else
-			throw new CHttpException(404,'Unable to find the code you requested.');
+		throw new CHttpException(404,'Unable to find the code you requested.');
 	}
 
 	/**
@@ -148,7 +148,7 @@ class CCodeGenerator extends CController
 	protected function prepare()
 	{
 		if($this->codeModel===null)
-			throw new CException(get_class($this).'.codeModel property must be specified.');
+		throw new CException(get_class($this).'.codeModel property must be specified.');
 		$modelClass=Yii::import($this->codeModel,true);
 		$model=new $modelClass;
 		$model->loadStickyAttributes();

@@ -88,7 +88,7 @@ class CPhpMessageSource extends CMessageSource
 	{
 		parent::init();
 		if($this->basePath===null)
-			$this->basePath=Yii::getPathOfAlias('application.messages');
+		$this->basePath=Yii::getPathOfAlias('application.messages');
 	}
 
 	/**
@@ -111,7 +111,7 @@ class CPhpMessageSource extends CMessageSource
 				$extensionCategory=substr($category,$pos+1);
 				// First check if there's an extension registered for this class.
 				if(isset($this->extensionPaths[$extensionClass]))
-					$this->_files[$category][$language]=Yii::getPathOfAlias($this->extensionPaths[$extensionClass]).DIRECTORY_SEPARATOR.$language.DIRECTORY_SEPARATOR.$extensionCategory.'.php';
+				$this->_files[$category][$language]=Yii::getPathOfAlias($this->extensionPaths[$extensionClass]).DIRECTORY_SEPARATOR.$language.DIRECTORY_SEPARATOR.$extensionCategory.'.php';
 				else
 				{
 					// No extension registered, need to find it.
@@ -120,7 +120,7 @@ class CPhpMessageSource extends CMessageSource
 				}
 			}
 			else
-				$this->_files[$category][$language]=$this->basePath.DIRECTORY_SEPARATOR.$language.DIRECTORY_SEPARATOR.$category.'.php';
+			$this->_files[$category][$language]=$this->basePath.DIRECTORY_SEPARATOR.$language.DIRECTORY_SEPARATOR.$category.'.php';
 		}
 		return $this->_files[$category][$language];
 	}
@@ -139,14 +139,14 @@ class CPhpMessageSource extends CMessageSource
 		{
 			$key=self::CACHE_KEY_PREFIX . $messageFile;
 			if(($data=$cache->get($key))!==false)
-				return unserialize($data);
+			return unserialize($data);
 		}
 
 		if(is_file($messageFile))
 		{
 			$messages=include($messageFile);
 			if(!is_array($messages))
-				$messages=array();
+			$messages=array();
 			if(isset($cache))
 			{
 				$dependency=new CFileCacheDependency($messageFile);
@@ -155,6 +155,6 @@ class CPhpMessageSource extends CMessageSource
 			return $messages;
 		}
 		else
-			return array();
+		return array();
 	}
 }

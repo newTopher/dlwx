@@ -162,9 +162,9 @@ abstract class CCodeModel extends CFormModel
 	public function rules()
 	{
 		return array(
-			array('template', 'required'),
-			array('template', 'validateTemplate', 'skipOnError'=>true),
-			array('template', 'sticky'),
+		array('template', 'required'),
+		array('template', 'validateTemplate', 'skipOnError'=>true),
+		array('template', 'sticky'),
 		);
 	}
 
@@ -179,14 +179,14 @@ abstract class CCodeModel extends CFormModel
 	{
 		$templates=$this->templates;
 		if(!isset($templates[$this->template]))
-			$this->addError('template', 'Invalid template selection.');
+		$this->addError('template', 'Invalid template selection.');
 		else
 		{
 			$templatePath=$this->templatePath;
 			foreach($this->requiredTemplates() as $template)
 			{
 				if(!is_file($templatePath.'/'.$template))
-					$this->addError('template', "Unable to find the required code template file '$template'.");
+				$this->addError('template', "Unable to find the required code template file '$template'.");
 			}
 		}
 	}
@@ -238,7 +238,7 @@ abstract class CCodeModel extends CFormModel
 		foreach($this->files as $file)
 		{
 			if($this->confirmed($file))
-				$result=$file->save() && $result;
+			$result=$file->save() && $result;
 		}
 		return $result;
 	}
@@ -281,11 +281,11 @@ abstract class CCodeModel extends CFormModel
 	{
 		$templates=$this->getTemplates();
 		if(isset($templates[$this->template]))
-			return $templates[$this->template];
+		return $templates[$this->template];
 		elseif(empty($templates))
-			throw new CHttpException(500,'No templates are available.');
+		throw new CHttpException(500,'No templates are available.');
 		else
-			throw new CHttpException(500,'Invalid template selection.');
+		throw new CHttpException(500,'Invalid template selection.');
 
 	}
 
@@ -296,7 +296,7 @@ abstract class CCodeModel extends CFormModel
 	public function confirmed($file)
 	{
 		return $this->answers===null && $file->operation===CCodeFile::OP_NEW
-			|| is_array($this->answers) && isset($this->answers[md5($file->path)]);
+		|| is_array($this->answers) && isset($this->answers[md5($file->path)]);
 	}
 
 	/**
@@ -310,12 +310,12 @@ abstract class CCodeModel extends CFormModel
 	public function render($templateFile,$_params_=null)
 	{
 		if(!is_file($templateFile))
-			throw new CException("The template file '$templateFile' does not exist.");
+		throw new CException("The template file '$templateFile' does not exist.");
 
 		if(is_array($_params_))
-			extract($_params_,EXTR_PREFIX_SAME,'params');
+		extract($_params_,EXTR_PREFIX_SAME,'params');
 		else
-			$params=$_params_;
+		$params=$_params_;
 		ob_start();
 		ob_implicit_flush(false);
 		require($templateFile);
@@ -331,13 +331,13 @@ abstract class CCodeModel extends CFormModel
 		foreach($this->files as $file)
 		{
 			if($file->error!==null)
-				$output.="<span class=\"error\">generating {$file->relativePath}<br/>           {$file->error}</span>\n";
+			$output.="<span class=\"error\">generating {$file->relativePath}<br/>           {$file->error}</span>\n";
 			elseif($file->operation===CCodeFile::OP_NEW && $this->confirmed($file))
-				$output.=' generated '.$file->relativePath."\n";
+			$output.=' generated '.$file->relativePath."\n";
 			elseif($file->operation===CCodeFile::OP_OVERWRITE && $this->confirmed($file))
-				$output.=' overwrote '.$file->relativePath."\n";
+			$output.=' overwrote '.$file->relativePath."\n";
 			else
-				$output.='   skipped '.$file->relativePath."\n";
+			$output.='   skipped '.$file->relativePath."\n";
 		}
 		$output.="done!\n";
 		return $output;
@@ -353,7 +353,7 @@ abstract class CCodeModel extends CFormModel
 	public function sticky($attribute,$params)
 	{
 		if(!$this->hasErrors())
-			$this->_stickyAttributes[$attribute]=$this->$attribute;
+		$this->_stickyAttributes[$attribute]=$this->$attribute;
 	}
 
 	/**
@@ -372,7 +372,7 @@ abstract class CCodeModel extends CFormModel
 				foreach($this->_stickyAttributes as $name=>$value)
 				{
 					if(property_exists($this,$name) || $this->canSetProperty($name))
-						$this->$name=$value;
+					$this->$name=$value;
 				}
 			}
 		}
@@ -428,7 +428,7 @@ abstract class CCodeModel extends CFormModel
 		foreach($rules as $rule=>$replacement)
 		{
 			if(preg_match($rule,$name))
-				return preg_replace($rule,$replacement,$name);
+			return preg_replace($rule,$replacement,$name);
 		}
 		return $name.'s';
 	}
@@ -479,6 +479,6 @@ abstract class CCodeModel extends CFormModel
 	{
 		$value=$this->$attribute;
 		if(in_array(strtolower($value),self::$keywords))
-			$this->addError($attribute, $this->getAttributeLabel($attribute).' cannot take a reserved PHP keyword.');
+		$this->addError($attribute, $this->getAttributeLabel($attribute).' cannot take a reserved PHP keyword.');
 	}
 }

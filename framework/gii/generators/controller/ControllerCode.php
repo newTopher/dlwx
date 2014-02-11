@@ -9,13 +9,13 @@ class ControllerCode extends CCodeModel
 	public function rules()
 	{
 		return array_merge(parent::rules(), array(
-			array('controller, actions, baseClass', 'filter', 'filter'=>'trim'),
-			array('controller, baseClass', 'required'),
-			array('controller', 'match', 'pattern'=>'/^\w+[\w+\\/]*$/', 'message'=>'{attribute} should only contain word characters and slashes.'),
-			array('actions', 'match', 'pattern'=>'/^\w+[\w\s,]*$/', 'message'=>'{attribute} should only contain word characters, spaces and commas.'),
-			array('baseClass', 'match', 'pattern'=>'/^[a-zA-Z_][\w\\\\]*$/', 'message'=>'{attribute} should only contain word characters and backslashes.'),
-			array('baseClass', 'validateReservedWord', 'skipOnError'=>true),
-			array('baseClass, actions', 'sticky'),
+		array('controller, actions, baseClass', 'filter', 'filter'=>'trim'),
+		array('controller, baseClass', 'required'),
+		array('controller', 'match', 'pattern'=>'/^\w+[\w+\\/]*$/', 'message'=>'{attribute} should only contain word characters and slashes.'),
+		array('actions', 'match', 'pattern'=>'/^\w+[\w\s,]*$/', 'message'=>'{attribute} should only contain word characters, spaces and commas.'),
+		array('baseClass', 'match', 'pattern'=>'/^[a-zA-Z_][\w\\\\]*$/', 'message'=>'{attribute} should only contain word characters and backslashes.'),
+		array('baseClass', 'validateReservedWord', 'skipOnError'=>true),
+		array('baseClass, actions', 'sticky'),
 		));
 	}
 
@@ -48,15 +48,15 @@ class ControllerCode extends CCodeModel
 		$templatePath=$this->templatePath;
 
 		$this->files[]=new CCodeFile(
-			$this->controllerFile,
-			$this->render($templatePath.'/controller.php')
+		$this->controllerFile,
+		$this->render($templatePath.'/controller.php')
 		);
 
 		foreach($this->getActionIDs() as $action)
 		{
 			$this->files[]=new CCodeFile(
-				$this->getViewFile($action),
-				$this->render($templatePath.'/view.php', array('action'=>$action))
+			$this->getViewFile($action),
+			$this->render($templatePath.'/view.php', array('action'=>$action))
 			);
 		}
 	}
@@ -72,9 +72,9 @@ class ControllerCode extends CCodeModel
 	public function getControllerClass()
 	{
 		if(($pos=strrpos($this->controller,'/'))!==false)
-			return ucfirst(substr($this->controller,$pos+1)).'Controller';
+		return ucfirst(substr($this->controller,$pos+1)).'Controller';
 		else
-			return ucfirst($this->controller).'Controller';
+		return ucfirst($this->controller).'Controller';
 	}
 
 	public function getModule()
@@ -83,7 +83,7 @@ class ControllerCode extends CCodeModel
 		{
 			$id=substr($this->controller,0,$pos);
 			if(($module=Yii::app()->getModule($id))!==null)
-				return $module;
+			return $module;
 		}
 		return Yii::app();
 	}
@@ -91,13 +91,13 @@ class ControllerCode extends CCodeModel
 	public function getControllerID()
 	{
 		if($this->getModule()!==Yii::app())
-			$id=substr($this->controller,strpos($this->controller,'/')+1);
+		$id=substr($this->controller,strpos($this->controller,'/')+1);
 		else
-			$id=$this->controller;
+		$id=$this->controller;
 		if(($pos=strrpos($id,'/'))!==false)
-			$id[$pos+1]=strtolower($id[$pos+1]);
+		$id[$pos+1]=strtolower($id[$pos+1]);
 		else
-			$id[0]=strtolower($id[0]);
+		$id[0]=strtolower($id[0]);
 		return $id;
 	}
 
@@ -105,9 +105,9 @@ class ControllerCode extends CCodeModel
 	{
 		$id=$this->controller;
 		if(($pos=strrpos($id,'/'))!==false)
-			$id[$pos+1]=strtolower($id[$pos+1]);
+		$id[$pos+1]=strtolower($id[$pos+1]);
 		else
-			$id[0]=strtolower($id[0]);
+		$id[0]=strtolower($id[0]);
 		return $id;
 	}
 
@@ -116,9 +116,9 @@ class ControllerCode extends CCodeModel
 		$module=$this->getModule();
 		$id=$this->getControllerID();
 		if(($pos=strrpos($id,'/'))!==false)
-			$id[$pos+1]=strtoupper($id[$pos+1]);
+		$id[$pos+1]=strtoupper($id[$pos+1]);
 		else
-			$id[0]=strtoupper($id[0]);
+		$id[0]=strtoupper($id[0]);
 		return $module->getControllerPath().'/'.$id.'Controller.php';
 	}
 

@@ -31,7 +31,7 @@ class CXCache extends CCache
 	{
 		parent::init();
 		if(!function_exists('xcache_isset'))
-			throw new CException(Yii::t('yii','CXCache requires PHP XCache extension to be loaded.'));
+		throw new CException(Yii::t('yii','CXCache requires PHP XCache extension to be loaded.'));
 	}
 
 	/**
@@ -95,7 +95,7 @@ class CXCache extends CCache
 		for($i=0, $max=xcache_count(XC_TYPE_VAR); $i<$max; $i++)
 		{
 			if(xcache_clear_cache(XC_TYPE_VAR, $i)===false)
-				return false;
+			return false;
 		}
 		return true;
 	}

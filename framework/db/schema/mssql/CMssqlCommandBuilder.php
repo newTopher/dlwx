@@ -75,7 +75,7 @@ class CMssqlCommandBuilder extends CDbCommandBuilder
 				{
 					$fields[]=$column->rawName.'='.$value->expression;
 					foreach($value->params as $n=>$v)
-						$values[$n]=$v;
+					$values[$n]=$v;
 				}
 				elseif($bindByPosition)
 				{
@@ -91,8 +91,8 @@ class CMssqlCommandBuilder extends CDbCommandBuilder
 			}
 		}
 		if($fields===array())
-			throw new CDbException(Yii::t('yii','No columns are being updated for table "{table}".',
-				array('{table}'=>$table->name)));
+		throw new CDbException(Yii::t('yii','No columns are being updated for table "{table}".',
+		array('{table}'=>$table->name)));
 		$sql="UPDATE {$table->rawName} SET ".implode(', ',$fields);
 		$sql=$this->applyJoin($sql,$criteria->join);
 		$sql=$this->applyCondition($sql,$criteria->condition);
@@ -182,9 +182,9 @@ class CMssqlCommandBuilder extends CDbCommandBuilder
 		$limit = $limit!==null ? (int)$limit : -1;
 		$offset = $offset!==null ? (int)$offset : -1;
 		if ($limit > 0 && $offset <= 0) //just limit
-			$sql = preg_replace('/^([\s(])*SELECT( DISTINCT)?(?!\s*TOP\s*\()/i',"\\1SELECT\\2 TOP $limit", $sql);
+		$sql = preg_replace('/^([\s(])*SELECT( DISTINCT)?(?!\s*TOP\s*\()/i',"\\1SELECT\\2 TOP $limit", $sql);
 		elseif($limit > 0 && $offset > 0)
-			$sql = $this->rewriteLimitOffsetSql($sql, $limit,$offset);
+		$sql = $this->rewriteLimitOffsetSql($sql, $limit,$offset);
 		return $sql;
 	}
 
@@ -220,7 +220,7 @@ class CMssqlCommandBuilder extends CDbCommandBuilder
 	protected function findOrdering($sql)
 	{
 		if(!preg_match('/ORDER BY/i', $sql))
-			return array();
+		return array();
 		$matches=array();
 		$ordering=array();
 		preg_match_all('/(ORDER BY)[\s"\[](.*)(ASC|DESC)?(?:[\s"\[]|$|COMPUTE|FOR)/i', $sql, $matches);
@@ -238,7 +238,7 @@ class CMssqlCommandBuilder extends CDbCommandBuilder
 						foreach(explode('.', $subs[1][0]) as $p)
 						{
 							if($name!=='')
-								$name.='.';
+							$name.='.';
 							$name.='[' . trim($p, '[]') . ']';
 						}
 						$ordering[$name] = $subs[2][0];
@@ -246,7 +246,7 @@ class CMssqlCommandBuilder extends CDbCommandBuilder
 					//else what?
 				}
 				else
-					$ordering[trim($part)] = 'ASC';
+				$ordering[trim($part)] = 'ASC';
 			}
 		}
 
@@ -279,7 +279,7 @@ class CMssqlCommandBuilder extends CDbCommandBuilder
 		{
 			$str=array();
 			foreach($orders as $column => $direction)
-				$str[] = $column.' '.$direction;
+			$str[] = $column.' '.$direction;
 			$orderBy = 'ORDER BY '.implode(', ', $str);
 			return preg_replace('/\s+\[[^\]]+\]\.(\[[^\]]+\])/i', ' '.$newPrefix.'.\1', $orderBy);
 		}
@@ -294,7 +294,7 @@ class CMssqlCommandBuilder extends CDbCommandBuilder
 	protected function reverseDirection($orders)
 	{
 		foreach($orders as $column => $direction)
-			$orders[$column] = strtolower(trim($direction))==='desc' ? 'ASC' : 'DESC';
+		$orders[$column] = strtolower(trim($direction))==='desc' ? 'ASC' : 'DESC';
 		return $orders;
 	}
 
@@ -330,7 +330,7 @@ class CMssqlCommandBuilder extends CDbCommandBuilder
 		{
 			$c=array();
 			foreach($value as $k=>$v)
-				$c[]=$prefix.$table->columns[$k]->rawName.'='.$v;
+			$c[]=$prefix.$table->columns[$k]->rawName.'='.$v;
 			$vs[]='('.implode(' AND ',$c).')';
 		}
 		return '('.implode(' OR ',$vs).')';

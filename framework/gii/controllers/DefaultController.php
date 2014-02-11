@@ -7,9 +7,9 @@ class DefaultController extends CController
 	public function getPageTitle()
 	{
 		if($this->action->id==='index')
-			return 'Gii: a Web-based code generator for Yii';
+		return 'Gii: a Web-based code generator for Yii';
 		else
-			return 'Gii - '.ucfirst($this->action->id).' Generator';
+		return 'Gii - '.ucfirst($this->action->id).' Generator';
 	}
 
 	public function actionIndex()
@@ -19,13 +19,13 @@ class DefaultController extends CController
 
 	public function actionError()
 	{
-	    if($error=Yii::app()->errorHandler->error)
-	    {
-	    	if(Yii::app()->request->isAjaxRequest)
-	    		echo $error['message'];
-	    	else
-	        	$this->render('error', $error);
-	    }
+		if($error=Yii::app()->errorHandler->error)
+		{
+			if(Yii::app()->request->isAjaxRequest)
+			echo $error['message'];
+			else
+			$this->render('error', $error);
+		}
 	}
 
 	/**
@@ -41,7 +41,7 @@ class DefaultController extends CController
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
-				$this->redirect(array('index'));
+			$this->redirect(array('index'));
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));

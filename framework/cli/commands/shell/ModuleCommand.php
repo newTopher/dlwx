@@ -75,7 +75,7 @@ EOD;
 		echo <<<EOD
 
 Module '{$moduleID}' has been created under the following folder:
-    $modulePath
+$modulePath
 
 You may access it in the browser using the following URL:
     http://hostname/path/to/index.php?r=$moduleID

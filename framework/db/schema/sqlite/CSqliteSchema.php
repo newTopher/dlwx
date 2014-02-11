@@ -21,7 +21,7 @@ class CSqliteSchema extends CDbSchema
 	 * @var array the abstract column types mapped to physical column types.
 	 * @since 1.1.6
 	 */
-    public $columnTypes=array(
+	public $columnTypes=array(
         'pk' => 'integer PRIMARY KEY AUTOINCREMENT NOT NULL',
         'string' => 'varchar(255)',
         'text' => 'text',
@@ -50,19 +50,19 @@ class CSqliteSchema extends CDbSchema
 	public function resetSequence($table,$value=null)
 	{
 		if($table->sequenceName===null)
-			return;
+		return;
 		if($value!==null)
-			$value=(int)($value)-1;
+		$value=(int)($value)-1;
 		else
-			$value=(int)$this->getDbConnection()
-				->createCommand("SELECT MAX(`{$table->primaryKey}`) FROM {$table->rawName}")
-				->queryScalar();
+		$value=(int)$this->getDbConnection()
+		->createCommand("SELECT MAX(`{$table->primaryKey}`) FROM {$table->rawName}")
+		->queryScalar();
 		try
 		{
 			// it's possible that 'sqlite_sequence' does not exist
 			$this->getDbConnection()
-				->createCommand("UPDATE sqlite_sequence SET seq='$value' WHERE name='{$table->name}'")
-				->execute();
+			->createCommand("UPDATE sqlite_sequence SET seq='$value' WHERE name='{$table->name}'")
+			->execute();
 		}
 		catch(Exception $e)
 		{
@@ -118,7 +118,7 @@ class CSqliteSchema extends CDbSchema
 			return $table;
 		}
 		else
-			return null;
+		return null;
 	}
 
 	/**
@@ -131,7 +131,7 @@ class CSqliteSchema extends CDbSchema
 		$sql="PRAGMA table_info({$table->rawName})";
 		$columns=$this->getDbConnection()->createCommand($sql)->queryAll();
 		if(empty($columns))
-			return false;
+		return false;
 
 		foreach($columns as $column)
 		{
@@ -140,11 +140,11 @@ class CSqliteSchema extends CDbSchema
 			if($c->isPrimaryKey)
 			{
 				if($table->primaryKey===null)
-					$table->primaryKey=$c->name;
+				$table->primaryKey=$c->name;
 				elseif(is_string($table->primaryKey))
-					$table->primaryKey=array($table->primaryKey,$c->name);
+				$table->primaryKey=array($table->primaryKey,$c->name);
 				else
-					$table->primaryKey[]=$c->name;
+				$table->primaryKey[]=$c->name;
 			}
 		}
 		if(is_string($table->primaryKey) && !strncasecmp($table->columns[$table->primaryKey]->dbType,'int',3))

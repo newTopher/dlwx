@@ -94,8 +94,8 @@ class CDbCommand extends CComponent
 	 * about valid property values. This feature has been available since version 1.1.6.
 	 *
 	 * Since 1.1.7 it is possible to use a specific mode of data fetching by setting
- 	 * {@link setFetchMode FetchMode}. See {@link http://www.php.net/manual/en/function.PDOStatement-setFetchMode.php}
- 	 * for more details.
+	 * {@link setFetchMode FetchMode}. See {@link http://www.php.net/manual/en/function.PDOStatement-setFetchMode.php}
+	 * for more details.
 	 */
 	public function __construct(CDbConnection $connection,$query=null)
 	{
@@ -103,10 +103,10 @@ class CDbCommand extends CComponent
 		if(is_array($query))
 		{
 			foreach($query as $name=>$value)
-				$this->$name=$value;
+			$this->$name=$value;
 		}
 		else
-			$this->setText($query);
+		$this->setText($query);
 	}
 
 	/**
@@ -157,7 +157,7 @@ class CDbCommand extends CComponent
 	public function getText()
 	{
 		if($this->_text=='' && !empty($this->_query))
-			$this->setText($this->buildQuery($this->_query));
+		$this->setText($this->buildQuery($this->_query));
 		return $this->_text;
 	}
 
@@ -170,9 +170,9 @@ class CDbCommand extends CComponent
 	public function setText($value)
 	{
 		if($this->_connection->tablePrefix!==null && $value!='')
-			$this->_text=preg_replace('/{{(.*?)}}/',$this->_connection->tablePrefix.'\1',$value);
+		$this->_text=preg_replace('/{{(.*?)}}/',$this->_connection->tablePrefix.'\1',$value);
 		else
-			$this->_text=$value;
+		$this->_text=$value;
 		$this->cancel();
 		return $this;
 	}
@@ -216,7 +216,7 @@ class CDbCommand extends CComponent
 				Yii::log('Error in preparing SQL: '.$this->getText(),CLogger::LEVEL_ERROR,'system.db.CDbCommand');
 				$errorInfo=$e instanceof PDOException ? $e->errorInfo : null;
 				throw new CDbException(Yii::t('yii','CDbCommand failed to prepare the SQL statement: {error}',
-					array('{error}'=>$e->getMessage())),(int)$e->getCode(),$errorInfo);
+				array('{error}'=>$e->getMessage())),(int)$e->getCode(),$errorInfo);
 			}
 		}
 	}
@@ -246,13 +246,13 @@ class CDbCommand extends CComponent
 	{
 		$this->prepare();
 		if($dataType===null)
-			$this->_statement->bindParam($name,$value,$this->_connection->getPdoType(gettype($value)));
+		$this->_statement->bindParam($name,$value,$this->_connection->getPdoType(gettype($value)));
 		elseif($length===null)
-			$this->_statement->bindParam($name,$value,$dataType);
+		$this->_statement->bindParam($name,$value,$dataType);
 		elseif($driverOptions===null)
-			$this->_statement->bindParam($name,$value,$dataType,$length);
+		$this->_statement->bindParam($name,$value,$dataType,$length);
 		else
-			$this->_statement->bindParam($name,$value,$dataType,$length,$driverOptions);
+		$this->_statement->bindParam($name,$value,$dataType,$length,$driverOptions);
 		$this->_paramLog[$name]=&$value;
 		return $this;
 	}
@@ -272,9 +272,9 @@ class CDbCommand extends CComponent
 	{
 		$this->prepare();
 		if($dataType===null)
-			$this->_statement->bindValue($name,$value,$this->_connection->getPdoType(gettype($value)));
+		$this->_statement->bindValue($name,$value,$this->_connection->getPdoType(gettype($value)));
 		else
-			$this->_statement->bindValue($name,$value,$dataType);
+		$this->_statement->bindValue($name,$value,$dataType);
 		$this->_paramLog[$name]=$value;
 		return $this;
 	}
@@ -319,44 +319,44 @@ class CDbCommand extends CComponent
 		{
 			$p=array();
 			foreach($pars as $name=>$value)
-				$p[$name]=$name.'='.var_export($value,true);
+			$p[$name]=$name.'='.var_export($value,true);
 			$par='. Bound with ' .implode(', ',$p);
 		}
 		else
-			$par='';
+		$par='';
 		Yii::trace('Executing SQL: '.$this->getText().$par,'system.db.CDbCommand');
 		try
 		{
 			if($this->_connection->enableProfiling)
-				Yii::beginProfile('system.db.CDbCommand.execute('.$this->getText().$par.')','system.db.CDbCommand.execute');
+			Yii::beginProfile('system.db.CDbCommand.execute('.$this->getText().$par.')','system.db.CDbCommand.execute');
 
 			$this->prepare();
 			if($params===array())
-				$this->_statement->execute();
+			$this->_statement->execute();
 			else
-				$this->_statement->execute($params);
+			$this->_statement->execute($params);
 			$n=$this->_statement->rowCount();
 
 			if($this->_connection->enableProfiling)
-				Yii::endProfile('system.db.CDbCommand.execute('.$this->getText().$par.')','system.db.CDbCommand.execute');
+			Yii::endProfile('system.db.CDbCommand.execute('.$this->getText().$par.')','system.db.CDbCommand.execute');
 
 			return $n;
 		}
 		catch(Exception $e)
 		{
 			if($this->_connection->enableProfiling)
-				Yii::endProfile('system.db.CDbCommand.execute('.$this->getText().$par.')','system.db.CDbCommand.execute');
+			Yii::endProfile('system.db.CDbCommand.execute('.$this->getText().$par.')','system.db.CDbCommand.execute');
 
 			$errorInfo=$e instanceof PDOException ? $e->errorInfo : null;
 			$message=$e->getMessage();
 			Yii::log(Yii::t('yii','CDbCommand::execute() failed: {error}. The SQL statement executed was: {sql}.',
-				array('{error}'=>$message, '{sql}'=>$this->getText().$par)),CLogger::LEVEL_ERROR,'system.db.CDbCommand');
+			array('{error}'=>$message, '{sql}'=>$this->getText().$par)),CLogger::LEVEL_ERROR,'system.db.CDbCommand');
 
 			if(YII_DEBUG)
-				$message.='. The SQL statement executed was: '.$this->getText().$par;
+			$message.='. The SQL statement executed was: '.$this->getText().$par;
 
 			throw new CDbException(Yii::t('yii','CDbCommand failed to execute the SQL statement: {error}',
-				array('{error}'=>$message)),(int)$e->getCode(),$errorInfo);
+			array('{error}'=>$message)),(int)$e->getCode(),$errorInfo);
 		}
 	}
 
@@ -432,9 +432,9 @@ class CDbCommand extends CComponent
 	{
 		$result=$this->queryInternal('fetchColumn',0,$params);
 		if(is_resource($result) && get_resource_type($result)==='stream')
-			return stream_get_contents($result);
+		return stream_get_contents($result);
 		else
-			return $result;
+		return $result;
 	}
 
 	/**
@@ -475,18 +475,18 @@ class CDbCommand extends CComponent
 		{
 			$p=array();
 			foreach($pars as $name=>$value)
-				$p[$name]=$name.'='.var_export($value,true);
+			$p[$name]=$name.'='.var_export($value,true);
 			$par='. Bound with '.implode(', ',$p);
 		}
 		else
-			$par='';
+		$par='';
 
 		Yii::trace('Querying SQL: '.$this->getText().$par,'system.db.CDbCommand');
 
 		if($this->_connection->queryCachingCount>0 && $method!==''
-				&& $this->_connection->queryCachingDuration>0
-				&& $this->_connection->queryCacheID!==false
-				&& ($cache=Yii::app()->getComponent($this->_connection->queryCacheID))!==null)
+		&& $this->_connection->queryCachingDuration>0
+		&& $this->_connection->queryCacheID!==false
+		&& ($cache=Yii::app()->getComponent($this->_connection->queryCacheID))!==null)
 		{
 			$this->_connection->queryCachingCount--;
 			$cacheKey='yii:dbquery'.$this->_connection->connectionString.':'.$this->_connection->username;
@@ -501,16 +501,16 @@ class CDbCommand extends CComponent
 		try
 		{
 			if($this->_connection->enableProfiling)
-				Yii::beginProfile('system.db.CDbCommand.query('.$this->getText().$par.')','system.db.CDbCommand.query');
+			Yii::beginProfile('system.db.CDbCommand.query('.$this->getText().$par.')','system.db.CDbCommand.query');
 
 			$this->prepare();
 			if($params===array())
-				$this->_statement->execute();
+			$this->_statement->execute();
 			else
-				$this->_statement->execute($params);
+			$this->_statement->execute($params);
 
 			if($method==='')
-				$result=new CDbDataReader($this);
+			$result=new CDbDataReader($this);
 			else
 			{
 				$mode=(array)$mode;
@@ -520,28 +520,28 @@ class CDbCommand extends CComponent
 			}
 
 			if($this->_connection->enableProfiling)
-				Yii::endProfile('system.db.CDbCommand.query('.$this->getText().$par.')','system.db.CDbCommand.query');
+			Yii::endProfile('system.db.CDbCommand.query('.$this->getText().$par.')','system.db.CDbCommand.query');
 
 			if(isset($cache,$cacheKey))
-				$cache->set($cacheKey, array($result), $this->_connection->queryCachingDuration, $this->_connection->queryCachingDependency);
+			$cache->set($cacheKey, array($result), $this->_connection->queryCachingDuration, $this->_connection->queryCachingDependency);
 
 			return $result;
 		}
 		catch(Exception $e)
 		{
 			if($this->_connection->enableProfiling)
-				Yii::endProfile('system.db.CDbCommand.query('.$this->getText().$par.')','system.db.CDbCommand.query');
+			Yii::endProfile('system.db.CDbCommand.query('.$this->getText().$par.')','system.db.CDbCommand.query');
 
 			$errorInfo=$e instanceof PDOException ? $e->errorInfo : null;
 			$message=$e->getMessage();
 			Yii::log(Yii::t('yii','CDbCommand::{method}() failed: {error}. The SQL statement executed was: {sql}.',
-				array('{method}'=>$method, '{error}'=>$message, '{sql}'=>$this->getText().$par)),CLogger::LEVEL_ERROR,'system.db.CDbCommand');
+			array('{method}'=>$method, '{error}'=>$message, '{sql}'=>$this->getText().$par)),CLogger::LEVEL_ERROR,'system.db.CDbCommand');
 
 			if(YII_DEBUG)
-				$message.='. The SQL statement executed was: '.$this->getText().$par;
+			$message.='. The SQL statement executed was: '.$this->getText().$par;
 
 			throw new CDbException(Yii::t('yii','CDbCommand failed to execute the SQL statement: {error}',
-				array('{error}'=>$message)),(int)$e->getCode(),$errorInfo);
+			array('{error}'=>$message)),(int)$e->getCode(),$errorInfo);
 		}
 	}
 
@@ -561,32 +561,32 @@ class CDbCommand extends CComponent
 		$sql.=' '.(!empty($query['select']) ? $query['select'] : '*');
 
 		if(!empty($query['from']))
-			$sql.="\nFROM ".$query['from'];
+		$sql.="\nFROM ".$query['from'];
 		else
-			throw new CDbException(Yii::t('yii','The DB query must contain the "from" portion.'));
+		throw new CDbException(Yii::t('yii','The DB query must contain the "from" portion.'));
 
 		if(!empty($query['join']))
-			$sql.="\n".(is_array($query['join']) ? implode("\n",$query['join']) : $query['join']);
+		$sql.="\n".(is_array($query['join']) ? implode("\n",$query['join']) : $query['join']);
 
 		if(!empty($query['where']))
-			$sql.="\nWHERE ".$query['where'];
+		$sql.="\nWHERE ".$query['where'];
 
 		if(!empty($query['group']))
-			$sql.="\nGROUP BY ".$query['group'];
+		$sql.="\nGROUP BY ".$query['group'];
 
 		if(!empty($query['having']))
-			$sql.="\nHAVING ".$query['having'];
+		$sql.="\nHAVING ".$query['having'];
 
 		if(!empty($query['union']))
-			$sql.="\nUNION (\n".(is_array($query['union']) ? implode("\n) UNION (\n",$query['union']) : $query['union']) . ')';
+		$sql.="\nUNION (\n".(is_array($query['union']) ? implode("\n) UNION (\n",$query['union']) : $query['union']) . ')';
 
 		if(!empty($query['order']))
-			$sql.="\nORDER BY ".$query['order'];
+		$sql.="\nORDER BY ".$query['order'];
 
 		$limit=isset($query['limit']) ? (int)$query['limit'] : -1;
 		$offset=isset($query['offset']) ? (int)$query['offset'] : -1;
 		if($limit>=0 || $offset>0)
-			$sql=$this->_connection->getCommandBuilder()->applyLimit($sql,$limit,$offset);
+		$sql=$this->_connection->getCommandBuilder()->applyLimit($sql,$limit,$offset);
 
 		return $sql;
 	}
@@ -606,28 +606,28 @@ class CDbCommand extends CComponent
 	public function select($columns='*', $option='')
 	{
 		if(is_string($columns) && strpos($columns,'(')!==false)
-			$this->_query['select']=$columns;
+		$this->_query['select']=$columns;
 		else
 		{
 			if(!is_array($columns))
-				$columns=preg_split('/\s*,\s*/',trim($columns),-1,PREG_SPLIT_NO_EMPTY);
+			$columns=preg_split('/\s*,\s*/',trim($columns),-1,PREG_SPLIT_NO_EMPTY);
 
 			foreach($columns as $i=>$column)
 			{
 				if(is_object($column))
-					$columns[$i]=(string)$column;
+				$columns[$i]=(string)$column;
 				elseif(strpos($column,'(')===false)
 				{
 					if(preg_match('/^(.*?)(?i:\s+as\s+|\s+)(.*)$/',$column,$matches))
-						$columns[$i]=$this->_connection->quoteColumnName($matches[1]).' AS '.$this->_connection->quoteColumnName($matches[2]);
+					$columns[$i]=$this->_connection->quoteColumnName($matches[1]).' AS '.$this->_connection->quoteColumnName($matches[2]);
 					else
-						$columns[$i]=$this->_connection->quoteColumnName($column);
+					$columns[$i]=$this->_connection->quoteColumnName($column);
 				}
 			}
 			$this->_query['select']=implode(', ',$columns);
 		}
 		if($option!='')
-			$this->_query['select']=$option.' '.$this->_query['select'];
+		$this->_query['select']=$option.' '.$this->_query['select'];
 		return $this;
 	}
 
@@ -698,19 +698,19 @@ class CDbCommand extends CComponent
 	public function from($tables)
 	{
 		if(is_string($tables) && strpos($tables,'(')!==false)
-			$this->_query['from']=$tables;
+		$this->_query['from']=$tables;
 		else
 		{
 			if(!is_array($tables))
-				$tables=preg_split('/\s*,\s*/',trim($tables),-1,PREG_SPLIT_NO_EMPTY);
+			$tables=preg_split('/\s*,\s*/',trim($tables),-1,PREG_SPLIT_NO_EMPTY);
 			foreach($tables as $i=>$table)
 			{
 				if(strpos($table,'(')===false)
 				{
 					if(preg_match('/^(.*?)(?i:\s+as\s+|\s+)(.*)$/',$table,$matches))  // with alias
-						$tables[$i]=$this->_connection->quoteTableName($matches[1]).' '.$this->_connection->quoteTableName($matches[2]);
+					$tables[$i]=$this->_connection->quoteTableName($matches[1]).' '.$this->_connection->quoteTableName($matches[2]);
 					else
-						$tables[$i]=$this->_connection->quoteTableName($table);
+					$tables[$i]=$this->_connection->quoteTableName($table);
 				}
 			}
 			$this->_query['from']=implode(', ',$tables);
@@ -782,7 +782,7 @@ class CDbCommand extends CComponent
 		$this->_query['where']=$this->processConditions($conditions);
 
 		foreach($params as $name=>$value)
-			$this->params[$name]=$value;
+		$this->params[$name]=$value;
 		return $this;
 	}
 
@@ -801,12 +801,12 @@ class CDbCommand extends CComponent
 	public function andWhere($conditions,$params=array())
 	{
 		if(isset($this->_query['where']))
-			$this->_query['where']=$this->processConditions(array('AND',$this->_query['where'],$conditions));
+		$this->_query['where']=$this->processConditions(array('AND',$this->_query['where'],$conditions));
 		else
-			$this->_query['where']=$this->processConditions($conditions);
+		$this->_query['where']=$this->processConditions($conditions);
 
 		foreach($params as $name=>$value)
-			$this->params[$name]=$value;
+		$this->params[$name]=$value;
 		return $this;
 	}
 
@@ -825,12 +825,12 @@ class CDbCommand extends CComponent
 	public function orWhere($conditions,$params=array())
 	{
 		if(isset($this->_query['where']))
-			$this->_query['where']=$this->processConditions(array('OR',$this->_query['where'],$conditions));
+		$this->_query['where']=$this->processConditions(array('OR',$this->_query['where'],$conditions));
 		else
-			$this->_query['where']=$this->processConditions($conditions);
+		$this->_query['where']=$this->processConditions($conditions);
 
 		foreach($params as $name=>$value)
-			$this->params[$name]=$value;
+		$this->params[$name]=$value;
 		return $this;
 	}
 
@@ -972,17 +972,17 @@ class CDbCommand extends CComponent
 	public function group($columns)
 	{
 		if(is_string($columns) && strpos($columns,'(')!==false)
-			$this->_query['group']=$columns;
+		$this->_query['group']=$columns;
 		else
 		{
 			if(!is_array($columns))
-				$columns=preg_split('/\s*,\s*/',trim($columns),-1,PREG_SPLIT_NO_EMPTY);
+			$columns=preg_split('/\s*,\s*/',trim($columns),-1,PREG_SPLIT_NO_EMPTY);
 			foreach($columns as $i=>$column)
 			{
 				if(is_object($column))
-					$columns[$i]=(string)$column;
+				$columns[$i]=(string)$column;
 				elseif(strpos($column,'(')===false)
-					$columns[$i]=$this->_connection->quoteColumnName($column);
+				$columns[$i]=$this->_connection->quoteColumnName($column);
 			}
 			$this->_query['group']=implode(', ',$columns);
 		}
@@ -1022,7 +1022,7 @@ class CDbCommand extends CComponent
 	{
 		$this->_query['having']=$this->processConditions($conditions);
 		foreach($params as $name=>$value)
-			$this->params[$name]=$value;
+		$this->params[$name]=$value;
 		return $this;
 	}
 
@@ -1066,21 +1066,21 @@ class CDbCommand extends CComponent
 	public function order($columns)
 	{
 		if(is_string($columns) && strpos($columns,'(')!==false)
-			$this->_query['order']=$columns;
+		$this->_query['order']=$columns;
 		else
 		{
 			if(!is_array($columns))
-				$columns=preg_split('/\s*,\s*/',trim($columns),-1,PREG_SPLIT_NO_EMPTY);
+			$columns=preg_split('/\s*,\s*/',trim($columns),-1,PREG_SPLIT_NO_EMPTY);
 			foreach($columns as $i=>$column)
 			{
 				if(is_object($column))
-					$columns[$i]=(string)$column;
+				$columns[$i]=(string)$column;
 				elseif(strpos($column,'(')===false)
 				{
 					if(preg_match('/^(.*?)\s+(asc|desc)$/i',$column,$matches))
-						$columns[$i]=$this->_connection->quoteColumnName($matches[1]).' '.strtoupper($matches[2]);
+					$columns[$i]=$this->_connection->quoteColumnName($matches[1]).' '.strtoupper($matches[2]);
 					else
-						$columns[$i]=$this->_connection->quoteColumnName($column);
+					$columns[$i]=$this->_connection->quoteColumnName($column);
 				}
 			}
 			$this->_query['order']=implode(', ',$columns);
@@ -1120,7 +1120,7 @@ class CDbCommand extends CComponent
 	{
 		$this->_query['limit']=(int)$limit;
 		if($offset!==null)
-			$this->offset($offset);
+		$this->offset($offset);
 		return $this;
 	}
 
@@ -1187,7 +1187,7 @@ class CDbCommand extends CComponent
 	public function union($sql)
 	{
 		if(isset($this->_query['union']) && is_string($this->_query['union']))
-			$this->_query['union']=array($this->_query['union']);
+		$this->_query['union']=array($this->_query['union']);
 
 		$this->_query['union'][]=$sql;
 
@@ -1236,7 +1236,7 @@ class CDbCommand extends CComponent
 			{
 				$placeholders[] = $value->expression;
 				foreach($value->params as $n => $v)
-					$params[$n] = $v;
+				$params[$n] = $v;
 			}
 			else
 			{
@@ -1245,8 +1245,8 @@ class CDbCommand extends CComponent
 			}
 		}
 		$sql='INSERT INTO ' . $this->_connection->quoteTableName($table)
-			. ' (' . implode(', ',$names) . ') VALUES ('
-			. implode(', ', $placeholders) . ')';
+		. ' (' . implode(', ',$names) . ') VALUES ('
+		. implode(', ', $placeholders) . ')';
 		return $this->setText($sql)->execute($params);
 	}
 
@@ -1271,7 +1271,7 @@ class CDbCommand extends CComponent
 			{
 				$lines[]=$this->_connection->quoteColumnName($name) . '=' . $value->expression;
 				foreach($value->params as $n => $v)
-					$params[$n] = $v;
+				$params[$n] = $v;
 			}
 			else
 			{
@@ -1281,7 +1281,7 @@ class CDbCommand extends CComponent
 		}
 		$sql='UPDATE ' . $this->_connection->quoteTableName($table) . ' SET ' . implode(', ', $lines);
 		if(($where=$this->processConditions($conditions))!='')
-			$sql.=' WHERE '.$where;
+		$sql.=' WHERE '.$where;
 		return $this->setText($sql)->execute($params);
 	}
 
@@ -1298,7 +1298,7 @@ class CDbCommand extends CComponent
 	{
 		$sql='DELETE FROM ' . $this->_connection->quoteTableName($table);
 		if(($where=$this->processConditions($conditions))!='')
-			$sql.=' WHERE '.$where;
+		$sql.=' WHERE '.$where;
 		return $this->setText($sql)->execute($params);
 	}
 
@@ -1358,7 +1358,7 @@ class CDbCommand extends CComponent
 		$schema=$this->getConnection()->getSchema();
 		$n=$this->setText($schema->truncateTable($table))->execute();
 		if(strncasecmp($this->getConnection()->getDriverName(),'sqlite',6)===0)
-			$schema->resetSequence($schema->getTable($table));
+		$schema->resetSequence($schema->getTable($table));
 		return $n;
 	}
 
@@ -1483,9 +1483,9 @@ class CDbCommand extends CComponent
 	private function processConditions($conditions)
 	{
 		if(!is_array($conditions))
-			return $conditions;
+		return $conditions;
 		elseif($conditions===array())
-			return '';
+		return '';
 		$n=count($conditions);
 		$operator=strtoupper($conditions[0]);
 		if($operator==='OR' || $operator==='AND')
@@ -1495,32 +1495,32 @@ class CDbCommand extends CComponent
 			{
 				$condition=$this->processConditions($conditions[$i]);
 				if($condition!=='')
-					$parts[]='('.$condition.')';
+				$parts[]='('.$condition.')';
 			}
 			return $parts===array() ? '' : implode(' '.$operator.' ', $parts);
 		}
 
 		if(!isset($conditions[1],$conditions[2]))
-			return '';
+		return '';
 
 		$column=$conditions[1];
 		if(strpos($column,'(')===false)
-			$column=$this->_connection->quoteColumnName($column);
+		$column=$this->_connection->quoteColumnName($column);
 
 		$values=$conditions[2];
 		if(!is_array($values))
-			$values=array($values);
+		$values=array($values);
 
 		if($operator==='IN' || $operator==='NOT IN')
 		{
 			if($values===array())
-				return $operator==='IN' ? '0=1' : '';
+			return $operator==='IN' ? '0=1' : '';
 			foreach($values as $i=>$value)
 			{
 				if(is_string($value))
-					$values[$i]=$this->_connection->quoteValue($value);
+				$values[$i]=$this->_connection->quoteValue($value);
 				else
-					$values[$i]=(string)$value;
+				$values[$i]=(string)$value;
 			}
 			return $column.' '.$operator.' ('.implode(', ',$values).')';
 		}
@@ -1528,10 +1528,10 @@ class CDbCommand extends CComponent
 		if($operator==='LIKE' || $operator==='NOT LIKE' || $operator==='OR LIKE' || $operator==='OR NOT LIKE')
 		{
 			if($values===array())
-				return $operator==='LIKE' || $operator==='OR LIKE' ? '0=1' : '';
+			return $operator==='LIKE' || $operator==='OR LIKE' ? '0=1' : '';
 
 			if($operator==='LIKE' || $operator==='NOT LIKE')
-				$andor=' AND ';
+			$andor=' AND ';
 			else
 			{
 				$andor=' OR ';
@@ -1539,7 +1539,7 @@ class CDbCommand extends CComponent
 			}
 			$expressions=array();
 			foreach($values as $value)
-				$expressions[]=$column.' '.$operator.' '.$this->_connection->quoteValue($value);
+			$expressions[]=$column.' '.$operator.' '.$this->_connection->quoteValue($value);
 			return implode($andor,$expressions);
 		}
 
@@ -1564,22 +1564,22 @@ class CDbCommand extends CComponent
 		if(strpos($table,'(')===false)
 		{
 			if(preg_match('/^(.*?)(?i:\s+as\s+|\s+)(.*)$/',$table,$matches))  // with alias
-				$table=$this->_connection->quoteTableName($matches[1]).' '.$this->_connection->quoteTableName($matches[2]);
+			$table=$this->_connection->quoteTableName($matches[1]).' '.$this->_connection->quoteTableName($matches[2]);
 			else
-				$table=$this->_connection->quoteTableName($table);
+			$table=$this->_connection->quoteTableName($table);
 		}
 
 		$conditions=$this->processConditions($conditions);
 		if($conditions!='')
-			$conditions=' ON '.$conditions;
+		$conditions=' ON '.$conditions;
 
 		if(isset($this->_query['join']) && is_string($this->_query['join']))
-			$this->_query['join']=array($this->_query['join']);
+		$this->_query['join']=array($this->_query['join']);
 
 		$this->_query['join'][]=strtoupper($type) . ' ' . $table . $conditions;
 
 		foreach($params as $name=>$value)
-			$this->params[$name]=$value;
+		$this->params[$name]=$value;
 		return $this;
 	}
 

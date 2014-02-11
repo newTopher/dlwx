@@ -25,11 +25,11 @@ class CSqliteColumnSchema extends CDbColumnSchema
 	protected function extractDefault($defaultValue)
 	{
 		if($this->dbType==='timestamp' && $defaultValue==='CURRENT_TIMESTAMP')
-			$this->defaultValue=null;
+		$this->defaultValue=null;
 		else
-			$this->defaultValue=$this->typecast(strcasecmp($defaultValue,'null') ? $defaultValue : null);
+		$this->defaultValue=$this->typecast(strcasecmp($defaultValue,'null') ? $defaultValue : null);
 
 		if($this->type==='string' && $this->defaultValue!==null) // PHP 5.2.6 adds single quotes while 5.2.0 doesn't
-			$this->defaultValue=trim($this->defaultValue,"'\"");
+		$this->defaultValue=trim($this->defaultValue,"'\"");
 	}
 }

@@ -108,9 +108,9 @@ class CDbCache extends CCache
 	{
 		$value=(int)$value;
 		if($value<0)
-			$value=0;
+		$value=0;
 		if($value>1000000)
-			$value=1000000;
+		$value=1000000;
 		$this->_gcProbability=$value;
 	}
 
@@ -123,11 +123,11 @@ class CDbCache extends CCache
 	{
 		$driver=$db->getDriverName();
 		if($driver==='mysql')
-			$blob='LONGBLOB';
+		$blob='LONGBLOB';
 		elseif($driver==='pgsql')
-			$blob='BYTEA';
+		$blob='BYTEA';
 		else
-			$blob='BLOB';
+		$blob='BLOB';
 		$sql=<<<EOD
 CREATE TABLE $tableName
 (
@@ -146,14 +146,14 @@ EOD;
 	public function getDbConnection()
 	{
 		if($this->_db!==null)
-			return $this->_db;
+		return $this->_db;
 		elseif(($id=$this->connectionID)!==null)
 		{
 			if(($this->_db=Yii::app()->getComponent($id)) instanceof CDbConnection)
-				return $this->_db;
+			return $this->_db;
 			else
-				throw new CException(Yii::t('yii','CDbCache.connectionID "{id}" is invalid. Please make sure it refers to the ID of a CDbConnection application component.',
-					array('{id}'=>$id)));
+			throw new CException(Yii::t('yii','CDbCache.connectionID "{id}" is invalid. Please make sure it refers to the ID of a CDbConnection application component.',
+			array('{id}'=>$id)));
 		}
 		else
 		{
@@ -192,7 +192,7 @@ EOD;
 			return $result;
 		}
 		else
-			return $db->createCommand($sql)->queryScalar();
+		return $db->createCommand($sql)->queryScalar();
 	}
 
 	/**
@@ -203,7 +203,7 @@ EOD;
 	protected function getValues($keys)
 	{
 		if(empty($keys))
-			return array();
+		return array();
 
 		$ids=implode("','",$keys);
 		$time=time();
@@ -218,13 +218,13 @@ EOD;
 			$db->queryCachingDuration=$duration;
 		}
 		else
-			$rows=$db->createCommand($sql)->queryAll();
+		$rows=$db->createCommand($sql)->queryAll();
 
 		$results=array();
 		foreach($keys as $key)
-			$results[$key]=false;
+		$results[$key]=false;
 		foreach($rows as $row)
-			$results[$row['id']]=$row['value'];
+		$results[$row['id']]=$row['value'];
 		return $results;
 	}
 
@@ -261,9 +261,9 @@ EOD;
 		}
 
 		if($expire>0)
-			$expire+=time();
+		$expire+=time();
 		else
-			$expire=0;
+		$expire=0;
 		$sql="INSERT INTO {$this->cacheTableName} (id,expire,value) VALUES ('$key',$expire,:value)";
 		try
 		{

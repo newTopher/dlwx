@@ -119,7 +119,7 @@ abstract class CConsoleCommand extends CComponent
 		list($action, $options, $args)=$this->resolveRequest($args);
 		$methodName='action'.$action;
 		if(!preg_match('/^\w+$/',$action) || !method_exists($this,$methodName))
-			$this->usageError("Unknown action: ".$action);
+		$this->usageError("Unknown action: ".$action);
 
 		$method=new ReflectionMethod($this,$methodName);
 		$params=array();
@@ -130,18 +130,18 @@ abstract class CConsoleCommand extends CComponent
 			if(isset($options[$name]))
 			{
 				if($param->isArray())
-					$params[]=is_array($options[$name]) ? $options[$name] : array($options[$name]);
+				$params[]=is_array($options[$name]) ? $options[$name] : array($options[$name]);
 				elseif(!is_array($options[$name]))
-					$params[]=$options[$name];
+				$params[]=$options[$name];
 				else
-					$this->usageError("Option --$name requires a scalar. Array is given.");
+				$this->usageError("Option --$name requires a scalar. Array is given.");
 			}
 			elseif($name==='args')
-				$params[]=$args;
+			$params[]=$args;
 			elseif($param->isDefaultValueAvailable())
-				$params[]=$param->getDefaultValue();
+			$params[]=$param->getDefaultValue();
 			else
-				$this->usageError("Missing required option --$name.");
+			$this->usageError("Missing required option --$name.");
 			unset($options[$name]);
 		}
 
@@ -164,7 +164,7 @@ abstract class CConsoleCommand extends CComponent
 		}
 
 		if(!empty($options))
-			$this->usageError("Unknown options: ".implode(', ',array_keys($options)));
+		$this->usageError("Unknown options: ".implode(', ',array_keys($options)));
 
 		$exitCode=0;
 		if($this->beforeAction($action,$params))
@@ -208,7 +208,7 @@ abstract class CConsoleCommand extends CComponent
 	{
 		$event=new CConsoleCommandEvent($this,$params,$action,$exitCode);
 		if($this->hasEventHandler('onAfterAction'))
-			$this->onAfterAction($event);
+		$this->onAfterAction($event);
 		return $event->exitCode;
 	}
 
@@ -231,19 +231,19 @@ abstract class CConsoleCommand extends CComponent
 				if(isset($options[$name]))
 				{
 					if(!is_array($options[$name]))
-						$options[$name]=array($options[$name]);
+					$options[$name]=array($options[$name]);
 					$options[$name][]=$value;
 				}
 				else
-					$options[$name]=$value;
+				$options[$name]=$value;
 			}
 			elseif(isset($action))
-				$params[]=$arg;
+			$params[]=$arg;
 			else
-				$action=$arg;
+			$action=$arg;
 		}
 		if(!isset($action))
-			$action=$this->defaultAction;
+		$action=$this->defaultAction;
 
 		return array($action,$options,$params);
 	}
@@ -274,12 +274,12 @@ abstract class CConsoleCommand extends CComponent
 		$help='Usage: '.$this->getCommandRunner()->getScriptName().' '.$this->getName();
 		$options=$this->getOptionHelp();
 		if(empty($options))
-			return $help."\n";
+		return $help."\n";
 		if(count($options)===1)
-			return $help.' '.$options[0]."\n";
+		return $help.' '.$options[0]."\n";
 		$help.=" <action>\nActions:\n";
 		foreach($options as $option)
-			$help.='    '.$option."\n";
+		$help.='    '.$option."\n";
 		return $help;
 	}
 
@@ -295,14 +295,14 @@ abstract class CConsoleCommand extends CComponent
 	{
 		$options=array();
 		$class=new ReflectionClass(get_class($this));
-        foreach($class->getMethods(ReflectionMethod::IS_PUBLIC) as $method)
-        {
-        	$name=$method->getName();
-        	if(!strncasecmp($name,'action',6) && strlen($name)>6)
-        	{
-        		$name=substr($name,6);
-        		$name[0]=strtolower($name[0]);
-        		$help=$name;
+		foreach($class->getMethods(ReflectionMethod::IS_PUBLIC) as $method)
+		{
+			$name=$method->getName();
+			if(!strncasecmp($name,'action',6) && strlen($name)>6)
+			{
+				$name=substr($name,6);
+				$name[0]=strtolower($name[0]);
+				$help=$name;
 
 				foreach($method->getParameters() as $param)
 				{
@@ -314,17 +314,17 @@ abstract class CConsoleCommand extends CComponent
 					$name=$param->getName();
 
 					if($name==='args')
-						continue;
+					continue;
 
 					if($optional)
-						$help.=" [--$name=$defaultValue]";
+					$help.=" [--$name=$defaultValue]";
 					else
-						$help.=" --$name=value";
+					$help.=" --$name=value";
 				}
 				$options[]=$help;
-        	}
-        }
-        return $options;
+			}
+		}
+		return $options;
 	}
 
 	/**
@@ -374,9 +374,9 @@ abstract class CConsoleCommand extends CComponent
 			}
 
 			if($callback!==null)
-				$content=call_user_func($callback,$source,$params);
+			$content=call_user_func($callback,$source,$params);
 			else
-				$content=file_get_contents($source);
+			$content=file_get_contents($source);
 			if(is_file($target))
 			{
 				if($content===file_get_contents($target))
@@ -385,16 +385,16 @@ abstract class CConsoleCommand extends CComponent
 					continue;
 				}
 				if($overwriteAll)
-					echo "  overwrite $name\n";
+				echo "  overwrite $name\n";
 				else
 				{
 					echo "      exist $name\n";
 					echo "            ...overwrite? [Yes|No|All|Quit] ";
 					$answer=trim(fgets(STDIN));
 					if(!strncasecmp($answer,'q',1))
-						return;
+					return;
 					elseif(!strncasecmp($answer,'y',1))
-						echo "  overwrite $name\n";
+					echo "  overwrite $name\n";
 					elseif(!strncasecmp($answer,'a',1))
 					{
 						echo "  overwrite $name\n";
@@ -438,13 +438,13 @@ abstract class CConsoleCommand extends CComponent
 		while(($file=readdir($handle))!==false)
 		{
 			if(in_array($file,array('.','..','.svn','.gitignore')) || in_array($file,$ignoreFiles))
-				continue;
+			continue;
 			$sourcePath=$sourceDir.DIRECTORY_SEPARATOR.$file;
 			$targetPath=$targetDir.DIRECTORY_SEPARATOR.strtr($file,$renameMap);
 			$name=$baseDir===''?$file : $baseDir.'/'.$file;
 			$list[$name]=array('source'=>$sourcePath, 'target'=>$targetPath);
 			if(is_dir($sourcePath))
-				$list=array_merge($list,$this->buildFileList($sourcePath,$targetPath,$name,$ignoreFiles,$renameMap));
+			$list=array_merge($list,$this->buildFileList($sourcePath,$targetPath,$name,$ignoreFiles,$renameMap));
 		}
 		closedir($handle);
 		return $list;
@@ -474,9 +474,9 @@ abstract class CConsoleCommand extends CComponent
 	public function renderFile($_viewFile_,$_data_=null,$_return_=false)
 	{
 		if(is_array($_data_))
-			extract($_data_,EXTR_PREFIX_SAME,'data');
+		extract($_data_,EXTR_PREFIX_SAME,'data');
 		else
-			$data=$_data_;
+		$data=$_data_;
 		if($_return_)
 		{
 			ob_start();
@@ -485,7 +485,7 @@ abstract class CConsoleCommand extends CComponent
 			return ob_get_clean();
 		}
 		else
-			require($_viewFile_);
+		require($_viewFile_);
 	}
 
 	/**
@@ -518,7 +518,7 @@ abstract class CConsoleCommand extends CComponent
 		foreach($rules as $rule=>$replacement)
 		{
 			if(preg_match($rule,$name))
-				return preg_replace($rule,$replacement,$name);
+			return preg_replace($rule,$replacement,$name);
 		}
 		return $name.'s';
 	}
@@ -536,15 +536,15 @@ abstract class CConsoleCommand extends CComponent
 	public function prompt($message,$default=null)
 	{
 		if($default!==null)
-			$message.=" [$default] ";
+		$message.=" [$default] ";
 		else
-			$message.=' ';
+		$message.=' ';
 
 		if(extension_loaded('readline'))
 		{
 			$input=readline($message);
 			if($input!==false)
-				readline_add_history($input);
+			readline_add_history($input);
 		}
 		else
 		{
@@ -553,7 +553,7 @@ abstract class CConsoleCommand extends CComponent
 		}
 
 		if($input===false)
-			return false;
+		return false;
 		else{
 			$input=trim($input);
 			return ($input==='' && $default!==null) ? $default : $input;

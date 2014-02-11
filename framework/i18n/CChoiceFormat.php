@@ -47,7 +47,7 @@ class CChoiceFormat
 	{
 		$n=preg_match_all('/\s*([^#]*)\s*#([^\|]*)\|/',$messages.'|',$matches);
 		if($n===0)
-			return $messages;
+		return $messages;
 		for($i=0;$i<$n;++$i)
 		{
 			$expression=$matches[1][$i];
@@ -55,10 +55,10 @@ class CChoiceFormat
 			if($expression===(string)(int)$expression)
 			{
 				if($expression==$number)
-					return $message;
+				return $message;
 			}
 			elseif(self::evaluate(str_replace('n','$n',$expression),$number))
-				return $message;
+			return $message;
 		}
 		return $message; // return the last choice
 	}

@@ -60,7 +60,7 @@ class CList extends CComponent implements IteratorAggregate,ArrayAccess,Countabl
 	public function __construct($data=null,$readOnly=false)
 	{
 		if($data!==null)
-			$this->copyFrom($data);
+		$this->copyFrom($data);
 		$this->setReadOnly($readOnly);
 	}
 
@@ -119,12 +119,12 @@ class CList extends CComponent implements IteratorAggregate,ArrayAccess,Countabl
 	public function itemAt($index)
 	{
 		if(isset($this->_d[$index]))
-			return $this->_d[$index];
+		return $this->_d[$index];
 		elseif($index>=0 && $index<$this->_c) // in case the value is null
-			return $this->_d[$index];
+		return $this->_d[$index];
 		else
-			throw new CException(Yii::t('yii','List index "{index}" is out of bound.',
-				array('{index}'=>$index)));
+		throw new CException(Yii::t('yii','List index "{index}" is out of bound.',
+		array('{index}'=>$index)));
 	}
 
 	/**
@@ -151,18 +151,18 @@ class CList extends CComponent implements IteratorAggregate,ArrayAccess,Countabl
 		if(!$this->_r)
 		{
 			if($index===$this->_c)
-				$this->_d[$this->_c++]=$item;
+			$this->_d[$this->_c++]=$item;
 			elseif($index>=0 && $index<$this->_c)
 			{
 				array_splice($this->_d,$index,0,array($item));
 				$this->_c++;
 			}
 			else
-				throw new CException(Yii::t('yii','List index "{index}" is out of bound.',
-					array('{index}'=>$index)));
+			throw new CException(Yii::t('yii','List index "{index}" is out of bound.',
+			array('{index}'=>$index)));
 		}
 		else
-			throw new CException(Yii::t('yii','The list is read only.'));
+		throw new CException(Yii::t('yii','The list is read only.'));
 	}
 
 	/**
@@ -181,7 +181,7 @@ class CList extends CComponent implements IteratorAggregate,ArrayAccess,Countabl
 			return $index;
 		}
 		else
-			return false;
+		return false;
 	}
 
 	/**
@@ -198,7 +198,7 @@ class CList extends CComponent implements IteratorAggregate,ArrayAccess,Countabl
 			{
 				$this->_c--;
 				if($index===$this->_c)
-					return array_pop($this->_d);
+				return array_pop($this->_d);
 				else
 				{
 					$item=$this->_d[$index];
@@ -207,11 +207,11 @@ class CList extends CComponent implements IteratorAggregate,ArrayAccess,Countabl
 				}
 			}
 			else
-				throw new CException(Yii::t('yii','List index "{index}" is out of bound.',
-					array('{index}'=>$index)));
+			throw new CException(Yii::t('yii','List index "{index}" is out of bound.',
+			array('{index}'=>$index)));
 		}
 		else
-			throw new CException(Yii::t('yii','The list is read only.'));
+		throw new CException(Yii::t('yii','The list is read only.'));
 	}
 
 	/**
@@ -220,7 +220,7 @@ class CList extends CComponent implements IteratorAggregate,ArrayAccess,Countabl
 	public function clear()
 	{
 		for($i=$this->_c-1;$i>=0;--$i)
-			$this->removeAt($i);
+		$this->removeAt($i);
 	}
 
 	/**
@@ -239,9 +239,9 @@ class CList extends CComponent implements IteratorAggregate,ArrayAccess,Countabl
 	public function indexOf($item)
 	{
 		if(($index=array_search($item,$this->_d,true))!==false)
-			return $index;
+		return $index;
 		else
-			return -1;
+		return -1;
 	}
 
 	/**
@@ -263,14 +263,14 @@ class CList extends CComponent implements IteratorAggregate,ArrayAccess,Countabl
 		if(is_array($data) || ($data instanceof Traversable))
 		{
 			if($this->_c>0)
-				$this->clear();
+			$this->clear();
 			if($data instanceof CList)
-				$data=$data->_d;
+			$data=$data->_d;
 			foreach($data as $item)
-				$this->add($item);
+			$this->add($item);
 		}
 		elseif($data!==null)
-			throw new CException(Yii::t('yii','List data must be an array or an object implementing Traversable.'));
+		throw new CException(Yii::t('yii','List data must be an array or an object implementing Traversable.'));
 	}
 
 	/**
@@ -284,12 +284,12 @@ class CList extends CComponent implements IteratorAggregate,ArrayAccess,Countabl
 		if(is_array($data) || ($data instanceof Traversable))
 		{
 			if($data instanceof CList)
-				$data=$data->_d;
+			$data=$data->_d;
 			foreach($data as $item)
-				$this->add($item);
+			$this->add($item);
 		}
 		elseif($data!==null)
-			throw new CException(Yii::t('yii','List data must be an array or an object implementing Traversable.'));
+		throw new CException(Yii::t('yii','List data must be an array or an object implementing Traversable.'));
 	}
 
 	/**
@@ -324,7 +324,7 @@ class CList extends CComponent implements IteratorAggregate,ArrayAccess,Countabl
 	public function offsetSet($offset,$item)
 	{
 		if($offset===null || $offset===$this->_c)
-			$this->insertAt($this->_c,$item);
+		$this->insertAt($this->_c,$item);
 		else
 		{
 			$this->removeAt($offset);

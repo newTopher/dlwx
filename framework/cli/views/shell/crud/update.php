@@ -18,13 +18,17 @@ echo "\$this->breadcrumbs=array(
 );\n";
 ?>
 
-$this->menu=array(
-	array('label'=>'List <?php echo $modelClass; ?>', 'url'=>array('index')),
-	array('label'=>'Create <?php echo $modelClass; ?>', 'url'=>array('create')),
-	array('label'=>'View <?php echo $modelClass; ?>', 'url'=>array('view', 'id'=>$model-><?php echo $ID; ?>)),
-	array('label'=>'Manage <?php echo $modelClass; ?>', 'url'=>array('admin')),
-);
-?>
+$this->menu=array( array('label'=>'List
+<?php echo $modelClass; ?>
+', 'url'=>array('index')), array('label'=>'Create
+<?php echo $modelClass; ?>
+', 'url'=>array('create')), array('label'=>'View
+<?php echo $modelClass; ?>
+', 'url'=>array('view', 'id'=>$model->
+<?php echo $ID; ?>
+)), array('label'=>'Manage
+<?php echo $modelClass; ?>
+', 'url'=>array('admin')), ); ?>
 
 <h1>Update <?php echo $modelClass." <?php echo \$model->{$ID}; ?>"; ?></h1>
 

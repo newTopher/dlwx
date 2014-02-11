@@ -10,11 +10,11 @@ class UserIdentity extends CUserIdentity
 	{
 		$password=Yii::app()->getController()->getModule()->password;
 		if($password===null)
-			throw new CException('Please configure the "password" property of the "gii" module.');
+		throw new CException('Please configure the "password" property of the "gii" module.');
 		elseif($password===false || $password===$this->password)
-			$this->errorCode=self::ERROR_NONE;
-        else
-            $this->errorCode=self::ERROR_UNKNOWN_IDENTITY;
+		$this->errorCode=self::ERROR_NONE;
+		else
+		$this->errorCode=self::ERROR_UNKNOWN_IDENTITY;
 		return !$this->errorCode;
 	}
 }

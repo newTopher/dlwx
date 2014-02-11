@@ -30,9 +30,9 @@ class CWinCache extends CCache {
 	{
 		parent::init();
 		if(!extension_loaded('wincache'))
-			throw new CException(Yii::t('yii', 'CWinCache requires PHP wincache extension to be loaded.'));
+		throw new CException(Yii::t('yii', 'CWinCache requires PHP wincache extension to be loaded.'));
 		if(!ini_get('wincache.ucenabled'))
-			throw new CException(Yii::t('yii', 'CWinCache user cache is disabled. Please set wincache.ucenabled to On in your php.ini.'));
+		throw new CException(Yii::t('yii', 'CWinCache user cache is disabled. Please set wincache.ucenabled to On in your php.ini.'));
 	}
 
 	/**

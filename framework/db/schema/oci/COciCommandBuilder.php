@@ -65,7 +65,7 @@ WITH USER_SQL AS ({$sql}),
 	PAGINATION AS (SELECT USER_SQL.*, rownum as rowNumId FROM USER_SQL)
 SELECT *
 FROM PAGINATION
-{$filter}
+		{$filter}
 EOD;
 
 		return $sql;
@@ -93,7 +93,7 @@ EOD;
 				{
 					$placeholders[]=$value->expression;
 					foreach($value->params as $n=>$v)
-						$values[$n]=$v;
+					$values[$n]=$v;
 				}
 				else
 				{
@@ -114,10 +114,10 @@ EOD;
 			$table->sequenceName='RETURN_ID';
 		}
 		else
-			$command=$this->getDbConnection()->createCommand($sql);
+		$command=$this->getDbConnection()->createCommand($sql);
 
 		foreach($values as $name=>$value)
-			$command->bindValue($name,$value);
+		$command->bindValue($name,$value);
 
 		return $command;
 	}

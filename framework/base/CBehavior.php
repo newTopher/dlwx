@@ -62,7 +62,7 @@ class CBehavior extends CComponent implements IBehavior
 	public function detach($owner)
 	{
 		foreach($this->events() as $event=>$handler)
-			$owner->detachEventHandler($event,array($this,$handler));
+		$owner->detachEventHandler($event,array($this,$handler));
 		$this->_owner=null;
 		$this->_enabled=false;
 	}
@@ -92,11 +92,11 @@ class CBehavior extends CComponent implements IBehavior
 		if($this->_enabled!=$value && $this->_owner)
 		{
 			if($value)
-				$this->_attachEventHandlers();
+			$this->_attachEventHandlers();
 			else
 			{
 				foreach($this->events() as $event=>$handler)
-					$this->_owner->detachEventHandler($event,array($this,$handler));
+				$this->_owner->detachEventHandler($event,array($this,$handler));
 			}
 		}
 		$this->_enabled=$value;
@@ -108,7 +108,7 @@ class CBehavior extends CComponent implements IBehavior
 		foreach($this->events() as $event=>$handler)
 		{
 			if($class->getMethod($handler)->isPublic())
-				$this->_owner->attachEventHandler($event,array($this,$handler));
+			$this->_owner->attachEventHandler($event,array($this,$handler));
 		}
 	}
 }

@@ -95,12 +95,12 @@ EOD;
 		$module=Yii::app();
 		$modelClass=$args[0];
 		if(($pos=strpos($modelClass,'.'))===false)
-			$modelClass='application.models.'.$modelClass;
+		$modelClass='application.models.'.$modelClass;
 		else
 		{
 			$id=substr($modelClass,0,$pos);
 			if(($m=Yii::app()->getModule($id))!==null)
-				$module=$m;
+			$module=$m;
 		}
 		$modelClass=Yii::import($modelClass);
 
@@ -125,7 +125,7 @@ EOD;
 				$controllerFile=($middle===''?'':$middle.'/').$controllerClass.'.php';
 				$controllerID=$middle===''?$last:$middle.'/'.$last;
 				if(($m=Yii::app()->getModule($first))!==null)
-					$module=$m;
+				$module=$m;
 				else
 				{
 					$controllerFile=$first.'/'.$controllerFile;
@@ -150,12 +150,12 @@ EOD;
 		$fixtureName=$this->pluralize($modelClass);
 		$fixtureName[0]=strtolower($fixtureName);
 		$list=array(
-			basename($controllerFile)=>array(
+		basename($controllerFile)=>array(
 				'source'=>$templatePath.'/controller.php',
 				'target'=>$controllerFile,
 				'callback'=>array($this,'generateController'),
 				'params'=>array($controllerClass,$modelClass),
-			),
+		),
 		);
 
 		if($functionalTestPath!==false)
@@ -181,9 +181,9 @@ EOD;
 		$this->copyFiles($list);
 
 		if($module instanceof CWebModule)
-			$moduleID=$module->id.'/';
+		$moduleID=$module->id.'/';
 		else
-			$moduleID='';
+		$moduleID='';
 
 		echo "\nCrud '{$controllerID}' has been successfully created. You may access it via:\n";
 		echo "http://hostname/path/to/index.php?r={$moduleID}{$controllerID}\n";
@@ -195,12 +195,12 @@ EOD;
 		$model=CActiveRecord::model($modelClass);
 		$id=$model->tableSchema->primaryKey;
 		if($id===null)
-			throw new ShellException(Yii::t('yii','Error: Table "{table}" does not have a primary key.',array('{table}'=>$model->tableName())));
+		throw new ShellException(Yii::t('yii','Error: Table "{table}" does not have a primary key.',array('{table}'=>$model->tableName())));
 		elseif(is_array($id))
-			throw new ShellException(Yii::t('yii','Error: Table "{table}" has a composite primary key which is not supported by crud command.',array('{table}'=>$model->tableName())));
+		throw new ShellException(Yii::t('yii','Error: Table "{table}" has a composite primary key which is not supported by crud command.',array('{table}'=>$model->tableName())));
 
 		if(!is_file($source))  // fall back to default ones
-			$source=YII_PATH.'/cli/views/shell/crud/'.basename($source);
+		$source=YII_PATH.'/cli/views/shell/crud/'.basename($source);
 
 		return $this->renderFile($source,array(
 			'ID'=>$id,
@@ -215,7 +215,7 @@ EOD;
 		$table=$model->getTableSchema();
 		$columns=$table->columns;
 		if(!is_file($source))  // fall back to default ones
-			$source=YII_PATH.'/cli/views/shell/crud/'.basename($source);
+		$source=YII_PATH.'/cli/views/shell/crud/'.basename($source);
 		return $this->renderFile($source,array(
 			'ID'=>$table->primaryKey,
 			'modelClass'=>$modelClass,
@@ -226,7 +226,7 @@ EOD;
 	{
 		list($controllerID,$fixtureName,$modelClass)=$params;
 		if(!is_file($source))  // fall back to default ones
-			$source=YII_PATH.'/cli/views/shell/crud/'.basename($source);
+		$source=YII_PATH.'/cli/views/shell/crud/'.basename($source);
 		return $this->renderFile($source, array(
 			'controllerID'=>$controllerID,
 			'fixtureName'=>$fixtureName,
@@ -242,22 +242,22 @@ EOD;
 	public function generateInputField($modelClass,$column)
 	{
 		if($column->type==='boolean')
-			return "CHtml::activeCheckBox(\$model,'{$column->name}')";
+		return "CHtml::activeCheckBox(\$model,'{$column->name}')";
 		elseif(stripos($column->dbType,'text')!==false)
-			return "CHtml::activeTextArea(\$model,'{$column->name}',array('rows'=>6, 'cols'=>50))";
+		return "CHtml::activeTextArea(\$model,'{$column->name}',array('rows'=>6, 'cols'=>50))";
 		else
 		{
 			if(preg_match('/^(password|pass|passwd|passcode)$/i',$column->name))
-				$inputField='activePasswordField';
+			$inputField='activePasswordField';
 			else
-				$inputField='activeTextField';
+			$inputField='activeTextField';
 
 			if($column->type!=='string' || $column->size===null)
-				return "CHtml::{$inputField}(\$model,'{$column->name}')";
+			return "CHtml::{$inputField}(\$model,'{$column->name}')";
 			else
 			{
 				if(($size=$maxLength=$column->size)>60)
-					$size=60;
+				$size=60;
 				return "CHtml::{$inputField}(\$model,'{$column->name}',array('size'=>$size,'maxlength'=>$maxLength))";
 			}
 		}
@@ -271,22 +271,22 @@ EOD;
 	public function generateActiveField($modelClass,$column)
 	{
 		if($column->type==='boolean')
-			return "\$form->checkBox(\$model,'{$column->name}')";
+		return "\$form->checkBox(\$model,'{$column->name}')";
 		elseif(stripos($column->dbType,'text')!==false)
-			return "\$form->textArea(\$model,'{$column->name}',array('rows'=>6, 'cols'=>50))";
+		return "\$form->textArea(\$model,'{$column->name}',array('rows'=>6, 'cols'=>50))";
 		else
 		{
 			if(preg_match('/^(password|pass|passwd|passcode)$/i',$column->name))
-				$inputField='passwordField';
+			$inputField='passwordField';
 			else
-				$inputField='textField';
+			$inputField='textField';
 
 			if($column->type!=='string' || $column->size===null)
-				return "\$form->{$inputField}(\$model,'{$column->name}')";
+			return "\$form->{$inputField}(\$model,'{$column->name}')";
 			else
 			{
 				if(($size=$maxLength=$column->size)>60)
-					$size=60;
+				$size=60;
 				return "\$form->{$inputField}(\$model,'{$column->name}',array('size'=>$size,'maxlength'=>$maxLength))";
 			}
 		}
@@ -297,17 +297,17 @@ EOD;
 		foreach($columns as $column)
 		{
 			if(!strcasecmp($column->name,'name'))
-				return $column->name;
+			return $column->name;
 		}
 		foreach($columns as $column)
 		{
 			if(!strcasecmp($column->name,'title'))
-				return $column->name;
+			return $column->name;
 		}
 		foreach($columns as $column)
 		{
 			if($column->isPrimaryKey)
-				return $column->name;
+			return $column->name;
 		}
 		return 'id';
 	}
@@ -320,7 +320,7 @@ EOD;
 	public function class2name($className,$pluralize=false)
 	{
 		if($pluralize)
-			$className=$this->pluralize($className);
+		$className=$this->pluralize($className);
 		return ucwords(trim(strtolower(str_replace(array('-','_'),' ',preg_replace('/(?<![A-Z])[A-Z]/', ' \0', $className)))));
 	}
 }

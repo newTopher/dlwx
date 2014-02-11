@@ -53,10 +53,10 @@ EOD;
 	public function run($args)
 	{
 		if(!isset($args[0]))
-			$args[0]='index.php';
+		$args[0]='index.php';
 		$entryScript=isset($args[0]) ? $args[0] : 'index.php';
 		if(($entryScript=realpath($args[0]))===false || !is_file($entryScript))
-			$this->usageError("{$args[0]} does not exist or is not an entry script file.");
+		$this->usageError("{$args[0]} does not exist or is not an entry script file.");
 
 		// fake the web server setting
 		$cwd=getcwd();
@@ -108,7 +108,7 @@ EOD;
 		$_runner_->addCommands(dirname(__FILE__).'/shell');
 		$_runner_->addCommands(Yii::getPathOfAlias('application.commands.shell'));
 		if(($_path_=@getenv('YIIC_SHELL_COMMAND_PATH'))!==false)
-			$_runner_->addCommands($_path_);
+		$_runner_->addCommands($_path_);
 		$_commands_=$_runner_->commands;
 		$log=Yii::app()->log;
 
@@ -116,7 +116,7 @@ EOD;
 		{
 			$_line_=trim($_line_);
 			if($_line_==='exit')
-				return;
+			return;
 			try
 			{
 				$_args_=preg_split('/[\s,]+/',rtrim($_line_,';'),-1,PREG_SPLIT_NO_EMPTY);
@@ -128,14 +128,14 @@ EOD;
 					$_command_->run($_args_);
 				}
 				else
-					echo eval($_line_.';');
+				echo eval($_line_.';');
 			}
 			catch(Exception $e)
 			{
 				if($e instanceof ShellException)
-					echo $e->getMessage();
+				echo $e->getMessage();
 				else
-					echo $e;
+				echo $e;
 			}
 		}
 	}

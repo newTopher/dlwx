@@ -92,13 +92,13 @@ class CMemCache extends CCache
 			foreach($servers as $server)
 			{
 				if($this->useMemcached)
-					$cache->addServer($server->host,$server->port,$server->weight);
+				$cache->addServer($server->host,$server->port,$server->weight);
 				else
-					$cache->addServer($server->host,$server->port,$server->persistent,$server->weight,$server->timeout,$server->retryInterval,$server->status);
+				$cache->addServer($server->host,$server->port,$server->persistent,$server->weight,$server->timeout,$server->retryInterval,$server->status);
 			}
 		}
 		else
-			$cache->addServer('localhost',11211);
+		$cache->addServer('localhost',11211);
 	}
 
 	/**
@@ -108,13 +108,13 @@ class CMemCache extends CCache
 	public function getMemCache()
 	{
 		if($this->_cache!==null)
-			return $this->_cache;
+		return $this->_cache;
 		else
 		{
 			$extension=$this->useMemcached ? 'memcached' : 'memcache';
 			if(!extension_loaded($extension))
-				throw new CException(Yii::t('yii',"CMemCache requires PHP {extension} extension to be loaded.",
-                    array('{extension}'=>$extension)));
+			throw new CException(Yii::t('yii',"CMemCache requires PHP {extension} extension to be loaded.",
+			array('{extension}'=>$extension)));
 			return $this->_cache=$this->useMemcached ? new Memcached : new Memcache;
 		}
 	}
@@ -135,7 +135,7 @@ class CMemCache extends CCache
 	public function setServers($config)
 	{
 		foreach($config as $c)
-			$this->_servers[]=new CMemCacheServerConfiguration($c);
+		$this->_servers[]=new CMemCacheServerConfiguration($c);
 	}
 
 	/**
@@ -171,9 +171,9 @@ class CMemCache extends CCache
 	protected function setValue($key,$value,$expire)
 	{
 		if($expire>0)
-			$expire+=time();
+		$expire+=time();
 		else
-			$expire=0;
+		$expire=0;
 
 		return $this->useMemcached ? $this->_cache->set($key,$value,$expire) : $this->_cache->set($key,$value,0,$expire);
 	}
@@ -190,9 +190,9 @@ class CMemCache extends CCache
 	protected function addValue($key,$value,$expire)
 	{
 		if($expire>0)
-			$expire+=time();
+		$expire+=time();
 		else
-			$expire=0;
+		$expire=0;
 
 		return $this->useMemcached ? $this->_cache->add($key,$value,$expire) : $this->_cache->add($key,$value,0,$expire);
 	}
@@ -271,11 +271,11 @@ class CMemCacheServerConfiguration extends CComponent
 		if(is_array($config))
 		{
 			foreach($config as $key=>$value)
-				$this->$key=$value;
+			$this->$key=$value;
 			if($this->host===null)
-				throw new CException(Yii::t('yii','CMemCache server configuration must have "host" value.'));
+			throw new CException(Yii::t('yii','CMemCache server configuration must have "host" value.'));
 		}
 		else
-			throw new CException(Yii::t('yii','CMemCache server configuration must be an array.'));
+		throw new CException(Yii::t('yii','CMemCache server configuration must be an array.'));
 	}
 }

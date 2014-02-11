@@ -45,7 +45,7 @@ EOD;
 	{
 		$templates=array();
 		foreach($this->model->getTemplates() as $i=>$template)
-			$templates[$i]=basename($template).' ('.$template.')';
+		$templates[$i]=basename($template).' ('.$template.')';
 
 		$this->renderFile(Yii::getPathOfAlias('gii.views.common.generator').'.php',array(
 			'model'=>$this->model,

@@ -51,7 +51,7 @@ abstract class CDbSchema extends CComponent
 	{
 		$this->_connection=$conn;
 		foreach($conn->schemaCachingExclude as $name)
-			$this->_cacheExclude[$name]=true;
+		$this->_cacheExclude[$name]=true;
 	}
 
 	/**
@@ -72,13 +72,13 @@ abstract class CDbSchema extends CComponent
 	public function getTable($name,$refresh=false)
 	{
 		if($refresh===false && isset($this->_tables[$name]))
-			return $this->_tables[$name];
+		return $this->_tables[$name];
 		else
 		{
 			if($this->_connection->tablePrefix!==null && strpos($name,'{{')!==false)
-				$realName=preg_replace('/\{\{(.*?)\}\}/',$this->_connection->tablePrefix.'$1',$name);
+			$realName=preg_replace('/\{\{(.*?)\}\}/',$this->_connection->tablePrefix.'$1',$name);
 			else
-				$realName=$name;
+			$realName=$name;
 
 			// temporarily disable query caching
 			if($this->_connection->queryCachingDuration>0)
@@ -95,15 +95,15 @@ abstract class CDbSchema extends CComponent
 				{
 					$table=$this->loadTable($realName);
 					if($table!==null)
-						$cache->set($key,$table,$duration);
+					$cache->set($key,$table,$duration);
 				}
 				$this->_tables[$name]=$table;
 			}
 			else
-				$this->_tables[$name]=$table=$this->loadTable($realName);
+			$this->_tables[$name]=$table=$this->loadTable($realName);
 
 			if(isset($qcDuration))  // re-enable query caching
-				$this->_connection->queryCachingDuration=$qcDuration;
+			$this->_connection->queryCachingDuration=$qcDuration;
 
 			return $table;
 		}
@@ -122,7 +122,7 @@ abstract class CDbSchema extends CComponent
 		foreach($this->getTableNames($schema) as $name)
 		{
 			if(($table=$this->getTable($name))!==null)
-				$tables[$name]=$table;
+			$tables[$name]=$table;
 		}
 		return $tables;
 	}
@@ -136,7 +136,7 @@ abstract class CDbSchema extends CComponent
 	public function getTableNames($schema='')
 	{
 		if(!isset($this->_tableNames[$schema]))
-			$this->_tableNames[$schema]=$this->findTableNames($schema);
+		$this->_tableNames[$schema]=$this->findTableNames($schema);
 		return $this->_tableNames[$schema];
 	}
 
@@ -146,9 +146,9 @@ abstract class CDbSchema extends CComponent
 	public function getCommandBuilder()
 	{
 		if($this->_builder!==null)
-			return $this->_builder;
+		return $this->_builder;
 		else
-			return $this->_builder=$this->createCommandBuilder();
+		return $this->_builder=$this->createCommandBuilder();
 	}
 
 	/**
@@ -184,10 +184,10 @@ abstract class CDbSchema extends CComponent
 	public function quoteTableName($name)
 	{
 		if(strpos($name,'.')===false)
-			return $this->quoteSimpleTableName($name);
+		return $this->quoteSimpleTableName($name);
 		$parts=explode('.',$name);
 		foreach($parts as $i=>$part)
-			$parts[$i]=$this->quoteSimpleTableName($part);
+		$parts[$i]=$this->quoteSimpleTableName($part);
 		return implode('.',$parts);
 
 	}
@@ -219,7 +219,7 @@ abstract class CDbSchema extends CComponent
 			$name=substr($name,$pos+1);
 		}
 		else
-			$prefix='';
+		$prefix='';
 		return $prefix . ($name==='*' ? $name : $this->quoteSimpleColumnName($name));
 	}
 
@@ -248,15 +248,15 @@ abstract class CDbSchema extends CComponent
 		$name1=str_replace(array('"','`',"'"),'',$name1);
 		$name2=str_replace(array('"','`',"'"),'',$name2);
 		if(($pos=strrpos($name1,'.'))!==false)
-			$name1=substr($name1,$pos+1);
+		$name1=substr($name1,$pos+1);
 		if(($pos=strrpos($name2,'.'))!==false)
-			$name2=substr($name2,$pos+1);
+		$name2=substr($name2,$pos+1);
 		if($this->_connection->tablePrefix!==null)
 		{
 			if(strpos($name1,'{')!==false)
-				$name1=$this->_connection->tablePrefix.str_replace(array('{','}'),'',$name1);
+			$name1=$this->_connection->tablePrefix.str_replace(array('{','}'),'',$name1);
 			if(strpos($name2,'{')!==false)
-				$name2=$this->_connection->tablePrefix.str_replace(array('{','}'),'',$name2);
+			$name2=$this->_connection->tablePrefix.str_replace(array('{','}'),'',$name2);
 		}
 		return $name1===$name2;
 	}
@@ -307,7 +307,7 @@ abstract class CDbSchema extends CComponent
 	protected function findTableNames($schema='')
 	{
 		throw new CDbException(Yii::t('yii','{class} does not support fetching all table names.',
-			array('{class}'=>get_class($this))));
+		array('{class}'=>get_class($this))));
 	}
 
 	/**
@@ -340,14 +340,14 @@ abstract class CDbSchema extends CComponent
 	public function getColumnType($type)
 	{
 		if(isset($this->columnTypes[$type]))
-			return $this->columnTypes[$type];
+		return $this->columnTypes[$type];
 		elseif(($pos=strpos($type,' '))!==false)
 		{
 			$t=substr($type,0,$pos);
 			return (isset($this->columnTypes[$t]) ? $this->columnTypes[$t] : $t).substr($type,$pos);
 		}
 		else
-			return $type;
+		return $type;
 	}
 
 	/**
@@ -373,9 +373,9 @@ abstract class CDbSchema extends CComponent
 		foreach($columns as $name=>$type)
 		{
 			if(is_string($name))
-				$cols[]="\t".$this->quoteColumnName($name).' '.$this->getColumnType($type);
+			$cols[]="\t".$this->quoteColumnName($name).' '.$this->getColumnType($type);
 			else
-				$cols[]="\t".$type;
+			$cols[]="\t".$type;
 		}
 		$sql="CREATE TABLE ".$this->quoteTableName($table)." (\n".implode(",\n",$cols)."\n)";
 		return $options===null ? $sql : $sql.' '.$options;
@@ -428,8 +428,8 @@ abstract class CDbSchema extends CComponent
 	public function addColumn($table, $column, $type)
 	{
 		return 'ALTER TABLE ' . $this->quoteTableName($table)
-			. ' ADD ' . $this->quoteColumnName($column) . ' '
-			. $this->getColumnType($type);
+		. ' ADD ' . $this->quoteColumnName($column) . ' '
+		. $this->getColumnType($type);
 	}
 
 	/**
@@ -442,7 +442,7 @@ abstract class CDbSchema extends CComponent
 	public function dropColumn($table, $column)
 	{
 		return "ALTER TABLE ".$this->quoteTableName($table)
-			." DROP COLUMN ".$this->quoteColumnName($column);
+		." DROP COLUMN ".$this->quoteColumnName($column);
 	}
 
 	/**
@@ -456,8 +456,8 @@ abstract class CDbSchema extends CComponent
 	public function renameColumn($table, $name, $newName)
 	{
 		return "ALTER TABLE ".$this->quoteTableName($table)
-			. " RENAME COLUMN ".$this->quoteColumnName($name)
-			. " TO ".$this->quoteColumnName($newName);
+		. " RENAME COLUMN ".$this->quoteColumnName($name)
+		. " TO ".$this->quoteColumnName($newName);
 	}
 
 	/**
@@ -473,9 +473,9 @@ abstract class CDbSchema extends CComponent
 	public function alterColumn($table, $column, $type)
 	{
 		return 'ALTER TABLE ' . $this->quoteTableName($table) . ' CHANGE '
-			. $this->quoteColumnName($column) . ' '
-			. $this->quoteColumnName($column) . ' '
-			. $this->getColumnType($type);
+		. $this->quoteColumnName($column) . ' '
+		. $this->quoteColumnName($column) . ' '
+		. $this->getColumnType($type);
 	}
 
 	/**
@@ -495,19 +495,19 @@ abstract class CDbSchema extends CComponent
 	{
 		$columns=preg_split('/\s*,\s*/',$columns,-1,PREG_SPLIT_NO_EMPTY);
 		foreach($columns as $i=>$col)
-			$columns[$i]=$this->quoteColumnName($col);
+		$columns[$i]=$this->quoteColumnName($col);
 		$refColumns=preg_split('/\s*,\s*/',$refColumns,-1,PREG_SPLIT_NO_EMPTY);
 		foreach($refColumns as $i=>$col)
-			$refColumns[$i]=$this->quoteColumnName($col);
+		$refColumns[$i]=$this->quoteColumnName($col);
 		$sql='ALTER TABLE '.$this->quoteTableName($table)
-			.' ADD CONSTRAINT '.$this->quoteColumnName($name)
-			.' FOREIGN KEY ('.implode(', ', $columns).')'
-			.' REFERENCES '.$this->quoteTableName($refTable)
-			.' ('.implode(', ', $refColumns).')';
+		.' ADD CONSTRAINT '.$this->quoteColumnName($name)
+		.' FOREIGN KEY ('.implode(', ', $columns).')'
+		.' REFERENCES '.$this->quoteTableName($refTable)
+		.' ('.implode(', ', $refColumns).')';
 		if($delete!==null)
-			$sql.=' ON DELETE '.$delete;
+		$sql.=' ON DELETE '.$delete;
 		if($update!==null)
-			$sql.=' ON UPDATE '.$update;
+		$sql.=' ON UPDATE '.$update;
 		return $sql;
 	}
 
@@ -521,7 +521,7 @@ abstract class CDbSchema extends CComponent
 	public function dropForeignKey($name, $table)
 	{
 		return 'ALTER TABLE '.$this->quoteTableName($table)
-			.' DROP CONSTRAINT '.$this->quoteColumnName($name);
+		.' DROP CONSTRAINT '.$this->quoteColumnName($name);
 	}
 
 	/**
@@ -541,13 +541,13 @@ abstract class CDbSchema extends CComponent
 		foreach($columns as $col)
 		{
 			if(strpos($col,'(')!==false)
-				$cols[]=$col;
+			$cols[]=$col;
 			else
-				$cols[]=$this->quoteColumnName($col);
+			$cols[]=$this->quoteColumnName($col);
 		}
 		return ($unique ? 'CREATE UNIQUE INDEX ' : 'CREATE INDEX ')
-			. $this->quoteTableName($name).' ON '
-			. $this->quoteTableName($table).' ('.implode(', ',$cols).')';
+		. $this->quoteTableName($name).' ON '
+		. $this->quoteTableName($table).' ('.implode(', ',$cols).')';
 	}
 
 	/**
@@ -574,12 +574,12 @@ abstract class CDbSchema extends CComponent
 	public function addPrimaryKey($name,$table,$columns)
 	{
 		if(is_string($columns))
-			$columns=preg_split('/\s*,\s*/',$columns,-1,PREG_SPLIT_NO_EMPTY);
+		$columns=preg_split('/\s*,\s*/',$columns,-1,PREG_SPLIT_NO_EMPTY);
 		foreach($columns as $i=>$col)
-			$columns[$i]=$this->quoteColumnName($col);
+		$columns[$i]=$this->quoteColumnName($col);
 		return 'ALTER TABLE ' . $this->quoteTableName($table) . ' ADD CONSTRAINT '
-			. $this->quoteColumnName($name) . '  PRIMARY KEY ('
-			. implode(', ', $columns). ' )';
+		. $this->quoteColumnName($name) . '  PRIMARY KEY ('
+		. implode(', ', $columns). ' )';
 	}
 
 	/**
@@ -592,6 +592,6 @@ abstract class CDbSchema extends CComponent
 	public function dropPrimaryKey($name,$table)
 	{
 		return 'ALTER TABLE ' . $this->quoteTableName($table) . ' DROP CONSTRAINT '
-			. $this->quoteColumnName($name);
+		. $this->quoteColumnName($name);
 	}
 }

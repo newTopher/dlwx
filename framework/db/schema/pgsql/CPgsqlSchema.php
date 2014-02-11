@@ -66,17 +66,17 @@ class CPgsqlSchema extends CDbSchema
 	public function resetSequence($table,$value=null)
 	{
 		if($table->sequenceName===null)
-			return;
+		return;
 		$sequence='"'.$table->sequenceName.'"';
 		if(strpos($sequence,'.')!==false)
-			$sequence=str_replace('.','"."',$sequence);
+		$sequence=str_replace('.','"."',$sequence);
 		if($value!==null)
-			$value=(int)$value;
+		$value=(int)$value;
 		else
-			$value="(SELECT COALESCE(MAX(\"{$table->primaryKey}\"),0) FROM {$table->rawName})+1";
+		$value="(SELECT COALESCE(MAX(\"{$table->primaryKey}\"),0) FROM {$table->rawName})+1";
 		$this->getDbConnection()
-			->createCommand("SELECT SETVAL('$sequence',$value,false)")
-			->execute();
+		->createCommand("SELECT SETVAL('$sequence',$value,false)")
+		->execute();
 	}
 
 	/**
@@ -94,7 +94,7 @@ class CPgsqlSchema extends CDbSchema
 		{
 			$tableName='"'.$tableName.'"';
 			if(strpos($tableName,'.')!==false)
-				$tableName=str_replace('.','"."',$tableName);
+			$tableName=str_replace('.','"."',$tableName);
 			$db->createCommand("ALTER TABLE $tableName $enable TRIGGER ALL")->execute();
 		}
 	}
@@ -109,11 +109,11 @@ class CPgsqlSchema extends CDbSchema
 		$table=new CPgsqlTableSchema;
 		$this->resolveTableNames($table,$name);
 		if(!$this->findColumns($table))
-			return null;
+		return null;
 		$this->findConstraints($table);
 
 		if(is_string($table->primaryKey) && isset($this->_sequences[$table->rawName.'.'.$table->primaryKey]))
-			$table->sequenceName=$this->_sequences[$table->rawName.'.'.$table->primaryKey];
+		$table->sequenceName=$this->_sequences[$table->rawName.'.'.$table->primaryKey];
 		elseif(is_array($table->primaryKey))
 		{
 			foreach($table->primaryKey as $pk)
@@ -151,9 +151,9 @@ class CPgsqlSchema extends CDbSchema
 		$table->name=$tableName;
 		$table->schemaName=$schemaName;
 		if($schemaName===self::DEFAULT_SCHEMA)
-			$table->rawName=$this->quoteTableName($tableName);
+		$table->rawName=$this->quoteTableName($tableName);
 		else
-			$table->rawName=$this->quoteTableName($schemaName).'.'.$this->quoteTableName($tableName);
+		$table->rawName=$this->quoteTableName($schemaName).'.'.$this->quoteTableName($tableName);
 	}
 
 	/**
@@ -177,7 +177,7 @@ EOD;
 		$command->bindValue(':schema',$table->schemaName);
 
 		if(($columns=$command->queryAll())===array())
-			return false;
+		return false;
 
 		foreach($columns as $column)
 		{
@@ -187,9 +187,9 @@ EOD;
 			if(stripos($column['adsrc'],'nextval')===0 && preg_match('/nextval\([^\']*\'([^\']+)\'[^\)]*\)/i',$column['adsrc'],$matches))
 			{
 				if(strpos($matches[1],'.')!==false || $table->schemaName===self::DEFAULT_SCHEMA)
-					$this->_sequences[$table->rawName.'.'.$c->name]=$matches[1];
+				$this->_sequences[$table->rawName.'.'.$c->name]=$matches[1];
 				else
-					$this->_sequences[$table->rawName.'.'.$c->name]=$table->schemaName.'.'.$matches[1];
+				$this->_sequences[$table->rawName.'.'.$c->name]=$table->schemaName.'.'.$matches[1];
 				$c->autoIncrement=true;
 			}
 		}
@@ -270,9 +270,9 @@ EOD;
 		foreach($command->queryAll() as $row)
 		{
 			if($row['contype']==='p') // primary key
-				$this->findPrimaryKey($table,$row['indkey']);
+			$this->findPrimaryKey($table,$row['indkey']);
 			elseif($row['contype']==='f') // foreign key
-				$this->findForeignKey($table,$row['consrc']);
+			$this->findForeignKey($table,$row['consrc']);
 		}
 	}
 
@@ -303,11 +303,11 @@ EOD;
 			{
 				$table->columns[$name]->isPrimaryKey=true;
 				if($table->primaryKey===null)
-					$table->primaryKey=$name;
+				$table->primaryKey=$name;
 				elseif(is_string($table->primaryKey))
-					$table->primaryKey=array($table->primaryKey,$name);
+				$table->primaryKey=array($table->primaryKey,$name);
 				else
-					$table->primaryKey[]=$name;
+				$table->primaryKey[]=$name;
 			}
 		}
 	}
@@ -331,7 +331,7 @@ EOD;
 			{
 				$table->foreignKeys[$key]=array($tableName,$fkeys[$i]);
 				if(isset($table->columns[$key]))
-					$table->columns[$key]->isForeignKey=true;
+				$table->columns[$key]->isForeignKey=true;
 			}
 		}
 	}
@@ -345,7 +345,7 @@ EOD;
 	protected function findTableNames($schema='')
 	{
 		if($schema==='')
-			$schema=self::DEFAULT_SCHEMA;
+		$schema=self::DEFAULT_SCHEMA;
 		$sql=<<<EOD
 SELECT table_name, table_schema FROM information_schema.tables
 WHERE table_schema=:schema AND table_type='BASE TABLE'
@@ -357,9 +357,9 @@ EOD;
 		foreach($rows as $row)
 		{
 			if($schema===self::DEFAULT_SCHEMA)
-				$names[]=$row['table_name'];
+			$names[]=$row['table_name'];
 			else
-				$names[]=$row['table_schema'].'.'.$row['table_name'];
+			$names[]=$row['table_schema'].'.'.$row['table_name'];
 		}
 		return $names;
 	}
@@ -390,8 +390,8 @@ EOD;
 	{
 		$type=$this->getColumnType($type);
 		$sql='ALTER TABLE ' . $this->quoteTableName($table)
-			. ' ADD COLUMN ' . $this->quoteColumnName($column) . ' '
-			. $this->getColumnType($type);
+		. ' ADD COLUMN ' . $this->quoteColumnName($column) . ' '
+		. $this->getColumnType($type);
 		return $sql;
 	}
 
@@ -409,7 +409,7 @@ EOD;
 	{
 		$type=$this->getColumnType($type);
 		$sql='ALTER TABLE ' . $this->quoteTableName($table) . ' ALTER COLUMN '
-			. $this->quoteColumnName($column) . ' TYPE ' . $this->getColumnType($type);
+		. $this->quoteColumnName($column) . ' TYPE ' . $this->getColumnType($type);
 		return $sql;
 	}
 

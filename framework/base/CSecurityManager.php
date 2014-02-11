@@ -96,16 +96,16 @@ class CSecurityManager extends CApplicationComponent
 	public function getValidationKey()
 	{
 		if($this->_validationKey!==null)
-			return $this->_validationKey;
+		return $this->_validationKey;
 		else
 		{
 			if(($key=Yii::app()->getGlobalState(self::STATE_VALIDATION_KEY))!==null)
-				$this->setValidationKey($key);
+			$this->setValidationKey($key);
 			else
 			{
 				if(($key=$this->generateRandomString(32,true))===false)
-					if(($key=$this->generateRandomString(32,false))===false)
-						throw new CException(Yii::t('yii',
+				if(($key=$this->generateRandomString(32,false))===false)
+				throw new CException(Yii::t('yii',
 							'CSecurityManager::generateRandomString() cannot generate random string in the current environment.'));
 				$this->setValidationKey($key);
 				Yii::app()->setGlobalState(self::STATE_VALIDATION_KEY,$key);
@@ -121,9 +121,9 @@ class CSecurityManager extends CApplicationComponent
 	public function setValidationKey($value)
 	{
 		if(!empty($value))
-			$this->_validationKey=$value;
+		$this->_validationKey=$value;
 		else
-			throw new CException(Yii::t('yii','CSecurityManager.validationKey cannot be empty.'));
+		throw new CException(Yii::t('yii','CSecurityManager.validationKey cannot be empty.'));
 	}
 
 	/**
@@ -134,16 +134,16 @@ class CSecurityManager extends CApplicationComponent
 	public function getEncryptionKey()
 	{
 		if($this->_encryptionKey!==null)
-			return $this->_encryptionKey;
+		return $this->_encryptionKey;
 		else
 		{
 			if(($key=Yii::app()->getGlobalState(self::STATE_ENCRYPTION_KEY))!==null)
-				$this->setEncryptionKey($key);
+			$this->setEncryptionKey($key);
 			else
 			{
 				if(($key=$this->generateRandomString(32,true))===false)
-					if(($key=$this->generateRandomString(32,false))===false)
-						throw new CException(Yii::t('yii',
+				if(($key=$this->generateRandomString(32,false))===false)
+				throw new CException(Yii::t('yii',
 							'CSecurityManager::generateRandomString() cannot generate random string in the current environment.'));
 				$this->setEncryptionKey($key);
 				Yii::app()->setGlobalState(self::STATE_ENCRYPTION_KEY,$key);
@@ -159,9 +159,9 @@ class CSecurityManager extends CApplicationComponent
 	public function setEncryptionKey($value)
 	{
 		if(!empty($value))
-			$this->_encryptionKey=$value;
+		$this->_encryptionKey=$value;
 		else
-			throw new CException(Yii::t('yii','CSecurityManager.encryptionKey cannot be empty.'));
+		throw new CException(Yii::t('yii','CSecurityManager.encryptionKey cannot be empty.'));
 	}
 
 	/**
@@ -237,17 +237,17 @@ class CSecurityManager extends CApplicationComponent
 		if(extension_loaded('mcrypt'))
 		{
 			if(is_array($this->cryptAlgorithm))
-				$module=@call_user_func_array('mcrypt_module_open',$this->cryptAlgorithm);
+			$module=@call_user_func_array('mcrypt_module_open',$this->cryptAlgorithm);
 			else
-				$module=@mcrypt_module_open($this->cryptAlgorithm,'', MCRYPT_MODE_CBC,'');
+			$module=@mcrypt_module_open($this->cryptAlgorithm,'', MCRYPT_MODE_CBC,'');
 
 			if($module===false)
-				throw new CException(Yii::t('yii','Failed to initialize the mcrypt module.'));
+			throw new CException(Yii::t('yii','Failed to initialize the mcrypt module.'));
 
 			return $module;
 		}
 		else
-			throw new CException(Yii::t('yii','CSecurityManager requires PHP mcrypt extension to be loaded in order to use data encryption feature.'));
+		throw new CException(Yii::t('yii','CSecurityManager requires PHP mcrypt extension to be loaded in order to use data encryption feature.'));
 	}
 
 	/**
@@ -279,7 +279,7 @@ class CSecurityManager extends CApplicationComponent
 			return $hmac===$this->computeHMAC($data2,$key)?$data2:false;
 		}
 		else
-			return false;
+		return false;
 	}
 
 	/**
@@ -298,12 +298,12 @@ class CSecurityManager extends CApplicationComponent
 	public function computeHMAC($data,$key=null,$hashAlgorithm=null)
 	{
 		if($key===null)
-			$key=$this->getValidationKey();
+		$key=$this->getValidationKey();
 		if($hashAlgorithm===null)
-			$hashAlgorithm=$this->hashAlgorithm;
+		$hashAlgorithm=$this->hashAlgorithm;
 
 		if(function_exists('hash_hmac'))
-			return hash_hmac($hashAlgorithm,$data,$key);
+		return hash_hmac($hashAlgorithm,$data,$key);
 
 		if(0===strcasecmp($hashAlgorithm,'sha1'))
 		{
@@ -320,9 +320,9 @@ class CSecurityManager extends CApplicationComponent
 			throw new CException(Yii::t('yii','Only SHA1 and MD5 hashing algorithms are supported when using PHP 5.1.1 or below.'));
 		}
 		if($this->strlen($key)>64)
-			$key=pack($pack,$func($key));
+		$key=pack($pack,$func($key));
 		if($this->strlen($key)<64)
-			$key=str_pad($key,64,chr(0));
+		$key=str_pad($key,64,chr(0));
 		$key=$this->substr($key,0,64);
 		return $func((str_repeat(chr(0x5C), 64) ^ $key) . pack($pack, $func((str_repeat(chr(0x36), 64) ^ $key) . $data)));
 	}
@@ -338,7 +338,7 @@ class CSecurityManager extends CApplicationComponent
 	public function generateRandomString($length,$cryptographicallyStrong=true)
 	{
 		if(($randomBytes=$this->generateRandomBytes($length+2,$cryptographicallyStrong))!==false)
-			return strtr($this->substr(base64_encode($randomBytes),0,$length),array('+'=>'_','/'=>'~'));
+		return strtr($this->substr(base64_encode($randomBytes),0,$length),array('+'=>'_','/'=>'~'));
 		return false;
 	}
 
@@ -366,39 +366,39 @@ class CSecurityManager extends CApplicationComponent
 		{
 			$bytes=openssl_random_pseudo_bytes($length,$strong);
 			if($this->strlen($bytes)>=$length && ($strong || !$cryptographicallyStrong))
-				return $this->substr($bytes,0,$length);
+			return $this->substr($bytes,0,$length);
 		}
 
 		if(function_exists('mcrypt_create_iv') &&
-			($bytes=mcrypt_create_iv($length, MCRYPT_DEV_URANDOM))!==false &&
-			$this->strlen($bytes)>=$length)
+		($bytes=mcrypt_create_iv($length, MCRYPT_DEV_URANDOM))!==false &&
+		$this->strlen($bytes)>=$length)
 		{
 			return $this->substr($bytes,0,$length);
 		}
 
 		if(($file=@fopen('/dev/urandom','rb'))!==false &&
-			($bytes=@fread($file,$length))!==false &&
-			(fclose($file) || true) &&
-			$this->strlen($bytes)>=$length)
+		($bytes=@fread($file,$length))!==false &&
+		(fclose($file) || true) &&
+		$this->strlen($bytes)>=$length)
 		{
 			return $this->substr($bytes,0,$length);
 		}
 
 		$i=0;
 		while($this->strlen($bytes)<$length &&
-			($byte=$this->generateSessionRandomBlock())!==false &&
-			++$i<3)
+		($byte=$this->generateSessionRandomBlock())!==false &&
+		++$i<3)
 		{
 			$bytes.=$byte;
 		}
 		if($this->strlen($bytes)>=$length)
-			return $this->substr($bytes,0,$length);
+		return $this->substr($bytes,0,$length);
 
 		if ($cryptographicallyStrong)
-			return false;
+		return false;
 
 		while($this->strlen($bytes)<$length)
-			$bytes.=$this->generatePseudoRandomBlock();
+		$bytes.=$this->generatePseudoRandomBlock();
 		return $this->substr($bytes,0,$length);
 	}
 
@@ -413,21 +413,21 @@ class CSecurityManager extends CApplicationComponent
 		$bytes='';
 
 		if (function_exists('openssl_random_pseudo_bytes')
-			&& ($bytes=openssl_random_pseudo_bytes(512))!==false
-			&& $this->strlen($bytes)>=512)
+		&& ($bytes=openssl_random_pseudo_bytes(512))!==false
+		&& $this->strlen($bytes)>=512)
 		{
 			return $this->substr($bytes,0,512);
 		}
 
 		for($i=0;$i<32;++$i)
-			$bytes.=pack('S',mt_rand(0,0xffff));
+		$bytes.=pack('S',mt_rand(0,0xffff));
 
 		// On UNIX and UNIX-like operating systems the numerical values in `ps`, `uptime` and `iostat`
 		// ought to be fairly unpredictable. Gather the non-zero digits from those.
 		foreach(array('ps','uptime','iostat') as $command) {
 			@exec($command,$commandResult,$retVal);
 			if(is_array($commandResult) && !empty($commandResult) && $retVal==0)
-				$bytes.=preg_replace('/[^1-9]/','',implode('',$commandResult));
+			$bytes.=preg_replace('/[^1-9]/','',implode('',$commandResult));
 		}
 
 		// Gather the current time's microsecond part. Note: this is only a source of entropy on
@@ -449,7 +449,7 @@ class CSecurityManager extends CApplicationComponent
 	{
 		ini_set('session.entropy_length',20);
 		if(ini_get('session.entropy_length')!=20)
-			return false;
+		return false;
 
 		// These calls are (supposed to be, according to PHP manual) safe even if
 		// there is already an active session for the calling script.
@@ -458,7 +458,7 @@ class CSecurityManager extends CApplicationComponent
 
 		$bytes=session_id();
 		if(!$bytes)
-			return false;
+		return false;
 
 		// $bytes has 20 bytes of entropy but the session manager converts the binary
 		// random bytes into something readable. We have to convert that back.

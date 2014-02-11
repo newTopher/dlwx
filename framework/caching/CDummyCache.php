@@ -35,7 +35,7 @@ class CDummyCache extends CApplicationComponent implements ICache, ArrayAccess
 	{
 		parent::init();
 		if($this->keyPrefix===null)
-			$this->keyPrefix=Yii::app()->getId();
+		$this->keyPrefix=Yii::app()->getId();
 	}
 
 	/**
@@ -62,7 +62,7 @@ class CDummyCache extends CApplicationComponent implements ICache, ArrayAccess
 	{
 		$results=array();
 		foreach($ids as $id)
-			$results[$id]=false;
+		$results[$id]=false;
 		return $results;
 	}
 

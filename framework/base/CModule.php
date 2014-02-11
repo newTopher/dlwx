@@ -73,7 +73,7 @@ abstract class CModule extends CComponent
 
 		// set basePath at early as possible to avoid trouble
 		if(is_string($config))
-			$config=require($config);
+		$config=require($config);
 		if(isset($config['basePath']))
 		{
 			$this->setBasePath($config['basePath']);
@@ -100,9 +100,9 @@ abstract class CModule extends CComponent
 	public function __get($name)
 	{
 		if($this->hasComponent($name))
-			return $this->getComponent($name);
+		return $this->getComponent($name);
 		else
-			return parent::__get($name);
+		return parent::__get($name);
 	}
 
 	/**
@@ -115,9 +115,9 @@ abstract class CModule extends CComponent
 	public function __isset($name)
 	{
 		if($this->hasComponent($name))
-			return $this->getComponent($name)!==null;
+		return $this->getComponent($name)!==null;
 		else
-			return parent::__isset($name);
+		return parent::__isset($name);
 	}
 
 	/**
@@ -161,8 +161,8 @@ abstract class CModule extends CComponent
 	public function setBasePath($path)
 	{
 		if(($this->_basePath=realpath($path))===false || !is_dir($this->_basePath))
-			throw new CException(Yii::t('yii','Base path "{path}" is not a valid directory.',
-				array('{path}'=>$path)));
+		throw new CException(Yii::t('yii','Base path "{path}" is not a valid directory.',
+		array('{path}'=>$path)));
 	}
 
 	/**
@@ -172,7 +172,7 @@ abstract class CModule extends CComponent
 	public function getParams()
 	{
 		if($this->_params!==null)
-			return $this->_params;
+		return $this->_params;
 		else
 		{
 			$this->_params=new CAttributeCollection;
@@ -189,7 +189,7 @@ abstract class CModule extends CComponent
 	{
 		$params=$this->getParams();
 		foreach($value as $k=>$v)
-			$params->add($k,$v);
+		$params->add($k,$v);
 	}
 
 	/**
@@ -199,9 +199,9 @@ abstract class CModule extends CComponent
 	public function getModulePath()
 	{
 		if($this->_modulePath!==null)
-			return $this->_modulePath;
+		return $this->_modulePath;
 		else
-			return $this->_modulePath=$this->getBasePath().DIRECTORY_SEPARATOR.'modules';
+		return $this->_modulePath=$this->getBasePath().DIRECTORY_SEPARATOR.'modules';
 	}
 
 	/**
@@ -212,8 +212,8 @@ abstract class CModule extends CComponent
 	public function setModulePath($value)
 	{
 		if(($this->_modulePath=realpath($value))===false || !is_dir($this->_modulePath))
-			throw new CException(Yii::t('yii','The module path "{path}" is not a valid directory.',
-				array('{path}'=>$value)));
+		throw new CException(Yii::t('yii','The module path "{path}" is not a valid directory.',
+		array('{path}'=>$value)));
 	}
 
 	/**
@@ -223,7 +223,7 @@ abstract class CModule extends CComponent
 	public function setImport($aliases)
 	{
 		foreach($aliases as $alias)
-			Yii::import($alias);
+		Yii::import($alias);
 	}
 
 	/**
@@ -244,9 +244,9 @@ abstract class CModule extends CComponent
 		foreach($mappings as $name=>$alias)
 		{
 			if(($path=Yii::getPathOfAlias($alias))!==false)
-				Yii::setPathOfAlias($name,$path);
+			Yii::setPathOfAlias($name,$path);
 			else
-				Yii::setPathOfAlias($name,$alias);
+			Yii::setPathOfAlias($name,$alias);
 		}
 	}
 
@@ -269,7 +269,7 @@ abstract class CModule extends CComponent
 	public function getModule($id)
 	{
 		if(isset($this->_modules[$id]) || array_key_exists($id,$this->_modules))
-			return $this->_modules[$id];
+		return $this->_modules[$id];
 		elseif(isset($this->_moduleConfig[$id]))
 		{
 			$config=$this->_moduleConfig[$id];
@@ -279,9 +279,9 @@ abstract class CModule extends CComponent
 				$class=$config['class'];
 				unset($config['class'], $config['enabled']);
 				if($this===Yii::app())
-					$module=Yii::createComponent($class,$id,null,$config);
+				$module=Yii::createComponent($class,$id,null,$config);
 				else
-					$module=Yii::createComponent($class,$this->getId().'/'.$id,$this,$config);
+				$module=Yii::createComponent($class,$this->getId().'/'.$id,$this,$config);
 				return $this->_modules[$id]=$module;
 			}
 		}
@@ -349,9 +349,9 @@ abstract class CModule extends CComponent
 			}
 
 			if(isset($this->_moduleConfig[$id]))
-				$this->_moduleConfig[$id]=CMap::mergeArray($this->_moduleConfig[$id],$module);
+			$this->_moduleConfig[$id]=CMap::mergeArray($this->_moduleConfig[$id],$module);
 			else
-				$this->_moduleConfig[$id]=$module;
+			$this->_moduleConfig[$id]=$module;
 		}
 	}
 
@@ -375,7 +375,7 @@ abstract class CModule extends CComponent
 	public function getComponent($id,$createIfNull=true)
 	{
 		if(isset($this->_components[$id]))
-			return $this->_components[$id];
+		return $this->_components[$id];
 		elseif(isset($this->_componentConfig[$id]) && $createIfNull)
 		{
 			$config=$this->_componentConfig[$id];
@@ -416,7 +416,7 @@ abstract class CModule extends CComponent
 			$this->_components[$id]=$component;
 
 			if(!$component->getIsInitialized())
-				$component->init();
+			$component->init();
 
 			return;
 		}
@@ -432,20 +432,20 @@ abstract class CModule extends CComponent
 			foreach($component as $key=>$value)
 			{
 				if($key!=='class')
-					$this->_components[$id]->$key=$value;
+				$this->_components[$id]->$key=$value;
 			}
 		}
 		elseif(isset($this->_componentConfig[$id]['class'],$component['class'])
-			&& $this->_componentConfig[$id]['class']!==$component['class'])
+		&& $this->_componentConfig[$id]['class']!==$component['class'])
 		{
 			$this->_componentConfig[$id]=$component; //we should ignore merge here
 			return;
 		}
 
 		if(isset($this->_componentConfig[$id]) && $merge)
-			$this->_componentConfig[$id]=CMap::mergeArray($this->_componentConfig[$id],$component);
+		$this->_componentConfig[$id]=CMap::mergeArray($this->_componentConfig[$id],$component);
 		else
-			$this->_componentConfig[$id]=$component;
+		$this->_componentConfig[$id]=$component;
 	}
 
 	/**
@@ -459,9 +459,9 @@ abstract class CModule extends CComponent
 	public function getComponents($loadedOnly=true)
 	{
 		if($loadedOnly)
-			return $this->_components;
+		return $this->_components;
 		else
-			return array_merge($this->_componentConfig, $this->_components);
+		return array_merge($this->_componentConfig, $this->_components);
 	}
 
 	/**
@@ -498,7 +498,7 @@ abstract class CModule extends CComponent
 	public function setComponents($components,$merge=true)
 	{
 		foreach($components as $id=>$component)
-			$this->setComponent($id,$component,$merge);
+		$this->setComponent($id,$component,$merge);
 	}
 
 	/**
@@ -510,7 +510,7 @@ abstract class CModule extends CComponent
 		if(is_array($config))
 		{
 			foreach($config as $key=>$value)
-				$this->$key=$value;
+			$this->$key=$value;
 		}
 	}
 
@@ -520,7 +520,7 @@ abstract class CModule extends CComponent
 	protected function preloadComponents()
 	{
 		foreach($this->preload as $id)
-			$this->getComponent($id);
+		$this->getComponent($id);
 	}
 
 	/**

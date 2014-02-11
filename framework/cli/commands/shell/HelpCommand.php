@@ -29,7 +29,7 @@ class HelpCommand extends CConsoleCommand
 		$runner=$this->getCommandRunner();
 		$commands=$runner->commands;
 		if(isset($args[0]))
-			$name=strtolower($args[0]);
+		$name=strtolower($args[0]);
 		if(!isset($args[0]) || !isset($commands[$name]))
 		{
 			echo <<<EOD
@@ -52,7 +52,7 @@ must extend from CConsoleCommand.
 EOD;
 		}
 		else
-			echo $runner->createCommand($name)->getHelp();
+		echo $runner->createCommand($name)->getHelp();
 		return 1;
 	}
 

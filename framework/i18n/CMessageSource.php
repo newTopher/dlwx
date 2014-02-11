@@ -80,11 +80,11 @@ abstract class CMessageSource extends CApplicationComponent
 	public function translate($category,$message,$language=null)
 	{
 		if($language===null)
-			$language=Yii::app()->getLanguage();
+		$language=Yii::app()->getLanguage();
 		if($this->forceTranslation || $language!==$this->getLanguage())
-			return $this->translateMessage($category,$message,$language);
+		return $this->translateMessage($category,$message,$language);
 		else
-			return $message;
+		return $message;
 	}
 
 	/**
@@ -100,9 +100,9 @@ abstract class CMessageSource extends CApplicationComponent
 	{
 		$key=$language.'.'.$category;
 		if(!isset($this->_messages[$key]))
-			$this->_messages[$key]=$this->loadMessages($category,$language);
+		$this->_messages[$key]=$this->loadMessages($category,$language);
 		if(isset($this->_messages[$key][$message]) && $this->_messages[$key][$message]!=='')
-			return $this->_messages[$key][$message];
+		return $this->_messages[$key][$message];
 		elseif($this->hasEventHandler('onMissingTranslation'))
 		{
 			$event=new CMissingTranslationEvent($this,$category,$message,$language);
@@ -110,7 +110,7 @@ abstract class CMessageSource extends CApplicationComponent
 			return $event->message;
 		}
 		else
-			return $message;
+		return $message;
 	}
 
 	/**
