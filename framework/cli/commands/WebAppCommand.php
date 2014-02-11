@@ -50,28 +50,28 @@ EOD;
 		if(isset($args[1]))
 		{
 			if($args[1]!='git' && $args[1]!='hg')
-				$this->usageError('Unsupported VCS specified. Currently only git and hg supported.');
+			$this->usageError('Unsupported VCS specified. Currently only git and hg supported.');
 			$vcs=$args[1];
 		}
 		if(!isset($args[0]))
-			$this->usageError('the Web application location is not specified.');
+		$this->usageError('the Web application location is not specified.');
 		$path=strtr($args[0],'/\\',DIRECTORY_SEPARATOR);
 		if(strpos($path,DIRECTORY_SEPARATOR)===false)
-			$path='.'.DIRECTORY_SEPARATOR.$path;
+		$path='.'.DIRECTORY_SEPARATOR.$path;
 		if(basename($path)=='..')
-			$path.=DIRECTORY_SEPARATOR.'.';
+		$path.=DIRECTORY_SEPARATOR.'.';
 		$dir=rtrim(realpath(dirname($path)),'\\/');
 		if($dir===false || !is_dir($dir))
-			$this->usageError("The directory '$path' is not valid. Please make sure the parent directory exists.");
+		$this->usageError("The directory '$path' is not valid. Please make sure the parent directory exists.");
 		if(basename($path)==='.')
-			$this->_rootPath=$path=$dir;
+		$this->_rootPath=$path=$dir;
 		else
-			$this->_rootPath=$path=$dir.DIRECTORY_SEPARATOR.basename($path);
+		$this->_rootPath=$path=$dir.DIRECTORY_SEPARATOR.basename($path);
 		if($this->confirm("Create a Web application under '$path'?"))
 		{
 			$sourceDir=$this->getSourceDir();
 			if($sourceDir===false)
-				die("\nUnable to locate the source directory.\n");
+			die("\nUnable to locate the source directory.\n");
 			$ignoreFiles=array();
 			$renameMap=array();
 			switch($vcs)
@@ -197,16 +197,16 @@ EOD;
 		for($i=0;$i<$n1 && $i<$n2;++$i)
 		{
 			if($segs1[$i]!==$segs2[$i])
-				break;
+			break;
 		}
 
 		if($i===0)
-			return "'".$path1."'";
+		return "'".$path1."'";
 		$up='';
 		for($j=$i;$j<$n2-1;++$j)
-			$up.='/..';
+		$up.='/..';
 		for(;$i<$n1-1;++$i)
-			$up.='/'.$segs1[$i];
+		$up.='/'.$segs1[$i];
 
 		return 'dirname(__FILE__).\''.$up.'/'.basename($path1).'\'';
 	}

@@ -21,35 +21,35 @@ class Controller extends CController
 	 */
 	public $breadcrumbs=array();
 
-    const TOKEN = 'yiyue_wx';
-    const TOKEN_URL = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET";
+	const TOKEN = 'yiyue_wx';
+	const TOKEN_URL = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET";
 
-    public function getToken(){
+	public function getToken(){
 
-    }
+	}
 
-    static public function valid(){
-        if(self::checkSignature()){
-            echo Yii::app()->request->getParam('echostr');
-        }else{
-            echo '错误';
-        }
-    }
+	static public function valid(){
+		if(self::checkSignature()){
+			echo Yii::app()->request->getParam('echostr');
+		}else{
+			echo '错误';
+		}
+	}
 
-    static function checkSignature(){
-        $signature = Yii::app()->request->getParam('signature');
-        $timestamp = Yii::app()->request->getParam('timestamp');
-        $nonce = Yii::app()->request->getParam('nonce');
-        $token = self::TOKEN;
-        $tmpArr = array($token, $timestamp, $nonce);
-        sort($tmpArr);
-        $tmpStr = implode( $tmpArr );
-        $tmpStr = sha1( $tmpStr );
-        if( $tmpStr == $signature ){
-            return true;
-        }else{
-            return false;
-        }
-    }
+	static function checkSignature(){
+		$signature = Yii::app()->request->getParam('signature');
+		$timestamp = Yii::app()->request->getParam('timestamp');
+		$nonce = Yii::app()->request->getParam('nonce');
+		$token = self::TOKEN;
+		$tmpArr = array($token, $timestamp, $nonce);
+		sort($tmpArr);
+		$tmpStr = implode( $tmpArr );
+		$tmpStr = sha1( $tmpStr );
+		if( $tmpStr == $signature ){
+			return true;
+		}else{
+			return false;
+		}
+	}
 
 }

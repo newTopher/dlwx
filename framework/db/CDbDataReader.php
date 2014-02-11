@@ -65,9 +65,9 @@ class CDbDataReader extends CComponent implements Iterator, Countable
 	public function bindColumn($column, &$value, $dataType=null)
 	{
 		if($dataType===null)
-			$this->_statement->bindColumn($column,$value);
+		$this->_statement->bindColumn($column,$value);
 		else
-			$this->_statement->bindColumn($column,$value,$dataType);
+		$this->_statement->bindColumn($column,$value,$dataType);
 	}
 
 	/**
@@ -130,7 +130,7 @@ class CDbDataReader extends CComponent implements Iterator, Countable
 	public function nextResult()
 	{
 		if(($result=$this->_statement->nextRowset())!==false)
-			$this->_index=-1;
+		$this->_index=-1;
 		return $result;
 	}
 
@@ -200,7 +200,7 @@ class CDbDataReader extends CComponent implements Iterator, Countable
 			$this->_index=0;
 		}
 		else
-			throw new CDbException(Yii::t('yii','CDbDataReader cannot rewind. It is a forward-only reader.'));
+		throw new CDbException(Yii::t('yii','CDbDataReader cannot rewind. It is a forward-only reader.'));
 	}
 
 	/**

@@ -53,7 +53,7 @@ class CMap extends CComponent implements IteratorAggregate,ArrayAccess,Countable
 	public function __construct($data=null,$readOnly=false)
 	{
 		if($data!==null)
-			$this->copyFrom($data);
+		$this->copyFrom($data);
 		$this->setReadOnly($readOnly);
 	}
 
@@ -119,9 +119,9 @@ class CMap extends CComponent implements IteratorAggregate,ArrayAccess,Countable
 	public function itemAt($key)
 	{
 		if(isset($this->_d[$key]))
-			return $this->_d[$key];
+		return $this->_d[$key];
 		else
-			return null;
+		return null;
 	}
 
 	/**
@@ -136,12 +136,12 @@ class CMap extends CComponent implements IteratorAggregate,ArrayAccess,Countable
 		if(!$this->_r)
 		{
 			if($key===null)
-				$this->_d[]=$value;
+			$this->_d[]=$value;
 			else
-				$this->_d[$key]=$value;
+			$this->_d[$key]=$value;
 		}
 		else
-			throw new CException(Yii::t('yii','The map is read only.'));
+		throw new CException(Yii::t('yii','The map is read only.'));
 	}
 
 	/**
@@ -168,7 +168,7 @@ class CMap extends CComponent implements IteratorAggregate,ArrayAccess,Countable
 			}
 		}
 		else
-			throw new CException(Yii::t('yii','The map is read only.'));
+		throw new CException(Yii::t('yii','The map is read only.'));
 	}
 
 	/**
@@ -177,7 +177,7 @@ class CMap extends CComponent implements IteratorAggregate,ArrayAccess,Countable
 	public function clear()
 	{
 		foreach(array_keys($this->_d) as $key)
-			$this->remove($key);
+		$this->remove($key);
 	}
 
 	/**
@@ -208,14 +208,14 @@ class CMap extends CComponent implements IteratorAggregate,ArrayAccess,Countable
 		if(is_array($data) || $data instanceof Traversable)
 		{
 			if($this->getCount()>0)
-				$this->clear();
+			$this->clear();
 			if($data instanceof CMap)
-				$data=$data->_d;
+			$data=$data->_d;
 			foreach($data as $key=>$value)
-				$this->add($key,$value);
+			$this->add($key,$value);
 		}
 		elseif($data!==null)
-			throw new CException(Yii::t('yii','Map data must be an array or an object implementing Traversable.'));
+		throw new CException(Yii::t('yii','Map data must be an array or an object implementing Traversable.'));
 	}
 
 	/**
@@ -240,27 +240,27 @@ class CMap extends CComponent implements IteratorAggregate,ArrayAccess,Countable
 		if(is_array($data) || $data instanceof Traversable)
 		{
 			if($data instanceof CMap)
-				$data=$data->_d;
+			$data=$data->_d;
 			if($recursive)
 			{
 				if($data instanceof Traversable)
 				{
 					$d=array();
 					foreach($data as $key=>$value)
-						$d[$key]=$value;
+					$d[$key]=$value;
 					$this->_d=self::mergeArray($this->_d,$d);
 				}
 				else
-					$this->_d=self::mergeArray($this->_d,$data);
+				$this->_d=self::mergeArray($this->_d,$data);
 			}
 			else
 			{
 				foreach($data as $key=>$value)
-					$this->add($key,$value);
+				$this->add($key,$value);
 			}
 		}
 		elseif($data!==null)
-			throw new CException(Yii::t('yii','Map data must be an array or an object implementing Traversable.'));
+		throw new CException(Yii::t('yii','Map data must be an array or an object implementing Traversable.'));
 	}
 
 	/**
@@ -287,11 +287,11 @@ class CMap extends CComponent implements IteratorAggregate,ArrayAccess,Countable
 			foreach($next as $k => $v)
 			{
 				if(is_integer($k))
-					isset($res[$k]) ? $res[]=$v : $res[$k]=$v;
+				isset($res[$k]) ? $res[]=$v : $res[$k]=$v;
 				elseif(is_array($v) && isset($res[$k]) && is_array($res[$k]))
-					$res[$k]=self::mergeArray($res[$k],$v);
+				$res[$k]=self::mergeArray($res[$k],$v);
 				else
-					$res[$k]=$v;
+				$res[$k]=$v;
 			}
 		}
 		return $res;

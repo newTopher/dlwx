@@ -72,48 +72,48 @@ EOD;
 	public function run($args)
 	{
 		if(!isset($args[0]))
-			$this->usageError('the configuration file is not specified.');
+		$this->usageError('the configuration file is not specified.');
 		if(!is_file($args[0]))
-			$this->usageError("the configuration file {$args[0]} does not exist.");
+		$this->usageError("the configuration file {$args[0]} does not exist.");
 
 		$config=require($args[0]);
 		$translator='Yii::t';
 		extract($config);
 
 		if(!isset($sourcePath,$messagePath,$languages))
-			$this->usageError('The configuration file must specify "sourcePath", "messagePath" and "languages".');
+		$this->usageError('The configuration file must specify "sourcePath", "messagePath" and "languages".');
 		if(!is_dir($sourcePath))
-			$this->usageError("The source path $sourcePath is not a valid directory.");
+		$this->usageError("The source path $sourcePath is not a valid directory.");
 		if(!is_dir($messagePath))
-			$this->usageError("The message path $messagePath is not a valid directory.");
+		$this->usageError("The message path $messagePath is not a valid directory.");
 		if(empty($languages))
-			$this->usageError("Languages cannot be empty.");
+		$this->usageError("Languages cannot be empty.");
 
 		if(!isset($overwrite))
-			$overwrite = false;
+		$overwrite = false;
 
 		if(!isset($removeOld))
-			$removeOld = false;
+		$removeOld = false;
 
 		if(!isset($sort))
-			$sort = false;
+		$sort = false;
 
 		$options=array();
 		if(isset($fileTypes))
-			$options['fileTypes']=$fileTypes;
+		$options['fileTypes']=$fileTypes;
 		if(isset($exclude))
-			$options['exclude']=$exclude;
+		$options['exclude']=$exclude;
 		$files=CFileHelper::findFiles(realpath($sourcePath),$options);
 
 		$messages=array();
 		foreach($files as $file)
-			$messages=array_merge_recursive($messages,$this->extractMessages($file,$translator));
+		$messages=array_merge_recursive($messages,$this->extractMessages($file,$translator));
 
 		foreach($languages as $language)
 		{
 			$dir=$messagePath.DIRECTORY_SEPARATOR.$language;
 			if(!is_dir($dir))
-				@mkdir($dir);
+			@mkdir($dir);
 			foreach($messages as $category=>$msgs)
 			{
 				$msgs=array_values(array_unique($msgs));
@@ -128,7 +128,7 @@ EOD;
 		$subject=file_get_contents($fileName);
 		$messages=array();
 		if(!is_array($translator))
-			$translator=array($translator);
+		$translator=array($translator);
 
 		foreach ($translator as $currentTranslator)
 		{
@@ -137,9 +137,9 @@ EOD;
 			for($i=0;$i<$n;++$i)
 			{
 				if(($pos=strpos($matches[$i][1],'.'))!==false)
-					$category=substr($matches[$i][1],$pos+1,-1);
+				$category=substr($matches[$i][1],$pos+1,-1);
 				else
-					$category=substr($matches[$i][1],1,-1);
+				$category=substr($matches[$i][1],1,-1);
 				$message=$matches[$i][2];
 				$messages[$category][]=eval("return $message;");  // use eval to eliminate quote escape
 			}
@@ -165,38 +165,38 @@ EOD;
 			foreach($messages as $message)
 			{
 				if(array_key_exists($message,$translated) && strlen($translated[$message])>0)
-					$merged[$message]=$translated[$message];
+				$merged[$message]=$translated[$message];
 				else
-					$untranslated[]=$message;
+				$untranslated[]=$message;
 			}
 			ksort($merged);
 			sort($untranslated);
 			$todo=array();
 			foreach($untranslated as $message)
-				$todo[$message]='';
+			$todo[$message]='';
 			ksort($translated);
 			foreach($translated as $message=>$translation)
 			{
 				if(!isset($merged[$message]) && !isset($todo[$message]) && !$removeOld)
 				{
 					if(substr($translation,0,2)==='@@' && substr($translation,-2)==='@@')
-						$todo[$message]=$translation;
+					$todo[$message]=$translation;
 					else
-						$todo[$message]='@@'.$translation.'@@';
+					$todo[$message]='@@'.$translation.'@@';
 				}
 			}
 			$merged=array_merge($todo,$merged);
 			if($sort)
-				ksort($merged);
+			ksort($merged);
 			if($overwrite === false)
-				$fileName.='.merged';
+			$fileName.='.merged';
 			echo "translation merged.\n";
 		}
 		else
 		{
 			$merged=array();
 			foreach($messages as $message)
-				$merged[$message]='';
+			$merged[$message]='';
 			ksort($merged);
 			echo "saved.\n";
 		}

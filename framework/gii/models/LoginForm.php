@@ -11,8 +11,8 @@ class LoginForm extends CFormModel
 	public function rules()
 	{
 		return array(
-			array('password', 'required'),
-			array('password', 'authenticate'),
+		array('password', 'required'),
+		array('password', 'authenticate'),
 		);
 	}
 
@@ -24,7 +24,7 @@ class LoginForm extends CFormModel
 	{
 		$this->_identity=new UserIdentity('yiier',$this->password);
 		if(!$this->_identity->authenticate())
-			$this->addError('password','Incorrect password.');
+		$this->addError('password','Incorrect password.');
 	}
 
 	/**
@@ -44,6 +44,6 @@ class LoginForm extends CFormModel
 			return true;
 		}
 		else
-			return false;
+		return false;
 	}
 }

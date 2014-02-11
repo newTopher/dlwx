@@ -31,7 +31,7 @@ class CConsoleCommandBehavior extends CBehavior
 		return array(
 		    'onBeforeAction' => 'beforeAction',
 		    'onAfterAction' => 'afterAction'
-		);
+		    );
 	}
 	/**
 	 * Responds to {@link CConsoleCommand::onBeforeAction} event.

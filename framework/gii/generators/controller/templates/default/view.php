@@ -7,7 +7,9 @@
  */
 ?>
 <?php echo "<?php\n"; ?>
-/* @var $this <?php echo $this->getControllerClass(); ?> */
+/* @var $this
+<?php echo $this->getControllerClass(); ?>
+*/
 
 <?php
 $label=ucwords(trim(strtolower(str_replace(array('-','_','.'),' ',preg_replace('/(?<![A-Z])[A-Z]/', ' \0', basename($this->getControllerID()))))));
@@ -30,7 +32,5 @@ else
 ?>
 <h1><?php echo '<?php'; ?> echo $this->id . '/' . $this->action->id; ?></h1>
 
-<p>
-	You may change the content of this page by modifying
-	the file <tt><?php echo '<?php'; ?> echo __FILE__; ?></tt>.
-</p>
+<p>You may change the content of this page by modifying the file <tt><?php echo '<?php'; ?>
+echo __FILE__; ?></tt>.</p>

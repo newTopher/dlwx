@@ -31,7 +31,7 @@ class CZendDataCache extends CCache
 	{
 		parent::init();
 		if(!function_exists('zend_shm_cache_store'))
-			throw new CException(Yii::t('yii','CZendDataCache requires PHP Zend Data Cache extension to be loaded.'));
+		throw new CException(Yii::t('yii','CZendDataCache requires PHP Zend Data Cache extension to be loaded.'));
 	}
 
 	/**

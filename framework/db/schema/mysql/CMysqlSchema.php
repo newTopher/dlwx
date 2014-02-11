@@ -87,19 +87,19 @@ class CMysqlSchema extends CDbSchema
 	public function resetSequence($table,$value=null)
 	{
 		if($table->sequenceName===null)
-			return;
+		return;
 		if($value!==null)
-			$value=(int)$value;
+		$value=(int)$value;
 		else
 		{
 			$value=(int)$this->getDbConnection()
-				->createCommand("SELECT MAX(`{$table->primaryKey}`) FROM {$table->rawName}")
-				->queryScalar();
+			->createCommand("SELECT MAX(`{$table->primaryKey}`) FROM {$table->rawName}")
+			->queryScalar();
 			$value++;
 		}
 		$this->getDbConnection()
-			->createCommand("ALTER TABLE {$table->rawName} AUTO_INCREMENT=$value")
-			->execute();
+		->createCommand("ALTER TABLE {$table->rawName} AUTO_INCREMENT=$value")
+		->execute();
 	}
 
 	/**
@@ -129,7 +129,7 @@ class CMysqlSchema extends CDbSchema
 			return $table;
 		}
 		else
-			return null;
+		return null;
 	}
 
 	/**
@@ -176,13 +176,13 @@ class CMysqlSchema extends CDbSchema
 			if($c->isPrimaryKey)
 			{
 				if($table->primaryKey===null)
-					$table->primaryKey=$c->name;
+				$table->primaryKey=$c->name;
 				elseif(is_string($table->primaryKey))
-					$table->primaryKey=array($table->primaryKey,$c->name);
+				$table->primaryKey=array($table->primaryKey,$c->name);
 				else
-					$table->primaryKey[]=$c->name;
+				$table->primaryKey[]=$c->name;
 				if($c->autoIncrement)
-					$table->sequenceName='';
+				$table->sequenceName='';
 			}
 		}
 		return true;
@@ -204,7 +204,7 @@ class CMysqlSchema extends CDbSchema
 		$c->init($column['Type'],$column['Default']);
 		$c->autoIncrement=strpos(strtolower($column['Extra']),'auto_increment')!==false;
 		if(isset($column['Comment']))
-			$c->comment=$column['Comment'];
+		$c->comment=$column['Comment'];
 
 		return $c;
 	}
@@ -232,7 +232,7 @@ class CMysqlSchema extends CDbSchema
 		foreach($row as $sql)
 		{
 			if(preg_match_all($regexp,$sql,$matches,PREG_SET_ORDER))
-				break;
+			break;
 		}
 		foreach($matches as $match)
 		{
@@ -242,7 +242,7 @@ class CMysqlSchema extends CDbSchema
 			{
 				$table->foreignKeys[$name]=array(str_replace(array('`','"'),'',$match[2]),$fks[$k]);
 				if(isset($table->columns[$name]))
-					$table->columns[$name]->isForeignKey=true;
+				$table->columns[$name]->isForeignKey=true;
 			}
 		}
 	}
@@ -256,10 +256,10 @@ class CMysqlSchema extends CDbSchema
 	protected function findTableNames($schema='')
 	{
 		if($schema==='')
-			return $this->getDbConnection()->createCommand('SHOW TABLES')->queryColumn();
+		return $this->getDbConnection()->createCommand('SHOW TABLES')->queryColumn();
 		$names=$this->getDbConnection()->createCommand('SHOW TABLES FROM '.$this->quoteTableName($schema))->queryColumn();
 		foreach($names as &$name)
-			$name=$schema.'.'.$name;
+		$name=$schema.'.'.$name;
 		return $names;
 	}
 
@@ -288,9 +288,9 @@ class CMysqlSchema extends CDbSchema
 		$db=$this->getDbConnection();
 		$row=$db->createCommand('SHOW CREATE TABLE '.$db->quoteTableName($table))->queryRow();
 		if($row===false)
-			throw new CDbException(Yii::t('yii','Unable to find "{column}" in table "{table}".',array('{column}'=>$name,'{table}'=>$table)));
+		throw new CDbException(Yii::t('yii','Unable to find "{column}" in table "{table}".',array('{column}'=>$name,'{table}'=>$table)));
 		if(isset($row['Create Table']))
-			$sql=$row['Create Table'];
+		$sql=$row['Create Table'];
 		else
 		{
 			$row=array_values($row);
@@ -303,15 +303,15 @@ class CMysqlSchema extends CDbSchema
 				if($c===$name)
 				{
 					return "ALTER TABLE ".$db->quoteTableName($table)
-						. " CHANGE ".$db->quoteColumnName($name)
-						. ' '.$db->quoteColumnName($newName).' '.$matches[2][$i];
+					. " CHANGE ".$db->quoteColumnName($name)
+					. ' '.$db->quoteColumnName($newName).' '.$matches[2][$i];
 				}
 			}
 		}
 
 		// try to give back a SQL anyway
 		return "ALTER TABLE ".$db->quoteTableName($table)
-			. " CHANGE ".$db->quoteColumnName($name).' '.$newName;
+		. " CHANGE ".$db->quoteColumnName($name).' '.$newName;
 	}
 
 	/**
@@ -324,7 +324,7 @@ class CMysqlSchema extends CDbSchema
 	public function dropForeignKey($name, $table)
 	{
 		return 'ALTER TABLE '.$this->quoteTableName($table)
-			.' DROP FOREIGN KEY '.$this->quoteColumnName($name);
+		.' DROP FOREIGN KEY '.$this->quoteColumnName($name);
 	}
 
 
@@ -340,7 +340,7 @@ class CMysqlSchema extends CDbSchema
 		return 'ALTER TABLE ' . $this->quoteTableName($table) . ' DROP PRIMARY KEY';
 
 	}
-	
+
 	/**
 	 * Builds a SQL statement for adding a primary key constraint to a table.
 	 * @param string $name not used in the MySQL syntax, the primary key is always called PRIMARY and is reserved.
@@ -352,10 +352,10 @@ class CMysqlSchema extends CDbSchema
 	public function addPrimaryKey($name,$table,$columns)
 	{
 		if(is_string($columns))
-			$columns=preg_split('/\s*,\s*/',$columns,-1,PREG_SPLIT_NO_EMPTY);
+		$columns=preg_split('/\s*,\s*/',$columns,-1,PREG_SPLIT_NO_EMPTY);
 		foreach($columns as $i=>$col)
-			$columns[$i]=$this->quoteColumnName($col);
+		$columns[$i]=$this->quoteColumnName($col);
 		return 'ALTER TABLE ' . $this->quoteTableName($table) . ' ADD PRIMARY KEY ('
-			. implode(', ', $columns). ' )';
+		. implode(', ', $columns). ' )';
 	}
 }

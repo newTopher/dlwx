@@ -33,7 +33,7 @@ class CEAcceleratorCache extends CCache
 	{
 		parent::init();
 		if(!function_exists('eaccelerator_get'))
-			throw new CException(Yii::t('yii','CEAcceleratorCache requires PHP eAccelerator extension to be loaded, enabled or compiled with the "--with-eaccelerator-shared-memory" option.'));
+		throw new CException(Yii::t('yii','CEAcceleratorCache requires PHP eAccelerator extension to be loaded, enabled or compiled with the "--with-eaccelerator-shared-memory" option.'));
 	}
 
 	/**
@@ -100,7 +100,7 @@ class CEAcceleratorCache extends CCache
 		// now, remove leftover cache-keys
 		$keys = eaccelerator_list_keys();
 		foreach($keys as $key)
-			$this->deleteValue(substr($key['name'], 1));
+		$this->deleteValue(substr($key['name'], 1));
 		return true;
 	}
 }

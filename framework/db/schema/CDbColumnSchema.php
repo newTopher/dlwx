@@ -86,7 +86,7 @@ class CDbColumnSchema extends CComponent
 		$this->extractType($dbType);
 		$this->extractLimit($dbType);
 		if($defaultValue!==null)
-			$this->extractDefault($defaultValue);
+		$this->extractDefault($defaultValue);
 	}
 
 	/**
@@ -96,13 +96,13 @@ class CDbColumnSchema extends CComponent
 	protected function extractType($dbType)
 	{
 		if(stripos($dbType,'int')!==false && stripos($dbType,'unsigned int')===false)
-			$this->type='integer';
+		$this->type='integer';
 		elseif(stripos($dbType,'bool')!==false)
-			$this->type='boolean';
+		$this->type='boolean';
 		elseif(preg_match('/(real|floa|doub)/i',$dbType))
-			$this->type='double';
+		$this->type='double';
 		else
-			$this->type='string';
+		$this->type='string';
 	}
 
 	/**
@@ -116,7 +116,7 @@ class CDbColumnSchema extends CComponent
 			$values=explode(',',$matches[1]);
 			$this->size=$this->precision=(int)$values[0];
 			if(isset($values[1]))
-				$this->scale=(int)$values[1];
+			$this->scale=(int)$values[1];
 		}
 	}
 
@@ -138,9 +138,9 @@ class CDbColumnSchema extends CComponent
 	public function typecast($value)
 	{
 		if(gettype($value)===$this->type || $value===null || $value instanceof CDbExpression)
-			return $value;
+		return $value;
 		if($value==='' && $this->allowNull)
-			return $this->type==='string' ? '' : null;
+		return $this->type==='string' ? '' : null;
 		switch($this->type)
 		{
 			case 'string': return (string)$value;

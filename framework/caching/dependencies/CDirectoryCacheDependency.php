@@ -66,9 +66,9 @@ class CDirectoryCacheDependency extends CCacheDependency
 	protected function generateDependentData()
 	{
 		if($this->directory!==null)
-			return $this->generateTimestamps($this->directory);
+		return $this->generateTimestamps($this->directory);
 		else
-			throw new CException(Yii::t('yii','CDirectoryCacheDependency.directory cannot be empty.'));
+		throw new CException(Yii::t('yii','CDirectoryCacheDependency.directory cannot be empty.'));
 	}
 
 	/**
@@ -82,25 +82,25 @@ class CDirectoryCacheDependency extends CCacheDependency
 	protected function generateTimestamps($directory,$level=0)
 	{
 		if(($dir=@opendir($directory))===false)
-			throw new CException(Yii::t('yii','"{path}" is not a valid directory.',
-				array('{path}'=>$directory)));
+		throw new CException(Yii::t('yii','"{path}" is not a valid directory.',
+		array('{path}'=>$directory)));
 		$timestamps=array();
 		while(($file=readdir($dir))!==false)
 		{
 			$path=$directory.DIRECTORY_SEPARATOR.$file;
 			if($file==='.' || $file==='..')
-				continue;
+			continue;
 			if($this->namePattern!==null && !preg_match($this->namePattern,$file))
-				continue;
+			continue;
 			if(is_file($path))
 			{
 				if($this->validateFile($path))
-					$timestamps[$path]=filemtime($path);
+				$timestamps[$path]=filemtime($path);
 			}
 			else
 			{
 				if(($this->recursiveLevel<0 || $level<$this->recursiveLevel) && $this->validateDirectory($path))
-					$timestamps=array_merge($timestamps, $this->generateTimestamps($path,$level+1));
+				$timestamps=array_merge($timestamps, $this->generateTimestamps($path,$level+1));
 			}
 		}
 		closedir($dir);

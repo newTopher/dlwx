@@ -46,9 +46,9 @@ class CAttributeCollection extends CMap
 	public function __get($name)
 	{
 		if($this->contains($name))
-			return $this->itemAt($name);
+		return $this->itemAt($name);
 		else
-			return parent::__get($name);
+		return parent::__get($name);
 	}
 
 	/**
@@ -74,9 +74,9 @@ class CAttributeCollection extends CMap
 	public function __isset($name)
 	{
 		if($this->contains($name))
-			return $this->itemAt($name)!==null;
+		return $this->itemAt($name)!==null;
 		else
-			return parent::__isset($name);
+		return parent::__isset($name);
 	}
 
 	/**
@@ -99,9 +99,9 @@ class CAttributeCollection extends CMap
 	public function itemAt($key)
 	{
 		if($this->caseSensitive)
-			return parent::itemAt($key);
+		return parent::itemAt($key);
 		else
-			return parent::itemAt(strtolower($key));
+		return parent::itemAt(strtolower($key));
 	}
 
 	/**
@@ -113,9 +113,9 @@ class CAttributeCollection extends CMap
 	public function add($key,$value)
 	{
 		if($this->caseSensitive)
-			parent::add($key,$value);
+		parent::add($key,$value);
 		else
-			parent::add(strtolower($key),$value);
+		parent::add(strtolower($key),$value);
 	}
 
 	/**
@@ -127,9 +127,9 @@ class CAttributeCollection extends CMap
 	public function remove($key)
 	{
 		if($this->caseSensitive)
-			return parent::remove($key);
+		return parent::remove($key);
 		else
-			return parent::remove(strtolower($key));
+		return parent::remove(strtolower($key));
 	}
 
 	/**
@@ -141,9 +141,9 @@ class CAttributeCollection extends CMap
 	public function contains($key)
 	{
 		if($this->caseSensitive)
-			return parent::contains($key);
+		return parent::contains($key);
 		else
-			return parent::contains(strtolower($key));
+		return parent::contains(strtolower($key));
 	}
 
 	/**
@@ -205,7 +205,7 @@ class CAttributeCollection extends CMap
 		{
 			$d=array();
 			foreach($data as $key=>$value)
-				$d[strtolower($key)]=$value;
+			$d[strtolower($key)]=$value;
 			return parent::mergeWith($d,$recursive);
 		}
 		parent::mergeWith($data,$recursive);

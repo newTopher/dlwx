@@ -93,7 +93,7 @@ class COciSchema extends CDbSchema
 		}
 
 		return $this->_defaultSchema;
-    }
+	}
 
 	/**
 	 * @param string $table table name with optional schema name prefix, uses default schema name prefix is not provided.
@@ -103,9 +103,9 @@ class COciSchema extends CDbSchema
 	{
 		$table = strtoupper($table);
 		if(count($parts= explode('.', str_replace('"','',$table))) > 1)
-			return array($parts[0], $parts[1]);
+		return array($parts[0], $parts[1]);
 		else
-			return array($this->getDefaultSchema(),$parts[0]);
+		return array($this->getDefaultSchema(),$parts[0]);
 	}
 
 	/**
@@ -119,7 +119,7 @@ class COciSchema extends CDbSchema
 		$this->resolveTableNames($table,$name);
 
 		if(!$this->findColumns($table))
-			return null;
+		return null;
 		$this->findConstraints($table);
 
 		return $table;
@@ -147,9 +147,9 @@ class COciSchema extends CDbSchema
 		$table->name=$tableName;
 		$table->schemaName=$schemaName;
 		if($schemaName===$this->getDefaultSchema())
-			$table->rawName=$this->quoteTableName($tableName);
+		$table->rawName=$this->quoteTableName($tableName);
 		else
-			$table->rawName=$this->quoteTableName($schemaName).'.'.$this->quoteTableName($tableName);
+		$table->rawName=$this->quoteTableName($schemaName).'.'.$this->quoteTableName($tableName);
 	}
 
 	/**
@@ -206,11 +206,11 @@ EOD;
 			if($c->isPrimaryKey)
 			{
 				if($table->primaryKey===null)
-					$table->primaryKey=$c->name;
+				$table->primaryKey=$c->name;
 				elseif(is_string($table->primaryKey))
-					$table->primaryKey=array($table->primaryKey,$c->name);
+				$table->primaryKey=array($table->primaryKey,$c->name);
 				else
-					$table->primaryKey[]=$c->name;
+				$table->primaryKey[]=$c->name;
 				$table->sequenceName='';
 				$c->autoIncrement=true;
 			}
@@ -264,7 +264,7 @@ EOD;
 				$name = $row["COLUMN_NAME"];
 				$table->foreignKeys[$name]=array($row["TABLE_REF"], $row["COLUMN_REF"]);
 				if(isset($table->columns[$name]))
-					$table->columns[$name]->isForeignKey=true;
+				$table->columns[$name]->isForeignKey=true;
 			}
 
 		}
@@ -300,9 +300,9 @@ EOD;
 		foreach($rows as $row)
 		{
 			if($schema===$this->getDefaultSchema() || $schema==='')
-				$names[]=$row['TABLE_NAME'];
+			$names[]=$row['TABLE_NAME'];
 			else
-				$names[]=$row['TABLE_SCHEMA'].'.'.$row['TABLE_NAME'];
+			$names[]=$row['TABLE_SCHEMA'].'.'.$row['TABLE_NAME'];
 		}
 		return $names;
 	}
@@ -333,8 +333,8 @@ EOD;
 	{
 		$type=$this->getColumnType($type);
 		$sql='ALTER TABLE ' . $this->quoteTableName($table) . ' MODIFY '
-			. $this->quoteColumnName($column) . ' '
-			. $this->getColumnType($type);
+		. $this->quoteColumnName($column) . ' '
+		. $this->getColumnType($type);
 		return $sql;
 	}
 
@@ -367,23 +367,23 @@ EOD;
 	public function resetSequence($table,$value=null)
 	{
 		if($table->sequenceName===null)
-			return;
+		return;
 
 		if($value!==null)
-			$value=(int)$value;
+		$value=(int)$value;
 		else
 		{
 			$value=(int)$this->getDbConnection()
-				->createCommand("SELECT MAX(\"{$table->primaryKey}\") FROM {$table->rawName}")
-				->queryScalar();
+			->createCommand("SELECT MAX(\"{$table->primaryKey}\") FROM {$table->rawName}")
+			->queryScalar();
 			$value++;
 		}
 		$this->getDbConnection()
-			->createCommand("DROP SEQUENCE \"{$table->name}_SEQ\"")
-			->execute();
+		->createCommand("DROP SEQUENCE \"{$table->name}_SEQ\"")
+		->execute();
 		$this->getDbConnection()
-			->createCommand("CREATE SEQUENCE \"{$table->name}_SEQ\" START WITH {$value} INCREMENT BY 1 NOMAXVALUE NOCACHE")
-			->execute();
+		->createCommand("CREATE SEQUENCE \"{$table->name}_SEQ\" START WITH {$value} INCREMENT BY 1 NOMAXVALUE NOCACHE")
+		->execute();
 	}
 
 	/**
@@ -395,17 +395,17 @@ EOD;
 	public function checkIntegrity($check=true,$schema='')
 	{
 		if($schema==='')
-			$schema=$this->getDefaultSchema();
+		$schema=$this->getDefaultSchema();
 		$mode=$check ? 'ENABLE' : 'DISABLE';
 		foreach($this->getTableNames($schema) as $table)
 		{
 			$constraints=$this->getDbConnection()
-				->createCommand("SELECT CONSTRAINT_NAME FROM USER_CONSTRAINTS WHERE TABLE_NAME=:t AND OWNER=:o")
-				->queryColumn(array(':t'=>$table,':o'=>$schema));
+			->createCommand("SELECT CONSTRAINT_NAME FROM USER_CONSTRAINTS WHERE TABLE_NAME=:t AND OWNER=:o")
+			->queryColumn(array(':t'=>$table,':o'=>$schema));
 			foreach($constraints as $constraint)
-				$this->getDbConnection()
-					->createCommand("ALTER TABLE \"{$schema}\".\"{$table}\" {$mode} CONSTRAINT \"{$constraint}\"")
-					->execute();
+			$this->getDbConnection()
+			->createCommand("ALTER TABLE \"{$schema}\".\"{$table}\" {$mode} CONSTRAINT \"{$constraint}\"")
+			->execute();
 		}
 	}
 }

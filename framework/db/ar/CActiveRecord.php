@@ -72,7 +72,7 @@ abstract class CActiveRecord extends CModel
 	public function __construct($scenario='insert')
 	{
 		if($scenario===null) // internally used by populateRecord() and model()
-			return;
+		return;
 
 		$this->setScenario($scenario);
 		$this->setIsNewRecord(true);
@@ -134,15 +134,15 @@ abstract class CActiveRecord extends CModel
 	public function __get($name)
 	{
 		if(isset($this->_attributes[$name]))
-			return $this->_attributes[$name];
+		return $this->_attributes[$name];
 		elseif(isset($this->getMetaData()->columns[$name]))
-			return null;
+		return null;
 		elseif(isset($this->_related[$name]))
-			return $this->_related[$name];
+		return $this->_related[$name];
 		elseif(isset($this->getMetaData()->relations[$name]))
-			return $this->getRelated($name);
+		return $this->getRelated($name);
 		else
-			return parent::__get($name);
+		return parent::__get($name);
 	}
 
 	/**
@@ -156,9 +156,9 @@ abstract class CActiveRecord extends CModel
 		if($this->setAttribute($name,$value)===false)
 		{
 			if(isset($this->getMetaData()->relations[$name]))
-				$this->_related[$name]=$value;
+			$this->_related[$name]=$value;
 			else
-				parent::__set($name,$value);
+			parent::__set($name,$value);
 		}
 	}
 
@@ -172,15 +172,15 @@ abstract class CActiveRecord extends CModel
 	public function __isset($name)
 	{
 		if(isset($this->_attributes[$name]))
-			return true;
+		return true;
 		elseif(isset($this->getMetaData()->columns[$name]))
-			return false;
+		return false;
 		elseif(isset($this->_related[$name]))
-			return true;
+		return true;
 		elseif(isset($this->getMetaData()->relations[$name]))
-			return $this->getRelated($name)!==null;
+		return $this->getRelated($name)!==null;
 		else
-			return parent::__isset($name);
+		return parent::__isset($name);
 	}
 
 	/**
@@ -192,11 +192,11 @@ abstract class CActiveRecord extends CModel
 	public function __unset($name)
 	{
 		if(isset($this->getMetaData()->columns[$name]))
-			unset($this->_attributes[$name]);
+		unset($this->_attributes[$name]);
 		elseif(isset($this->getMetaData()->relations[$name]))
-			unset($this->_related[$name]);
+		unset($this->_related[$name]);
 		else
-			parent::__unset($name);
+		parent::__unset($name);
 	}
 
 	/**
@@ -212,9 +212,9 @@ abstract class CActiveRecord extends CModel
 		if(isset($this->getMetaData()->relations[$name]))
 		{
 			if(empty($parameters))
-				return $this->getRelated($name,false);
+			return $this->getRelated($name,false);
 			else
-				return $this->getRelated($name,false,$parameters[0]);
+			return $this->getRelated($name,false,$parameters[0]);
 		}
 
 		$scopes=$this->scopes();
@@ -250,31 +250,31 @@ abstract class CActiveRecord extends CModel
 	public function getRelated($name,$refresh=false,$params=array())
 	{
 		if(!$refresh && $params===array() && (isset($this->_related[$name]) || array_key_exists($name,$this->_related)))
-			return $this->_related[$name];
+		return $this->_related[$name];
 
 		$md=$this->getMetaData();
 		if(!isset($md->relations[$name]))
-			throw new CDbException(Yii::t('yii','{class} does not have relation "{name}".',
-				array('{class}'=>get_class($this), '{name}'=>$name)));
+		throw new CDbException(Yii::t('yii','{class} does not have relation "{name}".',
+		array('{class}'=>get_class($this), '{name}'=>$name)));
 
 		Yii::trace('lazy loading '.get_class($this).'.'.$name,'system.db.ar.CActiveRecord');
 		$relation=$md->relations[$name];
 		if($this->getIsNewRecord() && !$refresh && ($relation instanceof CHasOneRelation || $relation instanceof CHasManyRelation))
-			return $relation instanceof CHasOneRelation ? null : array();
+		return $relation instanceof CHasOneRelation ? null : array();
 
 		if($params!==array()) // dynamic query
 		{
 			$exists=isset($this->_related[$name]) || array_key_exists($name,$this->_related);
 			if($exists)
-				$save=$this->_related[$name];
+			$save=$this->_related[$name];
 
 			if($params instanceof CDbCriteria)
-				$params = $params->toArray();
+			$params = $params->toArray();
 
 			$r=array($name=>$params);
 		}
 		else
-			$r=$name;
+		$r=$name;
 		unset($this->_related[$name]);
 
 		$finder=$this->getActiveFinder($r);
@@ -283,24 +283,24 @@ abstract class CActiveRecord extends CModel
 		if(!isset($this->_related[$name]))
 		{
 			if($relation instanceof CHasManyRelation)
-				$this->_related[$name]=array();
+			$this->_related[$name]=array();
 			elseif($relation instanceof CStatRelation)
-				$this->_related[$name]=$relation->defaultValue;
+			$this->_related[$name]=$relation->defaultValue;
 			else
-				$this->_related[$name]=null;
+			$this->_related[$name]=null;
 		}
 
 		if($params!==array())
 		{
 			$results=$this->_related[$name];
 			if($exists)
-				$this->_related[$name]=$save;
+			$this->_related[$name]=$save;
 			else
-				unset($this->_related[$name]);
+			unset($this->_related[$name]);
 			return $results;
 		}
 		else
-			return $this->_related[$name];
+		return $this->_related[$name];
 	}
 
 	/**
@@ -325,7 +325,7 @@ abstract class CActiveRecord extends CModel
 		if($this->_c===null)
 		{
 			if(($c=$this->defaultScope())!==array() || $createIfNull)
-				$this->_c=new CDbCriteria($c);
+			$this->_c=new CDbCriteria($c);
 		}
 		return $this->_c;
 	}
@@ -363,9 +363,9 @@ abstract class CActiveRecord extends CModel
 	public function resetScope($resetDefault=true)
 	{
 		if($resetDefault)
-			$this->_c=new CDbCriteria();
+		$this->_c=new CDbCriteria();
 		else
-			$this->_c=null;
+		$this->_c=null;
 
 		return $this;
 	}
@@ -389,7 +389,7 @@ abstract class CActiveRecord extends CModel
 	public static function model($className=__CLASS__)
 	{
 		if(isset(self::$_models[$className]))
-			return self::$_models[$className];
+		return self::$_models[$className];
 		else
 		{
 			$model=self::$_models[$className]=new $className(null);
@@ -424,7 +424,7 @@ abstract class CActiveRecord extends CModel
 	{
 		$className=get_class($this);
 		if(array_key_exists($className,self::$_md))
-			unset(self::$_md[$className]);
+		unset(self::$_md[$className]);
 	}
 
 	/**
@@ -598,7 +598,7 @@ abstract class CActiveRecord extends CModel
 	{
 		$labels=$this->attributeLabels();
 		if(isset($labels[$attribute]))
-			return $labels[$attribute];
+		return $labels[$attribute];
 		elseif(strpos($attribute,'.')!==false)
 		{
 			$segs=explode('.',$attribute);
@@ -608,14 +608,14 @@ abstract class CActiveRecord extends CModel
 			{
 				$relations=$model->getMetaData()->relations;
 				if(isset($relations[$seg]))
-					$model=CActiveRecord::model($relations[$seg]->className);
+				$model=CActiveRecord::model($relations[$seg]->className);
 				else
-					break;
+				break;
 			}
 			return $model->getAttributeLabel($name);
 		}
 		else
-			return $this->generateAttributeLabel($attribute);
+		return $this->generateAttributeLabel($attribute);
 	}
 
 	/**
@@ -628,14 +628,14 @@ abstract class CActiveRecord extends CModel
 	public function getDbConnection()
 	{
 		if(self::$db!==null)
-			return self::$db;
+		return self::$db;
 		else
 		{
 			self::$db=Yii::app()->getDb();
 			if(self::$db instanceof CDbConnection)
-				return self::$db;
+			return self::$db;
 			else
-				throw new CDbException(Yii::t('yii','Active Record requires a "db" CDbConnection application component.'));
+			throw new CDbException(Yii::t('yii','Active Record requires a "db" CDbConnection application component.'));
 		}
 	}
 
@@ -691,9 +691,9 @@ abstract class CActiveRecord extends CModel
 	public function getAttribute($name)
 	{
 		if(property_exists($this,$name))
-			return $this->$name;
+		return $this->$name;
 		elseif(isset($this->_attributes[$name]))
-			return $this->_attributes[$name];
+		return $this->_attributes[$name];
 	}
 
 	/**
@@ -707,11 +707,11 @@ abstract class CActiveRecord extends CModel
 	public function setAttribute($name,$value)
 	{
 		if(property_exists($this,$name))
-			$this->$name=$value;
+		$this->$name=$value;
 		elseif(isset($this->getMetaData()->columns[$name]))
-			$this->_attributes[$name]=$value;
+		$this->_attributes[$name]=$value;
 		else
-			return false;
+		return false;
 		return true;
 	}
 
@@ -729,17 +729,17 @@ abstract class CActiveRecord extends CModel
 		if($index!==false)
 		{
 			if(!isset($this->_related[$name]))
-				$this->_related[$name]=array();
+			$this->_related[$name]=array();
 			if($record instanceof CActiveRecord)
 			{
 				if($index===true)
-					$this->_related[$name][]=$record;
+				$this->_related[$name][]=$record;
 				else
-					$this->_related[$name][$index]=$record;
+				$this->_related[$name][$index]=$record;
 			}
 		}
 		elseif(!isset($this->_related[$name]))
-			$this->_related[$name]=$record;
+		$this->_related[$name]=$record;
 	}
 
 	/**
@@ -757,9 +757,9 @@ abstract class CActiveRecord extends CModel
 		foreach($this->getMetaData()->columns as $name=>$column)
 		{
 			if(property_exists($this,$name))
-				$attributes[$name]=$this->$name;
+			$attributes[$name]=$this->$name;
 			elseif($names===true && !isset($attributes[$name]))
-				$attributes[$name]=null;
+			$attributes[$name]=null;
 		}
 		if(is_array($names))
 		{
@@ -767,14 +767,14 @@ abstract class CActiveRecord extends CModel
 			foreach($names as $name)
 			{
 				if(property_exists($this,$name))
-					$attrs[$name]=$this->$name;
+				$attrs[$name]=$this->$name;
 				else
-					$attrs[$name]=isset($attributes[$name])?$attributes[$name]:null;
+				$attrs[$name]=isset($attributes[$name])?$attributes[$name]:null;
 			}
 			return $attrs;
 		}
 		else
-			return $attributes;
+		return $attributes;
 	}
 
 	/**
@@ -803,9 +803,9 @@ abstract class CActiveRecord extends CModel
 	public function save($runValidation=true,$attributes=null)
 	{
 		if(!$runValidation || $this->validate($attributes))
-			return $this->getIsNewRecord() ? $this->insert($attributes) : $this->update($attributes);
+		return $this->getIsNewRecord() ? $this->insert($attributes) : $this->update($attributes);
 		else
-			return false;
+		return false;
 	}
 
 	/**
@@ -943,7 +943,7 @@ abstract class CActiveRecord extends CModel
 			return $event->isValid;
 		}
 		else
-			return true;
+		return true;
 	}
 
 	/**
@@ -955,7 +955,7 @@ abstract class CActiveRecord extends CModel
 	protected function afterSave()
 	{
 		if($this->hasEventHandler('onAfterSave'))
-			$this->onAfterSave(new CEvent($this));
+		$this->onAfterSave(new CEvent($this));
 	}
 
 	/**
@@ -974,7 +974,7 @@ abstract class CActiveRecord extends CModel
 			return $event->isValid;
 		}
 		else
-			return true;
+		return true;
 	}
 
 	/**
@@ -986,7 +986,7 @@ abstract class CActiveRecord extends CModel
 	protected function afterDelete()
 	{
 		if($this->hasEventHandler('onAfterDelete'))
-			$this->onAfterDelete(new CEvent($this));
+		$this->onAfterDelete(new CEvent($this));
 	}
 
 	/**
@@ -1019,7 +1019,7 @@ abstract class CActiveRecord extends CModel
 	protected function beforeCount()
 	{
 		if($this->hasEventHandler('onBeforeCount'))
-			$this->onBeforeCount(new CEvent($this));
+		$this->onBeforeCount(new CEvent($this));
 	}
 
 	/**
@@ -1031,7 +1031,7 @@ abstract class CActiveRecord extends CModel
 	protected function afterFind()
 	{
 		if($this->hasEventHandler('onAfterFind'))
-			$this->onAfterFind(new CEvent($this));
+		$this->onAfterFind(new CEvent($this));
 	}
 
 	/**
@@ -1067,7 +1067,7 @@ abstract class CActiveRecord extends CModel
 	public function insert($attributes=null)
 	{
 		if(!$this->getIsNewRecord())
-			throw new CDbException(Yii::t('yii','The active record cannot be inserted to database because it is not new.'));
+		throw new CDbException(Yii::t('yii','The active record cannot be inserted to database because it is not new.'));
 		if($this->beforeSave())
 		{
 			Yii::trace(get_class($this).'.insert()','system.db.ar.CActiveRecord');
@@ -1080,7 +1080,7 @@ abstract class CActiveRecord extends CModel
 				if($table->sequenceName!==null)
 				{
 					if(is_string($primaryKey) && $this->$primaryKey===null)
-						$this->$primaryKey=$builder->getLastInsertID($table);
+					$this->$primaryKey=$builder->getLastInsertID($table);
 					elseif(is_array($primaryKey))
 					{
 						foreach($primaryKey as $pk)
@@ -1115,19 +1115,19 @@ abstract class CActiveRecord extends CModel
 	public function update($attributes=null)
 	{
 		if($this->getIsNewRecord())
-			throw new CDbException(Yii::t('yii','The active record cannot be updated because it is new.'));
+		throw new CDbException(Yii::t('yii','The active record cannot be updated because it is new.'));
 		if($this->beforeSave())
 		{
 			Yii::trace(get_class($this).'.update()','system.db.ar.CActiveRecord');
 			if($this->_pk===null)
-				$this->_pk=$this->getPrimaryKey();
+			$this->_pk=$this->getPrimaryKey();
 			$this->updateByPk($this->getOldPrimaryKey(),$this->getAttributes($attributes));
 			$this->_pk=$this->getPrimaryKey();
 			$this->afterSave();
 			return true;
 		}
 		else
-			return false;
+		return false;
 	}
 
 	/**
@@ -1157,22 +1157,22 @@ abstract class CActiveRecord extends CModel
 			foreach($attributes as $name=>$value)
 			{
 				if(is_integer($name))
-					$values[$value]=$this->$value;
+				$values[$value]=$this->$value;
 				else
-					$values[$name]=$this->$name=$value;
+				$values[$name]=$this->$name=$value;
 			}
 			if($this->_pk===null)
-				$this->_pk=$this->getPrimaryKey();
+			$this->_pk=$this->getPrimaryKey();
 			if($this->updateByPk($this->getOldPrimaryKey(),$values)>0)
 			{
 				$this->_pk=$this->getPrimaryKey();
 				return true;
 			}
 			else
-				return false;
+			return false;
 		}
 		else
-			throw new CDbException(Yii::t('yii','The active record cannot be updated because it is new.'));
+		throw new CDbException(Yii::t('yii','The active record cannot be updated because it is new.'));
 	}
 
 	/**
@@ -1200,11 +1200,11 @@ abstract class CActiveRecord extends CModel
 		if($command->execute())
 		{
 			foreach($counters as $name=>$value)
-				$this->$name=$this->$name+$value;
+			$this->$name=$this->$name+$value;
 			return true;
 		}
 		else
-			return false;
+		return false;
 	}
 
 	/**
@@ -1224,10 +1224,10 @@ abstract class CActiveRecord extends CModel
 				return $result;
 			}
 			else
-				return false;
+			return false;
 		}
 		else
-			throw new CDbException(Yii::t('yii','The active record cannot be deleted because it is new.'));
+		throw new CDbException(Yii::t('yii','The active record cannot be deleted because it is new.'));
 	}
 
 	/**
@@ -1244,14 +1244,14 @@ abstract class CActiveRecord extends CModel
 			foreach($this->getMetaData()->columns as $name=>$column)
 			{
 				if(property_exists($this,$name))
-					$this->$name=$record->$name;
+				$this->$name=$record->$name;
 				else
-					$this->_attributes[$name]=$record->$name;
+				$this->_attributes[$name]=$record->$name;
 			}
 			return true;
 		}
 		else
-			return false;
+		return false;
 	}
 
 	/**
@@ -1274,16 +1274,16 @@ abstract class CActiveRecord extends CModel
 	{
 		$table=$this->getMetaData()->tableSchema;
 		if(is_string($table->primaryKey))
-			return $this->{$table->primaryKey};
+		return $this->{$table->primaryKey};
 		elseif(is_array($table->primaryKey))
 		{
 			$values=array();
 			foreach($table->primaryKey as $name)
-				$values[$name]=$this->$name;
+			$values[$name]=$this->$name;
 			return $values;
 		}
 		else
-			return null;
+		return null;
 	}
 
 	/**
@@ -1298,11 +1298,11 @@ abstract class CActiveRecord extends CModel
 		$this->_pk=$this->getPrimaryKey();
 		$table=$this->getMetaData()->tableSchema;
 		if(is_string($table->primaryKey))
-			$this->{$table->primaryKey}=$value;
+		$this->{$table->primaryKey}=$value;
 		elseif(is_array($table->primaryKey))
 		{
 			foreach($table->primaryKey as $name)
-				$this->$name=$value[$name];
+			$this->$name=$value[$name];
 		}
 	}
 
@@ -1346,7 +1346,7 @@ abstract class CActiveRecord extends CModel
 		if(empty($criteria->with))
 		{
 			if(!$all)
-				$criteria->limit=1;
+			$criteria->limit=1;
 			$command=$this->getCommandBuilder()->createFindCommand($this->getTableSchema(),$criteria,$this->getTableAlias());
 			return $all ? $this->populateRecords($command->queryAll(), true, $criteria->index) : $this->populateRecord($command->queryRow());
 		}
@@ -1422,9 +1422,9 @@ abstract class CActiveRecord extends CModel
 	public function getTableAlias($quote=false, $checkScopes=true)
 	{
 		if($checkScopes && ($criteria=$this->getDbCriteria(false))!==null && $criteria->alias!='')
-			$alias=$criteria->alias;
+		$alias=$criteria->alias;
 		else
-			$alias=$this->_alias;
+		$alias=$this->_alias;
 		return $quote ? $this->getDbConnection()->getSchema()->quoteTableName($alias) : $alias;
 	}
 
@@ -1598,7 +1598,7 @@ abstract class CActiveRecord extends CModel
 		$this->applyScopes($criteria);
 
 		if(empty($criteria->with))
-			return $builder->createCountCommand($this->getTableSchema(),$criteria)->queryScalar();
+		return $builder->createCountCommand($this->getTableSchema(),$criteria)->queryScalar();
 		else
 		{
 			$finder=$this->getActiveFinder($criteria->with);
@@ -1626,7 +1626,7 @@ abstract class CActiveRecord extends CModel
 		$this->applyScopes($criteria);
 
 		if(empty($criteria->with))
-			return $builder->createCountCommand($this->getTableSchema(),$criteria)->queryScalar();
+		return $builder->createCountCommand($this->getTableSchema(),$criteria)->queryScalar();
 		else
 		{
 			$finder=$this->getActiveFinder($criteria->with);
@@ -1667,7 +1667,7 @@ abstract class CActiveRecord extends CModel
 		$this->applyScopes($criteria);
 
 		if(empty($criteria->with))
-			return $builder->createFindCommand($table,$criteria,$this->getTableAlias(false, false))->queryRow()!==false;
+		return $builder->createFindCommand($table,$criteria,$this->getTableAlias(false, false))->queryRow()!==false;
 		else
 		{
 			$criteria->select='*';
@@ -1708,9 +1708,9 @@ abstract class CActiveRecord extends CModel
 		{
 			$with=func_get_args();
 			if(is_array($with[0]))  // the parameter is given as an array
-				$with=$with[0];
+			$with=$with[0];
 			if(!empty($with))
-				$this->getDbCriteria()->mergeWith(array('with'=>$with));
+			$this->getDbCriteria()->mergeWith(array('with'=>$with));
 		}
 		return $this;
 	}
@@ -1856,18 +1856,18 @@ abstract class CActiveRecord extends CModel
 			foreach($attributes as $name=>$value)
 			{
 				if(property_exists($record,$name))
-					$record->$name=$value;
+				$record->$name=$value;
 				elseif(isset($md->columns[$name]))
-					$record->_attributes[$name]=$value;
+				$record->_attributes[$name]=$value;
 			}
 			$record->_pk=$record->getPrimaryKey();
 			$record->attachBehaviors($record->behaviors());
 			if($callAfterFind)
-				$record->afterFind();
+			$record->afterFind();
 			return $record;
 		}
 		else
-			return null;
+		return null;
 	}
 
 	/**
@@ -1887,9 +1887,9 @@ abstract class CActiveRecord extends CModel
 			if(($record=$this->populateRecord($attributes,$callAfterFind))!==null)
 			{
 				if($index===null)
-					$records[]=$record;
+				$records[]=$record;
 				else
-					$records[$record->$index]=$record;
+				$records[$record->$index]=$record;
 			}
 		}
 		return $records;
@@ -1995,7 +1995,7 @@ class CBaseActiveRelation extends CComponent
 		$this->className=$className;
 		$this->foreignKey=$foreignKey;
 		foreach($options as $name=>$value)
-			$this->$name=$value;
+		$this->$name=$value;
 	}
 
 	/**
@@ -2006,11 +2006,11 @@ class CBaseActiveRelation extends CComponent
 	public function mergeWith($criteria,$fromScope=false)
 	{
 		if($criteria instanceof CDbCriteria)
-			$criteria=$criteria->toArray();
+		$criteria=$criteria->toArray();
 		if(isset($criteria['select']) && $this->select!==$criteria['select'])
 		{
 			if($this->select==='*')
-				$this->select=$criteria['select'];
+			$this->select=$criteria['select'];
 			elseif($criteria['select']!=='*')
 			{
 				$select1=is_string($this->select)?preg_split('/\s*,\s*/',trim($this->select),-1,PREG_SPLIT_NO_EMPTY):$this->select;
@@ -2022,44 +2022,44 @@ class CBaseActiveRelation extends CComponent
 		if(isset($criteria['condition']) && $this->condition!==$criteria['condition'])
 		{
 			if($this->condition==='')
-				$this->condition=$criteria['condition'];
+			$this->condition=$criteria['condition'];
 			elseif($criteria['condition']!=='')
-				$this->condition="({$this->condition}) AND ({$criteria['condition']})";
+			$this->condition="({$this->condition}) AND ({$criteria['condition']})";
 		}
 
 		if(isset($criteria['params']) && $this->params!==$criteria['params'])
-			$this->params=array_merge($this->params,$criteria['params']);
+		$this->params=array_merge($this->params,$criteria['params']);
 
 		if(isset($criteria['order']) && $this->order!==$criteria['order'])
 		{
 			if($this->order==='')
-				$this->order=$criteria['order'];
+			$this->order=$criteria['order'];
 			elseif($criteria['order']!=='')
-				$this->order=$criteria['order'].', '.$this->order;
+			$this->order=$criteria['order'].', '.$this->order;
 		}
 
 		if(isset($criteria['group']) && $this->group!==$criteria['group'])
 		{
 			if($this->group==='')
-				$this->group=$criteria['group'];
+			$this->group=$criteria['group'];
 			elseif($criteria['group']!=='')
-				$this->group.=', '.$criteria['group'];
+			$this->group.=', '.$criteria['group'];
 		}
 
 		if(isset($criteria['join']) && $this->join!==$criteria['join'])
 		{
 			if($this->join==='')
-				$this->join=$criteria['join'];
+			$this->join=$criteria['join'];
 			elseif($criteria['join']!=='')
-				$this->join.=' '.$criteria['join'];
+			$this->join.=' '.$criteria['join'];
 		}
 
 		if(isset($criteria['having']) && $this->having!==$criteria['having'])
 		{
 			if($this->having==='')
-				$this->having=$criteria['having'];
+			$this->having=$criteria['having'];
 			elseif($criteria['having']!=='')
-				$this->having="({$this->having}) AND ({$criteria['having']})";
+			$this->having="({$this->having}) AND ({$criteria['having']})";
 		}
 	}
 }
@@ -2091,11 +2091,11 @@ class CStatRelation extends CBaseActiveRelation
 	public function mergeWith($criteria,$fromScope=false)
 	{
 		if($criteria instanceof CDbCriteria)
-			$criteria=$criteria->toArray();
+		$criteria=$criteria->toArray();
 		parent::mergeWith($criteria,$fromScope);
 
 		if(isset($criteria['defaultValue']))
-			$this->defaultValue=$criteria['defaultValue'];
+		$this->defaultValue=$criteria['defaultValue'];
 	}
 }
 
@@ -2145,7 +2145,7 @@ class CActiveRelation extends CBaseActiveRelation
 	 * </ul>
 	 * @since 1.1.9
 	 */
-	 public $scopes;
+	public $scopes;
 	/**
 	 * @var string the name of the relation that should be used as the bridge to this relation.
 	 * Defaults to null, meaning don't use any bridge.
@@ -2161,15 +2161,15 @@ class CActiveRelation extends CBaseActiveRelation
 	public function mergeWith($criteria,$fromScope=false)
 	{
 		if($criteria instanceof CDbCriteria)
-			$criteria=$criteria->toArray();
+		$criteria=$criteria->toArray();
 		if($fromScope)
 		{
 			if(isset($criteria['condition']) && $this->on!==$criteria['condition'])
 			{
 				if($this->on==='')
-					$this->on=$criteria['condition'];
+				$this->on=$criteria['condition'];
 				elseif($criteria['condition']!=='')
-					$this->on="({$this->on}) AND ({$criteria['condition']})";
+				$this->on="({$this->on}) AND ({$criteria['condition']})";
 			}
 			unset($criteria['condition']);
 		}
@@ -2177,24 +2177,24 @@ class CActiveRelation extends CBaseActiveRelation
 		parent::mergeWith($criteria);
 
 		if(isset($criteria['joinType']))
-			$this->joinType=$criteria['joinType'];
+		$this->joinType=$criteria['joinType'];
 
 		if(isset($criteria['on']) && $this->on!==$criteria['on'])
 		{
 			if($this->on==='')
-				$this->on=$criteria['on'];
+			$this->on=$criteria['on'];
 			elseif($criteria['on']!=='')
-				$this->on="({$this->on}) AND ({$criteria['on']})";
+			$this->on="({$this->on}) AND ({$criteria['on']})";
 		}
 
 		if(isset($criteria['with']))
-			$this->with=$criteria['with'];
+		$this->with=$criteria['with'];
 
 		if(isset($criteria['alias']))
-			$this->alias=$criteria['alias'];
+		$this->alias=$criteria['alias'];
 
 		if(isset($criteria['together']))
-			$this->together=$criteria['together'];
+		$this->together=$criteria['together'];
 	}
 }
 
@@ -2251,16 +2251,16 @@ class CHasManyRelation extends CActiveRelation
 	public function mergeWith($criteria,$fromScope=false)
 	{
 		if($criteria instanceof CDbCriteria)
-			$criteria=$criteria->toArray();
+		$criteria=$criteria->toArray();
 		parent::mergeWith($criteria,$fromScope);
 		if(isset($criteria['limit']) && $criteria['limit']>0)
-			$this->limit=$criteria['limit'];
+		$this->limit=$criteria['limit'];
 
 		if(isset($criteria['offset']) && $criteria['offset']>=0)
-			$this->offset=$criteria['offset'];
+		$this->offset=$criteria['offset'];
 
 		if(isset($criteria['index']))
-			$this->index=$criteria['index'];
+		$this->index=$criteria['index'];
 	}
 }
 
@@ -2289,7 +2289,7 @@ class CManyManyRelation extends CHasManyRelation
 	public function getJunctionTableName()
 	{
 		if ($this->_junctionTableName===null)
-			$this->initJunctionData();
+		$this->initJunctionData();
 		return $this->_junctionTableName;
 	}
 
@@ -2300,7 +2300,7 @@ class CManyManyRelation extends CHasManyRelation
 	public function getJunctionForeignKeys()
 	{
 		if ($this->_junctionForeignKeys===null)
-			$this->initJunctionData();
+		$this->initJunctionData();
 		return $this->_junctionForeignKeys;
 	}
 
@@ -2312,8 +2312,8 @@ class CManyManyRelation extends CHasManyRelation
 	private function initJunctionData()
 	{
 		if(!preg_match('/^\s*(.*?)\((.*)\)\s*$/',$this->foreignKey,$matches))
-			throw new CDbException(Yii::t('yii','The relation "{relation}" in active record class "{class}" is specified with an invalid foreign key. The format of the foreign key must be "joinTable(fk1,fk2,...)".',
-				array('{class}'=>$this->className,'{relation}'=>$this->name)));
+		throw new CDbException(Yii::t('yii','The relation "{relation}" in active record class "{class}" is specified with an invalid foreign key. The format of the foreign key must be "joinTable(fk1,fk2,...)".',
+		array('{class}'=>$this->className,'{relation}'=>$this->name)));
 		$this->_junctionTableName=$matches[1];
 		$this->_junctionForeignKeys=preg_split('/\s*,\s*/',$matches[2],-1,PREG_SPLIT_NO_EMPTY);
 	}
@@ -2359,19 +2359,19 @@ class CActiveRecordMetaData
 
 		$tableName=$model->tableName();
 		if(($table=$model->getDbConnection()->getSchema()->getTable($tableName))===null)
-			throw new CDbException(Yii::t('yii','The table "{table}" for active record class "{class}" cannot be found in the database.',
-				array('{class}'=>$this->_modelClassName,'{table}'=>$tableName)));
+		throw new CDbException(Yii::t('yii','The table "{table}" for active record class "{class}" cannot be found in the database.',
+		array('{class}'=>$this->_modelClassName,'{table}'=>$tableName)));
 		if($table->primaryKey===null)
 		{
 			$table->primaryKey=$model->primaryKey();
 			if(is_string($table->primaryKey) && isset($table->columns[$table->primaryKey]))
-				$table->columns[$table->primaryKey]->isPrimaryKey=true;
+			$table->columns[$table->primaryKey]->isPrimaryKey=true;
 			elseif(is_array($table->primaryKey))
 			{
 				foreach($table->primaryKey as $name)
 				{
 					if(isset($table->columns[$name]))
-						$table->columns[$name]->isPrimaryKey=true;
+					$table->columns[$name]->isPrimaryKey=true;
 				}
 			}
 		}
@@ -2381,7 +2381,7 @@ class CActiveRecordMetaData
 		foreach($table->columns as $name=>$column)
 		{
 			if(!$column->isPrimaryKey && $column->defaultValue!==null)
-				$this->attributeDefaults[$name]=$column->defaultValue;
+			$this->attributeDefaults[$name]=$column->defaultValue;
 		}
 
 		foreach($model->relations() as $name=>$config)
@@ -2405,9 +2405,9 @@ class CActiveRecordMetaData
 	public function addRelation($name,$config)
 	{
 		if(isset($config[0],$config[1],$config[2]))  // relation class, AR class, FK
-			$this->relations[$name]=new $config[0]($name,$config[1],$config[2],array_slice($config,3));
+		$this->relations[$name]=new $config[0]($name,$config[1],$config[2],array_slice($config,3));
 		else
-			throw new CDbException(Yii::t('yii','Active record "{class}" has an invalid configuration for relation "{relation}". It must specify the relation type, the related active record class and the foreign key.', array('{class}'=>$this->_modelClassName,'{relation}'=>$name)));
+		throw new CDbException(Yii::t('yii','Active record "{class}" has an invalid configuration for relation "{relation}". It must specify the relation type, the related active record class and the foreign key.', array('{class}'=>$this->_modelClassName,'{relation}'=>$name)));
 	}
 
 	/**

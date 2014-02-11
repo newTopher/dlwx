@@ -30,10 +30,10 @@ class CSqliteCommandBuilder extends CDbCommandBuilder
 	{
 		$keyNames=array();
 		foreach(array_keys($values[0]) as $name)
-			$keyNames[]=$prefix.$table->columns[$name]->rawName;
+		$keyNames[]=$prefix.$table->columns[$name]->rawName;
 		$vs=array();
 		foreach($values as $value)
-			$vs[]=implode("||','||",$value);
+		$vs[]=implode("||','||",$value);
 		return implode("||','||",$keyNames).' IN ('.implode(', ',$vs).')';
 	}
 

@@ -61,11 +61,11 @@ class CConsoleCommandRunner extends CComponent
 			array_shift($args);
 		}
 		else
-			$name='help';
+		$name='help';
 
 		$oldCommand=$this->_command;
 		if(($command=$this->createCommand($name))===null)
-			$command=$this->createCommand('help');
+		$command=$this->createCommand('help');
 		$this->_command=$command;
 		$command->init();
 		$exitCode=$command->run($args);
@@ -108,13 +108,13 @@ class CConsoleCommandRunner extends CComponent
 	public function findCommands($path)
 	{
 		if(($dir=@opendir($path))===false)
-			return array();
+		return array();
 		$commands=array();
 		while(($name=readdir($dir))!==false)
 		{
 			$file=$path.DIRECTORY_SEPARATOR.$name;
 			if(!strcasecmp(substr($name,-11),'Command.php') && is_file($file))
-				$commands[strtolower(substr($name,0,-11))]=$file;
+			$commands[strtolower(substr($name,0,-11))]=$file;
 		}
 		closedir($dir);
 		return $commands;
@@ -132,7 +132,7 @@ class CConsoleCommandRunner extends CComponent
 			foreach($commands as $name=>$file)
 			{
 				if(!isset($this->commands[$name]))
-					$this->commands[$name]=$file;
+				$this->commands[$name]=$file;
 			}
 		}
 	}
@@ -147,12 +147,12 @@ class CConsoleCommandRunner extends CComponent
 
 		$command=null;
 		if(isset($this->commands[$name]))
-			$command=$this->commands[$name];
+		$command=$this->commands[$name];
 		else
 		{
 			$commands=array_change_key_case($this->commands);
 			if(isset($commands[$name]))
-				$command=$commands[$name];
+			$command=$commands[$name];
 		}
 
 		if($command!==null)
@@ -163,18 +163,18 @@ class CConsoleCommandRunner extends CComponent
 				{
 					$className=substr(basename($command),0,-4);
 					if(!class_exists($className,false))
-						require_once($command);
+					require_once($command);
 				}
 				else // an alias
-					$className=Yii::import($command);
+				$className=Yii::import($command);
 				return new $className($name,$this);
 			}
 			else // an array configuration
-				return Yii::createComponent($command,$name,$this);
+			return Yii::createComponent($command,$name,$this);
 		}
 		elseif($name==='help')
-			return new CHelpCommand('help',$this);
+		return new CHelpCommand('help',$this);
 		else
-			return null;
+		return null;
 	}
 }

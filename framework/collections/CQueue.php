@@ -51,7 +51,7 @@ class CQueue extends CComponent implements IteratorAggregate,Countable
 	public function __construct($data=null)
 	{
 		if($data!==null)
-			$this->copyFrom($data);
+		$this->copyFrom($data);
 	}
 
 	/**
@@ -80,7 +80,7 @@ class CQueue extends CComponent implements IteratorAggregate,Countable
 			}
 		}
 		elseif($data!==null)
-			throw new CException(Yii::t('yii','Queue data must be an array or an object implementing Traversable.'));
+		throw new CException(Yii::t('yii','Queue data must be an array or an object implementing Traversable.'));
 	}
 
 	/**
@@ -109,9 +109,9 @@ class CQueue extends CComponent implements IteratorAggregate,Countable
 	public function peek()
 	{
 		if($this->_c===0)
-			throw new CException(Yii::t('yii','The queue is empty.'));
+		throw new CException(Yii::t('yii','The queue is empty.'));
 		else
-			return $this->_d[0];
+		return $this->_d[0];
 	}
 
 	/**
@@ -122,7 +122,7 @@ class CQueue extends CComponent implements IteratorAggregate,Countable
 	public function dequeue()
 	{
 		if($this->_c===0)
-			throw new CException(Yii::t('yii','The queue is empty.'));
+		throw new CException(Yii::t('yii','The queue is empty.'));
 		else
 		{
 			--$this->_c;

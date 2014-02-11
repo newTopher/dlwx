@@ -74,7 +74,7 @@ class CDbCacheDependency extends CCacheDependency
 			if(is_array($this->params))
 			{
 				foreach($this->params as $name=>$value)
-					$command->bindValue($name,$value);
+				$command->bindValue($name,$value);
 			}
 			if($db->queryCachingDuration>0)
 			{
@@ -85,11 +85,11 @@ class CDbCacheDependency extends CCacheDependency
 				$db->queryCachingDuration=$duration;
 			}
 			else
-				$result=$command->queryRow();
+			$result=$command->queryRow();
 			return $result;
 		}
 		else
-			throw new CException(Yii::t('yii','CDbCacheDependency.sql cannot be empty.'));
+		throw new CException(Yii::t('yii','CDbCacheDependency.sql cannot be empty.'));
 	}
 
 	/**
@@ -99,14 +99,14 @@ class CDbCacheDependency extends CCacheDependency
 	protected function getDbConnection()
 	{
 		if($this->_db!==null)
-			return $this->_db;
+		return $this->_db;
 		else
 		{
 			if(($this->_db=Yii::app()->getComponent($this->connectionID)) instanceof CDbConnection)
-				return $this->_db;
+			return $this->_db;
 			else
-				throw new CException(Yii::t('yii','CDbCacheDependency.connectionID "{id}" is invalid. Please make sure it refers to the ID of a CDbConnection application component.',
-					array('{id}'=>$this->connectionID)));
+			throw new CException(Yii::t('yii','CDbCacheDependency.connectionID "{id}" is invalid. Please make sure it refers to the ID of a CDbConnection application component.',
+			array('{id}'=>$this->connectionID)));
 		}
 	}
 }

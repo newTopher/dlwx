@@ -62,9 +62,9 @@ class CFileCache extends CCache
 	{
 		parent::init();
 		if($this->cachePath===null)
-			$this->cachePath=Yii::app()->getRuntimePath().DIRECTORY_SEPARATOR.'cache';
+		$this->cachePath=Yii::app()->getRuntimePath().DIRECTORY_SEPARATOR.'cache';
 		if(!is_dir($this->cachePath))
-			mkdir($this->cachePath,0777,true);
+		mkdir($this->cachePath,0777,true);
 	}
 
 	/**
@@ -85,9 +85,9 @@ class CFileCache extends CCache
 	{
 		$value=(int)$value;
 		if($value<0)
-			$value=0;
+		$value=0;
 		if($value>1000000)
-			$value=1000000;
+		$value=1000000;
 		$this->_gcProbability=$value;
 	}
 
@@ -113,9 +113,9 @@ class CFileCache extends CCache
 	{
 		$cacheFile=$this->getCacheFile($key);
 		if(($time=$this->filemtime($cacheFile))>time())
-			return @file_get_contents($cacheFile,false,null,$this->embedExpiry ? 10 : -1);
+		return @file_get_contents($cacheFile,false,null,$this->embedExpiry ? 10 : -1);
 		elseif($time>0)
-			@unlink($cacheFile);
+		@unlink($cacheFile);
 		return false;
 	}
 
@@ -137,19 +137,19 @@ class CFileCache extends CCache
 		}
 
 		if($expire<=0)
-			$expire=31536000; // 1 year
+		$expire=31536000; // 1 year
 		$expire+=time();
 
 		$cacheFile=$this->getCacheFile($key);
 		if($this->directoryLevel>0)
-			@mkdir(dirname($cacheFile),0777,true);
+		@mkdir(dirname($cacheFile),0777,true);
 		if(@file_put_contents($cacheFile,$this->embedExpiry ? $expire.$value : $value,LOCK_EX)!==false)
 		{
 			@chmod($cacheFile,0777);
 			return $this->embedExpiry ? true : @touch($cacheFile,$expire);
 		}
 		else
-			return false;
+		return false;
 	}
 
 	/**
@@ -165,7 +165,7 @@ class CFileCache extends CCache
 	{
 		$cacheFile=$this->getCacheFile($key);
 		if($this->filemtime($cacheFile)>time())
-			return false;
+		return false;
 		return $this->setValue($key,$value,$expire);
 	}
 
@@ -194,12 +194,12 @@ class CFileCache extends CCache
 			for($i=0;$i<$this->directoryLevel;++$i)
 			{
 				if(($prefix=substr($key,$i+$i,2))!==false)
-					$base.=DIRECTORY_SEPARATOR.$prefix;
+				$base.=DIRECTORY_SEPARATOR.$prefix;
 			}
 			return $base.DIRECTORY_SEPARATOR.$key.$this->cacheFileSuffix;
 		}
 		else
-			return $this->cachePath.DIRECTORY_SEPARATOR.$key.$this->cacheFileSuffix;
+		return $this->cachePath.DIRECTORY_SEPARATOR.$key.$this->cacheFileSuffix;
 	}
 
 	/**
@@ -211,18 +211,18 @@ class CFileCache extends CCache
 	public function gc($expiredOnly=true,$path=null)
 	{
 		if($path===null)
-			$path=$this->cachePath;
+		$path=$this->cachePath;
 		if(($handle=opendir($path))===false)
-			return;
+		return;
 		while(($file=readdir($handle))!==false)
 		{
 			if($file[0]==='.')
-				continue;
+			continue;
 			$fullPath=$path.DIRECTORY_SEPARATOR.$file;
 			if(is_dir($fullPath))
-				$this->gc($expiredOnly,$fullPath);
+			$this->gc($expiredOnly,$fullPath);
 			elseif($expiredOnly && $this->filemtime($fullPath)<time() || !$expiredOnly)
-				@unlink($fullPath);
+			@unlink($fullPath);
 		}
 		closedir($handle);
 	}
@@ -235,8 +235,8 @@ class CFileCache extends CCache
 	private function filemtime($path)
 	{
 		if($this->embedExpiry)
-			return (int)@file_get_contents($path,false,null,0,10);
+		return (int)@file_get_contents($path,false,null,0,10);
 		else
-			return @filemtime($path);
+		return @filemtime($path);
 	}
 }

@@ -47,9 +47,9 @@ class CConfiguration extends CMap
 	public function __construct($data=null)
 	{
 		if(is_string($data))
-			parent::__construct(require($data));
+		parent::__construct(require($data));
 		else
-			parent::__construct($data);
+		parent::__construct($data);
 	}
 
 	/**
@@ -71,9 +71,9 @@ class CConfiguration extends CMap
 	{
 		$data=require($configFile);
 		if($this->getCount()>0)
-			$this->mergeWith($data);
+		$this->mergeWith($data);
 		else
-			$this->copyFrom($data);
+		$this->copyFrom($data);
 	}
 
 	/**
@@ -95,6 +95,6 @@ class CConfiguration extends CMap
 	public function applyTo($object)
 	{
 		foreach($this->toArray() as $key=>$value)
-			$object->$key=$value;
+		$object->$key=$value;
 	}
 }

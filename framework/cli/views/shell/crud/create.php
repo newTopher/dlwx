@@ -16,11 +16,11 @@ echo "\$this->breadcrumbs=array(
 );\n";
 ?>
 
-$this->menu=array(
-	array('label'=>'List <?php echo $modelClass; ?>', 'url'=>array('index')),
-	array('label'=>'Manage <?php echo $modelClass; ?>', 'url'=>array('admin')),
-);
-?>
+$this->menu=array( array('label'=>'List
+<?php echo $modelClass; ?>
+', 'url'=>array('index')), array('label'=>'Manage
+<?php echo $modelClass; ?>
+', 'url'=>array('admin')), ); ?>
 
 <h1>Create <?php echo $modelClass; ?></h1>
 

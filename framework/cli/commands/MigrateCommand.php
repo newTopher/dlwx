@@ -90,16 +90,16 @@ class MigrateCommand extends CConsoleCommand
 		$total=count($migrations);
 		$step=isset($args[0]) ? (int)$args[0] : 0;
 		if($step>0)
-			$migrations=array_slice($migrations,0,$step);
+		$migrations=array_slice($migrations,0,$step);
 
 		$n=count($migrations);
 		if($n===$total)
-			echo "Total $n new ".($n===1 ? 'migration':'migrations')." to be applied:\n";
+		echo "Total $n new ".($n===1 ? 'migration':'migrations')." to be applied:\n";
 		else
-			echo "Total $n out of $total new ".($total===1 ? 'migration':'migrations')." to be applied:\n";
+		echo "Total $n out of $total new ".($total===1 ? 'migration':'migrations')." to be applied:\n";
 
 		foreach($migrations as $migration)
-			echo "    $migration\n";
+		echo "    $migration\n";
 		echo "\n";
 
 		if($this->confirm('Apply the above '.($n===1 ? 'migration':'migrations')."?"))
@@ -135,7 +135,7 @@ class MigrateCommand extends CConsoleCommand
 		$n=count($migrations);
 		echo "Total $n ".($n===1 ? 'migration':'migrations')." to be reverted:\n";
 		foreach($migrations as $migration)
-			echo "    $migration\n";
+		echo "    $migration\n";
 		echo "\n";
 
 		if($this->confirm('Revert the above '.($n===1 ? 'migration':'migrations')."?"))
@@ -171,7 +171,7 @@ class MigrateCommand extends CConsoleCommand
 		$n=count($migrations);
 		echo "Total $n ".($n===1 ? 'migration':'migrations')." to be redone:\n";
 		foreach($migrations as $migration)
-			echo "    $migration\n";
+		echo "    $migration\n";
 		echo "\n";
 
 		if($this->confirm('Redo the above '.($n===1 ? 'migration':'migrations')."?"))
@@ -199,13 +199,13 @@ class MigrateCommand extends CConsoleCommand
 	public function actionTo($args)
 	{
 		if(isset($args[0]))
-			$version=$args[0];
+		$version=$args[0];
 		else
-			$this->usageError('Please specify which version to migrate to.');
+		$this->usageError('Please specify which version to migrate to.');
 
 		$originalVersion=$version;
 		if(preg_match('/^m?(\d{6}_\d{6})(_.*?)?$/',$version,$matches))
-			$version='m'.$matches[1];
+		$version='m'.$matches[1];
 		else
 		{
 			echo "Error: The version option must be either a timestamp (e.g. 101129_185401)\nor the full name of a migration (e.g. m101129_185401_create_user_table).\n";
@@ -217,7 +217,7 @@ class MigrateCommand extends CConsoleCommand
 		foreach($migrations as $i=>$migration)
 		{
 			if(strpos($migration,$version.'_')===0)
-				return $this->actionUp(array($i+1));
+			return $this->actionUp(array($i+1));
 		}
 
 		// try migrate down
@@ -232,7 +232,7 @@ class MigrateCommand extends CConsoleCommand
 					return 0;
 				}
 				else
-					return $this->actionDown(array($i));
+				return $this->actionDown(array($i));
 			}
 		}
 
@@ -243,12 +243,12 @@ class MigrateCommand extends CConsoleCommand
 	public function actionMark($args)
 	{
 		if(isset($args[0]))
-			$version=$args[0];
+		$version=$args[0];
 		else
-			$this->usageError('Please specify which version to mark to.');
+		$this->usageError('Please specify which version to mark to.');
 		$originalVersion=$version;
 		if(preg_match('/^m?(\d{6}_\d{6})(_.*?)?$/',$version,$matches))
-			$version='m'.$matches[1];
+		$version='m'.$matches[1];
 		else {
 			echo "Error: The version option must be either a timestamp (e.g. 101129_185401)\nor the full name of a migration (e.g. m101129_185401_create_user_table).\n";
 			return 1;
@@ -285,14 +285,14 @@ class MigrateCommand extends CConsoleCommand
 			if(strpos($migration,$version.'_')===0)
 			{
 				if($i===0)
-					echo "Already at '$originalVersion'. Nothing needs to be done.\n";
+				echo "Already at '$originalVersion'. Nothing needs to be done.\n";
 				else
 				{
 					if($this->confirm("Set migration history at $originalVersion?"))
 					{
 						$command=$db->createCommand();
 						for($j=0;$j<$i;++$j)
-							$command->delete($this->migrationTable, $db->quoteColumnName('version').'=:version', array(':version'=>$migrations[$j]));
+						$command->delete($this->migrationTable, $db->quoteColumnName('version').'=:version', array(':version'=>$migrations[$j]));
 						echo "The migration history is set at $originalVersion.\nNo actual migration was performed.\n";
 					}
 				}
@@ -309,16 +309,16 @@ class MigrateCommand extends CConsoleCommand
 		$limit=isset($args[0]) ? (int)$args[0] : -1;
 		$migrations=$this->getMigrationHistory($limit);
 		if($migrations===array())
-			echo "No migration has been done before.\n";
+		echo "No migration has been done before.\n";
 		else
 		{
 			$n=count($migrations);
 			if($limit>0)
-				echo "Showing the last $n applied ".($n===1 ? 'migration' : 'migrations').":\n";
+			echo "Showing the last $n applied ".($n===1 ? 'migration' : 'migrations').":\n";
 			else
-				echo "Total $n ".($n===1 ? 'migration has' : 'migrations have')." been applied before:\n";
+			echo "Total $n ".($n===1 ? 'migration has' : 'migrations have')." been applied before:\n";
 			foreach($migrations as $version=>$time)
-				echo "    (".date('Y-m-d H:i:s',$time).') '.$version."\n";
+			echo "    (".date('Y-m-d H:i:s',$time).') '.$version."\n";
 		}
 	}
 
@@ -327,7 +327,7 @@ class MigrateCommand extends CConsoleCommand
 		$limit=isset($args[0]) ? (int)$args[0] : -1;
 		$migrations=$this->getNewMigrations();
 		if($migrations===array())
-			echo "No new migrations found. Your system is up-to-date.\n";
+		echo "No new migrations found. Your system is up-to-date.\n";
 		else
 		{
 			$n=count($migrations);
@@ -337,19 +337,19 @@ class MigrateCommand extends CConsoleCommand
 				echo "Showing $limit out of $n new ".($n===1 ? 'migration' : 'migrations').":\n";
 			}
 			else
-				echo "Found $n new ".($n===1 ? 'migration' : 'migrations').":\n";
+			echo "Found $n new ".($n===1 ? 'migration' : 'migrations').":\n";
 
 			foreach($migrations as $migration)
-				echo "    ".$migration."\n";
+			echo "    ".$migration."\n";
 		}
 	}
 
 	public function actionCreate($args)
 	{
 		if(isset($args[0]))
-			$name=$args[0];
+		$name=$args[0];
 		else
-			$this->usageError('Please provide the name of the new migration.');
+		$this->usageError('Please provide the name of the new migration.');
 
 		if(!preg_match('/^\w+$/',$name)) {
 			echo "Error: The name of the migration must contain letters, digits and/or underscore characters only.\n";
@@ -370,14 +370,14 @@ class MigrateCommand extends CConsoleCommand
 	public function confirm($message,$default=false)
 	{
 		if(!$this->interactive)
-			return true;
+		return true;
 		return parent::confirm($message,$default);
 	}
 
 	protected function migrateUp($class)
 	{
 		if($class===self::BASE_MIGRATION)
-			return;
+		return;
 
 		echo "*** applying $class\n";
 		$start=microtime(true);
@@ -402,7 +402,7 @@ class MigrateCommand extends CConsoleCommand
 	protected function migrateDown($class)
 	{
 		if($class===self::BASE_MIGRATION)
-			return;
+		return;
 
 		echo "*** reverting $class\n";
 		$start=microtime(true);
@@ -438,9 +438,9 @@ class MigrateCommand extends CConsoleCommand
 	protected function getDbConnection()
 	{
 		if($this->_db!==null)
-			return $this->_db;
+		return $this->_db;
 		elseif(($this->_db=Yii::app()->getComponent($this->connectionID)) instanceof CDbConnection)
-			return $this->_db;
+		return $this->_db;
 
 		echo "Error: CMigrationCommand.connectionID '{$this->connectionID}' is invalid. Please make sure it refers to the ID of a CDbConnection application component.\n";
 		exit(1);
@@ -454,11 +454,11 @@ class MigrateCommand extends CConsoleCommand
 			$this->createMigrationHistoryTable();
 		}
 		return CHtml::listData($db->createCommand()
-			->select('version, apply_time')
-			->from($this->migrationTable)
-			->order('version DESC')
-			->limit($limit)
-			->queryAll(), 'version', 'apply_time');
+		->select('version, apply_time')
+		->from($this->migrationTable)
+		->order('version DESC')
+		->limit($limit)
+		->queryAll(), 'version', 'apply_time');
 	}
 
 	protected function createMigrationHistoryTable()
@@ -480,17 +480,17 @@ class MigrateCommand extends CConsoleCommand
 	{
 		$applied=array();
 		foreach($this->getMigrationHistory(-1) as $version=>$time)
-			$applied[substr($version,1,13)]=true;
+		$applied[substr($version,1,13)]=true;
 
 		$migrations=array();
 		$handle=opendir($this->migrationPath);
 		while(($file=readdir($handle))!==false)
 		{
 			if($file==='.' || $file==='..')
-				continue;
+			continue;
 			$path=$this->migrationPath.DIRECTORY_SEPARATOR.$file;
 			if(preg_match('/^(m(\d{6}_\d{6})_.*?)\.php$/',$file,$matches) && is_file($path) && !isset($applied[$matches[2]]))
-				$migrations[]=$matches[1];
+			$migrations[]=$matches[1];
 		}
 		closedir($handle);
 		sort($migrations);
@@ -552,9 +552,9 @@ EOD;
 	protected function getTemplate()
 	{
 		if($this->templateFile!==null)
-			return file_get_contents(Yii::getPathOfAlias($this->templateFile).'.php');
+		return file_get_contents(Yii::getPathOfAlias($this->templateFile).'.php');
 		else
-			return <<<EOD
+		return <<<EOD
 <?php
 
 class {ClassName} extends CDbMigration

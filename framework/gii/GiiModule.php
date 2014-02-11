@@ -119,16 +119,16 @@ class GiiModule extends CWebModule
 			'errorHandler'=>array(
 				'class'=>'CErrorHandler',
 				'errorAction'=>$this->getId().'/default/error',
-			),
+		),
 			'user'=>array(
 				'class'=>'CWebUser',
 				'stateKeyPrefix'=>'gii',
 				'loginUrl'=>Yii::app()->createUrl($this->getId().'/default/login'),
-			),
+		),
 			'widgetFactory' => array(
 				'class'=>'CWidgetFactory',
 				'widgets' => array()
-			)
+		)
 		), false);
 		$this->generatorPaths[]='gii.generators';
 		$this->controllerMap=$this->findGenerators();
@@ -140,7 +140,7 @@ class GiiModule extends CWebModule
 	public function getAssetsUrl()
 	{
 		if($this->_assetsUrl===null)
-			$this->_assetsUrl=Yii::app()->getAssetManager()->publish(Yii::getPathOfAlias('gii.assets'));
+		$this->_assetsUrl=Yii::app()->getAssetManager()->publish(Yii::getPathOfAlias('gii.assets'));
 		return $this->_assetsUrl;
 	}
 
@@ -167,16 +167,16 @@ class GiiModule extends CWebModule
 		{
 			$route=$controller->id.'/'.$action->id;
 			if(!$this->allowIp(Yii::app()->request->userHostAddress) && $route!=='default/error')
-				throw new CHttpException(403,"You are not allowed to access this page.");
+			throw new CHttpException(403,"You are not allowed to access this page.");
 
 			$publicPages=array(
 				'default/login',
 				'default/error',
 			);
 			if($this->password!==false && Yii::app()->user->isGuest && !in_array($route,$publicPages))
-				Yii::app()->user->loginRequired();
+			Yii::app()->user->loginRequired();
 			else
-				return true;
+			return true;
 		}
 		return false;
 	}
@@ -189,11 +189,11 @@ class GiiModule extends CWebModule
 	protected function allowIp($ip)
 	{
 		if(empty($this->ipFilters))
-			return true;
+		return true;
 		foreach($this->ipFilters as $filter)
 		{
 			if($filter==='*' || $filter===$ip || (($pos=strpos($filter,'*'))!==false && !strncmp($ip,$filter,$pos)))
-				return true;
+			return true;
 		}
 		return false;
 	}
@@ -211,7 +211,7 @@ class GiiModule extends CWebModule
 			$alias=$this->generatorPaths[$i];
 			$path=Yii::getPathOfAlias($alias);
 			if($path===false || !is_dir($path))
-				continue;
+			continue;
 
 			$names=scandir($path);
 			foreach($names as $name)
@@ -233,7 +233,7 @@ class GiiModule extends CWebModule
 						foreach($dirs as $dir)
 						{
 							if($dir[0]!=='.' && is_dir($templatePath.'/'.$dir))
-								$generators[$name]['templates'][$dir]=strtr($templatePath.'/'.$dir,array('/'=>DIRECTORY_SEPARATOR,'\\'=>DIRECTORY_SEPARATOR));
+							$generators[$name]['templates'][$dir]=strtr($templatePath.'/'.$dir,array('/'=>DIRECTORY_SEPARATOR,'\\'=>DIRECTORY_SEPARATOR));
 						}
 					}
 				}

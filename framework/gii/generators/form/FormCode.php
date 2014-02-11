@@ -12,14 +12,14 @@ class FormCode extends CCodeModel
 	public function rules()
 	{
 		return array_merge(parent::rules(), array(
-			array('model, viewName, scenario', 'filter', 'filter'=>'trim'),
-			array('model, viewName, viewPath', 'required'),
-			array('model, viewPath', 'match', 'pattern'=>'/^\w+[\.\w+]*$/', 'message'=>'{attribute} should only contain word characters and dots.'),
-			array('viewName', 'match', 'pattern'=>'/^\w+[\\/\w+]*$/', 'message'=>'{attribute} should only contain word characters and slashes.'),
-			array('model', 'validateModel'),
-			array('viewPath', 'validateViewPath'),
-			array('scenario', 'match', 'pattern'=>'/^\w+$/', 'message'=>'{attribute} should only contain word characters.'),
-			array('viewPath', 'sticky'),
+		array('model, viewName, scenario', 'filter', 'filter'=>'trim'),
+		array('model, viewName, viewPath', 'required'),
+		array('model, viewPath', 'match', 'pattern'=>'/^\w+[\.\w+]*$/', 'message'=>'{attribute} should only contain word characters and dots.'),
+		array('viewName', 'match', 'pattern'=>'/^\w+[\\/\w+]*$/', 'message'=>'{attribute} should only contain word characters and slashes.'),
+		array('model', 'validateModel'),
+		array('viewPath', 'validateViewPath'),
+		array('scenario', 'match', 'pattern'=>'/^\w+$/', 'message'=>'{attribute} should only contain word characters.'),
+		array('viewPath', 'sticky'),
 		));
 	}
 
@@ -54,30 +54,30 @@ EOD;
 	public function validateModel($attribute,$params)
 	{
 		if($this->hasErrors('model'))
-			return;
+		return;
 		$class=@Yii::import($this->model,true);
 		if(!is_string($class) || !$this->classExists($class))
-			$this->addError('model', "Class '{$this->model}' does not exist or has syntax error.");
+		$this->addError('model', "Class '{$this->model}' does not exist or has syntax error.");
 		elseif(!is_subclass_of($class,'CModel'))
-			$this->addError('model', "'{$this->model}' must extend from CModel.");
+		$this->addError('model', "'{$this->model}' must extend from CModel.");
 		else
-			$this->_modelClass=$class;
+		$this->_modelClass=$class;
 	}
 
 	public function validateViewPath($attribute,$params)
 	{
 		if($this->hasErrors('viewPath'))
-			return;
+		return;
 		if(Yii::getPathOfAlias($this->viewPath)===false)
-			$this->addError('viewPath','View Path must be a valid path alias.');
+		$this->addError('viewPath','View Path must be a valid path alias.');
 	}
 
 	public function prepare()
 	{
 		$templatePath=$this->templatePath;
 		$this->files[]=new CCodeFile(
-			Yii::getPathOfAlias($this->viewPath).'/'.$this->viewName.'.php',
-			$this->render($templatePath.'/form.php')
+		Yii::getPathOfAlias($this->viewPath).'/'.$this->viewName.'.php',
+		$this->render($templatePath.'/form.php')
 		);
 	}
 

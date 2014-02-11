@@ -24,15 +24,15 @@ class CMysqlColumnSchema extends CDbColumnSchema
 	protected function extractType($dbType)
 	{
 		if(strncmp($dbType,'enum',4)===0)
-			$this->type='string';
+		$this->type='string';
 		elseif(strpos($dbType,'float')!==false || strpos($dbType,'double')!==false)
-			$this->type='double';
+		$this->type='double';
 		elseif(strpos($dbType,'bool')!==false)
-			$this->type='boolean';
+		$this->type='boolean';
 		elseif(strpos($dbType,'int')===0 && strpos($dbType,'unsigned')===false || preg_match('/(bit|tinyint|smallint|mediumint)/',$dbType))
-			$this->type='integer';
+		$this->type='integer';
 		else
-			$this->type='string';
+		$this->type='string';
 	}
 
 	/**
@@ -43,11 +43,11 @@ class CMysqlColumnSchema extends CDbColumnSchema
 	protected function extractDefault($defaultValue)
 	{
 		if(strncmp($this->dbType,'bit',3)===0)
-			$this->defaultValue=bindec(trim($defaultValue,'b\''));
+		$this->defaultValue=bindec(trim($defaultValue,'b\''));
 		elseif($this->dbType==='timestamp' && $defaultValue==='CURRENT_TIMESTAMP')
-			$this->defaultValue=null;
+		$this->defaultValue=null;
 		else
-			parent::extractDefault($defaultValue);
+		parent::extractDefault($defaultValue);
 	}
 
 	/**
@@ -64,11 +64,11 @@ class CMysqlColumnSchema extends CDbColumnSchema
 			foreach($values as $value)
 			{
 				if(($n=strlen($value)) > $size)
-					$size=$n;
+				$size=$n;
 			}
 			$this->size = $this->precision = $size;
 		}
 		else
-			parent::extractLimit($dbType);
+		parent::extractLimit($dbType);
 	}
 }

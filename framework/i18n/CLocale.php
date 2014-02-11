@@ -59,9 +59,9 @@ class CLocale extends CComponent
 	{
 		static $locales=array();
 		if(isset($locales[$id]))
-			return $locales[$id];
+		return $locales[$id];
 		else
-			return $locales[$id]=new CLocale($id);
+		return $locales[$id]=new CLocale($id);
 	}
 
 	/**
@@ -79,7 +79,7 @@ class CLocale extends CComponent
 			{
 				$fullPath=$dataPath.DIRECTORY_SEPARATOR.$file;
 				if(substr($file,-4)==='.php' && is_file($fullPath))
-					$locales[]=substr($file,0,-4);
+				$locales[]=substr($file,0,-4);
 			}
 			closedir($folder);
 			sort($locales);
@@ -100,9 +100,9 @@ class CLocale extends CComponent
 		$dataPath=self::$dataPath===null ? dirname(__FILE__).DIRECTORY_SEPARATOR.'data' : self::$dataPath;
 		$dataFile=$dataPath.DIRECTORY_SEPARATOR.$this->_id.'.php';
 		if(is_file($dataFile))
-			$this->_data=require($dataFile);
+		$this->_data=require($dataFile);
 		else
-			throw new CException(Yii::t('yii','Unrecognized locale "{locale}".',array('{locale}'=>$id)));
+		throw new CException(Yii::t('yii','Unrecognized locale "{locale}".',array('{locale}'=>$id)));
 	}
 
 	/**
@@ -130,7 +130,7 @@ class CLocale extends CComponent
 	public function getNumberFormatter()
 	{
 		if($this->_numberFormatter===null)
-			$this->_numberFormatter=new CNumberFormatter($this);
+		$this->_numberFormatter=new CNumberFormatter($this);
 		return $this->_numberFormatter;
 	}
 
@@ -140,7 +140,7 @@ class CLocale extends CComponent
 	public function getDateFormatter()
 	{
 		if($this->_dateFormatter===null)
-			$this->_dateFormatter=new CDateFormatter($this);
+		$this->_dateFormatter=new CDateFormatter($this);
 		return $this->_dateFormatter;
 	}
 
@@ -203,9 +203,9 @@ class CLocale extends CComponent
 	public function getMonthName($month,$width='wide',$standAlone=false)
 	{
 		if($standAlone)
-			return isset($this->_data['monthNamesSA'][$width][$month]) ? $this->_data['monthNamesSA'][$width][$month] : $this->_data['monthNames'][$width][$month];
+		return isset($this->_data['monthNamesSA'][$width][$month]) ? $this->_data['monthNamesSA'][$width][$month] : $this->_data['monthNames'][$width][$month];
 		else
-			return isset($this->_data['monthNames'][$width][$month]) ? $this->_data['monthNames'][$width][$month] : $this->_data['monthNamesSA'][$width][$month];
+		return isset($this->_data['monthNames'][$width][$month]) ? $this->_data['monthNames'][$width][$month] : $this->_data['monthNamesSA'][$width][$month];
 	}
 
 	/**
@@ -217,9 +217,9 @@ class CLocale extends CComponent
 	public function getMonthNames($width='wide',$standAlone=false)
 	{
 		if($standAlone)
-			return isset($this->_data['monthNamesSA'][$width]) ? $this->_data['monthNamesSA'][$width] : $this->_data['monthNames'][$width];
+		return isset($this->_data['monthNamesSA'][$width]) ? $this->_data['monthNamesSA'][$width] : $this->_data['monthNames'][$width];
 		else
-			return isset($this->_data['monthNames'][$width]) ? $this->_data['monthNames'][$width] : $this->_data['monthNamesSA'][$width];
+		return isset($this->_data['monthNames'][$width]) ? $this->_data['monthNames'][$width] : $this->_data['monthNamesSA'][$width];
 	}
 
 	/**
@@ -232,9 +232,9 @@ class CLocale extends CComponent
 	{
 		$day=$day%7;
 		if($standAlone)
-			return isset($this->_data['weekDayNamesSA'][$width][$day]) ? $this->_data['weekDayNamesSA'][$width][$day] : $this->_data['weekDayNames'][$width][$day];
+		return isset($this->_data['weekDayNamesSA'][$width][$day]) ? $this->_data['weekDayNamesSA'][$width][$day] : $this->_data['weekDayNames'][$width][$day];
 		else
-			return isset($this->_data['weekDayNames'][$width][$day]) ? $this->_data['weekDayNames'][$width][$day] : $this->_data['weekDayNamesSA'][$width][$day];
+		return isset($this->_data['weekDayNames'][$width][$day]) ? $this->_data['weekDayNames'][$width][$day] : $this->_data['weekDayNamesSA'][$width][$day];
 	}
 
 	/**
@@ -246,9 +246,9 @@ class CLocale extends CComponent
 	public function getWeekDayNames($width='wide',$standAlone=false)
 	{
 		if($standAlone)
-			return isset($this->_data['weekDayNamesSA'][$width]) ? $this->_data['weekDayNamesSA'][$width] : $this->_data['weekDayNames'][$width];
+		return isset($this->_data['weekDayNamesSA'][$width]) ? $this->_data['weekDayNamesSA'][$width] : $this->_data['weekDayNames'][$width];
 		else
-			return isset($this->_data['weekDayNames'][$width]) ? $this->_data['weekDayNames'][$width] : $this->_data['weekDayNamesSA'][$width];
+		return isset($this->_data['weekDayNames'][$width]) ? $this->_data['weekDayNames'][$width] : $this->_data['weekDayNamesSA'][$width];
 	}
 
 	/**

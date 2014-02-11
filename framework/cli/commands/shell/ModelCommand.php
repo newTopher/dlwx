@@ -114,9 +114,9 @@ EOD;
 	{
 		$pk=$table->primaryKey;
 		return (count($pk) === 2 // we want 2 columns
-			&& isset($table->foreignKeys[$pk[0]]) // pk column 1 is also a foreign key
-			&& isset($table->foreignKeys[$pk[1]]) // pk column 2 is also a foreign key
-			&& $table->foreignKeys[$pk[0]][0] !== $table->foreignKeys[$pk[1]][0]); // and the foreign keys point different tables
+		&& isset($table->foreignKeys[$pk[0]]) // pk column 1 is also a foreign key
+		&& isset($table->foreignKeys[$pk[1]]) // pk column 2 is also a foreign key
+		&& $table->foreignKeys[$pk[0]][0] !== $table->foreignKeys[$pk[1]][0]); // and the foreign keys point different tables
 	}
 
 	/**
@@ -186,11 +186,11 @@ EOD;
 	protected function generateClassName($tableName)
 	{
 		return str_replace(' ','',
-			ucwords(
-				trim(
-					strtolower(
-						str_replace(array('-','_'),' ',
-							preg_replace('/(?<![A-Z])[A-Z]/', ' \0', $tableName))))));
+		ucwords(
+		trim(
+		strtolower(
+		str_replace(array('-','_'),' ',
+		preg_replace('/(?<![A-Z])[A-Z]/', ' \0', $tableName))))));
 	}
 
 	/**
@@ -204,13 +204,13 @@ EOD;
 		foreach($schema->getTableNames() as $name)
 		{
 			if($pattern===null)
-				$this->_tables[$name]=$this->generateClassName($this->removePrefix($name));
+			$this->_tables[$name]=$this->generateClassName($this->removePrefix($name));
 			elseif(preg_match($pattern,$name,$matches))
 			{
 				if(count($matches)>1 && !empty($matches[1]))
-					$className=$this->generateClassName($matches[1]);
+				$className=$this->generateClassName($matches[1]);
 				else
-					$className=$this->generateClassName($matches[0]);
+				$className=$this->generateClassName($matches[0]);
 				$this->_tables[$name]=empty($className) ? $name : $className;
 			}
 		}
@@ -226,19 +226,19 @@ EOD;
 	protected function generateRelationName($tableName, $fkName, $multiple)
 	{
 		if(strcasecmp(substr($fkName,-2),'id')===0 && strcasecmp($fkName,'id'))
-			$relationName=rtrim(substr($fkName, 0, -2),'_');
+		$relationName=rtrim(substr($fkName, 0, -2),'_');
 		else
-			$relationName=$fkName;
+		$relationName=$fkName;
 		$relationName[0]=strtolower($relationName);
 
 		$rawName=$relationName;
 		if($multiple)
-			$relationName=$this->pluralize($relationName);
+		$relationName=$this->pluralize($relationName);
 
 		$table=$this->_schema->getTable($tableName);
 		$i=0;
 		while(isset($table->columns[$relationName]))
-			$relationName=$rawName.($i++);
+		$relationName=$rawName.($i++);
 		return $relationName;
 	}
 
@@ -278,14 +278,14 @@ EOD;
 		{
 			$this->generateClassNames($this->_schema);
 			if(($pos=strrpos($className,'.'))===false)
-				$basePath=Yii::getPathOfAlias('application.models');
+			$basePath=Yii::getPathOfAlias('application.models');
 			else
 			{
 				$basePath=Yii::getPathOfAlias(substr($className,0,$pos));
 				$className=substr($className,$pos+1);
 			}
 			if($className==='*') // generate all models
-				$this->generateRelations();
+			$this->generateRelations();
 			else
 			{
 				$tableName=isset($args[1])?$args[1]:$className;
@@ -300,9 +300,9 @@ EOD;
 			$pattern=$matches[1];
 			$pos=strrpos($className,$pattern);
 			if($pos>0)  // only regexp is given
-				$basePath=Yii::getPathOfAlias(rtrim(substr($className,0,$pos),'.'));
+			$basePath=Yii::getPathOfAlias(rtrim(substr($className,0,$pos),'.'));
 			else
-				$basePath=Yii::getPathOfAlias('application.models');
+			$basePath=Yii::getPathOfAlias('application.models');
 			$this->generateClassNames($this->_schema,$pattern);
 			$classes=$this->_tables;
 			$this->generateRelations();
@@ -314,11 +314,11 @@ EOD;
 			$entries=array();
 			$count=0;
 			foreach($this->_classes as $tableName=>$className)
-				$entries[]=++$count.". $className ($tableName)";
+			$entries[]=++$count.". $className ($tableName)";
 			echo "The following model classes (tables) match your criteria:\n";
 			echo implode("\n",$entries)."\n\n";
 			if(!$this->confirm("Do you want to generate the above classes?"))
-				return;
+			return;
 		}
 
 		$templatePath=$this->templatePath===null?YII_PATH.'/cli/views/shell/model':$this->templatePath;
@@ -363,7 +363,7 @@ EOD;
 		foreach($files as $className=>$file)
 		{
 			if(!class_exists($className,false))
-				include_once($file);
+			include_once($file);
 		}
 
 		$classes=implode(", ", $this->_classes);
@@ -371,7 +371,7 @@ EOD;
 		echo <<<EOD
 
 The following model classes are successfully generated:
-    $classes
+$classes
 
 If you have a 'db' database connection, you can test these models now with:
     \$model={$className}::model()->find();
@@ -398,44 +398,44 @@ EOD;
 				$label=ucwords(trim(strtolower(str_replace(array('-','_'),' ',preg_replace('/(?<![A-Z])[A-Z]/', ' \0', $column->name)))));
 				$label=preg_replace('/\s+/',' ',$label);
 				if(strcasecmp(substr($label,-3),' id')===0)
-					$label=substr($label,0,-3);
+				$label=substr($label,0,-3);
 				$labels[$column->name]=$label;
 				if($column->isPrimaryKey && $table->sequenceName!==null)
-					continue;
+				continue;
 				$r=!$column->allowNull && $column->defaultValue===null;
 				if($r)
-					$required[]=$column->name;
+				$required[]=$column->name;
 				if($column->type==='integer')
-					$integers[]=$column->name;
+				$integers[]=$column->name;
 				elseif($column->type==='double')
-					$numerical[]=$column->name;
+				$numerical[]=$column->name;
 				elseif($column->type==='string' && $column->size>0)
-					$length[$column->size][]=$column->name;
+				$length[$column->size][]=$column->name;
 				elseif(!$column->isPrimaryKey && !$r)
-					$safe[]=$column->name;
+				$safe[]=$column->name;
 			}
 			if($required!==array())
-				$rules[]="array('".implode(', ',$required)."', 'required')";
+			$rules[]="array('".implode(', ',$required)."', 'required')";
 			if($integers!==array())
-				$rules[]="array('".implode(', ',$integers)."', 'numerical', 'integerOnly'=>true)";
+			$rules[]="array('".implode(', ',$integers)."', 'numerical', 'integerOnly'=>true)";
 			if($numerical!==array())
-				$rules[]="array('".implode(', ',$numerical)."', 'numerical')";
+			$rules[]="array('".implode(', ',$numerical)."', 'numerical')";
 			if($length!==array())
 			{
 				foreach($length as $len=>$cols)
-					$rules[]="array('".implode(', ',$cols)."', 'length', 'max'=>$len)";
+				$rules[]="array('".implode(', ',$cols)."', 'length', 'max'=>$len)";
 			}
 			if($safe!==array())
-				$rules[]="array('".implode(', ',$safe)."', 'safe')";
+			$rules[]="array('".implode(', ',$safe)."', 'safe')";
 
 			if(isset($this->_relations[$className]) && is_array($this->_relations[$className]))
-				$relations=$this->_relations[$className];
+			$relations=$this->_relations[$className];
 		}
 		else
-			echo "Warning: the table '$tableName' does not exist in the database.\n";
+		echo "Warning: the table '$tableName' does not exist in the database.\n";
 
 		if(!is_file($source))  // fall back to default ones
-			$source=YII_PATH.'/cli/views/shell/model/'.basename($source);
+		$source=YII_PATH.'/cli/views/shell/model/'.basename($source);
 		return $this->renderFile($source,array(
 			'className'=>$className,
 			'tableName'=>$this->removePrefix($tableName,true),
@@ -449,7 +449,7 @@ EOD;
 	public function generateFixture($source,$table)
 	{
 		if(!is_file($source))  // fall back to default ones
-			$source=YII_PATH.'/cli/views/shell/model/'.basename($source);
+		$source=YII_PATH.'/cli/views/shell/model/'.basename($source);
 		return $this->renderFile($source, array(
 			'table'=>$table,
 		),true);
@@ -459,7 +459,7 @@ EOD;
 	{
 		list($className,$fixtureName)=$params;
 		if(!is_file($source))  // fall back to default ones
-			$source=YII_PATH.'/cli/views/shell/model/'.basename($source);
+		$source=YII_PATH.'/cli/views/shell/model/'.basename($source);
 		return $this->renderFile($source, array(
 			'className'=>$className,
 			'fixtureName'=>$fixtureName,
@@ -473,7 +473,7 @@ EOD;
 		{
 			$tableName=substr($tableName,strlen($tablePrefix));
 			if($addBrackets)
-				$tableName='{{'.$tableName.'}}';
+			$tableName='{{'.$tableName.'}}';
 		}
 		return $tableName;
 	}
@@ -482,7 +482,7 @@ EOD;
 	{
 		$tablePrefix=Yii::app()->getDb()->tablePrefix;
 		if($tablePrefix!='' && strncmp($tableName,$tablePrefix,strlen($tablePrefix)))
-			$tableName=$tablePrefix.$tableName;
+		$tableName=$tablePrefix.$tableName;
 		return $tableName;
 	}
 }

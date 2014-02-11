@@ -37,7 +37,7 @@ class CChainedCacheDependency extends CComponent implements ICacheDependency
 	public function __construct($dependencies=array())
 	{
 		if(!empty($dependencies))
-			$this->setDependencies($dependencies);
+		$this->setDependencies($dependencies);
 	}
 
 	/**
@@ -46,7 +46,7 @@ class CChainedCacheDependency extends CComponent implements ICacheDependency
 	public function getDependencies()
 	{
 		if($this->_dependencies===null)
-			$this->_dependencies=new CTypedList('ICacheDependency');
+		$this->_dependencies=new CTypedList('ICacheDependency');
 		return $this->_dependencies;
 	}
 
@@ -61,7 +61,7 @@ class CChainedCacheDependency extends CComponent implements ICacheDependency
 		foreach($values as $value)
 		{
 			if(is_array($value))
-				$value=Yii::createComponent($value);
+			$value=Yii::createComponent($value);
 			$dependencies->add($value);
 		}
 	}
@@ -74,7 +74,7 @@ class CChainedCacheDependency extends CComponent implements ICacheDependency
 		if($this->_dependencies!==null)
 		{
 			foreach($this->_dependencies as $dependency)
-				$dependency->evaluateDependency();
+			$dependency->evaluateDependency();
 		}
 	}
 
@@ -89,8 +89,8 @@ class CChainedCacheDependency extends CComponent implements ICacheDependency
 		if($this->_dependencies!==null)
 		{
 			foreach($this->_dependencies as $dependency)
-				if($dependency->getHasChanged())
-					return true;
+			if($dependency->getHasChanged())
+			return true;
 		}
 		return false;
 	}
