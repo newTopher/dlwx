@@ -8,12 +8,16 @@
  */
 class Wcontroller extends Controller {
 
+    public $layout='//layouts/column4';
+
     public function actionI(){
         $uid = Yii::app()->request->getParam('sid');
         if(!empty($uid)){
             $webData = WxWebsiteModel::getWxWebByUid($uid);
-            Yii::app()->setTheme(TemplateModel::getTemplateNameByTpid($webData->template_id));
-            $this->render('index',array('webData'=>$webData));
+            $template_name = TemplateModel::getTemplateNameByTpid($webData->template_id);
+            Yii::app()->setTheme($template_name);
+            $slideData =WxSliderModel::getSlideBySiteId($webData->id);
+            $this->render('index',array('webData'=>$webData,'slideData'=>$slideData));
         }else{
             echo '非法请求';
         }

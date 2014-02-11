@@ -41,9 +41,9 @@
             data-requiremodule="zepto_navigator_iscroll" src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/js/navigator.iscroll.js">
     </script>
     <!--<base href="http://fl.act.qq.com/">-->
-    <base href="http://www.wapwei.com">
+
     <title>
-        首页
+        <?php echo $webData->webname_title; ?>
     </title>
     <script>
         var s = new Date().getTime();
@@ -70,7 +70,7 @@
             <ul class="ui-navigator-list" style="width: 233px; -webkit-transition: -webkit-transform 0ms; transition: -webkit-transform 0ms; -webkit-transform-origin: 0px 0px; -webkit-transform: translate(0px, 0px) translateZ(0px);">
                 <li>
                     <a class="cur" href="">
-                        你好，欢迎来到400电话中心
+                        <?php echo $webData->webname_title; ?>
                     </a>
                 </li>
             </ul>
@@ -81,15 +81,11 @@
 <section class="widget widget-mimage slide js-slider" id="">
     <section class="slide-content js-slide-content" id="js-slider">
         <ul style="width: 960px; -webkit-transition: 200ms; transition: 200ms; -webkit-transform: translate(0px, 0px);">
+            <?php foreach($slideData as $key=>$val): ?>
             <li>
-                <img src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/images/0">
+                <a href="<?php echo $val->url; ?>"><img src="<?php echo Yii::app()->baseUrl; ?>/upload/wxwebsite/<?php echo $val->image;?>"></a>
             </li>
-            <li>
-                <img src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/images/0(1)">
-            </li>
-            <li>
-                <img src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/images/0(2)">
-            </li>
+            <?php endforeach; ?>
         </ul>
     </section>
     <section class="slide-progress">

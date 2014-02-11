@@ -65,5 +65,9 @@ class WxSliderModel extends CActiveRecord{
         }
     }
 
+    static public function getSlideBySiteId($siteid){
+        return self::model()->findAllByAttributes(array('site_id'=>$siteid));
+    }
+
 
 }
