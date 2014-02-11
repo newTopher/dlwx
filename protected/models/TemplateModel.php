@@ -1,5 +1,6 @@
 <?php
 class TemplateModel extends CActiveRecord{
+
     public $template_name;
     public $status;
     public $path_url;
