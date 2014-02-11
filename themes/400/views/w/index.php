@@ -41,7 +41,7 @@
             data-requiremodule="zepto_navigator_iscroll" src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/js/navigator.iscroll.js">
     </script>
     <!--<base href="http://fl.act.qq.com/">-->
-    <base href=".">
+    <base href="http://www.wapwei.com">
     <title>
         首页
     </title>

@@ -17,7 +17,7 @@ class ApiController extends Controller {
             $temp = substr($t,0,2).hexdec(substr($t,2));
             if(($this->userdata = userModel::findByToken($temp))){
                 $postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
-                //file_put_contents('1.txt',$postStr);
+              //  file_put_contents('1.txt',$postStr);
                 if (!empty($postStr)){
                     $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
                     $RX_TYPE = trim($postObj->MsgType);
@@ -119,6 +119,16 @@ class ApiController extends Controller {
                 break;
         }
         $this->responseText($object, $contentStr);
+    }
+
+    public function getWeiWebMsg($postObj){
+        $webData = WxWebsiteModel::getWxWebByUid($this->userdata->id);
+        $data = new stdClass();
+        $data->title = $webData->msg_title;
+        $data->description = $webData->msg_description;
+        $data->picurl =  Yii::app()->request->hostInfo.'/upload/wxwebsite/'.$webData->msg_image;
+        $data->url = Yii::app()->request->hostInfo.'/index.php/W/i/sid/'.$this->userdata->id;
+        $this->responseImageText($postObj,$data);
     }
 
     public function responseText($object, $content){

@@ -9,8 +9,14 @@
 class Wcontroller extends Controller {
 
     public function actionI(){
-        Yii::app()->setTheme('400');
-        $this->render('index');
+        $uid = Yii::app()->request->getParam('sid');
+        if(!empty($uid)){
+            $webData = WxWebsiteModel::getWxWebByUid($uid);
+            Yii::app()->setTheme(TemplateModel::getTemplateNameByTpid($webData->template_id));
+            $this->render('index',array('webData'=>$webData));
+        }else{
+            echo '非法请求';
+        }
     }
 
 }
