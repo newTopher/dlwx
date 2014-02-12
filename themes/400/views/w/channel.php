@@ -45,7 +45,7 @@
         <section class="widget-panel" id="">
             <h1 class="title">
                         <span>
-                            联系我们
+                            <?php echo $menuData->menu_name; ?>
                         </span>
             </h1>
             <article class="content">
