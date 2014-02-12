@@ -49,24 +49,7 @@
                         </span>
             </h1>
             <article class="content">
-                <p>
-                    <br>
-                </p>
-                <p>
-                    公司名称：东莞市乐亚通讯科技有限公司
-                    <br>
-                    公司地址：东莞市南城区莞太路34号创意产业园2栋305 &nbsp;
-                </p>
-                <p>
-                    固定电话：0769-23605889
-                    <br>
-                    全国服务热线:4000-666-168
-                    <br>
-                    邮编：523000
-                    <br>
-                    企业QQ: 4000666168
-                    <br>
-                </p>
+                <?php echo $menuData->text; ?>
             </article>
         </section>
         <img src="" style="display:none;">
@@ -74,19 +57,14 @@
     <footer class="footer">
         <section class="f-content center">
                     <span class="back-top left">
-                        <a href="http://fl.act.qq.com/17/addev/h5/31">
-                            本页面由腾讯·风铃支持
+                        <a href="http://www.wapwei.com">
+                            本页面由腾讯·万普科技
                         </a>
                     </span>
-                    <span class="back-top right">
-                        <a class="ml10 fl_report" data-url="http://fl.act.qq.com/report/report/reason">
-                            举报
-                        </a>
-                    </span>
+
         </section>
     </footer>
 </div>
-<img src="./客户服务_files/p" style="display:none;">
 <script>
     var e = new Date().getTime();
     var t = e - s;
@@ -98,8 +76,6 @@
     img.setAttribute("height", 0);
     document.body.appendChild(img);
 </script>
-<img src="./客户服务_files/r" style="display:none;" width="0" height="0">
-<img src="./客户服务_files/ping" width="0" style="display:none" height="0">
 </body>
 
 </html>
