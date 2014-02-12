@@ -46,6 +46,14 @@ class PackageController extends CController{
         $this->render('add',array('H_list'=>$H_list,'T_list'=>$T_list,'msg'=>$msg));
     }
 
+    public function actionList(){
+        $package=new PackageModel();
+        $list=$package->SelectPackage();
+        $tid=PackageModel::model()->idExchage($list,'template_id');
+        $hid=PackageModel::model()->idExchage($list,'helper_id');
+        $this->render('list',array('list'=>$list,'t_name'=>$tid,'h_name'=>$hid));
+        }
+
 
     public function exchange($template_id){
         if(isset($template_id)){
@@ -56,12 +64,9 @@ class PackageController extends CController{
         }else{
             return false;
         }
-
     }
 
 
 
 }
-
-
 ?>
