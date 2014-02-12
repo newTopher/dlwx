@@ -77,14 +77,20 @@ class WeixinController extends Controller{
     }
 
     public function actionSlideradd(){
-        $this->render('slideradd');
+        $wxWebsiteModel = new WxWebsiteModel();
+        $wxWebsiteModel->id = Yii::app()->session['user']->id;
+        $webdata = $wxWebsiteModel->getWxWebById();
+        $this->render('slideradd',array('webdata'=>$webdata));
     }
 
     public function actionSlideredit(){
+        $wxWebsiteModel = new WxWebsiteModel();
+        $wxWebsiteModel->id = Yii::app()->session['user']->id;
+        $webdata = $wxWebsiteModel->getWxWebById();
         $wxSliderModel = new WxSliderModel();
         $wxSliderModel->id = Yii::app()->request->getParam('id');
         $sliderData = $wxSliderModel->getSliderById();
-        $this->render('slideredit',array('sliderData'=>$sliderData));
+        $this->render('slideredit',array('sliderData'=>$sliderData,'webdata'=>$webdata));
     }
 
     public function actionSliderinsert(){
@@ -158,10 +164,13 @@ class WeixinController extends Controller{
     }
 
     public function actionMenuedit(){
+        $wxWebsiteModel = new WxWebsiteModel();
+        $wxWebsiteModel->id = Yii::app()->session['user']->id;
+        $webdata = $wxWebsiteModel->getWxWebById();
         $wxBaseMenuModel = new WxBaseMenuModel();
         $wxBaseMenuModel->id = Yii::app()->request->getParam('id');
         $data = $wxBaseMenuModel->getMenuById();
-        $this->render('menuedit',array('menudata'=>$data));
+        $this->render('menuedit',array('menudata'=>$data,'webdata'=>$webdata));
     }
 
     public function actionMenuadd(){
