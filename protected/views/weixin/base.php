@@ -7,7 +7,7 @@
         <div class="box-content">
             <div class="box-content">
                 <div class="span4" style="margin-bottom: 15px;">
-                    <img style="width:320px;height:480px;" src="<?php echo Yii::app()->getBaseUrl(); ?>/upload/test.jpg">
+                    <iframe width="320" frameborder=no scrolling=auto style="overflow-x:hidden; overflow-y:auto;" height="480" src="<?php echo Yii::app()->request->hostInfo.'/index.php/W/i/sid/'.$webdata->uid; ?>"></iframe>
                 </div>
                 <div class="span8">
                     <form enctype="multipart/form-data" name="form" method="post" action="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Addweixin" class="form-horizontal">
@@ -24,9 +24,7 @@
                                 <label class="control-label" for="selectError3">官网风格</label>
                                 <div class="controls">
                                     <select name="template_id" id="selectError3">
-                                        <option value="1">小清新</option>
-                                        <option value="2">高端大气</option>
-                                        <option value="3">经典</option>
+                                        <option value="<?php echo $template->id; ?>"><?php echo $template->china_name; ?></option>
                                     </select>
                                 </div>
                             </div>

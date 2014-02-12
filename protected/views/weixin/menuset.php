@@ -7,7 +7,7 @@
         <div class="box-content">
             <div class="box-content">
                 <div class="span4" style="margin-bottom: 15px;">
-                    <img style="width:320px;height:480px;" src="<?php echo Yii::app()->getBaseUrl(); ?>/upload/test.jpg">
+                    <iframe width="320" frameborder=no scrolling=auto style="overflow-x:hidden; overflow-y:auto;" height="480" src="<?php echo Yii::app()->request->hostInfo.'/index.php/W/i/sid/'.$uid; ?>"></iframe>
                 </div>
                 <div class="span8">
                     <ul id="myTab" class="nav nav-tabs">
@@ -16,6 +16,7 @@
                     </ul>
                     <div id="myTabContent" class="tab-content">
                         <div class="tab-pane fade active in" id="home">
+                            <a href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Menuadd" class="btn btn-small btn-primary">添加菜单</a>
                             <table class="table table-striped">
                                 <thead>
                                 <tr>

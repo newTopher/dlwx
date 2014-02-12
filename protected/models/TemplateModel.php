@@ -61,4 +61,7 @@ class TemplateModel extends CActiveRecord{
         return self::model()->findByPk($id)->template_name;
     }
 
+    static public function getTemplateByTpid($id){
+        return self::model()->findByPk($id);
+    }
 }

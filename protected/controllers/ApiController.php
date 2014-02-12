@@ -113,6 +113,7 @@ class ApiController extends Controller {
         switch ($object->Event){
             case "subscribe":
                 $contentStr = "谢谢关注";
+                $object->MsgType='text';
                 break;
             default :
                 $contentStr = "Unknow Event: ".$object->Event;

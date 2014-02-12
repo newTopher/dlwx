@@ -52,4 +52,22 @@ class WxBaseMenuModel extends CActiveRecord{
         }
     }
 
+    public function insertMenu(){
+        $this->add_time=time();
+        $this->update_time=time();
+        if($this->insert()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    static public function getMenuByUid($uid){
+        return self::model()->findAllByAttributes(array('uid'=>$uid));
+    }
+
+    static public function getMenuDetailById($id){
+        return self::model()->findByPk(array('id'=>$id));
+    }
+
 }

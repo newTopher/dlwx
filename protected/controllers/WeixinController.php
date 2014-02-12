@@ -14,7 +14,8 @@ class WeixinController extends Controller{
         $wxWebsiteModel = new WxWebsiteModel();
         $wxWebsiteModel->id = Yii::app()->session['user']->id;
         $webdata = $wxWebsiteModel->getWxWebById();
-        $this->render('base',array('webdata'=>$webdata));
+        $template = TemplateModel::getTemplateByTpid($webdata->template_id);
+        $this->render('base',array('webdata'=>$webdata,'template'=>$template));
     }
 
     public function actionAddweixin(){
@@ -72,7 +73,7 @@ class WeixinController extends Controller{
         $wxSliderModel->uid = Yii::app()->session['user']->id;
         $menuData = $wxBaseMenuModel->getMenu();
         $sliderData = $wxSliderModel->getSlider();
-        $this->render('menuset',array('menuData'=>$menuData,'sliderData'=>$sliderData));
+        $this->render('menuset',array('menuData'=>$menuData,'sliderData'=>$sliderData,'uid'=>$wxBaseMenuModel->uid));
     }
 
     public function actionSlideradd(){
@@ -161,6 +162,32 @@ class WeixinController extends Controller{
         $wxBaseMenuModel->id = Yii::app()->request->getParam('id');
         $data = $wxBaseMenuModel->getMenuById();
         $this->render('menuedit',array('menudata'=>$data));
+    }
+
+    public function actionMenuadd(){
+        $this->render('menuadd',array('uid'=>Yii::app()->session['user']->id));
+    }
+
+    public function actionMenuinsert(){
+        $wxBaseMenuModel = new WxBaseMenuModel();
+        $wxBaseMenuModel->uid = Yii::app()->session['user']->id;
+        $wxBaseMenuModel->site_id = WxWebsiteModel::getWxWebByUid(Yii::app()->session['user']->id)->id;
+        $wxBaseMenuModel->menu_name = Yii::app()->request->getParam('menu_name');
+        $wxBaseMenuModel->text = Yii::app()->request->getParam('text');
+        if(isset($_FILES['with_image'])){
+            $msgImageUrl = '';
+            $dir = 'wxwebsite';
+            $name = $_FILES['with_image']['name']; //上传图片原名
+            $type = $_FILES['with_image']['type']; //上传图片mime类型
+            $tmp_name = $_FILES['with_image']['tmp_name']; //上传图片临时存放位置
+            $msgImageUrl = Upload::createImageLink($name, $type, $tmp_name,$dir);
+            $wxBaseMenuModel->with_image = $msgImageUrl;
+        }
+        if($wxBaseMenuModel->insertMenu()){
+            $this->redirect(Yii::app()->getBaseUrl()."/Weixin/Menuset");
+        }else{
+            $this->redirect(Yii::app()->getBaseUrl()."/Weixin/Menuadd");
+        }
     }
 
     public function actionMenuupdate(){

@@ -59,6 +59,9 @@
     <link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css">
     <script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/js/page_context.js">
     </script>
+    <style>
+        html { overflow-x:hidden; }
+    </style>
 </head>
 
 <body screen_capture_injected="true" youdao="bind">
@@ -97,40 +100,17 @@
 <section class="widget-panel" id="">
     <article class="content">
         <p>
-            <strong>
                 <a target="_self" href="http://fl.act.qq.com/34930/addev/h5/60431">
                     首页
                 </a>
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                <a target="_self" href="http://fl.act.qq.com/34930/addev/h5/61112">
-                    公司简介
+
+                &nbsp;
+                <?php foreach($menuData as $k=>$v): ?>
+                <a target="_self" href="http://fl.act.qq.com/34930/addev/h5/61433">
+                    <?php echo $v->menu_name; ?>
                 </a>
-                &nbsp; &nbsp; &nbsp; &nbsp;
-                <a target="_self" href="http://fl.act.qq.com/34930/addev/h5/60920">
-                    业务介绍
-                </a>
-            </strong>
-            <strong>
-                &nbsp; &nbsp;
-            </strong>
-        </p>
-        <p>
-            <a target="_self" href="http://fl.act.qq.com/34930/addev/h5/61433">
-                <strong>
-                    资费标准
-                </strong>
-            </a>
-            <strong>
-                &nbsp; &nbsp; &nbsp;
-                <a target="_self" href="http://fl.act.qq.com/34930/addev/h5/61782">
-                    案例展示
-                </a>
-                &nbsp; &nbsp; &nbsp; &nbsp;
-                <a target="_self" href="http://fl.act.qq.com/34930/addev/h5/61836">
-                    联系我们
-                </a>
-            </strong>
-            <br>
+                &nbsp;
+               <?php endforeach; ?>
         </p>
     </article>
 </section>
