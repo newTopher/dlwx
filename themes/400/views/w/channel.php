@@ -38,7 +38,7 @@
         <section class="widget widget-image" id="">
             <ul>
                 <li>
-                    <img src="<?php echo Yii::app()->baseUrl; ?>/upload/wxwebsite/<?php echo $menuData->with_image; ?>">
+                    <img style="height: 100px;" src="<?php echo Yii::app()->baseUrl; ?>/upload/wxwebsite/<?php echo $menuData->with_image; ?>">
                 </li>
             </ul>
         </section>

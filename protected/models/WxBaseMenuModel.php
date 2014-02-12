@@ -45,7 +45,14 @@ class WxBaseMenuModel extends CActiveRecord{
     }
 
     public function updateMenuById(){
-        if($this->updateByPk($this->id,array('with_image'=>$this->with_image,'menu_name'=>$this->menu_name,'text'=>$this->text,'update_time'=>time()))){
+        $data = array();
+        $data['menu_name'] =  $this->menu_name;
+        $data['text'] = $this->text;
+        $data['update_time'] = time();
+        if($this->with_image != ''){
+            $data['with_image'] = $this->with_image;
+        }
+        if($this->updateByPk($this->id,$data)){
             return true;
         }else{
             return false;

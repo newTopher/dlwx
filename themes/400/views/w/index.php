@@ -100,13 +100,13 @@
 <section class="widget-panel" id="">
     <article class="content">
         <p>
-                <a target="_self" href="http://fl.act.qq.com/34930/addev/h5/60431">
+                <a target="_self" href="<?php echo Yii::app()->request->hostInfo.'/index.php/W/i/sid/'.$webData->uid;?>">
                     首页
                 </a>
 
                 &nbsp;
                 <?php foreach($menuData as $k=>$v): ?>
-                <a target="_self" href="http://fl.act.qq.com/34930/addev/h5/61433">
+                <a target="_self" href="<?php echo Yii::app()->request->hostInfo.'/index.php/W/Site/sid/'.$webData->uid.'/mid/'.$v->id; ?>">
                     <?php echo $v->menu_name; ?>
                 </a>
                 &nbsp;

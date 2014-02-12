@@ -24,7 +24,7 @@ class Wcontroller extends Controller {
         }
     }
 
-    public function actionS(){
+    public function actionSite(){
         $uid = Yii::app()->request->getParam('sid');
         $mid = Yii::app()->request->getParam('mid');
         if(!empty($uid)){
