@@ -29,6 +29,10 @@ class TemplateModel extends CActiveRecord{
        return self::model()->findAllByAttributes(array("status"=>1));
     }
 
+    public function selectByAttr($attr,$key){
+        return self::model()->findAllByPk(array($attr=>$key));
+    }
+
     public function selectMoney($tid){
         return self::model()->findAllByAttributes(array("id"=>$tid));
     }

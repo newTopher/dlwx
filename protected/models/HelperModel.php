@@ -38,9 +38,14 @@ class HelperModel extends CActiveRecord{
         }
     }
 
+    public function selectByAttr($attr,$key){
+        return self::model()->findAllByPk(array($attr=>$key));
+    }
+
     public static  function SelectHelper(){
         return self::model()->findAll();
     }
+
     public static  function Select(){
         return self::model()->findAllByAttributes(array("status"=>1));
     }
