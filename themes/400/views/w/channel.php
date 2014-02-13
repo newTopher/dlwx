@@ -58,24 +58,14 @@
         <section class="f-content center">
                     <span class="back-top left">
                         <a href="http://www.wapwei.com">
-                            本页面由腾讯·万普科技
+                            本页面由万普科技·万普微盟支持
                         </a>
                     </span>
 
         </section>
     </footer>
 </div>
-<script>
-    var e = new Date().getTime();
-    var t = e - s;
-    var url = 'http://sqm.act.qq.com/r?attr_id=200006&act_id=611007003&value=' + t;
-    var img = document.createElement("img");
-    img.setAttribute("src", url);
-    img.setAttribute("style", 'display:none;');
-    img.setAttribute("width", 0);
-    img.setAttribute("height", 0);
-    document.body.appendChild(img);
-</script>
+
 </body>
 
 </html>
