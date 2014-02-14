@@ -60,6 +60,7 @@ $config = array(
         // uncomment the following to use a MySQL database
         /**/
 <<<<<<< HEAD
+<<<<<<< HEAD
         'db'=>array(
             'connectionString' => 'mysql:host=localhost;dbname=wapwei',
             'emulatePrepare' => true,
@@ -68,6 +69,9 @@ $config = array(
             'charset' => 'utf8',
             'tablePrefix'=>''
         ),
+=======
+
+>>>>>>> origin/master
 =======
 
 >>>>>>> origin/master
@@ -117,4 +121,8 @@ if(!empty($database)){
     $config['components'] = @array_merge($config['components'], $database);
 }
 
+<<<<<<< HEAD
 return $config;
+=======
+return $config;
+>>>>>>> origin/master
