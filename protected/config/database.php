@@ -10,7 +10,7 @@ return array(
         'tablePrefix'=>''
     ),
     'wxfood'=>array(
-        'connectionString' => 'dblib:host=localhost;dbname=wxfood',
+        'connectionString' => 'mysql:host=localhost;dbname=wxfood',
         'emulatePrepare' => false,
         'username' => 'root',
         'password' => 'root',
