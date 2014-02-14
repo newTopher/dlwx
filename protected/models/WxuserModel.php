@@ -6,7 +6,7 @@
  * Time: 下午11:30
  * To change this template use File | Settings | File Templates.
  */
-class WxuserModel extends CActiveRecord{
+class WxuserModel extends Ar{
 
     public $id;
     public $uid;

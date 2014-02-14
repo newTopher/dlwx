@@ -6,7 +6,7 @@
  * Time: 上午12:06
  * To change this template use File | Settings | File Templates.
  */
-class MsgListModel extends CActiveRecord{
+class MsgListModel extends Ar{
 
     public $id;
     public $wx_uid;

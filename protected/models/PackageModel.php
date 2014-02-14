@@ -1,5 +1,5 @@
 <?php
-class PackageModel extends CActiveRecord{
+class PackageModel extends Ar{
     public $id;
     public $template_id;
     public $helper_id;

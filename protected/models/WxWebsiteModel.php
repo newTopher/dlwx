@@ -6,7 +6,7 @@
  * Time: 下午4:17
  * To change this template use File | Settings | File Templates.
  */
-class WxWebsiteModel extends CActiveRecord{
+class WxWebsiteModel extends Ar{
 
     public $id;
     public $uid;

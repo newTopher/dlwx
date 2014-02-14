@@ -5,7 +5,8 @@
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
-return array(
+
+$config = array(
     'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
     'name'=>'weixin',
     // preloading 'log' component
@@ -24,11 +25,12 @@ return array(
         /*
         'gii'=>array(
             'class'=>'system.gii.GiiModule',
-            'password'=>'Enter Your Password Here',
+            'password'=>'123456',
             // If removed, Gii defaults to localhost only. Edit carefully to taste.
             'ipFilters'=>array('127.0.0.1','::1'),
         ),
         */
+        'wxfood'
     ),
 
     // application components
@@ -57,14 +59,7 @@ return array(
         */
         // uncomment the following to use a MySQL database
         /**/
-        'db'=>array(
-            'connectionString' => 'mysql:host=localhost;dbname=wapwei',
-            'emulatePrepare' => true,
-            'username' => 'root',
-            'password' => 'root',
-            'charset' => 'utf8',
-            'tablePrefix'=>''
-        ),
+
         'image'=>array(
             'class'=>'application.extensions.image.CImageComponent',
             // GD or ImageMagick
@@ -106,3 +101,9 @@ return array(
         'adminEmail'=>'webmaster@example.com',
     ),
 );
+$database   = @include_once dirname(__FILE__).'/database.php';
+if(!empty($database)){
+    $config['components'] = @array_merge($config['components'], $database);
+}
+
+return $config;
