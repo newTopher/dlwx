@@ -61,7 +61,7 @@ return array(
             'connectionString' => 'mysql:host=localhost;dbname=wapwei',
             'emulatePrepare' => true,
             'username' => 'root',
-            'password' => 'root',
+            'password' => '09270815',
             'charset' => 'utf8',
             'tablePrefix'=>''
         ),

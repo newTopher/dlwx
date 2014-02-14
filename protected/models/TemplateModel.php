@@ -37,6 +37,7 @@ class TemplateModel extends CActiveRecord{
     public function selectMoney($tid){
         return self::model()->findAllByAttributes(array("id"=>$tid));
     }
+
     public function SelectTemplate($trade_id){
         $temp=self::model()->findAllByAttributes(array("status"=>1,"trade_id"=>$trade_id));
         return $temp;
@@ -53,6 +54,7 @@ class TemplateModel extends CActiveRecord{
             return false;
         }
     }
+
     public function DeleteTemplate(){
         if(self::model()->updateByPk($this->id,array('status'=>0))){
             return true;
