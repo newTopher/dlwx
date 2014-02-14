@@ -47,12 +47,11 @@ a,a:link,a:visited,a:hover,a:active {
 }
 
 .ui-navigator .ui-navigator-list li a.cur, .ui-navigator .ui-navigator-fix.cur{
-    background: #CD2626;
 }
 
 /* ===== CION2 ===== */
 .icon2 {
-	background: url(../img/icon.red.png) no-repeat 6px 0;
+	background: url(../images/icon.red.png) no-repeat 6px 0;
 }
 
 .wbinvite {

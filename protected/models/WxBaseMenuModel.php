@@ -6,7 +6,7 @@
  * Time: 上午12:34
  * To change this template use File | Settings | File Templates.
  */
-class WxBaseMenuModel extends CActiveRecord{
+class WxBaseMenuModel extends Ar{
 
     public $id;
     public $uid;

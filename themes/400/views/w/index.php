@@ -100,10 +100,14 @@
 <section class="widget-panel" id="">
     <article class="content">
         <p>
-                <a target="_self" href="<?php echo Yii::app()->request->hostInfo.'/index.php/W/i/sid/'.$webData->uid;?>">
+
+            <!--    <a target="_self" href="<?php echo Yii::app()->request->hostInfo.'/index.php/W/i/sid/'.$webData->uid;?>">
                     首页
                 </a>
-
+                &nbsp; -->
+                <a target="_self" href="http://www.my4009.cn/query.do">
+                    选号
+                </a>
                 &nbsp;
                 <?php foreach($menuData as $k=>$v): ?>
                 <a target="_self" href="<?php echo Yii::app()->request->hostInfo.'/index.php/W/Site/sid/'.$webData->uid.'/mid/'.$v->id; ?>">
@@ -158,42 +162,7 @@
         </p>
     </article>
 </section>
-<section class="widget-panel" id="">
-    <h1 class="title">
-                        <span>
-                            行业动态
-                        </span>
-    </h1>
-    <article class="content">
-        <p>
-            <a target="_self" href="http://fl.act.qq.com/34930/addev/h5/61845">
-                服务因东莞400电话完美
-            </a>
-        </p>
-        <p>
-            <a target="_self" href="http://fl.act.qq.com/34930/addev/h5/61851">
-                沟通从东莞400电话开始
-            </a>
-        </p>
-        <p>
-            <a target="_self" href="http://fl.act.qq.com/34930/addev/h5/61860">
-                400电话申请，一个简单易记的号码、一段个性化的企业彩铃
-            </a>
-        </p>
-        <p>
-            <a target="_self" href="http://fl.act.qq.com/34930/addev/h5/61866">
-                400电话不在新奇，400电话是企业实力的象征
-            </a>
-        </p>
-    </article>
-</section>
-<section class="widget widget-image" id="">
-    <ul>
-        <li>
-            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/images/0(3)">
-        </li>
-    </ul>
-</section>
+
 <section class="widget-panel" id="">
     <h1 class="title">
                         <span>
@@ -215,69 +184,14 @@
         </p>
     </article>
 </section>
-<section class="widget-panel" id="">
-    <h1 class="title">
-                        <span>
-                            开通流程
-                        </span>
-    </h1>
-    <article class="content">
-        <p>
-            <strong>
-                                <span style="color:#ff0000;">
-                                    400电话办理找乐亚，全国热线：4000666168
-                                </span>
-            </strong>
-                            <span style="color:#ff0000;">
-                                &nbsp;
-                            </span>
-            &nbsp;
-            <br>
-        </p>
-    </article>
-</section>
-<section class="widget widget-image" id="">
-    <ul>
-        <li>
-            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/images/0(4)">
-        </li>
-    </ul>
-</section>
-<section class="widget-panel" id="">
-    <h1 class="title">
-                        <span>
-                            客户案例
-                        </span>
-    </h1>
-    <article class="content">
-        <strong>
-                            <span style="color:#F79646;">
-                                办理400电话客户成功案例
-                            </span>
-        </strong>
-    </article>
-</section>
-<section class="widget widget-image" id="">
-    <ul>
-        <li>
-            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/images/0(5)">
-        </li>
-    </ul>
-</section>
-<section class="widget widget-image" id="">
-    <ul>
-        <li>
-            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/images/0(6)">
-        </li>
-    </ul>
-</section>
+
 <section class="widget-box" id="">
     <a href="wtai://wp/mc;4000-666-168">
         <div>
             <i class="icon2 phone">
             </i>
                             <span style="font-size:22px">
-                                4000-666-168
+                              <?php echo $webData->tel; ?>
                             </span>
         </div>
     </a>
@@ -331,61 +245,19 @@
         </form>
     </article>
 </section>
-<section class="widget-panel" id="">
-    <h1 class="title">
-                        <span>
-                            联系我们
-                        </span>
-    </h1>
-    <article class="content">
-        <p>
-            公司名称：东莞市乐亚通讯科技有限公司
-            <br>
-            公司地址：东莞市南城区莞太路34号创意产业园2栋305 &nbsp;
-        </p>
-        <p>
-            固定电话：0769-23605889
-            <br>
-            全国服务热线:4000-666-168
-            <br>
-            邮编：523000
-            <br>
-            企业QQ: 4000666168
-            <br>
-        </p>
-    </article>
-</section>
-<img src="" style="display:none;">
+
 </div>
 <footer class="footer">
     <section class="f-content center">
                     <span class="back-top left">
-                        <a href="http://fl.act.qq.com/17/addev/h5/31">
-                            本页面由腾讯·风铃支持
+                        <a href="www.wapwei.com">
+                            本页面由万普科技·万普微盟支持
                         </a>
                     </span>
-                    <span class="back-top right">
-                        <a class="ml10 fl_report" data-url="http://fl.act.qq.com/report/report/reason">
-                            举报
-                        </a>
-                    </span>
+
     </section>
 </footer>
 </div>
-<img src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/images/p" style="display:none;">
-<script>
-    var e = new Date().getTime();
-    var t = e - s;
-    var url = 'http://sqm.act.qq.com/r?attr_id=200006&act_id=611007003&value=' + t;
-    var img = document.createElement("img");
-    img.setAttribute("src", url);
-    img.setAttribute("style", 'display:none;');
-    img.setAttribute("width", 0);
-    img.setAttribute("height", 0);
-    document.body.appendChild(img);
-</script>
-<img src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/images/r" style="display:none;" width="0" height="0">
-<img src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/images/ping" width="0" style="display:none" height="0">
 </body>
 
 </html>

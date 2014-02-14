@@ -1,6 +1,6 @@
 <?php
 
-class HelperModel extends CActiveRecord{
+class HelperModel extends Ar{
     public $name;
     public $money;
     public $helper_image;

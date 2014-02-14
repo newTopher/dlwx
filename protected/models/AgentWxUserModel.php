@@ -6,7 +6,7 @@
  * Time: 下午2:32
  * To change this template use File | Settings | File Templates.
  */
-class AgentWxUserModel extends CActiveRecord{
+class AgentWxUserModel extends Ar{
 
     public $id;
     public $wx_account;

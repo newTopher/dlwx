@@ -6,7 +6,7 @@
  * Time: 下午11:47
  * To change this template use File | Settings | File Templates.
  */
-class SelfMenuModel extends CActiveRecord{
+class SelfMenuModel extends Ar{
 
     public $id;
     public $uid;

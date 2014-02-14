@@ -1,5 +1,5 @@
 <?php
-class TemplateModel extends CActiveRecord{
+class TemplateModel extends Ar{
 
     public $template_name;
     public $status;

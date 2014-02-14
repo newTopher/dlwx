@@ -6,7 +6,7 @@
  * Time: 下午2:32
  * To change this template use File | Settings | File Templates.
  */
-class UserModel extends CActiveRecord{
+class UserModel extends Ar{
 
     public $id;
     public $email;

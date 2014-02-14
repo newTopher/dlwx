@@ -6,7 +6,7 @@
  * Time: 下午10:36
  * To change this template use File | Settings | File Templates.
  */
-class SingleNewsMsgModel extends CActiveRecord{
+class SingleNewsMsgModel extends Ar{
 
     public $id;
     public $uid;

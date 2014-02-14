@@ -8,7 +8,7 @@
         <div class="box-content">
             <div class="box-content">
                 <div class="span4" style="margin-bottom: 15px;">
-                    <img style="width:320px;height:480px;" src="<?php echo Yii::app()->getBaseUrl(); ?>/upload/test.jpg">
+                    <iframe width="340" frameborder=no scrolling=auto style="overflow-x:hidden; overflow-y:auto;" height="480" src="<?php echo Yii::app()->request->hostInfo.'/index.php/W/i/sid/'.$webdata->uid; ?>"></iframe>
                 </div>
                 <div class="span8">
                     <form name="form" method="post" enctype="multipart/form-data" action="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Menuupdate" class="form-horizontal">
