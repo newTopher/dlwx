@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0064)http://www.veding.com/wx/customer/index.wx?action=weixin_qinchun -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>餐饮店（演示）</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<script src="./user_files/jquery.1.8.0.min.js" type="text/javascript"></script>
+<script src="./user_files/app.js" type="text/javascript"></script>
+<script src="./user_files/idangerous.swiper-2.1.min.js" type="text/javascript"></script>
+<link href="./user_files/common.css" rel="stylesheet" type="text/css">
+<link href="./user_files/other.css" rel="stylesheet" type="text/css">
+<script></script>
+<script id="hp_same_"></script>
+<script id="hp_done_"></script>
+<script type="text/javascript">
+	document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+		WeixinJSBridge.call('hideToolbar');
+		WeixinJSBridge.call('hideOptionMenu');
+	}); 
+</script>
+</head>
+<body youdao="bind">
+	<input type="hidden" id="siteContextPath" value="">
+	<div class="none" id="menu-list-form">
+		<input type="hidden" name="menuIdList" value="3303">
+	</div>
+	<div id="attentionMsg" class="cart-attention transparent8">
+		<p class="cart-attentiontext"></p>
+	</div>
+	<div class="moveleft">
+		<div class="mlwarp">
+			<i class="mlgomr"></i>
+		</div>
+		<div id="header">
+			<div class="hewarp">
+				<ul>
+					<li class="index"><a href="http://www.veding.com/wx/shop/index.wx?action=weixin_qinchun" title="店铺首页"> <img src="./user_files/top1.png" alt=""> 首 页 </a></li>
+					<li class="history"><a href="http://www.veding.com/wx/menu/list.wx?action=weixin_qinchun" title="产品列表">
+							<img src="./user_files/top4.png" alt=""> 我要点单 
+					</a></li>
+					<li class="narcar"><a href="http://www.veding.com/wx/order/confirm.wx?action=weixin_qinchun" title="我的购物车">
+							<img src="./user_files/top3.png" alt=""> 购物车 <span class="count" id="shopingCartCount">1</span>
+					</a></li>
+					<li><a href="./user_files/user.htm" title="个人中心"> <img src="./user_files/top2.png" alt="">个人中心</a></li>
+				</ul>
+			</div>
+		</div><div class="clearfix">
+	 <div class="clear userli">
+	 	<div class="list-title">每日签到</div>
+	 	<ul id="customerSignin_btn">
+			<li class="buyadd" style="padding-left:10px;padding-right:10px;">
+				<input class="buying" type="button" style="width:100%;" value="今日未签到，点击签到" onclick="customerSignin();">
+			</li>
+	   </ul>
+		<ul>
+			<li class="bgstyle none" id="todaySignin_btn">今日已签到，明天继续哦</li>
+			<li class="bgstyle">
+				<p>累计签到次数：<b id="totalSigninCount">0</b>次</p>
+			</li>
+			<li class="bgstyle">
+				<p>每天签到一次，可获得1个积分</p>
+			</li>
+			<li class="bgstyle">
+				<p>连续签到7天，可获得1张优惠券</p>
+			</li>
+		</ul>
+	 	<div class="list-title">我的概况</div>
+		<ul>
+			<li class="bgstyle">顾客ID：20579</li>
+				<li class="bgstyle">累计下单数量：2</li>
+		 	
+               <li class="bgstyle">累计消费金额：29元</li>
+            <li class="bgstyle">我的积分：29</li>
+             	
+				<li class="bgstyle"><a href="http://www.veding.com/wx/customer/update.wx">修改个人信息</a></li>
+            	     
+		</ul>
+	 	<div class="list-title">我的订单</div>
+		<ul>
+			<li class="bgstyle"><a href="http://www.veding.com/wx/order/list.wx?orderStatus=0">待完成订单</a></li>
+			<li class="bgstyle"><a href="http://www.veding.com/wx/order/list.wx?orderStatus=5">已完成订单</a></li>
+			<li class="bgstyle"><a href="http://www.veding.com/wx/order/list.wx?orderStatus=2">已取消订单</a></li>
+			<li class="bgstyle"><a href="http://www.veding.com/wx/order/list.wx">所有订单</a></li>
+		</ul>
+	 	<div class="list-title">我的优惠</div>
+		<ul>
+			<li class="bgstyle">
+				<a href="http://www.veding.com/wx/shop/member/index.wx" data-ignore="true" onclick="showLoading();">会员中心</a>
+			</li>
+			<li class="bgstyle">
+				<a href="http://www.veding.com/wx/customer/coupon/list.wx" data-ignore="true" onclick="showLoading();">优惠券</a>
+			</li>
+			<li class="bgstyle">
+				<a href="http://www.veding.com/wx/prize/rotor/index.wx" data-ignore="true" onclick="showLoading();">大转盘</a>
+			</li>
+		</ul>
+		<div class="list-title">留言板</div>
+		<ul>
+			<li class="bgstyle">
+				<a href="http://www.veding.com/wx/comments/index.wx" data-ignore="true" onclick="showLoading();">商家留言</a>
+			</li>
+		</ul>
+	 </div>
+</div> 
+<div id="jQui_mask" class="ui-loader">
+	<span class="ui-icon ui-icon-loading spin"></span>
+	<h1>Loading Content</h1>
+</div>
+<div style="height:80px;">&nbsp;</div>
+
+</div></body></html>
