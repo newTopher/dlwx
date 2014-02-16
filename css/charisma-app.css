@@ -444,9 +444,6 @@ div.center,p.center,img.center {
 }
 
 .navbar-inner {
-	border-radius: 0 0 10px 10px;
-	-webkit-border-radius: 0 0 10px 10px;
-	-moz-border-radius: 0 0 10px 10px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 }

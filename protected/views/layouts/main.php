@@ -33,6 +33,7 @@
     <link href='<?php echo Yii::app()->getBaseUrl(); ?>/css/opa-icons.css' rel='stylesheet'>
     <link href='<?php echo Yii::app()->getBaseUrl(); ?>/css/uploadify.css' rel='stylesheet'>
     <link href='<?php echo Yii::app()->getBaseUrl(); ?>/css/jquery.validator.css' rel='stylesheet'>
+    <link href='<?php echo Yii::app()->getBaseUrl(); ?>/css/notifIt.css' rel='stylesheet'>
 </head>
 
 <body>

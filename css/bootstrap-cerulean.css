@@ -3293,7 +3293,7 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini {
 }
 
 .navbar-inner {
-	min-height: 40px;
+	min-height: 70px;
 	padding-left: 20px;
 	padding-right: 20px;
 	background-color: #50a8dc;
@@ -4774,7 +4774,7 @@ to {
 }
 
 .navbar .navbar-inner {
-	background-color: #3f9fd9;
+	background-color: #646363;
 }
 
 .navbar-inner {
