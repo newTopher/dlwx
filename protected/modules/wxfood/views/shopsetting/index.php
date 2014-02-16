@@ -26,7 +26,7 @@
         </div>
         <div class="box-content">
             <div class="box-content">
-                <form action="<?php echo Yii::app()->getBaseUrl(); ?>" class="form-horizontal">
+                <form class="form-horizontal">
                     <input type="hidden" name="id" value="">
                     <fieldset>
                         <div class="control-group">
@@ -50,6 +50,28 @@
                                 <span class="help-inline" id="map_select">未标记地理位置</span>
                             </div>
                         </div>
+                        <div class="control-group">
+                            <label class="control-label" for="focusedInput">店铺地址</label>
+                            <div class="controls">
+                                <input class="input-xlarge focused" name="name" type="text" value="">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">店铺封面图片</label>
+                            <div class="controls">
+                                <div class="uploader" id="uniform-fileInput"><input class="input-file uniform_on" name="index_image" type="file" size="19" style="opacity: 0;">
+                                    <span class="filename">No file selected</span><span class="action">Choose File</span>
+                                </div>
+                                <a href="javascript:;" class="btn btn-small btn-primary" id="upBtn">上传</a>
+                                <span id="showErrInfo" style="color: red"></span>
+                                <?php if(isset($webdata->index_image)): ?>
+                                    <div  style="margin-top: 10px;margin-left: 2px;">
+                                        <img src="<?php echo Yii::app()->getBaseUrl().'/upload/wxwebsite/'.$webdata->index_image; ?>" class="img-rounded" style="width: 160px; height: 100px;">
+                                    </div>
+                                <?php endif; ?>
+                                <p class="help-block"><span class="label label-info">建议</span>&nbsp;尺寸480*320像素</p>
+                            </div>
+                        </div>
                         <div class="form-actions">
                             <button type="submit" class="btn btn-primary">保存</button>
                             <button class="btn">取消</button>
@@ -61,6 +83,43 @@
         </div>
     </div>
 </div>
-
+<script type="text/javascript">
+    $(document).ready(function(){
+        /*
+         $("#upBtn").bind("click",function(){
+         $.ajaxFileUpload({
+         url:"php/uploadfile.php",
+         loadPicUrl:"images/loading.gif",
+         formElemIds:["username","userpwd","uploadFile1","uploadFile2"],
+         dataType:"html",
+         success:function(data){
+         $("body").html(data);
+         },
+         error:function(data){
+         alert(data);
+         }
+         });
+         });
+         */
+        $("#upBtn").bind("click",function(){
+            $.ajaxFileUpload({
+                url:"<?php echo Yii::app()->request->baseUrl; ?>/Upload/file",
+                loadPicUrl:"<?php echo Yii::app()->request->baseUrl; ?>/images/loading.gif",
+                formElemIds:["with_image"],
+                dataType:"json",
+                success:function(data){
+                    $("#showErrInfo").text("");// 清空原来的提示信息
+                    $("#showErrInfo").text("用户姓名:" + data.username +
+                        ";用户密码:" + data.userpwd +
+                        ";请求类型:" + data.dataType +
+                        ";提示信息:" + data.retTipInfo);
+                },
+                error:function(data){
+                    alert(data);
+                }
+            });
+        });
+    });
+</script>
 </div>
 </div>
