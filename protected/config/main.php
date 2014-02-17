@@ -59,22 +59,8 @@ $config = array(
         */
         // uncomment the following to use a MySQL database
         /**/
-<<<<<<< HEAD
-<<<<<<< HEAD
-        'db'=>array(
-            'connectionString' => 'mysql:host=localhost;dbname=wapwei',
-            'emulatePrepare' => true,
-            'username' => 'root',
-            'password' => '09270815',
-            'charset' => 'utf8',
-            'tablePrefix'=>''
-        ),
-=======
 
->>>>>>> origin/master
-=======
 
->>>>>>> origin/master
         'image'=>array(
             'class'=>'application.extensions.image.CImageComponent',
             // GD or ImageMagick
@@ -120,9 +106,6 @@ $database   = @include_once dirname(__FILE__).'/database.php';
 if(!empty($database)){
     $config['components'] = @array_merge($config['components'], $database);
 }
+return $config;
 
-<<<<<<< HEAD
-return $config;
-=======
-return $config;
->>>>>>> origin/master
+
