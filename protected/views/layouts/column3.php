@@ -9,25 +9,7 @@
             </a>
             <a class="brand" href="index.html"> <img alt="Charisma Logo" src="<?php echo Yii::app()->getBaseUrl();?>/img/logo20.png" /> <span>wapwei</span></a>
 
-            <!-- theme selector starts -->
-            <div class="btn-group pull-right theme-container" >
-                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="icon-tint"></i><span class="hidden-phone"> 切换主题</span>
-                    <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu" id="themes">
-                    <li><a data-value="classic" href="#"><i class="icon-blank"></i> Classic</a></li>
-                    <li><a data-value="cerulean" href="#"><i class="icon-blank"></i> Cerulean</a></li>
-                    <li><a data-value="cyborg" href="#"><i class="icon-blank"></i> Cyborg</a></li>
-                    <li><a data-value="redy" href="#"><i class="icon-blank"></i> Redy</a></li>
-                    <li><a data-value="journal" href="#"><i class="icon-blank"></i> Journal</a></li>
-                    <li><a data-value="simplex" href="#"><i class="icon-blank"></i> Simplex</a></li>
-                    <li><a data-value="slate" href="#"><i class="icon-blank"></i> Slate</a></li>
-                    <li><a data-value="spacelab" href="#"><i class="icon-blank"></i> Spacelab</a></li>
-                    <li><a data-value="united" href="#"><i class="icon-blank"></i> United</a></li>
-                </ul>
-            </div>
-            <!-- theme selector ends -->
+
 
             <!-- user dropdown starts -->
             <div class="btn-group pull-right" >
@@ -129,14 +111,24 @@
                 <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/User/pwdset"><i class="icon-edit"></i><span class="hidden-tablet">修改密码</span></a></li>
             </ul>
         </div><!--/.well -->
-        <div class="well nav-collapse sidebar-nav">
-            <ul class="nav nav-tabs nav-stacked main-menu">
-                <li class="nav-header hidden-tablet">微官网</li>
-                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/base"><i class="icon-info-sign"></i><span class="hidden-tablet">基本信息</span></a></li>
-                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/menuset"><i class="icon-list-alt"></i><span class="hidden-tablet">菜单管理</span></a></li>
-                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Package/add"><i class="icon-thumbs-up"></i><span class="hidden-tablet">个性定制</span></a></li>
-            </ul>
-        </div><!--/.well -->
+        <?php if(Yii::app()->session['user']->trade_id == 1): ?>
+            <div class="well nav-collapse sidebar-nav">
+                <ul class="nav nav-tabs nav-stacked main-menu">
+                    <li class="nav-header hidden-tablet">微官网</li>
+                    <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/base"><i class="icon-info-sign"></i><span class="hidden-tablet">基本信息</span></a></li>
+                    <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/menuset"><i class="icon-list-alt"></i><span class="hidden-tablet">菜单管理</span></a></li>
+                    <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Package/add"><i class="icon-thumbs-up"></i><span class="hidden-tablet">个性定制</span></a></li>
+                </ul>
+            </div><!--/.well -->
+        <?php endif; ?>
+        <?php if(Yii::app()->session['user']->trade_id == 2): ?>
+            <div class="well nav-collapse sidebar-nav">
+                <ul class="nav nav-tabs nav-stacked main-menu">
+                    <li class="nav-header hidden-tablet">行业版</li>
+                    <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/wxfood"><i class="icon-info-sign"></i><span class="hidden-tablet">微餐饮</span></a></li>
+                </ul>
+            </div><!--/.well -->
+        <?php endif; ?>
         <div class="well nav-collapse sidebar-nav">
             <ul class="nav nav-tabs nav-stacked main-menu">
                 <li class="nav-header hidden-tablet">微信基础服务</li>
@@ -154,12 +146,7 @@
                 <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Activity/index"><i class="icon-random"></i><span class="hidden-tablet">活动中心</span></a></li>
             </ul>
         </div><!--/.well -->
-        <div class="well nav-collapse sidebar-nav">
-            <ul class="nav nav-tabs nav-stacked main-menu">
-                <li class="nav-header hidden-tablet">微网站版本</li>
-                <li><a class="ajax-link" href="index.html"><i class="icon-star"></i><span class="hidden-tablet">门店管理</span></a></li>
-            </ul>
-        </div><!--/.well -->
+
         <div class="well nav-collapse sidebar-nav">
             <ul class="nav nav-tabs nav-stacked main-menu">
                 <li class="nav-header hidden-tablet">数据统计</li>
@@ -256,3 +243,5 @@
         <!-- application script for Charisma demo -->
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/charisma.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/add-money.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/notifIt.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.ajaxupload.1.0.js"></script>
