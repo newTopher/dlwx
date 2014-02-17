@@ -15,7 +15,6 @@ class UploadController extends Controller{
         $upFile01TmpNm = $_FILES['with_image']['tmp_name'];
         $upFile01Type = $_FILES['with_image']['type'];
         $upFile01Err = $_FILES['with_image']['error'];
-
         if ($upFile01Name == ''){
             $this->setOperateFlag('false',"请上传文件!");
             //echo "<script>alert('请上传文件!');</script>";

@@ -76,7 +76,6 @@
 			jQuery.createOverLay();
 			jQuery.createLoadingPic(oJson.loadPicUrl);
 			// 遮罩效果 end
-			
 			// 创建用于上传文件的iframe和form start
 			var timeId = new Date().getTime();
 			var upfForm = jQuery.createUploadForm(timeId,oJson.formElemIds,oJson.dataType);
@@ -84,7 +83,6 @@
 				upfFormId = "jqAjaxUploadFrom" + timeId,
 				upfIframeId = "jqAjaxUploadIframe" + timeId;
 			// 创建用于上传文件的iframe和form end
-				
 			// 上传文件的回调函数 start
 			var xml = {};
 			var uploadFileCallback = function(){
@@ -129,7 +127,6 @@
 				ajaxUpfForm.attr("action",oJson.url);
 				ajaxUpfForm.attr("method","post");
 				ajaxUpfForm.attr("target",upfIframeId);
-				
 				if (ajaxUpfForm.attr("encoding")){
 					ajaxUpfForm.attr("encoding","multipart/form-data");
 				}else{

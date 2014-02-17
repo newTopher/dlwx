@@ -157,4 +157,4 @@
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/charisma.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/add-money.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/notifIt.js"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.ajaxupload.1.0.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/juploader.js"></script>
