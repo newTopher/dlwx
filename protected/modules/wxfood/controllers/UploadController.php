@@ -48,7 +48,7 @@ class UploadController extends Controller{
         $reqDataTp = $_REQUEST["dataTp"];
         echo "<div id='resultData'>";
         if ($reqDataTp == 'html'){
-            echo "<h1 style='color:red'>PHP Ajax 多文件上传 成功</h1>";
+            echo "<h1 style='color:red'>PHP Ajax 多文件上传成功</h1>";
         }elseif ($reqDataTp == 'json'){
             $jsonArr = array("username"=> $reqUserNm,
                 "userpwd" => $reqUserPwd,
