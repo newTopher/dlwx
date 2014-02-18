@@ -60,6 +60,7 @@ $config = array(
         // uncomment the following to use a MySQL database
         /**/
 
+
         'image'=>array(
             'class'=>'application.extensions.image.CImageComponent',
             // GD or ImageMagick
@@ -105,5 +106,6 @@ $database   = @include_once dirname(__FILE__).'/database.php';
 if(!empty($database)){
     $config['components'] = @array_merge($config['components'], $database);
 }
-
 return $config;
+
+
