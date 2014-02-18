@@ -26,7 +26,7 @@ $config = array(
         'gii'=>array(
             'class'=>'system.gii.GiiModule',
             'password'=>'123456',
-            // If removed, Gii defaults to localhost only. Edit carefully to taste.
+            // If removed, Gii defaults to localhost only. Edit  carefullyto taste.
             'ipFilters'=>array('127.0.0.1','::1'),
         ),
         */
@@ -59,6 +59,7 @@ $config = array(
         */
         // uncomment the following to use a MySQL database
         /**/
+
 
         'image'=>array(
             'class'=>'application.extensions.image.CImageComponent',
@@ -105,5 +106,6 @@ $database   = @include_once dirname(__FILE__).'/database.php';
 if(!empty($database)){
     $config['components'] = @array_merge($config['components'], $database);
 }
-
 return $config;
+
+

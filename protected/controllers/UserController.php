@@ -83,4 +83,8 @@ class UserController extends Controller{
         }
         $this->render('userlist',array('list'=>$userlist,'pages'=>$pager));
     }
+
+    public function actionAddUser(){
+        $this->render('add');
+    }
 }
