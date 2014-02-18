@@ -70,6 +70,7 @@ class AgentWxUserModel extends Ar{
             if(self::model()->updateByPk($this->id,array(
                 'status'=>$this->status,
                 'update_time'=>$this->add_time,
+                'wx_bind_time'=>$this->add_time,
                 'mark'=>$this->mark
             ))){
                 return true;

@@ -13,6 +13,7 @@ class LoginController extends Controller{
         $model=new LoginForm();
         $errMsg='';
         if(isset($_POST['email'])){
+
             Yii::app()->user->returnUrl = Yii::app()->getBaseUrl()."/main";
             $model->email=Yii::app()->request->getParam('email','');
             $model->password=Yii::app()->request->getParam('password','');
