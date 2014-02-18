@@ -84,18 +84,18 @@
                         <td><?php echo $userdata->money; ?>元   <button class="btn btn-mini btn-success">充值</button></td>
                     </tr>
                     <tr>
-                        <td>我的微盟版本</td>
+                        <td>微盟版本</td>
                         <?php if($userdata->web_type == 1): ?>
-                        <td>V-领先版</td>
+                        <td>企业基础版</td>
                         <?php endif; ?>
                         <?php if($userdata->web_type == 2): ?>
-                            <td>微餐饮版</td>
+                            <td>微房产</td>
                         <?php endif; ?>
                         <?php if($userdata->web_type == 3): ?>
-                            <td>微房产版</td>
+                            <td>微餐饮</td>
                         <?php endif; ?>
                         <?php if($userdata->web_type == 4): ?>
-                            <td>高级版</td>
+                            <td>定制版</td>
                         <?php endif; ?>
 
 

@@ -102,19 +102,25 @@
          */
         $.jUploader({
             button: 'upBtn', // 这里设置按钮id
-            action: '<?php echo Yii::app()->request->baseUrl; ?>/Upload/File', // 这里设置上传处理接口，这个加了参数test_cancel=1来测试取消
+            action: '<?php echo Yii::app()->request->baseUrl; ?>/wxfood/Upload/File', // 这里设置上传处理接口，这个加了参数test_cancel=1来测试取消
             eventType:2,//触发类型
             addeventbutton:'import_begin',// 要绑定事件的元素的id
             filenamed:'filename',//存放选择的文件路径的文本框的id
+            onUpload: function (fileName) {
+                $('#photo2').hide();
+                $('#loading2').show();
+            },
             onComplete: function (fileName, response) {
-
                 // response是json对象，格式可以按自己的意愿来定义，例子为： { success: true, fileUrl:'' }
                 if (response.success) {
-
 
                 } else {
 
                 }
+            },
+            onCancel: function (fileName) {
+                $('#photo2').show();
+                $('#loading2').hide();
             }
         });
     });

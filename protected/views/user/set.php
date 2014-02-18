@@ -28,14 +28,12 @@
                             </div>
                         </div>
                         <div class="control-group">
-                            <label class="control-label" for="selectError3">所属行业</label>
+                            <label class="control-label" for="selectError3">行业</label>
                             <div class="controls">
                                 <select id="selectError3">
-                                    <option value="1">IT</option>
-                                    <option value="2">电子商务</option>
-                                    <option value="3">房产</option>
-                                    <option value="4">餐饮</option>
-                                    <option value="5">服务</option>
+                                    <option value="1" <?php if($userdata->trade_id == 1){ echo 'selected'; }?>>基础行业</option>
+                                    <option value="2" <?php if($userdata->trade_id == 2){ echo 'selected'; }?>>房产</option>
+                                    <option value="3" <?php if($userdata->trade_id == 3){ echo 'selected'; }?>>餐饮</option>
                                 </select>
                             </div>
                         </div>
