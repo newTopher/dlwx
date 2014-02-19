@@ -1,11 +1,112 @@
-#web_skin_index{background:#f8f1df;}
-#web_skin_index .list{width:100%; overflow:hidden; margin:0 auto; padding-bottom:2px;}
-#web_skin_index .web_skin_index_list{float:left; _display:inline; overflow:hidden; position:relative; z-index:1;}
-#web_skin_index .img img{width:100%; height:100%;}
-#web_skin_index .banner{width:100%; height:160px;}
-#web_skin_index .banner *{width:100%; height:100%; overflow:hidden;}
-#web_skin_index .box{width:100%; padding:4px 0; overflow:hidden;}
-#web_skin_index .box .list{width:33.33%; *width:33%;}
-#web_skin_index .box .list>div{margin:2px; border-right:2px solid #E9E6D7; border-bottom:2px solid #E9E6D7; background:#fff;}
-#web_skin_index .box .img{height:60px; padding:4px; overflow:hidden;}
-#web_skin_index .box .list .text{height:24px; line-height:24px; overflow:hidden; text-align:center; font-size:12px;}
+.m_lefter {
+    width: 520px;
+    overflow: hidden;
+    float: left;
+    _display: inline;
+    border: 1px solid #ddd;
+    background: #fff;
+    margin-right: 20px;
+}
+#web_skin_index {
+    background: #f8f1df;
+}
+#web_skin_index .list {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-bottom: 2px;
+}
+#web_skin_index .banner {
+    width: 100%;
+    height: 160px;
+}
+#web_skin_index .web_skin_index_list {
+    float: left;
+    _display: inline;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+#web_skin_index .banner * {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#web_skin_index .img img {
+    width: 100%;
+    height: 100%;
+}
+#web_skin_index .mod {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    background: #999;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+    display: none;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    cursor: pointer;
+}
+#web_skin_index .banner * {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#SetHomeCurrentBox {
+    border: 5px solid #F60;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    background: #999;
+    filter: alpha(opacity=60);
+    -moz-opacity: 0.6;
+    -khtml-opacity: 0.6;
+    opacity: 0.6;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    font-family: 'Arial';
+}
+#web_skin_index .box .list {
+    width: 33.33%;
+}
+#web_skin_index .web_skin_index_list {
+    float: left;
+    _display: inline;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+#web_skin_index .list {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-bottom: 2px;
+}
+#web_skin_index .box .img {
+    height: 60px;
+    padding: 4px;
+    overflow: hidden;
+}
+#web_skin_index .img img {
+    width: 100%;
+    height: 100%;
+}
+#web_skin_index .box .list .text {
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 12px;
+}
