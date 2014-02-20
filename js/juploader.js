@@ -52,7 +52,6 @@
         var createIframe = function () {
             var id = 'jUploaderIframe' + options.id;
             var iframe = $('<iframe id="' + id + '" name="' + id + '" src="javascript:false;" style="display:none"></iframe>').bind('load', complete);
-
             return iframe;
         };
 

@@ -1,5 +1,28 @@
 <link href="<?php echo Yii::app()->getBaseUrl(); ?>/backtheme/<?php echo $template_name; ?>/css/index.css" rel="stylesheet">
 <link href="<?php echo Yii::app()->getBaseUrl(); ?>/backtheme/<?php echo $template_name; ?>/css/index_media.css" rel="stylesheet">
+
+<div id="mysilderModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">轮播图上传(5张)</h3>
+    </div>
+    <div class="modal-body" style="width: 480px;overflow: hidden;">
+        <div class="container">
+            <div class="slider_imgbox">
+                <span id="upBtn"></span>
+                <a href="javascript:;" class="btn btn-primary" id="import_begin">上传</a>
+                <span id="showErrInfo" style="color: red"></span>
+            </div>
+            <div class="slider_imgbox"></div>
+            <div class="slider_imgbox"></div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+        <button class="btn btn-primary">确定</button>
+    </div>
+</div>
+
 <div class="row-fluid">
     <div class="box span12">
         <div class="box-header well">
@@ -74,10 +97,57 @@
     $(".mini_box").each(function(i,e){
         $(this).mouseenter(function(){
             $(this).append("<div id='SetHomeCurrentBox' style='height: 144px; width: 160px;line-height: 144px;'>" +
-                "点击添加轮播图</div>");
+                "点击修改此模块</div>");
         }).mouseleave(function(){
                 $("#SetHomeCurrentBox").remove();
             });
     });
 
+    $("#slider").click(function(){
+        $('#mysilderModal').modal('show')
+    });
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        /*
+         $("#upBtn").bind("click",function(){
+         $.ajaxFileUpload({
+         url:"php/uploadfile.php",
+         loadPicUrl:"images/loading.gif",
+         formElemIds:["username","userpwd","uploadFile1","uploadFile2"],
+         dataType:"html",
+         success:function(data){
+         $("body").html(data);
+         },
+         error:function(data){
+         alert(data);
+         }
+         });
+         });
+         */
+        $.jUploader({
+            button: 'upBtn', // 这里设置按钮id
+            action: '<?php echo Yii::app()->request->baseUrl; ?>/wxfood/Upload/File', // 这里设置上传处理接口，这个加了参数test_cancel=1来测试取消
+            eventType:2,//触发类型
+            addeventbutton:'import_begin',// 要绑定事件的元素的id
+            filenamed:'filename',//存放选择的文件路径的文本框的id
+            onUpload: function (fileName) {
+                $('#photo2').hide();
+                $('#loading2').show();
+            },
+            onComplete: function (fileName, response) {
+                // response是json对象，格式可以按自己的意愿来定义，例子为： { success: true, fileUrl:'' }
+                if (response.success) {
+
+                } else {
+
+                }
+            },
+            onCancel: function (fileName) {
+                $('#photo2').show();
+                $('#loading2').hide();
+            }
+        });
+    });
 </script>

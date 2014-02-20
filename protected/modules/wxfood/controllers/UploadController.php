@@ -9,7 +9,7 @@
 class UploadController extends Controller{
 
     public function actionFile(){
-        print_r($_FILES['jUploaderFile']);exit;
+        print_r($GLOBALS["HTTP_RAW_POST_DATA"]);exit;
     }
 
 }

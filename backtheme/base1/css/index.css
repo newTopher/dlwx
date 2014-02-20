@@ -110,3 +110,12 @@
     text-align: center;
     font-size: 12px;
 }
+.slider_imgbox{
+    width: 520px;
+    height: 100px;
+    background-color: #dceaf4;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    margin-left: 20px;
+    padding:10px;
+}
