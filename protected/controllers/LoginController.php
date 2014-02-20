@@ -7,6 +7,18 @@
  * To change this template use File | Settings | File Templates.
  */
 class LoginController extends Controller{
+    public function actions(){
+        return array(
+            // captcha action renders the CAPTCHA image displayed on the contact page
+            'captcha'=>array(
+                'class'=>'CCaptchaAction',
+                'backColor'=>0xFFFFFF,
+                'maxLength'=>'4',       // 最多生成几个字符
+                'minLength'=>'2',       // 最少生成几个字符
+                'height'=>'40'
+            ),
+        );
+    }
 
     public function actionIndex(){
         //代理商用户15293897812@wapwei
