@@ -18,7 +18,7 @@
                     <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="<?php echo Yii::app()->getBaseUrl();?>/login/out">退出</a></li>
+                    <li><a href="<?php echo Yii::app()->getBaseUrl();?>/login/loginOut">退出</a></li>
                 </ul>
             </div>
             <!-- user dropdown ends -->
@@ -58,7 +58,7 @@
     <div class="well nav-collapse sidebar-nav">
         <ul class="nav nav-tabs nav-stacked main-menu">
             <li class="nav-header hidden-tablet">微信用户管理</li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/user/userlist"><i class="icon-home"></i><span class="hidden-tablet">微信用户列表</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/user/list"><i class="icon-home"></i><span class="hidden-tablet">微信用户列表</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/AgentUserCheck/list"><i class="icon-home"></i><span class="hidden-tablet">微信用户审核</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/user/AddUser"><i class="icon-home"></i><span class="hidden-tablet">微信用户添加</span></a></li>
         </ul>
@@ -87,15 +87,14 @@
                 <li class="nav-header hidden-tablet">个人中心</li>
                 <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/set"><i class="icon-home"></i><span class="hidden-tablet">账户设置</span></a></li>
                 <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/pwdset"><i class="icon-home"></i><span class="hidden-tablet">密码修改</span></a></li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/AddMoney"><i class="icon-home"></i><span class="hidden-tablet">平台充值</span></a></li>
             </ul>
         </div><!--/.well -->
-
-
-
         <div class="well nav-collapse sidebar-nav">
             <ul class="nav nav-tabs nav-stacked main-menu">
                 <li class="nav-header hidden-tablet">代理商专区</li>
                 <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/addUser"><i class="icon-home"></i><span class="hidden-tablet">添加客户</span></a></li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/addUser"><i class="icon-home"></i><span class="hidden-tablet">客户列表</span></a></li>
                 <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/applyList"><i class="icon-home"></i><span class="hidden-tablet">客户申请管理</span></a></li>
             </ul>
         </div><!--/.well -->

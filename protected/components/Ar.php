@@ -6,9 +6,8 @@ class Ar extends CActiveRecord{
 
     public function __construct($scenario='insert', $dbname = ''){
         if (!empty($dbname)){
-            $this->dbname    = $dbname;
+            $this->dbname  =  $dbname;
         }
-
         parent::__construct($scenario);
     }
 

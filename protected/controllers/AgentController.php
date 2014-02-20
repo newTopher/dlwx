@@ -17,11 +17,32 @@ class AgentController extends Controller{
     }
 
     public function actionSet(){
-        $this->render('set');
+        $agent_user=new AgentUserModel();
+        $agent_user->id=Yii::app()->session['user']->id;
+        $list=$agent_user->AgentUserView();
+        $this->render('set',array('list'=>$list));
     }
 
     public function actionPwdSet(){
-        $this->render('pwdset');
+        $msg="";
+        if($_POST){
+            $oldPass=Yii::app()->request->getParam('oldPass');
+            $newPass=Yii::app()->request->getParam('newPass');
+            $newPass1=Yii::app()->request->getParam('newpass1');
+            if($newPass==$newPass1){
+                $agent_user=new AgentUserModel();
+                $agent_user->password=$newPass;
+                $agent_user->changePassword();
+            }else{
+                $msg="两次密码输入不对";
+            }
+
+        }
+        $this->render('pwdset',array('msg'=>$msg));
+    }
+
+    public function  actionAddMoney(){
+         $this->render('')
     }
 
     public function actionAddWexinAccount(){

@@ -28,4 +28,9 @@ class LoginController extends Controller{
         $this->render('login',array('errMsg'=>$errMsg));
     }
 
+    public function actionLoginOut(){
+        echo 1;
+        $this->redirect(Yii::app()->request->baseUrl."/login/index");
+    }
+
 }
