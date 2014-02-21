@@ -220,6 +220,12 @@ class WeixinController extends Controller{
         }
     }
 
+    public function actionTemplateset(){
+        $webData = WxWebsiteModel::getWxWebByUid(Yii::app()->session['user']->id);
+        $template_name = TemplateModel::getTemplateNameByTpid($webData->template_id);
+        $this->render('templateset',array('template_name'=>$template_name));
+    }
+
 
 
 }

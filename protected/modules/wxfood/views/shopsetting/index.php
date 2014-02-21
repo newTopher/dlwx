@@ -56,13 +56,12 @@
                                 <input class="input-xlarge focused" name="name" type="text" value="">
                             </div>
                         </div>
+                        <input type="hidden" name="with_image" id="filename" />
                         <div class="control-group">
                             <label class="control-label">店铺封面图片</label>
                             <div class="controls">
-                                <div class="uploader" id="uniform-fileInput"><input class="input-file uniform_on" name="index_image" type="file" size="19" style="opacity: 0;">
-                                    <span class="filename">No file selected</span><span class="action">Choose File</span>
-                                </div>
-                                <a href="javascript:;" class="btn btn-small btn-primary" id="upBtn">上传</a>
+                                <span id="upBtn"></span>
+                                <a href="javascript:;" class="btn btn-primary" id="import_begin">上传</a>
                                 <span id="showErrInfo" style="color: red"></span>
                                 <?php if(isset($webdata->index_image)): ?>
                                     <div  style="margin-top: 10px;margin-left: 2px;">
@@ -101,23 +100,28 @@
          });
          });
          */
-        $("#upBtn").bind("click",function(){
-            $.ajaxFileUpload({
-                url:"<?php echo Yii::app()->request->baseUrl; ?>/Upload/file",
-                loadPicUrl:"<?php echo Yii::app()->request->baseUrl; ?>/images/loading.gif",
-                formElemIds:["with_image"],
-                dataType:"json",
-                success:function(data){
-                    $("#showErrInfo").text("");// 清空原来的提示信息
-                    $("#showErrInfo").text("用户姓名:" + data.username +
-                        ";用户密码:" + data.userpwd +
-                        ";请求类型:" + data.dataType +
-                        ";提示信息:" + data.retTipInfo);
-                },
-                error:function(data){
-                    alert(data);
+        $.jUploader({
+            button: 'upBtn', // 这里设置按钮id
+            action: '<?php echo Yii::app()->request->baseUrl; ?>/wxfood/Upload/File', // 这里设置上传处理接口，这个加了参数test_cancel=1来测试取消
+            eventType:2,//触发类型
+            addeventbutton:'import_begin',// 要绑定事件的元素的id
+            filenamed:'filename',//存放选择的文件路径的文本框的id
+            onUpload: function (fileName) {
+                $('#photo2').hide();
+                $('#loading2').show();
+            },
+            onComplete: function (fileName, response) {
+                // response是json对象，格式可以按自己的意愿来定义，例子为： { success: true, fileUrl:'' }
+                if (response.success) {
+
+                } else {
+
                 }
-            });
+            },
+            onCancel: function (fileName) {
+                $('#photo2').show();
+                $('#loading2').hide();
+            }
         });
     });
 </script>
