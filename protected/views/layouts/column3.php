@@ -180,8 +180,8 @@
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap-modal.js"></script>
         <!-- custom dropdown library -->
 
-        <!-- application script for Charisma demo -->
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/charisma.js"></script>
+
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/add-money.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/notifIt.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.uploadify.min.js"></script>
 

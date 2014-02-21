@@ -1,32 +1,6 @@
 <link href="<?php echo Yii::app()->getBaseUrl(); ?>/backtheme/<?php echo $template_name; ?>/css/index.css" rel="stylesheet">
 <link href="<?php echo Yii::app()->getBaseUrl(); ?>/backtheme/<?php echo $template_name; ?>/css/index_media.css" rel="stylesheet">
 
-<div id="mysilderModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">轮播图上传(5张)</h3>
-    </div>
-    <div class="modal-body" style="width: 480px;overflow: hidden;">
-        <div class="container">
-            <div class="slider_imgbox">
-                <form id="form" action="<?php echo Yii::app()->request->baseUrl;?>/wxfood/Upload/File" method="post" enctype="multipart/form-data">
-                    <input type="file" name="myfile" multiple><br>
-                    <input type="button" id="slider_btn1" value="Upload File to Server">
-                </form>
-                <div class="progress">
-                    <div class="bar"></div >
-                    <div class="percent">0%</div >
-                </div>
-            </div>
-            <div class="slider_imgbox"></div>
-            <div class="slider_imgbox"></div>
-        </div>
-    </div>
-    <div class="modal-footer">
-        <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
-        <button class="btn btn-primary">确定</button>
-    </div>
-</div>
 
 <div class="row-fluid">
     <div class="box span12">
@@ -112,4 +86,18 @@
        $('#mysilderModal').modal('show')
     });
 
+</script>
+
+<script type="text/javascript">
+    <?php $timestamp = time();?>
+    $(function() {
+        $('#file_upload').uploadify({
+            'formData'     : {
+                'timestamp' : '<?php echo $timestamp;?>',
+                'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
+            },
+            'swf'      : '<?php echo Yii::app()->request->baseUrl; ?>/js/uploadify.swf',
+            'uploader' : 'uploadify.php'
+        });
+    });
 </script>
