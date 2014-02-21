@@ -10,6 +10,7 @@ class AgentController extends Controller{
 
     public $layout='//layouts/column3';
 
+
     public function actionAddUser(){
         $token = Yii::app()->session['user']->token_sub.$this->genSubToken();
         $puid =  Yii::app()->session['user']->id;
@@ -31,18 +32,32 @@ class AgentController extends Controller{
             $newPass1=Yii::app()->request->getParam('newpass1');
             if($newPass==$newPass1){
                 $agent_user=new AgentUserModel();
-                $agent_user->password=$newPass;
+                $agent_user->id= Yii::app()->session['user']->id;
+                $agent_user->password=md5($newPass);
                 $agent_user->changePassword();
             }else{
                 $msg="两次密码输入不对";
             }
-
         }
         $this->render('pwdset',array('msg'=>$msg));
     }
 
     public function  actionAddMoney(){
-         $this->render('')
+        $agent_user=new AgentUserModel();
+        $agent_user->id=Yii::app()->session['user']->id;
+        $charge_note=new AgentUserModel();
+        $list=$agent_user->AgentUserView();
+        if($_POST){
+            $charge_note->uid=$agent_user->id;
+            $charge_note->money= Yii::app()->request->getParam('money','');
+            $charge_note->time=Yii::app()->request->getParam('date');
+            $charge_note->pay_way=Yii::app()->request->getParam('pay_way','');
+            $charge_note->email=Yii::app()->session['user']->email;
+            $charge_note->agent_name=Yii::app()->session['user']->name;
+        }else{
+            $msg = "";
+        }
+         $this->render('addMoney',array('list'=>$list));
     }
 
     public function actionAddWexinAccount(){
@@ -99,5 +114,6 @@ class AgentController extends Controller{
         }
     }
 
+    
 
 }

@@ -67,6 +67,10 @@ $config = array(
             'driver'=>'GD',
             // ImageMagick setup path
         ),
+        'captcha'=>array(
+            'class'=>'application.web.widgets.captcha.CCaptchaAction'
+            // ImageMagick setup path
+        ),
 
         'errorHandler'=>array(
             // use 'site/error' action to display errors

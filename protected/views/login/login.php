@@ -5,7 +5,9 @@
 
 $this->pageTitle=Yii::app()->name . ' - Login';
 ?>
+<script type="text/javascript">
 
+</script>
 <div class="container-fluid">
     <div class="row-fluid">
 
@@ -27,7 +29,6 @@ $this->pageTitle=Yii::app()->name . ' - Login';
                         请输入用户名和密码.
                     </div>
                 <?php endif; ?>
-
                 <form class="form-horizontal" action="<?php echo Yii::app()->request->baseUrl; ?>/index.php/login/index" method="post">
                     <fieldset>
                         <div class="input-prepend" title="Username" data-rel="tooltip">
@@ -39,17 +40,26 @@ $this->pageTitle=Yii::app()->name . ' - Login';
                             <span class="add-on"><i class="icon-lock"></i></span><input class="input-large span10" name="password" id="password" type="password" value="" />
                         </div>
                         <div class="clearfix"></div>
+                        <div>
+                            <?php // $this->widget('CCaptcha',array('showRefreshButton'=>false,'clickableImage'=>true,'imageOptions'=>array('alt'=>'点击换图','title'=>'点击换图','style'=>'cursor:pointer'))); ?>
+                            <input name="verifyCode" style="width:55px;">
+                        </div>
 
                         <div class="input-prepend">
                             <label class="remember" for="remember"><input type="checkbox" id="remember" value="1" name="remember"/>记住我</label>
                         </div>
+
                         <div class="clearfix"></div>
 
                         <p class="center span5">
                             <button type="submit" class="btn btn-primary">登陆</button>
                         </p>
+
+
+
                     </fieldset>
                 </form>
+
             </div><!--/span-->
         </div><!--/row-->
     </div><!--/fluid-row-->
