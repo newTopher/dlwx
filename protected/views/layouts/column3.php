@@ -178,8 +178,9 @@
         <!-- modal / dialog library -->
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap-modal.js"></script>
         <!-- custom dropdown library -->
-
-
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap-tab.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap-dropdown.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.dataTables.min.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/add-money.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/notifIt.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.uploadify.min.js"></script>
