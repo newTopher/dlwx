@@ -7,7 +7,7 @@
     <!-- blueprint CSS framework -->
     <script src="<?php echo Yii::app()->getBaseUrl(); ?>/js/jquery-1.7.2.min.js"></script>
     <link id="bs-css" href="<?php echo Yii::app()->getBaseUrl(); ?>/css/bootstrap-cerulean.css" rel="stylesheet">
-    <link href='<?php echo Yii::app()->getBaseUrl(); ?>/css/uploadify.css' rel='stylesheet'>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/css/uploadify.css"></script>
     <style type="text/css">
         body {
             padding-bottom: 40px;
@@ -16,6 +16,7 @@
             padding: 9px 0;
         }
     </style>
+
     <link href="<?php echo Yii::app()->getBaseUrl(); ?>/css/charisma-app.css" rel="stylesheet">
     <link href='<?php echo Yii::app()->getBaseUrl(); ?>/css/uniform.default.css' rel='stylesheet'>
     <link href='<?php echo Yii::app()->getBaseUrl(); ?>/css/notifIt.css' rel='stylesheet'>

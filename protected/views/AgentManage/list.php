@@ -71,6 +71,10 @@
                                         <i class="icon-trash icon-white"></i>
                                         停用
                                     </a>
+                                    <a class="btn btn-danger" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/Renew?id=<?php echo $val->id?>&type=<?php echo $val->type?>}">
+                                        <i class="icon-trash icon-white"></i>
+                                        续费
+                                    </a>
                                     <?php elseif($status1!=0 && $val->end_time <= time()):?>
 
                                     <a class="btn btn-danger" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/Renew?id=<?php echo $val->id?>&type=<?php echo $val->type?>}">
@@ -91,7 +95,6 @@
                                         <i class="icon-zoom-in icon-white"></i>
                                         编辑
                                     </a>
-
                                     <?php endif;?>
                                 </td>
                             </tr>

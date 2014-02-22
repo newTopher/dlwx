@@ -45,7 +45,7 @@
         <div class="controls" style= "margin:0 auto;width:500px;padding:10px;">
             <label class="control-label" for="appendedPrependedInput" style= "float:left;padding:10px;line-height: 10px;">充值金额</label>
              <div class="input-prepend input-append" style= "float:left;">
-                 <span class="add-on">￥</span><input id="appendedPrependedInput" size="16" type="text" name="add_money"><span class="add-on">.00</span>
+                 <span class="add-on">￥</span><input id="appendedPrependedInput" size="16" type="text" name="add_money"><span class="add-on">.00</span>*不修改可不填
              </div>
          </div>
     </div>
@@ -53,7 +53,7 @@
         <div class="controls" style= "margin:0 auto;width:500px;padding:10px;">
              <label class="control-label" for="appendedPrependedInput" style= "float:left;padding:10px;line-height: 10px;">模版费率</label>
              <div class="input-prepend input-append" style= "float:left;">
-                  <span class="add-on">￥</span><input id="appendedPrependedInput" size="16" type="text" name="rate"><span class="add-on">/套</span>
+                  <span class="add-on">￥</span><input id="appendedPrependedInput" size="16" type="text" name="rate"><span class="add-on">/套</span>*不修改可不填
              </div>
         </div>
         <div class="control-group" style= "width:100%;float:left;">

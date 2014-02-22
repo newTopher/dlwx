@@ -69,7 +69,7 @@
                             <label class="control-label" for="appendedPrependedInput">充值金额</label>
                             <div class="controls">
                                 <div class="input-prepend input-append">
-                                    <span class="add-on">$</span><input name="money" id="appendedPrependedInput" size="16" type="text"><span class="add-on">.00</span>
+                                    <span class="add-on">$</span><input name="money" id="appendedPrependedInput" size="16" type="text"><span class="add-on">.00</span>*不修改可不填
                                 </div>
                             </div>
                         </div>

@@ -8,14 +8,28 @@
  */
 class LoginController extends Controller{
 
+    public function actions()
+    {
+        return array(
+            // captcha action renders the CAPTCHA image displayed on the contact page
+            'captcha'=>array(
+                'class'=>'CCaptchaAction',
+                'backColor'=>0xFFFFFF,
+                'maxLength'=>'5',       // 最多生成几个字符
+                'minLength'=>'4',       // 最少生成几个字符
+                'height'=>'40'
+            ),
+        );
+    }
+
     public function actionIndex(){
-        //代理商用户15293897812@wapwei
+        //代理商用户15293897812@wapwe$verifyCodei
         $model=new LoginForm();
         $errMsg='';
         if(isset($_POST['email'])){
-
             Yii::app()->user->returnUrl = Yii::app()->getBaseUrl()."/main";
             $model->email=Yii::app()->request->getParam('email','');
+            $model->verifyCode=Yii::app()->request->getParam('verifyCode','');
             $model->password=Yii::app()->request->getParam('password','');
             $model->rememberMe=Yii::app()->request->getParam('remember','');
             if($model->validate() && $model->login()){
@@ -25,7 +39,11 @@ class LoginController extends Controller{
                 $errMsg='用户名或者密码错误';
             }
         }
-        $this->render('login',array('errMsg'=>$errMsg));
+        $this->render('login',array('errMsg'=>$errMsg,'model'=>$model));
+    }
+    public function actionLoginOut(){
+        echo 1;
+        $this->redirect(Yii::app()->request->baseUrl."/login/index");
     }
 
 }

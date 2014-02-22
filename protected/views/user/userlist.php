@@ -54,11 +54,11 @@
 <tr class="odd">
     <td class=" sorting_1"><?php  echo $val['user']['id'];?></td>
     <td class=" sorting_1"><?php  echo $val['user']['email'];?></td>
-    <td class=" sorting_1"><?php echo $val['user']['name'];?></td>
+    <td class=" sorting_1"><?php echo empty($val['user']['name'])?"匿名":$val['user']['name'];?></td>
     <td class=" sorting_1"><?php echo $val['agent_user']['email'];?></td>
     <td class="center "><?php echo date('Y/m/d H:i:s',$val['user']['last_login_time']);?></td>
     <td class="center "><?php echo date('Y/m/d H:i:s',$val['user']['deadline_date']);?></td>
-    <td class="center "><?php echo $val['user']['money'];?></td>
+    <td class="center "><?php echo empty($val['user']['money'])?0:$val['user']['money'];?></td>
 
     <td class="center ">
         <?php
@@ -89,14 +89,14 @@
             <i class="icon-trash icon-white"></i>
             停用
         </a>
-        <?php elseif($status1==0 && $time<$end_time):?>//kaiqi
+        <?php elseif($status1==0 && $time<$end_time):?>
         &nbsp;&nbsp;&nbsp;<span class="label" href="">编辑</span>
         &nbsp;&nbsp;&nbsp;
         <a class="btn btn-danger" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/Open?id=<?php echo $val['user']['id']?>&type=<?php echo $val['user']['type']?>">
             <i class="icon-trash icon-white"></i>
             开启
         </a>
-            <?php elseif($status1==0 && $time>=$end_time):?>//xufei
+            <?php elseif($status1==0 && $time>=$end_time):?>
             &nbsp;&nbsp;&nbsp;<span class="label" href="">编辑</span>
             &nbsp;&nbsp;&nbsp;
             <a class="btn btn-danger" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/Renew?id=<?php echo $val['user']['id']?>&type=<?php echo $val['user']['type']?>">

@@ -9,7 +9,7 @@
 class UploadController extends Controller{
 
     public function actionFile(){
-        print_r($GLOBALS["HTTP_RAW_POST_DATA"]);exit;
+       print_r($_FILES);exit;
     }
 
 }

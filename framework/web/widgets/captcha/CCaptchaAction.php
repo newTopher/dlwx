@@ -153,15 +153,14 @@ class CCaptchaAction extends CAction
 	{
 		if($this->fixedVerifyCode !== null)
 			return $this->fixedVerifyCode;
-
 		$session = Yii::app()->session;
 		$session->open();
 		$name = $this->getSessionKey();
-		if($session[$name] === null || $regenerate)
-		{
+		//if($session[$name] === null || $regenerate)
+		//{
 			$session[$name] = $this->generateVerifyCode();
 			$session[$name . 'count'] = 1;
-		}
+		//}
 		return $session[$name];
 	}
 

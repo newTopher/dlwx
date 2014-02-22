@@ -34,7 +34,7 @@ class AgentManageController extends Controller{
           $agentUserModel->status=1;
           $agentUserModel->type=1;
         }elseif($deadline=="长期有效"){
-          $agentUserModel->end_time=1;
+          $agentUserModel->end_time=$login_time+365*3600*24*20;
           $agentUserModel->status=1;
           $agentUserModel->type=0;
         }
@@ -53,20 +53,27 @@ class AgentManageController extends Controller{
         $agentUserModel->update_time=time();
         $login_time=time();
         $agentUserModel->id = Yii::app()->request->getParam('id','');
-        $agentUserModel->money = Yii::app()->request->getParam('add_money','');
-        $agentUserModel->rate = Yii::app()->request->getParam('rate','');
+        $agentData= $agentUserModel->selectDeadLine($agentUserModel->id );
+        $leftMoney=$agentData->money;
+        $leftTime=0;
+        if($agentData->end_time-time()>=0){
+            $leftTime=$agentData->end_time-time();
+        }
+        $agentUserModel->money = Yii::app()->request->getParam('add_money','')+$leftMoney;
+        if(Yii::app()->request->getParam('rate','')){
+            $agentUserModel->rate = Yii::app()->request->getParam('rate','');
+        }
         $deadline = Yii::app()->request->getParam('deadline','');
-
         if($deadline=="试用7天"){
-            $agentUserModel->end_time=$login_time+7*3600*24;
+            $agentUserModel->end_time=$login_time+7*3600*24+$leftTime;
             $agentUserModel->status=2;
             $agentUserModel->type=2;
         }elseif($deadline=="使用一年"){
-            $agentUserModel->end_time=$login_time+365*3600*24;
+            $agentUserModel->end_time=$login_time+365*3600*24+$leftTime;
             $agentUserModel->status=1;
             $agentUserModel->type=1;
         }elseif($deadline=="长期有效"){
-            $agentUserModel->end_time=1;
+            $agentUserModel->end_time=time()+365*3600*24*20;
             $agentUserModel->status=1;
             $agentUserModel->type=0;
         }

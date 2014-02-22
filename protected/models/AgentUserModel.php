@@ -23,6 +23,7 @@ class AgentUserModel extends Ar{
     public $status;
     public $money = 0;
     public $type;
+    public $rate;
 
     public static function model($className=__CLASS__){
         return parent::model($className);
@@ -54,6 +55,7 @@ class AgentUserModel extends Ar{
             return false;
         }
     }
+
     public function updateUser(){
         if(!empty($this->id) && !empty($this->money) && !empty($this->rate)){
             if(self::model()->updateByPk($this->id,array('money'=>$this->money,'end_time'=>$this->end_time,'rate'=>$this->rate,'update_time'=>$this->rate))){
@@ -71,6 +73,11 @@ class AgentUserModel extends Ar{
         return $AgentUser;
 
     }
+
+    public function selectDeadLine($id){
+        return self::model()->findByAttributes(array('id'=>$id));
+    }
+
     public function AgentUserClose(){
         if(self::model()->updateByPk($this->id,array('status'=>0,'update_time'=>time()))){
             return true;

@@ -11,6 +11,8 @@ class LoginForm extends CFormModel
     public $password;
     public $rememberMe;
     private $_identity;
+    public $verifyCode;
+
 
     /**
      * Declares the validation rules.
@@ -26,7 +28,9 @@ class LoginForm extends CFormModel
             array('rememberMe', 'boolean'),
             // password needs to be authenticated
             array('password', 'authenticate'),
+            //array('verifyCode', 'captcha', 'allowEmpty'=> !extension_loaded('gd')),
         );
+
     }
 
     /**
@@ -36,6 +40,7 @@ class LoginForm extends CFormModel
     {
         return array(
             'rememberMe'=>'Remember me next time',
+            //'verifyCode'=>Yii::t('default','验证码错误'),
         );
     }
 

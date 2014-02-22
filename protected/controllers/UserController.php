@@ -62,8 +62,10 @@ class UserController extends Controller{
         }
     }
 
-    public function actionUserlist(){
+    public function actionList(){
+
         $criteria=new CDbCriteria();
+
         if($email=Yii::app()->request->getParam('email','')){
             $criteria->addSearchCondition('email',$email);
             $criteria->order="deadline_date desc";
@@ -82,6 +84,10 @@ class UserController extends Controller{
             $userlist[]=$list;
         }
         $this->render('userlist',array('list'=>$userlist,'pages'=>$pager));
+    }
+
+    public function action(){
+
     }
 
     public function actionAddUser(){
