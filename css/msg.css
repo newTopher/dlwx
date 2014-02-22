@@ -240,3 +240,38 @@ div.speech.left:after {
     float: left;
     margin-top: 25px;
 }
+.filecss{
+    opacity:0;
+    filter:alpha(opacity=0);
+    background-color: white;
+    position: relative;
+    width: 80px;
+    top:-20px;
+    cursor: pointer;
+}
+.silder_box{
+    width: 350px;
+    height: auto;
+    padding:5px;
+    background-color: #dceaf4;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.link_div{
+    margin-top: 10px;
+}
+.link_div select{
+    width: 150px;
+    height: 28px;
+    margin-left: 10px;
+}
+.loading{
+    display: none;
+}
+#slidereditdiv{
+    display: none;
+}
+.del_btn{
+    position: relative;
+    top: -42px;
+}

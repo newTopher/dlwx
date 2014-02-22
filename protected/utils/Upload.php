@@ -15,6 +15,7 @@ class Upload{
             'image/jpeg',
             'image/jpg',
             'image/bmp',
+            'image/png',
             //需要时添加...
         );
         if(!in_array($type, $imageMime)){

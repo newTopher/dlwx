@@ -373,10 +373,6 @@ div.center,p.center,img.center {
 	padding-bottom: 0;
 }
 
-.sidebar-nav>ul>li:not (.nav-header ){
-	margin-right: -2px;
-	margin-left: -2px;
-}
 
 .brand {
 	font-family: 'Shojumaru', cursive, Arial, serif;
