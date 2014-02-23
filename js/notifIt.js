@@ -215,8 +215,9 @@ function notifit_dismiss() {
     } else {
         // Fade
         $("#ui_notifIt").fadeOut("slow", function() {
-            $("#ui_notifIt").remove();
-        });
-    }
+        $("#ui_notifIt").remove();
+    });
+}
+
     notifit_setDefaultValues(); // Reset
 }

@@ -47,7 +47,6 @@ class AgentUserModel extends Ar{
         if(!empty($this->email) && !empty($this->password) && !empty($this->agent_name) && strpos($this->email,'@wapwei')){
             if($this->insert()){
                 return true;
-
             }else{
                 return false;
             }

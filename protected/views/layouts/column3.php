@@ -1,4 +1,5 @@
-<?php /* @var $this Controller */ ?>
+<?php header("content-type :text/html;charset=utf-8");?>
+
 <div class="navbar">
     <div class="navbar-inner">
         <div class="container-fluid">
@@ -37,6 +38,7 @@
                 <li class="nav-header hidden-tablet">代理商管理</li>
                 <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/AgentManage/add"><i class="icon-home"></i><span class="hidden-tablet">添加代理商</span></a></li>
                 <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/AgentManage/list"><i class="icon-home"></i><span class="hidden-tablet">代理商列表</span></a></li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/AgentManage/AddMoneyCheck"><i class="icon-home"></i><span class="hidden-tablet">充值审核</span></a></li>
             </ul>
         </div><!--/.well -->
     <div class="well nav-collapse sidebar-nav">
@@ -184,4 +186,8 @@
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/add-money.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/notifIt.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.uploadify.min.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.8.21.custom.min.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/charisma.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.7.2.min.js"></script>
+
 

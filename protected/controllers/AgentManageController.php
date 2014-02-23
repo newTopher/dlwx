@@ -14,6 +14,7 @@ class AgentManageController extends Controller{
         $this->render('add');
     }
 
+
     public function actionInsert(){
         $agentUserModel = new AgentUserModel();
         $agentUserModel->email = Yii::app()->request->getParam('email','')."@wapwei";
@@ -155,5 +156,11 @@ class AgentManageController extends Controller{
         $agentUserModel->money=Yii::app()->request->getParam('money','');
         $this->render('renew',array('list'=>$AgentList,'meg'=>$meg));
 
+    }
+
+    public function actionAddMoneyCheck(){
+        $Charge_note=new AgentChargeNoteModel();
+        $list=$Charge_note->NoteSelect();
+        $this->render('AddMoneyCheck',array('list'=>$list));
     }
 }

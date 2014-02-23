@@ -1,4 +1,7 @@
 $(function(){
+    $(".msg_fade").fadeOut(6000, function() {
+        $(".msg_fade").remove();
+    })
 
     $(".checker input").click(function(){
      var sum = 0;
