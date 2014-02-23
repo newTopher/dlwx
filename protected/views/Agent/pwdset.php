@@ -15,7 +15,7 @@
         </div>
         <div class="box-content">
             <div class="box-content">
-                <form class="form-horizontal" method="post" action="<?php echo Yii::app()->getBaseUrl().'/agent/pwdSet';?>">
+                <form class="form-horizontal" method="post" action="<?php echo Yii::app()->request->baseUrl.'/agent/pwdSet';?>">
 
                     <fieldset>
                         <div class="control-group">

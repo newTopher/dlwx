@@ -63,35 +63,35 @@
                                 </td>
                                 <td class="center ">
                                     <?php if($status1!=0 && $val->end_time > time()):?>
-                                    <a class="btn btn-success" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/view?id=<?php echo $val->id;?>">
+                                    <a class="btn btn-success" href="<?php echo Yii::app()->request->baseUrl;?>/AgentManage/view?id=<?php echo $val->id;?>">
                                         <i class="icon-zoom-in icon-white"></i>
                                        编辑
                                     </a>
-                                    <a class="btn btn-danger" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/Close?id=<?php echo $val->id?>">
+                                    <a class="btn btn-danger" href="<?php echo Yii::app()->request->baseUrl;?>/AgentManage/Close?id=<?php echo $val->id?>">
                                         <i class="icon-trash icon-white"></i>
                                         停用
                                     </a>
-                                    <a class="btn btn-danger" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/Renew?id=<?php echo $val->id?>&type=<?php echo $val->type?>}">
+                                    <a class="btn btn-danger" href="<?php echo Yii::app()->request->baseUrl;?>/AgentManage/Renew?id=<?php echo $val->id?>&type=<?php echo $val->type?>}">
                                         <i class="icon-trash icon-white"></i>
                                         续费
                                     </a>
                                     <?php elseif($status1!=0 && $val->end_time <= time()):?>
 
-                                    <a class="btn btn-danger" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/Renew?id=<?php echo $val->id?>&type=<?php echo $val->type?>}">
+                                    <a class="btn btn-danger" href="<?php echo Yii::app()->request->baseUrl;?>/AgentManage/Renew?id=<?php echo $val->id?>&type=<?php echo $val->type?>}">
                                         <i class="icon-trash icon-white"></i>
                                         续费
                                     </a>
                                     <?php elseif($status1==0 && $val->end_time<=time()):?>
-                                    <a class="btn btn-danger" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/Renew?id=<?php echo $val->id?>&type=<?php echo $val->type?>}">
+                                    <a class="btn btn-danger" href="<?php echo Yii::app()->request->baseUrl;?>/AgentManage/Renew?id=<?php echo $val->id?>&type=<?php echo $val->type?>}">
                                         <i class="icon-trash icon-white"></i>
                                         续费
                                     </a>
                                     <?php elseif($status1==0 && $val->end_time >time()):?>
-                                    <a class="btn btn-danger" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/Open?id=<?php echo $val->id?>&type=<?php echo $val->type?>}">
+                                    <a class="btn btn-danger" href="<?php echo Yii::app()->request->baseUrl;?>/AgentManage/Open?id=<?php echo $val->id?>&type=<?php echo $val->type?>}">
                                         <i class="icon-trash icon-white"></i>
                                         开启
                                     </a>
-                                    <a class="btn btn-success" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/view?id=<?php echo $val->id;?>">
+                                    <a class="btn btn-success" href="<?php echo Yii::app()->request->baseUrl;?>/AgentManage/view?id=<?php echo $val->id;?>">
                                         <i class="icon-zoom-in icon-white"></i>
                                         编辑
                                     </a>

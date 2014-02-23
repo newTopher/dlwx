@@ -29,7 +29,7 @@ $this->pageTitle=Yii::app()->name . ' - Login';
                         请输入用户名和密码.
                     </div>
                 <?php endif; ?>
-                <form class="form-horizontal" action="<?php echo Yii::app()->request->baseUrl; ?>/index.php/login/index" method="post">
+                <form class="form-horizontal" action="<?php echo Yii::app()->request->baseUrl; ?>/login/index" method="post">
                     <fieldset>
                         <div class="input-prepend" title="Username" data-rel="tooltip">
                             <span class="add-on"><i class="icon-user"></i></span><input autofocus class="input-large span10" name="email" id="username" type="text" value="" />

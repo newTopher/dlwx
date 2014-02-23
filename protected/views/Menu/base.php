@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="span7">
-                <form method="post" action="<?php echo Yii::app()->getBaseUrl(); ?>/Menu/SetApp" class="form-horizontal">
+                <form method="post" action="<?php echo Yii::app()->request->baseUrl; ?>/Menu/SetApp" class="form-horizontal">
                 <fieldset>
                     <input type="hidden" name="id" value="2">
                     <div class="control-group">
@@ -79,7 +79,7 @@
                         <strong>错误提示!</strong>   <?php echo urldecode($msg);?>.
                     </div>
                 <?php endif; ?>
-                <form method="post" action="<?php echo Yii::app()->getBaseUrl(); ?>/Menu/AddMenu" class="form-horizontal">
+                <form method="post" action="<?php echo Yii::app()->request->baseUrl; ?>/Menu/AddMenu" class="form-horizontal">
                     <fieldset>
                         <input type="hidden" name="id" value="2">
                         <div class="control-group">

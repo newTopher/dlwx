@@ -21,7 +21,7 @@
             </ul>
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade active in" id="home">
-                    <form method="post" action="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/Doresubmit" class="form-horizontal">
+                    <form method="post" action="<?php echo Yii::app()->request->baseUrl; ?>/Agent/Doresubmit" class="form-horizontal">
                         <input class="input-xlarge focused" name="id" type="hidden" value="<?php echo $data->id; ?>">
                         <fieldset>
                             <div class="control-group">

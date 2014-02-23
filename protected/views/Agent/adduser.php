@@ -22,7 +22,7 @@
             </ul>
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade active in" id="home">
-                    <form method="post" action="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/AddWexinAccount" class="form-horizontal">
+                    <form method="post" action="<?php echo Yii::app()->request->baseUrl; ?>/Agent/AddWexinAccount" class="form-horizontal">
                         <input class="input-xlarge focused" name="token" type="hidden" value="<?php echo $token; ?>">
                         <input class="input-xlarge focused" name="puid" type="hidden" value="<?php echo $puid; ?>">
                         <fieldset>

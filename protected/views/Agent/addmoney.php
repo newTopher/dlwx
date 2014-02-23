@@ -17,7 +17,7 @@
         </div>
         <div class="box-content">
             <div class="box-content">
-                <form class="form-horizontal" method="post" action="<?php echo Yii::app()->getBaseUrl().'Agent/addMoney';?>">
+                <form class="form-horizontal" method="post" action="<?php echo Yii::app()->request->baseUrl.'Agent/addMoney';?>">
                     <fieldset>
                         <div class="control-group">
                             <label class="control-label">账户名</label>

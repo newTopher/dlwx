@@ -17,7 +17,7 @@
         </div>
         <div class="box-content">
             <div class="box-content">
-                <form method="post" action="<?php echo Yii::app()->getBaseUrl(); ?>/AgentManage/Insert" class="form-horizontal">
+                <form method="post" action="<?php echo Yii::app()->request->baseUrl; ?>/AgentManage/Insert" class="form-horizontal">
                     <fieldset>
                         <div class="control-group">
                             <label class="control-label" for="focusedInput">代理商登录账号</label>

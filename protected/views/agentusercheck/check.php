@@ -21,7 +21,7 @@
             </ul>
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade active in" id="home">
-                    <form method="post" action="<?php echo Yii::app()->getBaseUrl(); ?>/AgentUserCheck/Docheck" class="form-horizontal">
+                    <form method="post" action="<?php echo Yii::app()->request->baseUrl; ?>/AgentUserCheck/Docheck" class="form-horizontal">
                         <input class="input-xlarge focused" name="id" type="hidden" value="<?php echo $data->id; ?>">
                         <input class="input-xlarge focused" name="puid" type="hidden" value="<?php echo $data->puid; ?>">
                         <input class="input-xlarge focused" name="token" type="hidden" value="<?php echo $data->token; ?>">

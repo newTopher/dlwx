@@ -20,7 +20,7 @@
     </div>
 </div>
 <div class="box-content">
-    <form class="horizontal" action="<?php echo Yii::app()->getBaseUrl()."/AgentManage/update?id=".$list->id;?>" method="post">
+    <form class="horizontal" action="<?php echo Yii::app()->request->baseUrl."/AgentManage/update?id=".$list->id;?>" method="post">
         <fieldset>
     <ul id="myTab" class="nav nav-tabs">
         <li class="active"><a href="#home" data-toggle="tab">代理商续费</a></li>

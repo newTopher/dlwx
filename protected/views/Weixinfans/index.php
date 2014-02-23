@@ -29,9 +29,9 @@
                                 <td><?php echo $v->nickname; ?></td>
                                 <td><?php echo date("Y-m-d H:i:s",$v->update_time); ?></td>
                                 <td>
-                                    <a href="<?php Yii::app()->getBaseUrl(); ?>/WeixinFans/view/id/<?php echo $v->id; ?>" class="btn btn-mini btn-primary">查看用户</a>
+                                    <a href="<?php Yii::app()->request->baseUrl; ?>/WeixinFans/view/id/<?php echo $v->id; ?>" class="btn btn-mini btn-primary">查看用户</a>
                                     <?php if($v->update_time > time() - 24*3600): ?>
-                                      <a href="<?php Yii::app()->getBaseUrl(); ?>/WeixinFans/SendMsgView/id/<?php echo $v->id; ?>" class="btn btn-mini btn-primary">推送消息</a>
+                                      <a href="<?php Yii::app()->request->baseUrl; ?>/WeixinFans/SendMsgView/id/<?php echo $v->id; ?>" class="btn btn-mini btn-primary">推送消息</a>
                                       <?php else: ?>
                                         <a href="#" class="btn btn-mini disabled">推送消息</a>
                                     <?php endif; ?>

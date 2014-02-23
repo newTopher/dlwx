@@ -1,5 +1,5 @@
-<link href="<?php echo Yii::app()->getBaseUrl(); ?>/css/msg.css" rel="stylesheet">
-<script type="text/javascript" src="<?php echo Yii::app()->getBaseUrl(); ?>/js/ckeditor/ckeditor.js"></script>
+<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/msg.css" rel="stylesheet">
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/ckeditor/ckeditor.js"></script>
 <div class="row-fluid">
     <div class="box span12">
         <div class="box-header well">
@@ -25,7 +25,7 @@
                                 </div>
                                 <div class="appmsg_thumb_wrp">
                                     <?php if($singleData->title != ''): ?>
-                                        <img class="js_appmsg_thumb appmsg_thumb" src="<?php echo Yii::app()->getBaseUrl().'/upload/wxmsg/'.$singleData->index_image; ?>">
+                                        <img class="js_appmsg_thumb appmsg_thumb" src="<?php echo Yii::app()->request->baseUrl.'/upload/wxmsg/'.$singleData->index_image; ?>">
                                     <?php endif; ?>
                                     <?php if($singleData->title == ''): ?>
                                         <img class="js_appmsg_thumb appmsg_thumb" src="">
@@ -42,7 +42,7 @@
                 <div class="span8" style="margin-bottom: 20px;">
                     <div class="appmsg_editor" style="margin-top: 0px;">
                         <div class="inner">
-                            <form method="post" enctype="multipart/form-data" action="<?php echo Yii::app()->getBaseUrl(); ?>/Source/InsertSingleMsg" class="form-horizontal">
+                            <form method="post" enctype="multipart/form-data" action="<?php echo Yii::app()->request->baseUrl; ?>/Source/InsertSingleMsg" class="form-horizontal">
                                 <fieldset>
                                     <div class="control-group">
                                         <label class="control-label" for="focusedInput">标题</label>
@@ -105,7 +105,7 @@
                                 <em class="appmsg_date"></em>
                             </div>
                             <div class="appmsg_thumb_wrp">
-                                <img class="js_appmsg_thumb appmsg_thumb" src="<?php echo Yii::app()->getBaseUrl().'/upload/wxmsg/'.$value->index_image; ?>">
+                                <img class="js_appmsg_thumb appmsg_thumb" src="<?php echo Yii::app()->request->baseUrl.'/upload/wxmsg/'.$value->index_image; ?>">
                                 <i class="appmsg_thumb default">封面图片</i>
                             </div>
                             <p class="appmsg_desc"><?php echo $value->description; ?></p>

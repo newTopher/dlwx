@@ -64,7 +64,7 @@
                                         <?php endif; ?>
 
                                         <?php if($v->status==0): ?>
-                                            <a class="btn btn-success btn-small" href="<?php echo Yii::app()->getBaseUrl(); ?>/AgentUserCheck/Check/id/<?php echo $v->id; ?>">
+                                            <a class="btn btn-success btn-small" href="<?php echo Yii::app()->request->baseUrl; ?>/AgentUserCheck/Check/id/<?php echo $v->id; ?>">
                                                 <i class="icon-zoom-in icon-white"></i>
                                                 审核
                                             </a>

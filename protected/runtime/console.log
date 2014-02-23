@@ -1,0 +1,169 @@
+2014/02/22 22:35:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/02/22 22:36:15 [error] [php] chmod(): No such file or directory (E:\Apache2.2\htdocs\weixin\protected\extensions\image\Image.php:339)
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\protected\controllers\UploadController.php(18): createImageLink()
+#1 E:\Apache2.2\htdocs\weixin\framework\web\actions\CInlineAction.php(49): UploadController->actionFile()
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): UploadController->runAction()
+#4 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): UploadController->runActionWithFilters()
+#5 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): UploadController->run()
+#6 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 E:\Apache2.2\htdocs\weixin\index.php(12): CWebApplication->run()
+REQUEST_URI=/Upload/File
+2014/02/22 22:44:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/02/22 22:44:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/02/22 22:45:09 [error] [exception.CException] exception 'CException' with message 'Wcontroller cannot find the requested view "index".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:878
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#1 E:\Apache2.2\htdocs\weixin\protected\controllers\WController.php(21): CController->render('index', Array)
+#2 E:\Apache2.2\htdocs\weixin\framework\web\actions\CInlineAction.php(49): Wcontroller->actionI()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('i')
+#7 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('W/i/sid/2')
+#8 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/W/i/sid/2
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/base
+---
+2014/02/22 23:53:34 [error] [exception.CException] exception 'CException' with message 'Wcontroller cannot find the requested view "index".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:878
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#1 E:\Apache2.2\htdocs\weixin\protected\controllers\WController.php(21): CController->render('index', Array)
+#2 E:\Apache2.2\htdocs\weixin\framework\web\actions\CInlineAction.php(49): Wcontroller->actionI()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('i')
+#7 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('W/i/sid/2')
+#8 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/W/i/sid/2
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/base
+---
+2014/02/22 23:55:28 [error] [exception.CException] exception 'CException' with message 'Wcontroller cannot find the requested view "index".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:878
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#1 E:\Apache2.2\htdocs\weixin\protected\controllers\WController.php(21): CController->render('index', Array)
+#2 E:\Apache2.2\htdocs\weixin\framework\web\actions\CInlineAction.php(49): Wcontroller->actionI()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('i')
+#7 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('W/i/sid/2')
+#8 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/W/i/sid/2
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/base
+---
+2014/02/23 13:36:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/02/23 14:46:33 [error] [exception.CException] exception 'CException' with message 'Wcontroller cannot find the requested view "index".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:878
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#1 E:\Apache2.2\htdocs\weixin\protected\controllers\WController.php(21): CController->render('index', Array)
+#2 E:\Apache2.2\htdocs\weixin\framework\web\actions\CInlineAction.php(49): Wcontroller->actionI()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('i')
+#7 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('W/i/sid/2')
+#8 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/W/i/sid/2
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/base
+---
+2014/02/23 15:38:17 [error] [exception.CException] exception 'CException' with message 'Wcontroller cannot find the requested view "index".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:878
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#1 E:\Apache2.2\htdocs\weixin\protected\controllers\WController.php(21): CController->render('index', Array)
+#2 E:\Apache2.2\htdocs\weixin\framework\web\actions\CInlineAction.php(49): Wcontroller->actionI()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('i')
+#7 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('W/i/sid/2')
+#8 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/W/i/sid/2
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/base
+---
+2014/02/23 15:38:43 [error] [exception.CException] exception 'CException' with message 'Wcontroller cannot find the requested view "index".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:878
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#1 E:\Apache2.2\htdocs\weixin\protected\controllers\WController.php(21): CController->render('index', Array)
+#2 E:\Apache2.2\htdocs\weixin\framework\web\actions\CInlineAction.php(49): Wcontroller->actionI()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('i')
+#7 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('W/i/sid/2')
+#8 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/W/i/sid/2
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/base
+---
+2014/02/23 15:38:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Package/add
+---
+2014/02/23 15:39:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquerymobile/images/icon3.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('css/jquerymobil...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/jquerymobile/images/icon3.png
+HTTP_REFERER=http://weixin.test.local:8080/WeixinFans/view/id/1
+---
+2014/02/23 15:39:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquerymobile/images/icon10.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('css/jquerymobil...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/jquerymobile/images/icon10.png
+HTTP_REFERER=http://weixin.test.local:8080/WeixinFans/view/id/1
+---

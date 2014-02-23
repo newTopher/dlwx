@@ -20,7 +20,7 @@
 
                         <div style="height:100px;width:100%;" >
                         <li id="<?php echo 'image-'.$val->id;?>" class="thumbnail">
-                            <a  style="height:100px;width:100px;margin:0 auto; background:url(<?php echo Yii::app()->getBaseUrl().'/'.$val->path_url.$val->nail_image;?>)" title="<?php echo $val->name;?>" href="<?php echo Yii::app()->getBaseUrl()."/".$val->path_url.$val->helper_image?>" class="cboxElement"><img style="height:100px ;width:100px;margin:0 auto;" class="" src="<?php echo Yii::app()->getBaseUrl()."/".$val->path_url.$val->nail_image;?>" alt="模版1" style="margin:0 auto;height:100px;width:100px;display: block;"></a>
+                            <a  style="height:100px;width:100px;margin:0 auto; background:url(<?php echo Yii::app()->request->baseUrl.'/'.$val->path_url.$val->nail_image;?>)" title="<?php echo $val->name;?>" href="<?php echo Yii::app()->request->baseUrl."/".$val->path_url.$val->helper_image?>" class="cboxElement"><img style="height:100px ;width:100px;margin:0 auto;" class="" src="<?php echo Yii::app()->request->baseUrl."/".$val->path_url.$val->nail_image;?>" alt="模版1" style="margin:0 auto;height:100px;width:100px;display: block;"></a>
                         </li>
                         </div>
                         <div class="row-fluid show-grid">

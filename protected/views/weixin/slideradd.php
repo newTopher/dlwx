@@ -10,7 +10,7 @@
                     <iframe width="340" frameborder=no scrolling=auto style="overflow-x:hidden; overflow-y:auto;" height="480" src="<?php echo Yii::app()->request->hostInfo.'/index.php/W/i/sid/'.$webdata->uid; ?>"></iframe>
                 </div>
                 <div class="span8">
-                    <form name="form" method="post" enctype="multipart/form-data" action="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Sliderinsert" class="form-horizontal">
+                    <form name="form" method="post" enctype="multipart/form-data" action="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Sliderinsert" class="form-horizontal">
                         <fieldset>
                             <div class="control-group">
                                 <label class="control-label" for="focusedInput">标题</label>
@@ -22,7 +22,7 @@
                                 <label class="control-label" for="focusedInput">url链接</label>
                                 <div class="controls">
                                     <input class="input-xlarge focused" name="url" id="focusedInput" type="text" value="">
-                                    <a href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Slideradd" class="btn btn-small btn-primary">站内url</a>
+                                    <a href="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Slideradd" class="btn btn-small btn-primary">站内url</a>
                                 </div>
                             </div>
                             <div class="control-group">

@@ -35,7 +35,7 @@
                     <ul class="thumbnails">
                         <li class="span3">
                             <div class="thumbnails">
-                                <img alt="300x200" style="width: 300px; height: 200px;" src="<?php echo Yii::app()->getBaseUrl(); ?>/images/dazhuanpan.jpg">
+                                <img alt="300x200" style="width: 300px; height: 200px;" src="<?php echo Yii::app()->request->baseUrl; ?>/images/dazhuanpan.jpg">
                                 <div class="caption">
                                     <h3>幸运大转盘 <span style="font-size: 10px;padding-left: 10px;color: green;">进行中 (20人参加)</span></h3>
                                     <p style="margin-top: 20px;"><a href="#" class="btn btn-success">查看活动</a></p>
@@ -44,31 +44,31 @@
                         </li>
                         <li class="span3">
                             <div class="thumbnails">
-                                <img alt="300x200" style="width: 300px; height: 200px;" src="<?php echo Yii::app()->getBaseUrl(); ?>/images/dazhuanpan.jpg">
+                                <img alt="300x200" style="width: 300px; height: 200px;" src="<?php echo Yii::app()->request->baseUrl; ?>/images/dazhuanpan.jpg">
                                 <div class="caption">
                                     <h3>幸运大转盘</h3>
 
-                                    <p style="margin-top: 20px;"><a href="<?php echo Yii::app()->getBaseUrl();?>/Activity/create" class="btn btn-primary">创建活动</a> </p>
+                                    <p style="margin-top: 20px;"><a href="<?php echo Yii::app()->request->baseUrl;?>/Activity/create" class="btn btn-primary">创建活动</a> </p>
                                 </div>
                             </div>
                         </li>
                         <li class="span3">
                             <div class="thumbnails">
-                                <img alt="300x200" style="width: 300px; height: 200px;" src="<?php echo Yii::app()->getBaseUrl(); ?>/images/dazhuanpan.jpg">
+                                <img alt="300x200" style="width: 300px; height: 200px;" src="<?php echo Yii::app()->request->baseUrl; ?>/images/dazhuanpan.jpg">
                                 <div class="caption">
                                     <h3>幸运大转盘</h3>
 
-                                    <p style="margin-top: 20px;"><a href="<?php echo Yii::app()->getBaseUrl();?>/Activity/create" class="btn btn-primary">创建活动</a></p>
+                                    <p style="margin-top: 20px;"><a href="<?php echo Yii::app()->request->baseUrl;?>/Activity/create" class="btn btn-primary">创建活动</a></p>
                                 </div>
                             </div>
                         </li>
                         <li class="span3">
                             <div class="thumbnails">
-                                <img alt="300x200" style="width: 300px; height: 200px;" src="<?php echo Yii::app()->getBaseUrl(); ?>/images/dazhuanpan.jpg">
+                                <img alt="300x200" style="width: 300px; height: 200px;" src="<?php echo Yii::app()->request->baseUrl; ?>/images/dazhuanpan.jpg">
                                 <div class="caption">
                                     <h3>幸运大转盘</h3>
 
-                                    <p style="margin-top: 20px;"><a href="<?php echo Yii::app()->getBaseUrl();?>/Activity/create" class="btn btn-primary">创建活动</a></p>
+                                    <p style="margin-top: 20px;"><a href="<?php echo Yii::app()->request->baseUrl;?>/Activity/create" class="btn btn-primary">创建活动</a></p>
                                 </div>
                             </div>
                         </li>

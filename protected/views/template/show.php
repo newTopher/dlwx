@@ -18,7 +18,7 @@
                 <?php foreach($list as $val):?>
                 <li id="<?php echo 'image-'.$val->id;?>" class="thumbnail">
                     <?php $nail="nail_".$val->template_name?>
-                    <a  style="background:url(<?php echo Yii::app()->getBaseUrl().'/'.$val->path_url.$val->nail_url;?>)" title="<?php echo $val->template_name;?>" href="<?php echo Yii::app()->getBaseUrl()."/".$val->path_url.$val->template_image?>" class="cboxElement"><img class="grayscale" src="<?php echo Yii::app()->getBaseUrl()."/".$val->path_url.$val->nail_url;?>" alt="模版1" style="display: block;"></a>
+                    <a  style="background:url(<?php echo Yii::app()->request->baseUrl.'/'.$val->path_url.$val->nail_url;?>)" title="<?php echo $val->template_name;?>" href="<?php echo Yii::app()->request->baseUrl."/".$val->path_url.$val->template_image?>" class="cboxElement"><img class="grayscale" src="<?php echo Yii::app()->request->baseUrl."/".$val->path_url.$val->nail_url;?>" alt="模版1" style="display: block;"></a>
                 </li>
                  <?php endforeach;?>
             </ul>

@@ -271,7 +271,10 @@ div.speech.left:after {
 #slidereditdiv{
     display: none;
 }
+#naveditdiv{
+    display: none;
+}
 .del_btn{
     position: relative;
-    top: -42px;
+    top: -41px;
 }

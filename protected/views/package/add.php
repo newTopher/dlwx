@@ -34,7 +34,7 @@
                     </label>
                     <li>
                         <a href="#">
-                            <img class="dashboard-avatar" alt="Saruar Ahmed" src="<?php echo Yii::app()->getBaseUrl().'/'.$val->path_url.$val->nail_url;?>"></a>
+                            <img class="dashboard-avatar" alt="Saruar Ahmed" src="<?php echo Yii::app()->request->baseUrl.'/'.$val->path_url.$val->nail_url;?>"></a>
                             <strong>所属行业:</strong> <a href="#">
                             <?php switch($val->trade_id){
                                 case 1:echo "万普标准版";break;
@@ -71,7 +71,7 @@
                     </label>
                     <li>
                         <a href="#">
-                            <img class="dashboard-avatar" alt="Usman" src="<?php echo Yii::app()->getBaseUrl().'/'.$v->path_url.$v->nail_image;?>"></a>
+                            <img class="dashboard-avatar" alt="Usman" src="<?php echo Yii::app()->request->baseUrl.'/'.$v->path_url.$v->nail_image;?>"></a>
                         <strong>助手名称:</strong> <a href="#"><?php echo $v->name;?>
                     </a><br>
                         <strong>日期:</strong> <?php echo date('Y-m-d',time());?><br>

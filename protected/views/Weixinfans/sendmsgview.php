@@ -7,7 +7,7 @@
         <div class="box-content">
             <div class="box-content">
 
-                <form name="form" method="post" enctype="multipart/form-data" action="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Menuupdate" class="form-horizontal">
+                <form name="form" method="post" enctype="multipart/form-data" action="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Menuupdate" class="form-horizontal">
                     <input type="hidden" name="openid" value="<?php echo $wxUserData->openid;?>">
                     <fieldset>
                         <div class="control-group">
