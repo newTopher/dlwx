@@ -57,11 +57,11 @@
                             <td class="center "><?php echo $val->money;?></td>
                             <td class="center ">
                                 <?php if($val->status==0):?>
-                                    <a class="btn btn-success" href="<?php echo Yii::app()->getBaseUrl();?>/Agent/AddMoneyCheck?id=<?php echo $val->id;?>">
+                                    <a class="btn btn-success" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/AddMoneyCheck?status=1&id=<?php echo $val->id;?>">
                                         <i class="icon-zoom-in icon-white"></i>
                                         通过
                                     </a>
-                                    <a class="btn btn-danger" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/Close?id=<?php echo $val->id?>">
+                                    <a class="btn btn-danger" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/AddMoneyCheck?status=2&id=<?php echo $val->id;?>">
                                         <i class="icon-trash icon-white"></i>
                                         失败
                                     </a>

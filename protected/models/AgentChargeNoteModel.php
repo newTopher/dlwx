@@ -42,6 +42,13 @@ class AgentChargeNoteModel extends Ar{
        return $this->findAll();
     }
 
+    public function NoteUpdate(){
+        if($this->updateByPk($this->id,array('status'=>$this->status))){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 
 }

@@ -160,6 +160,15 @@ class AgentManageController extends Controller{
 
     public function actionAddMoneyCheck(){
         $Charge_note=new AgentChargeNoteModel();
+
+        if($_POST){
+            $Charge_note->id=Yii::app()->request->getParam('id');
+            $Charge_note->status=Yii::app()->request->getParam('status');
+            if(Yii::app()->request->getParam('status')==1){
+                $Charge_note->status=Yii::app()->request->getParam('status');
+                $Charge_note->NoteUpdate();
+            }
+        }
         $list=$Charge_note->NoteSelect();
         $this->render('AddMoneyCheck',array('list'=>$list));
     }
