@@ -42,6 +42,7 @@ $config = array(
         // uncomment the following to enable URLs in path-format
         'session'=>array(
             'autoStart'=>true,
+            'sessionName'=>'user'
         ),
         'urlManager'=>array(
             'urlFormat'=>'path',
