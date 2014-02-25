@@ -98,6 +98,23 @@ class AgentController extends Controller{
         $this->render('applylist',array('agentWxUserData'=>$agentWxUserData));
     }
 
+    public function actionUserList(){
+        $puid = Yii::app()->session['user']->id;
+        $agentWxUserModel=new UserModel();
+        $list=$agentWxUserModel->findUserByUid($puid);
+        $this->render('userlist',array('list'=>$list));
+    }
+
+    public function actionUserEdit(){
+        if($id=Yii::app()->request->getParam('id','')){
+            $agentWxUserModel=new UserModel();
+            $list=$agentWxUserModel->findUserByid($id);
+        }else{
+            $list=array();
+        }
+        $this->render('edit',array('list'=>$list));
+    }
+
     public function actionCatFailReason(){
         $agentWxUserModel = new AgentWxUserModel();
         $reasonData = $agentWxUserModel->getFailReason(Yii::app()->request->getParam('id',''));

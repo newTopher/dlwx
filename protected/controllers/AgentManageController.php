@@ -160,16 +160,39 @@ class AgentManageController extends Controller{
 
     public function actionAddMoneyCheck(){
         $Charge_note=new AgentChargeNoteModel();
-
-        if($_POST){
-            $Charge_note->id=Yii::app()->request->getParam('id');
+        if(Yii::app()->request->getParam('status')){
             $Charge_note->status=Yii::app()->request->getParam('status');
+            $Charge_note->id=Yii::app()->request->getParam('id');
+            $agentUserModel = new AgentUserModel();
             if(Yii::app()->request->getParam('status')==1){
-                $Charge_note->status=Yii::app()->request->getParam('status');
-                $Charge_note->NoteUpdate();
+                $Note=$Charge_note->NoteSelectById();
+                if($Note->status!=1){
+                    if($Charge_note->NoteUpdate()){
+                        $agentUserModel->id=Yii::app()->request->getParam('uid');
+                        $oldMoney=$agentUserModel->selectMoney();
+                        $agentUserModel->money=$oldMoney->money+Yii::app()->request->getParam('money');
+                        $agentUserModel->updateMoney();
+                        $msg="审核成功！";
+                    }else{
+                        $msg="审核未能成功，请重新审核！";
+                    }
+                }else{
+                    $msg="该记录已经审核，请不要重复提交！！";
+                }
+            }elseif(Yii::app()->request->getParam('status')==2){
+                    $Charge_note->NoteUpdate();
+                    $msg="充值失败审核完毕！";
+                }else{
+                $msg="提交出错！";
             }
+
+        }else{
+            $msg="";
         }
         $list=$Charge_note->NoteSelect();
-        $this->render('AddMoneyCheck',array('list'=>$list));
+        $this->render('AddMoneyCheck',array('list'=>$list,'msg'=>$msg));
     }
+
+
+
 }

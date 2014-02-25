@@ -67,6 +67,22 @@ class AgentUserModel extends Ar{
         }
     }
 
+    public function updateMoney(){
+        if(self::model()->updateByPk($this->id,array('money'=>$this->money))){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public function selectMoney(){
+        if($money=$this->findByPk($this->id)){
+            return $money;
+        }else{
+            return false;
+        }
+    }
+
     public function selectUser(){
         $AgentUser=self::model()->findAll();
         return $AgentUser;

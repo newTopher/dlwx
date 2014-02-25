@@ -57,7 +57,7 @@
                             <td class="center "><?php echo $val->money;?></td>
                             <td class="center ">
                                 <?php if($val->status==0):?>
-                                    <a class="btn btn-success" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/AddMoneyCheck?status=1&id=<?php echo $val->id;?>">
+                                    <a class="btn btn-success" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/AddMoneyCheck?status=1&money=<?php echo $val->money?>&uid=<?php echo $val->uid;?>&id=<?php echo $val->id?>">
                                         <i class="icon-zoom-in icon-white"></i>
                                         通过
                                     </a>
@@ -76,6 +76,13 @@
                         </tbody>
                     </table>
                     <div class="row-fluid"><div class="span12 center"></div></div></div>
+                    <?php if(!empty($msg)):?>
+                    <div class="msg_fade" id="ui_notifIt" class="info" style="background: deepskyblue; height: 60px; width: 100%; top: 0px; left: 0px;">
+                        <p style="line-height: 60px;">
+                            <b><?php echo $msg;?></b>
+                        </p>
+                    </div>
+                    <?php endif;?>
 
             </div>
         </div>

@@ -16,6 +16,7 @@ class UserModel extends Ar{
     public $wtusers;
     public $company_name;
     public $tel;
+    public $mobilephone;
     public $open_weixin;
     public $open_weitao;
     public $wx_account;
@@ -105,5 +106,20 @@ class UserModel extends Ar{
     }
 
 
+    static public  function findUserByUid($uid=''){
+            if($res = self::model()->findAllByAttributes(array('puid'=>$uid))){
+                return $res;
+            }else{
+                return false;
+            }
+        }
+
+    static public  function findUserByid($id){
+        if($res = self::model()->findByPk(array('id'=>$id))){
+            return $res;
+        }else{
+            return false;
+        }
+    }
 
 }
