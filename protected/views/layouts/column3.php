@@ -187,7 +187,7 @@
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/notifIt.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.uploadify.min.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.8.21.custom.min.js"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/charisma.js"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.7.2.min.js"></script>
+
+
 
 

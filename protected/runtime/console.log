@@ -1,169 +1,254 @@
-2014/02/22 22:35:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+2014/02/25 07:28:50 [error] [exception.CDbException] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+2014/02/25 07:28:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection.' in D:\Apache2.2\htdocs\leiphone\weixin\framework\db\CDbConnection.php:388
 Stack trace:
-#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
-#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
-#2 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
-#3 {main}
-REQUEST_URI=/favicon.ico
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 D:\Apache2.2\htdocs\leiphone\weixin\protected\components\Ar.php(24): CApplication->getDb()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\ar\CActiveRecord.php(1428): Ar->getDbConnection()
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\ar\CActiveRecord.php(1534): CActiveRecord->getTableAlias(true)
+#7 D:\Apache2.2\htdocs\leiphone\weixin\protected\models\TemplateModel.php(30): CActiveRecord->findAllByAttributes(Array)
+#8 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\PackageController.php(44): TemplateModel::Select()
+#9 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): PackageController->actionAdd()
+#10 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('add')
+#14 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('Package/add')
+#15 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/Package/add
+HTTP_REFERER=http://weixin.test.local/Weixin/templateset
 ---
-2014/02/22 22:36:15 [error] [php] chmod(): No such file or directory (E:\Apache2.2\htdocs\weixin\protected\extensions\image\Image.php:339)
+2014/02/25 07:28:53 [error] [exception.CDbException] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+2014/02/25 07:28:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection.' in D:\Apache2.2\htdocs\leiphone\weixin\framework\db\CDbConnection.php:388
 Stack trace:
-#0 E:\Apache2.2\htdocs\weixin\protected\controllers\UploadController.php(18): createImageLink()
-#1 E:\Apache2.2\htdocs\weixin\framework\web\actions\CInlineAction.php(49): UploadController->actionFile()
-#2 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(308): CInlineAction->runWithParams()
-#3 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): UploadController->runAction()
-#4 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): UploadController->runActionWithFilters()
-#5 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): UploadController->run()
-#6 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
-#7 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
-#8 E:\Apache2.2\htdocs\weixin\index.php(12): CWebApplication->run()
-REQUEST_URI=/Upload/File
-2014/02/22 22:44:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
-Stack trace:
-#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
-#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
-#2 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
-#3 {main}
-REQUEST_URI=/favicon.ico
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 D:\Apache2.2\htdocs\leiphone\weixin\protected\components\Ar.php(24): CApplication->getDb()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\ar\CActiveRecord.php(1428): Ar->getDbConnection()
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\ar\CActiveRecord.php(1517): CActiveRecord->getTableAlias(true)
+#7 D:\Apache2.2\htdocs\leiphone\weixin\protected\models\WxWebsiteModel.php(40): CActiveRecord->findByAttributes(Array)
+#8 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php(224): WxWebsiteModel::getWxWebByUid('2')
+#9 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): WeixinController->actionTemplateset()
+#10 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('templateset')
+#14 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('Weixin/template...')
+#15 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/Weixin/templateset
+HTTP_REFERER=http://weixin.test.local/main
 ---
-2014/02/22 22:44:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+2014/02/25 07:29:02 [error] [exception.CDbException] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+2014/02/25 07:29:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection.' in D:\Apache2.2\htdocs\leiphone\weixin\framework\db\CDbConnection.php:388
 Stack trace:
-#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
-#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
-#2 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
-#3 {main}
-REQUEST_URI=/favicon.ico
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 D:\Apache2.2\htdocs\leiphone\weixin\protected\components\Ar.php(24): CApplication->getDb()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\ar\CActiveRecord.php(1428): Ar->getDbConnection()
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\ar\CActiveRecord.php(1534): CActiveRecord->getTableAlias(true)
+#7 D:\Apache2.2\htdocs\leiphone\weixin\protected\models\TemplateModel.php(30): CActiveRecord->findAllByAttributes(Array)
+#8 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\PackageController.php(44): TemplateModel::Select()
+#9 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): PackageController->actionAdd()
+#10 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('add')
+#14 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('Package/add')
+#15 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/Package/add
+HTTP_REFERER=http://weixin.test.local/main
 ---
-2014/02/22 22:45:09 [error] [exception.CException] exception 'CException' with message 'Wcontroller cannot find the requested view "index".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:878
+2014/02/25 08:02:48 [error] [php] Array to string conversion (D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php:231)
 Stack trace:
-#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
-#1 E:\Apache2.2\htdocs\weixin\protected\controllers\WController.php(21): CController->render('index', Array)
-#2 E:\Apache2.2\htdocs\weixin\framework\web\actions\CInlineAction.php(49): Wcontroller->actionI()
-#3 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#4 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
-#5 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('i')
-#7 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('W/i/sid/2')
-#8 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
-#9 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): WeixinController->runAction()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): WeixinController->runActionWithFilters()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): WeixinController->run()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/Weixin/Templateslidersave?sliderdata%5B0%5D%5Bid%5D=null&sliderdata%5B0%5D%5Bpic%5D=1393315288530c4dd8e2f30.png&sliderdata%5B1%5D%5Bid%5D=null&sliderdata%5B1%5D%5Bpic%5D=1393315363530c4e2355f49.png&sliderdata%5B2%5D%5Bid%5D=null&sliderdata%5B2%5D%5Bpic%5D=null&sliderdata%5B3%5D%5Bid%5D=null&sliderdata%5B3%5D%5Bpic%5D=null&sliderdata%5B4%5D%5Bid%5D=null&sliderdata%5B4%5D%5Bpic%5D=null
+2014/02/25 08:04:31 [error] [php] Array to string conversion (D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php:231)
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): WeixinController->runAction()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): WeixinController->runActionWithFilters()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): WeixinController->run()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/Weixin/Templateslidersave?sliderdata%5B0%5D%5Bid%5D=null&sliderdata%5B0%5D%5Bpic%5D=1393315288530c4dd8e2f30.png&sliderdata%5B1%5D%5Bid%5D=null&sliderdata%5B1%5D%5Bpic%5D=1393315363530c4e2355f49.png&sliderdata%5B2%5D%5Bid%5D=null&sliderdata%5B2%5D%5Bpic%5D=null&sliderdata%5B3%5D%5Bid%5D=null&sliderdata%5B3%5D%5Bpic%5D=null&sliderdata%5B4%5D%5Bid%5D=null&sliderdata%5B4%5D%5Bpic%5D=null
+2014/02/25 08:07:11 [error] [php] Array to string conversion (D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php:231)
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): WeixinController->runAction()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): WeixinController->runActionWithFilters()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): WeixinController->run()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/Weixin/Templateslidersave?sliderdata%5B0%5D%5Bid%5D=c1&sliderdata%5B0%5D%5Bpic%5D=1393315609530c4f19b1ae4.png&sliderdata%5B1%5D%5Bid%5D=c1&sliderdata%5B1%5D%5Bpic%5D=null&sliderdata%5B2%5D%5Bid%5D=null&sliderdata%5B2%5D%5Bpic%5D=null&sliderdata%5B3%5D%5Bid%5D=null&sliderdata%5B3%5D%5Bpic%5D=null&sliderdata%5B4%5D%5Bid%5D=null&sliderdata%5B4%5D%5Bpic%5D=null
+2014/02/25 09:53:29 [error] [php] include(Template21Model.php): failed to open stream: No such file or directory (D:\Apache2.2\htdocs\leiphone\weixin\framework\YiiBase.php:427)
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php(235): spl_autoload_call()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): WeixinController->actionTemplateslidersave()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): WeixinController->runAction()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): WeixinController->runActionWithFilters()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): WeixinController->run()
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/Weixin/Templateslidersave?template_id=21&site_id=2&sliderdata%5B0%5D%5Bid%5D=t1&sliderdata%5B0%5D%5Bpic%5D=1393321981530c67fd2b8ce.png&sliderdata%5B1%5D%5Bid%5D=null&sliderdata%5B1%5D%5Bpic%5D=null&sliderdata%5B2%5D%5Bid%5D=null&sliderdata%5B2%5D%5Bpic%5D=null&sliderdata%5B3%5D%5Bid%5D=t1&sliderdata%5B3%5D%5Bpic%5D=1393321997530c680d0e5a6.png&sliderdata%5B4%5D%5Bid%5D=null&sliderdata%5B4%5D%5Bpic%5D=null
+2014/02/25 09:54:53 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wapwei.template_1' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `template_1`.
+2014/02/25 09:54:53 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{template_1}}" for active record class "Template21Model" cannot be found in the database.' in D:\Apache2.2\htdocs\leiphone\weixin\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Template21Model))
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\protected\components\Ar.php(11): CActiveRecord->__construct('insert')
+#3 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php(235): Ar->__construct()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): WeixinController->actionTemplateslidersave()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('Templatesliders...')
+#9 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('Weixin/Template...')
+#10 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#12 {main}
+REQUEST_URI=/Weixin/Templateslidersave?template_id=21&site_id=2&sliderdata%5B0%5D%5Bid%5D=t1&sliderdata%5B0%5D%5Bpic%5D=1393321981530c67fd2b8ce.png&sliderdata%5B1%5D%5Bid%5D=null&sliderdata%5B1%5D%5Bpic%5D=null&sliderdata%5B2%5D%5Bid%5D=null&sliderdata%5B2%5D%5Bpic%5D=null&sliderdata%5B3%5D%5Bid%5D=t1&sliderdata%5B3%5D%5Bpic%5D=1393321997530c680d0e5a6.png&sliderdata%5B4%5D%5Bid%5D=null&sliderdata%5B4%5D%5Bpic%5D=null
+HTTP_REFERER=http://weixin.test.local/Weixin/templateset
+---
+2014/02/25 09:55:19 [error] [exception.CException] exception 'CException' with message 'Property "UserModel.2" is not defined.' in D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\ar\CActiveRecord.php(145): CComponent->__get('2')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php(238): CActiveRecord->__get('2')
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): WeixinController->actionTemplateslidersave()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('Templatesliders...')
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('Weixin/Template...')
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
 #10 {main}
-REQUEST_URI=/index.php/W/i/sid/2
-HTTP_REFERER=http://weixin.test.local:8080/Weixin/base
+REQUEST_URI=/Weixin/Templateslidersave?template_id=21&site_id=2&sliderdata%5B0%5D%5Bid%5D=t1&sliderdata%5B0%5D%5Bpic%5D=1393321981530c67fd2b8ce.png&sliderdata%5B1%5D%5Bid%5D=null&sliderdata%5B1%5D%5Bpic%5D=null&sliderdata%5B2%5D%5Bid%5D=null&sliderdata%5B2%5D%5Bpic%5D=null&sliderdata%5B3%5D%5Bid%5D=t1&sliderdata%5B3%5D%5Bpic%5D=1393321997530c680d0e5a6.png&sliderdata%5B4%5D%5Bid%5D=null&sliderdata%5B4%5D%5Bpic%5D=null
+HTTP_REFERER=http://weixin.test.local/Weixin/templateset
 ---
-2014/02/22 23:53:34 [error] [exception.CException] exception 'CException' with message 'Wcontroller cannot find the requested view "index".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:878
+2014/02/25 09:57:22 [error] [exception.CException] exception 'CException' with message 'WeixinController and its behaviors do not have a method or closure named "insertSlider".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CComponent.php:266
 Stack trace:
-#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
-#1 E:\Apache2.2\htdocs\weixin\protected\controllers\WController.php(21): CController->render('index', Array)
-#2 E:\Apache2.2\htdocs\weixin\framework\web\actions\CInlineAction.php(49): Wcontroller->actionI()
-#3 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#4 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
-#5 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('i')
-#7 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('W/i/sid/2')
-#8 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
-#9 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
+#0 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php(242): CComponent->__call('insertSlider', Array)
+#1 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php(242): WeixinController->insertSlider()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): WeixinController->actionTemplateslidersave()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('Templatesliders...')
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('Weixin/Template...')
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
 #10 {main}
-REQUEST_URI=/index.php/W/i/sid/2
-HTTP_REFERER=http://weixin.test.local:8080/Weixin/base
+REQUEST_URI=/Weixin/Templateslidersave?template_id=21&site_id=2&sliderdata%5B0%5D%5Bid%5D=t1&sliderdata%5B0%5D%5Bpic%5D=1393321981530c67fd2b8ce.png&sliderdata%5B1%5D%5Bid%5D=null&sliderdata%5B1%5D%5Bpic%5D=null&sliderdata%5B2%5D%5Bid%5D=null&sliderdata%5B2%5D%5Bpic%5D=null&sliderdata%5B3%5D%5Bid%5D=t1&sliderdata%5B3%5D%5Bpic%5D=1393321997530c680d0e5a6.png&sliderdata%5B4%5D%5Bid%5D=null&sliderdata%5B4%5D%5Bpic%5D=null
+HTTP_REFERER=http://weixin.test.local/Weixin/templateset
 ---
-2014/02/22 23:55:28 [error] [exception.CException] exception 'CException' with message 'Wcontroller cannot find the requested view "index".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:878
+2014/02/25 09:57:42 [error] [php] Array to string conversion (D:\Apache2.2\htdocs\leiphone\weixin\framework\db\schema\CDbColumnSchema.php:146)
 Stack trace:
-#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
-#1 E:\Apache2.2\htdocs\weixin\protected\controllers\WController.php(21): CController->render('index', Array)
-#2 E:\Apache2.2\htdocs\weixin\framework\web\actions\CInlineAction.php(49): Wcontroller->actionI()
-#3 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#4 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
-#5 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('i')
-#7 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('W/i/sid/2')
-#8 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
-#9 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
+#0 D:\Apache2.2\htdocs\leiphone\weixin\protected\models\Template21Model.php(34): Template21Model->insert()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php(242): Template21Model->insertSlider()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): WeixinController->actionTemplateslidersave()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): WeixinController->runAction()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): WeixinController->runActionWithFilters()
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): WeixinController->run()
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/Weixin/Templateslidersave?template_id=21&site_id=2&sliderdata%5B0%5D%5Bid%5D=t1&sliderdata%5B0%5D%5Bpic%5D=1393321981530c67fd2b8ce.png&sliderdata%5B1%5D%5Bid%5D=null&sliderdata%5B1%5D%5Bpic%5D=null&sliderdata%5B2%5D%5Bid%5D=null&sliderdata%5B2%5D%5Bpic%5D=null&sliderdata%5B3%5D%5Bid%5D=t1&sliderdata%5B3%5D%5Bpic%5D=1393321997530c680d0e5a6.png&sliderdata%5B4%5D%5Bid%5D=null&sliderdata%5B4%5D%5Bpic%5D=null
+2014/02/25 10:04:45 [error] [php] Undefined variable: result (D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php:251)
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): WeixinController->runAction()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): WeixinController->runActionWithFilters()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): WeixinController->run()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/Weixin/Templateslidersave?template_id=21&site_id=2&sliderdata%5B0%5D%5Bid%5D=c1&sliderdata%5B0%5D%5Bpic%5D=1393322670530c6aae31d77.png&sliderdata%5B1%5D%5Bid%5D=null&sliderdata%5B1%5D%5Bpic%5D=null&sliderdata%5B2%5D%5Bid%5D=t1&sliderdata%5B2%5D%5Bpic%5D=1393322677530c6ab570d42.jpg&sliderdata%5B3%5D%5Bid%5D=null&sliderdata%5B3%5D%5Bpic%5D=null&sliderdata%5B4%5D%5Bid%5D=null&sliderdata%5B4%5D%5Bpic%5D=null
+2014/02/25 10:05:57 [error] [exception.CException] exception 'CException' with message 'Property "Template21Model.updateSlider" is not defined.' in D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\ar\CActiveRecord.php(145): CComponent->__get('updateSlider')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php(240): CActiveRecord->__get('updateSlider')
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): WeixinController->actionTemplateslidersave()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('Templatesliders...')
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('Weixin/Template...')
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
 #10 {main}
-REQUEST_URI=/index.php/W/i/sid/2
-HTTP_REFERER=http://weixin.test.local:8080/Weixin/base
+REQUEST_URI=/Weixin/Templateslidersave?template_id=21&site_id=2&sliderdata%5B0%5D%5Bid%5D=c1&sliderdata%5B0%5D%5Bpic%5D=1393322670530c6aae31d77.png&sliderdata%5B1%5D%5Bid%5D=null&sliderdata%5B1%5D%5Bpic%5D=null&sliderdata%5B2%5D%5Bid%5D=t1&sliderdata%5B2%5D%5Bpic%5D=1393322677530c6ab570d42.jpg&sliderdata%5B3%5D%5Bid%5D=null&sliderdata%5B3%5D%5Bpic%5D=null&sliderdata%5B4%5D%5Bid%5D=null&sliderdata%5B4%5D%5Bpic%5D=null
+HTTP_REFERER=http://weixin.test.local/Weixin/templateset
 ---
-2014/02/23 13:36:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+2014/02/25 10:06:18 [error] [exception.CDbException] exception 'CDbException' with message 'No columns are being updated for table "template_21".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\db\schema\CDbCommandBuilder.php:392
 Stack trace:
-#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
-#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
-#2 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
-#3 {main}
-REQUEST_URI=/favicon.ico
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\ar\CActiveRecord.php(1747): CDbCommandBuilder->createUpdateCommand(Object(CMysqlTableSchema), Array, Object(CDbCriteria))
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\ar\CActiveRecord.php(1124): CActiveRecord->updateByPk(NULL, Array)
+#2 D:\Apache2.2\htdocs\leiphone\weixin\protected\models\Template21Model.php(42): CActiveRecord->update(Array, 'slider=:slider', Array)
+#3 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php(240): Template21Model->updateSlider()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): WeixinController->actionTemplateslidersave()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('Templatesliders...')
+#9 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('Weixin/Template...')
+#10 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#12 {main}
+REQUEST_URI=/Weixin/Templateslidersave?template_id=21&site_id=2&sliderdata%5B0%5D%5Bid%5D=c1&sliderdata%5B0%5D%5Bpic%5D=1393322670530c6aae31d77.png&sliderdata%5B1%5D%5Bid%5D=null&sliderdata%5B1%5D%5Bpic%5D=null&sliderdata%5B2%5D%5Bid%5D=t1&sliderdata%5B2%5D%5Bpic%5D=1393322677530c6ab570d42.jpg&sliderdata%5B3%5D%5Bid%5D=null&sliderdata%5B3%5D%5Bpic%5D=null&sliderdata%5B4%5D%5Bid%5D=null&sliderdata%5B4%5D%5Bpic%5D=null
+HTTP_REFERER=http://weixin.test.local/Weixin/templateset
 ---
-2014/02/23 14:46:33 [error] [exception.CException] exception 'CException' with message 'Wcontroller cannot find the requested view "index".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:878
+2014/02/25 10:08:43 [error] [exception.CDbException] exception 'CDbException' with message 'No columns are being updated for table "template_21".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\db\schema\CDbCommandBuilder.php:392
 Stack trace:
-#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
-#1 E:\Apache2.2\htdocs\weixin\protected\controllers\WController.php(21): CController->render('index', Array)
-#2 E:\Apache2.2\htdocs\weixin\framework\web\actions\CInlineAction.php(49): Wcontroller->actionI()
-#3 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#4 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
-#5 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('i')
-#7 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('W/i/sid/2')
-#8 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
-#9 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
-#10 {main}
-REQUEST_URI=/index.php/W/i/sid/2
-HTTP_REFERER=http://weixin.test.local:8080/Weixin/base
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\ar\CActiveRecord.php(1747): CDbCommandBuilder->createUpdateCommand(Object(CMysqlTableSchema), Array, Object(CDbCriteria))
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\ar\CActiveRecord.php(1124): CActiveRecord->updateByPk(NULL, Array)
+#2 D:\Apache2.2\htdocs\leiphone\weixin\protected\models\Template21Model.php(42): CActiveRecord->update(Array, 'site_id=:slider...', Array)
+#3 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php(240): Template21Model->updateSlider()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): WeixinController->actionTemplateslidersave()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('Templatesliders...')
+#9 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('Weixin/Template...')
+#10 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#12 {main}
+REQUEST_URI=/Weixin/Templateslidersave?template_id=21&site_id=2&sliderdata%5B0%5D%5Bid%5D=c1&sliderdata%5B0%5D%5Bpic%5D=1393322670530c6aae31d77.png&sliderdata%5B1%5D%5Bid%5D=null&sliderdata%5B1%5D%5Bpic%5D=null&sliderdata%5B2%5D%5Bid%5D=t1&sliderdata%5B2%5D%5Bpic%5D=1393322677530c6ab570d42.jpg&sliderdata%5B3%5D%5Bid%5D=null&sliderdata%5B3%5D%5Bpic%5D=null&sliderdata%5B4%5D%5Bid%5D=null&sliderdata%5B4%5D%5Bpic%5D=null
+HTTP_REFERER=http://weixin.test.local/Weixin/templateset
 ---
-2014/02/23 15:38:17 [error] [exception.CException] exception 'CException' with message 'Wcontroller cannot find the requested view "index".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:878
+2014/02/25 10:26:32 [error] [exception.CDbException] exception 'CDbException' with message 'No columns are being updated for table "template_21".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\db\schema\CDbCommandBuilder.php:392
 Stack trace:
-#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
-#1 E:\Apache2.2\htdocs\weixin\protected\controllers\WController.php(21): CController->render('index', Array)
-#2 E:\Apache2.2\htdocs\weixin\framework\web\actions\CInlineAction.php(49): Wcontroller->actionI()
-#3 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#4 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
-#5 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('i')
-#7 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('W/i/sid/2')
-#8 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
-#9 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
-#10 {main}
-REQUEST_URI=/index.php/W/i/sid/2
-HTTP_REFERER=http://weixin.test.local:8080/Weixin/base
----
-2014/02/23 15:38:43 [error] [exception.CException] exception 'CException' with message 'Wcontroller cannot find the requested view "index".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:878
-Stack trace:
-#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
-#1 E:\Apache2.2\htdocs\weixin\protected\controllers\WController.php(21): CController->render('index', Array)
-#2 E:\Apache2.2\htdocs\weixin\framework\web\actions\CInlineAction.php(49): Wcontroller->actionI()
-#3 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#4 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
-#5 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#6 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('i')
-#7 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('W/i/sid/2')
-#8 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
-#9 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
-#10 {main}
-REQUEST_URI=/index.php/W/i/sid/2
-HTTP_REFERER=http://weixin.test.local:8080/Weixin/base
----
-2014/02/23 15:38:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
-Stack trace:
-#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
-#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
-#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
-#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
-#4 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
-#5 {main}
-REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
-HTTP_REFERER=http://weixin.test.local:8080/Package/add
----
-2014/02/23 15:39:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquerymobile/images/icon3.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
-Stack trace:
-#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('css/jquerymobil...')
-#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
-#2 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
-#3 {main}
-REQUEST_URI=/css/jquerymobile/images/icon3.png
-HTTP_REFERER=http://weixin.test.local:8080/WeixinFans/view/id/1
----
-2014/02/23 15:39:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquerymobile/images/icon10.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
-Stack trace:
-#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('css/jquerymobil...')
-#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
-#2 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
-#3 {main}
-REQUEST_URI=/css/jquerymobile/images/icon10.png
-HTTP_REFERER=http://weixin.test.local:8080/WeixinFans/view/id/1
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\ar\CActiveRecord.php(1747): CDbCommandBuilder->createUpdateCommand(Object(CMysqlTableSchema), Array, Object(CDbCriteria))
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\db\ar\CActiveRecord.php(1124): CActiveRecord->updateByPk(NULL, Array)
+#2 D:\Apache2.2\htdocs\leiphone\weixin\protected\models\Template21Model.php(45): CActiveRecord->update(Array)
+#3 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php(240): Template21Model->updateSlider()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): WeixinController->actionTemplateslidersave()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('Templatesliders...')
+#9 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('Weixin/Template...')
+#10 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#12 {main}
+REQUEST_URI=/Weixin/Templateslidersave?template_id=21&site_id=2&sliderdata%5B0%5D%5Bid%5D=c1&sliderdata%5B0%5D%5Bpic%5D=1393322670530c6aae31d77.png&sliderdata%5B1%5D%5Bid%5D=null&sliderdata%5B1%5D%5Bpic%5D=null&sliderdata%5B2%5D%5Bid%5D=t1&sliderdata%5B2%5D%5Bpic%5D=1393322677530c6ab570d42.jpg&sliderdata%5B3%5D%5Bid%5D=null&sliderdata%5B3%5D%5Bpic%5D=null&sliderdata%5B4%5D%5Bid%5D=null&sliderdata%5B4%5D%5Bpic%5D=null
+HTTP_REFERER=http://weixin.test.local/Weixin/templateset
 ---

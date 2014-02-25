@@ -11,7 +11,7 @@
         <div class="box-content">
             <div class="box-content">
                 <div class="span8" style="width: 560px;height: 800px;">
-                    <div class="m_lefter"><div id="web_skin_index">
+                    <div class="m_lefter" template='<?php echo $template_id; ?>' site='<?php echo $site_id; ?>'><div id="web_skin_index">
                             <div class="list">
                                 <div class="web_skin_index_list banner" id="slider">
                                     <div class="img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/slider.jpg"></div><div class="mod">&nbsp;</div>
@@ -75,6 +75,7 @@
                                     <div class="link_div">
                                         <span>链接页面</span>
                                         <select class="sliderselect" edit='1'>
+                                            <option value="0">请选择</option>
                                             <option value="t1">微官网</option>
                                             <option value="c1">产品</option>
                                         </select>
@@ -97,6 +98,7 @@
                                     <div class="link_div">
                                         <span>链接页面</span>
                                         <select class="sliderselect" edit='2'>
+                                            <option value="0">请选择</option>
                                             <option value="t1">微官网</option>
                                             <option value="c1">产品</option>
                                         </select>
@@ -119,6 +121,7 @@
                                     <div class="link_div">
                                         <span>链接页面</span>
                                         <select class="sliderselect" edit='3'>
+                                            <option value="0">请选择</option>
                                             <option value="t1">微官网</option>
                                             <option value="c1">产品</option>
                                         </select>
@@ -141,6 +144,7 @@
                                     <div class="link_div">
                                         <span>链接页面</span>
                                         <select class="sliderselect" edit='4'>
+                                            <option value="0">请选择</option>
                                             <option value="t1">微官网</option>
                                             <option value="c1">产品</option>
                                         </select>
@@ -163,6 +167,7 @@
                                     <div class="link_div">
                                         <span>链接页面</span>
                                         <select class="sliderselect" edit='5'>
+                                            <option value="0">请选择</option>
                                             <option value="t1">微官网</option>
                                             <option value="c1">产品</option>
                                         </select>
@@ -178,7 +183,7 @@
 
                                 <div class="form-actions">
                                     <button type="submit" id="sliderpost" class="btn btn-primary">保存</button>
-                                    <button class="btn">取消</button>
+                                    <button class="btn cancelbtn">取消</button>
                                 </div>
                                 <i class="arrow arrow_out" style="margin-top: 0px;"></i>
                                 <i class="arrow arrow_in" style="margin-top: 0px;"></i>
@@ -247,6 +252,8 @@
         {'id':null,'pic':null},
         {'id':null,'pic':null}
     ];
+    var site = parseInt($(".m_lefter").attr('site'));
+    var template = parseInt($(".m_lefter").attr('template'));
     $("#slider").mouseenter(function(){
         $(this).append("<div id='SetHomeCurrentBox' style='height: 310px; width: 511px;line-height: 310px;'>" +
             "点击添加轮播图</div>")
@@ -323,7 +330,7 @@
                 success: function(data) {
                     var img = "<?php echo Yii::app()->request->baseUrl;?>/upload/slider/"+data.pic;
                     zhezhao.hide();
-                    showimg.html("<img width='250px' height='100px' src='"+img+"'><button onclick='delimage(this)' datadir='slider' data='"+data.pic+"'class='btn btn-mini btn-danger del_btn'>删除</button>");
+                    showimg.html("<img width='250px' height='100px' src='"+img+"'><button onclick='delimage(this)' edit='"+i+"' datadir='slider' data='"+data.pic+"'class='btn btn-mini btn-danger del_btn'>删除</button>");
                     changePic(i,data.pic);
                     btn.html("添加附件");
                 },
@@ -337,14 +344,17 @@
     function delimage(obj){
         var dir = $(obj).attr('datadir');
         var name = $(obj).attr('data');
-        $.getJSON("<?php Yii::app()->request->baseUrl; ?>/Upload/Delimage", { dir: dir, name: name },function(json){
+        var i =  parseInt($(obj).attr('edit'));
+        $.post("<?php Yii::app()->request->baseUrl; ?>/Upload/Delimage", { dir: dir, name: name },function(json){
             if(json.code == 0){
                 $(obj).parent().html("");
+                changePic(i,null);
+                changeSelect(i,null);
             }else{
                 alert(json.msg);
                 return false;
             }
-        });
+        },'json');
     }
 
     $(".sliderselect").each(function(){
@@ -364,6 +374,58 @@
 
     $("#sliderpost").click(function(){
         //console.log(data);
+        for(var i=0;i< data.slider.length;i++){
+            if(data.slider[i].pic != null && data.slider[i].id == null){
+                notif({
+                    type: "warning",
+                    msg: "第"+(i+1)+"张图片没有选中链接地址哦",
+                    position: "center",
+                    width:"all",
+                    height:100,
+                    opacity: 1
+                });
+                return false;
+            }
+        }
+        if(data.slider[0].pic == null && data.slider[1].pic == null &&
+            data.slider[2].pic == null && data.slider[3].pic == null
+            && data.slider[4].pic == null){
+            notif({
+                type: "warning",
+                msg: "您还没传图片",
+                position: "center",
+                width:"all",
+                height:100,
+                opacity: 1
+            });
+            return false;
+        }
+        $.getJSON("<?php Yii::app()->request->baseUrl; ?>/Weixin/Templateslidersave",{template_id:template,site_id:site,sliderdata:data.slider},function(data){
+            if(data.code == 0){
+                notif({
+                    type: "success",
+                    msg: data.msg,
+                    position: "center",
+                    width:"all",
+                    height:100,
+                    opacity: 1
+                });
+            }else{
+                notif({
+                    type: "error",
+                    msg: data.msg,
+                    position: "center",
+                    width:"all",
+                    height:100,
+                    opacity: 1
+                });
+                return false;
+            }
+        });
+        $('#slidereditdiv').hide();
+    });
+
+    $(".cancelbtn").click(function(){
         $('#slidereditdiv').hide();
     });
 </script>

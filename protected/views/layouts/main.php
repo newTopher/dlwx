@@ -6,6 +6,7 @@
 
     <!-- blueprint CSS framework -->
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.7.2.min.js"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.form.js"></script>
     <link id="bs-css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-cerulean.css" rel="stylesheet">
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/css/uploadify.css"></script>
     <style type="text/css">

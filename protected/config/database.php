@@ -5,7 +5,7 @@ return array(
         'connectionString' => 'mysql:host=localhost;dbname=wapwei',
         'emulatePrepare' => true,
         'username' => 'root',
-        'password' => '09270815',
+        'password' => 'root',
         'charset' => 'utf8',
         'tablePrefix'=>''
     ),
@@ -13,7 +13,7 @@ return array(
         'connectionString' => 'mysql:host=localhost;dbname=wxfood',
         'emulatePrepare' => false,
         'username' => 'root',
-        'password' => '09270815',
+        'password' => 'root',
         'charset' => 'utf8',
         'tablePrefix'=>''
     ),

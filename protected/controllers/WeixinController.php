@@ -223,7 +223,37 @@ class WeixinController extends Controller{
     public function actionTemplateset(){
         $webData = WxWebsiteModel::getWxWebByUid(Yii::app()->session['user']->id);
         $template_name = TemplateModel::getTemplateNameByTpid($webData->template_id);
-        $this->render('templateset',array('template_name'=>$template_name));
+        $this->render('templateset',array('template_name'=>$template_name,'template_id'=>$webData->template_id,'site_id'=>$webData->id));
+    }
+
+    public function actionTemplateslidersave(){
+        $sliderdata = Yii::app()->request->getParam('sliderdata');
+        $site_id = Yii::app()->request->getParam('site_id');
+        $template_id = Yii::app()->request->getParam('template_id');
+        if(!empty($site_id) && !empty($template_id)){
+            $modelname ='Template'.$template_id.'Model';
+            $templateModel = new $modelname();
+            $templateModel->slider = CJSON::encode($sliderdata);
+            $templateModel->uid = Yii::app()->session['user']->id;
+            $templateModel->site_id = $site_id;
+            if($templateModel->findByUidSiteId()){
+                if($templateModel->updateSlider()){
+                    $result = array('code'=>0,'msg'=>'更新成功');
+                }else{
+                    $result = array('code'=>-1,'msg'=>'更新失败');
+                }
+            }else{
+                if($templateModel->insertSlider()){
+                    $result = array('code'=>0,'msg'=>'新增成功');
+                }else{
+                    $result = array('code'=>-1,'msg'=>'新增失败');
+                }
+            }
+        }else{
+            $result = array('code'=>-1,'msg'=>'保存失败');
+        }
+        echo CJSON::encode($result);
+
     }
 
 
