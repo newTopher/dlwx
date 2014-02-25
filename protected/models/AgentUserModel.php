@@ -47,7 +47,6 @@ class AgentUserModel extends Ar{
         if(!empty($this->email) && !empty($this->password) && !empty($this->agent_name) && strpos($this->email,'@wapwei')){
             if($this->insert()){
                 return true;
-
             }else{
                 return false;
             }
@@ -63,6 +62,22 @@ class AgentUserModel extends Ar{
             }else{
                 return false;
             }
+        }else{
+            return false;
+        }
+    }
+
+    public function updateMoney(){
+        if(self::model()->updateByPk($this->id,array('money'=>$this->money))){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public function selectMoney(){
+        if($money=$this->findByPk($this->id)){
+            return $money;
         }else{
             return false;
         }

@@ -37,11 +37,12 @@ $config = array(
     'components'=>array(
         'user'=>array(
             // enable cookie-based authentication
-            'allowAutoLogin'=>false,
+            'allowAutoLogin'=>true,
         ),
         // uncomment the following to enable URLs in path-format
         'session'=>array(
-            'autoStart'=>false,
+            'autoStart'=>true,
+            'sessionName'=>'user'
         ),
         'urlManager'=>array(
             'urlFormat'=>'path',
@@ -104,7 +105,8 @@ $config = array(
     'params'=>array(
         // this is used in contact page
         'adminEmail'=>'webmaster@example.com',
-    ),
+    )
+
 );
 $database   = @include_once dirname(__FILE__).'/database.php';
 if(!empty($database)){

@@ -45,19 +45,37 @@ class AgentController extends Controller{
     public function  actionAddMoney(){
         $agent_user=new AgentUserModel();
         $agent_user->id=Yii::app()->session['user']->id;
-        $charge_note=new AgentUserModel();
+        $charge_note=new AgentChargeNoteModel();
         $list=$agent_user->AgentUserView();
         if($_POST){
-            $charge_note->uid=$agent_user->id;
+            $charge_note->status=0;
             $charge_note->money= Yii::app()->request->getParam('money','');
-            $charge_note->time=Yii::app()->request->getParam('date');
+            $charge_note->time=Yii::app()->request->getParam('date','');
+            $charge_note->uid=Yii::app()->session['user']->id;
+            $charge_note->mobilephone=Yii::app()->session['user']->mobilephone;
             $charge_note->pay_way=Yii::app()->request->getParam('pay_way','');
+            $charge_note->pay_num=Yii::app()->request->getParam('pay_num','');
             $charge_note->email=Yii::app()->session['user']->email;
-            $charge_note->agent_name=Yii::app()->session['user']->name;
+            $charge_note->agent_name=Yii::app()->session['user']->agent_name;
+            if(empty($charge_note->pay_way)){
+                $msg="支付方式不能为空，请重新提交";
+            }elseif(empty( $charge_note->time)){
+                $msg="支付时间不能为空，请重新提交";
+            }elseif(empty( $charge_note->money)){
+                $msg="支付金额不能为空，请重新提交";
+            }elseif(empty( $charge_note->pay_num)){
+                $msg="交易号不能为空，请重新提交";
+            }else{
+                if($charge_note->NoteInsert()){
+                    $msg="提交成功，请等待审核";
+                }else{
+                    $msg = "未能提交成功，请重新提交";
+                }
+            }
         }else{
-            $msg = "";
+            $msg ="";
         }
-         $this->render('addMoney',array('list'=>$list));
+        $this->render('addMoney',array('list'=>$list,'msg'=>$msg));
     }
 
     public function actionAddWexinAccount(){
@@ -78,6 +96,23 @@ class AgentController extends Controller{
         $agentWxUserModel = new AgentWxUserModel();
         $agentWxUserData = $agentWxUserModel->getAgentWxUser($puid);
         $this->render('applylist',array('agentWxUserData'=>$agentWxUserData));
+    }
+
+    public function actionUserList(){
+        $puid = Yii::app()->session['user']->id;
+        $agentWxUserModel=new UserModel();
+        $list=$agentWxUserModel->findUserByUid($puid);
+        $this->render('userlist',array('list'=>$list));
+    }
+
+    public function actionUserEdit(){
+        if($id=Yii::app()->request->getParam('id','')){
+            $agentWxUserModel=new UserModel();
+            $list=$agentWxUserModel->findUserByid($id);
+        }else{
+            $list=array();
+        }
+        $this->render('edit',array('list'=>$list));
     }
 
     public function actionCatFailReason(){
@@ -114,6 +149,6 @@ class AgentController extends Controller{
         }
     }
 
-    
+
 
 }
