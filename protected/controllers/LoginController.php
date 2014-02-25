@@ -34,7 +34,7 @@ class LoginController extends Controller{
             $model->rememberMe=Yii::app()->request->getParam('remember','');
             if($model->validate() && $model->login()){
                 Yii::app()->session['user']=$model->getUser();
-                $this->redirect(Yii::app()->user->returnUrl);
+                header("Location:".Yii::app()->user->returnUrl);
             }else{
                 $errMsg='用户名或者密码错误';
             }

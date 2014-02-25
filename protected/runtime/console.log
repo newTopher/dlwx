@@ -167,3 +167,11 @@ Stack trace:
 REQUEST_URI=/css/jquerymobile/images/icon10.png
 HTTP_REFERER=http://weixin.test.local:8080/WeixinFans/view/id/1
 ---
+2014/02/24 22:03:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
