@@ -17,39 +17,39 @@
                                     <div class="img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/slider.jpg"></div><div class="mod">&nbsp;</div>
                                 </div>
                                 <div class="box">
-                                    <div class="web_skin_index_list list mini_box">
+                                    <div class="web_skin_index_list list mini_box" nav_link="t1" title="服务项目" ref="p1" image="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i0.jpg">
                                         <div>
                                             <div class="img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i0.jpg"></div><div class="mod" style="display: none;">&nbsp;</div>
                                             <div class="text"><a href="">服务项目</a></div><div class="mod" style="display: none;">&nbsp;</div>
                                         </div><div class="mod" style="display: none;">&nbsp;</div>
                                     </div>
-                                    <div class="web_skin_index_list list mini_box">
+                                    <div class="web_skin_index_list list mini_box" nav_link="c1" title="核心核心" ref="p2" image="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i4.jpg">
                                         <div>
                                             <div class="img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i4.jpg"></div><div class="mod" style="display: none;">&nbsp;</div>
                                             <div class="text"><a href="">核心核心</a></div><div class="mod" style="display: none;">&nbsp;</div>
                                         </div><div class="mod" style="display: none;">&nbsp;</div>
 
                                     </div>
-                                    <div class="web_skin_index_list list mini_box">
+                                    <div class="web_skin_index_list list mini_box" nav_link="t1" title="网上选人" ref="p3" image="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i2.jpg">
                                         <div>
                                             <div class="img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i2.jpg"></div><div class="mod">&nbsp;</div>
                                             <div class="text"><a href="">网上选人</a></div><div class="mod">&nbsp;</div>
                                         </div><div class="mod">&nbsp;</div>
                                     </div>
-                                    <div class="web_skin_index_list list mini_box">
+                                    <div class="web_skin_index_list list mini_box" nav_link="t1" title="招聘培训" ref="p4" image="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i3.jpg">
                                         <div>
                                             <div class="img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i3.jpg"></div><div class="mod" style="display: none;">&nbsp;</div>
                                             <div class="text"><a href="">招聘培训</a></div><div class="mod" style="display: none;">&nbsp;</div>
                                         </div><div class="mod" style="display: none;">&nbsp;</div>
                                     </div>
-                                    <div class="web_skin_index_list list mini_box">
+                                    <div class="web_skin_index_list list mini_box" nav_link="t1" title="收费标准" ref="p5" image="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i4.jpg">
                                         <div>
                                             <div class="img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i4.jpg"></div><div class="mod" style="display: none;">&nbsp;</div>
                                             <div class="text"><a href="">收费标准</a></div><div class="mod" style="display: none;">&nbsp;</div>
                                         </div><div class="mod" style="display: none;">&nbsp;</div>
 
                                     </div>
-                                    <div class="web_skin_index_list list mini_box">
+                                    <div class="web_skin_index_list list mini_box" nav_link="t1" title="联系我们" ref="p6" image="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i5.jpg">
                                         <div>
                                             <div class="img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i5.jpg"></div><div class="mod" style="display: none;">&nbsp;</div>
                                             <div class="text"><a href="">联系我们</a></div><div class="mod" style="display: none;">&nbsp;</div>
@@ -198,35 +198,40 @@
                             <div class="inner">
                                 <div class="control-group">
                                     <label class="control-label">标题</label>
+                                    <input type="hidden" value="" id="position_nav">
+                                    <input type="hidden" value="" id="image_nav">
+                                    <input type="hidden" value="" id="old_title">
                                     <div class="controls">
-                                        <input class="input-xlarge focused" name="webname_title" id="webname_title" type="text" value="美女a " data-required="true">
+                                        <input class="input-xlarge focused" id="nav_title" type="text" value="" data-required="true">
                                     </div>
                                 </div>
 
                                 <div class="control-group">
                                     <label class="control-label" for="selectError3">链接地址</label>
                                     <div class="controls">
-                                        <select name="template_id" id="selectError3">
-                                            <option value="21">微官网</option>
+                                        <select id="nav_link">
+                                            <option value="0">请选择</option>
+                                            <option value="t1">微官网</option>
+                                            <option value="c1">微官网</option>
                                         </select>
                                     </div>
                                 </div>
 
                                 <div class="btn btn-info" style="width: 80px;height: 18px;">
                                     选择图片
-                                    <input class="filecss fileupload" type="file" name="sliderimage" edit="4">
+                                    <input class="filecss nav_fileupload" type="file" name="sliderimage">
                                 </div>
-                                <button class="btn uploadbtn" edit='4'>上传</button>
-                                <div id="zhezhao">
-                                    <div id="loading" class="loading">
-                                        <span class="bar"><img src="<?php Yii::app()->request->baseUrl; ?>/images/loading.gif" /></span><span class="percent">0%</span >
+                                <button class="btn uploadbtn_nav" edit='4'>上传</button>
+                                <div id="zhezhao_nav">
+                                    <div id="loading_nav" class="loading">
+                                        <span class="bar"><img src="<?php Yii::app()->request->baseUrl; ?>/images/loading.gif" /></span><span class="percent_nav">0%</span >
                                     </div>
                                 </div>
-                                <div id="showimg"></div>
+                                <div id="showimg_nav" class="nav_image_calss"></div>
 
                                 <div class="form-actions">
-                                    <button type="submit" id="sliderpost" class="btn btn-primary">保存</button>
-                                    <button class="btn">取消</button>
+                                    <button type="submit" id="nav_postbtn" class="btn btn-primary">保存</button>
+                                    <button class="btn cancel_nav" >取消</button>
                                 </div>
                                 <i class="arrow arrow_out" style="margin-top: 0px;"></i>
                                 <i class="arrow arrow_in" style="margin-top: 0px;"></i>
@@ -286,6 +291,11 @@
             $(this).siblings().find("#SetHomeCurrentBox").remove();
             $(this).parent().prev().find("#SetHomeCurrentBox").remove();
             $('#slidereditdiv').hide();
+            $("#nav_title").val($(this).attr('title'));
+            $("#old_title").val($(this).attr('title'));
+            $("#showimg_nav").html("<img src='"+$(this).attr('image')+"'/>");
+            $("#position_nav").val($(this).attr('ref'));
+            $("#nav_link").val($(this).attr('nav_link'));
             var top = $(this).offset().top;top+'px'
             $('#naveditdiv').css({'position':'relative','top':(top-147)+'px'});
             $('#naveditdiv').show();
@@ -350,8 +360,52 @@
                 $(obj).parent().html("");
                 changePic(i,null);
                 changeSelect(i,null);
+                notif({
+                    type: "success",
+                    msg: "删除成功",
+                    position: "center",
+                    width:"all",
+                    height:100,
+                    opacity: 1
+                });
             }else{
-                alert(json.msg);
+                notif({
+                    type: "error",
+                    msg: json.msg,
+                    position: "center",
+                    width:"all",
+                    height:100,
+                    opacity: 1
+                });
+                return false;
+            }
+        },'json');
+    }
+
+    function delinavmage(obj){
+        var dir = $(obj).attr('datadir');
+        var name = $(obj).attr('data');
+        $.post("<?php Yii::app()->request->baseUrl; ?>/Upload/Delimage", { dir: dir, name: name },function(json){
+            if(json.code == 0){
+                $(obj).parent().html("");
+                $("#image_nav").val("");
+                notif({
+                    type: "success",
+                    msg: "删除成功",
+                    position: "center",
+                    width:"all",
+                    height:100,
+                    opacity: 1
+                });
+            }else{
+                notif({
+                    type: "error",
+                    msg: json.msg,
+                    position: "center",
+                    width:"all",
+                    height:100,
+                    opacity: 1
+                });
                 return false;
             }
         },'json');
@@ -410,6 +464,7 @@
                     height:100,
                     opacity: 1
                 });
+                $('#slidereditdiv').hide();
             }else{
                 notif({
                     type: "error",
@@ -422,11 +477,116 @@
                 return false;
             }
         });
-        $('#slidereditdiv').hide();
+
     });
 
     $(".cancelbtn").click(function(){
         $('#slidereditdiv').hide();
     });
+
+
+    $(".nav_fileupload").click(function(){
+        var zhezhao = $("#nav_zhezhao");
+        zhezhao.hide();
+        if($("#myupload").attr('action') == undefined){
+            $(this).wrap("<form id='myupload' action='<?php Yii::app()->request->baseUrl; ?>/Upload/File' method='post' enctype='multipart/form-data'></form>");
+        }
+    });
+
+    $(".uploadbtn_nav").click(function(){
+        var percent = $('.percent_nav');
+        var showimg = $('#showimg_nav');
+        var zhezhao = $("#zhezhao_nav");
+        var image_nav = $("#image_nav");
+        var btn = $(".btn span");
+        $("#myupload").ajaxSubmit({
+            dataType:  'json',
+            beforeSend: function() {
+                showimg.empty();
+                zhezhao.show();
+                var percentVal = '0%';
+                percent.html(percentVal);
+                btn.html("上传中...");
+            },
+            uploadProgress: function(event, position, total, percentComplete) {
+                $("#zhezhao_nav").attr("class","mask opacity");
+                $("#zhezhao_nav").css('width',$(window).width());
+                $("#zhezhao_nav").css('height',$(window).height());
+                var percentVal = percentComplete + '%';
+                percent.html(percentVal);
+                $("#zhezhao_nav").css('margin-left',$(window).width()/2-50);
+                $("#zhezhao_nav").css('margin-top',$(window).height()/2-10);
+            },
+            success: function(data) {
+                var img = "<?php echo Yii::app()->request->baseUrl;?>/upload/slider/"+data.pic;
+                zhezhao.hide();
+                image_nav.val(data.pic);
+                showimg.html("<img width='140px' height='140px' src='"+img+"'><button onclick='delinavmage(this)' datadir='slider' data='"+data.pic+"'class='btn btn-mini btn-danger del_btn'>删除</button>");
+                btn.html("添加附件");
+            },
+            error:function(xhr){
+                btn.html("上传失败");
+            }
+        });
+    });
+
+    $("#nav_postbtn").click(function(){
+        var position = $("#position_nav").val();
+        var nav_title = $("#nav_title").val();
+        var old_title = $("#old_title").val();
+        var nav_link = $("#nav_link").val();
+        var img = $("#showimg_nav img").attr('src');
+        var img_nav = $("#image_nav").val();
+        if(nav_title.length == 0){
+            notif({
+                type: "warning",
+                msg: "标题不能为空",
+                position: "center",
+                width:"all",
+                height:100,
+                opacity: 1
+            });
+            return false;
+        }
+        if(nav_link == 0){
+            notif({
+                type: "warning",
+                msg: "请选择链接地址",
+                position: "center",
+                width:"all",
+                height:100,
+                opacity: 1
+            });
+            return false;
+        }
+
+        if(!img_nav || typeof(img_nav) == undefined ){
+            if(img.length != 0){
+                $('#naveditdiv').hide();
+                return true;
+            }else{
+                notif({
+                    type: "warning",
+                    msg: "请选择图片",
+                    position: "center",
+                    width:"all",
+                    height:100,
+                    opacity: 1
+                });
+                return false;
+            }
+        }
+
+
+
+
+
+    });
+
+    $(".cancel_nav").click(function(){
+        $('#naveditdiv').hide();
+    });
+
+
 </script>
 

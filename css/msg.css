@@ -278,3 +278,6 @@ div.speech.left:after {
     position: relative;
     top: -41px;
 }
+.nav_image_calss{
+    padding:10px 10px 10px 0px;
+}

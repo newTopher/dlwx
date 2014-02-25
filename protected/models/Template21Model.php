@@ -39,10 +39,7 @@ class Template21Model extends Ar{
     }
 
     public function updateSlider(){
-        $criteria =new CDbCriteria();
-        $criteria->addCondition("site_id=".$this->site_id);
-        $criteria->addCondition("uid=".$this->uid);
-        if(self::model()->update(array('slider'=>$this->slider))){
+        if(self::model()->updateAll(array('slider'=>$this->slider),'uid=:uid and site_id=:site_id',array('uid'=>$this->uid,'site_id'=>$this->site_id))){
             return true;
         }else{
             return false;
