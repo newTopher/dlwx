@@ -46,6 +46,30 @@ class Template21Model extends Ar{
         }
     }
 
+    public function insertNav(){
+        if($this->insert()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public function updateNav($position){
+        if(self::model()->updateAll(array($position=>$this->$position),'uid=:uid and site_id=:site_id',array('uid'=>$this->uid,'site_id'=>$this->site_id))){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public function getTemplateDataBySiteIdAndUid($site_id,$uid){
+        if($result = self::model()->findByAttributes(array('site_id'=>$site_id,'uid'=>$uid))){
+            return $result;
+        }else{
+            return false;
+        }
+    }
+
 
 
 

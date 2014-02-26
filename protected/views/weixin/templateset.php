@@ -8,51 +8,60 @@
         <div class="box-header well">
             <h2><i class="icon-info-sign"></i> 微官网模板设置 </h2>
         </div>
-        <div class="box-content">
-            <div class="box-content">
+        <div class="box-content" style="height: auto";>
+            <div class="box-content" style="width: 1060px;height: auto";>
                 <div class="span8" style="width: 560px;height: 800px;">
                     <div class="m_lefter" template='<?php echo $template_id; ?>' site='<?php echo $site_id; ?>'><div id="web_skin_index">
                             <div class="list">
                                 <div class="web_skin_index_list banner" id="slider">
-                                    <div class="img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/slider.jpg"></div><div class="mod">&nbsp;</div>
+                                    <?php foreach($sliderdata as $k=>$v):?>
+                                        <div class="img">
+                                        <?php if($v->id !== 'null'): ?>
+                                            <img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo $v->pic; ?>"></div><div class="mod">
+                                            <?php else:  ?>
+                                            <img src="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/slider.jpg"></div><div class="mod">
+                                        <?php endif; ?>
+                                        &nbsp;</div>
+
+                                    <?php endforeach; ?>
                                 </div>
                                 <div class="box">
-                                    <div class="web_skin_index_list list mini_box" nav_link="t1" title="服务项目" ref="p1" image="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i0.jpg">
+                                    <div class="web_skin_index_list list mini_box" id="p1_box" p1_nav_link="t1" p1_title="服务项目" ref="p1" p1_image="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i0.jpg">
                                         <div>
-                                            <div class="img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i0.jpg"></div><div class="mod" style="display: none;">&nbsp;</div>
-                                            <div class="text"><a href="">服务项目</a></div><div class="mod" style="display: none;">&nbsp;</div>
+                                            <div class="img"><img id="p1_image" src="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i0.jpg"></div><div class="mod" style="display: none;">&nbsp;</div>
+                                            <div class="text"><a id="p1_atext" href="">服务项目</a></div><div class="mod" style="display: none;">&nbsp;</div>
                                         </div><div class="mod" style="display: none;">&nbsp;</div>
                                     </div>
-                                    <div class="web_skin_index_list list mini_box" nav_link="c1" title="核心核心" ref="p2" image="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i4.jpg">
+                                    <div class="web_skin_index_list list mini_box" id="p2_box" p2_nav_link="c1" p2_title="核心核心" ref="p2" p2_image="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i4.jpg">
                                         <div>
-                                            <div class="img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i4.jpg"></div><div class="mod" style="display: none;">&nbsp;</div>
-                                            <div class="text"><a href="">核心核心</a></div><div class="mod" style="display: none;">&nbsp;</div>
+                                            <div class="img"><img id="p2_image" src="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i4.jpg"></div><div class="mod" style="display: none;">&nbsp;</div>
+                                            <div class="text"><a id="p2_atext" href="">核心核心</a></div><div class="mod" style="display: none;">&nbsp;</div>
                                         </div><div class="mod" style="display: none;">&nbsp;</div>
 
                                     </div>
-                                    <div class="web_skin_index_list list mini_box" nav_link="t1" title="网上选人" ref="p3" image="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i2.jpg">
+                                    <div class="web_skin_index_list list mini_box" id="p3_box" p3_nav_link="t1" p3_title="网上选人" ref="p3" p3_image="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i2.jpg">
                                         <div>
-                                            <div class="img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i2.jpg"></div><div class="mod">&nbsp;</div>
-                                            <div class="text"><a href="">网上选人</a></div><div class="mod">&nbsp;</div>
+                                            <div class="img"><img id="p3_image" src="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i2.jpg"></div><div class="mod">&nbsp;</div>
+                                            <div class="text"><a id="p3_atext" href="">网上选人</a></div><div class="mod">&nbsp;</div>
                                         </div><div class="mod">&nbsp;</div>
                                     </div>
-                                    <div class="web_skin_index_list list mini_box" nav_link="t1" title="招聘培训" ref="p4" image="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i3.jpg">
+                                    <div class="web_skin_index_list list mini_box" id="p4_box" p4_nav_link="t1" p4_title="招聘培训" ref="p4" p4_image="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i3.jpg">
                                         <div>
-                                            <div class="img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i3.jpg"></div><div class="mod" style="display: none;">&nbsp;</div>
-                                            <div class="text"><a href="">招聘培训</a></div><div class="mod" style="display: none;">&nbsp;</div>
+                                            <div class="img"><img id="p4_image" src="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i3.jpg"></div><div class="mod" style="display: none;">&nbsp;</div>
+                                            <div class="text"><a id="p4_atext" href="">招聘培训</a></div><div class="mod" style="display: none;">&nbsp;</div>
                                         </div><div class="mod" style="display: none;">&nbsp;</div>
                                     </div>
-                                    <div class="web_skin_index_list list mini_box" nav_link="t1" title="收费标准" ref="p5" image="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i4.jpg">
+                                    <div class="web_skin_index_list list mini_box" id="p5_box" p5_nav_link="t1" p5_title="收费标准" ref="p5" p5_image="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i4.jpg">
                                         <div>
-                                            <div class="img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i4.jpg"></div><div class="mod" style="display: none;">&nbsp;</div>
-                                            <div class="text"><a href="">收费标准</a></div><div class="mod" style="display: none;">&nbsp;</div>
+                                            <div class="img"><img id="p5_image" src="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i4.jpg"></div><div class="mod" style="display: none;">&nbsp;</div>
+                                            <div class="text"><a id="p5_atext" href="">收费标准</a></div><div class="mod" style="display: none;">&nbsp;</div>
                                         </div><div class="mod" style="display: none;">&nbsp;</div>
 
                                     </div>
-                                    <div class="web_skin_index_list list mini_box" nav_link="t1" title="联系我们" ref="p6" image="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i5.jpg">
+                                    <div class="web_skin_index_list list mini_box" id="p6_box" p6_nav_link="t1" p6_title="联系我们" ref="p6" p6_image="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i5.jpg">
                                         <div>
-                                            <div class="img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i5.jpg"></div><div class="mod" style="display: none;">&nbsp;</div>
-                                            <div class="text"><a href="">联系我们</a></div><div class="mod" style="display: none;">&nbsp;</div>
+                                            <div class="img"><img id="p6_image" src="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/i5.jpg"></div><div class="mod" style="display: none;">&nbsp;</div>
+                                            <div class="text"><a id="p6_atext" href="">联系我们</a></div><div class="mod" style="display: none;">&nbsp;</div>
                                         </div><div class="mod" style="display: none;">&nbsp;</div>
                                     </div>
                                 </div>
@@ -65,120 +74,40 @@
                     <div class="span12" id="slidereditdiv" style="margin-bottom: 20px;">
                         <div class="appmsg_editor" style="margin-top: 0px;">
                             <div class="inner">
+                                <?php foreach($sliderdata as $k=>$v):?>
                                 <div class="silder_box">
-                                    <span>第一张图片</span>
+                                    <span>第<?php echo ($k+1); ?>张图片</span>
                                     <div class="btn btn-info" style="width: 80px;height: 18px;">
                                         选择图片
-                                        <input class="filecss fileupload" type="file" name="sliderimage" edit='1'>
+                                        <input class="filecss fileupload" type="file" name="sliderimage" edit='<?php echo ($k+1); ?>'>
                                     </div>
-                                    <button class="btn uploadbtn" edit='1'>上传</button>
+                                    <button class="btn uploadbtn" edit='<?php echo ($k+1); ?>'>上传</button>
                                     <div class="link_div">
                                         <span>链接页面</span>
-                                        <select class="sliderselect" edit='1'>
+                                        <select class="sliderselect" edit='<?php echo ($k+1); ?>'>
                                             <option value="0">请选择</option>
-                                            <option value="t1">微官网</option>
-                                            <option value="c1">产品</option>
+                                            <option value="t1" <?php if($v->id == 't1'){ echo 'selected'; }?>>微官网</option>
+                                            <option value="c1" <?php if($v->id == 'c1'){ echo 'selected'; } ?>>产品</option>
                                         </select>
                                     </div>
-                                    <div id="zhezhao1">
-                                        <div id="loading1" class="loading">
-                                            <span class="bar"><img src="<?php Yii::app()->request->baseUrl; ?>/images/loading.gif" /></span><span class="percent1">0%</span >
+                                    <div id="zhezhao<?php echo ($k+1); ?>">
+                                        <div id="loading<?php echo ($k+1); ?>" class="loading">
+                                            <span class="bar">
+                                                <img src="<?php Yii::app()->request->baseUrl; ?>/images/loading.gif" />
+                                            </span><span class="percent<?php echo ($k+1); ?>">0%</span >
                                         </div>
                                     </div>
-                                    <div id="showimg1" class="showimg"></div>
+                                    <div id="showimg<?php echo ($k+1); ?>" class="showimg">
+                                        <?php if($v->id != 'null'): ?>
+                                            <img width='250px' height='100px' src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo $v->pic; ?>">
+                                            <button onclick='delimage(this)' edit='<?php echo ($k+1); ?>' datadir='slider' data='<?php echo $v->pic; ?>'class='btn btn-mini btn-danger del_btn'>删除</button>
+                                        <?php endif; ?>
+                                    </div>
                                 </div>
 
-                                <div class="silder_box">
-                                    <span>第二张图片 </span>
-                                    <div class="btn btn-info" style="width: 80px;height: 18px;">
-                                        选择图片
-                                        <input class="filecss fileupload" type="file" name="sliderimage" edit="2">
-                                    </div>
-                                    <button class="btn uploadbtn" edit='2'>上传</button>
-                                    <div class="link_div">
-                                        <span>链接页面</span>
-                                        <select class="sliderselect" edit='2'>
-                                            <option value="0">请选择</option>
-                                            <option value="t1">微官网</option>
-                                            <option value="c1">产品</option>
-                                        </select>
-                                    </div>
-                                    <div id="zhezhao2">
-                                        <div id="loading2" class="loading">
-                                            <span class="bar"><img src="<?php Yii::app()->request->baseUrl; ?>/images/loading.gif" /></span><span class="percent2">0%</span >
-                                        </div>
-                                    </div>
-                                    <div id="showimg2"></div>
-                                </div>
 
-                                <div class="silder_box">
-                                    <span>第三张图片 </span>
-                                    <div class="btn btn-info" style="width: 80px;height: 18px;">
-                                        选择图片
-                                        <input class="filecss fileupload" type="file" name="sliderimage" edit="3">
-                                    </div>
-                                    <button class="btn uploadbtn" edit='3'>上传</button>
-                                    <div class="link_div">
-                                        <span>链接页面</span>
-                                        <select class="sliderselect" edit='3'>
-                                            <option value="0">请选择</option>
-                                            <option value="t1">微官网</option>
-                                            <option value="c1">产品</option>
-                                        </select>
-                                    </div>
-                                    <div id="zhezhao3">
-                                        <div id="loading3" class="loading">
-                                            <span class="bar"><img src="<?php Yii::app()->request->baseUrl; ?>/images/loading.gif" /></span><span class="percent3">0%</span >
-                                        </div>
-                                    </div>
-                                    <div id="showimg3"></div>
-                                </div>
 
-                                <div class="silder_box">
-                                    <span>第四张图片 </span>
-                                    <div class="btn btn-info" style="width: 80px;height: 18px;">
-                                        选择图片
-                                        <input class="filecss fileupload" type="file" name="sliderimage" edit="4">
-                                    </div>
-                                    <button class="btn uploadbtn" edit='4'>上传</button>
-                                    <div class="link_div">
-                                        <span>链接页面</span>
-                                        <select class="sliderselect" edit='4'>
-                                            <option value="0">请选择</option>
-                                            <option value="t1">微官网</option>
-                                            <option value="c1">产品</option>
-                                        </select>
-                                    </div>
-                                    <div id="zhezhao4">
-                                        <div id="loading4" class="loading">
-                                            <span class="bar"><img src="<?php Yii::app()->request->baseUrl; ?>/images/loading.gif" /></span><span class="percent4">0%</span >
-                                        </div>
-                                    </div>
-                                    <div id="showimg4"></div>
-                                </div>
-
-                                <div class="silder_box">
-                                    <span>第五张图片 </span>
-                                    <div class="btn btn-info" style="width: 80px;height: 18px;">
-                                        选择图片
-                                        <input class="filecss fileupload" type="file" name="sliderimage" edit="5">
-                                    </div>
-                                    <button class="btn uploadbtn" edit='5'>上传</button>
-                                    <div class="link_div">
-                                        <span>链接页面</span>
-                                        <select class="sliderselect" edit='5'>
-                                            <option value="0">请选择</option>
-                                            <option value="t1">微官网</option>
-                                            <option value="c1">产品</option>
-                                        </select>
-                                    </div>
-                                    <div id="zhezhao5">
-                                        <div id="loading5" class="loading">
-                                            <span class="bar"><img src="<?php Yii::app()->request->baseUrl; ?>/images/loading.gif" /></span><span class="percent5">0%</span >
-                                        </div>
-                                    </div>
-                                    <div id="showimg5"></div>
-                                </div>
+                                <?php endforeach; ?>
 
 
                                 <div class="form-actions">
@@ -251,17 +180,19 @@
 <script type="text/javascript">
     var data=[];
     data.slider=new Array();
-    data.slider = [{'id':null,'pic':null},
-        {'id':null,'pic':null},
-        {'id':null,'pic':null},
-        {'id':null,'pic':null},
-        {'id':null,'pic':null}
+    data.slider = [{'id':<?php if($sliderdata[0]->id == 'null'){ echo $sliderdata[0]->id; }else{ echo "'".$sliderdata[0]->id."'"; } ?>,'pic':<?php if($sliderdata[0]->pic == 'null'){ echo $sliderdata[0]->pic; }else{ echo "'".$sliderdata[0]->pic."'"; } ?>},
+        {'id':<?php if($sliderdata[1]->id == 'null'){ echo $sliderdata[1]->id; }else{ echo "'".$sliderdata[1]->id."'"; } ?>,'pic':<?php if($sliderdata[1]->pic == 'null'){ echo $sliderdata[1]->pic; }else{ echo "'".$sliderdata[1]->pic."'"; } ?>},
+        {'id':<?php if($sliderdata[2]->id == 'null'){ echo $sliderdata[2]->id; }else{ echo "'".$sliderdata[2]->id."'"; } ?>,'pic':<?php if($sliderdata[2]->pic == 'null'){ echo $sliderdata[2]->pic; }else{ echo "'".$sliderdata[1]->pic."'"; } ?>},
+        {'id':<?php if($sliderdata[3]->id == 'null'){ echo $sliderdata[3]->id; }else{ echo "'".$sliderdata[3]->id."'"; } ?>,'pic':<?php if($sliderdata[3]->pic == 'null'){ echo $sliderdata[3]->pic; }else{ echo "'".$sliderdata[3]->pic."'"; } ?>},
+        {'id':<?php if($sliderdata[4]->id == 'null'){ echo $sliderdata[4]->id; }else{ echo "'".$sliderdata[4]->id."'"; } ?>,'pic':<?php if($sliderdata[4]->pic == 'null'){ echo $sliderdata[4]->pic; }else{ echo "'".$sliderdata[4]->pic."'"; } ?>}
     ];
     var site = parseInt($(".m_lefter").attr('site'));
     var template = parseInt($(".m_lefter").attr('template'));
     $("#slider").mouseenter(function(){
-        $(this).append("<div id='SetHomeCurrentBox' style='height: 310px; width: 511px;line-height: 310px;'>" +
-            "点击添加轮播图</div>")
+        if($(this).find("#SetHomeCurrentBox").data('flag') != 1){
+            $(this).append("<div id='SetHomeCurrentBox' style='height: 310px; width: 511px;line-height: 310px;'>" +
+                "点击添加轮播图</div>");
+        }
     }).mouseleave(function(){
             if($(this).find("#SetHomeCurrentBox").data('flag') != 1){
                 $(this).find("#SetHomeCurrentBox").remove();
@@ -269,8 +200,10 @@
     });
     $(".mini_box").each(function(i,e){
         $(this).mouseenter(function(){
-            $(this).append("<div id='SetHomeCurrentBox' style='height: 144px; width: 160px;line-height: 144px;'>" +
-                "点击修改此模块</div>");
+            if($(this).find("#SetHomeCurrentBox").data('flag') != 1){
+                $(this).append("<div id='SetHomeCurrentBox' style='height: 144px; width: 160px;line-height: 144px;'>" +
+                    "点击修改此模块</div>");
+            }
         }).mouseleave(function(){
                 if($(this).find("#SetHomeCurrentBox").data('flag') != 1){
                     $(this).find("#SetHomeCurrentBox").remove();
@@ -283,6 +216,7 @@
         $(this).find("#SetHomeCurrentBox").data('flag',1);
         $(this).next().children().find("#SetHomeCurrentBox").remove();
         $('#slidereditdiv').show();
+        $('#naveditdiv').hide();
     });
     $(".mini_box").each(function(i,e){
         $(this).live('click',function(){
@@ -291,11 +225,13 @@
             $(this).siblings().find("#SetHomeCurrentBox").remove();
             $(this).parent().prev().find("#SetHomeCurrentBox").remove();
             $('#slidereditdiv').hide();
-            $("#nav_title").val($(this).attr('title'));
-            $("#old_title").val($(this).attr('title'));
-            $("#showimg_nav").html("<img src='"+$(this).attr('image')+"'/>");
+            var ref;
+            ref = $(this).attr('ref');
+            $("#nav_title").val($(this).attr(ref+'_title'));
+            $("#old_title").val($(this).attr(ref+'_title'));
+            $("#showimg_nav").html("<img src='"+$(this).attr(ref+'_image')+"'/>");
             $("#position_nav").val($(this).attr('ref'));
-            $("#nav_link").val($(this).attr('nav_link'));
+            $("#nav_link").val($(this).attr(ref+'_nav_link'));
             var top = $(this).offset().top;top+'px'
             $('#naveditdiv').css({'position':'relative','top':(top-147)+'px'});
             $('#naveditdiv').show();
@@ -454,7 +390,7 @@
             });
             return false;
         }
-        $.getJSON("<?php Yii::app()->request->baseUrl; ?>/Weixin/Templateslidersave",{template_id:template,site_id:site,sliderdata:data.slider},function(data){
+        $.post("<?php Yii::app()->request->baseUrl; ?>/Weixin/Templateslidersave",{template_id:template,site_id:site,sliderdata:data.slider},function(data){
             if(data.code == 0){
                 notif({
                     type: "success",
@@ -476,7 +412,7 @@
                 });
                 return false;
             }
-        });
+        },'json');
 
     });
 
@@ -537,6 +473,7 @@
         var nav_link = $("#nav_link").val();
         var img = $("#showimg_nav img").attr('src');
         var img_nav = $("#image_nav").val();
+        var navdata = {'linkid':nav_link,'title':nav_title,'pic':img_nav}
         if(nav_title.length == 0){
             notif({
                 type: "warning",
@@ -560,7 +497,51 @@
             return false;
         }
 
-        if(!img_nav || typeof(img_nav) == undefined ){
+        if((old_title != nav_title)){
+           if(img_nav.length != 0){
+               $.post("<?php Yii::app()->request->baseUrl; ?>/Weixin/Navsave",{site_id:site,template_id:template,position:position,navdata:navdata},function(data){
+                    if(data.code == 0){
+                        $("#"+position+"_image").prop('src',"<?php echo Yii::app()->request->baseUrl;?>/upload/slider/"+img_nav)
+                        $("#"+position+"_atext").text(nav_title);
+                        /* have problem */
+                        $("#"+position+"_box").prop(position+'_nav_link',nav_link);
+                        $("#"+position+"_box").prop(position+'_title',nav_title);
+                        $("#"+position+"_box").prop(position+'_image',"<?php echo Yii::app()->request->baseUrl;?>/upload/slider/"+img_nav);
+                        $('#naveditdiv').hide();
+                        notif({
+                            type: "success",
+                            msg: data.msg,
+                            position: "center",
+                            width:"all",
+                            height:100,
+                            opacity: 1
+                        });
+                    }else{
+                        notif({
+                            type: "error",
+                            msg: data.msg,
+                            position: "center",
+                            width:"all",
+                            height:100,
+                            opacity: 1
+                        });
+                        return false;
+                    }
+               },'json');
+           }else{
+               notif({
+                   type: "warning",
+                   msg: "请选择图片",
+                   position: "center",
+                   width:"all",
+                   height:100,
+                   opacity: 1
+               });
+               return false;
+           }
+        }
+
+        if(!img_nav || typeof(img_nav) == undefined || (old_title == nav_title) ){
             if(img.length != 0){
                 $('#naveditdiv').hide();
                 return true;
@@ -576,6 +557,7 @@
                 return false;
             }
         }
+
 
 
 

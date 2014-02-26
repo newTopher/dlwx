@@ -338,3 +338,483 @@ Stack trace:
 REQUEST_URI=/Weixin/Templateslidersave?template_id=21&site_id=2&sliderdata%5B0%5D%5Bid%5D=t1&sliderdata%5B0%5D%5Bpic%5D=1393330460530c891c30112.jpg&sliderdata%5B1%5D%5Bid%5D=null&sliderdata%5B1%5D%5Bpic%5D=null&sliderdata%5B2%5D%5Bid%5D=null&sliderdata%5B2%5D%5Bpic%5D=null&sliderdata%5B3%5D%5Bid%5D=null&sliderdata%5B3%5D%5Bpic%5D=null&sliderdata%5B4%5D%5Bid%5D=null&sliderdata%5B4%5D%5Bpic%5D=null
 HTTP_REFERER=http://weixin.test.local:8080/Weixin/templateset
 ---
+2014/02/26 02:45:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/02/26 02:45:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/02/26 02:45:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/02/26 02:45:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/02/26 02:45:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/02/26 02:46:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/02/26 02:46:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/02/26 02:46:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/02/26 02:46:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquerymobile/images/icon3.png".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('css/jquerymobil...')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/jquerymobile/images/icon3.png
+HTTP_REFERER=http://weixin.test.local/WeixinFans/view/id/1
+---
+2014/02/26 02:46:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquerymobile/images/icon10.png".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('css/jquerymobil...')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/jquerymobile/images/icon10.png
+HTTP_REFERER=http://weixin.test.local/WeixinFans/view/id/1
+---
+2014/02/26 02:46:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/02/26 02:46:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquerymobile/images/icon3.png".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('css/jquerymobil...')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/jquerymobile/images/icon3.png
+HTTP_REFERER=http://weixin.test.local/WeixinFans/view/id/1
+---
+2014/02/26 02:46:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquerymobile/images/icon10.png".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('css/jquerymobil...')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/jquerymobile/images/icon10.png
+HTTP_REFERER=http://weixin.test.local/WeixinFans/view/id/1
+---
+2014/02/26 02:46:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/02/26 02:46:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/02/26 02:46:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/02/26 05:01:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php:483
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local/Package/add
+---
+2014/02/26 05:01:51 [error] [php] Undefined index: HTTP_RAW_POST_DATA (D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\IndexController.php:27)
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): IndexController->runAction()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): IndexController->run()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/
+2014/02/26 05:01:51 [error] [php] Undefined index: HTTP_RAW_POST_DATA (D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\IndexController.php:27)
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): IndexController->runAction()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): IndexController->run()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/
+2014/02/26 05:01:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php:483
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local/Package/add
+---
+2014/02/26 05:01:58 [error] [php] Undefined variable: singleData (D:\Apache2.2\htdocs\leiphone\weixin\protected\views\source\mutilmsg.php:22)
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(869): SourceController->renderFile()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(782): SourceController->renderPartial()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\SourceController.php(34): SourceController->render()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): SourceController->actionAddMutilMsg()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): SourceController->runAction()
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): SourceController->runActionWithFilters()
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): SourceController->run()
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/Source/AddMutilMsg
+2014/02/26 05:02:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php:483
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local/Package/add
+---
+2014/02/26 05:02:03 [error] [php] Undefined index: HTTP_RAW_POST_DATA (D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\IndexController.php:27)
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): IndexController->runAction()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): IndexController->run()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/
+2014/02/26 05:02:04 [error] [exception.CException] exception 'CException' with message 'Wcontroller cannot find the requested view "index".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php:878
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#1 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WController.php(21): CController->render('index', Array)
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): Wcontroller->actionI()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('i')
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('W/i/sid/2')
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/W/i/sid/2
+HTTP_REFERER=http://weixin.test.local/Weixin/base
+---
+2014/02/26 05:02:09 [error] [php] Undefined index: HTTP_RAW_POST_DATA (D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\IndexController.php:27)
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): IndexController->runAction()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): IndexController->run()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/
+2014/02/26 05:02:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php:483
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local/Package/add
+---
+2014/02/26 05:02:09 [error] [exception.CException] exception 'CException' with message 'Wcontroller cannot find the requested view "index".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php:878
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#1 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WController.php(21): CController->render('index', Array)
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): Wcontroller->actionI()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('i')
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('W/i/sid/2')
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/W/i/sid/2
+HTTP_REFERER=http://weixin.test.local/Weixin/base
+---
+2014/02/26 05:02:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php:483
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local/Package/add
+---
+2014/02/26 05:02:11 [error] [php] Undefined index: HTTP_RAW_POST_DATA (D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\IndexController.php:27)
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): IndexController->runAction()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): IndexController->run()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/
+2014/02/26 06:49:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/02/26 07:00:52 [error] [exception.CException] exception 'CException' with message 'Wcontroller cannot find the requested view "index".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php:878
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#1 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WController.php(21): CController->render('index', Array)
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): Wcontroller->actionI()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('i')
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('W/i/sid/2')
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/W/i/sid/2
+HTTP_REFERER=http://weixin.test.local/Weixin/base
+---
+2014/02/26 07:42:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "undefined".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php:483
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(270): CController->missingAction('undefined')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('undefined')
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('Weixin/undefine...')
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/Weixin/undefined
+HTTP_REFERER=http://weixin.test.local/Weixin/templateset
+---
+2014/02/26 07:42:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "undefined".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php:483
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(270): CController->missingAction('undefined')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('undefined')
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('Weixin/undefine...')
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/Weixin/undefined
+HTTP_REFERER=http://weixin.test.local/Weixin/templateset
+---
+2014/02/26 10:01:07 [error] [php] json_decode() expects parameter 1 to be string, array given (D:\Apache2.2\htdocs\leiphone\weixin\framework\web\helpers\CJSON.php:327)
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CBaseController.php(126): require()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CBaseController.php(95): WeixinController->renderInternal()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(869): WeixinController->renderFile()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(782): WeixinController->renderPartial()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php(234): WeixinController->render()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): WeixinController->actionTemplateset()
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): WeixinController->runAction()
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): WeixinController->runActionWithFilters()
+#9 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): WeixinController->run()
+#10 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/Weixin/templateset
+2014/02/26 10:01:51 [error] [php] Invalid argument supplied for foreach() (D:\Apache2.2\htdocs\leiphone\weixin\protected\views\weixin\templateset.php:17)
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(869): WeixinController->renderFile()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(782): WeixinController->renderPartial()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php(234): WeixinController->render()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): WeixinController->actionTemplateset()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): WeixinController->runAction()
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): WeixinController->runActionWithFilters()
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): WeixinController->run()
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/Weixin/templateset
+2014/02/26 10:02:10 [error] [php] Trying to get property of non-object (D:\Apache2.2\htdocs\leiphone\weixin\protected\views\weixin\templateset.php:17)
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(869): WeixinController->renderFile()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(782): WeixinController->renderPartial()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php(234): WeixinController->render()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): WeixinController->actionTemplateset()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): WeixinController->runAction()
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): WeixinController->runActionWithFilters()
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): WeixinController->run()
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/Weixin/templateset
+2014/02/26 10:02:37 [error] [php] Trying to get property of non-object (D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php:229)
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): WeixinController->runAction()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): WeixinController->runActionWithFilters()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): WeixinController->run()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/Weixin/templateset
+2014/02/26 10:04:00 [error] [php] Trying to get property of non-object (D:\Apache2.2\htdocs\leiphone\weixin\protected\views\weixin\templateset.php:19)
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(869): WeixinController->renderFile()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(782): WeixinController->renderPartial()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php(234): WeixinController->render()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): WeixinController->actionTemplateset()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): WeixinController->runAction()
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): WeixinController->runActionWithFilters()
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): WeixinController->run()
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/Weixin/templateset
+2014/02/26 10:04:42 [error] [php] Trying to get property of non-object (D:\Apache2.2\htdocs\leiphone\weixin\protected\views\weixin\templateset.php:19)
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(869): WeixinController->renderFile()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(782): WeixinController->renderPartial()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php(234): WeixinController->render()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): WeixinController->actionTemplateset()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): WeixinController->runAction()
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): WeixinController->runActionWithFilters()
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): WeixinController->run()
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/Weixin/templateset
+2014/02/26 10:06:29 [error] [php] Trying to get property of non-object (D:\Apache2.2\htdocs\leiphone\weixin\protected\views\weixin\templateset.php:19)
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(869): WeixinController->renderFile()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(782): WeixinController->renderPartial()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php(236): WeixinController->render()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): WeixinController->actionTemplateset()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): WeixinController->runAction()
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): WeixinController->runActionWithFilters()
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): WeixinController->run()
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/Weixin/templateset
+2014/02/26 10:07:39 [error] [php] Trying to get property of non-object (D:\Apache2.2\htdocs\leiphone\weixin\protected\views\weixin\templateset.php:19)
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(869): WeixinController->renderFile()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(782): WeixinController->renderPartial()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php(236): WeixinController->render()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): WeixinController->actionTemplateset()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): WeixinController->runAction()
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): WeixinController->runActionWithFilters()
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): WeixinController->run()
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/Weixin/templateset
+2014/02/26 10:07:41 [error] [php] Trying to get property of non-object (D:\Apache2.2\htdocs\leiphone\weixin\protected\views\weixin\templateset.php:19)
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(869): WeixinController->renderFile()
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(782): WeixinController->renderPartial()
+#2 D:\Apache2.2\htdocs\leiphone\weixin\protected\controllers\WeixinController.php(236): WeixinController->render()
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\actions\CInlineAction.php(49): WeixinController->actionTemplateset()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(286): WeixinController->runAction()
+#6 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(265): WeixinController->runActionWithFilters()
+#7 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): WeixinController->run()
+#8 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/Weixin/templateset
+2014/02/26 10:08:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "slider".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php:483
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(270): CController->missingAction('slider')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('slider')
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/slider/n...')
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/slider/null
+HTTP_REFERER=http://weixin.test.local/Weixin/templateset
+---
+2014/02/26 10:09:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "slider".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php:483
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(270): CController->missingAction('slider')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('slider')
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/slider/n...')
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/slider/null
+HTTP_REFERER=http://weixin.test.local/Weixin/templateset
+---
+2014/02/26 11:59:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "slider".' in D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php:483
+Stack trace:
+#0 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CController.php(270): CController->missingAction('slider')
+#1 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(282): CController->run('slider')
+#2 D:\Apache2.2\htdocs\leiphone\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/slider/1...')
+#3 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/slider/1393384620530d5cac84060.png
+HTTP_REFERER=http://weixin.test.local/Weixin/templateset
+---
