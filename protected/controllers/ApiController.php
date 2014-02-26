@@ -15,7 +15,7 @@ class ApiController extends Controller {
         $t=Yii::app()->request->getParam('t','');
         if(!empty($t)){
             $temp = substr($t,0,2).hexdec(substr($t,2));
-            if(($this->userdata = userModel::findByToken($temp))){
+            if(($this->userdata = UserModel::findByToken($temp))){
                 $postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
               //  file_put_contents('1.txt',$postStr);
                 if (!empty($postStr)){
@@ -43,8 +43,8 @@ class ApiController extends Controller {
                     echo CJSON::encode(array('status'=>'-1','msg'=>'msg is error'));
                     exit;
                 }else{
-                    $this->valid();exit;
-                    /*
+                    $this->valid();
+
                     if(userModel::findByToken($temp)){
                         $this->valid();exit;
                     }else{
@@ -63,7 +63,7 @@ class ApiController extends Controller {
                         }
                         $this->valid();
                     }
-                    */
+
 
                 }
             }
@@ -128,7 +128,7 @@ class ApiController extends Controller {
         $data->title = $webData->msg_title;
         $data->description = $webData->msg_description;
         $data->picurl =  Yii::app()->request->hostInfo.'/upload/wxwebsite/'.$webData->msg_image;
-        $data->url = Yii::app()->request->hostInfo.'/index.php/W/i/sid/'.$this->userdata->id;
+        $data->url = Yii::app()->request->hostInfo.'/W/I/sid/'.$this->userdata->id;
         $this->responseImageText($postObj,$data);
     }
 
