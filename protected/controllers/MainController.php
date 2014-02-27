@@ -22,6 +22,11 @@ class MainController extends Controller{
     }
 
     public function actionIndex(){
+        $wxWebsiteModel = new WxWebsiteModel();
+        $wxWebsiteModel->id = Yii::app()->session['user']->id;
+        $webdata = $wxWebsiteModel->getWxWebById();
+        $template = TemplateModel::getTemplateByTpid($webdata->template_id);
+        Yii::app()->session['is_attr'] = $template->attr_setting_id;
         $this->render('index');
     }
 

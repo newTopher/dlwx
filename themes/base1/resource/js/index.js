@@ -44,6 +44,7 @@ var index_obj={
 				return false;
 			});
 		}
+        /*
 		for(i=0; i<web_skin_data.length; i++){
 			var obj=$("#web_skin_index div").filter('[rel=edit-'+web_skin_data[i]['Postion']+']');
 			if(web_skin_data[i]['ContentsType']==1){
@@ -99,8 +100,9 @@ var index_obj={
 				obj.find('.text').html(_Title);
 			}
 		}
+        */
 		web_obj.a_label('#web_skin_index');	//A连接处理
-		
+		/*
 		if($.isFunction(skin_index_init)){
 			skin_index_init();	//风格的首页如果有JS，需全部写入本函数，如果直接写在index.php文件，在后台管理首页广告图片时，会把不必要的JS也执行了
 			if($('#header').css('display')=='none' && $('#header li.music').size()){
@@ -119,5 +121,6 @@ var index_obj={
 				});
 			}
 		}
+		*/
 	}
 }

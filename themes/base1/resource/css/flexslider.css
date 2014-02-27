@@ -46,7 +46,7 @@ html[xmlns] .slides {
 	height: 90px;
 	margin: -60px 0 0;
 	display: block;
-	background: url(ad_ctr.png) no-repeat 0 0;
+	background: url(../images/ad_ctr.png) no-repeat 0 0;
 	position: absolute;
 	top: 50%;
 	z-index: 10;

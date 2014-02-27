@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0066)http://www.ptweixin.com/api/197196ec4a/web/?wxref=mp.weixin.qq.com -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <meta content="telephone=no" name="format-detection">
@@ -22,19 +21,29 @@ var links=new Array('/api/197196ec4a/web/index/');
 <body youdao="bind">
 <div id="web_page_contents_loading"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/images/loading.gif"></div><div id="header" class="wrap">
 	<ul>
-		<li class="home first" style="width: 33.33233333333334%;"><a href="./files/银泽不锈钢.htm" target="_self"></a></li>
+		<li class="home first" style="width: 33.33233333333334%;"><a href="<?php echo Yii::app()->request->baseUrl.'/W/I/sid/'.$webData->uid; ?>" target="_self"></a></li>
 		<li class="back" style="width: 33.33233333333334%;"><a href="javascript:;" target="_self"></a></li>
 				<li class="lbs" style="width: 33.33233333333334%;">
 							<a ajax_url="/api/197196ec4a/web/lbs/" target="_self"></a>
 					</li>
 			</ul>
-</div><div id="web_page_contents"><link href="./files/flexslider.css" rel="stylesheet" type="text/css">
+</div><div id="web_page_contents"><link href="<?php echo Yii::app()->theme->baseUrl; ?>/resource/css/flexslider.css" rel="stylesheet" type="text/css">
 <link href="<?php echo Yii::app()->theme->baseUrl; ?>/resource/css/index.css" rel="stylesheet" type="text/css">
 <link href="<?php echo Yii::app()->theme->baseUrl; ?>/resource/css/index_media.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/js/flexslider.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/js/index.js"></script>
-<script language="javascript">s
-$(document).ready(index_obj.index_init);
+<script language="javascript">
+
+    var MusicPath='';
+    $(document).ready(index_obj.index_init);
+    $(window).load(function() {
+        $('.flexslider').flexslider({
+            animation: "slide",
+            animationLoop: true ,
+            directionNav: false
+        });
+    });
+
 </script><div id="web_skin_index">
 	<div class="list">
 		<div class="web_skin_index_list banner" rel="edit-t01">
@@ -42,13 +51,13 @@ $(document).ready(index_obj.index_init);
                 <div class="slider">
                     <div class="flexslider">
                         <ul class="slides">
+                            <?php foreach($sliderdata as $k=>$v): ?>
                             <li style="display: list-item;">
-                                <?php foreach($sliderdata as $k=>$v): ?>
                                 <a href="<?php echo $v['link']; ?>" target="_self">
                                     <img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo $v['pic']; ?>" alt="">
                                 </a>
-                                <?php endforeach; ?>
                             </li>
+                            <?php endforeach; ?>
                         </ul>
                     </div>
                 </div>

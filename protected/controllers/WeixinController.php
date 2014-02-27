@@ -294,6 +294,14 @@ class WeixinController extends Controller{
         }
     }
 
+    public function actionTemplateselect(){
+        $trade_id=Yii::app()->request->getParam("trade_id",'0');
+        $TemplateModel=new TemplateModel();
+        $list=$TemplateModel->getTemplate($trade_id);
+        $this->render('templateselect',array('list'=>$list,'trade_id'=>$trade_id));
+    }
+
+
 
 
 }
