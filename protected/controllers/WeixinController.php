@@ -298,7 +298,30 @@ class WeixinController extends Controller{
         $trade_id=Yii::app()->request->getParam("trade_id",'0');
         $TemplateModel=new TemplateModel();
         $list=$TemplateModel->getTemplate($trade_id);
-        $this->render('templateselect',array('list'=>$list,'trade_id'=>$trade_id));
+        $wxWebsiteModel = new WxWebsiteModel();
+        $wxWebsiteModel->id = Yii::app()->session['user']->id;
+        $webdata = $wxWebsiteModel->getWxWebById();
+        $this->render('templateselect',array('list'=>$list,'trade_id'=>$trade_id,'webdata'=>$webdata));
+    }
+
+    public function actionChangeTemplate(){
+        $uid = Yii::app()->request->getParam('uid');
+        $template_id = Yii::app()->request->getParam('template_id');
+        if(!empty($uid) && !empty($template_id)){
+            $webSiteModel = new WxWebsiteModel();
+            $webSiteModel->uid = $uid;
+            $webSiteModel->template_id = $template_id;
+            if($webSiteModel->updateTemplateIdByUid()){
+                $template = TemplateModel::getTemplateByTpid($template_id);
+                Yii::app()->session['is_attr'] = $template->attr_setting_id;
+                $result = array('code'=>0,'msg'=>'模板选择成功,请到模板设置中心设置');
+            }else{
+                $result = array('code'=>-1,'msg'=>'模板选择失败');
+            }
+        }else{
+            $result = array('code'=>-1,'msg'=>'操作失败');
+        }
+        echo CJSON::encode($result);
     }
 
 

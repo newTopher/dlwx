@@ -3814,3 +3814,2277 @@ Stack trace:
 REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
 HTTP_REFERER=http://weixin.test.local/Weixin/Templateselect/trade_id/0
 ---
+2014/02/27 20:46:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 20:46:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 20:51:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 20:51:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 20:52:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 20:53:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:03:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:18:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:18:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:20:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:21:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:27:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:29:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:30:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:31:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:31:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:33:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:40:37 [error] [exception.CException] exception 'CException' with message 'Property "UserModel.template_id" is not defined.' in E:\Apache2.2\htdocs\weixin\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\db\ar\CActiveRecord.php(145): CComponent->__get('template_id')
+#1 E:\Apache2.2\htdocs\weixin\protected\views\weixin\templateselect.php(23): CActiveRecord->__get('template_id')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CBaseController.php(126): require('E:\Apache2.2\ht...')
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\Apache2.2\ht...', Array, true)
+#4 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(869): CBaseController->renderFile('E:\Apache2.2\ht...', Array, true)
+#5 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(782): CController->renderPartial('templateselect', Array, true)
+#6 E:\Apache2.2\htdocs\weixin\protected\controllers\WeixinController.php(304): CController->render('templateselect', Array)
+#7 E:\Apache2.2\htdocs\weixin\framework\web\actions\CInlineAction.php(49): WeixinController->actionTemplateselect()
+#8 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('Templateselect')
+#12 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('Weixin/Template...')
+#13 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#15 {main}
+REQUEST_URI=/Weixin/Templateselect/trade_id/0
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/1
+---
+2014/02/27 21:41:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:44:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:44:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:44:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:44:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:44:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:44:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:44:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:44:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:44:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:44:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:44:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/1
+---
+2014/02/27 21:44:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/1
+---
+2014/02/27 21:46:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/1
+---
+2014/02/27 21:46:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/1
+---
+2014/02/27 21:47:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/1
+---
+2014/02/27 21:47:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/1
+---
+2014/02/27 21:47:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/1
+---
+2014/02/27 21:47:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/1
+---
+2014/02/27 21:48:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/1
+---
+2014/02/27 21:48:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/1
+---
+2014/02/27 21:48:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/1
+---
+2014/02/27 21:48:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/1
+---
+2014/02/27 21:49:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/1
+---
+2014/02/27 21:49:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/1
+---
+2014/02/27 21:49:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:49:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:49:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:49:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:49:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:55:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:55:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:55:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:55:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:55:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:55:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/2
+---
+2014/02/27 21:55:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:55:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:55:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:55:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 21:55:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:07:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:07:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:07:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:07:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:07:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:07:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:07:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:10:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:10:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:10:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:10:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:10:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:10:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:13:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:13:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:13:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:13:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:13:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:13:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:13:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:13:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:13:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:13:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:13:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:13:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:13:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:13:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:14:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:14:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:14:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:14:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:14:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:14:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:14:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:14:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:14:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:14:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:15:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:15:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:15:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:15:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:15:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:37:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:37:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:37:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:37:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:37:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:37:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:37:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:37:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:37:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:37:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:39:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:39:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:39:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:39:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:39:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:39:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:39:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:39:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:39:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:39:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:42:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:42:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:42:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:42:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:42:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:42:55 [error] [php] include(Template19Model.php): failed to open stream: No such file or directory (E:\Apache2.2\htdocs\weixin\framework\YiiBase.php:427)
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\protected\controllers\WeixinController.php(227): spl_autoload_call()
+#1 E:\Apache2.2\htdocs\weixin\framework\web\actions\CInlineAction.php(49): WeixinController->actionTemplateset()
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): WeixinController->runAction()
+#4 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): WeixinController->runActionWithFilters()
+#5 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): WeixinController->run()
+#6 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 E:\Apache2.2\htdocs\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/Weixin/templateset
+2014/02/27 22:43:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:43:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:43:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:43:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:43:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:44:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:44:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:44:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:44:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:44:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:44:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:44:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:44:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:44:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:44:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:45:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "channelManage".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('channelManage')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('channelManage')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('Weixin/channelM...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/Weixin/channelManage
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/1
+---
+2014/02/27 22:46:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:46:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:46:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:46:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:46:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:46:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:46:44 [error] [php] include(Template20Model.php): failed to open stream: No such file or directory (E:\Apache2.2\htdocs\weixin\framework\YiiBase.php:427)
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\protected\controllers\WeixinController.php(227): spl_autoload_call()
+#1 E:\Apache2.2\htdocs\weixin\framework\web\actions\CInlineAction.php(49): WeixinController->actionTemplateset()
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): WeixinController->runAction()
+#4 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): WeixinController->runActionWithFilters()
+#5 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): WeixinController->run()
+#6 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 E:\Apache2.2\htdocs\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/Weixin/templateset
+2014/02/27 22:51:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:51:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:51:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:51:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:51:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:51:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:51:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:51:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:51:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:51:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:51:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:52:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:52:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:52:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:52:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:52:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:52:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "channelManage".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('channelManage')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('channelManage')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('Weixin/channelM...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/Weixin/channelManage
+HTTP_REFERER=http://weixin.test.local:8080/User/set
+---
+2014/02/27 22:55:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "channelManage".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('channelManage')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('channelManage')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('Weixin/channelM...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/Weixin/channelManage
+HTTP_REFERER=http://weixin.test.local:8080/User/set
+---
+2014/02/27 22:55:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquerymobile/images/icon10.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('css/jquerymobil...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/jquerymobile/images/icon10.png
+HTTP_REFERER=http://weixin.test.local:8080/WeixinFans/view/id/1
+---
+2014/02/27 22:55:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquerymobile/images/icon3.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('css/jquerymobil...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/jquerymobile/images/icon3.png
+HTTP_REFERER=http://weixin.test.local:8080/WeixinFans/view/id/1
+---
+2014/02/27 22:57:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:57:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:57:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:57:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:57:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 22:57:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/2
+---
+2014/02/27 22:57:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:57:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:57:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:57:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 22:57:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 23:00:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 23:00:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 23:00:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 23:00:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 23:00:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 23:00:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 23:00:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 23:00:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 23:00:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 23:00:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 23:00:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 23:00:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect/trade_id/0
+---
+2014/02/27 23:01:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 23:01:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 23:01:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 23:01:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 23:01:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 23:06:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "197196ec4a".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('197196ec4a')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('197196ec4a')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('api/197196ec4a/...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/197196ec4a/web/column/1043/ajax/
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/02/27 23:22:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "channelManage".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('channelManage')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('channelManage')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('Weixin/channelM...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/Weixin/channelManage
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/base
+---
+2014/02/27 23:23:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "channelManage".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('channelManage')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('channelManage')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('Weixin/channelM...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/Weixin/channelManage
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/base
+---
+2014/02/27 23:30:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 23:30:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 23:30:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 23:30:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/02/27 23:30:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
