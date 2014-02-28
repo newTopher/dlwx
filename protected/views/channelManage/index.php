@@ -1,8 +1,4 @@
-<style>
-    #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
-    #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
-    #sortable li span { position: absolute; margin-left: -1.3em; }
-</style>
+<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/msg.css" rel="stylesheet">
 <div class="row-fluid">
     <div class="box span12">
         <div class="box-header well">
@@ -11,15 +7,21 @@
         </div>
         <div class="box-content">
             <div class="box-content">
-                <ul id="sortable">
-                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
-                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
-                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
-                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
-                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
-                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
-                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
-                </ul>
+                <a class="btn btn-primary" href="<?php echo Yii::app()->request->baseUrl; ?>/ChannelManage/AddChannelview">添加栏目</a> <a class="btn btn-primary">添加页面</a>
+                    <ul id="sortable" class="channel_box">
+                        <li class="ui-state-default">
+                            <div class="title_head">最新资讯 <span class="tool_bar"><button class="btn">修改</button><button class="btn">添加子栏目</button><button class="btn">删除</button></span></div>
+                            <span class="ui-icon ui-icon-arrowthick-2-n-s">
+
+                            </span>
+                        </li>
+                        <li class="ui-state-default">
+                            <div class="title_head">最新资讯 <span class="tool_bar"><button class="btn">修改</button><button class="btn">添加子栏目</button><button class="btn">删除</button></span></div>
+                            <span class="ui-icon ui-icon-arrowthick-2-n-s">
+
+                            </span>
+                        </li>
+                    </ul>
             </div>
         </div>
     </div>

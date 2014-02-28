@@ -14,4 +14,13 @@ class ChannelManageController extends Controller{
         $this->render('index');
     }
 
+    public function actionAddChannel(){
+        $pid = Yii::app()->request->getParam('pid',0);
+        $uid = Yii::app()->session['user']->id;
+    }
+
+    public function actionAddChannelview(){
+        $this->render('addchannelview');
+    }
+
 }
