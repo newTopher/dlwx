@@ -37,11 +37,11 @@
                         <?php foreach($list as $v=>$val):?>
                         <tr class="odd">
                             <td class=" sorting_1"><?php echo $val->id;?></td>
-                            <td class=" sorting_1"><?php echo $val->agent_name;?></td>
-                            <td class=" sorting_1"><?php echo $val->mobilephone;?></td>
-                            <td class=" sorting_1"><?php echo $val->time;?></td>
-                            <td class=" sorting_1"><?php echo $val->pay_way;?></td>
-                            <td class="center "><?php echo $val->pay_num;?></td>
+                            <td class=" sorting_1"><?php echo $val->agent_name?$val->agent_name:'/';?></td>
+                            <td class=" sorting_1"><?php echo $val->mobilephone?$val->mobilephone:'/';?></td>
+                            <td class=" sorting_1"><?php echo $val->time?$val->time:'/';?></td>
+                            <td class=" sorting_1"><?php echo $val->pay_way?$val->pay_way:'/';?></td>
+                            <td class="center "><?php echo $val->pay_num?$val->pay_num:'/';?></td>
                             <td class="center ">
                                 <?php if($val->status==0): ?>
                                 <span class="label label-warning">待审核</span>
@@ -54,7 +54,7 @@
                                 <?php endif; ?>
                             </td>
 
-                            <td class="center "><?php echo $val->money;?></td>
+                            <td class="center "><?php echo $val->money?$val->money:'/';?></td>
                             <td class="center ">
                                 <?php if($val->status==0):?>
                                     <a class="btn btn-success" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/AddMoneyCheck?status=1&money=<?php echo $val->money?>&uid=<?php echo $val->uid;?>&id=<?php echo $val->id?>">
