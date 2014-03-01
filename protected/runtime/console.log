@@ -6816,3 +6816,358 @@ Stack trace:
 #9 D:\Apache2.2\htdocs\leiphone\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
 #10 D:\Apache2.2\htdocs\leiphone\weixin\index.php(11): CWebApplication->run()
 REQUEST_URI=/ChannelManage/AddChannelview
+2014/03/01 09:34:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "weifangchan".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('weifangchan')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('weifangchan')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/weifangc...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/weifangchan/138967211952d4b6b77ff8e.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/03/01 09:34:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/03/01 09:34:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/03/01 09:34:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/03/01 09:34:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/03/01 09:34:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "197196ec4a".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('197196ec4a')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('197196ec4a')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('api/197196ec4a/...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/197196ec4a/web/column/1043/ajax/
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/01 09:34:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "197196ec4a".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('197196ec4a')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('197196ec4a')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('api/197196ec4a/...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/197196ec4a/web/column/1045/ajax/
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/01 09:34:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "197196ec4a".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('197196ec4a')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('197196ec4a')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('api/197196ec4a/...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/197196ec4a/web/column/1046/ajax/
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/01 09:38:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquerymobile/images/icon3.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('css/jquerymobil...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/jquerymobile/images/icon3.png
+HTTP_REFERER=http://weixin.test.local:8080/WeixinFans/view/id/1
+---
+2014/03/01 09:38:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquerymobile/images/icon10.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('css/jquerymobil...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/jquerymobile/images/icon10.png
+HTTP_REFERER=http://weixin.test.local:8080/WeixinFans/view/id/1
+---
+2014/03/01 10:38:13 [error] [php] Trying to get property of non-object (E:\Apache2.2\htdocs\weixin\protected\controllers\MainController.php:28)
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): MainController->runAction()
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): MainController->runActionWithFilters()
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): MainController->run()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 E:\Apache2.2\htdocs\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/main
+2014/03/01 10:38:43 [error] [php] Trying to get property of non-object (E:\Apache2.2\htdocs\weixin\protected\controllers\MainController.php:28)
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): MainController->runAction()
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): MainController->runActionWithFilters()
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): MainController->run()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 E:\Apache2.2\htdocs\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/main
+2014/03/01 10:38:53 [error] [php] Trying to get property of non-object (E:\Apache2.2\htdocs\weixin\protected\controllers\MainController.php:28)
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): MainController->runAction()
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): MainController->runActionWithFilters()
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): MainController->run()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 E:\Apache2.2\htdocs\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/main
+2014/03/01 10:39:27 [error] [php] Trying to get property of non-object (E:\Apache2.2\htdocs\weixin\protected\controllers\MainController.php:28)
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): MainController->runAction()
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): MainController->runActionWithFilters()
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): MainController->run()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 E:\Apache2.2\htdocs\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/main
+2014/03/01 10:39:36 [error] [php] Trying to get property of non-object (E:\Apache2.2\htdocs\weixin\protected\controllers\MainController.php:28)
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): MainController->runAction()
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): MainController->runActionWithFilters()
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): MainController->run()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 E:\Apache2.2\htdocs\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/main
+2014/03/01 10:41:10 [error] [php] Trying to get property of non-object (E:\Apache2.2\htdocs\weixin\protected\controllers\MainController.php:28)
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): MainController->runAction()
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): MainController->runActionWithFilters()
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): MainController->run()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 E:\Apache2.2\htdocs\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/main
+2014/03/01 10:44:38 [error] [php] Trying to get property of non-object (E:\Apache2.2\htdocs\weixin\protected\controllers\MainController.php:28)
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): MainController->runAction()
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): MainController->runActionWithFilters()
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): MainController->run()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 E:\Apache2.2\htdocs\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/main
+2014/03/01 14:34:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/01 14:34:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "hao123".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('hao123')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('hao123')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/hao123/1...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/hao123/138968420352d4e5eb99994.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/03/01 14:34:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "4444".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('4444')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('4444')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/4444/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/4444/138971124552d54f8d924bc.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/03/01 14:34:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1233".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('1233')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('1233')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/1233/138...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/1233/138968471252d4e7e86fce4.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/03/01 14:34:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "666".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('666')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('666')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/666/1389...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/666/138971357352d558a5b01b1.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/03/01 14:46:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "400".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('400')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('400')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/400/IMG_...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/400/IMG_0438.PNG
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/03/01 14:54:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "base9".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('base9')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('base9')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/base9/IM...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/base9/IMG_0393.PNG
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/03/01 14:54:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "base11".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('base11')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('base11')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/base11/I...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/base11/IMG_0395.PNG
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/03/01 14:54:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "base10".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('base10')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('base10')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/base10/I...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/base10/IMG_0394.PNG
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/03/01 15:34:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "base25".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('base25')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('base25')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/base25/I...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/base25/IMG_0453.PNG
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/03/01 15:34:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "base24".' in E:\Apache2.2\htdocs\weixin\framework\web\CController.php:483
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(270): CController->missingAction('base24')
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): CController->run('base24')
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/base24/I...')
+#3 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/base24/IMG_0454.PNG
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/Templateselect
+---
+2014/03/01 22:30:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/01 22:30:47 [error] [php] include(Template17Model.php): failed to open stream: No such file or directory (E:\Apache2.2\htdocs\weixin\framework\YiiBase.php:427)
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\protected\controllers\WeixinController.php(227): spl_autoload_call()
+#1 E:\Apache2.2\htdocs\weixin\framework\web\actions\CInlineAction.php(49): WeixinController->actionTemplateset()
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): WeixinController->runAction()
+#4 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): WeixinController->runActionWithFilters()
+#5 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): WeixinController->run()
+#6 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 E:\Apache2.2\htdocs\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/Weixin/templateset
+2014/03/01 23:01:23 [error] [php] include(Template17Model.php): failed to open stream: No such file or directory (E:\Apache2.2\htdocs\weixin\framework\YiiBase.php:427)
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\protected\controllers\WController.php(21): spl_autoload_call()
+#1 E:\Apache2.2\htdocs\weixin\framework\web\actions\CInlineAction.php(49): Wcontroller->actionI()
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): Wcontroller->runAction()
+#4 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): Wcontroller->runActionWithFilters()
+#5 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): Wcontroller->run()
+#6 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 E:\Apache2.2\htdocs\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/W/i/sid/2
+2014/03/01 23:12:25 [error] [php] include(Template17Model.php): failed to open stream: No such file or directory (E:\Apache2.2\htdocs\weixin\framework\YiiBase.php:427)
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\protected\controllers\WController.php(21): spl_autoload_call()
+#1 E:\Apache2.2\htdocs\weixin\framework\web\actions\CInlineAction.php(49): Wcontroller->actionI()
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): Wcontroller->runAction()
+#4 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): Wcontroller->runActionWithFilters()
+#5 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): Wcontroller->run()
+#6 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 E:\Apache2.2\htdocs\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/W/i/sid/2
+2014/03/01 23:13:58 [error] [php] include(Template17Model.php): failed to open stream: No such file or directory (E:\Apache2.2\htdocs\weixin\framework\YiiBase.php:427)
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\protected\controllers\WController.php(21): spl_autoload_call()
+#1 E:\Apache2.2\htdocs\weixin\framework\web\actions\CInlineAction.php(49): Wcontroller->actionI()
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): Wcontroller->runAction()
+#4 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): Wcontroller->runActionWithFilters()
+#5 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): Wcontroller->run()
+#6 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 E:\Apache2.2\htdocs\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/W/i/sid/2
+2014/03/01 23:16:28 [error] [php] include(Template17Model.php): failed to open stream: No such file or directory (E:\Apache2.2\htdocs\weixin\framework\YiiBase.php:427)
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\protected\controllers\WController.php(21): spl_autoload_call()
+#1 E:\Apache2.2\htdocs\weixin\framework\web\actions\CInlineAction.php(49): Wcontroller->actionI()
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): Wcontroller->runAction()
+#4 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): Wcontroller->runActionWithFilters()
+#5 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): Wcontroller->run()
+#6 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 E:\Apache2.2\htdocs\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/W/i/sid/2
