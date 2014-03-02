@@ -105,6 +105,13 @@ class UserModel extends Ar{
         }
     }
 
+    public function findByEmail($email){
+        if($res = self::model()->findByAttributes(array('email'=>$email))){
+            return $res;
+        }else{
+            return false;
+        }
+    }
 
     static public  function findUserByUid($uid=''){
             if($res = self::model()->findAllByAttributes(array('puid'=>$uid))){

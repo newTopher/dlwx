@@ -58,7 +58,5 @@ class Controller extends CController
         return $info;
     }
 
-    public function genSubToken(){
-        return rand(10000,99999);
-    }
+
 }
