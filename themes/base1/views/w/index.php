@@ -18,7 +18,7 @@ var links=new Array('/api/197196ec4a/web/index/');
 </script>
 </head>
 
-<body youdao="bind">
+<body scroll=no style="overflow:hidden">
 <div id="web_page_contents_loading"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/images/loading.gif"></div><div id="header" class="wrap">
 	<ul>
 		<li class="home first" style="width: 33.33233333333334%;"><a href="<?php echo Yii::app()->request->baseUrl.'/W/I/sid/'.$webData->uid; ?>" target="_self"></a></li>

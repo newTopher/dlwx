@@ -6,7 +6,7 @@
  * Time: 下午11:27
  * To change this template use File | Settings | File Templates.
  */
-class Template21Model extends Ar{
+class Template23Model extends Ar{
 
     public $slider;
     public $uid;
@@ -23,7 +23,7 @@ class Template21Model extends Ar{
     }
 
     public function tableName(){
-        return '{{template_21}}';
+        return '{{template_23}}';
     }
 
     public function findByUidSiteId(){
@@ -69,8 +69,6 @@ class Template21Model extends Ar{
             return false;
         }
     }
-
-
 
 
 
