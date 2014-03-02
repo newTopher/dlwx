@@ -9231,3 +9231,813 @@ Stack trace:
 REQUEST_URI=/backtheme/base10/css/index_media.css
 HTTP_REFERER=http://weixin.test.local:8080/Weixin/templateset
 ---
+2014/03/02 16:38:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/js/fireworks.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/js/fireworks.js
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:38:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/nav-dot.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/nav-dot.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:38:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:38:46 [error] [php] Trying to get property of non-object (E:\Apache2.2\htdocs\weixin\protected\controllers\WController.php:17)
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): Wcontroller->runAction()
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): Wcontroller->runActionWithFilters()
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): Wcontroller->run()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 E:\Apache2.2\htdocs\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/W/i/sid/%E7%88%B1%E4%BD%B3%E9%99%B6%E7%93%B7_files/style(1).css
+2014/03/02 16:38:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:39:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/js/fireworks.js".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/js/fireworks.js
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:39:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:39:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/nav-dot.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/nav-dot.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:39:23 [error] [php] Trying to get property of non-object (E:\Apache2.2\htdocs\weixin\protected\controllers\WController.php:17)
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): Wcontroller->runAction()
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): Wcontroller->runActionWithFilters()
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): Wcontroller->run()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 E:\Apache2.2\htdocs\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/W/i/sid/%E7%88%B1%E4%BD%B3%E9%99%B6%E7%93%B7_files/style(1).css
+2014/03/02 16:39:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/nav-dot.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/nav-dot.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:39:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:39:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:41:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:41:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/nav-dot.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/nav-dot.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:41:15 [error] [php] Trying to get property of non-object (E:\Apache2.2\htdocs\weixin\protected\controllers\WController.php:17)
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): Wcontroller->runAction()
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): Wcontroller->runActionWithFilters()
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): Wcontroller->run()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 E:\Apache2.2\htdocs\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/W/i/sid/%E7%88%B1%E4%BD%B3%E9%99%B6%E7%93%B7_files/style(1).css
+2014/03/02 16:41:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:41:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/nav-dot.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/nav-dot.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:41:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:43:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:43:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/nav-dot.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/nav-dot.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:43:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:43:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:43:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/nav-dot.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/nav-dot.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:43:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:44:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:44:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:44:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/nav-dot.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/nav-dot.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:45:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:45:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/nav-dot.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/nav-dot.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:45:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:47:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:47:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/nav-dot.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/nav-dot.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:47:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:48:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:48:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/nav-dot.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/nav-dot.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:48:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:49:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/css/global.css".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/css/global.css
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:49:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:49:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:49:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/nav-dot.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/nav-dot.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:49:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:50:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:50:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/nav-dot.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/nav-dot.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:50:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:59:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base3/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base3/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base3/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 16:59:10 [error] [php] Trying to get property of non-object (E:\Apache2.2\htdocs\weixin\protected\controllers\WController.php:17)
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): Wcontroller->runAction()
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): Wcontroller->runActionWithFilters()
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): Wcontroller->run()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 E:\Apache2.2\htdocs\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/W/i/sid/%E7%88%B1%E4%BD%B3%E9%99%B6%E7%93%B7_files/banner.jpg
+2014/03/02 17:00:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base3/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base3/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base3/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:00:16 [error] [php] Trying to get property of non-object (E:\Apache2.2\htdocs\weixin\protected\controllers\WController.php:17)
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): Wcontroller->runAction()
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): Wcontroller->runActionWithFilters()
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): Wcontroller->run()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 E:\Apache2.2\htdocs\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/W/i/sid/%E7%88%B1%E4%BD%B3%E9%99%B6%E7%93%B7_files/banner.jpg
+2014/03/02 17:01:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base3/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base3/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base3/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:06:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base3/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base3/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base3/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:06:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base3/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base3/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base3/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:06:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:06:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:06:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/nav-dot.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/nav-dot.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:06:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:06:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:06:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/nav-dot.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/nav-dot.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:06:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:07:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:07:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:07:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/nav-dot.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/nav-dot.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:07:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:07:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base3/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base3/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base3/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:07:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "backtheme/base3/css/index.css".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('backtheme/base3...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/backtheme/base3/css/index.css
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/templateset
+---
+2014/03/02 17:07:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "backtheme/base3/image/slider.jpg".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('backtheme/base3...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/backtheme/base3/image/slider.jpg
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/templateset
+---
+2014/03/02 17:07:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "backtheme/base3/css/index_media.css".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('backtheme/base3...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/backtheme/base3/css/index_media.css
+HTTP_REFERER=http://weixin.test.local:8080/Weixin/templateset
+---
+2014/03/02 17:08:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:08:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/nav-dot.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/nav-dot.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:08:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:09:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:09:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/nav-dot.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/nav-dot.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:09:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:11:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:11:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/nav-dot.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/nav-dot.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:11:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:11:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:11:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/nav-dot.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/nav-dot.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:11:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:11:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:11:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:11:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/nav-dot.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/nav-dot.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:11:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:11:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base3/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base3/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base3/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:11:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/loading.gif".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/loading.gif
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:11:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/nav-dot.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/nav-dot.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:11:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base2/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base2/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base2/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:20:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base4/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base4/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base4/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:20:45 [error] [php] Trying to get property of non-object (E:\Apache2.2\htdocs\weixin\protected\controllers\WController.php:17)
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): Wcontroller->runAction()
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): Wcontroller->runActionWithFilters()
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): Wcontroller->run()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 E:\Apache2.2\htdocs\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/W/i/sid/%E7%88%B1%E4%BD%B3%E9%99%B6%E7%93%B7_files/nav-dot.png
+2014/03/02 17:21:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/base4/resource/images/bg.png".' in E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/base4/re...')
+#1 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\Apache2.2\htdocs\weixin\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/base4/resource/images/bg.png
+HTTP_REFERER=http://weixin.test.local:8080/index.php/W/i/sid/2
+---
+2014/03/02 17:21:25 [error] [php] Trying to get property of non-object (E:\Apache2.2\htdocs\weixin\protected\controllers\WController.php:17)
+Stack trace:
+#0 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(286): Wcontroller->runAction()
+#1 E:\Apache2.2\htdocs\weixin\framework\web\CController.php(265): Wcontroller->runActionWithFilters()
+#2 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(282): Wcontroller->run()
+#3 E:\Apache2.2\htdocs\weixin\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\Apache2.2\htdocs\weixin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 E:\Apache2.2\htdocs\weixin\index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/W/i/sid/%E7%88%B1%E4%BD%B3%E9%99%B6%E7%93%B7_files/nav-dot.png
