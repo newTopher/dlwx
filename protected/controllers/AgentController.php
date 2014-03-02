@@ -10,11 +10,13 @@ class AgentController extends Controller{
 
     public $layout='//layouts/column3';
 
-
     public function actionAddUser(){
-        $token = Yii::app()->session['user']->token_sub.$this->genSubToken();
-        $puid =  Yii::app()->session['user']->id;
-        $this->render('adduser',array('token'=>$token,'puid'=>$puid));
+        if(Yii::app()->session['user']->level==1){
+            $puid =  0;
+        }else{
+            $puid=Yii::app()->session['user']->id;
+        }
+        $this->render('adduser',array('puid'=>$puid));
     }
 
     public function actionSet(){
@@ -79,15 +81,42 @@ class AgentController extends Controller{
     }
 
     public function actionAddWexinAccount(){
-        $agentWxUserModel = new AgentWxUserModel();
-        $agentWxUserModel->wx_account=Yii::app()->request->getParam('wx_account','');
-        $agentWxUserModel->wx_password=Yii::app()->request->getParam('wx_password','');
-        $agentWxUserModel->token=Yii::app()->request->getParam('token','');
-        $agentWxUserModel->puid=Yii::app()->request->getParam('puid','');
-        if($agentWxUserModel->insertWxAccount()){
-            $this->redirect_message('添加成功','success',2,Yii::app()->getBaseUrl()."/Agent/AddUser");
+        $User= new UserModel();
+        if(Yii::app()->session['user']->level==1){
+            $User->wx_account=Yii::app()->request->getParam('wx_account','');
+            $User->email=Yii::app()->request->getParam('wx_account','');
+            if($User->findByEmail($User->email)){
+                $msg="该用户已存在";
+            }else{
+                $User->password=md5(Yii::app()->request->getParam('wx_password',''));
+                $User->trade_id=Yii::app()->request->getParam('trade_id','');
+                $User->wx_token=md5($User->wx_account);
+                $User->puid=0;
+                if($User->addUser()){
+                    $msg='提交成功';
+                }else{
+                    $msg='提交失败，请重新提交';
+                }
+            }
+            $this->render('adduser',array('msg'=>$msg));
         }else{
-            $this->redirect_message('添加失败','error',2,Yii::app()->getBaseUrl()."/Agent/AddUser");
+            $email= Yii::app()->request->getParam('wx_account','');
+            if($User->findByEmail($email)){
+                $msg="该用户已存在";
+            }else{
+                $agentWxUserModel = new AgentWxUserModel();
+                $agentWxUserModel->wx_account=Yii::app()->request->getParam('wx_account','');
+                $agentWxUserModel->wx_password=Yii::app()->request->getParam('wx_password','');
+                $agentWxUserModel->trade_id=Yii::app()->request->getParam('trade_id','');
+                $agentWxUserModel->token=md5($agentWxUserModel->wx_account);
+                $agentWxUserModel->puid=Yii::app()->request->getParam('puid','');
+                if($agentWxUserModel->insertWxAccount()){
+                    $msg='提交成功，请等待审核';
+                }else{
+                    $msg='提交失败，请重新提交';
+                }
+            }
+            $this->render('adduser',array('msg'=>$msg));
         }
     }
 

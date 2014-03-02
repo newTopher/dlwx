@@ -9,6 +9,7 @@
 class AgentWxUserModel extends Ar{
 
     public $id;
+    public $trade_id;
     public $wx_account;
     public $wx_password;
     public $token;

@@ -22,7 +22,7 @@
                             </div>
                         </div>
                         <div class="control-group">
-                            <label class="control-label" for="focusedInput">电话号码</label>
+                            <label class="control-label" for="focusedInput">联系方式</label>
                             <div class="controls">
                                 <input class="input-xlarge focused" name="tel" id="focusedInput" type="text" value="<?php echo $userdata->tel; ?>">
                             </div>
@@ -30,10 +30,15 @@
                         <div class="control-group">
                             <label class="control-label" for="selectError3">行业</label>
                             <div class="controls">
-                                <select id="selectError3">
+                                <select id="selectError3" name="trade_id">
                                     <option value="1" <?php if($userdata->trade_id == 1){ echo 'selected'; }?>>基础行业</option>
-                                    <option value="2" <?php if($userdata->trade_id == 2){ echo 'selected'; }?>>房产</option>
-                                    <option value="3" <?php if($userdata->trade_id == 3){ echo 'selected'; }?>>餐饮</option>
+                                    <option value="2" <?php if($userdata->trade_id == 2){ echo 'selected'; }?>>餐饮</option>
+                                    <option value="3" <?php if($userdata->trade_id == 3){ echo 'selected'; }?>>旅游</option>
+                                    <option value="3" <?php if($userdata->trade_id == 4){ echo 'selected'; }?>>婚庆</option>
+                                    <option value="3" <?php if($userdata->trade_id == 5){ echo 'selected'; }?>>教育</option>
+                                    <option value="3" <?php if($userdata->trade_id == 6){ echo 'selected'; }?>>汽车</option>
+                                    <option value="3" <?php if($userdata->trade_id == 7){ echo 'selected'; }?>>酒店</option>
+                                    <option value="3" <?php if($userdata->trade_id == 8){ echo 'selected'; }?>>房产</option>
                                 </select>
                             </div>
                         </div>

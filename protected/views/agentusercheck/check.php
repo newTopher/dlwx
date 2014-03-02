@@ -25,7 +25,6 @@
                         <input class="input-xlarge focused" name="id" type="hidden" value="<?php echo $data->id; ?>">
                         <input class="input-xlarge focused" name="puid" type="hidden" value="<?php echo $data->puid; ?>">
                         <input class="input-xlarge focused" name="token" type="hidden" value="<?php echo $data->token; ?>">
-
                         <fieldset>
                             <div class="control-group">
                                 <label class="control-label" for="focusedInput">微信用户名</label>
@@ -42,7 +41,7 @@
                             <div class="control-group">
                                 <label class="control-label" for="focusedInput">验证url</label>
                                 <div class="controls">
-                                    <h3><small><?php echo 'http://www.wapwei.com/api/'.$data->token; ?></small></h3>
+                                    <h3><small><?php echo 'http://www.wapwei.com/api/t/'.$data->token; ?></small></h3>
                                 </div>
                             </div>
                             <div class="control-group">

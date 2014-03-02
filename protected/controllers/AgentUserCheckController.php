@@ -40,7 +40,7 @@ class AgentUserCheckController extends Controller{
                     $userModel->password=md5($wx_password);
                     $userModel->wx_account=$wx_account;
                     $userModel->open_weixin=1;
-                    $userModel->wx_token=$this->genSubToken();
+                    $userModel->wx_token=md5($wx_account);
                     $userModel->msg_status=0;
                     $userModel->trade_id=1;
                     if($userModel->addUser()){
