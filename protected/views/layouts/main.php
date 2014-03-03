@@ -9,9 +9,7 @@
     <link id="bs-css" href="<?php echo Yii::app()->getBaseUrl(); ?>/css/bootstrap-cerulean.css" rel="stylesheet">
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/css/uploadify.css"></script>
     <style type="text/css">
-        body {
-            padding-bottom: 40px;
-        }
+
         .sidebar-nav {
             padding: 9px 0;
         }
