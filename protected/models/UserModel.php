@@ -9,6 +9,7 @@
 class UserModel extends Ar{
 
     public $id;
+    public $qq;
     public $email;
     public $password;
     public $name;

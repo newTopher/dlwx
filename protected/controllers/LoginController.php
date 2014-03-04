@@ -26,17 +26,26 @@ class LoginController extends Controller{
         //代理商用户15293897812@wapwe$verifyCodei
         $model=new LoginForm();
         $errMsg='';
-        if(isset($_POST['email'])){
+        $email=Yii::app()->request->getParam('email','');
+        if(!empty($email)){
             Yii::app()->user->returnUrl = Yii::app()->getBaseUrl()."/main";
             $model->email=Yii::app()->request->getParam('email','');
+            $model->wx_account=Yii::app()->request->getParam('email','');
             $model->verifyCode=Yii::app()->request->getParam('verifyCode','');
             $model->password=Yii::app()->request->getParam('password','');
             $model->rememberMe=Yii::app()->request->getParam('remember','');
-            if($model->validate() && $model->login()){
-                Yii::app()->session['user']=$model->getUser();
-                $this->redirect(Yii::app()->user->returnUrl);
+            $User=new UserModel();
+            $Users=$User->findByEmail($email);
+            $deadline_date=$Users->deadline_date;
+            if($deadline_date>time()){
+                if($model->validate() && $model->login()){
+                    Yii::app()->session['user']=$model->getUser();
+                    $this->redirect(Yii::app()->user->returnUrl);
+                }else{
+                    $errMsg='用户名或者密码错误';
+                }
             }else{
-                $errMsg='用户名或者密码错误';
+                $errMsg='该账户已过期';
             }
         }
         $this->render('login',array('errMsg'=>$errMsg,'model'=>$model));

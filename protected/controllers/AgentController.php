@@ -120,6 +120,32 @@ class AgentController extends Controller{
         }
     }
 
+    public function actionAddtempUser(){
+        $User= new UserModel();
+        $email= Yii::app()->request->getParam('username','');
+        if($User->findByEmail($email)){
+           $Msg= "用户名已存在";
+            $this->redirect("http://www.wapwei.com/site/reg1.php?Msg=$Msg");
+        }else{
+            $User->email=$email;
+            $User->password=md5(Yii::app()->request->getParam('password',''));
+            $User->tel=Yii::app()->request->getParam('phone','');
+            $User->trade_id=Yii::app()->request->getParam('trade_id','');
+            $User->qq=Yii::app()->request->getParam('qq','');
+            $User->wx_token=md5($User->email);
+            $User->puid=0;
+            $User->deadline_date=time()+7*3600*24;
+            if($User->addUser()){
+                $url='/login/index/email/'.$User->email.'/password/'.Yii::app()->request->getParam('password','');
+               echo "<script>window.location.href ='".$url."';</script>";
+            }else{
+                echo "<script>window.location.href='http://www.wapwei.com/site/reg1.php';</script>";
+            }
+        }
+
+    }
+
+
     public function actionApplyList(){
         $puid = Yii::app()->session['user']->id;
         $agentWxUserModel = new AgentWxUserModel();
