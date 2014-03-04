@@ -23,7 +23,7 @@ class Template15Model extends Ar{
     }
 
     public function tableName(){
-        return '{{template_23}}';
+        return '{{template_15}}';
     }
 
     public function findByUidSiteId(){

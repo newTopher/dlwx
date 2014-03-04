@@ -15,8 +15,6 @@ class Template14Model extends Ar{
     public $p2;
     public $p3;
     public $p4;
-    public $p5;
-    public $p6;
 
     public static function model($className=__CLASS__){
         return parent::model($className);

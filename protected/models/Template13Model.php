@@ -17,13 +17,16 @@ class Template13Model extends Ar{
     public $p4;
     public $p5;
     public $p6;
+    public $p7;
+    public $p8;
+    public $p9;
 
     public static function model($className=__CLASS__){
         return parent::model($className);
     }
 
     public function tableName(){
-        return '{{template_23}}';
+        return '{{template_13}}';
     }
 
     public function findByUidSiteId(){

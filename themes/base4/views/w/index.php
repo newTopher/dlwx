@@ -18,12 +18,17 @@
         $(document).ready(web_obj.page_init);
         var links=new Array('/api/197196ec4a/web/index/');
     </script>
+    <style>
+        .flex-control-nav {
+            display: none;
+        }
+    </style>
 </head>
 
 <body scroll=no style="overflow:hidden">
 <div id="web_page_contents_loading"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/images/loading.gif"></div><div id="header" class="wrap" style="display: none;">
     <ul>
-        <li class="home first" style="width: 33.33233333333334%;"><a href="" target="_self"></a></li>
+        <li class="home first" style="width: 33.33233333333334%;"><a href="<?php echo Yii::app()->request->baseUrl.'/W/I/sid/'.$webData->uid; ?>" target="_self"></a></li>
         <li class="back" style="width: 33.33233333333334%;"><a href="javascript:;" target="_self"></a></li>
         <li class="lbs" style="width: 33.33233333333334%;">
             <a ajax_url="/api/197196ec4a/web/lbs/" target="_self" href="http://www.ptweixin.com/api/197196ec4a/web/lbs/"></a>
@@ -38,6 +43,13 @@
         var web_skin_data=[{"PId":"63296","SId":"39","TradeId":"0","MemberId":"193","ContentsType":"1","Title":"[\"\"]","ImgPath":"[\"\\\/api\\\/web\\\/skin\\\/037\\\/images\\\/0\\\/banner.jpg\"]","Url":"[\"\\\/api\\\/197196ec4a\\\/web\\\/\"]","Postion":"t01","Width":"640","Height":"1010","NeedLink":"0"},{"PId":"63297","SId":"39","TradeId":"0","MemberId":"193","ContentsType":"0","Title":"品牌服务","ImgPath":"\/api\/web\/skin\/037\/images\/0\/i0.png","Url":"\/api\/197196ec4a\/web\/","Postion":"t02","Width":"160","Height":"160","NeedLink":"1"},{"PId":"63298","SId":"39","TradeId":"0","MemberId":"193","ContentsType":"0","Title":"功能介绍","ImgPath":"\/api\/web\/skin\/037\/images\/0\/i1.png","Url":"\/api\/197196ec4a\/web\/","Postion":"t03","Width":"160","Height":"160","NeedLink":"1"},{"PId":"63299","SId":"39","TradeId":"0","MemberId":"193","ContentsType":"0","Title":"关于我们","ImgPath":"\/api\/web\/skin\/037\/images\/0\/i2.png","Url":"\/api\/197196ec4a\/web\/","Postion":"t04","Width":"160","Height":"160","NeedLink":"1"},{"PId":"63300","SId":"39","TradeId":"0","MemberId":"193","ContentsType":"0","Title":"体验预约","ImgPath":"\/api\/web\/skin\/037\/images\/0\/i3.png","Url":"\/api\/197196ec4a\/web\/","Postion":"t05","Width":"160","Height":"160","NeedLink":"1"},{"PId":"63301","SId":"39","TradeId":"0","MemberId":"193","ContentsType":"0","Title":"会员卡","ImgPath":"\/api\/web\/skin\/037\/images\/0\/i4.png","Url":"\/api\/197196ec4a\/web\/","Postion":"t06","Width":"160","Height":"160","NeedLink":"1"},{"PId":"63302","SId":"39","TradeId":"0","MemberId":"193","ContentsType":"0","Title":"联系我们","ImgPath":"\/api\/web\/skin\/037\/images\/0\/i5.png","Url":"\/api\/197196ec4a\/web\/","Postion":"t07","Width":"160","Height":"160","NeedLink":"1"}];
         var MusicPath='';
         $(document).ready(index_obj.index_init);
+        $(window).load(function() {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                animationLoop: true ,
+                directionNav: false
+            });
+        });
     </script><script type="text/javascript">
         var skin_index_init=function(){
             $('#header,#footer, #footer_points, #support').hide();//, #footer, #footer_points, #support
@@ -52,56 +64,57 @@
             <div class="img" style="height: 606px;">
                 <div class="slider" style="height: 606px;"><div class="flexslider" style="height: 606px;">
                         <ul class="slides" style="height: 606px;">
-                            <li style="display: list-item; height: 606px;">
-                                <img src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/images/banner.jpg" alt=""></li></ul></div></div></div>
+                            <?php foreach($sliderdata as $k=>$v): ?>
+                                <li style="display: list-item;">
+                                    <a href="<?php echo $v['link']; ?>" target="_self">
+                                        <img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo $v['pic']; ?>" alt="">
+                                    </a>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul></div></div></div>
         </div>
+
+        <?php
+        $p1 = explode('_',CJSON::decode($webNavData->p1,false)->linkid);
+        $p2 = explode('_',CJSON::decode($webNavData->p2,false)->linkid);
+        $p3 = explode('_',CJSON::decode($webNavData->p3,false)->linkid);
+        $p4 = explode('_',CJSON::decode($webNavData->p4,false)->linkid);
+        $p5 = explode('_',CJSON::decode($webNavData->p5,false)->linkid);
+        $p6 = explode('_',CJSON::decode($webNavData->p6,false)->linkid);
+        ?>
 
         <div class="web_contents">
             <div class="box">
                 <ul>
                     <li>
                         <div class="web_skin_index_list item" rel="edit-t02">
-                            <div class="img"><a href="http://www.ptweixin.com/api/197196ec4a/web/" target="_self"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/images/i0.png"></a></div>
+                            <div class="img"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p1[0]).'/I/'.strtoupper($p1[1]).'/sid/'.$webData->uid;?>" target="_self"><img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo CJSON::decode($webNavData->p1,false)->pic;  ?>"></a></div>
                         </div>
                     </li>
                     <li>
                         <div class="web_skin_index_list item" rel="edit-t03">
-                            <div class="img"><a href="http://www.ptweixin.com/api/197196ec4a/web/" target="_self"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/images/i1.png"></a></div>
+                            <div class="img"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p2[0]).'/I/'.strtoupper($p2[1]).'/sid/'.$webData->uid;?>" target="_self"><img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo CJSON::decode($webNavData->p2,false)->pic;  ?>"></a></div>
                         </div>
                     </li>
                     <li>
                         <div class="web_skin_index_list item" rel="edit-t04">
-                            <div class="img"><a href="http://www.ptweixin.com/api/197196ec4a/web/" target="_self"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/images/i2.png"></a></div>
+                            <div class="img"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p3[0]).'/I/'.strtoupper($p3[1]).'/sid/'.$webData->uid;?>" target="_self"><img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo CJSON::decode($webNavData->p3,false)->pic;  ?>"></a></div>
                         </div>
                     </li>
                     <li>
                         <div class="web_skin_index_list item" rel="edit-t05">
-                            <div class="img"><a href="http://www.ptweixin.com/api/197196ec4a/web/" target="_self"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/images/i3.png"></a></div>
+                            <div class="img"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p4[0]).'/I/'.strtoupper($p4[1]).'/sid/'.$webData->uid;?>" target="_self"><img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo CJSON::decode($webNavData->p4,false)->pic;  ?>"></a></div>
                         </div>
                     </li>
                     <li>
                         <div class="web_skin_index_list item" rel="edit-t06">
-                            <div class="img"><a href="http://www.ptweixin.com/api/197196ec4a/web/" target="_self"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/images/i4.png"></a></div>
+                            <div class="img"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p5[0]).'/I/'.strtoupper($p5[1]).'/sid/'.$webData->uid;?>" target="_self"><img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo CJSON::decode($webNavData->p5,false)->pic;  ?>"></a></div>
                         </div>
                     </li>
+
                     <li>
                         <div class="web_skin_index_list item" rel="edit-t07">
-                            <div class="img"><a href="http://www.ptweixin.com/api/197196ec4a/web/" target="_self"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/images/i5.png"></a></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="web_skin_index_list item" rel="edit-t08">
-                            <div class="img"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="web_skin_index_list item" rel="edit-t09">
-                            <div class="img"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="web_skin_index_list item" rel="edit-t10">
-                            <div class="img"></div>
+                            <div class="img"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p6[0]).'/I/'.strtoupper($p6[1]).'/sid/'.$webData->uid;?>" target="_self"><img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo CJSON::decode($webNavData->p6,false)->pic;  ?>"></a></div>
                         </div>
                     </li>
                 </ul>

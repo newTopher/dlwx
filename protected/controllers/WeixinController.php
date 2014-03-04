@@ -226,8 +226,12 @@ class WeixinController extends Controller{
         $modelname ='Template'.$webData->template_id.'Model';
         $templateModel = new $modelname();
         $templateData = $templateModel->getTemplateDataBySiteIdAndUid($webData->id,Yii::app()->session['user']->id);
-        $sliderdata = CJSON::decode($templateData->slider,false);
-        $this->render('templateset',array(
+        if($templateData){
+            $sliderdata = CJSON::decode($templateData->slider,false);
+        }else{
+            $sliderdata = null;
+        }
+        $this->render('templateset'.$webData->template_id,array(
             'template_name'=>$template_name,
             'template_id'=>$webData->template_id,
             'site_id'=>$webData->id,
