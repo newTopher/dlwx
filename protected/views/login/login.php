@@ -21,7 +21,7 @@ $this->pageTitle=Yii::app()->name . ' - Login';
             <div class="well span5 center login-box">
                 <?php if(!empty($errMsg)): ?>
                 <div class="alert text-error">
-                    用户名或者密码错误.
+                    <?php echo $errMsg;?>
                 </div>
                 <?php endif; ?>
                 <?php if(empty($errMsg)): ?>

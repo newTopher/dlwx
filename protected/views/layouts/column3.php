@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="index.html"> <img alt="Charisma Logo" src="<?php echo Yii::app()->getBaseUrl();?>/img/logo20.png" /> <span>wapwei</span></a>
+            <a class="brand" href="index.html"> <img alt="Charisma Logo" src="<?php echo Yii::app()->getBaseUrl();?>/img/logo_wapwei.png" /><span class="logo_title">万普微盟</span></a>
 
 
 
@@ -32,7 +32,7 @@
 <div class="container-fluid">
     <div class="row-fluid">
     <?php if(Yii::app()->session['user']->level == 1): ?>
-    <div class="span2 main-menu-span">
+    <div class="span2 main-menu-span" id="accordion">
 
         <h3>代理商管理</h3>
         <ul class="nav nav-tabs nav-stacked main-menu">
@@ -98,7 +98,7 @@
     </div>
     <?php endif; ?>
     <?php if(Yii::app()->session['user']->level == 3): ?>
-    <div class="span2 main-menu-span">
+    <div class="span2 main-menu-span" id="accordion">
 
             <h3>我的万普微盟</h3>
             <ul class="nav nav-tabs nav-stacked main-menu">
@@ -204,7 +204,11 @@
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/notifIt.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.uploadify.min.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.8.21.custom.min.js"></script>
-
+        <script type="text/javascript">
+            $(function() {
+                $( "#accordion" ).accordion();
+            });
+        </script>
 
 
 

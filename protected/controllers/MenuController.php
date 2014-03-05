@@ -13,7 +13,7 @@ class MenuController extends Controller{
     public function actionBase(){
         $msg = Yii::app()->request->getParam('msg','');
         $userModel = new UserModel();
-        $selfMenuModel = new selfMenuModel();
+        $selfMenuModel = new SelfMenuModel();
         $selfMenuModel->uid = Yii::app()->session['user']->id;
         $userModel->id = Yii::app()->session['user']->id;
         Yii::app()->session['user'] = $userModel->getUserById();
