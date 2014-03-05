@@ -14,8 +14,7 @@ class ApiController extends Controller {
     public function actionBind(){
         $t=Yii::app()->request->getParam('t','');
         if(!empty($t)){
-            $temp = substr($t,0,2).hexdec(substr($t,2));
-            if(($this->userdata = userModel::findByToken($temp))){
+            if(($this->userdata = UserModel::findByToken($t))){
                 $postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
               //  file_put_contents('1.txt',$postStr);
                 if (!empty($postStr)){
@@ -38,32 +37,25 @@ class ApiController extends Controller {
                     exit;
                 }
             }else{
-                $this->token = dechex($temp);
+                $this->token = TOKEN;
                 if(!$this->checkSignature()){
                     echo CJSON::encode(array('status'=>'-1','msg'=>'msg is error'));
                     exit;
                 }else{
-                    $this->valid();exit;
-                    /*
-                    if(userModel::findByToken($temp)){
+                    $this->valid();
+                    if(userModel::findByToken(TOKEN)){
                         $this->valid();exit;
                     }else{
-                        $agentUserModel =  new AgentUserModel();
-                        $agentUserModel->token_sub = substr($temp,2,5);
-                        $result = $agentUserModel->findByTokenSub();
-                        if($result !== null){
-                            $userModel = new UserModel();
-                            $userModel->wx_token = $temp;
-                            $userModel->puid = $result->id;
-                            if($userModel->updateByToken()){
-                                return true;
-                            }else{
-                                return false;
-                            }
+                        $userModel = new UserModel();
+                        $userModel->wx_token = $t;
+                        if($userModel->updateByToken()){
+                            return true;
+                        }else{
+                            return false;
                         }
                         $this->valid();
                     }
-                    */
+
 
                 }
             }
@@ -128,7 +120,7 @@ class ApiController extends Controller {
         $data->title = $webData->msg_title;
         $data->description = $webData->msg_description;
         $data->picurl =  Yii::app()->request->hostInfo.'/upload/wxwebsite/'.$webData->msg_image;
-        $data->url = Yii::app()->request->hostInfo.'/index.php/W/i/sid/'.$this->userdata->id;
+        $data->url = Yii::app()->request->hostInfo.'/W/I/sid/'.$this->userdata->id;
         $this->responseImageText($postObj,$data);
     }
 

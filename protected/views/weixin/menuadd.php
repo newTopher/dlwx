@@ -1,4 +1,4 @@
-<script type="text/javascript" src="<?php echo Yii::app()->getBaseUrl(); ?>/js/ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/ckeditor/ckeditor.js"></script>
 <div class="row-fluid">
     <div class="box span12">
         <div class="box-header well">
@@ -11,7 +11,7 @@
                     <iframe width="320" frameborder=no scrolling=auto style="overflow-x:hidden; overflow-y:auto;" height="480" src="<?php echo Yii::app()->request->hostInfo.'/index.php/W/i/sid/'.$uid; ?>"></iframe>
                 </div>
                 <div class="span8">
-                    <form name="form" method="post" enctype="multipart/form-data" action="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Menuinsert" class="form-horizontal">
+                    <form name="form" method="post" enctype="multipart/form-data" action="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Menuinsert" class="form-horizontal">
                         <fieldset>
                             <div class="control-group">
                                 <label class="control-label" for="focusedInput">菜单名称</label>

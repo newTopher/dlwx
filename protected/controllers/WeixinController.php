@@ -223,8 +223,111 @@ class WeixinController extends Controller{
     public function actionTemplateset(){
         $webData = WxWebsiteModel::getWxWebByUid(Yii::app()->session['user']->id);
         $template_name = TemplateModel::getTemplateNameByTpid($webData->template_id);
-        $this->render('templateset',array('template_name'=>$template_name));
+        $modelname ='Template'.$webData->template_id.'Model';
+        $templateModel = new $modelname();
+        $templateData = $templateModel->getTemplateDataBySiteIdAndUid($webData->id,Yii::app()->session['user']->id);
+        if($templateData){
+            $sliderdata = CJSON::decode($templateData->slider,false);
+        }else{
+            $sliderdata = null;
+        }
+        $this->render('templateset'.$webData->template_id,array(
+            'template_name'=>$template_name,
+            'template_id'=>$webData->template_id,
+            'site_id'=>$webData->id,
+            'templateData'=>$templateData,
+            'sliderdata'=>$sliderdata
+        ));
     }
+
+    public function actionTemplateslidersave(){
+        $sliderdata = Yii::app()->request->getParam('sliderdata');
+        $site_id = Yii::app()->request->getParam('site_id');
+        $template_id = Yii::app()->request->getParam('template_id');
+        if(!empty($site_id) && !empty($template_id)){
+            $modelname ='Template'.$template_id.'Model';
+            $templateModel = new $modelname();
+            $templateModel->slider = CJSON::encode($sliderdata);
+            $templateModel->uid = Yii::app()->session['user']->id;
+            $templateModel->site_id = $site_id;
+            if($templateModel->findByUidSiteId()){
+                if($templateModel->updateSlider()){
+                    $result = array('code'=>0,'msg'=>'更新成功');
+                }else{
+                    $result = array('code'=>-1,'msg'=>'更新失败');
+                }
+            }else{
+                if($templateModel->insertSlider()){
+                    $result = array('code'=>0,'msg'=>'新增成功');
+                }else{
+                    $result = array('code'=>-1,'msg'=>'新增失败');
+                }
+            }
+        }else{
+            $result = array('code'=>-1,'msg'=>'保存失败');
+        }
+        echo CJSON::encode($result);
+
+    }
+
+    public function actionNavsave(){
+        $navdata = Yii::app()->request->getParam('navdata');
+        $site_id = Yii::app()->request->getParam('site_id');
+        $position = Yii::app()->request->getParam('position');
+        $template_id = Yii::app()->request->getParam('template_id');
+        if(!empty($site_id) && !empty($template_id) && !empty($position)){
+            $modelname ='Template'.$template_id.'Model';
+            $templateModel = new $modelname();
+            $templateModel->$position = CJSON::encode($navdata);
+            $templateModel->uid = Yii::app()->session['user']->id;
+            $templateModel->site_id = $site_id;
+            if($templateModel->findByUidSiteId()){
+                if($templateModel->updateNav($position)){
+                    $result = array('code'=>0,'msg'=>'更新成功');
+                }else{
+                    $result = array('code'=>-1,'msg'=>'更新失败');
+                }
+            }else{
+                if($templateModel->insertNav()){
+                    $result = array('code'=>0,'msg'=>'新增成功');
+                }else{
+                    $result = array('code'=>-1,'msg'=>'新增失败');
+                }
+            }
+            echo CJSON::encode($result);
+        }
+    }
+
+    public function actionTemplateselect(){
+        $trade_id=Yii::app()->request->getParam("trade_id",'0');
+        $TemplateModel=new TemplateModel();
+        $list=$TemplateModel->getTemplate($trade_id);
+        $wxWebsiteModel = new WxWebsiteModel();
+        $wxWebsiteModel->id = Yii::app()->session['user']->id;
+        $webdata = $wxWebsiteModel->getWxWebById();
+        $this->render('templateselect',array('list'=>$list,'trade_id'=>$trade_id,'webdata'=>$webdata));
+    }
+
+    public function actionChangeTemplate(){
+        $uid = Yii::app()->request->getParam('uid');
+        $template_id = Yii::app()->request->getParam('template_id');
+        if(!empty($uid) && !empty($template_id)){
+            $webSiteModel = new WxWebsiteModel();
+            $webSiteModel->uid = $uid;
+            $webSiteModel->template_id = $template_id;
+            if($webSiteModel->updateTemplateIdByUid()){
+                $template = TemplateModel::getTemplateByTpid($template_id);
+                Yii::app()->session['is_attr'] = $template->attr_setting_id;
+                $result = array('code'=>0,'msg'=>'模板选择成功,请到模板设置中心设置');
+            }else{
+                $result = array('code'=>-1,'msg'=>'模板选择失败');
+            }
+        }else{
+            $result = array('code'=>-1,'msg'=>'操作失败');
+        }
+        echo CJSON::encode($result);
+    }
+
 
 
 

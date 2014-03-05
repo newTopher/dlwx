@@ -22,7 +22,8 @@
             </ul>
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade active in" id="home">
-                    <form method="post" action="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/AddWexinAccount" class="form-horizontal">
+                    <form method="post" action="<?php echo Yii::app()->request->baseUrl; ?>/Agent/AddWexinAccount" class="form-horizontal">
+                        <input class="input-xlarge focused" name="token" type="hidden" value="<?php echo $token; ?>">
                         <input class="input-xlarge focused" name="puid" type="hidden" value="<?php echo $puid; ?>">
                         <fieldset>
                             <div class="control-group">
@@ -37,35 +38,13 @@
                                     <input class="input-xlarge focused" name="wx_password" id="focusedInput" type="password" value=""> <span class="help-inline">请填写已注册的公众号账号密码</span>
                                 </div>
                             </div>
-                            <div class="control-group">
-                                <label class="control-label" for="selectError3">行业</label>
-                                <div class="controls">
-                                    <select id="selectError3" name="trade_id">
-                                        <option value="1">基础</option>
-                                        <option value="2">餐饮</option>
-                                        <option value="3">旅游</option>
-                                        <option value="4">婚庆</option>
-                                        <option value="5">教育</option>
-                                        <option value="6">汽车</option>
-                                        <option value="7">酒店</option>
-                                        <option value="8">房产</option>
-                                    </select>
-                                </div>
-                            </div>
+
                             <div class="form-actions">
                                 <button type="submit" class="btn btn-primary">提交</button>
                                 <button class="btn">取消</button>
                             </div>
                         </fieldset>
                     </form>
-                    <div class="row-fluid"><div class="span12 center"></div></div></div>
-                <?php if(!empty($msg)):?>
-                <div class="msg_fade" id="ui_notifIt" class="info" style="background: deepskyblue; height: 60px; width: 100%; top: 0px; left: 0px;">
-                    <p style="line-height: 60px;">
-                        <b><?php echo $msg;?></b>
-                    </p>
-                </div>
-                <?php endif;?>
                 </div>
                 <div class="tab-pane fade" id="profile">
                     <h3>企业资料</h3>

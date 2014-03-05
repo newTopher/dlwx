@@ -4,10 +4,10 @@
     <input type="hidden" id="siteContextPath" value=""/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title></title>
-    <script src="<?php echo Yii::app()->getBaseUrl(); ?>/js/jquery-1.7.2.min.js"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=29853e5332078c0e4f650aaac72c5172"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/getscript?v=2.0&ak=29853e5332078c0e4f650aaac72c5172&services=&t=20140127144714"></script>
-    <link id="bs-css" href="<?php echo Yii::app()->getBaseUrl(); ?>/css/bootstrap-cerulean.css" rel="stylesheet">
+    <link id="bs-css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-cerulean.css" rel="stylesheet">
     <style type="text/css">
         body, html,#mapContainer {width: 100%;height: 100%;overflow: hidden;margin:0;}
         .mapContainer{width:80% !important;float:left;border-right:2px solid #bcbcbc;}

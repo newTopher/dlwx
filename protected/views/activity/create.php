@@ -19,7 +19,7 @@
                             <button type="button" class="close" data-dismiss="alert">×</button>
                             <strong>提示信息!</strong>活动创建以后将无法修改奖品数请合理配置.
                         </div>
-                        <form name="form" method="post" enctype="multipart/form-data" action="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Menuupdate" class="form-horizontal">
+                        <form name="form" method="post" enctype="multipart/form-data" action="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Menuupdate" class="form-horizontal">
                             <fieldset>
 
                                 <div class="control-group">
@@ -103,7 +103,7 @@
                             <button type="button" class="close" data-dismiss="alert">×</button>
                             <strong>提示信息!</strong>当用户输入无效的关键词时默认回复信息.
                         </div>
-                        <form name="form" method="post" enctype="multipart/form-data" action="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Menuupdate" class="form-horizontal">
+                        <form name="form" method="post" enctype="multipart/form-data" action="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Menuupdate" class="form-horizontal">
                             <fieldset>
                                 <div class="control-group">
                                     <label class="control-label" for="selectError3">展现类型</label>
@@ -135,7 +135,7 @@
                             <button type="button" class="close" data-dismiss="alert">×</button>
                             <strong>提示信息!</strong>当用户在微信公众号输入相应的关键词,如果能和如下功能相匹配的内容.
                         </div>
-                        <a href="<?php echo Yii::app()->getBaseUrl(); ?>/AutoReplay/AddKeyword" class="btn btn-small btn-primary">添加关键词</a>
+                        <a href="<?php echo Yii::app()->request->baseUrl; ?>/AutoReplay/AddKeyword" class="btn btn-small btn-primary">添加关键词</a>
                         <table class="table table-striped">
                             <thead>
                             <tr>
@@ -157,7 +157,7 @@
                             <button type="button" class="close" data-dismiss="alert">×</button>
                             <strong>提示信息!</strong>当用户在微信公众号输入相应的关键词,如果能和如下功能相匹配的内容.
                         </div>
-                        <a href="<?php echo Yii::app()->getBaseUrl(); ?>/AutoReplay/AddKeyword" class="btn btn-small btn-primary">添加关键词</a>
+                        <a href="<?php echo Yii::app()->request->baseUrl; ?>/AutoReplay/AddKeyword" class="btn btn-small btn-primary">添加关键词</a>
                         <table class="table table-striped">
                             <thead>
                             <tr>

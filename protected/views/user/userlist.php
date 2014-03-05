@@ -81,25 +81,25 @@
     </td>
     <td class="center ">
         <?php if($status1!=0):?>
-        <a class="btn btn-success" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/view?id=<?php echo $val['user']['id'];?>">
+        <a class="btn btn-success" href="<?php echo Yii::app()->request->baseUrl;?>/AgentManage/view?id=<?php echo $val['user']['id'];?>">
             <i class="icon-zoom-in icon-white"></i>
             编辑
         </a>
-        <a class="btn btn-danger" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/Close?id=<?php echo $val['user']['id']?>">
+        <a class="btn btn-danger" href="<?php echo Yii::app()->request->baseUrl;?>/AgentManage/Close?id=<?php echo $val['user']['id']?>">
             <i class="icon-trash icon-white"></i>
             停用
         </a>
         <?php elseif($status1==0 && $time<$end_time):?>
         &nbsp;&nbsp;&nbsp;<span class="label" href="">编辑</span>
         &nbsp;&nbsp;&nbsp;
-        <a class="btn btn-danger" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/Open?id=<?php echo $val['user']['id']?>&type=<?php echo $val['user']['type']?>">
+        <a class="btn btn-danger" href="<?php echo Yii::app()->request->baseUrl;?>/AgentManage/Open?id=<?php echo $val['user']['id']?>&type=<?php echo $val['user']['type']?>">
             <i class="icon-trash icon-white"></i>
             开启
         </a>
             <?php elseif($status1==0 && $time>=$end_time):?>
             &nbsp;&nbsp;&nbsp;<span class="label" href="">编辑</span>
             &nbsp;&nbsp;&nbsp;
-            <a class="btn btn-danger" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/Renew?id=<?php echo $val['user']['id']?>&type=<?php echo $val['user']['type']?>">
+            <a class="btn btn-danger" href="<?php echo Yii::app()->request->baseUrl;?>/AgentManage/Renew?id=<?php echo $val['user']['id']?>&type=<?php echo $val['user']['type']?>">
                 <i class="icon-trash icon-white"></i>
                 开启
             </a>

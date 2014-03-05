@@ -75,6 +75,14 @@ class WxWebsiteModel extends Ar{
         }
     }
 
+    public function updateTemplateIdByUid(){
+        if(self::model()->updateAll(array('template_id'=>$this->template_id),'uid=:uid',array('uid'=>$this->uid))){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 
 
 }

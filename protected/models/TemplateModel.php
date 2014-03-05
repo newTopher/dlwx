@@ -43,6 +43,15 @@ class TemplateModel extends Ar{
         return $temp;
     }
 
+    public function getTemplate($trade_id){
+        if($trade_id == 0){
+            $temp=self::model()->findAllByAttributes(array("status"=>1));
+        }else{
+            $temp=self::model()->findAllByAttributes(array("status"=>1,"trade_id"=>$trade_id));
+        }
+        return $temp;
+    }
+
     public function SelectTrade(){
         return  self::model()->findAllBySql("select  distinct trade_id from template_list");
     }

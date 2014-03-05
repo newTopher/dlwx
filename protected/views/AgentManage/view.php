@@ -26,7 +26,7 @@
             </ul>
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade active in" id="home">
-                    <form method="post" action="<?php echo Yii::app()->getBaseUrl(); ?>/AgentManage/ChangePassword?id=<?php echo 18?>" class="form-horizontal">
+                    <form method="post" action="<?php echo Yii::app()->request->baseUrl; ?>/AgentManage/ChangePassword?id=<?php echo 18?>" class="form-horizontal">
                         <input class="input-xlarge focused" name="token" type="hidden" value="">
                         <input class="input-xlarge focused" name="puid" type="hidden" value="">
                         <fieldset>
@@ -136,7 +136,7 @@
                                 </div>
                             </div>
                             <li class="thumbnail" id="image-2">
-                                <a href="<?php echo Yii::app()->getBaseUrl().'/upload/license/'.$list->license?>" title="Sample Image 2" style="width:300px;background:url(<?php echo Yii::app()->getBaseUrl().'/upload/license/'.$list->license?>)" class="cboxElement"><img style="{width:300px;}" alt="Sample Image 2" src="<?php echo Yii::app()->getBaseUrl().'/upload/license/'.$list->license?>" class="grayscale" style="display: block;"></a>
+                                <a href="<?php echo Yii::app()->request->baseUrl.'/upload/license/'.$list->license?>" title="Sample Image 2" style="width:300px;background:url(<?php echo Yii::app()->request->baseUrl.'/upload/license/'.$list->license?>)" class="cboxElement"><img style="{width:300px;}" alt="Sample Image 2" src="<?php echo Yii::app()->request->baseUrl.'/upload/license/'.$list->license?>" class="grayscale" style="display: block;"></a>
                             </li>
 
 

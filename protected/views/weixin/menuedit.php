@@ -1,4 +1,4 @@
-<script type="text/javascript" src="<?php echo Yii::app()->getBaseUrl(); ?>/js/ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/ckeditor/ckeditor.js"></script>
 <div class="row-fluid">
     <div class="box span12">
         <div class="box-header well">
@@ -11,7 +11,7 @@
                     <iframe width="340" frameborder=no scrolling=auto style="overflow-x:hidden; overflow-y:auto;" height="480" src="<?php echo Yii::app()->request->hostInfo.'/index.php/W/i/sid/'.$webdata->uid; ?>"></iframe>
                 </div>
                 <div class="span8">
-                    <form name="form" method="post" enctype="multipart/form-data" action="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Menuupdate" class="form-horizontal">
+                    <form name="form" method="post" enctype="multipart/form-data" action="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Menuupdate" class="form-horizontal">
                         <input name="id" type="hidden" value="<?php echo $menudata->id; ?>">
                         <fieldset>
                             <div class="control-group">
@@ -26,7 +26,7 @@
                                     <div class="uploader" id="uniform-fileInput"><input class="input-file uniform_on" name="with_image" type="file" size="19" style="opacity: 0;"><span class="filename">No file selected</span><span class="action">Choose File</span></div>
                                     <?php if(isset($menudata->with_image)): ?>
                                         <div  style="margin-top: 10px;margin-left: 2px;">
-                                            <img src="<?php echo Yii::app()->getBaseUrl().'/upload/wxwebsite/'.$menudata->with_image; ?>" class="img-rounded" style="width: 160px; height: 100px;">
+                                            <img src="<?php echo Yii::app()->request->baseUrl.'/upload/wxwebsite/'.$menudata->with_image; ?>" class="img-rounded" style="width: 160px; height: 100px;">
                                         </div>
                                     <?php endif; ?>
                                     <p class="help-block"><span class="label label-info">建议</span>&nbsp;尺寸320*320像素</p>

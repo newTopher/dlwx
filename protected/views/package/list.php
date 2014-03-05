@@ -56,11 +56,11 @@
                             </td>
                             <td class="center ">
 
-                                <a class="btn btn-danger" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/Open?id=<?php echo $val->id?>">
+                                <a class="btn btn-danger" href="<?php echo Yii::app()->request->baseUrl;?>/AgentManage/Open?id=<?php echo $val->id?>">
                                     <i class="icon-trash icon-white"></i>
                                     开启
                                 </a>
-                                <a class="btn btn-success" href="<?php echo Yii::app()->getBaseUrl();?>/AgentManage/view?id=<?php echo $val->id;?>">
+                                <a class="btn btn-success" href="<?php echo Yii::app()->request->baseUrl;?>/AgentManage/view?id=<?php echo $val->id;?>">
                                     <i class="icon-zoom-in icon-white"></i>
                                     编辑
                                 </a>

@@ -14,7 +14,7 @@
         </div>
         <div class="box-content">
 
-            <form class="form-horizontal" enctype="multipart/form-data" action="<?php echo Yii::app()->getBaseUrl()."/Helper/add"?>" method="post">
+            <form class="form-horizontal" enctype="multipart/form-data" action="<?php echo Yii::app()->request->baseUrl."/Helper/add"?>" method="post">
                 <fieldset>
                     <div class="control-group">
                         <label class="control-label" for="focusedInput">助手中文名称</label>

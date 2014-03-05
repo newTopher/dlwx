@@ -10,7 +10,7 @@
                     <iframe width="340" frameborder=no scrolling=auto style="overflow-x:hidden; overflow-y:auto;" height="480" src="<?php echo Yii::app()->request->hostInfo.'/index.php/W/i/sid/'.$webdata->uid; ?>"></iframe>
                 </div>
                 <div class="span8">
-                    <form enctype="multipart/form-data" name="form" method="post" action="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Addweixin" class="form-horizontal">
+                    <form enctype="multipart/form-data" name="form" method="post" action="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Addweixin" class="form-horizontal">
                         <input type="hidden" name="uid" value="<?php echo Yii::app()->session['user']->id; ?>">
                         <input type="hidden" name="id" value="<?php if(isset($webdata->id)){ echo $webdata->id; }; ?>">
                         <fieldset>
@@ -61,7 +61,7 @@
                                     <div class="uploader" id="uniform-fileInput"><input class="input-file uniform_on" name="msg_image" type="file" size="19" style="opacity: 0;"><span class="filename">No file selected</span><span class="action">Choose File</span></div>
                                     <?php if(isset($webdata->msg_image)): ?>
                                         <div style="margin-top: 10px;margin-left: 2px;">
-                                            <img src="<?php echo Yii::app()->getBaseUrl().'/upload/wxwebsite/'.$webdata->msg_image; ?>" class="img-rounded"style="width: 160px; height: 100px;">
+                                            <img src="<?php echo Yii::app()->request->baseUrl.'/upload/wxwebsite/'.$webdata->msg_image; ?>" class="img-rounded"style="width: 160px; height: 100px;">
                                         </div>
                                     <?php endif; ?>
 
@@ -74,7 +74,7 @@
                                     <div class="uploader" id="uniform-fileInput"><input class="input-file uniform_on" name="index_image" type="file" size="19" style="opacity: 0;"><span class="filename">No file selected</span><span class="action">Choose File</span></div>
                                     <?php if(isset($webdata->index_image)): ?>
                                      <div  style="margin-top: 10px;margin-left: 2px;">
-                                         <img src="<?php echo Yii::app()->getBaseUrl().'/upload/wxwebsite/'.$webdata->index_image; ?>" class="img-rounded" style="width: 160px; height: 100px;">
+                                         <img src="<?php echo Yii::app()->request->baseUrl.'/upload/wxwebsite/'.$webdata->index_image; ?>" class="img-rounded" style="width: 160px; height: 100px;">
                                      </div>
                                     <?php endif; ?>
                                     <p class="help-block"><span class="label label-info">建议</span>&nbsp;尺寸640*1136像素</p>

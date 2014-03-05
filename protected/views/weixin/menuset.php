@@ -16,7 +16,7 @@
                     </ul>
                     <div id="myTabContent" class="tab-content">
                         <div class="tab-pane fade active in" id="home">
-                            <a href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Menuadd" class="btn btn-small btn-primary">添加菜单</a>
+                            <a href="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Menuadd" class="btn btn-small btn-primary">添加菜单</a>
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
@@ -32,7 +32,7 @@
                                     <td><?php echo $v->id; ?></td>
                                     <td><?php echo $v->menu_name; ?></td>
                                     <td><?php echo date("Y-m-d H:i:s",$v->update_time); ?></td>
-                                    <td><a href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Menuedit/id/<?php echo $v->id ;?>" class="btn btn-mini btn-primary">修改</a></td>
+                                    <td><a href="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Menuedit/id/<?php echo $v->id ;?>" class="btn btn-mini btn-primary">修改</a></td>
                                 </tr>
                                <?php endforeach; ?>
                                 </tbody>
@@ -40,7 +40,7 @@
                         </div>
 
                         <div class="tab-pane fade" id="slider">
-                            <a href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Slideradd" class="btn btn-small btn-primary">添加图片</a>
+                            <a href="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Slideradd" class="btn btn-small btn-primary">添加图片</a>
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
@@ -56,13 +56,13 @@
                                         <tr>
                                             <td><?php echo $v->id; ?></td>
                                             <td>
-                                               <img src="<?php echo Yii::app()->getBaseUrl().'/upload/wxwebsite/'.$v->image; ?>" class="img-rounded" style="width: 80px; height: 50px;">
+                                               <img src="<?php echo Yii::app()->request->baseUrl.'/upload/wxwebsite/'.$v->image; ?>" class="img-rounded" style="width: 80px; height: 50px;">
                                             </td>
                                             <td><?php echo $v->title; ?></td>
                                             <td><?php echo date("Y-m-d H:i:s",$v->update_time); ?></td>
                                             <td>
-                                                <a href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Slideredit/id/<?php echo $v->id ;?>" class="btn btn-mini btn-primary">修改</a>
-                                                <a onclick="return confirm('确定删除此张轮播图？')" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Sliderdel/id/<?php echo $v->id ;?>" class="btn btn-mini btn-danger">删除</a>
+                                                <a href="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Slideredit/id/<?php echo $v->id ;?>" class="btn btn-mini btn-primary">修改</a>
+                                                <a onclick="return confirm('确定删除此张轮播图？')" href="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Sliderdel/id/<?php echo $v->id ;?>" class="btn btn-mini btn-danger">删除</a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

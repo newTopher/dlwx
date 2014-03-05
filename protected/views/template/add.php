@@ -14,7 +14,7 @@
         </div>
             <div class="box-content">
 
-                    <form class="form-horizontal" enctype="multipart/form-data" action="<?php echo Yii::app()->getBaseUrl()."/template/add"?>" method="post">
+                    <form class="form-horizontal" enctype="multipart/form-data" action="<?php echo Yii::app()->request->baseUrl."/template/add"?>" method="post">
                         <fieldset>
                             <div class="control-group">
                                 <label class="control-label" for="selectError3">模版分类</label>

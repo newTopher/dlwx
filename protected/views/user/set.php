@@ -6,7 +6,7 @@
         </div>
         <div class="box-content">
             <div class="box-content">
-                <form action="<?php echo Yii::app()->getBaseUrl(); ?>/User/update" class="form-horizontal">
+                <form action="<?php echo Yii::app()->request->baseUrl; ?>/User/update" class="form-horizontal">
                     <input type="hidden" name="id" value="<?php echo $userdata->id; ?>">
                     <fieldset>
                         <div class="control-group">

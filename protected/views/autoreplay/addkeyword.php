@@ -6,7 +6,7 @@
         </div>
         <div class="box-content">
             <div class="box-content">
-                <form action="<?php echo Yii::app()->getBaseUrl(); ?>/AutoReplay/insertKeyword" class="form-horizontal">
+                <form action="<?php echo Yii::app()->request->baseUrl; ?>/AutoReplay/insertKeyword" class="form-horizontal">
                     <fieldset>
                         <div class="control-group">
                             <label class="control-label" for="">关键词名称</label>

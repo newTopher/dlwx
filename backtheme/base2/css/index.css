@@ -1,0 +1,58 @@
+.m_lefter {
+    width: 520px;
+    overflow: hidden;
+    float: left;
+    _display: inline;
+    border: 1px solid #ddd;
+    background: #fff;
+    margin-right: 20px;
+}
+#web_skin_index{width:100%; overflow:hidden;}
+#web_skin_index .web_skin_index_list{overflow:hidden; position:relative;}
+#web_skin_index .banner{width:100%;overflow:hidden; height:157px; margin:0;}
+#web_skin_index .banner *{width:100%; height:auto; overflow:hidden;}
+#web_skin_index .banner img{width:100%;}
+
+#web_skin_index .box{width:100%; padding:5px 0px; overflow:hidden; box-sizing:border-box;}
+#web_skin_index .web_skin_index_list {
+    float: left;
+    _display: inline;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+#web_skin_index .box li{width:33%; float:left; overflow:hidden; border:none; padding:8px 0px; box-sizing:border-box;}
+#web_skin_index .box li .img{height:81px;margin-bottom:5px; overflow:hidden; text-align:center;}
+#web_skin_index .box li .img img{ height:100%;}
+#web_skin_index .box li .text{text-align:center; font-size:14px;}
+
+
+.slider_imgbox{
+    width: 520px;
+    height: 100px;
+    background-color: #dceaf4;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    margin-left: 20px;
+    padding:10px;
+}
+#SetHomeCurrentBox {
+    border: 5px solid #F60;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    background: #999;
+    filter: alpha(opacity=60);
+    -moz-opacity: 0.6;
+    -khtml-opacity: 0.6;
+    opacity: 0.6;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    font-family: 'Arial';
+}

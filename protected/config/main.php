@@ -42,6 +42,7 @@ $config = array(
         // uncomment the following to enable URLs in path-format
         'session'=>array(
             'autoStart'=>true,
+            'sessionName'=>'user'
         ),
         'urlManager'=>array(
             'urlFormat'=>'path',
@@ -104,7 +105,8 @@ $config = array(
     'params'=>array(
         // this is used in contact page
         'adminEmail'=>'webmaster@example.com',
-    ),
+    )
+
 );
 $database   = @include_once dirname(__FILE__).'/database.php';
 if(!empty($database)){
