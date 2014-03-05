@@ -127,7 +127,7 @@ class AgentController extends Controller{
            $Msg= "用户名已存在";
            $this->redirect("http://www.wapwei.com/site/reg1.php?Msg=$Msg");
         }else{
-            $User->email=$email;
+        }else{            $User->email=$email;
             $User->password=md5(Yii::app()->request->getParam('password',''));
             $User->tel=Yii::app()->request->getParam('phone','');
             $User->trade_id=Yii::app()->request->getParam('trade_id','');
