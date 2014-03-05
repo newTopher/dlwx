@@ -1,11 +1,5 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: Topher
- * Date: 13-12-10
- * Time: 上午12:40
- * To change this template use File | Settings | File Templates.
- */
+
 class LoginController extends Controller{
 
     public function actions()
@@ -30,7 +24,6 @@ class LoginController extends Controller{
         if(!empty($email)){
             Yii::app()->user->returnUrl = Yii::app()->getBaseUrl()."/main";
             $model->email=Yii::app()->request->getParam('email','');
-            $model->wx_account=Yii::app()->request->getParam('email','');
             $model->verifyCode=Yii::app()->request->getParam('verifyCode','');
             $model->password=Yii::app()->request->getParam('password','');
             $model->rememberMe=Yii::app()->request->getParam('remember','');
@@ -50,6 +43,7 @@ class LoginController extends Controller{
         }
         $this->render('login',array('errMsg'=>$errMsg,'model'=>$model));
     }
+
     public function actionLoginOut(){
         echo 1;
         $this->redirect(Yii::app()->request->baseUrl."/login/index");
