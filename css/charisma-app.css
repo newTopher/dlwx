@@ -27,6 +27,69 @@ select {
 	filter: progid : DXImageTransform.Microsoft.gradient (   startColorstr =
 		'#331e5799', endColorstr = '#007db9e8', GradientType = 0 );
 }
+.weixinuser{
+    background-color: #368c05;
+}
+.fwuser{
+    background-color: #3ebd2e;
+}
+.xiaoxiuser{
+    background-color: #ff9c1c;
+}
+.huodonguser{
+    background-color: #ff2d12;
+}
+
+.app_box{
+    width: 100%;
+    height: auto;
+}
+.app_title{
+    font-size: 15px;
+    font-family: 'microsoft yahei';
+}
+.app_ico_box{
+    width: 100%;
+    padding:5px 0px;
+}
+.app_ico_box ul{
+    width: 100%;
+    margin: 0px;
+}
+.app_ico_box ul li{
+    list-style-type: none;
+    float: left;
+    margin-left: 20px;
+}
+.app_ico_box ul li .app_b_title{
+    display: block;
+    padding:5px 0px;
+    text-align: center;
+}
+.app_ico_box ul .li_first{
+    margin-left: 0px;
+}
+.home_h3{
+    font-size: 15px;
+    font-family: 'microsoft yahei';
+    color: #555555;
+}
+
+#accordion .main-menu {
+    min-height: 130px;
+    height: auto;
+}
+#accordion h3{
+    font-size: 14px;
+    font-family: 'microsoft yahei';
+    color: white;
+    padding:5px 5px 5px 5px;
+    margin-bottom: 2px;
+    border-radius: 3px;
+    background-color: #55A3E0;
+    cursor:pointer;
+}
+
 
 .top-block span {
 	clear: both;
@@ -384,8 +447,8 @@ div.center,p.center,img.center {
 
 .brand img {
 	float: left;
-	height: 20px;
-	width: 20px;
+	height: 50px;
+	width: 67px;
 	margin-right: 5px;
 }
 
@@ -555,4 +618,10 @@ ul.ajax-loaders {
 
 .box-content.buttons {
 	min-height: 297px;
+}
+
+.logo_title{
+    font-family: 'microsoft yahei';
+    font-size: 20px;
+    padding-top: 15px;
 }

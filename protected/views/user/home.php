@@ -1,50 +1,100 @@
 <div class="sortable row-fluid">
+  <div class="app_box">
+    <h1 class="app_title">我的通知中心</h1>
     <?php if(Yii::app()->session['user']->level == 3): ?>
-        <a data-rel="tooltip" title="6 个新微信用户." class="well span3 top-block" href="#">
+        <a style="margin-left: 0px;width: 23%;" data-rel="tooltip" title="6 个新微信用户." class="well span3 top-block weixinuser" href="#">
             <span class="icon32 icon-red icon-user"></span>
-            <div>微信用户</div>
-            <div>507</div>
-            <span class="notification">6</span>
+            <div style="color: #fff;">微信总用户</div>
+            <div style="color: #fff;">507</div>
+            <span class="notification red">6</span>
         </a>
 
-        <a data-rel="tooltip" title="4 个新微淘粉丝." class="well span3 top-block" href="#">
+        <a style="margin-left: 15px;width: 23%;" data-rel="tooltip" title="4 个访问客户." class="well span3 top-block weixinuser" href="#">
             <span class="icon32 icon-color icon-star-on"></span>
-            <div>微淘粉丝</div>
-            <div>228</div>
+            <div style="color: #fff;">访问数据</div>
+            <div style="color: #fff;">228</div>
             <span class="notification green">4</span>
         </a>
 
-        <a data-rel="tooltip" class="well span3 top-block" href="#">
+        <a style="margin-left: 15px;width: 23%;" data-rel="tooltip" class="well span3 top-block weixinuser" href="#">
             <span class="icon32 icon-color icon-star-on"></span>
-            <div>访问数据</div>
-            <div>228</div>
+            <div style="color: #fff;">客户消息</div>
+            <div style="color: #fff;">68</div>
+            <span class="notification red">6</span>
         </a>
 
-        <a data-rel="tooltip" title="12 新消息." class="well span3 top-block" href="#">
+        <a style="margin-left: 15px;width: 23%;" data-rel="tooltip" title="12 新消息." class="well span3 top-block weixinuser" href="#">
             <span class="icon32 icon-color icon-envelope-closed"></span>
-            <div>消息管理</div>
-            <div>25</div>
+            <div style="color: #fff;">活动参与</div>
+            <div style="color: #fff;">25</div>
             <span class="notification red">12</span>
         </a>
     <?php endif; ?>
+  </div>
+</div>
+
+<div class="sortable row-fluid">
+  <div class="app_box">
+      <h1 class="app_title">我的微应用</h1>
+      <div class="app_ico_box">
+         <ul>
+             <li class="li_first">
+                 <a href=""><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/bag_64px.png"></a>
+                 <span class="app_b_title">自动回复</span>
+             </li>
+             <li>
+                 <a href=""><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/denied_64px.png"></a>
+                 <span class="app_b_title">数据魔方</span>
+             </li>
+             <li>
+                 <a href=""><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/folder_64px.png"></a>
+                 <span class="app_b_title">微相册</span>
+             </li>
+             <li>
+                 <a href=""><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/global_64px.png"></a>
+                 <span class="app_b_title">自动回复</span>
+             </li>
+             <li>
+                 <a href=""><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/bag_64px.png"></a>
+                 <span class="app_b_title">自动回复</span>
+             </li>
+             <li>
+                 <a href=""><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/denied_64px.png"></a>
+                 <span class="app_b_title">数据魔方</span>
+             </li>
+             <li>
+                 <a href=""><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/folder_64px.png"></a>
+                 <span class="app_b_title">微相册</span>
+             </li>
+             <li>
+                 <a href=""><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/global_64px.png"></a>
+                 <span class="app_b_title">自动回复</span>
+             </li>
+             <li>
+                 <a href=""><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/denied_64px.png"></a>
+                 <span class="app_b_title">数据魔方</span>
+             </li>
+             <li>
+                 <a href=""><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/folder_64px.png"></a>
+                 <span class="app_b_title">微相册</span>
+             </li>
+             <li>
+                 <a href=""><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/global_64px.png"></a>
+                 <span class="app_b_title">自动回复</span>
+             </li>
+         </ul>
+      </div>
+  </div>
 </div>
 
 <div class="row-fluid">
-    <div class="box span12">
-        <div class="box-header well">
-            <h2><i class="icon-info-sign"></i>我的首页</h2>
-            <div class="box-icon">
-                <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
-                <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
-                <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
-            </div>
-        </div>
-        <div class="box-content">
+
+        <div class="box-content" style="padding:0px;">
             <dl class="dl-horizontal">
                 <table class="table table-bordered">
                     <thead>
                     <tr>
-                        <th class="info"><h3>账号信息</h3></th>
+                        <th class="info"><h3 class="home_h3">账号信息</h3></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -109,7 +159,7 @@
                 <table class="table table-bordered">
                     <thead>
                     <tr>
-                        <th class="info"><h3>微信公众号信息</h3></th>
+                        <th class="info"><h3 class="home_h3">微信公众号信息</h3></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -168,7 +218,6 @@
             <div class="clearfix"></div>
         </div>
     </div>
-</div>
 
 </div>
 </div>
