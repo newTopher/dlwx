@@ -47,5 +47,9 @@ class NouseReplayModel extends Ar{
         return self::model()->findByAttributes(array('uid'=>$this->uid));
     }
 
+    static public function getNouseData($uid){
+        return self::model()->findByAttributes(array('uid'=>$uid));
+    }
+
 
 }

@@ -47,5 +47,9 @@ class FirstReplayModel extends Ar{
         return self::model()->findByAttributes(array('uid'=>$this->uid));
     }
 
+    static public function getDataFristByUid($uid){
+        return self::model()->findByAttributes(array('uid'=>$uid));
+    }
+
 
 }
