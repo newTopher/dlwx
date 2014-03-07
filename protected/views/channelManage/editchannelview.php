@@ -2,29 +2,30 @@
 <div class="row-fluid">
     <div class="box span12">
         <div class="box-header well">
-            <h2><i class="icon-info-sign"></i> 添加栏目 </h2>
+            <h2><i class="icon-info-sign"></i> 修改栏目 </h2>
 
         </div>
         <div class="box-content">
             <div class="box-content">
-                    <form name="form" method="post" enctype="multipart/form-data" action="<?php echo Yii::app()->request->baseUrl; ?>/ChannelManage/AddChannel" class="form-horizontal">
+                    <form name="form" method="post" enctype="multipart/form-data" action="<?php echo Yii::app()->request->baseUrl; ?>/ChannelManage/Channelupdate" class="form-horizontal">
                         <fieldset>
-                            <input class="input-xlarge focused" name="pid" type="hidden" value="<?php echo $pid; ?>">
+                            <input class="input-xlarge focused" name="pid" type="hidden" value="<?php echo $channelData->pid; ?>">
+                            <input class="input-xlarge focused" name="id" type="hidden" value="<?php echo $id; ?>">
                             <div class="control-group">
                                 <label class="control-label" for="focusedInput">栏目名称</label>
                                 <div class="controls">
-                                    <input class="input-xlarge focused" id="channel_name" name="name" type="text" value="">
+                                    <input class="input-xlarge focused" id="channel_name" name="name" type="text" value="<?php echo $channelData->name; ?>">
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label" for="focusedInput">使用链接形式</label>
                                 <div class="controls">
-                                    <input class="input-xlarge focused" name="url" id="url_check" type="checkbox" value="1">
-                                    <select name="linkid" id="url_select" style="display: none;">
+                                    <input class="input-xlarge focused" name="url" id="url_check" type="checkbox" value="1" <?php if($channelData->linkid != null){ echo 'checked'; }?>>
+                                    <select name="linkid" id="url_select" style="display:<?php if($channelData->linkid != null){ echo 'block';}else{ echo 'none';}?> ">
                                         <option value="">请选择</option>
-                                        <option value="t_1">活动</option>
-                                        <option value="t_1">文字</option>
-                                        <option value="t_1">图文</option>
+                                        <option value="t_1" <?php if($channelData->linkid == 't_1'){ echo 'selected';} ?>>活动</option>
+                                        <option value="t_2" <?php if($channelData->linkid == 't_2'){ echo 'selected';} ?>>文字</option>
+                                        <option value="t_3" <?php if($channelData->linkid == 't_3'){ echo 'selected';} ?>>图文</option>
                                     </select>
                                     &nbsp; &nbsp;&nbsp;&nbsp;<span class="label label-important">注意</span>&nbsp;<font color='green'>使用链接形式将不能填写栏目内容</font>
                                 </div>
@@ -33,7 +34,7 @@
                             <div class="control-group">
                                 <label class="control-label" for="focusedInput">是否弹出二级菜单</label>
                                 <div class="controls">
-                                    <input class="input-xlarge focused" name="is_sub_show" type="checkbox" value="1">
+                                    <input class="input-xlarge focused" name="is_sub_show" type="checkbox" value="1" <?php if($channelData->is_sub_show == 1){ echo 'checked'; }?>>
                                     &nbsp;&nbsp;&nbsp;&nbsp;<span class="label label-important">注意</span>&nbsp;<font color='green'>当前栏目在微官网上是否显示二级菜单</font>
                                 </div>
                             </div>
@@ -41,14 +42,14 @@
                                 <label class="control-label" for="focusedInput">是否在菜单上显示</label>
 
                                 <div class="controls">
-                                    <input class="input-xlarge focused" name="is_show" id="focusedInput" type="checkbox" value="1">
+                                    <input class="input-xlarge focused" name="is_show" id="focusedInput" type="checkbox" value="1" <?php if($channelData->is_show == 1){ echo 'checked'; }?>>
                                     &nbsp;&nbsp;&nbsp;&nbsp; <span class="label label-important">注意</span>&nbsp;<font color='green'>当前栏目是否在为官网下导航栏显示</font>
                                 </div>
                             </div>
-                            <div class="control-group" id="text_box">
+                            <div class="control-group" id="text_box" style="display:<?php if($channelData->linkid != null){ echo 'none';}else{ echo 'block';}?> ">
                                 <label class="control-label" for="focusedInput">详细内容</label>
                                 <div class="controls">
-                                    <textarea name="text" id="text_content"></textarea>
+                                    <textarea name="text" id="text_content"><?php echo $channelData->text; ?></textarea>
                                 </div>
                                 <script type="text/javascript">
                                     CKEDITOR.replace( 'text' );
