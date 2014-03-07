@@ -10,22 +10,23 @@ class ApiController extends Controller {
 
     public $token = null;
     public $userdata =null;
+    public $postObj = null;
 
     public function actionBind(){
         $t=Yii::app()->request->getParam('t','');
         if(!empty($t)){
             if(($this->userdata = UserModel::findByToken($t))){
                 $postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
-              //  file_put_contents('1.txt',$postStr);
+                //file_put_contents('1.txt',$postStr);
                 if (!empty($postStr)){
-                    $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
-                    $RX_TYPE = trim($postObj->MsgType);
+                    $this->postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
+                    $RX_TYPE = trim($this->postObj->MsgType);
                     switch($RX_TYPE){
                         case "text":
-                            $resultStr = $this->handleText($postObj);
+                            $resultStr = $this->handleText($this->postObj);
                             break;
                         case "event":
-                            $resultStr = $this->handleEvent($postObj);
+                            $resultStr = $this->handleEvent($this->postObj);
                             break;
                         default:
                             $resultStr = "Unknow msg type: ".$RX_TYPE;
@@ -42,21 +43,13 @@ class ApiController extends Controller {
                     echo CJSON::encode(array('status'=>'-1','msg'=>'msg is error'));
                     exit;
                 }else{
-                    $this->valid();
-                    if(userModel::findByToken(TOKEN)){
+                    $userModel = new UserModel();
+                    $userModel->wx_token = $t;
+                    if($userModel->updateByToken()){
                         $this->valid();exit;
                     }else{
-                        $userModel = new UserModel();
-                        $userModel->wx_token = $t;
-                        if($userModel->updateByToken()){
-                            return true;
-                        }else{
-                            return false;
-                        }
-                        $this->valid();
+                        return false;
                     }
-
-
                 }
             }
         }
@@ -88,11 +81,65 @@ class ApiController extends Controller {
 
     }
 
-    public function handleText($postObj){
-        $keyword = trim($postObj->Content);
+    public function handleText(){
+        $keyword = trim($this->postObj->Content);
         if(!empty($keyword)){
+            /*
             if(preg_match('/微官网/',$keyword)){
                 $this->getWeiWebMsg($postObj);
+            }
+            */
+            $keydata = $this->getUseKeyWords();
+            if($keydata){
+                foreach($keydata as $k=>$v){
+                    if($v->preg_type == 1){
+                        if($v->keywords == $keyword){
+                            if($v->source_type == 1){
+                                $this->responseText($v->text);
+                            }else if($v->source_type == 2){
+                                $temp = explode('_',$v->source_id);
+                                if($temp[0] == 't'){
+                                    $this->getWeiWebMsg();
+                                }else if($temp[0] == 'g'){
+                                    $this->getGuaCard();
+                                }else{
+                                    $this->nouseReplay();
+                                }
+                            }else if($v->source_type == 0){
+                                if($v->type == 'MemberCard'){
+                                    $this->getMemberCard();
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                foreach($keydata as $k=>$v){
+                    if($v->preg_type == 2){
+                        if(preg_match("/.*{$v->keywords}.*/",$keyword)){
+                            if($v->source_type == 1){
+                                $this->responseText($v->text);
+                            }else if($v->source_type == 2){
+                                $temp = explode('_',$v->source_id);
+                                if($temp[0] == 't'){
+                                    $this->getWeiWebMsg();
+                                }else if($temp[0] == 'g'){
+                                    $this->getGuaCard();
+                                }else{
+                                    $this->nouseReplay();
+                                }
+                            }else if($v->source_type == 0){
+                                if($v->type == 'MemberCard'){
+                                    $this->getMemberCard();
+                                }
+                            }
+                        }
+                    }
+                }
+                $this->nouseReplay();
+            }else{
+                $this->nouseReplay();
             }
         }else{
             //$contentStr = "欢迎关注碉堡君!";
@@ -100,31 +147,104 @@ class ApiController extends Controller {
         }
     }
 
-    public function handleEvent($object){
-        $contentStr = "";
-        switch ($object->Event){
-            case "subscribe":
-                $contentStr = "谢谢关注";
-                $object->MsgType='text';
-                break;
-            default :
-                $contentStr = "Unknow Event: ".$object->Event;
-                break;
+    public function getUseKeyWords(){
+        $keydata = KeywordsReplayModel::getKeyWordsDataByUid($this->userdata->id);
+        if($keydata){
+            return $keydata;
+        }else{
+            return false;
         }
-        $this->responseText($object, $contentStr);
     }
 
-    public function getWeiWebMsg($postObj){
+    public function getFirstData(){
+        $data = FirstReplayModel::getDataFristByUid($this->userdata->id);
+        if($data){
+            return $data;
+        }else{
+            return false;
+        }
+    }
+
+    public function handleEvent(){
+        $data = $this->getFirstData();
+        switch ($this->postObj->Event){
+            case "subscribe":
+                if($data->type == 1){
+                    $this->postObj->MsgType='text';
+                    $this->responseText($data->text);
+                }else if($data->type == 2){
+                    $this->postObj->MsgType='news';
+                    $temp = explode('_',$data->source_id);
+                    if($temp[0] == 't'){
+                        $this->getWeiWebMsg();
+                    }else if($temp[0] == 'g'){
+                        $this->getGuaCard();
+                    }else{
+                        $this->nouseReplay();
+                    }
+                }
+
+                break;
+            default :
+                $contentStr = "Unknow Event: ".$this->postObj->Event;
+                break;
+        }
+        $this->responseText($this->postObj, $contentStr);
+    }
+
+    /*刮刮卡*/
+    public function getGuaCard(){
+
+    }
+
+    /*
+     * 会员卡
+     */
+    public function getMemberCard(){
+        $memberdata = MemberCardModel::getWeiMemberCardByUid($this->userdata->id);
+        if($memberdata){
+            $data = new stdClass();
+            $data->title = $memberdata->index_title;
+            $data->description = $memberdata->description;
+            $data->picurl =  Yii::app()->request->hostInfo.'/upload/slider/'.$memberdata->index_image;
+            $data->url = Yii::app()->request->hostInfo.'/Member/I/sid/'.$this->userdata->id.'/f/'.$this->postObj->FromUserName;
+            $this->responseImageText($data);
+        }else{
+            return false;
+        }
+    }
+
+    /*
+     * 微官网
+     */
+    public function getWeiWebMsg(){
         $webData = WxWebsiteModel::getWxWebByUid($this->userdata->id);
         $data = new stdClass();
         $data->title = $webData->msg_title;
         $data->description = $webData->msg_description;
         $data->picurl =  Yii::app()->request->hostInfo.'/upload/wxwebsite/'.$webData->msg_image;
         $data->url = Yii::app()->request->hostInfo.'/W/I/sid/'.$this->userdata->id;
-        $this->responseImageText($postObj,$data);
+        $this->responseImageText($data);
     }
 
-    public function responseText($object, $content){
+    /*无效回复*/
+    public function nouseReplay(){
+        $data = NouseReplayModel::getNouseData($this->userdata->id);
+        if($data){
+            if($data->type == 1){
+                $this->responseText($data->text);
+            }else if($data->type == 2){
+                $temp = explode('_',$data->source_id);
+                if($temp[0] == 't'){
+                    $this->getWeiWebMsg();
+                }
+            }
+        }else{
+            return false;
+        }
+    }
+
+    public function responseText($content){
         $textTpl = "<xml>
                     <ToUserName><![CDATA[%s]]></ToUserName>
                     <FromUserName><![CDATA[%s]]></FromUserName>
@@ -132,10 +252,11 @@ class ApiController extends Controller {
                     <MsgType><![CDATA[%s]]></MsgType>
                     <Content><![CDATA[%s]]></Content>
                     </xml>";
-        echo sprintf($textTpl, $object->FromUserName, $object->ToUserName, time(),$object->MsgType, $content);
+        echo sprintf($textTpl, $this->postObj->FromUserName, $this->postObj->ToUserName, time(),$this->postObj->MsgType, $content);
+        exit;
     }
 
-    public function responseImage($object,$pic){
+    public function responseImage($pic){
         $imageTpl="<xml>
                     <ToUserName><![CDATA[%s]]></ToUserName>
                     <FromUserName><![CDATA[%s]]></FromUserName>
@@ -145,11 +266,11 @@ class ApiController extends Controller {
                     <MediaId><![CDATA[%s]]></MediaId>
                     </Image>
                     </xml> ";
-        echo sprintf($imageTpl, $object->FromUserName, $object->ToUserName, time(),'image',$pic);
-
+        echo sprintf($imageTpl, $this->postObj->FromUserName, $this->postObj->ToUserName, time(),'image',$pic);
+        exit;
     }
 
-    public function responseImageText($object,$data){
+    public function responseImageText($data){
         $imageTpl = "<xml>
                     <ToUserName><![CDATA[%s]]></ToUserName>
                     <FromUserName><![CDATA[%s]]></FromUserName>
@@ -165,14 +286,15 @@ class ApiController extends Controller {
                     </item>
                     </Articles>
                     </xml> ";
-        echo sprintf($imageTpl, $object->FromUserName, $object->ToUserName, time(),'news', 1,$data->title,
+        echo sprintf($imageTpl, $this->postObj->FromUserName, $this->postObj->ToUserName, time(),'news', 1,$data->title,
             $data->description,$data->picurl,$data->url);
+        exit;
     }
 
-    public function responseImagesTexts($object,$data){
+    public function responseImagesTexts($data){
         $tpl = "<xml>
-                    <ToUserName><![CDATA[{$object->FromUserName}]]></ToUserName>
-                    <FromUserName><![CDATA[{$object->ToUserName}]]></FromUserName>
+                    <ToUserName><![CDATA[{$this->postObj->FromUserName}]]></ToUserName>
+                    <FromUserName><![CDATA[{$this->postObj->ToUserName}]]></FromUserName>
                     <CreateTime>".time()."</CreateTime>
                     <MsgType><![CDATA[news]]></MsgType>
                     <ArticleCount>".count($data)."</ArticleCount>
@@ -192,6 +314,7 @@ class ApiController extends Controller {
         $tpl .="</Articles>
                     </xml>";
         echo $tpl;
+        exit;
     }
 
 

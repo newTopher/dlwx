@@ -49,5 +49,36 @@ class KeywordsReplayModel extends Ar{
         }
     }
 
+    public function getKeyWordsByUidAndMember(){
+        $CDbCriteria = new CDbCriteria();
+        $CDbCriteria->addCondition('uid='.$this->uid);
+        $CDbCriteria->addCondition("type='{$this->type}'");
+        if(self::model()->find($CDbCriteria)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public function getDataKeyWordsByUidAndMember(){
+        $CDbCriteria = new CDbCriteria();
+        $CDbCriteria->addCondition('uid='.$this->uid);
+        $CDbCriteria->addCondition("type='{$this->type}'");
+        return self::model()->find($CDbCriteria);
+    }
+
+    public function updateKeyWordsByUidAndMember(){
+        if(self::model()->updateAll(array('keywords'=>$this->keywords),'uid=:uid and type=:type',array(':uid'=>$this->uid,':type'=>$this->type)
+        )){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    static public function getKeyWordsDataByUid($uid){
+        return self::model()->findAllByAttributes(array('uid'=>$uid));
+    }
+
 
 }

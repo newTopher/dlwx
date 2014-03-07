@@ -127,7 +127,8 @@
                     </tr>
                     <tr>
                         <td>到期时间</td>
-                        <td><?php echo date("Y-m-d H:i:s",$userdata->deadline_date); ?> 还剩余<span style="font-weight: bold;" class="red"><?php echo ceil($userdata->deadline_date-$userdata->add_time)/(3600*24) ?></span>天</td>
+                        <td><?php echo date("Y-m-d H:i:s",$userdata->deadline_date); ?> 还剩余<span style="font-weight: bold;" class="red">
+                                <?php echo round(($userdata->deadline_date-$userdata->add_time)/(3600*24),0) ?></span>天</td>
                     </tr>
                     <tr>
                         <td>账户余额</td>
@@ -175,7 +176,7 @@
                     </tr>
                     <tr>
                         <td>url</td>
-                        <td><?php echo 'http://112.124.62.6/api/'.$userdata->wx_token; ?></td>
+                        <td><?php echo 'http://weixin.wapwei.com/api/bind/t/'.$userdata->wx_token; ?></td>
                     </tr>
                     <?php endif; ?>
                     <tr>
@@ -207,7 +208,7 @@
                     <div class="modal-body">
                         <p>参见绑定微信教程</p>
                         token : <?php echo TOKEN; ?>
-                        url : <?php echo 'http://112.124.62.6/api/bind/t/'.$userdata->wx_token; ?>
+                        url : <?php echo 'http://weixin.wapwei.com/api/bind/t/'.$userdata->wx_token; ?>
                     </div>
                     <div class="modal-footer">
                         <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
