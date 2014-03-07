@@ -2570,3 +2570,299 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2014/03/05 15:05:38 [error] [exception.CDbException] SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+2014/03/05 15:05:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection.' in D:\doudou1\weixin\dlwx\framework\db\CDbConnection.php:388
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\doudou1\weixin\dlwx\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\doudou1\weixin\dlwx\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 D:\doudou1\weixin\dlwx\protected\components\Ar.php(24): CApplication->getDb()
+#5 D:\doudou1\weixin\dlwx\framework\db\ar\CActiveRecord.php(2361): Ar->getDbConnection()
+#6 D:\doudou1\weixin\dlwx\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(UserModel))
+#7 D:\doudou1\weixin\dlwx\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 D:\doudou1\weixin\dlwx\protected\components\Ar.php(11): CActiveRecord->__construct('insert')
+#9 D:\doudou1\weixin\dlwx\protected\controllers\LoginController.php(30): Ar->__construct()
+#10 D:\doudou1\weixin\dlwx\framework\web\actions\CInlineAction.php(49): LoginController->actionIndex()
+#11 D:\doudou1\weixin\dlwx\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 D:\doudou1\weixin\dlwx\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 D:\doudou1\weixin\dlwx\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): CController->run('index')
+#15 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('login/index')
+#16 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#18 {main}
+REQUEST_URI=/index.php/login/index
+HTTP_REFERER=http://www.weixin.com/login
+---
+2014/03/05 15:06:58 [error] [php] YiiBase::include(Controllrt.php) [<a href='function.YiiBase-include'>function.YiiBase-include</a>]: failed to open stream: No such file or directory (D:\doudou1\weixin\dlwx\framework\YiiBase.php:427)
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\protected\controllers\OrderManageController.php(3): spl_autoload_call()
+#1 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(354): require()
+#2 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\doudou1\weixin\dlwx\index.php(11): CWebApplication->run()
+REQUEST_URI=/OrderManage/index
+2014/03/05 15:24:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "OrderManage".' in D:\doudou1\weixin\dlwx\framework\web\CController.php:483
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CController.php(270): CController->missingAction('OrderManage')
+#1 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): CController->run('OrderManage')
+#2 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('OrderManage/Ord...')
+#3 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/OrderManage/OrderManage/Add
+HTTP_REFERER=http://www.weixin.com/OrderManage/index
+---
+2014/03/05 15:24:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "OrderManage".' in D:\doudou1\weixin\dlwx\framework\web\CController.php:483
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CController.php(270): CController->missingAction('OrderManage')
+#1 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): CController->run('OrderManage')
+#2 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('OrderManage/Ord...')
+#3 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/OrderManage/OrderManage/Add
+HTTP_REFERER=http://www.weixin.com/OrderManage/index
+---
+2014/03/05 15:24:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "OrderManage".' in D:\doudou1\weixin\dlwx\framework\web\CController.php:483
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CController.php(270): CController->missingAction('OrderManage')
+#1 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): CController->run('OrderManage')
+#2 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('OrderManage/Ord...')
+#3 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/OrderManage/OrderManage/Add
+HTTP_REFERER=http://www.weixin.com/OrderManage/index
+---
+2014/03/05 15:50:37 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wapwei.template_17' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `template_17`.
+2014/03/05 15:50:37 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{template_17}}" for active record class "Template17Model" cannot be found in the database.' in D:\doudou1\weixin\dlwx\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Template17Model))
+#1 D:\doudou1\weixin\dlwx\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 D:\doudou1\weixin\dlwx\protected\components\Ar.php(11): CActiveRecord->__construct('insert')
+#3 D:\doudou1\weixin\dlwx\protected\controllers\WeixinController.php(227): Ar->__construct()
+#4 D:\doudou1\weixin\dlwx\framework\web\actions\CInlineAction.php(49): WeixinController->actionTemplateset()
+#5 D:\doudou1\weixin\dlwx\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\doudou1\weixin\dlwx\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\doudou1\weixin\dlwx\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): CController->run('templateset')
+#9 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('Weixin/template...')
+#10 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#12 {main}
+REQUEST_URI=/Weixin/templateset
+HTTP_REFERER=http://www.weixin.com/Weixin/Templateselect
+---
+2014/03/05 16:05:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "slider".' in D:\doudou1\weixin\dlwx\framework\web\CController.php:483
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CController.php(270): CController->missingAction('slider')
+#1 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): CController->run('slider')
+#2 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/slider/f...')
+#3 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/slider/false
+HTTP_REFERER=http://www.weixin.com/OrderManage/Add?
+---
+2014/03/05 16:07:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "slider".' in D:\doudou1\weixin\dlwx\framework\web\CController.php:483
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CController.php(270): CController->missingAction('slider')
+#1 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): CController->run('slider')
+#2 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/slider/f...')
+#3 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/slider/false
+HTTP_REFERER=http://www.weixin.com/OrderManage/Add?
+---
+2014/03/05 16:08:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "slider".' in D:\doudou1\weixin\dlwx\framework\web\CController.php:483
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CController.php(270): CController->missingAction('slider')
+#1 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): CController->run('slider')
+#2 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/slider/f...')
+#3 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/slider/false
+HTTP_REFERER=http://www.weixin.com/OrderManage/Add?
+---
+2014/03/05 16:13:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "slider".' in D:\doudou1\weixin\dlwx\framework\web\CController.php:483
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CController.php(270): CController->missingAction('slider')
+#1 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): CController->run('slider')
+#2 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/slider/f...')
+#3 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/slider/false
+HTTP_REFERER=http://www.weixin.com/OrderManage/Add?
+---
+2014/03/05 16:13:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "slider".' in D:\doudou1\weixin\dlwx\framework\web\CController.php:483
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CController.php(270): CController->missingAction('slider')
+#1 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): CController->run('slider')
+#2 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/slider/f...')
+#3 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/slider/false
+HTTP_REFERER=http://www.weixin.com/OrderManage/Add?
+---
+2014/03/05 16:13:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "slider".' in D:\doudou1\weixin\dlwx\framework\web\CController.php:483
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CController.php(270): CController->missingAction('slider')
+#1 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): CController->run('slider')
+#2 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/slider/f...')
+#3 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/slider/false
+HTTP_REFERER=http://www.weixin.com/OrderManage/Add?
+---
+2014/03/05 16:13:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "slider".' in D:\doudou1\weixin\dlwx\framework\web\CController.php:483
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CController.php(270): CController->missingAction('slider')
+#1 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): CController->run('slider')
+#2 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/slider/f...')
+#3 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/slider/false
+HTTP_REFERER=http://www.weixin.com/OrderManage/Add?
+---
+2014/03/05 16:13:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "slider".' in D:\doudou1\weixin\dlwx\framework\web\CController.php:483
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CController.php(270): CController->missingAction('slider')
+#1 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): CController->run('slider')
+#2 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/slider/f...')
+#3 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/slider/false
+HTTP_REFERER=http://www.weixin.com/OrderManage/Add?
+---
+2014/03/05 16:14:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "slider".' in D:\doudou1\weixin\dlwx\framework\web\CController.php:483
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CController.php(270): CController->missingAction('slider')
+#1 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): CController->run('slider')
+#2 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/slider/f...')
+#3 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/slider/false
+HTTP_REFERER=http://www.weixin.com/OrderManage/Add?
+---
+2014/03/05 16:15:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "slider".' in D:\doudou1\weixin\dlwx\framework\web\CController.php:483
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CController.php(270): CController->missingAction('slider')
+#1 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): CController->run('slider')
+#2 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/slider/f...')
+#3 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/upload/slider/false
+HTTP_REFERER=http://www.weixin.com/OrderManage/Add?
+---
+2014/03/05 16:52:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.html".' in D:\doudou1\weixin\dlwx\framework\web\CController.php:483
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CController.php(270): CController->missingAction('index.html')
+#1 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): CController->run('index.html')
+#2 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('OrderManage/ind...')
+#3 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/OrderManage/index.html
+HTTP_REFERER=http://www.weixin.com/OrderManage/Add
+---
+2014/03/05 16:54:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/05 16:54:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/05 17:02:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "C/I/1/sid/2".' in D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('C/I/1/sid/2')
+#1 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/C/I/1/sid/2?wxref=mp.weixin.qq.com
+HTTP_REFERER=http://www.weixin.com/index.php/W/i/sid/2
+---
+2014/03/06 08:32:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/06 13:51:55 [error] [php] Cannot modify header information - headers already sent by (output started at D:\doudou1\weixin\dlwx\protected\controllers\LoginController.php:48) (D:\doudou1\weixin\dlwx\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\protected\controllers\LoginController.php(49): LoginController->redirect()
+#1 D:\doudou1\weixin\dlwx\framework\web\actions\CInlineAction.php(49): LoginController->actionLoginOut()
+#2 D:\doudou1\weixin\dlwx\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\doudou1\weixin\dlwx\framework\web\CController.php(286): LoginController->runAction()
+#4 D:\doudou1\weixin\dlwx\framework\web\CController.php(265): LoginController->runActionWithFilters()
+#5 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): LoginController->run()
+#6 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 D:\doudou1\weixin\dlwx\index.php(11): CWebApplication->run()
+REQUEST_URI=/login/loginOut
+2014/03/06 13:53:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/06 14:05:56 [error] [php] Cannot modify header information - headers already sent by (output started at D:\doudou1\weixin\dlwx\protected\controllers\LoginController.php:48) (D:\doudou1\weixin\dlwx\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\protected\controllers\LoginController.php(49): LoginController->redirect()
+#1 D:\doudou1\weixin\dlwx\framework\web\actions\CInlineAction.php(49): LoginController->actionLoginOut()
+#2 D:\doudou1\weixin\dlwx\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\doudou1\weixin\dlwx\framework\web\CController.php(286): LoginController->runAction()
+#4 D:\doudou1\weixin\dlwx\framework\web\CController.php(265): LoginController->runActionWithFilters()
+#5 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(282): LoginController->run()
+#6 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 D:\doudou1\weixin\dlwx\index.php(11): CWebApplication->run()
+REQUEST_URI=/login/loginOut
+2014/03/06 14:06:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/06 14:07:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/07 01:25:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\doudou1\weixin\dlwx\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\doudou1\weixin\dlwx\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\doudou1\weixin\dlwx\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---

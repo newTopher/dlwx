@@ -131,7 +131,7 @@
         <h3>微应用</h3>
         <ul class="nav nav-tabs nav-stacked main-menu">
 
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/base"><i class="icon-info-sign"></i><span class="hidden-tablet">微预约</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/OrderManage/index"><i class="icon-info-sign"></i><span class="hidden-tablet">微预约</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Templateselect"><i class="icon-thumbs-up"></i><span class="hidden-tablet">微团购</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/channelManage/index"><i class="icon-thumbs-up"></i><span class="hidden-tablet">微调研</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><i class="icon-thumbs-up"></i><span class="hidden-tablet">微相册</span></a></li>
