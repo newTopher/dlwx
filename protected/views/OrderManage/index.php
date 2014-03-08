@@ -8,7 +8,23 @@
         <div class="box-content">
             <div class="box-content">
                 <a href="<?php echo Yii::app()->request->baseUrl; ?>/OrderManage/Add" class="btn btn-large btn-primary">
-                    <i class="icon-chevron-left icon-white"></i>添加预约</a>
+                   添加预约</a>
+                <p style="boder:1px"></p>
+                <?php ?>
+                <div class="row-fluid sortable ui-sortable">
+                    <div class="box span4">
+                        <div class="box-header well" data-original-title="">
+                            <h2><i class="icon-list"></i> Buttons</h2>
+                            <div class="box-icon">
+                                <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+                                <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+                            </div>
+                        </div>
+                        <div class="box-content buttons">
+
+                        </div>
+                    </div><!--/span-->
+                </div>
             </div>
         </div>
     </div>
