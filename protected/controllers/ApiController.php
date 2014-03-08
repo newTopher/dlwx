@@ -108,11 +108,12 @@ class ApiController extends Controller {
                             }else if($v->source_type == 0){
                                 if($v->type == 'MemberCard'){
                                     $this->getMemberCard();
+                                }elseif($v->type == 'OrderCard'){
+                                    $this->getOrderCard();
                                 }
                             }
                         }
                     }
-
                 }
 
                 foreach($keydata as $k=>$v){
@@ -132,6 +133,8 @@ class ApiController extends Controller {
                             }else if($v->source_type == 0){
                                 if($v->type == 'MemberCard'){
                                     $this->getMemberCard();
+                                }elseif($v->type=='OrderCard'){
+                                    $this->getOrderCard();
                                 }
                             }
                         }
@@ -196,7 +199,6 @@ class ApiController extends Controller {
     public function getGuaCard(){
 
     }
-
     /*
      * 会员卡
      */
@@ -209,6 +211,19 @@ class ApiController extends Controller {
             $data->picurl =  Yii::app()->request->hostInfo.'/upload/slider/'.$memberdata->index_image;
             $data->url = Yii::app()->request->hostInfo.'/Member/I/sid/'.$this->userdata->id.'/f/'.$this->postObj->FromUserName;
             $this->responseImageText($data);
+        }else{
+            return false;
+        }
+    }
+    /*-----预订-----*/
+    public function getOrderCard(){
+        $OrderData = OrdermanageModel::getOrderCardByUid($this->userdata->id);
+        if($OrderData){
+            $data= new stdClass();
+            $data->title=$OrderData->title;
+            $data->description=$OrderData->introduce;
+            $data->picurl = Yii::app()->request->hostInfo.'/upload/slider/'.$OrderData->image_path;
+            $data->url = Yii::app()->request->hostInfo.'/OrderManage/I/sid/'.$this->userdata->id.'/f/'.$this->postObj->FromUserName;
         }else{
             return false;
         }

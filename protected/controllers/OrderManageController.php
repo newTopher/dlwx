@@ -10,8 +10,14 @@ class OrderManageController extends Controller{
     public function actionAdd(){
         if($_POST){
             $OrderManage=new OrdermanageModel();
+            $KeywordsReplay=new KeywordsReplayModel();
+            $KeywordsReplay->keywords = Yii::app()->request->getParam('keywords','');
+            $KeywordsReplay->source_id=0;
+            $KeywordsReplay->source_type=0;
+            $KeywordsReplay->type='OrderCard';
+            $KeywordsReplay->preg_type=1;
+            $KeywordsReplay->uid=Yii::app()->session['user']->id;
             $OrderManage->uid = Yii::app()->session['user']->id;
-            $OrderManage->keywords =  Yii::app()->request->getParam('keywords','');
             $OrderManage->title =  Yii::app()->request->getParam('title','');
             $OrderManage->image_path =  Yii::app()->request->getParam('image_path','');
             $OrderManage->introduce =  Yii::app()->request->getParam('introduce','');
@@ -27,20 +33,23 @@ class OrderManageController extends Controller{
             $OrderManage->displayname =  Yii::app()->request->getParam('DisplayName','');
             $OrderManage->displaytelephone =  Yii::app()->request->getParam('DisplayTelephone','');
             $OrderManage->displayreservedate =  Yii::app()->request->getParam('DisplayReserveDate','');
-            $OrderManage->displayreservetime =  Yii::app()->request->getParam('DisplayReserveTime','');
+            $OrderManage->displayreservetime = Yii::app()->request->getParam('DisplayReserveTime','');
             $InputName[] =  Yii::app()->request->getParam('InputName','');
             $InputValue[] =  Yii::app()->request->getParam('InputValue','');
             $SelectName[] =  Yii::app()->request->getParam('SelectName','');
             $SelectValue[] =  Yii::app()->request->getParam('SelectValue','');
             $arr=array('inputname'=>$InputName,'inputvalue'=>$InputValue,'selectname'=>$SelectName,'selectvalue'=>$SelectValue);
             $OrderManage->feedback_info=json_encode($arr);
-            if($OrderManage->settingInsert()){
+            if($OrderManage->settingInsert() && $KeywordsReplay->insertKeywords()){
                 $this->redirect(Yii::app()->request->baseUrl."/OrderManage/Index");
             }else{
                 $msg="预订页面未能添加成功";
             }
         }
         $this->render('add',array('msg'=>$msg));
+    }
+
+    public function action(){
 
     }
 

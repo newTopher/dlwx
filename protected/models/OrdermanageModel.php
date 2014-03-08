@@ -35,6 +35,11 @@ class OrdermanageModel extends Ar{
         }
     }
 
+    static public function getOrderCardByUid($uid){
+        return self::model()->findByAttributes(array('uid'=>$uid));
+    }
+
+
 
 
 
