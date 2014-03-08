@@ -202,7 +202,7 @@
         $("#sencend_btn").click(function(){
             var type = $("#replayType").val();
             if(type == 1){
-                if($("#textMsg").val().length == 0){
+                if($("#text_secend").val().length == 0){
                     notif({
                         type: "warning",
                         msg: "请输入默认回复的文字信息",

@@ -79,6 +79,38 @@ class MemberManageController extends Controller{
         }
     }
 
+    public function actionUpdatecard(){
+        $memberCardModel = new MemberCardModel();
+        $memberCardModel->uid =  Yii::app()->session['user']->id;
+        $memberCardModel->vip_name =  Yii::app()->request->getParam('vip_name');
+        $memberCardModel->vip_logo =  Yii::app()->request->getParam('vip_logo');
+        $memberCardModel->vip_style =  Yii::app()->request->getParam('vip_style');
+        if($memberCardModel->getMemberCardByUid()){
+            if($memberCardModel->updateVipMemberCard()){
+                $this->redirect(Yii::app()->request->baseUrl.'/MemberManage/Cardset');
+            }else{
+                $this->redirect(Yii::app()->request->baseUrl.'/MemberManage/Cardset');
+            }
+        }else{
+            if($memberCardModel->insertMemberCard()){
+                $this->redirect(Yii::app()->request->baseUrl.'/MemberManage/Cardset');
+            }else{
+                $this->redirect(Yii::app()->request->baseUrl.'/MemberManage/Cardset');
+            }
+        }
+
+    }
+
+    public function actionCardset(){
+        $memberCardModel = new MemberCardModel();
+        $memberCardModel->uid =  Yii::app()->session['user']->id;
+        $data = $memberCardModel->getDataMemberCardByUid();
+        if(!$data){
+            $data = null;
+        }
+        $this->render('cardset',array('data'=>$data));
+    }
+
 
 
 

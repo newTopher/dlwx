@@ -69,6 +69,14 @@ class MemberCardModel extends Ar{
         }
     }
 
+    public function updateVipMemberCard(){
+        if(self::model()->updateAll(array('vip_name'=>$this->vip_name,'vip_logo'=>$this->vip_logo,'vip_style'=>$this->vip_style),'uid=:uid',array('uid'=>$this->uid))){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     static public function getWeiMemberCardByUid($uid){
         return self::model()->findByAttributes(array('uid'=>$uid));
     }

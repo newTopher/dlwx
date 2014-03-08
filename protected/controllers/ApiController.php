@@ -169,6 +169,12 @@ class ApiController extends Controller {
         $data = $this->getFirstData();
         switch ($this->postObj->Event){
             case "subscribe":
+                $wxUserModel  = new WxuserModel();
+                $wxUserModel->uid = $this->userdata->id;
+                $wxUserModel->openid =$this->postObj->FromUserName;
+                if(!$wxUserModel->getUserByUidAndOpenId()){
+                    $wxUserModel->addUser();
+                }
                 if($data->type == 1){
                     $this->postObj->MsgType='text';
                     $this->responseText($data->text);
