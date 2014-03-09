@@ -2,6 +2,7 @@
 class OrdermanageModel extends Ar{
     public $uid;
     public $keywords;
+    public $kid;
     public $title;
     public $image_path;
     public $introduce;
@@ -34,13 +35,27 @@ class OrdermanageModel extends Ar{
         }
     }
 
-    static public function getOrderCardByUid($uid){
+    static public function getOrderCardByUid($uid,$keywords){
+        return self::model()->findByAttributes(array('uid'=>$uid,'keywords'=>$keywords));
+    }
+
+    static public function getOrderByUid($uid){
         return self::model()->findByAttributes(array('uid'=>$uid));
     }
 
+    static public function getOrderById($id){
+        return self::model()->findByPk($id);
+    }
 
+    static public function getAllOrderByUid($uid){
+        return self::model()->findAllByAttributes(array('uid'=>$uid));
+    }
 
-
-
-
+    public function deleteOrder(){
+       if(self::model()->deleteByPk($this->id)){
+        return true;
+        }else{
+            return false;
+        }
+    }
 }

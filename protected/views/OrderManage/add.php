@@ -105,8 +105,7 @@
                     <div class="control-group">
                         <label class="control-label" >预约电话</label>
                         <div class="controls">
-                            <textarea name="order_tel" style="height:120px;width: 320px" class="notallow8">
-                            </textarea>
+                            <textarea name="order_tel" style="height:120px;width: 320px" class="notallow8"></textarea>
                             <span class="help-inline">每行填写一个</span>
                         </div>
                     </div>
@@ -120,8 +119,7 @@
                     <div class="control-group">
                         <label class="control-label">预约说明</label>
                         <div class="controls">
-                            <textarea name="description" style="height:120px;width: 320px" class="notallow9">
-                            </textarea>
+                            <textarea name="description" style="height:120px;width: 320px" class="notallow9"></textarea>
                             <span class="help-inline">每行填写一个</span>
                         </div>
                     </div>
@@ -172,6 +170,7 @@
                                 <td><input type="text" class="form_input" value="请输入预约时间" name="" disabled="disabled"></td>
                                 <td><input type="checkbox" name="DisplayReserveTime" value="1" checked="">是否显示</td>
                             </tr>
+                            <?php ?>
                             <tr style="display:;" fieldtype="text">
                                 <td>新增文本框1：</td>
                                 <td><input type="text" class="form_input" value="" name="InputName[]"></td>
@@ -306,13 +305,6 @@
                 </fieldset>
              </form>
         </div>
-        <?php if(!empty($msg)):?>
-            <div class="msg_fade" id="ui_notifIt" class="info" style="background: deepskyblue; height: 60px; width: 100%; top: 0px; left: 0px;">
-                <p style="line-height: 60px;">
-                    <b><?php echo $msg;?></b>
-                </p>
-            </div>
-        <?php endif;?>
     </div>
 </div>
 

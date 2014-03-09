@@ -223,13 +223,15 @@ class ApiController extends Controller {
     }
     /*-----预订-----*/
     public function getOrderCard(){
-        $OrderData = OrdermanageModel::getOrderCardByUid($this->userdata->id);
+        $keyword = trim($this->postObj->Content);
+        $OrderData = OrdermanageModel::getOrderCardByUid($this->userdata->id,$keyword);
         if($OrderData){
             $data= new stdClass();
             $data->title=$OrderData->title;
             $data->description=$OrderData->introduce;
             $data->picurl = Yii::app()->request->hostInfo.'/upload/slider/'.$OrderData->image_path;
-            $data->url = Yii::app()->request->hostInfo.'/OrderManage/I/sid/'.$this->userdata->id.'/f/'.$this->postObj->FromUserName;
+            $data->url = Yii::app()->request->hostInfo.'/Order/OrderCard/sid/'.$this->userdata->id.'/f/'.$this->postObj->FromUserName.'/o/'.$OrderData->id;
+            $this->responseImageText($data);
         }else{
             return false;
         }

@@ -10,10 +10,11 @@ class MemberController extends Controller {
 
     public $layout='//layouts/column4';
 
-
     public function actionI(){
         $uid = Yii::app()->request->getParam('sid');
-        $openid = Yii::app()->request->getParam('f');
+        $openid = Yii::app()->request->getParam('
+
+        ');
         $wxUserModel  = new WxuserModel();
         $wxUserModel->uid = $uid;
         $wxUserModel->openid = $openid;

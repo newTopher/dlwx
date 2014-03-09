@@ -279,6 +279,7 @@ select {
 
 .box-content {
 	padding: 10px;
+    min-height: 900px;
 }
 
 .btn-round {
@@ -619,6 +620,8 @@ ul.ajax-loaders {
 .box-content.buttons {
 	min-height: 297px;
 }
+
+
 
 .logo_title{
     font-family: 'microsoft yahei';

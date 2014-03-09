@@ -305,6 +305,7 @@ a:hover {
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 	float: left;
+    margin-left:1%;
 }
 
 .row-fluid [class *="span"]:first-child {

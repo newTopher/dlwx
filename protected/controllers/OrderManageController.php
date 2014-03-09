@@ -4,7 +4,9 @@ class OrderManageController extends Controller{
     public $layout='//layouts/column3';
 
     public function actionIndex(){
-       $this->render('index');
+        $OrderManage=new OrdermanageModel();
+        $orders=$OrderManage->getAllOrderByUid(Yii::app()->session['user']->id);
+        $this->render('index',array('orders'=>$orders));
     }
 
     public function actionAdd(){
@@ -17,6 +19,7 @@ class OrderManageController extends Controller{
             $KeywordsReplay->type='OrderCard';
             $KeywordsReplay->preg_type=1;
             $KeywordsReplay->uid=Yii::app()->session['user']->id;
+            $OrderManage->kid=$KeywordsReplay->insertKeywords();
             $OrderManage->uid = Yii::app()->session['user']->id;
             $OrderManage->title =  Yii::app()->request->getParam('title','');
             $OrderManage->image_path =  Yii::app()->request->getParam('image_path','');
@@ -42,16 +45,39 @@ class OrderManageController extends Controller{
             $OrderManage->feedback_info=json_encode($arr);
             if($OrderManage->settingInsert() && $KeywordsReplay->insertKeywords()){
                 $this->redirect(Yii::app()->request->baseUrl."/OrderManage/Index");
+                $msg="添加成功";
             }else{
                 $msg="预订页面未能添加成功";
             }
         }
-        $this->render('add',array('msg'=>$msg));
+        $this->render('add');
     }
 
-    public function action(){
+    public function actionDelete(){
+        if(Yii::app()->request->getParam('id')){
+            $OrderManage=new OrdermanageModel();
+            $KeyWords=new KeywordsReplayModel();
+            $OrderManage->id=Yii::app()->request->getParam('id');
+            $KeyWords->id=Yii::app()->request->getParam('kid');
 
+            if($OrderManage->deleteOrder() && $KeyWords->delKeyWordsById()){
+                $this->redirect(Yii::app()->request->baseUrl.'/OrderManage/Index');
+            }else{
+
+            }
+        }
     }
+    public function actionOrderUpdate(){
+        if(Yii::app()->request->getParam('id')){
+            $OrderManage=new OrdermanageModel();
+            $order = $OrderManage->getOrderById(Yii::app()->request->getParam('id'));
+            $KeyWords=new KeywordsReplayModel();
+            $KeyWords->id=Yii::app()->request->getParam('kid');
+            $keys=$KeyWords->getKeyWordById();
+        }
+        $this->render('update',array('order'=>$order,'key'=>$keys));
+    }
+
 
 }
 
