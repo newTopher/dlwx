@@ -132,8 +132,8 @@
         <ul class="nav nav-tabs nav-stacked main-menu">
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/MemberManage/Base"><i class="icon-info-sign"></i><span class="hidden-tablet">商家基本设置</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/MemberManage/Cardset"><i class="icon-thumbs-up"></i><span class="hidden-tablet">会员卡设置</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/channelManage/index"><i class="icon-thumbs-up"></i><span class="hidden-tablet">微信会员管理</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><i class="icon-thumbs-up"></i><span class="hidden-tablet">商家密码设置</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/MemberManage/Memberlist"><i class="icon-thumbs-up"></i><span class="hidden-tablet">微信会员管理</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/MemberManage/templateset"><i class="icon-thumbs-up"></i><span class="hidden-tablet">商家密码设置</span></a></li>
         </ul>
 
         <h3>微应用</h3>

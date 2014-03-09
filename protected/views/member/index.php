@@ -254,7 +254,7 @@
         <ul class="list_ul">
             <div>
                 <li class="li_a">
-                    <label class="label" onclick="this.parentNode.classList.toggle('on');"><i>&nbsp;</i>会员尊享9.5折（演示） <span>&nbsp;</span></label>
+                    <label class="label" onclick="this.parentNode.classList.toggle('on');"><i>&nbsp;</i>会员尊享9.5折 <span>&nbsp;</span></label>
                     <ol>
                         <h6>详细说明：</h6>
                         <p>
@@ -331,24 +331,28 @@
                         <span>会员卡</span>
                     </a>
                 </li>
+                <!--
                 <li>
                     <a href="http://www.weimob.com/Webnewmemannounce/notice?pid=1071&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc">
                         <p id="Js-msg-num" class="msg"></p>
                         <span>消息</span>
                     </a>
                 </li>
+                -->
                 <li>
                     <a href="http://www.weimob.com/Webnewmemintegral/signin?pid=1071&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc">
                         <p class="sign"></p>
                         <span>签到</span>
                     </a>
                 </li>
+                <!--
                 <li>
                     <a href="http://www.weimob.com/Webnewmemberscore/share?pid=1071&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc">
                         <p class="share"></p>
                         <span>分享</span>
                     </a>
                 </li>
+                -->
                 <li>
                     <a href="http://www.weimob.com/Webnewmemberscore/my?pid=1071&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc" class="my ">
                         <p class="my"></p>

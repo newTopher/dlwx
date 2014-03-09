@@ -111,6 +111,20 @@ class MemberManageController extends Controller{
         $this->render('cardset',array('data'=>$data));
     }
 
+    public function actionMemberlist(){
+        $uid =  Yii::app()->session['user']->id;
+        $criteria = new CDbCriteria();
+        $criteria->order = 'add_time desc';
+        $criteria->addCondition('uid='.$uid);
+        $count = ViplistModel::model()->count($criteria);
+
+        $pager = new CPagination($count);
+        $pager->pageSize = 3;
+        $pager->applyLimit($criteria);
+        $data = ViplistModel::model()->findAll($criteria);
+        $this->render('memberlist',array('data'=>$data,'pages'=>$pager));
+    }
+
 
 
 

@@ -40,6 +40,14 @@ class ViplistModel extends Ar{
         }
     }
 
+    public function getVipListByUid(){
+        if($res = self::model()->findAllByAttributes(array('uid'=>$this->uid))){
+            return $res;
+        }else{
+            return false;
+        }
+    }
+
 
 
 

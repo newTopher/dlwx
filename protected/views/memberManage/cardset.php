@@ -109,7 +109,7 @@
                             </div>
                         </div>
                     </div>
-                    <input type="hidden" name="vip_style" value="<?php if($data->vip_style!=null){ echo $data->vip_style;}else{ echo '12'; } ?>">
+                    <input type="hidden" name="vip_style" id="vip_style" value="<?php if($data->vip_style!=null){ echo $data->vip_style;}else{ echo '12'; } ?>">
                     <input type="hidden" name="vip_logo" id="vip_logo" value="<?php if($data->vip_logo!=null){ echo $data->vip_logo;} ?>">
 
                     <div class="form-actions">
@@ -247,6 +247,7 @@
             var html ="<img src='<?php echo Yii::app()->request->baseUrl; ?>/images/vip/"+$(this).attr('value')+".png' >";
             $("#vip_index_image").html("");
             $("#vip_index_image").html(html);
+            $("#vip_style").val($(this).attr('value'));
             $("#myModal").modal('hide');
         });
     });
