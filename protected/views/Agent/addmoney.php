@@ -74,11 +74,11 @@
                     </fieldset>
                 </form>
                 <?php if(!empty($msg)):?>
-                <div class="msg_fade" id="ui_notifIt" class="info" style="background: deepskyblue; height: 60px; width: 100%; top: 0px; left: 0px;">
-                    <p style="line-height: 60px;">
-                        <b><?php echo $msg;?></b>
-                    </p>
-                </div>
+                    <div class="msg_fade" id="ui_notifIt" class="info" style="background: deepskyblue; height: 60px; width: 100%; top: 0px; left: 0px;">
+                        <p style="line-height: 60px;">
+                            <b><?php echo $msg;?></b>
+                        </p>
+                    </div>
                 <?php endif;?>
             </div>
         </div>

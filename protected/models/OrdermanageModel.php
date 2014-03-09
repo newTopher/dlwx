@@ -29,7 +29,6 @@ class OrdermanageModel extends Ar{
     public function settingInsert(){
         if($this->Insert()){
             return true;
-            ECHO 123;exit;
         }else{
             return false;
         }

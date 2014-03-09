@@ -31,9 +31,9 @@ class KeywordsReplayModel extends Ar{
         $this->add_time = time();
         $this->update_time = time();
         if($this->insert()){
-            return false;
-        }else{
             return true;
+        }else{
+            return false;
         }
     }
 
