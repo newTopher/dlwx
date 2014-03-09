@@ -328,6 +328,10 @@ class WeixinController extends Controller{
         echo CJSON::encode($result);
     }
 
+    public function actionLbsset(){
+
+    }
+
 
 
 

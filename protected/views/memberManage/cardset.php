@@ -87,7 +87,7 @@
 
                             </div>
                         </div>
-                        <div id="showimg" class="showimg" style="margin-left:160px;width:220px;margin-top: 10px;">
+                        <div id="showimg" class="showimg" style="margin-left:160px;width:60px;margin-top: 10px;">
                             <?php if($data->vip_logo!=null): ?>
                                 <img src="<?php echo Yii::app()->request->baseUrl; ?>/upload/slider/<?php echo $data->vip_logo; ?>" />
                             <?php else : ?>
