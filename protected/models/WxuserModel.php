@@ -40,6 +40,27 @@ class WxuserModel extends Ar{
         return self::model()->findByPk($this->id);
     }
 
+    public function addUser(){
+        $this->subscribe_time = time();
+        $this->add_time = time();
+        $this->status = 1;
+        $this->update_time = time();
+        if($this->insert()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public function getUserByUidAndOpenId(){
+        if(self::model()->findByAttributes(array('uid'=>$this->uid,'openid'=>$this->openid))){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
 
 
 

@@ -79,6 +79,52 @@ class MemberManageController extends Controller{
         }
     }
 
+    public function actionUpdatecard(){
+        $memberCardModel = new MemberCardModel();
+        $memberCardModel->uid =  Yii::app()->session['user']->id;
+        $memberCardModel->vip_name =  Yii::app()->request->getParam('vip_name');
+        $memberCardModel->vip_logo =  Yii::app()->request->getParam('vip_logo');
+        $memberCardModel->vip_style =  Yii::app()->request->getParam('vip_style');
+        if($memberCardModel->getMemberCardByUid()){
+            if($memberCardModel->updateVipMemberCard()){
+                $this->redirect(Yii::app()->request->baseUrl.'/MemberManage/Cardset');
+            }else{
+                $this->redirect(Yii::app()->request->baseUrl.'/MemberManage/Cardset');
+            }
+        }else{
+            if($memberCardModel->insertMemberCard()){
+                $this->redirect(Yii::app()->request->baseUrl.'/MemberManage/Cardset');
+            }else{
+                $this->redirect(Yii::app()->request->baseUrl.'/MemberManage/Cardset');
+            }
+        }
+
+    }
+
+    public function actionCardset(){
+        $memberCardModel = new MemberCardModel();
+        $memberCardModel->uid =  Yii::app()->session['user']->id;
+        $data = $memberCardModel->getDataMemberCardByUid();
+        if(!$data){
+            $data = null;
+        }
+        $this->render('cardset',array('data'=>$data));
+    }
+
+    public function actionMemberlist(){
+        $uid =  Yii::app()->session['user']->id;
+        $criteria = new CDbCriteria();
+        $criteria->order = 'add_time desc';
+        $criteria->addCondition('uid='.$uid);
+        $count = ViplistModel::model()->count($criteria);
+
+        $pager = new CPagination($count);
+        $pager->pageSize = 3;
+        $pager->applyLimit($criteria);
+        $data = ViplistModel::model()->findAll($criteria);
+        $this->render('memberlist',array('data'=>$data,'pages'=>$pager));
+    }
+
 
 
 
