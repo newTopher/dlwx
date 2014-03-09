@@ -12,7 +12,7 @@
 <div class="row-fluid">
     <div class="box span12">
         <div class="box-header well">
-            <h2><i class="icon-info-sign"></i>审核信息绑定微信</h2>
+            <h2>审核信息绑定微信</h2>
 
         </div>
         <div class="box-content">

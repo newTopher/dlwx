@@ -21,7 +21,7 @@
 <div class="row-fluid">
     <div class="box span12">
         <div class="box-header well">
-            <h2><i class="icon-info-sign"></i>活动管理</h2>
+            <h2>活动管理</h2>
 
         </div>
         <div class="box-content">

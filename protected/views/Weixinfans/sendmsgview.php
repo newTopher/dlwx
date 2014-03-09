@@ -1,7 +1,7 @@
 <div class="row-fluid">
     <div class="box span12">
         <div class="box-header well">
-            <h2><i class="icon-info-sign"></i> 推送消息 </h2>
+            <h2> 推送消息 </h2>
 
         </div>
         <div class="box-content">

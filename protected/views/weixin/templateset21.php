@@ -6,7 +6,7 @@
 <div class="row-fluid">
     <div class="box span12">
         <div class="box-header well">
-            <h2><i class="icon-info-sign"></i> 微官网模板设置 </h2>
+            <h2> 微官网模板设置 </h2>
         </div>
         <div class="box-content" style="height: auto";>
             <div class="box-content" style="width: 1060px;height: auto";>

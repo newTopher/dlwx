@@ -153,7 +153,7 @@
 
         <h3>微活动</h3>
         <ul class="nav nav-tabs nav-stacked main-menu">
-
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Salecard/Index"><span class="hidden-tablet">微信优惠券</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/WeixinFans/index"><span class="hidden-tablet">微信刮刮卡</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Msg/index"><span class="hidden-tablet">幸运大转盘</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Activity/index"><span class="hidden-tablet">微信墙</span></a></li>
@@ -162,7 +162,6 @@
 
         <h3>微信基础服务</h3>
         <ul class="nav nav-tabs nav-stacked main-menu">
-
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/AutoReplay/base"><span class="hidden-tablet">自动回复</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Source/base"><span class="hidden-tablet">素材管理</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Menu/base"><span class="hidden-tablet">自定义菜单</span></a></li>
