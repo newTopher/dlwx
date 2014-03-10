@@ -12,7 +12,7 @@
 <div class="row-fluid">
     <div class="box span12">
         <div class="box-header well">
-            <h2><i class="icon-info-sign"></i> 套餐列表</h2>
+            <h2> 套餐列表</h2>
             <div class="box-icon">
                 <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
                 <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>

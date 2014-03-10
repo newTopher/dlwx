@@ -1,42 +1,25 @@
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/msg.css" rel="stylesheet">
 
-<style type="text/css">
-    .mapContainer{width:80% !important;float:left;border-right:2px solid #bcbcbc;}
-    .mapSearchResult{width:20% !important;float:left;}
-</style>
-
 <div class="row-fluid">
     <div class="box span12">
         <div class="box-header well">
-            <h2>会员卡-商家基本信息设置</h2>
+            <h2>优惠券活动设置</h2>
         </div>
 
         <div class="box-content">
             <form class="form-horizontal" method="post" action="<?php echo Yii::app()->request->baseUrl; ?>/MemberManage/Cusset">
                 <fieldset>
                     <div class="control-group">
-                        <label class="control-label" >商家名称</label>
+                        <label class="control-label" >活动名称</label>
                         <div class="controls">
-                            <input type="text" name="cust_name" value="<?php if($data!=null){ echo $data->cust_name;} ?>" id="cust_name">
+                            <input type="text" name="name" value="<?php if($data!=null){ echo $data->name;} ?>" id="name">
                         </div>
                     </div>
-                    <div class="control-group">
-                        <label class="control-label">商家联系电话</label>
-                        <div class="controls">
-                            <input type="text" name="tel" value="<?php if($data!=null){ echo $data->tel;} ?>" id="tel" >
-                            <span class="help-inline">用于显示在会员卡信息页面</span>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label">商家详细地址</label>
-                        <div class="controls">
-                            <input type="text" name="address" value="<?php if($data!=null){ echo $data->address;} ?>" id="address">
-                        </div>
-                    </div>
+
                     <div class="control-group">
                         <label class="control-label">触发关键词</label>
                         <div class="controls">
-                            <input type="text" name="keywords" value="<?php if($keydata!=null){ echo $keydata->keywords;} ?>" id="keywords">
+                            <input type="text" name="keywords" value="" id="keywords">
                             <span class="help-inline">如果有多个关键词请用空格隔开每个关键词!</span>
                         </div>
                     </div>
@@ -74,20 +57,73 @@
                         </div>
                     </div>
                     <div class="control-group">
-                        <label class="control-label" for="appendedInputButton">预约地址</label>
+                        <label class="control-label" for="date01">活动时间</label>
                         <div class="controls">
-                            <div class="input-append">
-                                <input id="appendedInputButton" size="16" type="text" placeholder="深圳" class="searchLocation">
-                                <button class="btn" type="button" onclick='searchLocation()'>选定位置</button>
-                                <span  class="help-inline"> <a id="map-chosed" style="display:none">已经选择成功!</a></span>
-                            </div>
+                            <input type="text" name="start_date" style="width:120px;"  data-date-format="dd-mm-yyyy" class="input-xlarge datepicker" id="date01" value="<?php if($data!=null){ echo $data->start_date;} ?>"> ~
+                            <input type="text" name="end_date" style="width:120px;"  data-date-format="dd-mm-yyyy" class="input-xlarge datepicker" id="date02" value="<?php if($data!=null){ echo $data->end_date;} ?>">
+                            <span class="help-inline">设置本次活动的起止时间!</span>
                         </div>
                     </div>
                     <div class="control-group">
+                        <label class="control-label">活动中奖概率</label>
                         <div class="controls">
-                            <div style="width: 600px;height:300px;" id="mapContainer"></div>
-                            <input type="hidden" name="position_x" id="shopLongitude" value="<?php if($data!=null){ echo $data->position_x;} ?>">
-                            <input type="hidden" name="position_y" id="shopLatitude" value="<?php if($data!=null){ echo $data->position_y;} ?>">
+                            <div class="input-append">
+                                <input id="appendedInput" size="16" type="text" id="chance" name="chance" value="<?php if($data!=null){ echo $data->chance;} ?>"><span class="add-on">%</span>
+
+                                <span class="help-inline">设置本次活动的中奖概率范围为0~100!</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">奖品设置</label>
+                        <div class="controls">
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>奖项名称</th>
+                                    <th>奖品名称</th>
+                                    <th>奖品数量</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr>
+                                    <td>一等奖</td>
+                                    <td><input type="text" name="one_name" style="width:120px;"  class="input-xlarge" value=""></td>
+                                    <td>
+                                        <div class="input-append">
+                                            <input id="appendedInput" name="one_no" size="16" type="text"><span class="add-on">个</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>二等奖</td>
+                                    <td><input type="text" name="two_name" style="width:120px;"  class="input-xlarge" value=""></td>
+                                    <td>
+                                        <div class="input-append">
+                                            <input id="appendedInput" name="two_no" size="16" type="text"><span class="add-on">个</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>三等奖</td>
+                                    <td><input type="text" name="three_name" style="width:120px;"  class="input-xlarge" value=""></td>
+                                    <td>
+                                        <div class="input-append">
+                                            <input id="appendedInput" name="three_no" size="16" type="text"><span class="add-on">个</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+
+
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <div class="controls">
                             <input type="hidden" name="index_image" id="index_image" value="<?php if($data!=null){ echo $data->index_image;} ?>">
                         </div>
 
@@ -273,97 +309,11 @@
             return false;
         }
     });
-</script>
 
-<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=29853e5332078c0e4f650aaac72c5172"></script>
-<script type="text/javascript" src="http://api.map.baidu.com/getscript?v=2.0&ak=29853e5332078c0e4f650aaac72c5172&services=&t=20140127144714"></script>
+
+</script>
 <script type="text/javascript">
-    var map = new BMap.Map("mapContainer");
-    var point = new BMap.Point(<?php if($data!=null){ echo $data->position_x;}else{ echo '114.02597366'; } ?>, <?php if($data!=null){ echo $data->position_x;}else{ echo '22.54605355'; } ?>);
-    map.centerAndZoom(point,15);
-    map.enableScrollWheelZoom();
-    //加入缩放控件;
-    map.addControl(new BMap.NavigationControl());
-    //创建坐标点;
-    var mapMarker = new BMap.Marker(point);
-    //拖拽控件
-    mapMarker.enableDragging();
-    var infomsg = "<p id='position_box' style='font-size:14px;color:#cc5522;font-weight:bold;'>" + '确定选取该位置吗?' + "</p><a class='btn btn-primary' onclick='confirmMarker()'>确定</a><a onclick='closeMarker()' class='btn btn-primary' style='margin-left:10px'>取消</a>";
-    var selectedOpint = {};
-    map.addEventListener("click", function(e){
-
-        selectedOpint.x = e.point.lng
-        selectedOpint.y = e.point.lat;
-        map.clearOverlays(mapMarker);
-        point = new BMap.Point(e.point.lng,e.point.lat);
-        mapMarker = new BMap.Marker(point);
-        map.addOverlay(mapMarker);
-        mapMarker.enableDragging();
-
-        mapMarker.addEventListener("dragend", function (e) {
-            selectedOpint.x = e.point.lng
-            selectedOpint.y = e.point.lat;
-
-            this.infoWindow = new BMap.InfoWindow(infomsg); // 创建信息窗口对象
-            this.openInfoWindow(this.infoWindow);
-        });
-
-        var infoWindow = new BMap.InfoWindow(infomsg);
-        mapMarker.openInfoWindow(infoWindow);
+    $(function(){
+        $('.datepicker').datepicker({dateFormat: 'yy-mm-dd'});
     });
-    //关闭覆盖物
-    function closeMarker(a)
-    {
-        mapMarker.closeInfoWindow(mapMarker.infoWindow);
-        map.clearOverlays(mapMarker);
-        $("#shopLongitude").val('');
-        $("#shopLatitude").val('');
-        $("#map-chosed").css('display','none');
-    }
-    //确定标记
-    function selectShopAddress(selectedOpint) {
-        $("#shopLongitude").val(selectedOpint.x);
-        $("#shopLatitude").val(selectedOpint.y);
-        mapMarker.closeInfoWindow(mapMarker.infoWindow);
-        $("#map-chosed").css('display','block');
-    }
-
-    function confirmMarker()
-    {
-        window.parent.selectShopAddress(selectedOpint);
-    }
-    function clearMarker()
-    {
-        selectedOpint.x = "";
-        selectedOpint.y = "";
-        window.selectShopAddress(selectedOpint);
-    }
-    var initSearch = true;
-    function searchLocation()
-    {
-        var searchLocation = $(".searchLocation").val();
-        if(searchLocation == "")
-        {
-            alert('地址不能为空哦');
-            return ;
-        }
-
-        var local = new BMap.LocalSearch(map, {
-            renderOptions: {
-                map: map,
-                panel : "mapSearchResult",
-                autoViewport: true,
-                selectFirstResult: false
-            }
-        });
-        if(initSearch)
-        {
-            initSearch = false;
-            $("#mapContainer").addClass("mapContainer");
-            $("#mapSearchResult").addClass("mapSearchResult").show();
-        }
-        local.search(searchLocation)
-
-    }
 </script>
-

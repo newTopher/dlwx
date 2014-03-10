@@ -119,10 +119,22 @@ class MemberManageController extends Controller{
         $count = ViplistModel::model()->count($criteria);
 
         $pager = new CPagination($count);
-        $pager->pageSize = 3;
+        $pager->pageSize =10;
         $pager->applyLimit($criteria);
         $data = ViplistModel::model()->findAll($criteria);
         $this->render('memberlist',array('data'=>$data,'pages'=>$pager));
+    }
+
+    public function actionGetmember(){
+        $id = Yii::app()->request->getParam('id');
+        $vipModel = new ViplistModel();
+        $vipModel->id = $id;
+        $data = $vipModel->getVipById();
+        if($data){
+            echo CJSON::encode(array('code'=>0,'data'=>$data->attributes));
+        }else{
+            echo CJSON::encode(array('code'=>-1,'msg'=>'获取会员资料失败'));
+        }
     }
 
 

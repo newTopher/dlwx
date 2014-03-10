@@ -227,7 +227,7 @@
             <div id="card" data-role="card" onclick="this.classList.toggle('on');">
                 <div class="front" style="background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/images/vip/<?php echo $vipdata->vip_style.'.png'; ?>);">
                     <span class="name" style="color:#FBFFFA"><?php echo $vipdata->vip_name; ?></span>
-                    <span class="no" style="color:#FFFFFF;">1008429</span>
+                    <span class="no" style="color:#FFFFFF;"><?php echo $member->id; ?></span>
                 </div>
                 <div class="back" style="background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/js/member/card_bg09.png);">
 							<span style="color:#000000;">
@@ -267,15 +267,17 @@
                             <span><span style="line-height:20px;">3、本卡为积分储值卡，不可兑换</span></span>
                         </p>					</ol>
                 </li>
+                <!--
                 <li class="li_b">
                     <a href="http://www.weimob.com/Webnewmemberscore/ListCoupon?pid=1071&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc"><label class="label"><i>&nbsp;</i>会员优惠<span>&nbsp;</span></label></a>
                 </li>
+                -->
 
                 <li class="li_c">
                     <a href="http://www.weimob.com/Webnewmemintegral/exchangelist?pid=1071&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc"><label class="label"><i>&nbsp;</i>积分兑换<span>&nbsp;</span></label></a>
                 </li>
                 <li class="li_d">
-                    <a href="http://www.weimob.com/Webnewmemberscore/editMemberInfo?pid=1071&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc"><label class="label"><i>&nbsp;</i>完善会员卡资料 <span>&nbsp;</span></label></a>
+                    <a href="<?php echo Yii::app()->request->baseUrl.'/Member/Memberdetail/sid/'.$sid.'/f/'.$openid.'/i/'.$member->id; ?>"><label class="label"><i>&nbsp;</i>完善会员卡资料 <span>&nbsp;</span></label></a>
                 </li>
                 <!--
                 <li class="li_e">

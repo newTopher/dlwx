@@ -8,6 +8,7 @@
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.7.2.min.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.form.js"></script>
     <link id="bs-css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-cerulean.css" rel="stylesheet">
+    <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/css/uploadify.css"></script>
     <style type="text/css">
 
