@@ -140,21 +140,21 @@
         <h3>微应用</h3>
         <ul class="nav nav-tabs nav-stacked main-menu">
 
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/OrderManage/Index"><i class="icon-info-sign"></i><span class="hidden-tablet">微预约</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Templateselect"><i class="icon-thumbs-up"></i><span class="hidden-tablet">微团购</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/channelManage/index"><i class="icon-thumbs-up"></i><span class="hidden-tablet">微调研</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><i class="icon-thumbs-up"></i><span class="hidden-tablet">微相册</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><i class="icon-thumbs-up"></i><span class="hidden-tablet">微名片</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><i class="icon-thumbs-up"></i><span class="hidden-tablet">微全景</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><i class="icon-thumbs-up"></i><span class="hidden-tablet">微吧</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><i class="icon-thumbs-up"></i><span class="hidden-tablet">微门店</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><i class="icon-thumbs-up"></i><span class="hidden-tablet">微贺卡</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/OrderManage/Index"><span class="hidden-tablet">微预约</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Templateselect"><span class="hidden-tablet">微团购</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/channelManage/index"><span class="hidden-tablet">微调研</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><span class="hidden-tablet">微相册</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><span class="hidden-tablet">微名片</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><span class="hidden-tablet">微全景</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><span class="hidden-tablet">微吧</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><span class="hidden-tablet">微门店</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><span class="hidden-tablet">微贺卡</span></a></li>
         </ul>
 
         <h3>微活动</h3>
         <ul class="nav nav-tabs nav-stacked main-menu">
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Salecard/Index"><span class="hidden-tablet">微信优惠券</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/WeixinFans/index"><span class="hidden-tablet">微信刮刮卡</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Guaguacard/Index"><span class="hidden-tablet">微信刮刮卡</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Msg/index"><span class="hidden-tablet">幸运大转盘</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Activity/index"><span class="hidden-tablet">微信墙</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Activity/index"><span class="hidden-tablet">微信水果达人</span></a></li>
@@ -212,6 +212,7 @@
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/notifIt.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.uploadify.min.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.8.21.custom.min.js"></script>
+
 
 
 

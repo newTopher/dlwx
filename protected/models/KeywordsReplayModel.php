@@ -32,6 +32,20 @@ class KeywordsReplayModel extends Ar{
         $this->update_time = time();
         if($this->insert()){
             return $this->id;
+<<<<<<< HEAD
+=======
+        }else{
+            return false;
+        }
+    }
+
+    public function updateKeywords(){
+        $keywordsdata = self::model()->findByPk($this->id);
+        $keywordsdata->keywords = $this->keywords;
+        $keywordsdata->update_time = time();
+        if($keywordsdata->save()){
+            return true;
+>>>>>>> origin/master
         }else{
             return false;
         }

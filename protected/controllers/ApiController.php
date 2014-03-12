@@ -110,6 +110,13 @@ class ApiController extends Controller {
                                     $this->getMemberCard();
                                 }elseif($v->type == 'OrderCard'){
                                     $this->getOrderCard();
+<<<<<<< HEAD
+=======
+                                }elseif($v->type == 'SaleCard'){
+                                    $this->getSaleCard();
+                                }elseif($v->type == 'GuaguaCard'){
+                                    $this->getGuaguaCard();
+>>>>>>> origin/master
                                 }
                             }
                         }
@@ -135,6 +142,13 @@ class ApiController extends Controller {
                                     $this->getMemberCard();
                                 }elseif($v->type=='OrderCard'){
                                     $this->getOrderCard();
+<<<<<<< HEAD
+=======
+                                }elseif($v->type == 'SaleCard'){
+                                    $this->getSaleCard();
+                                }elseif($v->type == 'GuaguaCard'){
+                                    $this->getGuaguaCard();
+>>>>>>> origin/master
                                 }
                             }
                         }
@@ -236,6 +250,45 @@ class ApiController extends Controller {
             return false;
         }
     }
+<<<<<<< HEAD
+=======
+
+    /*
+     * 优惠券
+     */
+    public function getSaleCard(){
+        $keyword = trim($this->postObj->Content);
+        $salecarddata = SaleCardModel::getSaleCardByUid($this->userdata->id,$keyword);
+        if($salecarddata){
+            $data = new stdClass();
+            $data->title = $salecarddata->index_title;
+            $data->description = $salecarddata->description;
+            $data->picurl =  Yii::app()->request->hostInfo.'/upload/slider/'.$salecarddata->index_image;
+            $data->url = Yii::app()->request->hostInfo.'/Sale/I/sid/'.$this->userdata->id.'/f/'.$this->postObj->FromUserName.'/s/'.$salecarddata->id;
+            $this->responseImageText($data);
+        }else{
+            return false;
+        }
+    }
+
+    /*
+     * 刮刮卡
+     */
+    public function getGuaguaCard(){
+        $keyword = trim($this->postObj->Content);
+        $guaguacarddata = GuaguaCardModel::getGuaguaCardByUid($this->userdata->id,$keyword);
+        if($guaguacarddata){
+            $data = new stdClass();
+            $data->title = $guaguacarddata->index_title;
+            $data->description = $guaguacarddata->description;
+            $data->picurl =  Yii::app()->request->hostInfo.'/upload/slider/'.$guaguacarddata->index_image;
+            $data->url = Yii::app()->request->hostInfo.'/Guagua/I/sid/'.$this->userdata->id.'/f/'.$this->postObj->FromUserName.'/s/'.$guaguacarddata->id;
+            $this->responseImageText($data);
+        }else{
+            return false;
+        }
+    }
+>>>>>>> origin/master
 
     /*
      * 微官网
