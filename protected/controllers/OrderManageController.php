@@ -20,10 +20,12 @@ class OrderManageController extends Controller{
             $KeywordsReplay->preg_type=1;
             $KeywordsReplay->uid=Yii::app()->session['user']->id;
             $OrderManage->kid=$KeywordsReplay->insertKeywords();
+            $OrderManage->keywords = Yii::app()->request->getParam('keywords','');
             $OrderManage->uid = Yii::app()->session['user']->id;
             $OrderManage->title =  Yii::app()->request->getParam('title','');
             $OrderManage->image_path =  Yii::app()->request->getParam('image_path','');
             $OrderManage->introduce =  Yii::app()->request->getParam('introduce','');
+            $OrderManage->adress =  Yii::app()->request->getParam('address','');
             $OrderManage->position_x =  Yii::app()->request->getParam('position_x','');
             $OrderManage->position_y =  Yii::app()->request->getParam('position_y','');
             $OrderManage->header_image_path =  Yii::app()->request->getParam('header_image_path','');
@@ -37,13 +39,13 @@ class OrderManageController extends Controller{
             $OrderManage->displaytelephone =  Yii::app()->request->getParam('DisplayTelephone','');
             $OrderManage->displayreservedate =  Yii::app()->request->getParam('DisplayReserveDate','');
             $OrderManage->displayreservetime = Yii::app()->request->getParam('DisplayReserveTime','');
-            $InputName[] =  Yii::app()->request->getParam('InputName','');
-            $InputValue[] =  Yii::app()->request->getParam('InputValue','');
-            $SelectName[] =  Yii::app()->request->getParam('SelectName','');
-            $SelectValue[] =  Yii::app()->request->getParam('SelectValue','');
+            $InputName =  Yii::app()->request->getParam('InputName','');
+            $InputValue =  Yii::app()->request->getParam('InputValue','');
+            $SelectName =  Yii::app()->request->getParam('SelectName','');
+            $SelectValue =  Yii::app()->request->getParam('SelectValue','');
             $arr=array('inputname'=>$InputName,'inputvalue'=>$InputValue,'selectname'=>$SelectName,'selectvalue'=>$SelectValue);
             $OrderManage->feedback_info=json_encode($arr);
-            if($OrderManage->settingInsert() && $KeywordsReplay->insertKeywords()){
+            if($OrderManage->settingInsert()){
                 $this->redirect(Yii::app()->request->baseUrl."/OrderManage/Index");
                 $msg="添加成功";
             }else{
@@ -78,6 +80,13 @@ class OrderManageController extends Controller{
         $this->render('update',array('order'=>$order,'key'=>$keys));
     }
 
+    public function actionOrderList(){
+       $uid= Yii::app()->request->getParam('uid');
+       $oid= Yii::app()->request->getParam('oid');
+       $order= new OrderModel();
+       $list=$order->OrderSelectByUid($uid,$oid);
+       $this->render('list',array('list'=>$list));
+    }
 
 }
 

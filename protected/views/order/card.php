@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <!-- saved from url=(0220)http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl;?>/js/order/onlinebooking.css" media="all">
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl;?>/js/order/datepicker.css" media="all">
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl;?>/js/order/weimob-ui-1-1.css" media="all">
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl;?>/js/order/common.css" media="all">
-    <script type="text/javascript" async="" src="<?php echo Yii::app()->request->baseUrl;?>/js/order/wtj.js"></script><script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl;?>/js/order/jQuery.js"></script>
+    <script type="text/javascript" async="" src="<?php echo Yii::app()->request->baseUrl;?>/js/order/wtj.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl;?>/js/order/jQuery.js"></script>
     <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl;?>/js/order/jquery-ui.js"></script>
-    <title>微盟</title>
-
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl;?>/js/jquery-ui-1.8.21.custom.min.js"></script>
+    <title>万普微盟</title>
     <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
     <meta name="Keywords" content="微盟、微信营销、微信代运营、微信定制开发、微信托管、微网站、微商城、微营销">
     <meta name="Description" content="微盟，国内最大的微信公众智能服务平台，微盟八大微体系：微菜单、微官网、微会员、微活动、微商城、微推送、微服务、微统计，企业微营销必备。">
     <!-- Mobile Devices Support @begin -->
-
     <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
     <meta content="no-cache" http-equiv="pragma">
     <meta content="0" http-equiv="expires">
@@ -30,13 +32,13 @@
 <body onselectstart="return true;" ondragstart="return false;" id="onlinebooking">
 
 <div class="qiandaobanner">
-    <img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo $order->image_path;?>">
+    <img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo $order->header_image_path;?>">
 </div>
 <div class="cardexplain">
     <!--普通用户登录时显示-->
     <ul class="round">
         <li>
-            <a href="http://www.weimob.com/Webreserve/ReserveMyBook/wechatid/osXr8jo2_7zz3s0O5jzstVIlfmNc/rid/41"><span><?php echo $order->title;?><em class="ok">0</em></span></a>
+            <a href="#"><span><?php echo $order->title;?><em class="ok">0</em></span></a>
         </li>
     </ul>
     <!--后台可控制是否显示-->
@@ -48,8 +50,8 @@
     </ul>
     <!--后台可控制是否显示-->
     <ul class="round">
-        <li class="addr"><a href="http://api.map.baidu.com/marker?location=<?php echo $order->position_x;?>,<?php echo $order->position_y;?>&title=%E5%BE%AE%E7%9B%9F&name=%E5%BE%AE%E7%9B%9F&content=%E8%AF%95%E9%A9%BE%E5%AE%9D%E9%A9%AC%E5%85%A8%E7%B3%BB%E8%BD%A6%E5%9E%8B%EF%BC%8C%E4%BD%93%E9%AA%8C%E5%89%8D%E7%9E%BB%E6%80%A7%E4%B8%BB%E5%8A%A8%E5%AE%89%E5%85%A8%E7%B3%BB%E7%BB%9F%EF%BC%8C%E6%99%BA%E8%83%BD%E8%BD%A6%E8%BD%BD%E4%BA%A4%E4%BA%92%E7%B3%BB%E7%BB%9F%EF%BC%8C%E8%B1%AA%E5%8D%8E%E7%B2%BE%E8%87%B4%E7%9A%84%E8%AE%BE%E8%AE%A1%EF%BC%8C%E9%AB%98%E6%95%88%E5%8A%A8%E5%8A%9B%E6%93%8D%E6%8E%A7%E7%B3%BB%E7%BB%9F%E3%80%82&output=html&src=weiba|weiweb">
-                <span>地址： 上海市杨浦区五角场万达广场</span></a></li>
+        <li class="addr"><a href="http://api.map.baidu.com/marker?location=<?php echo $order->position_x;?>,<?php echo $order->position_y;?>&title=我的位置&content=上海市杨浦区五角场万达广场&output=html">
+                <span>地址： <?php echo $order->adress; ?></span></a></li>
         <?php $order_tel=json_decode($order->order_tel);
         foreach($order_tel as $v):
         ?>
@@ -61,39 +63,50 @@
 
     <ul class="round roundyellow" style="display:none;">
         <li class="userinfo">
-            <a href="<?php Yii::app()->request->baseUrl.'/Order/wxOrderInsert';?>"><span>请完善个人资料再填表单</span></a></li>
+            <a href="<?php Yii::app()->request->baseUrl.'/Order/WxOrderInsert';?>"><span>请完善个人资料再填表单</span></a></li>
     </ul>
     <!--粉丝填写过的信息的，直接就显示名字电话，粉丝没有填写过信息的话，这里就直接留空让粉丝填写-->
     <ul class="round">
-        <form action="javascript:;" method="post">
+        <form action="javascript::" method="post" >
             <li class="title mb"><span class="none">请认真填写表单</span></li>
+            <?php if($order->displayname):?>
             <li class="nob">
                 <input name="formhash" id="formhash" value="2be3071a" type="hidden">
                 <table class="kuang" border="0" cellpadding="0" cellspacing="0" width="100%">
-                    <tbody><tr>
+                    <tbody>
+                    <tr>
                         <th>联系人</th>
                         <td><input name="truename" class="px" id="truename" value="" placeholder="请输入您的真实姓名" type="text"></td>
                     </tr>
                     </tbody></table>
             </li>
+            <?php endif;?>
+            <?php if($order->displaytelephone):?>
             <li class="nob">
                 <table class="kuang" border="0" cellpadding="0" cellspacing="0" width="100%">
-                    <tbody><tr>
+                    <tbody>
+                    <tr>
                         <th>联系电话</th>
-                        <td><input name="tel" class="px" id="tel" value="" placeholder="请输入您的电话" type="tel"></td>
+                        <td><input name="tel[]" class="px" id="tel" value="" placeholder="请输入您的电话" type="tel"></td>
                     </tr>
-                    </tbody></table>
+                    </tbody>
+                </table>
             </li>
+                <?php endif?>
+            <?php if($order->displayreservedate):?>
             <li class="nob">
                 <table class="kuang" border="0" cellpadding="0" cellspacing="0" width="100%">
                     <tbody><tr>
                         <th>预约日期</th>
                         <td>
-                            <input type="text" class="px hasDatepicker" name="dateline" id="dateline" readonly="readonly">
+                            <input type="text" class="px datepicker" name="dateline" id="dateline" readonly="readonly">
                         </td>
                     </tr>
-                    </tbody></table>
+                    </tbody>
+                </table>
             </li>
+            <?php endif;?>
+                <?php if($order->displayreservetime):?>
             <li class="nob">
                 <table class="kuang" border="0" cellpadding="0" cellspacing="0" width="100%">
                     <tbody><tr>
@@ -105,44 +118,74 @@
                     </tr>
                     </tbody></table>
             </li>
-
+            <?php endif;?>
             <li class="nob">
                 <table class="kuang" border="0" cellpadding="0" cellspacing="0" width="100%">
-                    <tbody><tr>
+                    <tbody>
+                    <tr>
                         <th>预订人数</th>
                         <td><input name="txt1" class="single px" id="txt1" placeholder="请输入预订人数" value="" type="text"></td>
                     </tr>
-                    </tbody></table>
+                    </tbody>
+                </table>
             </li>
-
-            <li class="nob">
-                <table class="kuang" border="0" cellpadding="0" cellspacing="0" width="100%">
-                    <tbody><tr>
-                        <th>车辆类型</th>
-                        <td>
-                            <select name="" class="download dropdown-select">
-                                <option value="宝马X6">宝马X6</option>
-                                <option value="宝马Z4">宝马Z4</option>
-                                <option value="宝马X1">宝马X1</option>
-                                <option value="宝马X7">宝马X7</option>
-                            </select>
-                        </td>
-                    </tr>
-                    </tbody></table>
-            </li>
-
+            <?php
+                $info = json_decode($order->feedback_info);
+            ?>
+            <?php foreach($info as $k=>$v) : ?>
+                <?php if($k=='inputname'): ?>
+                    <?php foreach($info->$k as $keys=>$vals): ?>
+                        <?php if($vals != ''): ?>
+                            <li class="nob">
+                                <table class="kuang" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                    <tr>
+                                        <th><?php echo $vals; ?></th>
+                                        <td>
+                                            <input name="txt1" class="single px" id="txt1" placeholder="<?php echo $info->inputvalue[$keys]; ?>" value="<?php echo $info->inputvalue[$keys]; ?>" type="text">
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+                <?php if($k=='selectname'):?>
+                    <?php foreach($info->$k as $key=>$val): ?>
+                        <?php if($val != ''): ?>
+                            <li class="nob">
+                                <table class="kuang" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                        <th><?php echo $val;?></th>
+                                        <td>
+                                            <select name="" class="download dropdown-select">
+                                                <?php $s_value= explode('|',$info->selectvalue[$key]);?>
+                                                <?php foreach($s_value as $key1): ?>
+                                                    <option value="<?php echo $key1;?>"><?php echo $key1;?></option>
+                                                <?php endforeach;?>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    </tbody></table>
+                            </li>
+                        <?php endif;?>
+                    <?php endforeach; ?>
+                <?php endif;?>
+            <?php endforeach; ?>
             <li class="nob">
                 <table class="kuang" border="0" cellpadding="0" cellspacing="0" width="100%">
                     <tbody><tr>
                         <th class="thtop" valign="top">备注</th>
                         <td>
                             <textarea name="info" class="pxtextarea" style=" height:99px;overflow-y:visible" id="info" placeholder="请输入备注信息"></textarea>
-                            <input type="hidden" name="uid" id="uid" value="osXr8jo2_7zz3s0O5jzstVIlfmNc">
-                            <input type="hidden" name="rid" id="rid" value="41">
-                            <input type="hidden" name="aid" id="aid" value="1071">
+                            <input type="hidden" name="uid" id="uid" value="<?php echo $f;?>">
+                            <input type="hidden" name="rid" id="rid" value="<?php echo $o;?>">
+                            <input type="hidden" name="aid" id="aid" value="<?php echo $sid;?>">
                         </td>
                     </tr>
-                    </tbody></table>
+                    </tbody>
+                </table>
             </li>
         </form>
     </ul>
@@ -156,8 +199,6 @@
         </div>
     </div>
 </div>
-
-
 <script type="text/javascript">
 
     $(document).ready(function () {
@@ -190,8 +231,8 @@
             }
 
             if($("#truename").val()==''){alert('名字不能为空');return;}
-//		if($("#dateline").val()==''){alert('请选择时间');return;}
-            var submitData = {
+     	if($("#dateline").val()==''){alert('请选择时间');return;}
+         var submitData = {
                 wechatid: $("#uid").val(),
                 rid: $("#rid").val(),
                 aid: $("#aid").val(),
@@ -201,13 +242,16 @@
                 remark: $("#info").val(),
                 contacttel: $("#tel").val(),
                 fieldsigle:ret_single,
-                fielddownload:ret_download
+                fielddownload:ret_download,
             };
             if('fromUsername' == submitData.wechatid) submitData.wechatid = '';
-            $.post('/Webreserve/SubmitBook', submitData,
+            $.post('/Order/WxOrderInsert', submitData,
                 function(data) {
+
                     if (0 == data.errno) {
-                        alert(data.msg);
+                        if(data.msg==123){
+                            alert("提交成功");
+                        }
                         var count = $(".ok").text();
                         count = 1+ parseInt(count);
                         $(".ok").text(count);
@@ -299,14 +343,15 @@
         WeixinJSBridge.on('menu:share:weibo', function (argv) {
             WeixinJSBridge.invoke('shareWeibo', {
                 "content": window.shareData.wContent,
-                "url": window.shareData.weiboLink,
+                "url": window.shareData.weiboLink
             }, function (res) {
                 _report('weibo', res.err_msg);
             });
         });
     }, false)
 </script>
-<footer style="text-align:center; color:#ffd800;margin-right:20px;margin-top:0px;"><a href="http://www.weimob.com/weisite/home?pid=1071&bid=5&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc&wxref=mp.weixin.qq.com">©微盟技术支持</a></footer>
+<footer style="text-align:center; color:#ffd800;margin-right:20px;margin-top:0px;">
+    <a href="<?php echo Yii::app()->request->baseUrl.'';?>http://www.weimob.com/weisite/home?pid=1071&bid=5&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc&wxref=mp.weixin.qq.com">©万普微盟技术支持</a></footer>
 <div mark="stat_code" style="width:0px; height:0px; display:none;">
 </div>
 
@@ -385,11 +430,17 @@
         WeixinJSBridge.on('menu:share:weibo', function (argv) {
             WeixinJSBridge.invoke('shareWeibo', {
                 "content": window.shareData.wContent,
-                "url": window.shareData.weiboLink,
+                "url": window.shareData.weiboLink
             }, function (res) {
                 weimobAfterShare("osXr8jo2_7zz3s0O5jzstVIlfmNc",window.shareData.weiboLink,'weibo');
                 _report('weibo', res.err_msg);
             });
         });
     }, false);
-</script><script src="<?php echo Yii::app()->request->baseUrl;?>/js/order/h.js" type="text/javascript"></script><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="position: absolute; top: 1195px; left: 99px; z-index: 1; display: none;"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all ui-state-disabled" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">March</span>&nbsp;<span class="ui-datepicker-year">2014</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th class="ui-datepicker-week-end"><span title="Sunday">Su</span></th><th><span title="Monday">Mo</span></th><th><span title="Tuesday">Tu</span></th><th><span title="Wednesday">We</span></th><th><span title="Thursday">Th</span></th><th><span title="Friday">Fr</span></th><th class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">1</span></td></tr><tr><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">2</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">3</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">4</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">5</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">6</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">7</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">8</span></td></tr><tr><td class=" ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="2" data-year="2014"><a class="ui-state-default ui-state-highlight ui-state-active ui-state-hover" href="http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc#">9</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2014"><a class="ui-state-default" href="http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc#">10</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2014"><a class="ui-state-default" href="http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc#">11</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2014"><a class="ui-state-default" href="http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc#">12</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2014"><a class="ui-state-default" href="http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc#">13</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2014"><a class="ui-state-default" href="http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc#">14</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="2" data-year="2014"><a class="ui-state-default" href="http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc#">15</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="2" data-year="2014"><a class="ui-state-default" href="http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc#">16</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2014"><a class="ui-state-default" href="http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc#">17</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2014"><a class="ui-state-default" href="http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc#">18</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2014"><a class="ui-state-default" href="http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc#">19</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2014"><a class="ui-state-default" href="http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc#">20</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2014"><a class="ui-state-default" href="http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc#">21</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="2" data-year="2014"><a class="ui-state-default" href="http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc#">22</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="2" data-year="2014"><a class="ui-state-default" href="http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc#">23</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2014"><a class="ui-state-default" href="http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc#">24</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2014"><a class="ui-state-default" href="http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc#">25</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2014"><a class="ui-state-default" href="http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc#">26</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2014"><a class="ui-state-default" href="http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc#">27</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2014"><a class="ui-state-default" href="http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc#">28</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="2" data-year="2014"><a class="ui-state-default" href="http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc#">29</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="2" data-year="2014"><a class="ui-state-default" href="http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc#">30</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2014"><a class="ui-state-default" href="http://www.weimob.com/webreserve/ReserveBook?_tj_twtype=2&_tj_pid=1071&_tt=1&_tj_graphicid=16140&_tj_title=%E5%9C%A8%E7%BA%BF%E9%A2%84%E7%BA%A6&_tj_keywords=%E9%A2%84%E7%BA%A6&rid=41&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc#">31</a></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div></body></html>
+</script>
+<script src="<?php echo Yii::app()->request->baseUrl;?>/js/order/h.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.datepicker').datepicker({dateFormat: 'yy-mm-dd'});
+    });
+</script>

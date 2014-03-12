@@ -72,7 +72,7 @@
                         <label class="control-label" for="appendedInputButton">预约地址</label>
                         <div class="controls">
                             <div class="input-append">
-                                <input id="appendedInputButton" size="16" type="text" placeholder="深圳" class="searchLocation">
+                                <input id="appendedInputButton" name="address" size="16" type="text" placeholder="深圳" class="searchLocation">
                                 <button class="btn" type="button" onclick='searchLocation()'>选定位置</button>
                                 <span  class="help-inline"> <a id="map-chosed" style="display:none">已经选择成功!</a></span>
                             </div>

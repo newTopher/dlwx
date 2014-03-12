@@ -72,7 +72,7 @@
                         <label class="control-label" for="appendedInputButton">预约地址</label>
                         <div class="controls">
                             <div class="input-append">
-                                <input id="appendedInputButton" size="16" type="text" placeholder="深圳" class="searchLocation">
+                                <input id="appendedInputButton" name="address" size="16" type="text" placeholder="深圳" class="searchLocation">
                                 <button class="btn" type="button" onclick='searchLocation()'>选定位置</button>
                                 <span  class="help-inline"> <a id="map-chosed" style="display:none">已经选择成功!</a></span>
                             </div>
@@ -170,7 +170,6 @@
                                 <td><input type="text" class="form_input" value="请输入预约时间" name="" disabled="disabled"></td>
                                 <td><input type="checkbox" name="DisplayReserveTime" value="1" checked="">是否显示</td>
                             </tr>
-                            <?php ?>
                             <tr style="display:;" fieldtype="text">
                                 <td>新增文本框1：</td>
                                 <td><input type="text" class="form_input" value="" name="InputName[]"></td>
@@ -305,6 +304,7 @@
                 </fieldset>
              </form>
         </div>
+
     </div>
 </div>
 
