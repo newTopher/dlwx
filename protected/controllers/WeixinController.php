@@ -312,6 +312,14 @@ class WeixinController extends Controller{
         $uid = Yii::app()->request->getParam('uid');
         $template_id = Yii::app()->request->getParam('template_id');
         if(!empty($uid) && !empty($template_id)){
+            $webData = WxWebsiteModel::getWxWebByUid(Yii::app()->session['user']->id);
+            $modelname ='Template'.$template_id.'Model';
+            $templateModel = new $modelname();
+            $templateModel->uid = Yii::app()->session['user']->id;
+            $templateModel->site_id = $webData->id;
+            if(!$templateModel->getTemplateDataBySiteIdAndUid($templateModel->site_id,$templateModel->uid)){
+                $templateModel->insertTemplate();
+            }
             $webSiteModel = new WxWebsiteModel();
             $webSiteModel->uid = $uid;
             $webSiteModel->template_id = $template_id;

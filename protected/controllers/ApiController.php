@@ -108,11 +108,16 @@ class ApiController extends Controller {
                             }else if($v->source_type == 0){
                                 if($v->type == 'MemberCard'){
                                     $this->getMemberCard();
+                                }elseif($v->type == 'OrderCard'){
+                                    $this->getOrderCard();
+                                }elseif($v->type == 'SaleCard'){
+                                    $this->getSaleCard();
+                                }elseif($v->type == 'GuaguaCard'){
+                                    $this->getGuaguaCard();
                                 }
                             }
                         }
                     }
-
                 }
 
                 foreach($keydata as $k=>$v){
@@ -132,6 +137,12 @@ class ApiController extends Controller {
                             }else if($v->source_type == 0){
                                 if($v->type == 'MemberCard'){
                                     $this->getMemberCard();
+                                }elseif($v->type=='OrderCard'){
+                                    $this->getOrderCard();
+                                }elseif($v->type == 'SaleCard'){
+                                    $this->getSaleCard();
+                                }elseif($v->type == 'GuaguaCard'){
+                                    $this->getGuaguaCard();
                                 }
                             }
                         }
@@ -202,7 +213,6 @@ class ApiController extends Controller {
     public function getGuaCard(){
 
     }
-
     /*
      * 会员卡
      */
@@ -214,6 +224,57 @@ class ApiController extends Controller {
             $data->description = $memberdata->description;
             $data->picurl =  Yii::app()->request->hostInfo.'/upload/slider/'.$memberdata->index_image;
             $data->url = Yii::app()->request->hostInfo.'/Member/I/sid/'.$this->userdata->id.'/f/'.$this->postObj->FromUserName;
+            $this->responseImageText($data);
+        }else{
+            return false;
+        }
+    }
+    /*-----预订-----*/
+    public function getOrderCard(){
+        $keyword = trim($this->postObj->Content);
+        $OrderData = OrdermanageModel::getOrderCardByUid($this->userdata->id,$keyword);
+        if($OrderData){
+            $data= new stdClass();
+            $data->title=$OrderData->title;
+            $data->description=$OrderData->introduce;
+            $data->picurl = Yii::app()->request->hostInfo.'/upload/slider/'.$OrderData->image_path;
+            $data->url = Yii::app()->request->hostInfo.'/Order/OrderCard/sid/'.$this->userdata->id.'/f/'.$this->postObj->FromUserName.'/o/'.$OrderData->id;
+            $this->responseImageText($data);
+        }else{
+            return false;
+        }
+    }
+
+    /*
+     * 优惠券
+     */
+    public function getSaleCard(){
+        $keyword = trim($this->postObj->Content);
+        $salecarddata = SaleCardModel::getSaleCardByUid($this->userdata->id,$keyword);
+        if($salecarddata){
+            $data = new stdClass();
+            $data->title = $salecarddata->index_title;
+            $data->description = $salecarddata->description;
+            $data->picurl =  Yii::app()->request->hostInfo.'/upload/slider/'.$salecarddata->index_image;
+            $data->url = Yii::app()->request->hostInfo.'/Sale/I/sid/'.$this->userdata->id.'/f/'.$this->postObj->FromUserName.'/s/'.$salecarddata->id;
+            $this->responseImageText($data);
+        }else{
+            return false;
+        }
+    }
+
+    /*
+     * 刮刮卡
+     */
+    public function getGuaguaCard(){
+        $keyword = trim($this->postObj->Content);
+        $guaguacarddata = GuaguaCardModel::getGuaguaCardByUid($this->userdata->id,$keyword);
+        if($guaguacarddata){
+            $data = new stdClass();
+            $data->title = $guaguacarddata->index_title;
+            $data->description = $guaguacarddata->description;
+            $data->picurl =  Yii::app()->request->hostInfo.'/upload/slider/'.$guaguacarddata->index_image;
+            $data->url = Yii::app()->request->hostInfo.'/Guagua/I/sid/'.$this->userdata->id.'/f/'.$this->postObj->FromUserName.'/s/'.$guaguacarddata->id;
             $this->responseImageText($data);
         }else{
             return false;

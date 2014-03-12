@@ -38,6 +38,14 @@ class Template22Model extends Ar{
         }
     }
 
+    public function insertTemplate(){
+        if($this->insert()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     public function updateSlider(){
         if(self::model()->updateAll(array('slider'=>$this->slider),'uid=:uid and site_id=:site_id',array('uid'=>$this->uid,'site_id'=>$this->site_id))){
             return true;

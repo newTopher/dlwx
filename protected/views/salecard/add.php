@@ -7,12 +7,12 @@
         </div>
 
         <div class="box-content">
-            <form class="form-horizontal" method="post" action="<?php echo Yii::app()->request->baseUrl; ?>/MemberManage/Cusset">
+            <form class="form-horizontal" method="post" action="<?php echo Yii::app()->request->baseUrl; ?>/Salecard/Insertsale">
                 <fieldset>
                     <div class="control-group">
                         <label class="control-label" >活动名称</label>
                         <div class="controls">
-                            <input type="text" name="name" value="<?php if($data!=null){ echo $data->name;} ?>" id="name">
+                            <input type="text" name="name" value="" id="name">
                         </div>
                     </div>
 
@@ -26,7 +26,7 @@
                     <div class="control-group">
                         <label class="control-label">图文消息标题</label>
                         <div class="controls">
-                            <input type="text" name="index_title" value="<?php if($data!=null){ echo $data->index_title;} ?>" id="index_title">
+                            <input type="text" name="index_title" value="" id="index_title">
                         </div>
                     </div>
                     <div class="control-group">
@@ -43,24 +43,20 @@
                             </div>
                         </div>
                         <div id="showimg" class="showimg" style="margin-left:160px;width:320px;margin-top: 10px;">
-                            <?php if($data!=null): ?>
-                                <img src="<?php echo Yii::app()->request->baseUrl; ?>/upload/slider/<?php echo $data->index_image; ?>" />
-                            <?php else : ?>
                                 <i class="appmsg_thumb default">封面图片</i>
-                            <?php endif; ?>
                         </div>
                     </div>
                     <div class="control-group">
-                        <label class="control-label" >简短描述</label>
+                        <label class="control-label" >活动简短描述</label>
                         <div class="controls">
-                            <textarea name="description" style="height:120px;width: 320px" id="description"><?php if($data!=null){ echo $data->description;} ?></textarea>
+                            <textarea name="description" style="height:120px;width: 320px" id="description"></textarea>
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label" for="date01">活动时间</label>
                         <div class="controls">
-                            <input type="text" name="start_date" style="width:120px;"  data-date-format="dd-mm-yyyy" class="input-xlarge datepicker" id="date01" value="<?php if($data!=null){ echo $data->start_date;} ?>"> ~
-                            <input type="text" name="end_date" style="width:120px;"  data-date-format="dd-mm-yyyy" class="input-xlarge datepicker" id="date02" value="<?php if($data!=null){ echo $data->end_date;} ?>">
+                            <input type="text" name="start_date" style="width:120px;"  data-date-format="dd-mm-yyyy" class="input-xlarge datepicker" id="date01" value=""> ~
+                            <input type="text" name="end_date" style="width:120px;"  data-date-format="dd-mm-yyyy" class="input-xlarge datepicker" id="date02" value="">
                             <span class="help-inline">设置本次活动的起止时间!</span>
                         </div>
                     </div>
@@ -68,13 +64,22 @@
                         <label class="control-label">活动中奖概率</label>
                         <div class="controls">
                             <div class="input-append">
-                                <input id="appendedInput" size="16" type="text" id="chance" name="chance" value="<?php if($data!=null){ echo $data->chance;} ?>"><span class="add-on">%</span>
+                                <input id="appendedInput" size="16" type="text" name="chance" value="" class="chance"><span class="add-on">%</span>
 
                                 <span class="help-inline">设置本次活动的中奖概率范围为0~100!</span>
                             </div>
                         </div>
                     </div>
+                    <div class="control-group">
+                        <label class="control-label">用户每天参与次数</label>
+                        <div class="controls">
+                            <div class="input-append">
+                                <input id="appendedInput" size="16" type="text" name="user_everyday_times" value="" class="user_everyday_times"><span class="add-on">次</span>
 
+                                <span class="help-inline">每个用户每天可以参与次数</span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="control-group">
                         <label class="control-label">奖品设置</label>
                         <div class="controls">
@@ -90,28 +95,28 @@
 
                                 <tr>
                                     <td>一等奖</td>
-                                    <td><input type="text" name="one_name" style="width:120px;"  class="input-xlarge" value=""></td>
+                                    <td><input type="text" name="one_name" id="one_name" style="width:120px;"  class="input-xlarge" value=""></td>
                                     <td>
                                         <div class="input-append">
-                                            <input id="appendedInput" name="one_no" size="16" type="text"><span class="add-on">个</span>
+                                            <input id="appendedInput" name="one_no" class="one_no" size="16" type="text"><span class="add-on">个</span>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>二等奖</td>
-                                    <td><input type="text" name="two_name" style="width:120px;"  class="input-xlarge" value=""></td>
+                                    <td><input type="text" name="two_name" id="two_name" style="width:120px;"  class="input-xlarge" value=""></td>
                                     <td>
                                         <div class="input-append">
-                                            <input id="appendedInput" name="two_no" size="16" type="text"><span class="add-on">个</span>
+                                            <input id="appendedInput" name="two_no" class="two_no" size="16" type="text"><span class="add-on">个</span>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>三等奖</td>
-                                    <td><input type="text" name="three_name" style="width:120px;"  class="input-xlarge" value=""></td>
+                                    <td><input type="text" name="three_name" id="three_name" style="width:120px;"  class="input-xlarge" value=""></td>
                                     <td>
                                         <div class="input-append">
-                                            <input id="appendedInput" name="three_no" size="16" type="text"><span class="add-on">个</span>
+                                            <input id="appendedInput" name="three_no" class="three_no" size="16" type="text"><span class="add-on">个</span>
                                         </div>
                                     </td>
                                 </tr>
@@ -124,7 +129,7 @@
 
                     <div class="control-group">
                         <div class="controls">
-                            <input type="hidden" name="index_image" id="index_image" value="<?php if($data!=null){ echo $data->index_image;} ?>">
+                            <input type="hidden" name="index_image" id="index_image" value="">
                         </div>
 
                     </div>
@@ -136,6 +141,14 @@
                 </fieldset>
             </form>
         </div>
+
+        <?php if(!empty($msg)):?>
+            <div class="msg_fade" id="ui_notifIt" class="info" style="background: deepskyblue; height: 60px; width: 100%; top: 0px; left: 0px;">
+                <p style="line-height: 60px;">
+                    <b><?php echo $msg;?></b>
+                </p>
+            </div>
+        <?php endif;?>
 
     </div>
 </div>
@@ -242,10 +255,10 @@
     }
 
     $("#card_post_btn").click(function(){
-        if($("#cust_name").val().length == 0){
+        if($("#name").val().length == 0){
             notif({
                 type: "warning",
-                msg: '商家名称不能为空',
+                msg: '活动名称不能为空',
                 position: "center",
                 width:"all",
                 height:100,
@@ -253,28 +266,7 @@
             });
             return false;
         }
-        if($("#tel").val().length == 0){
-            notif({
-                type: "warning",
-                msg: '商家电话不能为空',
-                position: "center",
-                width:"all",
-                height:100,
-                opacity: 1
-            });
-            return false;
-        }
-        if($("#address").val().length == 0){
-            notif({
-                type: "warning",
-                msg: '商家详细地址不能为空',
-                position: "center",
-                width:"all",
-                height:100,
-                opacity: 1
-            });
-            return false;
-        }
+
         if($("#keywords").val().length == 0){
             notif({
                 type: "warning",
@@ -289,7 +281,7 @@
         if($("#index_title").val().length == 0){
             notif({
                 type: "warning",
-                msg: '图文信息不能为空',
+                msg: '图文信息标题不能为空',
                 position: "center",
                 width:"all",
                 height:100,
@@ -308,6 +300,128 @@
             });
             return false;
         }
+        if($("#date01").val().length == 0){
+            notif({
+                type: "warning",
+                msg: '请选择活动开始时间',
+                position: "center",
+                width:"all",
+                height:100,
+                opacity: 1
+            });
+            return false;
+        }
+
+        if($("#date02").val().length == 0){
+            notif({
+                type: "warning",
+                msg: '请选择活动结束时间',
+                position: "center",
+                width:"all",
+                height:100,
+                opacity: 1
+            });
+            return false;
+        }
+
+        if($(".chance").val().length == 0 || $(".chance").val() < 0 || $(".chance").val() > 100){
+            notif({
+                type: "warning",
+                msg: '中奖概率填写错误，为0~100的数字',
+                position: "center",
+                width:"all",
+                height:100,
+                opacity: 1
+            });
+            return false;
+        }
+
+        if($(".user_everyday_times").val().length == 0){
+            notif({
+                type: "warning",
+                msg: '用户每天参数次数没填写，只能是数字',
+                position: "center",
+                width:"all",
+                height:100,
+                opacity: 1
+            });
+            return false;
+        }
+
+        if($("#one_name").val().length == 0){
+            notif({
+                type: "warning",
+                msg: '一等奖奖品名称不能为空',
+                position: "center",
+                width:"all",
+                height:100,
+                opacity: 1
+            });
+            return false;
+        }
+
+        if($(".one_no").val().length == 0){
+            notif({
+                type: "warning",
+                msg: '一等奖奖品数量不能为空，只能是数字',
+                position: "center",
+                width:"all",
+                height:100,
+                opacity: 1
+            });
+            return false;
+        }
+
+        if($("#two_name").val().length == 0){
+            notif({
+                type: "warning",
+                msg: '二等奖奖品名称不能为空',
+                position: "center",
+                width:"all",
+                height:100,
+                opacity: 1
+            });
+            return false;
+        }
+
+        if($(".two_no").val().length == 0){
+            notif({
+                type: "warning",
+                msg: '二等奖奖品数量不能为空，只能是数字',
+                position: "center",
+                width:"all",
+                height:100,
+                opacity: 1
+            });
+            return false;
+        }
+
+        if($("#three_name").val().length == 0){
+            notif({
+                type: "warning",
+                msg: '三等奖奖品名称不能为空',
+                position: "center",
+                width:"all",
+                height:100,
+                opacity: 1
+            });
+            return false;
+        }
+
+        if($(".three_no").val().length == 0){
+            notif({
+                type: "warning",
+                msg: '三等奖奖品数量不能为空，只能是数字',
+                position: "center",
+                width:"all",
+                height:100,
+                opacity: 1
+            });
+            return false;
+        }
+
+
+
     });
 
 
