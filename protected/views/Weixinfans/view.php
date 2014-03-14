@@ -9,7 +9,11 @@
             <div class="box-content">
                 <div class="tooltip-demo well span5" style="margin-bottom: 15px;">
                         <a href="#">
-                            <img style="width: 140px;height: 170px;float: left;" alt="Usman" src="http://www.gravatar.com/avatar/f0ea51fa1e4fae92608d8affee12f67b.png?s=50"></a>
+                            <?php if($wxUserData->headimgurl == null) : ?>
+                            <img style="width: 80px;height: 80px;float: left;" src="<?php echo Yii::app()->request->baseUrl; ?>/images/w_client.jpg"></a>
+                        <?php else: ?>
+                        <img style="width: 80px;height: 80px;float: left;" src="<?php echo $wxUserData->headimgurl; ?>"></a>
+                        <?php endif; ?>
                     <div style="float: right">
                     <p>微信昵称  :  <?php echo $wxUserData->nickname ;?> </p>
                     <p>微信ID   :  <?php echo $wxUserData->openid ;?> </p>
@@ -31,50 +35,68 @@
                         <li class="active"><a href="#home" data-toggle="tab">聊天记录</a></li>
                     </ul>
                     <div id="myTabContent" class="tab-content">
+
                         <div class="tab-pane fade active in" id="home">
-                            <div class="leftd">
-                                <div class="leftimg"><img src="http://www.gravatar.com/avatar/f0ea51fa1e4fae92608d8affee12f67b.png?s=50" /></div>
-                                <div class="speech left" > 你好!在晚上好!我在!明天早上8点要开会!晚上好!我在!明天早上8点要开会!晚上好!我在!明天早上8点要开会!晚上好!我在!明天早上8点要开会!晚上好晚上好!我在!明天早上8点要开会!晚上好!我在!明天早上8点要开会! </div>
-                            </div>
-                            <div class="rightd">
-                                <div class="rightimg"><img src="http://www.gravatar.com/avatar/f0ea51fa1e4fae92608d8affee12f67b.png?s=50" /></div>
-                                <div class="speech right" > 晚上好!我在!明天早上8点要开会!晚上好!我在!明天早上8点要开会!晚上好!我在!明天早上8点要开会!晚上好!我在!明天早上8点要开会!晚上好晚上好!我在!明天早上8点要开会!晚上好!我在!明天早上8点要开会! </div>
-                            </div>
+                            <?php if($msgdata != null): ?>
+                                <?php foreach($msgdata as $k=>$v): ?>
+                                    <?php if($v->from_openid == $openid): ?>
+                                        <div class="leftd">
+                                            <div class="leftimg">
+                                                <?php if($wxUserData->headimgurl == null) : ?>
+                                                <img style="width:30px;height:30px;" src="<?php echo Yii::app()->request->baseUrl; ?>/images/w_client.jpg" />
+                                                <?php else: ?>
+                                                    <img style="width: 30px;height: 30px;float: left;" src="<?php echo $wxUserData->headimgurl; ?>"></a>
+                                                <?php endif; ?>
+                                            </div>
+                                            <div class="speech left" >
+                                                <?php if($v->type == 'text'): ?>
+                                                    <?php echo $v->content; ?>
+                                                <?php endif; ?>
+                                            </div>
+                                        </div>
+                                        <?php else: ?>
+                                        <div class="rightd">
+                                            <div class="rightimg">
+                                                <img style="width:30px;height:30px;" src="<?php echo Yii::app()->request->baseUrl; ?>/images/w_client.jpg" />
+                                            </div>
+                                            <div class="speech right" >
+                                                <?php if($v->type == 'text'): ?>
+                                                    <?php echo $v->content; ?>
+                                                    <?php else : ?>
+                                                    <?php echo $v->type; ?>
+                                                <?php endif; ?>
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+                                <?php else: ?>
+                                <div class="alert alert-info">
+                                    <button type="button" class="close" data-dismiss="alert">×</button>
+                                    <strong>提示信息!</strong>您还没和他聊过天哦.
+                                </div>
 
-                            <div class="rightd">
-                                <div class="rightimg"><img src="http://www.gravatar.com/avatar/f0ea51fa1e4fae92608d8affee12f67b.png?s=50" /></div>
-                                <div class="speech right" > 晚上好!我明天早上8点要开会!晚上好!上好!我在!明天早上8点要开会! </div>
-                            </div>
+                            <?php endif; ?>
 
-                            <div class="leftd">
-                                <div class="leftimg"><img src="http://www.gravatar.com/avatar/f0ea51fa1e4fae92608d8affee12f67b.png?s=50" /></div>
-                                <div class="speech left" > 你好!在晚上好!我在!明天早上8点要开会!晚上好!我在!明天早上8点要开会!晚上好!我在!明天早上8点要开会!晚上好!我在!明天早上8点要开会!晚上好晚上好!我在!明天早上8点要开会!晚上好!我在!明天早上8点要开会! </div>
-                            </div>
 
-                            <div class="rightd">
-                                <div class="rightimg"><img src="http://www.gravatar.com/avatar/f0ea51fa1e4fae92608d8affee12f67b.png?s=50" /></div>
-                                <div class="speech right" > 晚上好!我明天早上8点要开会!晚上好!上好!我在!明天早上8点要开会! </div>
-                            </div>
 
-                            <div class="leftd">
-                                <div class="leftimg"><img src="http://www.gravatar.com/avatar/f0ea51fa1e4fae92608d8affee12f67b.png?s=50" /></div>
-                                <div class="speech left" >我</div>
-                            </div>
-                            <div class="pagediv">
-                                <ul class="pager">
-                                    <li class="previous">
-                                        <a href="#">&larr; 上一页</a>
-                                    </li>
-                                    <li class="next">
-                                        <a href="#">下一页 &rarr;</a>
-                                    </li>
-                                </ul>
-                           </div>
+                        </div>
+                        <div id="pager" class="pager" style="float: left;margin-top: 30px;">
+                            <?php
+
+                            $this->widget('CLinkPager',array(
+                                    'header'=>'',
+                                    'prevPageLabel' => '上一页',
+                                    'nextPageLabel' => '下一页',
+                                    'pages' => $pages,
+                                    'maxButtonCount'=>13
+                                )
+                            );
+                            ?>
                         </div>
 
-                        <textarea style="width: 597px;height: 100px;margin-top:25px;float: left"></textarea>
+                        <textarea id="msgBox" style="width: 597px;height: 100px;margin-top:25px;float: left"></textarea>
 
-                        <button class="btn btn-small btn-primary" style="float: left;margin-top: 10px;margin-bottom: 10px;width: 100px;">发送</button>
+                        <button id="send_btns" class="btn btn-small btn-primary" style="float: left;margin-top: 10px;margin-bottom: 10px;width: 100px;">发送</button>
                     </div>
                 </div>
             </div>

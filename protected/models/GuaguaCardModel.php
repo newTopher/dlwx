@@ -73,6 +73,14 @@ class GuaguaCardModel extends Ar{
         }
     }
 
+    static public function getDataGuagualistByUid($uid){
+        if($list = self::model()->findAllByAttributes(array('uid'=>$uid))){
+            return $list;
+        }else{
+            return false;
+        }
+    }
+
     static public function getGuaguaCardByUid($uid,$keywords){
         return self::model()->findByAttributes(array('uid'=>$uid,'keywords'=>$keywords));
     }

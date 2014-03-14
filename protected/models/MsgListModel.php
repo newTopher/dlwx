@@ -9,7 +9,7 @@
 class MsgListModel extends Ar{
 
     public $id;
-    public $wx_uid;
+    public $uid;
     public $to_openid;
     public $from_openid;
     public $content;
@@ -30,6 +30,16 @@ class MsgListModel extends Ar{
         return array(
 
         );
+    }
+
+    public function insertMsg(){
+        $this->add_time = time();
+        $this->send_times = 0;
+        if($this->insert()){
+            return true;
+        }else{
+            return false;
+        }
     }
 
 

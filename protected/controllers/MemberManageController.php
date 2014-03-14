@@ -24,7 +24,8 @@ class MemberManageController extends Controller{
         if(!$keydata){
             $keydata = null;
         }
-        $this->render('base',array('data'=>$data,'keydata'=>$keydata));
+        $this->render('base',array('data'=>$data,'keydata'=>$keydata,'msg'=>Yii::app()->session['msg']));
+        Yii::app()->session['msg'] = '';
     }
 
 
@@ -66,14 +67,18 @@ class MemberManageController extends Controller{
         $memberCardModel->index_image = $index_image;
         if($memberCardModel->getMemberCardByUid()){
             if($memberCardModel->updateMemberCard()){
+                Yii::app()->session['msg'] = '更新成功';
                 $this->redirect(Yii::app()->request->baseUrl.'/MemberManage/Base');
             }else{
+                Yii::app()->session['msg'] = '更新失败';
                 $this->redirect(Yii::app()->request->baseUrl.'/MemberManage/Base');
             }
         }else{
             if($memberCardModel->insertMemberCard()){
+                Yii::app()->session['msg'] = '设置成功';
                 $this->redirect(Yii::app()->request->baseUrl.'/MemberManage/Base');
             }else{
+                Yii::app()->session['msg'] = '设置失败';
                 $this->redirect(Yii::app()->request->baseUrl.'/MemberManage/Base');
             }
         }
@@ -88,16 +93,21 @@ class MemberManageController extends Controller{
         if($memberCardModel->getMemberCardByUid()){
             if($memberCardModel->updateVipMemberCard()){
                 $this->redirect(Yii::app()->request->baseUrl.'/MemberManage/Cardset');
+                Yii::app()->session['msg'] = '更新成功';
             }else{
                 $this->redirect(Yii::app()->request->baseUrl.'/MemberManage/Cardset');
+                Yii::app()->session['msg'] = '更新失败';
             }
         }else{
             if($memberCardModel->insertMemberCard()){
                 $this->redirect(Yii::app()->request->baseUrl.'/MemberManage/Cardset');
+                Yii::app()->session['msg'] = '设置成功';
             }else{
                 $this->redirect(Yii::app()->request->baseUrl.'/MemberManage/Cardset');
+                Yii::app()->session['msg'] = '设置失败';
             }
         }
+
 
     }
 
@@ -107,6 +117,8 @@ class MemberManageController extends Controller{
         $data = $memberCardModel->getDataMemberCardByUid();
         if(!$data){
             $data = null;
+            Yii::app()->session['msg'] = '您还没有设置商家信息,请先设置商家信息';
+            $this->redirect(Yii::app()->request->baseUrl.'/MemberManage/Base');
         }
         $this->render('cardset',array('data'=>$data));
     }

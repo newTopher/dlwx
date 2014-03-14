@@ -121,19 +121,21 @@
                             <?php endif; ?>
                             <?php if($userdata->type == 0): ?>
                                 <span style="font-weight: bold;" class="blue">测试账号</span>
-                                <button class="btn btn-mini btn-primary">申请正式账号</button>
+                                <a href="http://wpa.qq.com/msgrd?v=3&uin=2653897208&site=qq&menu=yes" target="_blank" class="btn btn-mini btn-primary">申请正式账号</a>
                             <?php endif; ?>
                         </td>
                     </tr>
                     <tr>
                         <td>到期时间</td>
                         <td><?php echo date("Y-m-d H:i:s",$userdata->deadline_date); ?> 还剩余<span style="font-weight: bold;" class="red">
-                                <?php echo round(($userdata->deadline_date-$userdata->add_time)/(3600*24),0) ?></span>天</td>
+                                <?php echo round(($userdata->deadline_date-time())/(3600*24),0) ?></span>天</td>
                     </tr>
+                    <!--
                     <tr>
                         <td>账户余额</td>
                         <td><?php echo $userdata->money; ?>元   <button class="btn btn-mini btn-success">充值</button></td>
                     </tr>
+                    -->
                     <tr>
                         <td>微盟版本</td>
                         <?php if($userdata->web_type == 1): ?>
@@ -164,18 +166,20 @@
                     </tr>
                     </thead>
                     <tbody>
+                    <?php if($userdata->open_weixin == 1): ?>
                     <tr>
                         <td width="200px;">公众账号用户名</td>
                         <td><?php echo $userdata->wx_account; ?></td>
 
                     </tr>
+                    <?php endif; ?>
                     <?php if($userdata->open_weixin == 1): ?>
                     <tr>
-                        <td>token</td>
+                        <td width="200px;">token</td>
                         <td><?php echo TOKEN; ?></td>
                     </tr>
                     <tr>
-                        <td>url</td>
+                        <td width="200px;">url</td>
                         <td><?php echo 'http://weixin.wapwei.com/api/bind/t/'.$userdata->wx_token; ?></td>
                     </tr>
                     <?php endif; ?>
@@ -191,10 +195,10 @@
                     <tr>
                         <td>绑定状态</td>
                         <?php if($userdata->open_weixin == 1): ?>
-                        <td><span style="font-weight: bold;" class="green">已绑定</span></td>
+                        <td><span style="font-weight: bold;" class="green">已绑定</span> <a onclick="return confirm('您确定要解除绑定吗?')" href="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Closeweixin" class="btn btn-mini btn-primary">解除绑定</a></td>
                         <?php endif; ?>
                         <?php if($userdata->open_weixin == 0): ?>
-                        <td><span style="font-weight: bold;" class="red">未绑定</span>  <button class="btn btn-mini btn-primary" data-toggle="modal" data-target="#myModal">点击绑定</button></td>
+                        <td><span style="font-weight: bold;" class="red">未绑定</span><button class="btn btn-mini btn-primary" data-toggle="modal" data-target="#autoModal">智能绑定</button>  <button class="btn btn-mini btn-primary" data-toggle="modal" data-target="#myModal">手动绑定</button></td>
                         <?php endif; ?>
                     </tr>
                     </tbody>
@@ -209,6 +213,45 @@
                         <p>参见绑定微信教程</p>
                         token : <?php echo TOKEN; ?>
                         url : <?php echo 'http://weixin.wapwei.com/api/bind/t/'.$userdata->wx_token; ?>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+                    </div>
+                </div>
+
+                <div id="autoModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 >智能绑定公众号</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-info">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <strong>提示信息!</strong>  输入您的微信公众平台账号和密码为您智能绑定平台.
+                        </div>
+                        <form method="post" action="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Autobind" class="form-horizontal">
+                            <input type="hidden" name="id" value="10">
+                            <fieldset>
+
+                                <div class="control-group">
+                                    <label class="control-label" for="focusedInput">微信公众账号</label>
+                                    <div class="controls">
+                                        <input class="input-xlarge focused" name="username" type="text" >
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="focusedInput">密码</label>
+                                    <div class="controls">
+                                        <input class="input-xlarge focused" name="pwd" type="password" >
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">保存</button>
+                                    <button class="btn">取消</button>
+                                </div>
+                            </fieldset>
+                        </form>
                     </div>
                     <div class="modal-footer">
                         <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>

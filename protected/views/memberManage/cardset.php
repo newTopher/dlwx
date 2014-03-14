@@ -88,7 +88,7 @@
                             </div>
                         </div>
                         <div id="showimg" class="showimg" style="margin-left:160px;width:60px;margin-top: 10px;">
-                            <?php if($data->vip_logo!=null): ?>
+                            <?php if($data!=null): ?>
                                 <img src="<?php echo Yii::app()->request->baseUrl; ?>/upload/slider/<?php echo $data->vip_logo; ?>" />
                             <?php else : ?>
                                 <i class="appmsg_thumb default">图片区域</i>

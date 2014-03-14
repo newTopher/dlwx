@@ -26,7 +26,8 @@ class AutoReplayController extends Controller{
         $keywordsModel = new KeywordsReplayModel();
         $keywordsModel->uid = Yii::app()->session['user']->id;
         $keywordsData = $keywordsModel->getKeyWordsByUid();
-        $this->render('base',array('firstData'=>$firstData,'nouseData'=>$nouseData,'keywordsData'=>$keywordsData));
+        $selectdata = $this->getAllselect();
+        $this->render('base',array('firstData'=>$firstData,'nouseData'=>$nouseData,'keywordsData'=>$keywordsData,'selectdata'=>$selectdata));
     }
 
     public function actionAddKeyword(){
@@ -108,7 +109,8 @@ class AutoReplayController extends Controller{
     }
 
     public function actionAddkeywords(){
-        $this->render('addkeyword');
+        $selectdata = $this->getAllselect();
+        $this->render('addkeyword',array('selectdata'=>$selectdata));
     }
 
     public function actionInsertKeyword(){

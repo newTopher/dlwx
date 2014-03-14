@@ -11,9 +11,7 @@ class WeixinController extends Controller{
     public $layout='//layouts/column3';
 
     public function actionBase(){
-        $wxWebsiteModel = new WxWebsiteModel();
-        $wxWebsiteModel->id = Yii::app()->session['user']->id;
-        $webdata = $wxWebsiteModel->getWxWebById();
+        $webdata = WxWebsiteModel::getWxWebByUid(Yii::app()->session['user']->id);
         $template = TemplateModel::getTemplateByTpid($webdata->template_id);
         $this->render('base',array('webdata'=>$webdata,'template'=>$template));
     }
@@ -26,7 +24,7 @@ class WeixinController extends Controller{
         $wxWebsiteModel->template_id = Yii::app()->request->getParam('template_id','');
         $wxWebsiteModel->tel = Yii::app()->request->getParam('tel','');
         $wxWebsiteModel->address = Yii::app()->request->getParam('address','');
-        $wxWebsiteModel->replay_keywords = Yii::app()->request->getParam('replay_keywords','');
+        //$wxWebsiteModel->replay_keywords = Yii::app()->request->getParam('replay_keywords','');
         $wxWebsiteModel->msg_title = Yii::app()->request->getParam('msg_title','');
         $wxWebsiteModel->msg_description = Yii::app()->request->getParam('msg_description','');
         if(isset($_FILES['msg_image'])){
@@ -302,9 +300,7 @@ class WeixinController extends Controller{
         $trade_id=Yii::app()->request->getParam("trade_id",'0');
         $TemplateModel=new TemplateModel();
         $list=$TemplateModel->getTemplate($trade_id);
-        $wxWebsiteModel = new WxWebsiteModel();
-        $wxWebsiteModel->id = Yii::app()->session['user']->id;
-        $webdata = $wxWebsiteModel->getWxWebById();
+        $webdata = WxWebsiteModel::getWxWebByUid(Yii::app()->session['user']->id);
         $this->render('templateselect',array('list'=>$list,'trade_id'=>$trade_id,'webdata'=>$webdata));
     }
 
@@ -338,6 +334,26 @@ class WeixinController extends Controller{
 
     public function actionLbsset(){
 
+    }
+
+    public function actionCloseweixin(){
+        $userModel = new UserModel();
+        $userModel->id = Yii::app()->session['user']->id;
+        if($userModel->closeWeixin()){
+            $this->redirect(Yii::app()->getBaseUrl()."/User/Home");
+        }else{
+            $this->redirect(Yii::app()->getBaseUrl()."/User/Home");
+        }
+    }
+
+    public function actionAutobind(){
+        $username = Yii::app()->request->getParam('username');
+        $pwd = Yii::app()->request->getParam('pwd');
+        $this->_account = $username;
+        $this->_password = $pwd;
+        $this->wxlogin();
+        $data = $this->getAllUserInfo();
+        print_r($data);exit;
     }
 
 

@@ -9,6 +9,7 @@
 class UserModel extends Ar{
 
     public $id;
+    public $qq;
     public $email;
     public $password;
     public $name;
@@ -24,6 +25,8 @@ class UserModel extends Ar{
     public $wt_account;
     public $wt_token;
     public $trade_id;
+    public $web_type;
+    public $status;
     public $msg_status;
     public $wx_code_url;
     public $wt_code_url;
@@ -35,6 +38,7 @@ class UserModel extends Ar{
     public $appid;
     public $wx_appid;
     public $wx_appsecret;
+    public $wx_openid;
 
     public static function model($className=__CLASS__){
         return parent::model($className);
@@ -53,7 +57,7 @@ class UserModel extends Ar{
     public function addUser(){
         $this->add_time=time();
         if($this->insert()){
-            return true;
+            return $this->id;
         }else{
             return false;
         }
@@ -124,6 +128,28 @@ class UserModel extends Ar{
     static public  function findUserByid($id){
         if($res = self::model()->findByPk(array('id'=>$id))){
             return $res;
+        }else{
+            return false;
+        }
+    }
+
+    static public  function updateOpenidByid($id,$wx_openid){
+        $res = self::model()->findByPk(array('id'=>$id));
+        $res->wx_openid = $wx_openid;
+        if($res->save()){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
+    public function closeWeixin(){
+        $user = self::model()->findByPk($this->id);
+        $user->open_weixin = null;
+        $user->update_time = time();
+        if($user->save()){
+            return true;
         }else{
             return false;
         }

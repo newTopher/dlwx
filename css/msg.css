@@ -156,7 +156,7 @@ div.speech.right {
     box-shadow: -2px 2px 5px #CCC;
     margin-right: 10px;
     width: 60%;
-    min-width:118px;
+    min-width:132px;
     float: right;
     background: -webkit-gradient( linear, 50% 0%, 50% 100%, from(#e4ffa7), color-stop(0.1, #bced50), color-stop(0.4, #aed943), color-stop(0.8, #a7d143), to(#99BF40) );
 }
@@ -188,7 +188,7 @@ div.speech.left {
     box-shadow: 2px 2px 2px #CCCCCC;
     margin-left: 10px;
     width: 60%;
-    min-width:118px;
+    min-width:132px;
     float: left;
     background: -webkit-gradient( linear, 50% 0%, 50% 100%, from(#ffffff), color-stop(0.1, #eae8e8), color-stop(0.4, #E3E3E3), color-stop(0.8, #DFDFDF), to(#D9D9D9) );
 }

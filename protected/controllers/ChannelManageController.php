@@ -55,7 +55,8 @@ class ChannelManageController extends Controller{
 
     public function actionAddChannelview(){
         $pid = Yii::app()->request->getParam('pid',0);
-        $this->render('addchannelview',array('pid'=>$pid));
+        $selectdata = $this->getAllselect();
+        $this->render('addchannelview',array('pid'=>$pid,'selectdata'=>$selectdata));
     }
 
     public function actionChanneledit(){
@@ -63,7 +64,8 @@ class ChannelManageController extends Controller{
         $channelModel = new ChannelModel();
         $channelModel->id = $id;
         $channelData = $channelModel->getChannelById();
-        $this->render('editchannelview',array('channelData'=>$channelData,'id'=>$id));
+        $selectdata = $this->getAllselect();
+        $this->render('editchannelview',array('channelData'=>$channelData,'id'=>$id,'selectdata'=>$selectdata));
     }
 
     public function actionChannelupdate(){

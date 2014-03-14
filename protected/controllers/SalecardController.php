@@ -130,7 +130,7 @@ class SalecardController extends Controller{
         $keywordsModel->keywords = $keywords;
         if($keywordsModel->getDataKeyWordsByUidAndSale()){
             Yii::app()->session['msg'] = '关键词已存在';
-            $this->redirect(Yii::app()->request->baseUrl.'/Salecard/Addsale');
+            $this->redirect(Yii::app()->request->baseUrl.'/Salecard/Viewsale');
         }else{
             $keywordsModel->updateKeywords();
         }

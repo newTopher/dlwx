@@ -21,14 +21,15 @@ class Controller extends CController
 	 */
 	public $breadcrumbs=array();
 
-
     const TOKEN = 'yiyue_wx';
-    const APPID = 'wx03af9cefacdb3647';
-    const APPSECRET = 'wx03af9cefacdb3647';
+    public  $APPID = null;
+    public  $APPSECRET = null;
+    public $access_token;
 
-    public $tokenUrl = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx03af9cefacdb3647&secret=46bca6d2b05acaef4b7c138c7aeccc9d";
+    public $tokenUrl = "";
 
     public function getToken(){
+        $this->tokenUrl = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".$this->APPID."&secret=".$this->APPSECRET;
         return $this->getMethod($this->tokenUrl);
     }
 
@@ -56,6 +57,86 @@ class Controller extends CController
 
         curl_close($ch);
         return $info;
+    }
+
+    public function getAllselect(){
+        $selectdata = array();
+        $channelModel = new ChannelModel();
+        $channelModel->uid = Yii::app()->session['user']->id;
+        $selectdata['channel'] =$channelModel->getChannelByUid();
+
+        $member_data = MemberCardModel::getWeiMemberCardByUid(Yii::app()->session['user']->id);
+        if($member_data){
+            $selectdata['member'] = $member_data;
+        }else{
+            $selectdata['member'] = null;
+        }
+        $saledata = SaleCardModel::getDataSalelistByUid(Yii::app()->session['user']->id);
+        if($saledata){
+            $selectdata['saledata'] = $saledata;
+        }else{
+            $selectdata['saledata'] = null;
+        }
+
+        $guaguadata = GuaguaCardModel::getDataGuagualistByUid(Yii::app()->session['user']->id);
+        if($guaguadata){
+            $selectdata['guaguadata'] = $guaguadata;
+        }else{
+            $selectdata['guaguadata'] = null;
+        }
+
+        $zhuandata = ZhuanCardModel::getDataZhuanlistByUid(Yii::app()->session['user']->id);
+        if($zhuandata){
+            $selectdata['zhuandata'] = $zhuandata;
+        }else{
+            $selectdata['zhuandata'] = null;
+        }
+
+        $yuyuedata = OrdermanageModel::getAllOrderByUid(Yii::app()->session['user']->id);
+        if($yuyuedata){
+            $selectdata['yuyuedata'] = $yuyuedata;
+        }else{
+            $selectdata['yuyuedata'] = null;
+        }
+
+        $namecarddata = CallingcardManageModel::getAllOrderByUid(Yii::app()->session['user']->id);
+        if($namecarddata){
+            $selectdata['namecarddata'] = $namecarddata;
+        }else{
+            $selectdata['namecarddata'] = null;
+        }
+
+        $tuandata = TuangoodModel::getDataTuanlistById(Yii::app()->session['user']->id);
+        if($tuandata){
+            $selectdata['tuandata'] = $tuandata;
+        }else{
+            $selectdata['tuandata'] = null;
+        }
+
+        return $selectdata;
+    }
+
+    public function getUserDetailInfo($openid){
+        $userModel = UserModel::findUserByid(Yii::app()->session['user']->id);
+        if($userModel->wx_appid != null && $userModel->wx_appsecret != null){
+            $this->APPID = $userModel->wx_appid;
+            $this->APPSECRET = $userModel->wx_appsecret;
+            $accessToken = $this->getToken();
+            $token = CJSON::decode($accessToken,true);
+            $this->access_token = $token['access_token'];
+            $url = "https://api.weixin.qq.com/cgi-bin/user/info?access_token=".$this->access_token."&openid=".$openid."&lang=zh_CN";
+            return $this->getMethod($url);
+        }else{
+            return false;
+        }
+    }
+
+    public function sendMsgToUser($data){
+        $accessToken = $this->getToken();
+        $token = CJSON::decode($accessToken,true);
+        $this->access_token = $token['access_token'];
+        $url = "https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=".$this->access_token;
+        return $this->httpMethod($url,$data);
     }
 
 

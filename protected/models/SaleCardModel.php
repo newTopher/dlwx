@@ -73,6 +73,14 @@ class SaleCardModel extends Ar{
         }
     }
 
+    static public function getDataSalelistByUid($uid){
+        if($list = self::model()->findAllByAttributes(array('uid'=>$uid))){
+            return $list;
+        }else{
+            return false;
+        }
+    }
+
     static public function getSaleCardByUid($uid,$keywords){
         return self::model()->findByAttributes(array('uid'=>$uid,'keywords'=>$keywords));
     }

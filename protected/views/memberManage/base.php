@@ -100,7 +100,13 @@
                 </fieldset>
             </form>
         </div>
-
+        <?php if(!empty($msg)):?>
+            <div class="msg_fade" id="ui_notifIt" class="info" style="background: deepskyblue; height: 60px; width: 100%; top: 0px; left: 0px;">
+                <p style="line-height: 60px;">
+                    <b><?php echo $msg;?></b>
+                </p>
+            </div>
+        <?php endif;?>
     </div>
 </div>
 
@@ -279,7 +285,7 @@
 <script type="text/javascript" src="http://api.map.baidu.com/getscript?v=2.0&ak=29853e5332078c0e4f650aaac72c5172&services=&t=20140127144714"></script>
 <script type="text/javascript">
     var map = new BMap.Map("mapContainer");
-    var point = new BMap.Point(<?php if($data!=null){ echo $data->position_x;}else{ echo '114.02597366'; } ?>, <?php if($data!=null){ echo $data->position_x;}else{ echo '22.54605355'; } ?>);
+    var point = new BMap.Point(<?php if($data!=null){ echo $data->position_x;}else{ echo '114.02597366'; } ?>, <?php if($data!=null){ echo $data->position_y;}else{ echo '22.54605355'; } ?>);
     map.centerAndZoom(point,15);
     map.enableScrollWheelZoom();
     //加入缩放控件;

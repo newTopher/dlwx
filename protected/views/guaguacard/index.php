@@ -47,7 +47,7 @@
                                             <?php endif; ?>
 
                                             <?php if(date("Y-m-d H:i:s") > ($v->start_date." 00:00:00") && date("Y-m-d H:i:s") < ($v->end_date." 23:59:59")): ?>
-                                            进行中 (<?php echo ActivityRecordModel::getCountsUserByAid($v->id); ?>人参加)
+                                            进行中 (<?php echo ActivityRecordModel::getCountsUserByAid($v->id,2); ?>人参加)
                                             <?php endif; ?>
                                         </span>
                                     </h3>

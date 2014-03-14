@@ -11,17 +11,49 @@ class WeixinFansController extends Controller{
     public $layout='//layouts/column3';
 
     public function actionIndex(){
-        $wxUserModel = new WxuserModel();
-        $wxUserModel->uid = Yii::app()->session['user']->id;
-        $wxUserData = $wxUserModel->getWeixinUser();
-        $this->render('index',array('wxUserData'=>$wxUserData));
+        $criteria = new CDbCriteria();
+        $criteria->order = 'subscribe_time desc';
+        $criteria->addCondition('uid='.Yii::app()->session['user']->id);
+        $criteria->addCondition('status=1');
+        $count = WxuserModel::model()->count($criteria);
+        $pager = new CPagination($count);
+        $pager->pageSize =10;
+        $pager->applyLimit($criteria);
+        $wxUserData = WxuserModel::model()->findAll($criteria);
+        $this->render('index',array('wxUserData'=>$wxUserData,'pages'=>$pager));
     }
 
     public function actionView(){
+        $openid = Yii::app()->request->getParam('openid');
         $wxUserModel = new WxuserModel();
         $wxUserModel->id = Yii::app()->request->getParam('id');
+        $data = $this->getUserDetailInfo($openid);
+        if($data){
+            $data = CJSON::decode($data);
+            $wxUserModel->nickname = $data['nickname'];
+            $wxUserModel->sex = $data['sex'];
+            $wxUserModel->language = $data['language'];
+            $wxUserModel->city = $data['city'];
+            $wxUserModel->province = $data['province'];
+            $wxUserModel->country = $data['country'];
+            $wxUserModel->headimgurl = $data['headimgurl'];
+            $wxUserModel->subscribe_time = $data['subscribe_time'];
+            $wxUserModel->updateWxuser();
+        }
         $wxUserData = $wxUserModel->getWeixinUserById();
-        $this->render('view',array('wxUserData'=>$wxUserData));
+        $criteria = new CDbCriteria();
+        $criteria->order = 'add_time asc';
+        $criteria->addCondition('uid='.Yii::app()->session['user']->id);
+        $criteria->addCondition("from_openid='{$openid}' or to_openid='{$openid}'");
+        $count = MsgListModel::model()->count($criteria);
+        $pager = new CPagination($count);
+        $pager->pageSize =10;
+        $pager->applyLimit($criteria);
+        $msgData = MsgListModel::model()->findAll($criteria);
+        if(!$msgData){
+            $msgData = null;
+        }
+        $this->render('view',array('wxUserData'=>$wxUserData,'msgdata'=>$msgData,'pages'=>$pager,'openid'=>$openid));
     }
 
     public function actionSendMsgView(){
@@ -32,7 +64,9 @@ class WeixinFansController extends Controller{
     }
 
     public function actionSendMsg(){
-
+        $content = Yii::app()->request->getParam('content');
+        $openid = Yii::app()->request->getParam('openid');
+        $data = array("touser"=>$openid,"msgtype"=>'text',"text"=>array("content"=>$content));
     }
 
 

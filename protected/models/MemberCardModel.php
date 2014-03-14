@@ -81,5 +81,9 @@ class MemberCardModel extends Ar{
         return self::model()->findByAttributes(array('uid'=>$uid));
     }
 
+    static public function getMemberCardById($id){
+        return self::model()->findByPk(array('id'=>$id));
+    }
+
 
 }

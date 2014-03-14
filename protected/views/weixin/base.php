@@ -34,6 +34,7 @@
                                     <input class="input-xlarge focused" name="tel" type="text" value="<?php if(isset($webdata->tel)){ echo $webdata->tel;} ?>">
                                 </div>
                             </div>
+                            <!--
                             <div class="control-group">
                                 <label class="control-label" for="focusedInput">回复关键词</label>
                                 <div class="controls">
@@ -41,6 +42,7 @@
                                     <p class="help-block"><span class="label label-important">注意</span>&nbsp;关键词不能与其他活动设定的触发关键词重复,否则不能触发</p>
                                 </div>
                             </div>
+                            -->
                             <div class="control-group">
                                 <label class="control-label" for="focusedInput">微信回复消息标题</label>
                                 <div class="controls">

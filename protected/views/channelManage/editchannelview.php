@@ -23,9 +23,67 @@
                                     <input class="input-xlarge focused" name="url" id="url_check" type="checkbox" value="1" <?php if($channelData->linkid != null){ echo 'checked'; }?>>
                                     <select name="linkid" id="url_select" style="display:<?php if($channelData->linkid != null){ echo 'block';}else{ echo 'none';}?> ">
                                         <option value="">请选择</option>
-                                        <option value="t_1" <?php if($channelData->linkid == 't_1'){ echo 'selected';} ?>>活动</option>
-                                        <option value="t_2" <?php if($channelData->linkid == 't_2'){ echo 'selected';} ?>>文字</option>
-                                        <option value="t_3" <?php if($channelData->linkid == 't_3'){ echo 'selected';} ?>>图文</option>
+                                        <option value="w_1" <?php if($channelData->linkid != null){ if($channelData->linkid == 'w_1'){ echo 'selected';}} ?>>微官网</option>
+                                        <!--
+                                        <optgroup label="-------------平台栏目------------"></optgroup>
+                                        <?php foreach($selectdata['channel'] as $key=>$val): ?>
+                                            <option value="c_<?php echo $val['one']['id'];?>" <?php if($channelData->linkid != null){ if($channelData->linkid == 'c_'.$val['one']['id']){ echo 'selected';}} ?>><?php echo $val['one']['name'];?></option>
+                                            <?php if(count($val['sub_data']) != 0):?>
+                                                <?php foreach($val['sub_data'] as $k=>$v): ?>
+                                                    <option value="c_<?php echo $v->id;?>" <?php if($channelData->linkid != null){ if($channelData->linkid == 'c_'.$v->id){ echo 'selected';}} ?>>|____<?php echo $v->name;?></option>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+                                        -->
+                                        <?php if($selectdata['member'] != null): ?>
+                                            <optgroup label="-------------会员模块------------"></optgroup>
+                                            <option value="m_<?php echo $selectdata['member']->id; ?>" <?php if($channelData->linkid != null){ if($channelData->linkid == 'm_'.$selectdata['member']->id){ echo 'selected';}} ?>>会员卡</option>
+                                        <?php endif; ?>
+
+                                        <?php if($selectdata['saledata'] != null): ?>
+                                            <optgroup label="-------------优惠券活动------------"></optgroup>
+                                            <?php foreach($selectdata['saledata'] as $k=>$v): ?>
+                                                <option value="s_<?php echo $v->id; ?>" <?php if($channelData->linkid != null){ if($channelData->linkid == 's_'.$v->id){ echo 'selected';}} ?>><?php echo $v->name; ?></option>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
+
+                                        <?php if($selectdata['guaguadata'] != null): ?>
+                                            <optgroup label="-------------刮刮卡活动------------"></optgroup>
+                                            <?php foreach($selectdata['guaguadata'] as $k=>$v): ?>
+                                                <option value="g_<?php echo $v->id; ?>" <?php if($channelData->linkid != null){ if($channelData->linkid == 'g_'.$v->id){ echo 'selected';}} ?>><?php echo $v->name; ?></option>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
+
+                                        <?php if($selectdata['zhuandata'] != null): ?>
+                                            <optgroup label="-----------幸运大转盘活动----------"></optgroup>
+                                            <?php foreach($selectdata['zhuandata'] as $k=>$v): ?>
+                                                <option value="z_<?php echo $v->id; ?>" <?php if($channelData->linkid != null){ if($channelData->linkid == 'z_'.$v->id){ echo 'selected';}} ?>><?php echo $v->name; ?></option>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
+
+                                        <?php if($selectdata['yuyuedata'] != null): ?>
+                                            <optgroup label="-----------在线预约模块----------"></optgroup>
+                                            <?php foreach($selectdata['yuyuedata'] as $k=>$v): ?>
+                                                <option value="y_<?php echo $v->id; ?>" <?php if($channelData->linkid != null){ if($channelData->linkid == 'y_'.$v->id){ echo 'selected';}} ?>><?php echo $v->title; ?></option>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
+
+                                        <?php if($selectdata['namecarddata'] != null): ?>
+                                            <optgroup label="-----------微名片模块----------"></optgroup>
+                                            <?php foreach($selectdata['namecarddata'] as $k=>$v): ?>
+                                                <option value="n_<?php echo $v->id; ?>" <?php if($channelData->linkid != null){ if($channelData->linkid == 'n_'.$v->id){ echo 'selected';}} ?>><?php echo $v->name; ?></option>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
+
+                                        <?php if($selectdata['tuandata'] != null): ?>
+                                            <optgroup label="-----------微团购模块----------"></optgroup>
+                                            <?php foreach($selectdata['tuandata'] as $k=>$v): ?>
+                                                <option value="t_<?php echo $v->id; ?>" <?php if($channelData->linkid != null){ if($channelData->linkid == 't_'.$v->id){ echo 'selected';}} ?>><?php echo $v->name; ?></option>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
+                                    </select>
+
+
                                     </select>
                                     &nbsp; &nbsp;&nbsp;&nbsp;<span class="label label-important">注意</span>&nbsp;<font color='green'>使用链接形式将不能填写栏目内容</font>
                                 </div>

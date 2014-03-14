@@ -35,6 +35,16 @@ class ActivityRecordModel extends Ar{
         }
     }
 
+    public function insertZhuanRecord(){
+        $this->date = date("Y-m-d");
+        $this->times = 0;
+        if($this->insert()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     static public function getRecordByUidAid($uid,$aid,$openid,$date,$type){
         if($res = self::model()->findByAttributes(array('uid'=>$uid,'aid'=>$aid,'openid'=>$openid,'date'=>$date,'type'=>$type))){
             return $res;
@@ -53,8 +63,8 @@ class ActivityRecordModel extends Ar{
         }
     }
 
-    static public function getCountsUserByAid($aid){
-        return self::model()->countByAttributes(array('aid'=>$aid));
+    static public function getCountsUserByAid($aid,$type){
+        return self::model()->countByAttributes(array('aid'=>$aid,'type'=>$type));
     }
 
 
