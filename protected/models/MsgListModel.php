@@ -9,7 +9,7 @@
 class MsgListModel extends Ar{
 
     public $id;
-    public $wx_uid;
+    public $uid;
     public $to_openid;
     public $from_openid;
     public $content;
@@ -31,6 +31,52 @@ class MsgListModel extends Ar{
 
         );
     }
+
+    public function getNumByDate($uid,$num){  //$num 为天数，返回第几天前的key总数;
+        $criteria= new CDbCriteria();
+        $criteria->addCondition('uid',$uid);
+        $start_time=time()-$num*24*3600;
+        $end_time=time()-($num-1)*24*3600;
+        $criteria->addBetweenCondition('add_time',$start_time,$end_time);
+        return count(self::model()->findAll($criteria)) ;
+
+    }
+
+    public function getNoUseNumByDate($uid,$num){  //$num 为天数，返回第几天前的没有命中数;
+        $criteria= new CDbCriteria();
+        $criteria->addCondition('uid',$uid);
+        $start_time=time()-$num*24*3600;
+        $end_time=time()-($num-1)*24*3600;
+        $criteria->addCondition("type='nouse'");
+        $criteria->addBetweenCondition('add_time',$start_time,$end_time);
+        return count(self::model()->findAll($criteria)) ;
+    }
+
+    public function getNoUseNumByday($uid,$num){  //$num 为天数，返回第几天前到当前没有命中数;
+        $criteria= new CDbCriteria();
+        $criteria->addCondition('uid',$uid);
+        $start_time=time()-$num*24*3600;
+        $criteria->addCondition("type='nouse'");
+        $criteria->addBetweenCondition('add_time',$start_time,time());
+        return count(self::model()->findAll($criteria)) ;
+    }
+
+    public function getNumByday($uid,$num){  //$num 为天数，返回第几天前到当前的key总数;
+        $criteria= new CDbCriteria();
+        $criteria->addCondition('uid',$uid);
+        $start_time=time()-$num*24*3600;
+        $criteria->addBetweenCondition('add_time',$start_time,time());
+        return count(self::model()->findAll($criteria)) ;
+
+    }
+
+
+
+
+
+
+
+
 
 
 }

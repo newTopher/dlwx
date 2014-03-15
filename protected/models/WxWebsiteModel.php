@@ -69,7 +69,7 @@ class WxWebsiteModel extends Ar{
         $this->status=1;
         $this->add_time=time();
         if($this->insert()){
-            return true;
+            return $this->id;
         }else{
             return false;
         }

@@ -24,6 +24,9 @@ class OrderManageController extends Controller{
             $OrderManage->uid = Yii::app()->session['user']->id;
             $OrderManage->title =  Yii::app()->request->getParam('title','');
             $OrderManage->image_path =  Yii::app()->request->getParam('image_path','');
+            $OrderManage->username =  Yii::app()->request->getParam('image_path','');
+            $OrderManage->image_path =  Yii::app()->request->getParam('image_path','');
+            $OrderManage->image_path =  Yii::app()->request->getParam('image_path','');
             $OrderManage->introduce =  Yii::app()->request->getParam('introduce','');
             $OrderManage->adress =  Yii::app()->request->getParam('address','');
             $OrderManage->position_x =  Yii::app()->request->getParam('position_x','');
@@ -81,12 +84,21 @@ class OrderManageController extends Controller{
     }
 
     public function actionOrderList(){
-       $uid= Yii::app()->request->getParam('uid');
-       $oid= Yii::app()->request->getParam('oid');
-       $order= new OrderModel();
-       $list=$order->OrderSelectByUid($uid,$oid);
-       $this->render('list',array('list'=>$list));
+        $oid= Yii::app()->request->getParam('oid');
+        $criteria = new CDbCriteria();
+        $criteria->order = 'add_time desc';
+        $criteria->addCondition('uid='.Yii::app()->session['user']->id);
+        $criteria->addCondition('orderid='.$oid);
+        $criteria->addCondition('status=1');
+        $count = OrderModel::model()->count($criteria);
+        $pager = new CPagination($count);
+        $pager->pageSize =10;
+        $pager->applyLimit($criteria);
+        $list = OrderModel::model()->findAll($criteria);
+        $this->render('list',array('data'=>$list,'pages'=>$pager));
     }
+
+
 
 }
 

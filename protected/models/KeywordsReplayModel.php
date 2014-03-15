@@ -32,8 +32,6 @@ class KeywordsReplayModel extends Ar{
         $this->update_time = time();
         if($this->insert()){
             return $this->id;
-<<<<<<< HEAD
-=======
         }else{
             return false;
         }
@@ -45,12 +43,11 @@ class KeywordsReplayModel extends Ar{
         $keywordsdata->update_time = time();
         if($keywordsdata->save()){
             return true;
->>>>>>> origin/master
+
         }else{
             return false;
         }
     }
-
     public function getKeyWordsByUid(){
         return self::model()->findAllByAttributes(array('uid'=>$this->uid));
     }

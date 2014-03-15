@@ -60,4 +60,11 @@ class OrderModel extends Ar{
         }
     }
 
+    public function Ordercheck($id){
+        if(self::model()->updateByPk($id,array('type'=>1))){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

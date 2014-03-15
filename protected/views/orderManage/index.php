@@ -2,7 +2,7 @@
 <div class="row-fluid">
     <div class="box span12">
         <div class="box-header well">
-            <h2><a href="<?php echo Yii::app()->request->baseUrl; ?>/OrderManage/Index"><i class="icon-info-sign"></i> 预约管理 </a></h2>
+            <h2><a href="<?php echo Yii::app()->request->baseUrl; ?>/OrderManage/Index">预约管理 </a></h2>
 
         </div>
         <div class="box-content">

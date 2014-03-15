@@ -22,7 +22,7 @@ class LoginController extends Controller{
         $errMsg='';
         $email=Yii::app()->request->getParam('email','');
         if(!empty($email)){
-            Yii::app()->user->returnUrl = Yii::app()->getBaseUrl()."/main";
+            Yii::app()->user->returnUrl = Yii::app()->getBaseUrl()."/User/Home";
             $model->email=Yii::app()->request->getParam('email','');
             $model->verifyCode=Yii::app()->request->getParam('verifyCode','');
             $model->password=Yii::app()->request->getParam('password','');

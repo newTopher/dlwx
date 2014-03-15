@@ -98,10 +98,12 @@ class ApiController extends Controller {
                                 $this->responseText($v->text);
                             }else if($v->source_type == 2){
                                 $temp = explode('_',$v->source_id);
-                                if($temp[0] == 't'){
+                                if($temp[0] == 'w'){
                                     $this->getWeiWebMsg();
                                 }else if($temp[0] == 'g'){
                                     $this->getGuaCard();
+                                }else if($temp[0] == 't'){
+                                    $this->getTuangood($temp[1]);
                                 }else{
                                     $this->nouseReplay();
                                 }
@@ -110,13 +112,14 @@ class ApiController extends Controller {
                                     $this->getMemberCard();
                                 }elseif($v->type == 'OrderCard'){
                                     $this->getOrderCard();
-<<<<<<< HEAD
-=======
-                                }elseif($v->type == 'SaleCard'){
+                      }elseif($v->type == 'SaleCard'){
                                     $this->getSaleCard();
                                 }elseif($v->type == 'GuaguaCard'){
                                     $this->getGuaguaCard();
->>>>>>> origin/master
+                                }elseif($v->type == 'ZhuanCard'){
+                                    $this->getZhuanCard();
+                                }elseif($v->type == 'CallingCard'){
+                                    $this->getCallingcard();
                                 }
                             }
                         }
@@ -130,10 +133,12 @@ class ApiController extends Controller {
                                 $this->responseText($v->text);
                             }else if($v->source_type == 2){
                                 $temp = explode('_',$v->source_id);
-                                if($temp[0] == 't'){
+                                if($temp[0] == 'w'){
                                     $this->getWeiWebMsg();
                                 }else if($temp[0] == 'g'){
                                     $this->getGuaCard();
+                                }else if($temp[0] == 't'){
+                                    $this->getTuangood($temp[1]);
                                 }else{
                                     $this->nouseReplay();
                                 }
@@ -142,13 +147,14 @@ class ApiController extends Controller {
                                     $this->getMemberCard();
                                 }elseif($v->type=='OrderCard'){
                                     $this->getOrderCard();
-<<<<<<< HEAD
-=======
                                 }elseif($v->type == 'SaleCard'){
                                     $this->getSaleCard();
                                 }elseif($v->type == 'GuaguaCard'){
                                     $this->getGuaguaCard();
->>>>>>> origin/master
+                                }elseif($v->type == 'ZhuanCard'){
+                                    $this->getZhuanCard();
+                                }elseif($v->type == 'CallingCard'){
+                                    $this->getCallingcard();
                                 }
                             }
                         }
@@ -172,6 +178,7 @@ class ApiController extends Controller {
             return false;
         }
     }
+
 
     public function getFirstData(){
         $data = FirstReplayModel::getDataFristByUid($this->userdata->id);
@@ -202,6 +209,8 @@ class ApiController extends Controller {
                         $this->getWeiWebMsg();
                     }else if($temp[0] == 'g'){
                         $this->getGuaCard();
+                    }else if($temp[0] == 't'){
+                        $this->getTuangood($temp[1]);
                     }else{
                         $this->nouseReplay();
                     }
@@ -250,9 +259,21 @@ class ApiController extends Controller {
             return false;
         }
     }
-<<<<<<< HEAD
-=======
-
+    /*-------名片-------*/
+    public function getCallingCard(){
+        $keyword = trim($this->postObj->Content);
+        $Callingcard = CallingcardManageModel::getCallingCardByUid($this->userdata->id,$keyword);
+        if($Callingcard){
+            $data= new stdClass();
+            $data->title=$Callingcard->title;
+            $data->description=$Callingcard->introduce;
+            $data->picurl = Yii::app()->request->hostInfo.'/upload/slider/'.$Callingcard->image_path;
+            $data->url = Yii::app()->request->hostInfo.'/CallingCard/Index/sid/'.$this->userdata->id.'/f/'.$this->postObj->FromUserName.'/c/'.$Callingcard->id;
+            $this->responseImageText($data);
+        }else{
+            return false;
+        }
+    }
     /*
      * 优惠券
      */
@@ -288,7 +309,24 @@ class ApiController extends Controller {
             return false;
         }
     }
->>>>>>> origin/master
+
+    /*
+     * 幸运大转盘
+     */
+    public function getZhuanCard(){
+        $keyword = trim($this->postObj->Content);
+        $zhuancarddata = ZhuanCardModel::getZhuanCardByUid($this->userdata->id,$keyword);
+        if($zhuancarddata){
+            $data = new stdClass();
+            $data->title = $zhuancarddata->index_title;
+            $data->description = $zhuancarddata->description;
+            $data->picurl =  Yii::app()->request->hostInfo.'/upload/slider/'.$zhuancarddata->index_image;
+            $data->url = Yii::app()->request->hostInfo.'/Zhuan/I/sid/'.$this->userdata->id.'/f/'.$this->postObj->FromUserName.'/s/'.$zhuancarddata->id;
+            $this->responseImageText($data);
+        }else{
+            return false;
+        }
+    }
 
     /*
      * 微官网
@@ -303,6 +341,23 @@ class ApiController extends Controller {
         $this->responseImageText($data);
     }
 
+    /*
+     * 团购
+     */
+    public function getTuangood($id){
+        $tuandata = TuangoodModel::getTuangoodById($id);
+        if($tuandata){
+            $data = new stdClass();
+            $data->title = $tuandata->name;
+            $data->description = $tuandata->description;
+            $data->picurl =  Yii::app()->request->hostInfo.'/upload/slider/'.$tuandata->index_image;
+            $data->url = Yii::app()->request->hostInfo.'/Tuan/I/sid/'.$this->userdata->id.'/f/'.$this->postObj->FromUserName.'/s/'.$tuandata->id;
+            $this->responseImageText($data);
+        }else{
+            return false;
+        }
+    }
+
     /*无效回复*/
     public function nouseReplay(){
         $data = NouseReplayModel::getNouseData($this->userdata->id);
@@ -311,8 +366,10 @@ class ApiController extends Controller {
                 $this->responseText($data->text);
             }else if($data->type == 2){
                 $temp = explode('_',$data->source_id);
-                if($temp[0] == 't'){
+                if($temp[0] == 'w'){
                     $this->getWeiWebMsg();
+                }else if($temp[0] == 't'){
+                    $this->getTuangood($temp[1]);
                 }
             }
         }else{

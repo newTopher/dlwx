@@ -38,7 +38,7 @@
     <!--普通用户登录时显示-->
     <ul class="round">
         <li>
-            <a href="#"><span><?php echo $order->title;?><em class="ok">0</em></span></a>
+            <a href="#"><span><?php echo $order->title;?></span></a>
         </li>
     </ul>
     <!--后台可控制是否显示-->
@@ -350,8 +350,7 @@
         });
     }, false)
 </script>
-<footer style="text-align:center; color:#ffd800;margin-right:20px;margin-top:0px;">
-    <a href="<?php echo Yii::app()->request->baseUrl.'';?>http://www.weimob.com/weisite/home?pid=1071&bid=5&wechatid=osXr8jo2_7zz3s0O5jzstVIlfmNc&wxref=mp.weixin.qq.com">©万普微盟技术支持</a></footer>
+<footer style="text-align:center; color:#ffd800;margin-right:20px;margin-top:0px;"><a href="">©万普微盟技术支持</a></footer>
 <div mark="stat_code" style="width:0px; height:0px; display:none;">
 </div>
 

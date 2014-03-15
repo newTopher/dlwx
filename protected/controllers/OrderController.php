@@ -94,4 +94,39 @@ public $layout='//layouts/column4';
         $result = array('errno'=>0,'msg'=>'123','url'=>Yii::app()->request->baseUrl.'/Order/OrderUpdate/o/'.$orderList->uid.'/u/'.$orderList->openid.'/r/'.$orderList->orderid);
         echo CJSON::encode($result,true);
     }
+
+    public function actionGetOrder(){
+        $id = Yii::app()->request->getParam('id');
+        $OrderModel = new OrderModel();
+        $OrderModel->id = $id;
+        $data =  $OrderModel->OrderSelect();
+        $input=$data->input_data;
+        $set=explode('$',$input);
+        array_shift($set);
+        foreach($set as $k){
+            $sets[]=explode('#',$k);
+        }
+        $select=$data->select_data;
+        $set1=explode('$',$select);
+        array_shift($set1);
+        foreach($set1 as $k){
+            $sets1[]=explode('#',$k);
+        }
+        if($data){
+            echo CJSON::encode(array('code'=>0,'data'=>$data->attributes,'input_data'=>$sets,'select_data'=>$sets1));
+        }else{
+            echo CJSON::encode(array('code'=>-1,'msg'=>'获取会员资料失败'));
+        }
+
+    }
+
+    public function actioncheckOrder(){
+        $id = Yii::app()->request->getParam('id');
+        $OrderModel = new OrderModel();
+        if($OrderModel->Ordercheck($id)){
+            echo CJSON::encode(array('code'=>0));
+        }else{
+            echo CJSON::encode(array('code'=>1));
+        }
+    }
 }

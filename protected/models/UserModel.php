@@ -25,6 +25,8 @@ class UserModel extends Ar{
     public $wt_account;
     public $wt_token;
     public $trade_id;
+    public $web_type;
+    public $status;
     public $msg_status;
     public $wx_code_url;
     public $wt_code_url;
@@ -54,7 +56,7 @@ class UserModel extends Ar{
     public function addUser(){
         $this->add_time=time();
         if($this->insert()){
-            return true;
+            return $this->id;
         }else{
             return false;
         }
