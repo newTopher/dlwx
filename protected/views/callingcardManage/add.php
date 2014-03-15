@@ -201,12 +201,6 @@
                         <td><input type="checkbox" name="DisplayName" value="1" checked="">是否显示</td>
                     </tr>
                     <tr>
-                        <td>地址导航：</td>
-                        <td><input type="text" class="form_input" value="一键导航" name="" disabled="disabled"></td>
-                        <td><input type="text" class="form_input" placeholder="请设置您的导航名" value="" name="[]"></td>
-                        <td><input type="checkbox" name="DisplayTelephone" value="1" checked="nav_data[]">是否显示</td>
-                    </tr>
-                    <tr>
                         <td>分享：</td>
                         <td><input type="text" class="form_input" value="分享给朋友" name="" disabled="disabled"></td>
                         <td><input type="text" class="form_input" placeholder="请设置您的导航名" name="nav_data[]" ></td>

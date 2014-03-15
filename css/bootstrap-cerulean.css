@@ -179,7 +179,6 @@ a:hover {
 
 [class *="span"] {
 	float: left;
-	margin-left: 20px;
 }
 
 .container,.navbar-fixed-top .container,.navbar-fixed-bottom .container
@@ -306,8 +305,7 @@ a:hover {
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 	float: left;
-	margin-left: 2.127659574%;
-	*margin-left: 2.0744680846382977%;
+    margin-left:1%;
 }
 
 .row-fluid [class *="span"]:first-child {
@@ -325,8 +323,8 @@ a:hover {
 }
 
 .row-fluid .span10 {
-	width: 82.97872339599999%;
-	*width: 82.92553190663828%;
+	width: 83.97872339599999%;
+	*width: 83.92553190663828%;
 }
 
 .row-fluid .span9 {
@@ -335,8 +333,8 @@ a:hover {
 }
 
 .row-fluid .span8 {
-	width: 65.95744680199999%;
-	*width: 65.90425531263828%;
+	width: 64.95744680199999%;
+	*width: 64.90425531263828%;
 }
 
 .row-fluid .span7 {
@@ -355,13 +353,13 @@ a:hover {
 }
 
 .row-fluid .span4 {
-	width: 31.914893614%;
+	width: 31.3%;
 	*width: 31.8617021246383%;
 }
 
 .row-fluid .span3 {
-	width: 23.404255317%;
-	*width: 23.3510638276383%;
+	width: 24.164255317%;
+	*width: 24.164255317%;
 }
 
 .row-fluid .span2 {
@@ -391,7 +389,7 @@ a:hover {
 
 .container-fluid {
 	padding-right: 20px;
-	padding-left: 20px;
+	padding-left: 10px;
 	*zoom: 1;
 }
 
@@ -1039,7 +1037,7 @@ input:focus:required:invalid:focus,textarea:focus:required:invalid:focus,select:
 	padding: 17px 20px 18px;
 	margin-top: 18px;
 	margin-bottom: 18px;
-	background-color: #f5f5f5;
+	/* background-color: #f5f5f5;*/
 	border-top: 1px solid #e5e5e5;
 	*zoom: 1;
 }
@@ -2163,7 +2161,7 @@ table .span24 {
 	z-index: 1000;
 	display: none;
 	float: left;
-	min-width: 160px;
+	min-width: 120px;
 	padding: 4px 0;
 	margin: 1px 0 0;
 	list-style: none;
@@ -2206,6 +2204,7 @@ table .span24 {
 	line-height: 18px;
 	color: #333333;
 	white-space: nowrap;
+
 }
 
 .dropdown-menu li>a:hover,.dropdown-menu .active>a,.dropdown-menu .active>a:hover
@@ -2251,8 +2250,8 @@ table .span24 {
 	min-height: 20px;
 	padding: 19px;
 	margin-bottom: 20px;
-	background-color: #f5f5f5;
-	border: 1px solid #eee;
+	/*background-color: #f5f5f5;
+	border: 1px solid #eee;*/
 	border: 1px solid rgba(0, 0, 0, 0.05);
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -2922,9 +2921,9 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini {
 }
 
 .alert-info {
-	background-color: #edebe1;
-	border-color: #e0d9cb;
-	color: #817b58;
+	background-color: #E6E6E6;
+	border-color: #DFDEDD;
+	color: #090808;
 }
 
 .alert-block {
@@ -4265,6 +4264,7 @@ a.label:hover,a.badge:hover {
 
 .label-success,.badge-success {
 	background-color: #669533;
+    text-align:center;
 }
 
 .label-success[href],.badge-success[href] {

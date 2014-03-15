@@ -120,12 +120,13 @@ class AgentController extends Controller{
         }
     }
 
-    public function actionAddtuser(){
+   public function actionAddtUser(){
         $User= new UserModel();
+        $WxWebsiteModel= new WxWebsiteModel();
         $email= Yii::app()->request->getParam('username','');
         if($User->findByEmail($email)){
            $Msg= "用户名已存在";
-            $this->redirect("http://www.wapwei.com/site/reg1.php?Msg=$Msg");
+           $this->redirect("http://www.wapwei.com/site/reg1.php?Msg=$Msg");
         }else{
             $User->email=$email;
             $User->password=md5(Yii::app()->request->getParam('password',''));
@@ -133,18 +134,28 @@ class AgentController extends Controller{
             $User->trade_id=Yii::app()->request->getParam('trade_id','');
             $User->qq=Yii::app()->request->getParam('qq','');
             $User->wx_token=md5($User->email);
+            $User-> web_type=1;
+            $User->status=1;
+            $User->trade_id=1;
             $User->puid=0;
             $User->deadline_date=time()+7*3600*24;
-            if($User->addUser()){
+            $WxWebsiteModel->template_id=rand(13,17);
+            $WxWebsiteModel->update_time=time();
+            $WxWebsiteModel->uid=$User->addUser();
+
+            if($last_id = $WxWebsiteModel->addWxWeb()){
+                $templatename = 'Template'.$WxWebsiteModel->template_id.'Model';
+                $templateModel = new $templatename();
+                $templateModel->uid = $WxWebsiteModel->uid;
+                $templateModel->site_id = $last_id;
+                $templateModel->insertTemplate();
                 $url='/login/index/email/'.$User->email.'/password/'.Yii::app()->request->getParam('password','');
                echo "<script>window.location.href ='".$url."';</script>";
             }else{
                 echo "<script>window.location.href='http://www.wapwei.com/site/reg1.php';</script>";
             }
         }
-
     }
-
 
     public function actionApplyList(){
         $puid = Yii::app()->session['user']->id;

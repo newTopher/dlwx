@@ -1,11 +1,5 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: Topher
- * Date: 13-12-10
- * Time: 上午12:40
- * To change this template use File | Settings | File Templates.
- */
+
 class LoginController extends Controller{
 
     public function actions()
@@ -49,6 +43,7 @@ class LoginController extends Controller{
         }
         $this->render('login',array('errMsg'=>$errMsg,'model'=>$model));
     }
+
     public function actionLoginOut(){
         echo 1;
         $this->redirect(Yii::app()->request->baseUrl."/login/index");

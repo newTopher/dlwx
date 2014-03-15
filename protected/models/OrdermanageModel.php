@@ -14,6 +14,7 @@ class OrdermanageModel extends Ar{
     public $order_introduce;
     public $setname_introduce;
     public $feedback_info;
+    public $address;
     public $displayname;
     public $displaytelephone;
     public $displayreservedate;

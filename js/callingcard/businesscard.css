@@ -1,0 +1,28 @@
+/*
+Powered by ly200.com		http://www.ly200.com
+广州联雅网络科技有限公司		020-83226791
+*/
+
+body{background:#eaeaea;}
+
+#businesscard{padding:12px 8px; box-sizing:border-box; margin:0 auto; overflow:hidden; position:relative;}
+#businesscard .none{display:none;}
+#businesscard .logo{ width:80px; height:80px; overflow:hidden; position:absolute; top:12px; left:13px; z-index:1;}
+#businesscard .logo img{max-height:80px;}
+#businesscard .toper{width:96%; height:32px; overflow:hidden; background:url(toper.jpg) no-repeat; background-size:100% 32px;}
+#businesscard .toper h1{width:59%; height:32px; line-height:36px; overflow:hidden; font-size:20px; font-weight:bold; float:left; padding-left:90px; box-sizing:border-box;}
+#businesscard .toper label{width:40%; height:32px; line-height:32px; float:right; font-size:16px; font-weight:bold; color:#e31a08; text-align:center;}
+#businesscard li{width:100%; margin:0 auto;}
+#businesscard li.t{width:100%; height:10px; background:url(box_top.jpg) no-repeat; background-size:100% 10px; overflow:hidden;}
+#businesscard li.b{width:100%; height:16px; background:url(box_bottom.jpg) no-repeat; background-size:100% 16px; overflow:hidden;}
+#businesscard li.c{width:100%; padding:8px 24px; box-sizing:border-box; background:url(box_bg.jpg) repeat-y; background-size:100% 4px;}
+#businesscard li.c dt{width:100%; padding-left:66px; padding-bottom:16px; margin-top:-10px; box-sizing:border-box; overflow:hidden; font-size:18px;}
+#businesscard li.c dd{width:100%; padding:12px 0; line-height:32px; padding-left:42px; box-sizing:border-box; overflow:hidden; position:relative; font-size:16px; border-top:1px solid #eee;}
+#businesscard li.c dd.bn{ border:none;}
+#businesscard li.c dd label{display:table-cell; width:32px; height:32px; position:absolute; left:0px; top:12px; overflow:hidden; text-align:center; vertical-align:middle; *display:block; *font-family:Arial; *font-size:28px;}
+#businesscard li.c dd label img{max-width:32px; max-height:32px; vertical-align:middle;}
+#businesscard .bottom{padding:5px;}
+#businesscard .bottom a{display:block; width:100%; height:50px; line-height:50px; font-size:18px; font-weight:bold; color:#888; margin:10px auto; box-sizing:border-box; text-align:center; text-decoration:none; background:url(btn_bg.jpg) no-repeat; background-size:100% 50px;}
+
+#share{width:100%; height:100%; overflow:hidden; text-align:right; position:fixed; top:0px; left:0px; display:none; background:#000; background:rgba(0,0,0,0.8); filter:alpha(opacity=80); -moz-opacity:0.8; -khtml-opacity: 0.8; opacity: 0.8; z-index:100;}
+#share img{max-width:600px; width:100%; position:relative;}

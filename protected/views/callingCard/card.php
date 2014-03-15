@@ -43,7 +43,11 @@
     </ul>
     <div class="bottom">
         <?php $a=json_decode($list->nav_data);?>
-        <a href="<?php echo Yii::app()->request->baseUrl.'/W/I/sid/'.$list->uid;?>"><?php echo $a[0]?$a[0]:'进入微网站';?></a>
+        <?php if($list->uid==2):?>
+            <a href="http://weixin.wapwei.com/wapwei/index.html"><?php echo $a[0]?$a[0]:'进入微网站';?></a>
+        <?php else: ?>
+            <a href="<?php echo Yii::app()->request->baseUrl.'/W/I/sid/'.$list->uid;?>"><?php echo $a[0]?$a[0]:'进入微网站';?></a>
+        <?php endif; ?>
         <a href="#share"><?php echo $a[1]?$a[1]:'分享给好友'?></a>
         <a href="tel:<?php echo $list->mobilephone?$list->mobilephone:$list->tel1;?>"><?php echo $a[2]?$a[2]:'招商加盟';?></a>
     </div>

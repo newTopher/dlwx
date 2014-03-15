@@ -43,11 +43,11 @@ class KeywordsReplayModel extends Ar{
         $keywordsdata->update_time = time();
         if($keywordsdata->save()){
             return true;
+
         }else{
             return false;
         }
     }
-
     public function getKeyWordsByUid(){
         return self::model()->findAllByAttributes(array('uid'=>$this->uid));
     }

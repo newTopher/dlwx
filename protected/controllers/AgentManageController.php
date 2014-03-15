@@ -125,7 +125,6 @@ class AgentManageController extends Controller{
         }else{
             $e=2;
         }
-
         $pass=Yii::app()->request->getParam('wx_password','');
         $pass1=Yii::app()->request->getParam('wx_password1','');
         if(!empty($pass1)&&!empty($pass)&&$pass==$pass1){

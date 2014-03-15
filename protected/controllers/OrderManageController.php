@@ -20,10 +20,15 @@ class OrderManageController extends Controller{
             $KeywordsReplay->preg_type=1;
             $KeywordsReplay->uid=Yii::app()->session['user']->id;
             $OrderManage->kid=$KeywordsReplay->insertKeywords();
+            $OrderManage->keywords = Yii::app()->request->getParam('keywords','');
             $OrderManage->uid = Yii::app()->session['user']->id;
             $OrderManage->title =  Yii::app()->request->getParam('title','');
             $OrderManage->image_path =  Yii::app()->request->getParam('image_path','');
+            $OrderManage->username =  Yii::app()->request->getParam('image_path','');
+            $OrderManage->image_path =  Yii::app()->request->getParam('image_path','');
+            $OrderManage->image_path =  Yii::app()->request->getParam('image_path','');
             $OrderManage->introduce =  Yii::app()->request->getParam('introduce','');
+            $OrderManage->adress =  Yii::app()->request->getParam('address','');
             $OrderManage->position_x =  Yii::app()->request->getParam('position_x','');
             $OrderManage->position_y =  Yii::app()->request->getParam('position_y','');
             $OrderManage->header_image_path =  Yii::app()->request->getParam('header_image_path','');
@@ -43,7 +48,7 @@ class OrderManageController extends Controller{
             $SelectValue =  Yii::app()->request->getParam('SelectValue','');
             $arr=array('inputname'=>$InputName,'inputvalue'=>$InputValue,'selectname'=>$SelectName,'selectvalue'=>$SelectValue);
             $OrderManage->feedback_info=json_encode($arr);
-            if($OrderManage->settingInsert() && $KeywordsReplay->insertKeywords()){
+            if($OrderManage->settingInsert()){
                 $this->redirect(Yii::app()->request->baseUrl."/OrderManage/Index");
                 $msg="添加成功";
             }else{
@@ -77,6 +82,22 @@ class OrderManageController extends Controller{
         }
         $this->render('update',array('order'=>$order,'key'=>$keys));
     }
+
+    public function actionOrderList(){
+        $oid= Yii::app()->request->getParam('oid');
+        $criteria = new CDbCriteria();
+        $criteria->order = 'add_time desc';
+        $criteria->addCondition('uid='.Yii::app()->session['user']->id);
+        $criteria->addCondition('orderid='.$oid);
+        $criteria->addCondition('status=1');
+        $count = OrderModel::model()->count($criteria);
+        $pager = new CPagination($count);
+        $pager->pageSize =10;
+        $pager->applyLimit($criteria);
+        $list = OrderModel::model()->findAll($criteria);
+        $this->render('list',array('data'=>$list,'pages'=>$pager));
+    }
+
 
 
 }
