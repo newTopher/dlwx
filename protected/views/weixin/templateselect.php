@@ -1,12 +1,8 @@
 <div class="row-fluid sortable ui-sortable">
     <div class="box span12">
         <div class="box-header well" data-original-title="">
-            <h2><i class="icon-picture"></i> 所有模板</h2>
-            <div class="box-icon">
-                <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
-                <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
-                <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
-            </div>
+            <h2>所有模板</h2>
+
         </div>
         <div class="box-content">
             <div class="trade" style="width: 100%;height: 35px;line-height: 35px;padding: 15px;">
@@ -21,7 +17,7 @@
             </div>
             <ul class="thumbnails gallery" id="<?php echo $trade_id;?>">
                 <?php foreach($list as $val):?>
-                    <li id="<?php echo $val->id;?>" trade_id="<?php echo $val->trade_id;?>" class="thumbnail" <?php if($val->id == $webdata->template_id): ?>style="background-color: #ff4500;"<?php endif; ?>>
+                    <li onclick="return confirm('您确定选择此模板？')" id="<?php echo $val->id;?>" trade_id="<?php echo $val->trade_id;?>" class="thumbnail" <?php if($val->id == $webdata->template_id): ?>style="background-color: #ff4500;"<?php endif; ?>>
                         <?php $nail="nail_".$val->template_name; ?>
                         <a href="javascript:;" class="cboxElement"><img class="grayscale" src="<?php echo Yii::app()->request->baseUrl."/".$val->path_url.$val->nail_url;?>" alt="模版1" style="display: block;"></a>
                         <span style="display:block;padding: 5px 0px;text-align: center;font-size: 15px;color:white;font-weight: bold;"><?php echo $val->china_name; ?></span>

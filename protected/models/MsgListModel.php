@@ -32,6 +32,23 @@ class MsgListModel extends Ar{
         );
     }
 
+    public function getNumByDate($uid,$num){
+        $criteria= new CDbCriteria();
+        $criteria->addCondition('uid',$uid);
+        $start_time=time()-$num*24*3600;
+        $criteria->addBetweenCondition('add_time',$start_time,time());
+        return count(self::model()->findAll($criteria)) ;
+    }
+
+    public function getNoUseNumByDate($uid,$num){
+        $criteria= new CDbCriteria();
+        $criteria->addCondition('uid',$uid);
+        $start_time=time()-$num*24*3600;
+        $criteria->addCondition('type','nouse');
+        $criteria->addBetweenCondition('add_time',$start_time,time());
+        return count(self::model()->findAll($criteria)) ;
+    }
+    
     public function insertMsg(){
         $this->add_time = time();
         $this->send_times = 0;

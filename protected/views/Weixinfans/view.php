@@ -96,7 +96,7 @@
 
                         <textarea id="msgBox" style="width: 597px;height: 100px;margin-top:25px;float: left"></textarea>
 
-                        <button id="send_btns" class="btn btn-small btn-primary" style="float: left;margin-top: 10px;margin-bottom: 10px;width: 100px;">发送</button>
+                        <button openid="<?php echo $openid; ?>" id="send_btn" class="btn btn-small btn-primary" style="float: left;margin-top: 10px;margin-bottom: 10px;width: 100px;">发送</button>
                     </div>
                 </div>
             </div>
@@ -106,3 +106,46 @@
 
 </div>
 </div>
+<script type="text/javascript">
+    $(function(){
+        $("#send_btn").click(function(){
+            var content = $("#msgBox").val();
+            var openid = $(this).attr('openid');
+            if(!content){
+                notif({
+                    type: "warning",
+                    msg: '发送内容不能为空哦',
+                    position: "center",
+                    width:"all",
+                    height:100,
+                    opacity: 1
+                });
+                return false;
+            }
+
+            $.post('<?php echo Yii::app()->request->baseUrl; ?>/WeixinFans/SendMsg',{content:content,openid:openid},function(data){
+                if(data.code==0){
+                    notif({
+                        type: "success",
+                        msg: '消息发送成功',
+                        position: "center",
+                        width:"all",
+                        height:100,
+                        opacity: 1
+                    });
+                    window.location.reload();
+                }else{
+                    notif({
+                        type: "warning",
+                        msg: data.msg,
+                        position: "center",
+                        width:"all",
+                        height:100,
+                        opacity: 1
+                    });
+                    return false;
+                }
+            },'json');
+        });
+    });
+</script>

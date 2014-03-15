@@ -132,11 +132,53 @@ class Controller extends CController
     }
 
     public function sendMsgToUser($data){
-        $accessToken = $this->getToken();
-        $token = CJSON::decode($accessToken,true);
-        $this->access_token = $token['access_token'];
-        $url = "https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=".$this->access_token;
-        return $this->httpMethod($url,$data);
+        $userModel = UserModel::findUserByid(Yii::app()->session['user']->id);
+        if($userModel->wx_appid != null && $userModel->wx_appsecret != null){
+            $this->APPID = $userModel->wx_appid;
+            $this->APPSECRET = $userModel->wx_appsecret;
+            $accessToken = $this->getToken();
+            $token = CJSON::decode($accessToken,true);
+            $this->access_token = $token['access_token'];
+            $url = "https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=".$this->access_token;
+            return $this->httpMethod($url,$data);
+        }else{
+            return false;
+        }
+    }
+
+    public function encode($var) {
+        switch (gettype($var)) {
+            case 'boolean':
+                return $var ? 'true' : 'false'; // Lowercase necessary!
+            case 'integer':
+            case 'double':
+                return sprintf( '"%s"', $var);
+            case 'resource':
+            case 'string':
+                return '"'. str_replace(array("\r", "\n", "\t", '\\\'', "/"),
+                    array('\r', '\n', '\t', '\'', '\\/'),
+                    addslashes($var)) .'"';
+            case 'array':
+                // Arrays in JSON can't be associative. If the array is empty or if it
+                // has sequential whole number keys starting with 0, it's not associative
+                // so we can go ahead and convert it as an array.
+                if ( empty ($var) || array_keys($var) === range(0, sizeof($var) - 1)) {
+                    $output = array();
+                    foreach ($var as $v) {
+                        $output[] = $this->encode($v);
+                    }
+                    return '['. implode(',', $output) .']';
+                }
+            // Otherwise, fall through to convert the array as an object.
+            case 'object':
+                $output = array();
+                foreach ($var as $k => $v) {
+                    $output[] =  $this->encode(strval($k)) .':'.  $this->encode($v);
+                }
+                return '{'. implode(',', $output) .'}';
+            default:
+                return 'null';
+        }
     }
 
 

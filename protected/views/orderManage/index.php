@@ -7,7 +7,7 @@
         </div>
         <div class="box-content">
             <div class="box-content">
-                <a href="<?php echo Yii::app()->request->baseUrl; ?>/OrderManage/Add" class="btn btn-large btn-primary">
+                <a href="<?php echo Yii::app()->request->baseUrl; ?>/OrderManage/Add" class="btn btn-normal btn-primary">
                    添加预约</a>
                 <p style="boder:1px"></p>
                 <?php ?>

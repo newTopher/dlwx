@@ -222,10 +222,12 @@ class ApiController extends Controller {
                 $wxUserModel  = new WxuserModel();
                 $wxUserModel->uid = $this->userdata->id;
                 $wxUserModel->openid =$this->postObj->FromUserName;
-                if(!$res = $wxUserModel->getUserByUidAndOpenId()){
+                $res = $wxUserModel->getUserByUidAndOpenId();
+                if(!$res){
                     $wxUserModel->addUser();
                 }else{
                     if($res->status == 0){
+                        $wxUserModel->id = $res->id;
                         $wxUserModel->status = 1;
                         $wxUserModel->updateWxuserStatus();
                     }
@@ -272,12 +274,14 @@ class ApiController extends Controller {
                 $wxUserModel->id =$res->id;
                 $wxUserModel->status = 0;
                 $wxUserModel->updateWxuserStatus();
+                $this->insertReplay('unsubscribe','取消关注',1);
+                $contentStr = '谢谢关注';
                 break;
             default :
                 $contentStr = "Unknow Event: ".$this->postObj->Event;
                 break;
         }
-        $this->responseText($this->postObj, $contentStr);
+        $this->responseText($contentStr);
     }
 
 
@@ -286,7 +290,7 @@ class ApiController extends Controller {
         $data = NouseReplayModel::getNouseData($this->userdata->id);
         if($data){
             if($data->type == 1){
-                $this->insertReplay('nouse',$data->text,1);
+                $this->insertReplay('text',$data->text,1);
                 $this->responseText($data->text);
             }else if($data->type == 2){
                 $temp = explode('_',$data->source_id);
@@ -306,6 +310,8 @@ class ApiController extends Controller {
                     $this->getYu($temp[1]);
                 }else if($temp[0] == 'n'){
                     $this->getName($temp[1]);
+                }else{
+                    $this->insertReplay('nouse',null,1);
                 }
             }
         }else{

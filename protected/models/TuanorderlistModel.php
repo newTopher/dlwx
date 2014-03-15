@@ -50,6 +50,18 @@ class TuanorderlistModel extends Ar{
         return self::model()->findByPk(array('id'=>$id));
     }
 
+    static public function getAllOrderList($uid){
+        return self::model()->findAllByAttributes(array('uid'=>$uid));
+    }
+
+    public function updateOrder(){
+        if(self::model()->updateByPk(array('id'=>$this->id),array('status'=>$this->status))){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 
 
 }

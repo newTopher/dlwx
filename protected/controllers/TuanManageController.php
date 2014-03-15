@@ -105,4 +105,45 @@ class TuanManageController extends Controller{
         }
     }
 
+    public function actionGettuanorderlist(){
+        $tid = Yii::app()->request->getParam('id');
+        $criteria = new CDbCriteria();
+        $criteria->addCondition('uid='.Yii::app()->session['user']->id);
+        $criteria->addCondition('tid='.$tid);
+        $criteria->order = 'add_time desc';
+        $count = TuanorderlistModel::model()->count($criteria);
+        $pager = new CPagination($count);
+        $pager->pageSize =10;
+        $pager->applyLimit($criteria);
+        $tuanlist = TuanorderlistModel::model()->findAll($criteria);
+        $this->render('tuanorderlist',array('tuanorderlist'=>$tuanlist,'pages'=>$pager,'msg'=>Yii::app()->session['msg']));
+        Yii::app()->session['msg'] = '';
+    }
+
+    public function actionGetorder(){
+        $id = Yii::app()->request->getParam('id');
+        $data = TuanorderlistModel::getOrder($id);
+        $tuanname = TuangoodModel::getTuangoodById($data->tid)->name;
+        if($data){
+            echo CJSON::encode(array('code'=>0,'data'=>$data->attributes,'tuanname'=>$tuanname));
+        }else{
+            echo CJSON::encode(array('code'=>-1,'msg'=>'获取订单详情失败'));
+        }
+    }
+
+    public function actionDoorder(){
+        $id = Yii::app()->request->getParam('id');
+        $tid = Yii::app()->request->getParam('tid');
+        $tuanOrderModel = new TuanorderlistModel();
+        $tuanOrderModel->id = $id;
+        $tuanOrderModel->status = 1;
+        if($tuanOrderModel->updateOrder()){
+            Yii::app()->session['msg'] = '订单审核成功';
+            $this->redirect(Yii::app()->request->baseUrl.'/TuanManage/Gettuanorderlist/id/'.$tid);
+        }else{
+            Yii::app()->session['msg'] = '订单审核失败';
+            $this->redirect(Yii::app()->request->baseUrl.'/TuanManage/Gettuanorderlist/id/'.$tid);
+        }
+    }
+
 }

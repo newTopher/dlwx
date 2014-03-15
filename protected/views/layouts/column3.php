@@ -144,7 +144,7 @@
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/TuanManage/Index"><span class="hidden-tablet">微团购</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/channelManage/index"><span class="hidden-tablet">微调研</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><span class="hidden-tablet">微相册</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><span class="hidden-tablet">微名片</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/CallingcardManage/Index"><span class="hidden-tablet">微名片</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><span class="hidden-tablet">微全景</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><span class="hidden-tablet">微吧</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><span class="hidden-tablet">微门店</span></a></li>
@@ -177,7 +177,7 @@
 
         <h3>微数据</h3>
         <ul class="nav nav-tabs nav-stacked main-menu">
-            <li><a class="ajax-link" href="index.html"><span class="hidden-tablet">粉丝数据</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl();?>/DataManage/Index"><span class="hidden-tablet">粉丝数据</span></a></li>
             <li><a class="ajax-link" href="index.html"><span class="hidden-tablet">访问数据</span></a></li>
         </ul>
 
@@ -201,6 +201,14 @@
         </footer>
 
     </div><!--/.fluid-container-->
+        <script type="text/javascript">
+            $(function() {
+                $( "#accordion" ).accordion();
+                $( "#accordion ul").css('height','auto');
+                $( "#accordion ul").css('margin-bottom','4px');
+            });
+        </script>
+
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap-transition.js"></script>
         <!-- modal / dialog library -->
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap-modal.js"></script>
@@ -212,7 +220,6 @@
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/notifIt.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.uploadify.min.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.8.21.custom.min.js"></script>
-
 
 
 

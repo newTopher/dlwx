@@ -156,7 +156,7 @@ div.speech.right {
     box-shadow: -2px 2px 5px #CCC;
     margin-right: 10px;
     width: 60%;
-    min-width:132px;
+    min-width:145px;
     float: right;
     background: -webkit-gradient( linear, 50% 0%, 50% 100%, from(#e4ffa7), color-stop(0.1, #bced50), color-stop(0.4, #aed943), color-stop(0.8, #a7d143), to(#99BF40) );
 }

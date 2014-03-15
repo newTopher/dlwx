@@ -15,46 +15,50 @@
                         <thead>
                         <tr>
                             <th>消息编号</th>
+                            <th>微信ID</th>
+                            <th>消息内容</th>
                             <th>消息类型</th>
                             <th>最后时间</th>
-                            <th>自动回复状态</th>
+
                             <th>操作</th>
                         </tr>
                         </thead>
                         <tbody>
+                        <?php if($msgData != null): ?>
+                        <?php foreach($msgData as $k=>$v): ?>
                         <tr>
-                            <td>1</td>
-                            <td>文字</td>
-                            <td>2014-01-10 12:12:15</td>
-                            <td><span class="label label-success">成功</span></td>
+                            <td><?php echo $v->id; ?></td>
+                            <td><?php echo $v->from_openid; ?></td>
+                            <td><?php echo $v->content; ?></td>
+                            <td><?php if($v->type == 'text'){ echo '文字';}else{ echo '多媒体';} ?></td>
+                            <td><?php echo date("Y-m-d H:i:s",$v->add_time); ?></td>
+
                             <td>
-                                <a href="/WeixinFans/view/id/1" class="btn btn-mini btn-primary">查看对话</a>
-                                <a href="#" class="btn btn-mini disabled">快速回复</a>
+                                <a href="<?php Yii::app()->request->baseUrl; ?>/WeixinFans/View/openid/<?php echo $v->from_openid; ?>" class="btn btn-mini btn-primary">查看对话</a>
                             </td>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>图文信息</td>
-                            <td>2014-01-12 12:12:15</td>
-                            <td><span class="label label-important">失败</span></td>
-                            <td>
-                                <a href="/WeixinFans/view/id/1" class="btn btn-mini btn-primary">查看对话</a>
-                                <a href="#" class="btn btn-mini disabled">快速回复</a>
-                            </td>
-                        </tr>
+                        <?php endforeach; ?>
+                        <?php else: ?>
+                        <div class="alert alert-info">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <strong>提示信息!</strong>您还没收到过任何消息.
+                        </div>
+                        <?php endif; ?>
                         </tbody>
                     </table>
                 </div>
-                <div class="pagination pagination-right">
-                    <ul>
-                        <li><a href="#">«</a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">»</a></li>
-                    </ul>
+                <div id="pager" class="pager" style="float: left;margin-top: 30px;">
+                    <?php
+
+                    $this->widget('CLinkPager',array(
+                            'header'=>'',
+                            'prevPageLabel' => '上一页',
+                            'nextPageLabel' => '下一页',
+                            'pages' => $pages,
+                            'maxButtonCount'=>13
+                        )
+                    );
+                    ?>
                 </div>
             </div>
         </div>

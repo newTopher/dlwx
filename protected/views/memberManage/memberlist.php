@@ -95,7 +95,6 @@
        function showvip(id){
            $.getJSON('<?php echo Yii::app()->getBaseUrl(); ?>/MemberManage/Getmember',{id:id},function(data){
                if(data.code == 0){
-                   console.log(data);
                    $("#vipname").text(data.data.username);
                    $("#openid").text(data.data.openid);
                    if(data.data.sex == 1){

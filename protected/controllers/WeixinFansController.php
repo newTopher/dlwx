@@ -67,6 +67,20 @@ class WeixinFansController extends Controller{
         $content = Yii::app()->request->getParam('content');
         $openid = Yii::app()->request->getParam('openid');
         $data = array("touser"=>$openid,"msgtype"=>'text',"text"=>array("content"=>$content));
+        $result = $this->sendMsgToUser($this->encode($data));
+        $result = CJSON::decode($result,true);
+        if($result['errcode'] == 0){
+            $msglistModel = new MsgListModel();
+            $msglistModel->uid = Yii::app()->session['user']->id;
+            $msglistModel->to_openid = $openid;
+            $msglistModel->from_openid = Yii::app()->session['user']->wx_openid;
+            $msglistModel->content = $content;
+            $msglistModel->type = 'text';
+            $msglistModel->insertMsg();
+            echo CJSON::encode(array('code'=>0,'msg'=>'发送成功'));
+        }else{
+            echo CJSON::encode(array('code'=>-1,'msg'=>$result['errmsg']));
+        }
     }
 
 

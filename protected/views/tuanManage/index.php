@@ -27,7 +27,7 @@
                         <?php foreach($tuanlist as $k=>$v): ?>
                         <li class="span4">
                             <div class="thumbnails" style="padding:10px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;width: 300px;background-color:#DEDEDE;">
-                                <a href="<?php echo Yii::app()->request->baseUrl; ?>/Guaguacard/Getprizeuser/id/<?php echo $v->id;?>">
+                                <a href="<?php echo Yii::app()->request->baseUrl; ?>/TuanManage/Gettuanorderlist/id/<?php echo $v->id;?>">
                                     <img alt="300x150" style="width: 350px; height: 200px;" src="<?php echo Yii::app()->request->baseUrl; ?>/upload/slider/<?php echo $v->index_image; ?>">
                                 </a>
                                 <div class="caption">

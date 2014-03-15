@@ -69,13 +69,7 @@ class WxuserModel extends Ar{
     }
 
     public function updateWxuserStatus(){
-        $user = self::model()->findByPk($this->id);
-        $user->status = $this->status;
-        $user->update_time = time();
-        if($this->status == 1){
-            $user->subscribe_time = time();
-        }
-        if($user->save()){
+        if(self::model()->updateByPk(array('id'=>$this->id),array('status'=>$this->status,'update_time'=>time()))){
             return true;
         }else{
             return false;
