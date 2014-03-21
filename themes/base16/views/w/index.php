@@ -119,5 +119,5 @@
             </div>
         </div>
     </div>
-</div><div id="support" style="bottom: 0px; display: none;"><a href="http://www.ptweixin.com/api/edde7a96d5/web/?wxref=mp.weixin.qq.com" target="_self">本功能由万普微盟提供技术支持</a></div>
+</div><div id="support" style="bottom: 0px; display: none;"><a href="http://weixin.wapwei.com/wapwei/index.html" target="_self">本功能由万普微盟提供技术支持</a></div>
 </body></html>

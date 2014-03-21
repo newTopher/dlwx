@@ -103,5 +103,9 @@ class KeywordsReplayModel extends Ar{
         return self::model()->findAllByAttributes(array('uid'=>$uid));
     }
 
+    static public function getByKeywordsAndUid($uid,$keywords){
+        return self::model()->findByAttributes(array('uid'=>$uid,'keywords'=>$keywords)) ;
+    }
+
 
 }

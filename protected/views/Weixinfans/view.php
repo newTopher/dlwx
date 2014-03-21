@@ -9,17 +9,17 @@
             <div class="box-content">
                 <div class="tooltip-demo well span5" style="margin-bottom: 15px;">
                         <a href="#">
-                            <?php if($wxUserData->headimgurl == null) : ?>
+                            <?php if(!isset($wxUserData->headimgurl)) : ?>
                             <img style="width: 80px;height: 80px;float: left;" src="<?php echo Yii::app()->request->baseUrl; ?>/images/w_client.jpg"></a>
                         <?php else: ?>
                         <img style="width: 80px;height: 80px;float: left;" src="<?php echo $wxUserData->headimgurl; ?>"></a>
                         <?php endif; ?>
                     <div style="float: right">
-                    <p>微信昵称  :  <?php echo $wxUserData->nickname ;?> </p>
+                    <p>微信昵称  :  <?php if(isset($wxUserData->nickname)){ echo $wxUserData->nickname;} ;?> </p>
                     <p>微信ID   :  <?php echo $wxUserData->openid ;?> </p>
                     <p>性别   :  <?php if($wxUserData->sex==1){ echo '男'; }else{ echo '女';} ;?> </p>
-                    <p>省份  :  <?php echo $wxUserData->province ;?> </p>
-                    <p>城市  :  <?php echo $wxUserData->city ;?> </p>
+                    <p>省份  :  <?php if(isset($wxUserData->province)){ echo $wxUserData->province;} ;?> </p>
+                    <p>城市  :  <?php if(isset($wxUserData->city)){ echo $wxUserData->city;} ;?> </p>
                     <p>关注时间  :  <?php echo date("Y-m-d H:i:s",$wxUserData->subscribe_time);?> </p>
                     <p>状态  :  <?php if($wxUserData->status==1){
                             echo "<span class='label label-success'>正常</span>";
@@ -42,7 +42,7 @@
                                     <?php if($v->from_openid == $openid): ?>
                                         <div class="leftd">
                                             <div class="leftimg">
-                                                <?php if($wxUserData->headimgurl == null) : ?>
+                                                <?php if(!isset($wxUserData->headimgurl)) : ?>
                                                 <img style="width:30px;height:30px;" src="<?php echo Yii::app()->request->baseUrl; ?>/images/w_client.jpg" />
                                                 <?php else: ?>
                                                     <img style="width: 30px;height: 30px;float: left;" src="<?php echo $wxUserData->headimgurl; ?>"></a>
@@ -88,7 +88,7 @@
                                     'prevPageLabel' => '上一页',
                                     'nextPageLabel' => '下一页',
                                     'pages' => $pages,
-                                    'maxButtonCount'=>13
+                                    'maxButtonCount'=>5
                                 )
                             );
                             ?>

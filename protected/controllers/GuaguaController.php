@@ -6,7 +6,7 @@
  * Time: 上午11:03
  * To change this template use File | Settings | File Templates.
  */
-class GuaguaController extends Controller {
+class GuaguaController extends CController {
 
     public $layout='//layouts/column4';
 

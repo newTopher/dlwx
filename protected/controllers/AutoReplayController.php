@@ -23,11 +23,27 @@ class AutoReplayController extends Controller{
         if(!$nouseData){
             $nouseData = null;
         }
-        $keywordsModel = new KeywordsReplayModel();
-        $keywordsModel->uid = Yii::app()->session['user']->id;
-        $keywordsData = $keywordsModel->getKeyWordsByUid();
+
+        $criteria = new CDbCriteria();
+        $criteria->order = 'add_time desc';
+        $criteria->addCondition('uid='.Yii::app()->session['user']->id);
+        $count = KeywordsReplayModel::model()->count($criteria);
+        $pager = new CPagination($count);
+        $pager->pageSize =10;
+        $pager->applyLimit($criteria);
+        $keywordsData = KeywordsReplayModel::model()->findAll($criteria);
+        if(!$keywordsData){
+            $keywordsData = null;
+        }
+
+
         $selectdata = $this->getAllselect();
-        $this->render('base',array('firstData'=>$firstData,'nouseData'=>$nouseData,'keywordsData'=>$keywordsData,'selectdata'=>$selectdata));
+        $this->render('base',array('firstData'=>$firstData,
+            'nouseData'=>$nouseData,
+            'keywordsData'=>$keywordsData,
+            'selectdata'=>$selectdata,
+            'pages'=>$pager
+        ));
     }
 
     public function actionAddKeyword(){
@@ -110,7 +126,8 @@ class AutoReplayController extends Controller{
 
     public function actionAddkeywords(){
         $selectdata = $this->getAllselect();
-        $this->render('addkeyword',array('selectdata'=>$selectdata));
+        $this->render('addkeyword',array('selectdata'=>$selectdata,'msg'=>Yii::app()->session['msg']));
+        Yii::app()->session['msg']='';
     }
 
     public function actionInsertKeyword(){
@@ -133,9 +150,16 @@ class AutoReplayController extends Controller{
             $keywordsModel->source_id = $source_id;
             $keywordsModel->text = null;
         }
-        if($keywordsModel->insertKeywords()){
-            $this->redirect(Yii::app()->request->baseUrl.'/AutoReplay/Base');
+        if(!KeywordsReplayModel::getByKeywordsAndUid(Yii::app()->session['user']->id,trim($keywords))){
+            if($keywordsModel->insertKeywords()){
+                Yii::app()->session['msg']='添加成功';
+                $this->redirect(Yii::app()->request->baseUrl.'/AutoReplay/Base');
+            }else{
+                Yii::app()->session['msg']='添加失败';
+                $this->redirect(Yii::app()->request->baseUrl.'/AutoReplay/Addkeywords');
+            }
         }else{
+            Yii::app()->session['msg']='这个关键词您以前设置过请更换另外的关键词';
             $this->redirect(Yii::app()->request->baseUrl.'/AutoReplay/Addkeywords');
         }
     }

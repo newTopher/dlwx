@@ -28,6 +28,18 @@ class Controller extends CController
 
     public $tokenUrl = "";
 
+    public function __construct($id){
+        parent::__construct($id,$module=null);
+        if(!Yii::app()->session['user']){
+            $this->redirect(Yii::app()->request->baseUrl.'/Login/Index');
+        }
+        if(!isset($_GET['b'])){
+            Yii::app()->session['block'] = 1;
+        }else{
+            Yii::app()->session['block']=$_GET['b'];
+        }
+    }
+
     public function getToken(){
         $this->tokenUrl = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".$this->APPID."&secret=".$this->APPSECRET;
         return $this->getMethod($this->tokenUrl);
@@ -113,6 +125,20 @@ class Controller extends CController
             $selectdata['tuandata'] = null;
         }
 
+        $urldata = UrllistModel::getUrldata();
+        if($urldata){
+            $selectdata['urldata'] = $urldata;
+        }else{
+            $selectdata['urldata'] = null;
+        }
+
+        $sourcedata = SingleNewsMsgModel::getDataAllSingleNewsMsg();
+        if($sourcedata){
+            $selectdata['sourcedata'] = $sourcedata;
+        }else{
+            $selectdata['urldata'] = null;
+        }
+
         return $selectdata;
     }
 
@@ -141,6 +167,36 @@ class Controller extends CController
             $this->access_token = $token['access_token'];
             $url = "https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=".$this->access_token;
             return $this->httpMethod($url,$data);
+        }else{
+            return false;
+        }
+    }
+
+    public function createMenu($data){
+        $userModel = UserModel::findUserByid(Yii::app()->session['user']->id);
+        if($userModel->wx_appid != null && $userModel->wx_appsecret != null){
+            $this->APPID = $userModel->wx_appid;
+            $this->APPSECRET = $userModel->wx_appsecret;
+            $accessToken = $this->getToken();
+            $token = CJSON::decode($accessToken,true);
+            $this->access_token = $token['access_token'];
+            $url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=".$this->access_token;
+            return $this->httpMethod($url,$data);
+        }else{
+            return false;
+        }
+    }
+
+    public function delMenu(){
+        $userModel = UserModel::findUserByid(Yii::app()->session['user']->id);
+        if($userModel->wx_appid != null && $userModel->wx_appsecret != null){
+            $this->APPID = $userModel->wx_appid;
+            $this->APPSECRET = $userModel->wx_appsecret;
+            $accessToken = $this->getToken();
+            $token = CJSON::decode($accessToken,true);
+            $this->access_token = $token['access_token'];
+            $url = "https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=".$this->access_token;
+            return $this->getMethod($url);
         }else{
             return false;
         }

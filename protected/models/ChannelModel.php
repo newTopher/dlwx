@@ -92,6 +92,10 @@ class ChannelModel extends Ar{
         }
     }
 
+    static public function getChannel($id){
+        return self::model()->findByPk(array('id'=>$id));
+    }
+
 
 
 }

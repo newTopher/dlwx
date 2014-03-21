@@ -62,5 +62,5 @@
             <ul id="products">
             </ul>
         </div>
-    </div></div><script language="javascript">$(document).ready(function(){$('#support').css('bottom', 48);});</script><div id="support" style="bottom: 48px;"><a href="http://www.ptweixin.com/api/edde7a96d5/web/?wxref=mp.weixin.qq.com" target="_self">本功能由万普微盟提供技术支持</a></div>
+    </div></div><script language="javascript">$(document).ready(function(){$('#support').css('bottom', 48);});</script><div id="support" style="bottom: 48px;"><a href="http://weixin.wapwei.com/wapwei/index.html" target="_self">本功能由万普微盟提供技术支持</a></div>
 </body></html>

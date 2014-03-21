@@ -1,5 +1,5 @@
 <?php
-class OrderController extends Controller {
+class OrderController extends CController {
 
 public $layout='//layouts/column4';
 

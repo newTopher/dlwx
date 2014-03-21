@@ -295,12 +295,11 @@
                         </table>
                         </div>
                     </div>
-                    <div class="control-group">
-                        <div class="controls">
-                            <button class="btn btn-large btn-primary" type="submit" id="table_submit">提交保存</button>
-                            <a class="btn btn-large" href="<?php echo  Yii::app()->request->baseUrl.'/OrderManage/Index';?>">返回</a>
-                        </div>
+                    <div class="form-actions">
+                        <button type="submit" id="table_submit" class="btn btn-primary">确定</button>
+                        <button class="btn">取消</button>
                     </div>
+
                 </fieldset>
              </form>
         </div>

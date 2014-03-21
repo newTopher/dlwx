@@ -6,7 +6,7 @@
  * Time: 下午2:47
  * To change this template use File | Settings | File Templates.
  */
-class ApiController extends Controller {
+class ApiController extends CController {
 
     public $token = null;
     public $userdata =null;
@@ -23,10 +23,10 @@ class ApiController extends Controller {
                     $RX_TYPE = trim($this->postObj->MsgType);
                     switch($RX_TYPE){
                         case "text":
-                            $resultStr = $this->handleText($this->postObj);
+                            $resultStr = $this->handleText();
                             break;
                         case "event":
-                            $resultStr = $this->handleEvent($this->postObj);
+                            $resultStr = $this->handleEvent();
                             break;
                         default:
                             $resultStr = "Unknow msg type: ".$RX_TYPE;
@@ -121,6 +121,8 @@ class ApiController extends Controller {
                                     $this->getYu($temp[1]);
                                 }else if($temp[0] == 'n'){
                                     $this->getName($temp[1]);
+                                }else if($temp[0] == 'so'){
+                                    $this->getSource($temp[1]);
                                 }else{
                                     $this->nouseReplay();
                                 }
@@ -166,6 +168,8 @@ class ApiController extends Controller {
                                     $this->getYu($temp[1]);
                                 }else if($temp[0] == 'n'){
                                     $this->getName($temp[1]);
+                                }else if($temp[0] == 'so'){
+                                    $this->getSource($temp[1]);
                                 }else{
                                     $this->nouseReplay();
                                 }
@@ -243,7 +247,7 @@ class ApiController extends Controller {
                 }else if($data->type == 2){
                     $this->postObj->MsgType='news';
                     $temp = explode('_',$data->source_id);
-                    if($temp[0] == 't'){
+                    if($temp[0] == 'w'){
                         $this->getWeiWebMsg();
                     }else if($temp[0] == 'g'){
                         $this->getGuaCard($temp[1]);
@@ -259,6 +263,8 @@ class ApiController extends Controller {
                         $this->getYu($temp[1]);
                     }else if($temp[0] == 'n'){
                         $this->getName($temp[1]);
+                    }else if($temp[0] == 'so'){
+                        $this->getSource($temp[1]);
                     }else{
                         $this->nouseReplay();
                     }
@@ -276,6 +282,9 @@ class ApiController extends Controller {
                 $wxUserModel->updateWxuserStatus();
                 $this->insertReplay('unsubscribe','取消关注',1);
                 $contentStr = '谢谢关注';
+                break;
+            case "CLICK":
+                $this->getConfig();
                 break;
             default :
                 $contentStr = "Unknow Event: ".$this->postObj->Event;
@@ -310,6 +319,8 @@ class ApiController extends Controller {
                     $this->getYu($temp[1]);
                 }else if($temp[0] == 'n'){
                     $this->getName($temp[1]);
+                }else if($temp[0] == 'so'){
+                    $this->getSource($temp[1]);
                 }else{
                     $this->insertReplay('nouse',null,1);
                 }
@@ -538,7 +549,7 @@ class ApiController extends Controller {
         $data->title = $webData->msg_title;
         $data->description = $webData->msg_description;
         $data->picurl =  Yii::app()->request->hostInfo.'/upload/wxwebsite/'.$webData->msg_image;
-        $data->url = Yii::app()->request->hostInfo.'/W/I/sid/'.$this->userdata->id;
+        $data->url = Yii::app()->request->hostInfo.'/W/I/sid/'.$this->userdata->id.'/f/'.$this->postObj->FromUserName;
         $this->insertReplay('WeiWebMsg','w_1',2);
         $this->responseImageText($data);
     }
@@ -555,6 +566,24 @@ class ApiController extends Controller {
             $data->picurl =  Yii::app()->request->hostInfo.'/upload/slider/'.$tuandata->index_image;
             $data->url = Yii::app()->request->hostInfo.'/Tuan/I/sid/'.$this->userdata->id.'/f/'.$this->postObj->FromUserName.'/s/'.$tuandata->id;
             $this->insertReplay('Tuangood','t_'.$tuandata->id,2);
+            $this->responseImageText($data);
+        }else{
+            return false;
+        }
+    }
+
+    /*
+     * 图文信息
+     */
+    public function getSource($id){
+        $sourcedata = SingleNewsMsgModel::getSingleById($id);
+        if($sourcedata){
+            $data = new stdClass();
+            $data->title = $sourcedata->title;
+            $data->description = $sourcedata->description;
+            $data->picurl =  Yii::app()->request->hostInfo.'/upload/wxmsg/'.$sourcedata->index_image;
+            $data->url = Yii::app()->request->hostInfo.'/Sowapwei/I/sid/'.$this->userdata->id.'/f/'.$this->postObj->FromUserName.'/s/'.$sourcedata->id;
+            $this->insertReplay('Source','so_'.$sourcedata->id,2);
             $this->responseImageText($data);
         }else{
             return false;
@@ -650,82 +679,46 @@ class ApiController extends Controller {
     }
 
 
-
-    public function actionCreateMenu(){
-        $token = json_decode($this->getToken(),true);
-        $url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=".$token['access_token'];
-        $data = '{
-     "button":[
-     {
-           "name":"微信联盟",
-           "sub_button":[
-           {
-               "type":"click",
-               "name":"联盟介绍",
-               "key":"V1001_diaobao"
-            },
-            {
-               "type":"click",
-               "name":"成员介绍",
-               "key":"V1002_diaobao"
-            },
-            {
-               "type":"click",
-               "name":"广告刊例",
-               "key":"V1003_diaobao"
-            },
-            {
-               "type":"view",
-               "name":"加入联盟",
-               "url":"http://api.diaobao.in/index.php/weixin/joindiaobao/index"
-            }]
-       },
-       {
-           "name":"每日一推",
-           "sub_button":[
-           {
-               "type":"click",
-               "name":"公众号推荐",
-               "key":"V1004_diaobao"
-            },
-            {
-               "type":"view",
-               "name":"碉堡社区",
-               "url":"http://mq.wsq.qq.com/126921624"
-            },
-            {
-               "type":"click",
-               "name":"碉民早爆",
-               "key":"V1005_diaobao"
+    /*
+     * 自定义菜单
+     */
+    public function getConfig(){
+        $temp = explode('_',(string)$this->postObj->EventKey);
+        $menu = SelfMenuModel::findByKeyId($temp[1],$this->userdata->id);
+        if($menu){
+            $clickModel = new ClickdataModel();
+            $clickModel->uid = $this->userdata->id;
+            $clickModel->keyid = $temp[1];
+            $clickModel->openid = (string) $this->postObj->FromUserName;
+            $clickModel->insertKeydata();
+            if($menu->menu_event == 1){
+                $this->postObj->MsgType = 'text';
+                $this->responseText($menu->text);
+            }else if($menu->menu_event == 3){
+                $temp = explode('_',$menu->single_source_id);
+                if($temp[0] == 'w'){
+                    $this->getWeiWebMsg();
+                }else if($temp[0] == 'g'){
+                    $this->getGuaCard($temp[1]);
+                }else if($temp[0] == 't'){
+                    $this->getTuangood($temp[1]);
+                }else if($temp[0] == 's'){
+                    $this->getSale($temp[1]);
+                }else if($temp[0] == 'z'){
+                    $this->getZhuan($temp[1]);
+                }else if($temp[0] == 'm'){
+                    $this->getMem($temp[1]);
+                }else if($temp[0] == 'y'){
+                    $this->getYu($temp[1]);
+                }else if($temp[0] == 'n'){
+                    $this->getName($temp[1]);
+                }
             }
-            ]
-       },
-       {
-           "name":"碉堡资讯",
-           "sub_button":[
-           {
-               "type":"view",
-               "name":"ios版下载",
-               "url":"https://itunes.apple.com/cn/app/id702672102"
-            },
-            {
-               "type":"view",
-               "name":"安卓版下载",
-               "url":"http://www.diaobao.la/diaobao.apk"
-            },
-            {
-               "type":"click",
-               "name":"绑定账号",
-               "key":"V1006_diaobao"
-            },
-            {
-               "type":"click",
-               "name":"商务合作",
-               "key":"V1007_diaobao"
-            }]
-       }]
- }';
-        echo $this->httpMethod($url,$data);
+        }else{
+            return false;
+        }
+
     }
+
 
 }

@@ -37,6 +37,17 @@
             $(this).click(function(){
                 var trade_id = $(this).attr('trade_id');
                 var id = $(this).attr('id');
+                if(id > 21){
+                    notif({
+                        type: "warning",
+                        msg: "您不可以选择此模板哦，您所用的为测试账号",
+                        position: "center",
+                        width:"all",
+                        height:100,
+                        opacity: 1
+                    });
+                    return false;
+                }
                 if(mytrade_id != trade_id){
                     notif({
                         type: "warning",

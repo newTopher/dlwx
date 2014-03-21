@@ -1,6 +1,6 @@
 <?php
 
-class LoginController extends Controller{
+class LoginController extends CController{
 
     public function actions()
     {
@@ -22,7 +22,7 @@ class LoginController extends Controller{
         $errMsg='';
         $email=Yii::app()->request->getParam('email','');
         if(!empty($email)){
-            Yii::app()->user->returnUrl = Yii::app()->getBaseUrl()."/User/Home";
+            Yii::app()->user->returnUrl = Yii::app()->getBaseUrl()."/User/Home?b=1";
             $model->email=Yii::app()->request->getParam('email','');
             $model->verifyCode=Yii::app()->request->getParam('verifyCode','');
             $model->password=Yii::app()->request->getParam('password','');
@@ -45,8 +45,8 @@ class LoginController extends Controller{
     }
 
     public function actionLoginOut(){
-        echo 1;
-        $this->redirect(Yii::app()->request->baseUrl."/login/index");
+        Yii::app()->session->destroy();
+        $this->redirect(Yii::app()->request->baseUrl."/Login/Index");
     }
 
 }

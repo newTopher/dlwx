@@ -28,8 +28,8 @@ class WeixinFansController extends Controller{
         $wxUserModel = new WxuserModel();
         $wxUserModel->id = Yii::app()->request->getParam('id');
         $data = $this->getUserDetailInfo($openid);
-        if($data){
-            $data = CJSON::decode($data);
+        $data = CJSON::decode($data);
+        if(isset($data['openid'])){
             $wxUserModel->nickname = $data['nickname'];
             $wxUserModel->sex = $data['sex'];
             $wxUserModel->language = $data['language'];

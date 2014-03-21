@@ -16,6 +16,7 @@ class SingleNewsMsgModel extends Ar{
     public $url_id;
     public $add_time;
     public $update_time;
+    public $text;
 
     public static function model($className=__CLASS__){
         return parent::model($className);
@@ -28,7 +29,7 @@ class SingleNewsMsgModel extends Ar{
     public function addSingleNewsMsg(){
         $this->add_time=time();
         $this->update_time=time();
-        if(!empty($this->title) && !empty($this->url_id) && !empty($this->index_image)){
+        if(!empty($this->title) && !empty($this->index_image)){
             if($this->insert()){
                 return true;
             }else{
@@ -40,10 +41,31 @@ class SingleNewsMsgModel extends Ar{
     }
 
     public function getSingleNewsMsgById(){
-        return self::model()->findByPk($this->id);
+        return self::model()->findByAttributes(array('id'=>$this->id,'uid'=>$this->uid));
     }
+
+    static public function getSingleById($id){
+        return self::model()->findByAttributes(array('id'=>$id));
+    }
+
 
     public function getAllSingleNewsMsg(){
         return self::model()->findAll();
+    }
+
+    static public function getkeywordsdata($uid,$keywords){
+        self::model()->findByAttributes(array('uid'=>$uid,'keywords'=>$keywords));
+    }
+
+    static public function getDataAllSingleNewsMsg(){
+        return self::model()->findAll();
+    }
+
+    public function delsingle(){
+        if(self::model()->deleteByPk(array('id'=>$this->id))){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

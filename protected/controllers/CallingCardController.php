@@ -1,5 +1,5 @@
 <?php
-class CallingCardController extends Controller{
+class CallingCardController extends CController{
 
     public $layout='//layouts/column4';
 

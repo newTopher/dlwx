@@ -5,8 +5,8 @@
         <a style="margin-left: 0px;width: 23%;" data-rel="tooltip" title="6 个新微信用户." class="well span3 top-block weixinuser" href="#">
             <span class="icon32 icon-red icon-user"></span>
             <div style="color: #fff;">微信总用户</div>
-            <div style="color: #fff;">507</div>
-            <span class="notification red">6</span>
+            <div style="color: #fff;"><?php echo $Tnum;?></div>
+            <span class="notification red"><?php echo $Tnew;?></span>
         </a>
 
         <a style="margin-left: 15px;width: 23%;" data-rel="tooltip" title="4 个访问客户." class="well span3 top-block weixinuser" href="#">
@@ -19,8 +19,8 @@
         <a style="margin-left: 15px;width: 23%;" data-rel="tooltip" class="well span3 top-block weixinuser" href="#">
             <span class="icon32 icon-color icon-star-on"></span>
             <div style="color: #fff;">客户消息</div>
-            <div style="color: #fff;">68</div>
-            <span class="notification red">6</span>
+            <div style="color: #fff;"><?php echo $Mnum;?></div>
+            <span class="notification red"><?php echo $Mnew;?></span>
         </a>
 
         <a style="margin-left: 15px;width: 23%;" data-rel="tooltip" title="12 新消息." class="well span3 top-block weixinuser" href="#">
@@ -39,49 +39,62 @@
       <div class="app_ico_box">
          <ul>
              <li class="li_first">
-                 <a href=""><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/bag_64px.png"></a>
-                 <span class="app_b_title">自动回复</span>
+                 <a href="<?php echo Yii::app()->request->baseUrl;?>/Weixin/templateset?b=2"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/star_64px.png"></a>
+                 <span class="app_b_title">微官网</span>
              </li>
              <li>
-                 <a href=""><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/denied_64px.png"></a>
+                 <a href="<?php echo Yii::app()->request->baseUrl;?>/DataManage/Index?b=8"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/trends_64px.png"></a>
                  <span class="app_b_title">数据魔方</span>
              </li>
              <li>
-                 <a href=""><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/folder_64px.png"></a>
+                 <a href="<?php echo Yii::app()->request->baseUrl;?>/Weixin/base?b=2"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/gear_64px.png"></a>
+                 <span class="app_b_title">基本设置</span>
+             </li>
+             <li>
+                 <a href="<?php echo Yii::app()->request->baseUrl;?>/Weixin/Templateselect?b=2"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/layers_64px.png"></a>
+                 <span class="app_b_title">模版选择</span>
+             </li>
+             <li>
+                 <a href="<?php echo Yii::app()->request->baseUrl;?>/Menu/Base?b=6"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/bookshelf_64px.png"></a>
+                 <span class="app_b_title">自定义菜单</span>
+             </li>
+             <li>
+                 <a href="<?php echo Yii::app()->request->baseUrl;?>/WeixinFans/Index?b=7"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/chat_64px.png"></a>
+                 <span class="app_b_title">微信粉丝</span>
+             </li>
+             <li>
+                 <a href="<?php echo Yii::app()->request->baseUrl;?>/MemberManage/Memberlist?b=3"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/creditcard_64px.png"></a>
+                 <span class="app_b_title">会员卡</span>
+             </li>
+             <li>
+                 <a href="<?php echo Yii::app()->request->baseUrl;?>/OrderManage/Index?b=4"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/browser_64px.png"></a>
+                 <span class="app_b_title">微预约</span>
+             </li>
+             <li>
+                 <a href="<?php echo Yii::app()->request->baseUrl;?>/TuanManage/Index?b=4"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/support_64px.png"></a>
+                 <span class="app_b_title">微团购</span>
+             </li>
+             <li>
+                 <a href="<?php echo Yii::app()->request->baseUrl;?>/channelManage/index?b=4"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/compose_64px.png"></a>
+                 <span class="app_b_title">微调研</span>
+             </li>
+             <li>
+                 <a href="<?php echo Yii::app()->request->baseUrl;?>/CallingcardManage/Index?b=4"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/wallet_64px.png"></a>
+                 <span class="app_b_title">微名片</span>
+             </li>
+             <li>
+                 <a href="<?php echo Yii::app()->request->baseUrl;?>/Salecard/Index?b=5"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/document_64px.png"></a>
+                 <span class="app_b_title">微信优惠券</span>
+             </li>
+             <li>
+                 <a href="<?php echo Yii::app()->request->baseUrl;?>/Guaguacard/Index?b=5"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/ribbon_64px.png"></a>
+                 <span class="app_b_title">微信刮刮卡</span>
+             </li>
+             <li>
+                 <a href="<?php echo Yii::app()->request->baseUrl;?>/Zhuancard/Index?b=5"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/lock_64px.png"></a>
                  <span class="app_b_title">微相册</span>
              </li>
-             <li>
-                 <a href=""><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/global_64px.png"></a>
-                 <span class="app_b_title">自动回复</span>
-             </li>
-             <li>
-                 <a href=""><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/bag_64px.png"></a>
-                 <span class="app_b_title">自动回复</span>
-             </li>
-             <li>
-                 <a href=""><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/denied_64px.png"></a>
-                 <span class="app_b_title">数据魔方</span>
-             </li>
-             <li>
-                 <a href=""><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/folder_64px.png"></a>
-                 <span class="app_b_title">微相册</span>
-             </li>
-             <li>
-                 <a href=""><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/global_64px.png"></a>
-                 <span class="app_b_title">自动回复</span>
-             </li>
-             <li>
-                 <a href=""><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/denied_64px.png"></a>
-                 <span class="app_b_title">数据魔方</span>
-             </li>
-             <li>
-                 <a href=""><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/folder_64px.png"></a>
-                 <span class="app_b_title">微相册</span>
-             </li>
-             <li>
-                 <a href=""><img src="<?php echo Yii::app()->request->baseUrl;?>/images/app/global_64px.png"></a>
-                 <span class="app_b_title">自动回复</span>
-             </li>
+
          </ul>
       </div>
   </div>
@@ -137,7 +150,7 @@
                     </tr>
                     -->
                     <tr>
-                        <td>微盟版本</td>
+                        <td>万普版本</td>
                         <?php if($userdata->web_type == 1): ?>
                         <td>企业基础版</td>
                         <?php endif; ?>

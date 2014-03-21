@@ -36,7 +36,6 @@ abstract class CBaseUserIdentity extends CComponent implements IUserIdentity
 	const ERROR_USERNAME_INVALID=1;
 	const ERROR_PASSWORD_INVALID=2;
 	const ERROR_UNKNOWN_IDENTITY=100;
-
 	/**
 	 * @var integer the authentication error code. If there is an error, the error code will be non-zero.
 	 * Defaults to 100, meaning unknown identity. Calling {@link authenticate} will change this value.

@@ -229,12 +229,14 @@ class WeixinController extends Controller{
         }else{
             $sliderdata = null;
         }
+        $selectdata = $this->getAllselect();
         $this->render('templateset'.$webData->template_id,array(
             'template_name'=>$template_name,
             'template_id'=>$webData->template_id,
             'site_id'=>$webData->id,
             'templateData'=>$templateData,
-            'sliderdata'=>$sliderdata
+            'sliderdata'=>$sliderdata,
+            'selectdata'=>$selectdata
         ));
     }
 

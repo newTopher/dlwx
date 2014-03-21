@@ -74,45 +74,45 @@ var links=new Array('/api/197196ec4a/web/index/');
 		<div class="box">
 			<div class="web_skin_index_list list" rel="edit-t02">
 				<div>
-					<div class="img"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p1[0]).'/I/'.strtoupper($p1[1]).'/sid/'.$webData->uid;?>" target="_self"><img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo CJSON::decode($webNavData->p1,false)->pic;  ?>"></a></div>
-					<div class="text"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p1[0]).'/I/'.strtoupper($p1[1]).'/sid/'.$webData->uid;?>" target="_self">
+					<div class="img"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p1[0]).'wapwei/I/id/'.strtoupper($p1[1]).'/sid/'.$webData->uid.'/f/'.$openid;?>" target="_self"><img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo CJSON::decode($webNavData->p1,false)->pic;  ?>"></a></div>
+					<div class="text"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p1[0]).'wapwei/I/id/'.strtoupper($p1[1]).'/sid/'.$webData->uid.'/f/'.$openid;?>" target="_self">
                             <?php echo CJSON::decode($webNavData->p1,false)->title;  ?>
                         </a></div>
 				</div>
 			</div>
 			<div class="web_skin_index_list list" rel="edit-t03">
 				<div>
-					<div class="img"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p2[0]).'/I/'.strtoupper($p2[1]).'/sid/'.$webData->uid;?>" target="_self"><img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo CJSON::decode($webNavData->p2,false)->pic;  ?>"></a></div>
-					<div class="text"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p2[0]).'/I/'.strtoupper($p2[1]).'/sid/'.$webData->uid;?>" target="_self">
+					<div class="img"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p2[0]).'wapwei/I/id/'.strtoupper($p2[1]).'/sid/'.$webData->uid.'/f/'.$openid;?>" target="_self"><img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo CJSON::decode($webNavData->p2,false)->pic;  ?>"></a></div>
+					<div class="text"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p2[0]).'wapwei/I/id/'.strtoupper($p2[1]).'/sid/'.$webData->uid.'/f/'.$openid;?>" target="_self">
                             <?php echo CJSON::decode($webNavData->p2,false)->title;  ?></a></div>
 				</div>
 			</div>
 			<div class="web_skin_index_list list" rel="edit-t04">
 				<div>
-					<div class="img"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p3[0]).'/I/'.strtoupper($p3[1]).'/sid/'.$webData->uid;?>" target="_self"><img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo CJSON::decode($webNavData->p3,false)->pic;  ?>"></a></div>
-					<div class="text"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p3[0]).'/I/'.strtoupper($p3[1]).'/sid/'.$webData->uid;?>" target="_self">
+					<div class="img"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p3[0]).'wapwei/I/id/'.strtoupper($p3[1]).'/sid/'.$webData->uid.'/f/'.$openid;?>" target="_self"><img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo CJSON::decode($webNavData->p3,false)->pic;  ?>"></a></div>
+					<div class="text"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p3[0]).'wapwei/I/id/'.strtoupper($p3[1]).'/sid/'.$webData->uid.'/f/'.$openid;?>" target="_self">
                             <?php echo CJSON::decode($webNavData->p3,false)->title;  ?>
 					</a></div>
 				</div>
 			</div>
 			<div class="web_skin_index_list list" rel="edit-t05">
 				<div>
-					<div class="img"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p4[0]).'/I/'.strtoupper($p4[1]).'/sid/'.$webData->uid;?>" target="_self"><img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo CJSON::decode($webNavData->p4,false)->pic;  ?>"></a></div>
-					<div class="text"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p4[0]).'/I/'.strtoupper($p4[1]).'/sid/'.$webData->uid;?>" target="_self">
+					<div class="img"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p4[0]).'wapwei/I/id/'.strtoupper($p4[1]).'/sid/'.$webData->uid.'/f/'.$openid;?>" target="_self"><img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo CJSON::decode($webNavData->p4,false)->pic;  ?>"></a></div>
+					<div class="text"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p4[0]).'wapwei/I/id/'.strtoupper($p4[1]).'/sid/'.$webData->uid.'/f/'.$openid;?>" target="_self">
                             <?php echo CJSON::decode($webNavData->p4,false)->title;  ?></a></div>
 				</div>
 			</div>
 			<div class="web_skin_index_list list" rel="edit-t06">
 				<div>
-					<div class="img"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p5[0]).'/I/'.strtoupper($p5[1]).'/sid/'.$webData->uid;?>" target="_self"><img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo CJSON::decode($webNavData->p5,false)->pic;  ?>"></a></div>
-					<div class="text"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p5[0]).'/I/'.strtoupper($p5[1]).'/sid/'.$webData->uid;?>" target="_self">
+					<div class="img"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p5[0]).'wapwei/I/id/'.strtoupper($p5[1]).'/sid/'.$webData->uid.'/f/'.$openid;?>" target="_self"><img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo CJSON::decode($webNavData->p5,false)->pic;  ?>"></a></div>
+					<div class="text"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p5[0]).'wapwei/I/id/'.strtoupper($p5[1]).'/sid/'.$webData->uid.'/f/'.$openid;?>" target="_self">
                             <?php echo CJSON::decode($webNavData->p5,false)->title;  ?></a></div>
 				</div>
 			</div>
 			<div class="web_skin_index_list list" rel="edit-t07">
 				<div>
-					<div class="img"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p6[0]).'/I/'.strtoupper($p6[1]).'/sid/'.$webData->uid;?>" target="_self"><img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo CJSON::decode($webNavData->p6,false)->pic;  ?>"></a></div>
-					<div class="text"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p6[0]).'/I/'.strtoupper($p6[1]).'/sid/'.$webData->uid;?>" target="_self">
+					<div class="img"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p6[0]).'wapwei/I/id/'.strtoupper($p6[1]).'/sid/'.$webData->uid.'/f/'.$openid;?>" target="_self"><img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo CJSON::decode($webNavData->p6,false)->pic;  ?>"></a></div>
+					<div class="text"><a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo strtoupper($p6[0]).'wapwei/I/id/'.strtoupper($p6[1]).'/sid/'.$webData->uid.'/f/'.$openid;?>" target="_self">
                             <?php echo CJSON::decode($webNavData->p6,false)->title;  ?>
 					</a></div>
 				</div>
@@ -121,6 +121,7 @@ var links=new Array('/api/197196ec4a/web/index/');
 	</div>
 </div></div><div id="footer_points"></div>
 <footer id="footer">
+        <!--
 	<ul>
 				<li class="first" style="width: 24.999%;">
 							<dl>
@@ -139,6 +140,7 @@ var links=new Array('/api/197196ec4a/web/index/');
 							<a ajax_url="/api/197196ec4a/web/column/1046/" target="_self"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/resource/images/nav-dot.png">联系我们</a>
 					</li>
 			</ul>
+			-->
 </footer>
 
 </body></html>

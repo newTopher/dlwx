@@ -11,16 +11,8 @@ Version：SimpleTree 1.0
 }
 
 /* 超链接 */
-.st_tree a{ 
-	color:#222; 
-	text-decoration:none; 
-}
 
 /* 鼠标经过的超链接 */
-.st_tree a:hover{ 
-	color:#f33; 
-	text-decoration:underline;
-}
 
 /* 菜单 */
 .st_tree ul{ 
@@ -59,8 +51,4 @@ Version：SimpleTree 1.0
 	background:url(imgs/st_folder_open.gif); 
 	background-repeat:no-repeat; 
 	padding:0 0 0 20px; 
-}
-
-.st_tree .hover{
-	background-color:#ffa;
 }

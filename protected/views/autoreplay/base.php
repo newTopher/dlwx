@@ -95,6 +95,13 @@
                                                     <option value="t_<?php echo $v->id; ?>" <?php if($firstData != null){ if($firstData->source_id == 't_'.$v->id){ echo 'selected';}} ?>><?php echo $v->name; ?></option>
                                                 <?php endforeach; ?>
                                             <?php endif; ?>
+
+                                            <?php if($selectdata['sourcedata'] != null): ?>
+                                                <optgroup label="-----------素材模块----------"></optgroup>
+                                                <?php foreach($selectdata['sourcedata'] as $k=>$v): ?>
+                                                    <option value="so_<?php echo $v->id; ?>" <?php if($firstData != null){ if($firstData->source_id == 'so_'.$v->id){ echo 'selected';}} ?>><?php echo $v->title; ?></option>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
                                         </select>
                                     </div>
                                 </div>
@@ -194,6 +201,13 @@
                                                     <option value="t_<?php echo $v->id; ?>" <?php if($nouseData != null){ if($nouseData->source_id == 't_'.$v->id){ echo 'selected';}} ?>><?php echo $v->name; ?></option>
                                                 <?php endforeach; ?>
                                             <?php endif; ?>
+
+                                            <?php if($selectdata['sourcedata'] != null): ?>
+                                                <optgroup label="-----------素材模块----------"></optgroup>
+                                                <?php foreach($selectdata['sourcedata'] as $k=>$v): ?>
+                                                    <option value="so_<?php echo $v->id; ?>" <?php if($nouseData != null){ if($nouseData->source_id == 'so_'.$v->id){ echo 'selected';}} ?>><?php echo $v->title; ?></option>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
                                         </select>
                                     </div>
                                 </div>
@@ -229,6 +243,7 @@
                             </tr>
                             </thead>
                             <tbody>
+                            <?php if($keywordsData): ?>
                             <?php foreach($keywordsData as $k=>$v): ?>
                                 <tr>
                                     <td><?php echo $v->id; ?></td>
@@ -240,8 +255,27 @@
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
+                            <?php else : ?>
+                                <div class="alert alert-info" style="margin-top: 10px;">
+                                    <button type="button" class="close" data-dismiss="alert">×</button>
+                                    <strong>提示信息!</strong>您还没有添加任何关键词哦!.
+                                </div>
+                            <?php endif; ?>
                             </tbody>
                         </table>
+                        <div id="pager" class="pager" style="float: left;margin-top: 30px;">
+                            <?php
+
+                            $this->widget('CLinkPager',array(
+                                    'header'=>'',
+                                    'prevPageLabel' => '上一页',
+                                    'nextPageLabel' => '下一页',
+                                    'pages' => $pages,
+                                    'maxButtonCount'=>5
+                                )
+                            );
+                            ?>
+                        </div>
                     </div>
                 </div>
 

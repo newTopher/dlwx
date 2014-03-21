@@ -97,9 +97,63 @@
                                     <div class="link_div">
                                         <span>链接页面</span>
                                         <select class="sliderselect" edit='<?php echo ($k+1); ?>'>
-                                            <option value="0">请选择</option>
-                                            <option value="t_1" <?php if($v->id == 't_1'){ echo 'selected'; }?>>微官网</option>
-                                            <option value="c_1" <?php if($v->id == 'c_1'){ echo 'selected'; } ?>>产品</option>
+                                            <option value="">请选择</option>
+                                            <option value="w_1" <?php if($v->id != null){ if($v->id == 'w_1'){ echo 'selected';}} ?>>微官网</option>
+                                            <optgroup label="-------------平台栏目------------"></optgroup>
+                                            <?php foreach($selectdata['channel'] as $key=>$val): ?>
+                                                <option value="c_<?php echo $val['one']['id'];?>" <?php if($v->id != null){ if($v->id == 'c_'.$val['one']['id']){ echo 'selected';}} ?>><?php echo $val['one']['name'];?></option>
+                                                <?php if(count($val['sub_data']) != 0):?>
+                                                    <?php foreach($val['sub_data'] as $ks=>$vs): ?>
+                                                        <option value="c_<?php echo $vs->id;?>" <?php if($v->id != null){ if($v->id == 'c_'.$vs->id){ echo 'selected';}} ?>>|____<?php echo $vs->name;?></option>
+                                                    <?php endforeach; ?>
+                                                <?php endif; ?>
+                                            <?php endforeach; ?>
+                                            <?php if($selectdata['member'] != null): ?>
+                                                <optgroup label="-------------会员模块------------"></optgroup>
+                                                <option value="m_<?php echo $selectdata['member']->id; ?>" <?php if($v->id != null){ if($v->id == 'm_'.$selectdata['member']->id){ echo 'selected';}} ?>>会员卡</option>
+                                            <?php endif; ?>
+
+                                            <?php if($selectdata['saledata'] != null): ?>
+                                                <optgroup label="-------------优惠券活动------------"></optgroup>
+                                                <?php foreach($selectdata['saledata'] as $ks=>$vs): ?>
+                                                    <option value="s_<?php echo $vs->id; ?>" <?php if($v->id != null){ if($v->id == 's_'.$vs->id){ echo 'selected';}} ?>><?php echo $vs->name; ?></option>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+
+                                            <?php if($selectdata['guaguadata'] != null): ?>
+                                                <optgroup label="-------------刮刮卡活动------------"></optgroup>
+                                                <?php foreach($selectdata['guaguadata'] as $ks=>$vs): ?>
+                                                    <option value="g_<?php echo $vs->id; ?>" <?php if($v->id != null){ if($v->id == 'g_'.$vs->id){ echo 'selected';}} ?>><?php echo $vs->name; ?></option>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+
+                                            <?php if($selectdata['zhuandata'] != null): ?>
+                                                <optgroup label="-----------幸运大转盘活动----------"></optgroup>
+                                                <?php foreach($selectdata['zhuandata'] as $ks=>$vs): ?>
+                                                    <option value="z_<?php echo $vs->id; ?>" <?php if($v->id != null){ if($v->id == 'z_'.$vs->id){ echo 'selected';}} ?>><?php echo $vs->name; ?></option>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+
+                                            <?php if($selectdata['yuyuedata'] != null): ?>
+                                                <optgroup label="-----------在线预约模块----------"></optgroup>
+                                                <?php foreach($selectdata['yuyuedata'] as $ks=>$vs): ?>
+                                                    <option value="y_<?php echo $vs->id; ?>" <?php if($v->id != null){ if($v->id == 'y_'.$vs->id){ echo 'selected';}} ?>><?php echo $vs->title; ?></option>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+
+                                            <?php if($selectdata['namecarddata'] != null): ?>
+                                                <optgroup label="-----------微名片模块----------"></optgroup>
+                                                <?php foreach($selectdata['namecarddata'] as $ks=>$vs): ?>
+                                                    <option value="n_<?php echo $vs->id; ?>" <?php if($v->id != null){ if($v->id == 'n_'.$vs->id){ echo 'selected';}} ?>><?php echo $vs->name; ?></option>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+
+                                            <?php if($selectdata['tuandata'] != null): ?>
+                                                <optgroup label="-----------微团购模块----------"></optgroup>
+                                                <?php foreach($selectdata['tuandata'] as $ks=>$vs): ?>
+                                                    <option value="t_<?php echo $vs->id; ?>" <?php if($v->id != null){ if($v->id == 't_'.$vs->id){ echo 'selected';}} ?>><?php echo $vs->name; ?></option>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
                                         </select>
                                     </div>
                                     <div id="zhezhao<?php echo ($k+1); ?>">
@@ -151,9 +205,63 @@
                                     <label class="control-label" for="selectError3">链接地址</label>
                                     <div class="controls">
                                         <select id="nav_link">
-                                            <option value="0">请选择</option>
-                                            <option value="t_1">微官网</option>
-                                            <option value="c_1">微官网</option>
+                                            <option value="">请选择</option>
+                                            <option value="w_1">微官网</option>
+                                            <optgroup label="-------------平台栏目------------"></optgroup>
+                                            <?php foreach($selectdata['channel'] as $key=>$val): ?>
+                                                <option value="c_<?php echo $val['one']['id'];?>" ><?php echo $val['one']['name'];?></option>
+                                                <?php if(count($val['sub_data']) != 0):?>
+                                                    <?php foreach($val['sub_data'] as $ks=>$vs): ?>
+                                                        <option value="c_<?php echo $vs->id;?>" >|____<?php echo $vs->name;?></option>
+                                                    <?php endforeach; ?>
+                                                <?php endif; ?>
+                                            <?php endforeach; ?>
+                                            <?php if($selectdata['member'] != null): ?>
+                                                <optgroup label="-------------会员模块------------"></optgroup>
+                                                <option value="m_<?php echo $selectdata['member']->id; ?>" >会员卡</option>
+                                            <?php endif; ?>
+
+                                            <?php if($selectdata['saledata'] != null): ?>
+                                                <optgroup label="-------------优惠券活动------------"></optgroup>
+                                                <?php foreach($selectdata['saledata'] as $ks=>$vs): ?>
+                                                    <option value="s_<?php echo $vs->id; ?>" ><?php echo $vs->name; ?></option>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+
+                                            <?php if($selectdata['guaguadata'] != null): ?>
+                                                <optgroup label="-------------刮刮卡活动------------"></optgroup>
+                                                <?php foreach($selectdata['guaguadata'] as $ks=>$vs): ?>
+                                                    <option value="g_<?php echo $vs->id; ?>"><?php echo $vs->name; ?></option>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+
+                                            <?php if($selectdata['zhuandata'] != null): ?>
+                                                <optgroup label="-----------幸运大转盘活动----------"></optgroup>
+                                                <?php foreach($selectdata['zhuandata'] as $ks=>$vs): ?>
+                                                    <option value="z_<?php echo $vs->id; ?>"><?php echo $vs->name; ?></option>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+
+                                            <?php if($selectdata['yuyuedata'] != null): ?>
+                                                <optgroup label="-----------在线预约模块----------"></optgroup>
+                                                <?php foreach($selectdata['yuyuedata'] as $ks=>$vs): ?>
+                                                    <option value="y_<?php echo $vs->id; ?>"><?php echo $vs->title; ?></option>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+
+                                            <?php if($selectdata['namecarddata'] != null): ?>
+                                                <optgroup label="-----------微名片模块----------"></optgroup>
+                                                <?php foreach($selectdata['namecarddata'] as $ks=>$vs): ?>
+                                                    <option value="n_<?php echo $vs->id; ?>"><?php echo $vs->name; ?></option>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+
+                                            <?php if($selectdata['tuandata'] != null): ?>
+                                                <optgroup label="-----------微团购模块----------"></optgroup>
+                                                <?php foreach($selectdata['tuandata'] as $ks=>$vs): ?>
+                                                    <option value="t_<?php echo $vs->id; ?>"><?php echo $vs->name; ?></option>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
                                         </select>
                                     </div>
                                 </div>
@@ -510,49 +618,47 @@
             return false;
         }
 
-        if((old_title != nav_title)){
-           if(img_nav.length != 0){
-               $.post("<?php Yii::app()->request->baseUrl; ?>/Weixin/Navsave",{site_id:site,template_id:template,position:position,navdata:navdata},function(data){
-                    if(data.code == 0){
-                        $("#"+position+"_image").prop('src',"<?php echo Yii::app()->request->baseUrl;?>/upload/slider/"+img_nav)
-                        $("#"+position+"_atext").text(nav_title);
-                        /* have problem */
-                        $("#"+position+"_box").prop(position+'_nav_link',nav_link);
-                        $("#"+position+"_box").prop(position+'_title',nav_title);
-                        $("#"+position+"_box").prop(position+'_image',"<?php echo Yii::app()->request->baseUrl;?>/upload/slider/"+img_nav);
-                        $('#naveditdiv').hide();
-                        notif({
-                            type: "success",
-                            msg: data.msg,
-                            position: "center",
-                            width:"all",
-                            height:100,
-                            opacity: 1
-                        });
-                    }else{
-                        notif({
-                            type: "error",
-                            msg: data.msg,
-                            position: "center",
-                            width:"all",
-                            height:100,
-                            opacity: 1
-                        });
-                        return false;
-                    }
-               },'json');
-           }else{
-               notif({
-                   type: "warning",
-                   msg: "请选择图片",
-                   position: "center",
-                   width:"all",
-                   height:100,
-                   opacity: 1
-               });
-               return false;
-           }
-        }
+       if(img_nav.length != 0){
+           $.post("<?php Yii::app()->request->baseUrl; ?>/Weixin/Navsave",{site_id:site,template_id:template,position:position,navdata:navdata},function(data){
+                if(data.code == 0){
+                    $("#"+position+"_image").prop('src',"<?php echo Yii::app()->request->baseUrl;?>/upload/slider/"+img_nav)
+                    $("#"+position+"_atext").text(nav_title);
+                    /* have problem */
+                    $("#"+position+"_box").prop(position+'_nav_link',nav_link);
+                    $("#"+position+"_box").prop(position+'_title',nav_title);
+                    $("#"+position+"_box").prop(position+'_image',"<?php echo Yii::app()->request->baseUrl;?>/upload/slider/"+img_nav);
+                    $('#naveditdiv').hide();
+                    notif({
+                        type: "success",
+                        msg: data.msg,
+                        position: "center",
+                        width:"all",
+                        height:100,
+                        opacity: 1
+                    });
+                }else{
+                    notif({
+                        type: "error",
+                        msg: data.msg,
+                        position: "center",
+                        width:"all",
+                        height:100,
+                        opacity: 1
+                    });
+                    return false;
+                }
+           },'json');
+       }else{
+           notif({
+               type: "warning",
+               msg: "请选择图片",
+               position: "center",
+               width:"all",
+               height:100,
+               opacity: 1
+           });
+           return false;
+       }
 
         if(!img_nav || typeof(img_nav) == undefined || (old_title == nav_title) ){
             if(img.length != 0){

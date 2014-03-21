@@ -14,7 +14,7 @@ class SelfMenuModel extends Ar{
     public $menu_type;
     public $menu_name;
     public $menu_event;
-    public $url_id;
+    public $url;
     public $num;
     public $text;
     public $single_source_id;
@@ -72,5 +72,26 @@ class SelfMenuModel extends Ar{
         }else{
             return false;
         }
+    }
+
+    public function delpmenu(){
+        if(self::model()->deleteAllByAttributes(array('id'=>$this->id,'uid'=>$this->uid,'pid'=>0))){
+           self::model()->deleteAllByAttributes(array('pid'=>$this->id,'uid'=>$this->uid));
+           return true;
+        }else{
+            return false;
+        }
+    }
+
+    public function delsmenu(){
+        if(self::model()->deleteAllByAttributes(array('id'=>$this->id,'uid'=>$this->uid))){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    static public function findByKeyId($id,$uid){
+        return self::model()->findByAttributes(array('id'=>$id,'uid'=>$uid));
     }
 }

@@ -97,20 +97,3 @@
 
 </div>
 </div>
-
-<script type="text/javascript">
-    $('form[name="form"]').validator({
-        stopOnError: false,
-        timely: false,
-        messages: {
-            required: "该字段内容不能为空哦"
-        },
-        fields: {
-            'webname_title': 'required;',
-            'tel': 'required;',
-            'replay_keywords': 'required;',
-            'msg_title': 'required;',
-            'msg_description': 'required;'
-        }
-    });
-</script>

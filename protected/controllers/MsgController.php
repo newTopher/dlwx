@@ -11,7 +11,7 @@ class MsgController extends Controller{
     public $layout='//layouts/column3';
 
     public function actionIndex(){
-        $to_openid = Yii::app()->session['user']->wx_openid;
+        $to_openid = UserModel::findUserByid(Yii::app()->session['user']->id)->wx_openid;
         $to_openid = (string) $to_openid;
         $criteria = new CDbCriteria();
         $criteria->addCondition('uid='.Yii::app()->session['user']->id);

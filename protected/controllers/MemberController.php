@@ -6,15 +6,13 @@
  * Time: 上午11:03
  * To change this template use File | Settings | File Templates.
  */
-class MemberController extends Controller {
+class MemberController extends CController {
 
     public $layout='//layouts/column4';
 
     public function actionI(){
         $uid = Yii::app()->request->getParam('sid');
-        $openid = Yii::app()->request->getParam('
-
-        ');
+        $openid = Yii::app()->request->getParam('f');
         $wxUserModel  = new WxuserModel();
         $wxUserModel->uid = $uid;
         $wxUserModel->openid = $openid;

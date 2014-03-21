@@ -8,10 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="index.html"> <img alt="Charisma Logo" src="<?php echo Yii::app()->getBaseUrl();?>/img/logo_wapwei.png" /><span class="logo_title">万普微盟</span></a>
-
-
-
+            <a class="brand" target="_blank" href="http://www.wapwei.com"> <img alt="Charisma Logo" src="<?php echo Yii::app()->getBaseUrl();?>/img/logo_wapwei.png" /><span class="logo_title">万普微盟</span></a>
             <!-- user dropdown starts -->
             <div class="btn-group pull-right" >
                 <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
@@ -101,24 +98,24 @@
     <div class="span2 main-menu-span" id="accordion">
 
             <h3>我的万普微盟</h3>
-            <ul class="nav nav-tabs nav-stacked main-menu">
+            <ul class="nav nav-tabs nav-stacked main-menu" id="block_1">
 
-                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/User/home"><span class="hidden-tablet">我的首页</span></a></li>
-                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/User/set"><span class="hidden-tablet">个人设置</span></a></li>
-                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/User/pwdset"><span class="hidden-tablet">修改密码</span></a></li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/User/Home?b=1"><span class="hidden-tablet">我的首页</span></a></li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/User/Set?b=1"><span class="hidden-tablet">个人设置</span></a></li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/User/Pwdset?b=1"><span class="hidden-tablet">修改密码</span></a></li>
             </ul>
 
         <?php if(Yii::app()->session['user']->trade_id == 1): ?>
                 <h3>微官网</h3>
-                <ul class="nav nav-tabs nav-stacked main-menu">
-                    <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/base"><span class="hidden-tablet">基本信息</span></a></li>
+                <ul class="nav nav-tabs nav-stacked main-menu" id="block_2">
+                    <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/base?b=2"><span class="hidden-tablet">基本信息</span></a></li>
                     <!--<li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/menuset"><i class="icon-list-alt"></i><span class="hidden-tablet">菜单管理</span></a></li>-->
-                    <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Templateselect"><span class="hidden-tablet">模板选择</span></a></li>
+                    <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Templateselect?b=2"><span class="hidden-tablet">模板选择</span></a></li>
                     <?php if(Yii::app()->session['is_attr'] == 1): ?>
-                        <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/channelManage/index"><span class="hidden-tablet">栏目管理</span></a></li>
+                        <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/ChannelManage/Index?b=2"><span class="hidden-tablet">栏目管理</span></a></li>
                     <?php endif; ?>
-                    <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><span class="hidden-tablet">模板设置</span></a></li>
-                    <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Lbsset"><span class="hidden-tablet">LBS位置设置</span></a></li>
+                    <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset?b=2"><span class="hidden-tablet">模板设置</span></a></li>
+                    <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/Lbsset?b=2"><span class="hidden-tablet">LBS位置设置</span></a></li>
                 </ul>
 
         <?php endif; ?>
@@ -130,55 +127,66 @@
         <?php endif; ?>
 
         <h3>微信会员卡</h3>
-        <ul class="nav nav-tabs nav-stacked main-menu">
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/MemberManage/Base"><span class="hidden-tablet">商家基本设置</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/MemberManage/Cardset"><span class="hidden-tablet">会员卡设置</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/MemberManage/Memberlist"><span class="hidden-tablet">微信会员管理</span></a></li>
+        <ul class="nav nav-tabs nav-stacked main-menu" id="block_3">
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/MemberManage/Base?b=3"><span class="hidden-tablet">商家基本设置</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/MemberManage/Cardset?b=3"><span class="hidden-tablet">会员卡设置</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/MemberManage/Memberlist?b=3"><span class="hidden-tablet">微信会员管理</span></a></li>
 
         </ul>
 
         <h3>微应用</h3>
-        <ul class="nav nav-tabs nav-stacked main-menu">
+        <ul class="nav nav-tabs nav-stacked main-menu" id="block_4">
 
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/OrderManage/Index"><span class="hidden-tablet">微预约</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/TuanManage/Index"><span class="hidden-tablet">微团购</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/channelManage/index"><span class="hidden-tablet">微调研</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><span class="hidden-tablet">微相册</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/CallingcardManage/Index"><span class="hidden-tablet">微名片</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><span class="hidden-tablet">微全景</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><span class="hidden-tablet">微吧</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><span class="hidden-tablet">微门店</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset"><span class="hidden-tablet">微贺卡</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/OrderManage/Index?b=4"><span class="hidden-tablet">微预约</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/TuanManage/Index?b=4"><span class="hidden-tablet">微团购</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/LiuyanManage/Index?b=4"><span class="hidden-tablet">微留言</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/channelManage/index?b=4"><span class="hidden-tablet">微调研</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset?b=4"><span class="hidden-tablet">微相册</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/CallingcardManage/Index?b=4"><span class="hidden-tablet">微名片</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset?b=4"><span class="hidden-tablet">微全景</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset?b=4"><span class="hidden-tablet">微吧</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset?b=4"><span class="hidden-tablet">微门店</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset?b=4"><span class="hidden-tablet">微贺卡</span></a></li>
         </ul>
 
         <h3>微活动</h3>
-        <ul class="nav nav-tabs nav-stacked main-menu">
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Salecard/Index"><span class="hidden-tablet">微信优惠券</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Guaguacard/Index"><span class="hidden-tablet">微信刮刮卡</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Zhuancard/Index"><span class="hidden-tablet">幸运大转盘</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Activity/index"><span class="hidden-tablet">微信墙</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Activity/index"><span class="hidden-tablet">微信水果达人</span></a></li>
+        <ul class="nav nav-tabs nav-stacked main-menu" id="block_5">
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Salecard/Index?b=5"><span class="hidden-tablet">微信优惠券</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Guaguacard/Index?b=5"><span class="hidden-tablet">微信刮刮卡</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Zhuancard/Index?b=5"><span class="hidden-tablet">幸运大转盘</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Activity/index?b=5"><span class="hidden-tablet">微信墙</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Activity/index?b=5"><span class="hidden-tablet">微信水果达人</span></a></li>
         </ul>
 
         <h3>微信基础服务</h3>
-        <ul class="nav nav-tabs nav-stacked main-menu">
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/AutoReplay/base"><span class="hidden-tablet">自动回复</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Source/base"><span class="hidden-tablet">素材管理</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Menu/base"><span class="hidden-tablet">自定义菜单</span></a></li>
+        <ul class="nav nav-tabs nav-stacked main-menu" id="block_6">
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/AutoReplay/Base?b=6"><span class="hidden-tablet">自动回复</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Source/Base?b=6"><span class="hidden-tablet">素材管理</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Menu/Base?b=6"><span class="hidden-tablet">自定义菜单</span></a></li>
         </ul>
 
 
         <h3>微用户</h3>
-        <ul class="nav nav-tabs nav-stacked main-menu">
+        <ul class="nav nav-tabs nav-stacked main-menu" id="block_7">
 
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/WeixinFans/index"><span class="hidden-tablet">微信粉丝</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Msg/index"><span class="hidden-tablet">消息管理</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/WeixinFans/Index?b=7"><span class="hidden-tablet">微信粉丝</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Msg/Index?b=7"><span class="hidden-tablet">消息管理</span></a></li>
         </ul>
 
         <h3>微数据</h3>
-        <ul class="nav nav-tabs nav-stacked main-menu">
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl();?>/DataManage/Index"><span class="hidden-tablet">粉丝数据</span></a></li>
+        <ul class="nav nav-tabs nav-stacked main-menu" id="block_8">
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl();?>/DataManage/Index?b=8"><span class="hidden-tablet">粉丝数据</span></a></li>
             <li><a class="ajax-link" href="index.html"><span class="hidden-tablet">访问数据</span></a></li>
+        </ul>
+
+        <h3>行业版</h3>
+        <ul class="nav nav-tabs nav-stacked main-menu" id="block_9">
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Trade/Vshop?b=9"><span class="hidden-tablet">微商城</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Trade/Vshop?b=9"><span class="hidden-tablet">微餐饮</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Trade/Vshop?b=9"><span class="hidden-tablet">微酒店</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Trade/Vshop?b=9"><span class="hidden-tablet">微房产</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Trade/Vshop?b=9"><span class="hidden-tablet">微汽车</span></a></li>
+
         </ul>
 
     </div><!--/span-->
@@ -201,9 +209,12 @@
         </footer>
 
     </div><!--/.fluid-container-->
+    <script type="text/javascript">
+        var block = <?php echo Yii::app()->session['block']; ?>;
+    </script>
         <script type="text/javascript">
             $(function() {
-                $( "#accordion" ).accordion();
+                $( "#accordion" ).accordion({active:(block-1)});
                 $( "#accordion ul").css('height','auto');
                 $( "#accordion ul").css('margin-bottom','4px');
             });

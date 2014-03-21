@@ -11,8 +11,11 @@ class Ar extends CActiveRecord{
         parent::__construct($scenario);
     }
 
+
+
+
     public function getDbConnection(){
-        $dbname = $this->dbname;
+		$dbname = $this->dbname;
         if (isset(self::$database[$dbname]))
         {
             return self::$database[$dbname];
@@ -33,8 +36,8 @@ class Ar extends CActiveRecord{
                 self::$database[$dbname]->setActive(true);
                 return self::$database[$dbname];
             }
-            else
                 throw new CDbException(Yii::t('yii','Active Record requires a "db" CDbConnection application component.'));
         }
+
     }
 } 
