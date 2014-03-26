@@ -19,6 +19,18 @@
                     <li><a href="<?php echo Yii::app()->getBaseUrl();?>/login/loginOut">退出</a></li>
                 </ul>
             </div>
+            <?php if(Yii::app()->session['user']->level == 3):?>
+            <div class="header_image" style="float: right;height: 50px;width: 50px;margin: 5px;">
+                <img style="width: 50px;height: 50px; -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;" src="<?php echo Yii::app()->request->baseUrl.'/upload/weixin_heading/'.Yii::app()->session['user']->fakeid.'png'?Yii::app()->request->baseUrl.'/upload/weixin_headimg/'.Yii::app()->session['user']->fakeid.'.'.'png':null;?>">
+            </div>
+            <?php endif;?>
+            <div class="username" style="float:right;line-height: 30px;font-size: 15px;font-family: 微软雅黑;margin-right: 5px;";>
+            <?php if(Yii::app()->session['user']->level == 3):?>
+               
+            <?php elseif(Yii::app()->session['user']->level == 2):?>
+                <span><?php echo Yii::app()->session['user']->agent_name?Yii::app()->session['user']->agent_name:'';?></span>
+            <?php endif;?>
+        </div>
             <!-- user dropdown ends -->
 
 
@@ -81,12 +93,21 @@
                 <li class="nav-header hidden-tablet">个人中心</li>
                 <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/set"><span class="hidden-tablet">账户设置</span></a></li>
                 <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/pwdset"><span class="hidden-tablet">密码修改</span></a></li>
-                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/AddMoney"><span class="hidden-tablet">平台充值</span></a></li>
             </ul>
         </div><!--/.well -->
         <div class="well nav-collapse sidebar-nav">
             <ul class="nav nav-tabs nav-stacked main-menu">
                 <li class="nav-header hidden-tablet">代理商专区</li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/addUser"><span class="hidden-tablet">添加客户</span></a></li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/UserList"><span class="hidden-tablet">客户列表</span></a></li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/applyList"><span class="hidden-tablet">客户申请管理</span></a></li>
+            </ul>
+        </div><!--/.well -->
+
+        <div class="well nav-collapse sidebar-nav">
+            <ul class="nav nav-tabs nav-stacked main-menu">
+                <li class="nav-header hidden-tablet">充值信息</li>
+                <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/AddMoney"><span class="hidden-tablet">平台充值</span></a></li>
                 <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/addUser"><span class="hidden-tablet">添加客户</span></a></li>
                 <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/UserList"><span class="hidden-tablet">客户列表</span></a></li>
                 <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Agent/applyList"><span class="hidden-tablet">客户申请管理</span></a></li>
@@ -141,7 +162,7 @@
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/TuanManage/Index?b=4"><span class="hidden-tablet">微团购</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/LiuyanManage/Index?b=4"><span class="hidden-tablet">微留言</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/channelManage/index?b=4"><span class="hidden-tablet">微调研</span></a></li>
-            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset?b=4"><span class="hidden-tablet">微相册</span></a></li>
+            <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/PhotoManage/Index?b=4"><span class="hidden-tablet">微相册</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/CallingcardManage/Index?b=4"><span class="hidden-tablet">微名片</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset?b=4"><span class="hidden-tablet">微全景</span></a></li>
             <li><a class="ajax-link" href="<?php echo Yii::app()->getBaseUrl(); ?>/Weixin/templateset?b=4"><span class="hidden-tablet">微吧</span></a></li>
