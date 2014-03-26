@@ -28,11 +28,24 @@ class CwapweiController extends CController{
             $userdata = UserModel::findUserByid($uid);
             $webData = WxWebsiteModel::getWxWebByUid($uid);
             $menudata = ChannelModel::getChannel($id);
-            if($menudata->linkid != null){
-                $temp = explode('_',$menudata->linkid);
-                $this->redirect(Yii::app()->request->baseUrl.'/'.strtoupper($temp[0]).'wapwei/I/id/'.$temp[1].'/sid/'.$uid);
+            if($menudata->pid == 0){
+                if($data = ChannelModel::getPidChannel($id)){
+                    if($menudata->linkid != null){
+                        $temp = explode('_',$menudata->linkid);
+                        $this->redirect(Yii::app()->request->baseUrl.'/'.strtoupper($temp[0]).'wapwei/I/id/'.$temp[1].'/sid/'.$uid.'/f/'.$openid);
+                    }else{
+                        $this->render('list',array('listdata'=>$data,'uid'=>$uid,'webdata'=>$webData,'menudata'=>$menudata,'openid'=>$openid)) ;
+                    }
+                }else{
+                    $this->render('index',array('webdata'=>$webData,'openid'=>$openid,'menudata'=>$menudata,'uid'=>$uid,'userdata'=>$userdata));
+                }
             }else{
-                $this->render('index',array('webdata'=>$webData,'openid'=>$openid,'menudata'=>$menudata,'uid'=>$uid,'userdata'=>$userdata));
+                if($menudata->linkid != null){
+                    $temp = explode('_',$menudata->linkid);
+                    $this->redirect(Yii::app()->request->baseUrl.'/'.strtoupper($temp[0]).'wapwei/I/id/'.$temp[1].'/sid/'.$uid.'/f/'.$openid);
+                }else{
+                    $this->render('index',array('webdata'=>$webData,'openid'=>$openid,'menudata'=>$menudata,'uid'=>$uid,'userdata'=>$userdata));
+                }
             }
         }else{
             echo '非法请求';

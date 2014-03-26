@@ -2,7 +2,6 @@
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/css/index_media.css" rel="stylesheet">
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/msg.css" rel="stylesheet">
 
-
 <div class="row-fluid">
     <div class="box span12" style="height: 1000px;">
         <div class="box-header well">
@@ -18,7 +17,7 @@
                                     <?php foreach($sliderdata as $k=>$v):?>
                                         <div class="img">
                                         <?php if($v->id !== 'null'): ?>
-                                            <img src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo $v->pic; ?>"></div><div class="mod">
+                                            <img src="<?php echo $v->pic; ?>"></div><div class="mod">
                                         <?php else:  ?>
                                             <img src="<?php echo Yii::app()->request->baseUrl; ?>/backtheme/<?php echo $template_name; ?>/image/banner.png"></div><div class="mod">
                                         <?php endif; ?>
@@ -33,20 +32,20 @@
                                 <ul>
                                         <div class="web_skin_index_list list mini_box" id="p1_box" p1_nav_link="<?php if(isset(CJSON::decode($templateData->p1,false)->linkid)){ echo CJSON::decode($templateData->p1,false)->linkid; }else { echo '0'; } ?>"
                                              p1_title="<?php if(isset(CJSON::decode($templateData->p1,false)->title)){ echo CJSON::decode($templateData->p1,false)->title; }else { echo '服务项目'; } ?>" ref="p1"
-                                             p1_image="<?php if(isset(CJSON::decode($templateData->p1,false)->pic)){ echo Yii::app()->request->baseUrl.'/upload/slider/'.CJSON::decode($templateData->p1,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i0.jpg'; } ?>"
+                                             p1_image="<?php if(isset(CJSON::decode($templateData->p1,false)->pic)){ echo CJSON::decode($templateData->p1,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i0.jpg'; } ?>"
                                              p1_image_name="<?php if(isset(CJSON::decode($templateData->p1,false)->pic)){ echo CJSON::decode($templateData->p1,false)->pic; }else{ echo ''; } ?>">
                                             <div>
-                                                <div class="img"><img id="p1_image" src="<?php if(isset(CJSON::decode($templateData->p1,false)->pic)){ echo Yii::app()->request->baseUrl.'/upload/slider/'.CJSON::decode($templateData->p1,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i0.jpg'; } ?>"></div><div class="mod" style="display: none;">&nbsp;</div>
+                                                <div class="img"><img id="p1_image" src="<?php if(isset(CJSON::decode($templateData->p1,false)->pic)){ echo CJSON::decode($templateData->p1,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i0.jpg'; } ?>"></div><div class="mod" style="display: none;">&nbsp;</div>
                                                 <div class="text"><a id="p1_atext" href=""><?php if(isset(CJSON::decode($templateData->p1,false)->title)){ echo CJSON::decode($templateData->p1,false)->title; }else { echo '服务项目'; } ?></a></div><div class="mod" style="display: none;">&nbsp;</div>
                                             </div><div class="mod" style="display: none;">&nbsp;</div>
                                         </div>
 
                                         <div class="web_skin_index_list list mini_box" id="p2_box" p2_nav_link="<?php if(isset(CJSON::decode($templateData->p2,false)->linkid)){ echo CJSON::decode($templateData->p2,false)->linkid; }else { echo '0'; } ?>"
                                              p2_title="<?php if(isset(CJSON::decode($templateData->p2,false)->title)){ echo CJSON::decode($templateData->p2,false)->title; }else { echo '核心业务'; } ?>" ref="p2"
-                                             p2_image="<?php if(isset(CJSON::decode($templateData->p2,false)->pic)){ echo Yii::app()->request->baseUrl.'/upload/slider/'.CJSON::decode($templateData->p2,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i4.jpg'; } ?>"
+                                             p2_image="<?php if(isset(CJSON::decode($templateData->p2,false)->pic)){ echo CJSON::decode($templateData->p2,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i4.jpg'; } ?>"
                                              p2_image_name="<?php if(isset(CJSON::decode($templateData->p2,false)->pic)){ echo CJSON::decode($templateData->p2,false)->pic; }else{ echo ''; } ?>">
                                             <div>
-                                                <div class="img"><img id="p2_image" src="<?php if(isset(CJSON::decode($templateData->p2,false)->pic)){ echo Yii::app()->request->baseUrl.'/upload/slider/'.CJSON::decode($templateData->p2,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i4.jpg'; } ?>"></div><div class="mod" style="display: none;">&nbsp;</div>
+                                                <div class="img"><img id="p2_image" src="<?php if(isset(CJSON::decode($templateData->p2,false)->pic)){ echo CJSON::decode($templateData->p2,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i4.jpg'; } ?>"></div><div class="mod" style="display: none;">&nbsp;</div>
                                                 <div class="text"><a id="p2_atext" href=""><?php if(isset(CJSON::decode($templateData->p2,false)->title)){ echo CJSON::decode($templateData->p2,false)->title; }else { echo '核心业务'; } ?></a></div><div class="mod" style="display: none;">&nbsp;</div>
                                             </div><div class="mod" style="display: none;">&nbsp;</div>
 
@@ -54,30 +53,30 @@
 
                                         <div class="web_skin_index_list list mini_box" id="p3_box" p3_nav_link="<?php if(isset(CJSON::decode($templateData->p3,false)->linkid)){ echo CJSON::decode($templateData->p3,false)->linkid; }else { echo '0'; } ?>"
                                              p3_title="<?php if(isset(CJSON::decode($templateData->p3,false)->title)){ echo CJSON::decode($templateData->p3,false)->title; }else { echo '网上选人'; } ?>" ref="p3"
-                                             p3_image="<?php if(isset(CJSON::decode($templateData->p3,false)->pic)){ echo Yii::app()->request->baseUrl.'/upload/slider/'.CJSON::decode($templateData->p3,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i5.jpg'; } ?>"
+                                             p3_image="<?php if(isset(CJSON::decode($templateData->p3,false)->pic)){ echo CJSON::decode($templateData->p3,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i5.jpg'; } ?>"
                                              p3_image_name="<?php if(isset(CJSON::decode($templateData->p3,false)->pic)){ echo CJSON::decode($templateData->p3,false)->pic; }else{ echo ''; } ?>">
                                             <div>
-                                                <div class="img"><img id="p3_image" src="<?php if(isset(CJSON::decode($templateData->p3,false)->pic)){ echo Yii::app()->request->baseUrl.'/upload/slider/'.CJSON::decode($templateData->p3,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i2.jpg'; } ?>"></div><div class="mod">&nbsp;</div>
+                                                <div class="img"><img id="p3_image" src="<?php if(isset(CJSON::decode($templateData->p3,false)->pic)){ echo CJSON::decode($templateData->p3,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i2.jpg'; } ?>"></div><div class="mod">&nbsp;</div>
                                                 <div class="text"><a id="p3_atext" href=""><?php if(isset(CJSON::decode($templateData->p3,false)->title)){ echo CJSON::decode($templateData->p3,false)->title; }else { echo '网上选人'; } ?></a></div><div class="mod">&nbsp;</div>
                                             </div><div class="mod">&nbsp;</div>
                                         </div>
 
                                         <div class="web_skin_index_list list mini_box" id="p4_box" p4_nav_link="<?php if(isset(CJSON::decode($templateData->p4,false)->linkid)){ echo CJSON::decode($templateData->p4,false)->linkid; }else { echo '0'; } ?>"
                                              p4_title="<?php if(isset(CJSON::decode($templateData->p4,false)->title)){ echo CJSON::decode($templateData->p4,false)->title; }else { echo '招聘培训'; } ?>" ref="p4"
-                                             p4_image="<?php if(isset(CJSON::decode($templateData->p4,false)->pic)){ echo Yii::app()->request->baseUrl.'/upload/slider/'.CJSON::decode($templateData->p4,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i3.jpg'; } ?>"
+                                             p4_image="<?php if(isset(CJSON::decode($templateData->p4,false)->pic)){ echo CJSON::decode($templateData->p4,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i3.jpg'; } ?>"
                                              p4_image_name="<?php if(isset(CJSON::decode($templateData->p4,false)->pic)){ echo CJSON::decode($templateData->p4,false)->pic; }else{ echo ''; } ?>">
                                             <div>
-                                                <div class="img"><img id="p4_image" src="<?php if(isset(CJSON::decode($templateData->p4,false)->pic)){ echo Yii::app()->request->baseUrl.'/upload/slider/'.CJSON::decode($templateData->p4,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i3.jpg'; } ?>"></div><div class="mod" style="display: none;">&nbsp;</div>
+                                                <div class="img"><img id="p4_image" src="<?php if(isset(CJSON::decode($templateData->p4,false)->pic)){ echo CJSON::decode($templateData->p4,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i3.jpg'; } ?>"></div><div class="mod" style="display: none;">&nbsp;</div>
                                                 <div class="text"><a id="p4_atext" href=""><?php if(isset(CJSON::decode($templateData->p4,false)->title)){ echo CJSON::decode($templateData->p4,false)->title; }else { echo '招聘培训'; } ?></a></div><div class="mod" style="display: none;">&nbsp;</div>
                                             </div><div class="mod" style="display: none;">&nbsp;</div>
                                         </div>
 
                                         <div class="web_skin_index_list list mini_box" id="p5_box" p5_nav_link="<?php if(isset(CJSON::decode($templateData->p5,false)->linkid)){ echo CJSON::decode($templateData->p5,false)->linkid; }else { echo '0'; } ?>"
                                              p5_title="<?php if(isset(CJSON::decode($templateData->p5,false)->title)){ echo CJSON::decode($templateData->p5,false)->title; }else { echo '招聘培训'; } ?>" ref="p5"
-                                             p5_image="<?php if(isset(CJSON::decode($templateData->p5,false)->pic)){ echo Yii::app()->request->baseUrl.'/upload/slider/'.CJSON::decode($templateData->p5,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i4.jpg'; } ?>"
+                                             p5_image="<?php if(isset(CJSON::decode($templateData->p5,false)->pic)){ echo CJSON::decode($templateData->p5,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i4.jpg'; } ?>"
                                              p5_image_name="<?php if(isset(CJSON::decode($templateData->p5,false)->pic)){ echo CJSON::decode($templateData->p5,false)->pic; }else{ echo ''; } ?>">
                                             <div>
-                                                <div class="img"><img id="p5_image" src="<?php if(isset(CJSON::decode($templateData->p5,false)->pic)){ echo Yii::app()->request->baseUrl.'/upload/slider/'.CJSON::decode($templateData->p5,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i4.jpg'; } ?>"></div><div class="mod" style="display: none;">&nbsp;</div>
+                                                <div class="img"><img id="p5_image" src="<?php if(isset(CJSON::decode($templateData->p5,false)->pic)){ echo CJSON::decode($templateData->p5,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i4.jpg'; } ?>"></div><div class="mod" style="display: none;">&nbsp;</div>
                                                 <div class="text"><a id="p5_atext" href=""><?php if(isset(CJSON::decode($templateData->p5,false)->title)){ echo CJSON::decode($templateData->p5,false)->title; }else { echo '收费标准'; } ?></a></div><div class="mod" style="display: none;">&nbsp;</div>
                                             </div><div class="mod" style="display: none;">&nbsp;</div>
 
@@ -85,40 +84,40 @@
 
                                         <div class="web_skin_index_list list mini_box" id="p6_box" p6_nav_link="<?php if(isset(CJSON::decode($templateData->p6,false)->linkid)){ echo CJSON::decode($templateData->p6,false)->linkid; }else { echo '0'; } ?>"
                                              p6_title="<?php if(isset(CJSON::decode($templateData->p6,false)->title)){ echo CJSON::decode($templateData->p6,false)->title; }else { echo '联系我们'; } ?>" ref="p6"
-                                             p6_image="<?php if(isset(CJSON::decode($templateData->p6,false)->pic)){ echo Yii::app()->request->baseUrl.'/upload/slider/'.CJSON::decode($templateData->p6,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i5.jpg'; } ?>"
+                                             p6_image="<?php if(isset(CJSON::decode($templateData->p6,false)->pic)){ echo CJSON::decode($templateData->p6,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i5.jpg'; } ?>"
                                              p6_image_name="<?php if(isset(CJSON::decode($templateData->p6,false)->pic)){ echo CJSON::decode($templateData->p6,false)->pic; }else{ echo ''; } ?>">
                                             <div>
-                                                <div class="img"><img id="p6_image" src="<?php if(isset(CJSON::decode($templateData->p6,false)->pic)){ echo Yii::app()->request->baseUrl.'/upload/slider/'.CJSON::decode($templateData->p6,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i5.jpg'; } ?>"></div><div class="mod" style="display: none;">&nbsp;</div>
+                                                <div class="img"><img id="p6_image" src="<?php if(isset(CJSON::decode($templateData->p6,false)->pic)){ echo CJSON::decode($templateData->p6,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i5.jpg'; } ?>"></div><div class="mod" style="display: none;">&nbsp;</div>
                                                 <div class="text"><a id="p6_atext" href=""><?php if(isset(CJSON::decode($templateData->p6,false)->title)){ echo CJSON::decode($templateData->p6,false)->title; }else { echo '联系我们'; } ?></a></div><div class="mod" style="display: none;">&nbsp;</div>
                                             </div><div class="mod" style="display: none;">&nbsp;</div>
                                         </div>
 
                                         <div class="web_skin_index_list list mini_box" id="p7_box" p7_nav_link="<?php if(isset(CJSON::decode($templateData->p7,false)->linkid)){ echo CJSON::decode($templateData->p7,false)->linkid; }else { echo '0'; } ?>"
                                              p7_title="<?php if(isset(CJSON::decode($templateData->p7,false)->title)){ echo CJSON::decode($templateData->p7,false)->title; }else { echo '联系我们'; } ?>" ref="p7"
-                                             p7_image="<?php if(isset(CJSON::decode($templateData->p7,false)->pic)){ echo Yii::app()->request->baseUrl.'/upload/slider/'.CJSON::decode($templateData->p7,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i5.jpg'; } ?>"
+                                             p7_image="<?php if(isset(CJSON::decode($templateData->p7,false)->pic)){ echo CJSON::decode($templateData->p7,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i5.jpg'; } ?>"
                                              p7_image_name="<?php if(isset(CJSON::decode($templateData->p7,false)->pic)){ echo CJSON::decode($templateData->p7,false)->pic; }else{ echo ''; } ?>">
                                             <div>
-                                                <div class="img"><img id="p7_image" src="<?php if(isset(CJSON::decode($templateData->p7,false)->pic)){ echo Yii::app()->request->baseUrl.'/upload/slider/'.CJSON::decode($templateData->p7,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i5.jpg'; } ?>"></div><div class="mod" style="display: none;">&nbsp;</div>
+                                                <div class="img"><img id="p7_image" src="<?php if(isset(CJSON::decode($templateData->p7,false)->pic)){ echo CJSON::decode($templateData->p7,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i5.jpg'; } ?>"></div><div class="mod" style="display: none;">&nbsp;</div>
                                                 <div class="text"><a id="p7_atext" href=""><?php if(isset(CJSON::decode($templateData->p7,false)->title)){ echo CJSON::decode($templateData->p7,false)->title; }else { echo '联系我们'; } ?></a></div><div class="mod" style="display: none;">&nbsp;</div>
                                             </div><div class="mod" style="display: none;">&nbsp;</div>
                                         </div>
 
                                         <div class="web_skin_index_list list mini_box" id="p8_box" p8_nav_link="<?php if(isset(CJSON::decode($templateData->p8,false)->linkid)){ echo CJSON::decode($templateData->p8,false)->linkid; }else { echo '0'; } ?>"
                                              p8_title="<?php if(isset(CJSON::decode($templateData->p8,false)->title)){ echo CJSON::decode($templateData->p8,false)->title; }else { echo '联系我们'; } ?>" ref="p8"
-                                             p8_image="<?php if(isset(CJSON::decode($templateData->p8,false)->pic)){ echo Yii::app()->request->baseUrl.'/upload/slider/'.CJSON::decode($templateData->p8,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i5.jpg'; } ?>"
+                                             p8_image="<?php if(isset(CJSON::decode($templateData->p8,false)->pic)){ echo CJSON::decode($templateData->p8,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i5.jpg'; } ?>"
                                              p8_image_name="<?php if(isset(CJSON::decode($templateData->p8,false)->pic)){ echo CJSON::decode($templateData->p8,false)->pic; }else{ echo ''; } ?>">
                                             <div>
-                                                <div class="img"><img id="p8_image" src="<?php if(isset(CJSON::decode($templateData->p8,false)->pic)){ echo Yii::app()->request->baseUrl.'/upload/slider/'.CJSON::decode($templateData->p8,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i5.jpg'; } ?>"></div><div class="mod" style="display: none;">&nbsp;</div>
+                                                <div class="img"><img id="p8_image" src="<?php if(isset(CJSON::decode($templateData->p8,false)->pic)){ echo CJSON::decode($templateData->p8,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i5.jpg'; } ?>"></div><div class="mod" style="display: none;">&nbsp;</div>
                                                 <div class="text"><a id="p8_atext" href=""><?php if(isset(CJSON::decode($templateData->p8,false)->title)){ echo CJSON::decode($templateData->p8,false)->title; }else { echo '联系我们'; } ?></a></div><div class="mod" style="display: none;">&nbsp;</div>
                                             </div><div class="mod" style="display: none;">&nbsp;</div>
                                         </div>
 
                                         <div class="web_skin_index_list list mini_box" id="p9_box" p9_nav_link="<?php if(isset(CJSON::decode($templateData->p9,false)->linkid)){ echo CJSON::decode($templateData->p9,false)->linkid; }else { echo '0'; } ?>"
                                              p9_title="<?php if(isset(CJSON::decode($templateData->p9,false)->title)){ echo CJSON::decode($templateData->p9,false)->title; }else { echo '联系我们'; } ?>" ref="p9"
-                                             p9_image="<?php if(isset(CJSON::decode($templateData->p9,false)->pic)){ echo Yii::app()->request->baseUrl.'/upload/slider/'.CJSON::decode($templateData->p9,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i5.jpg'; } ?>"
+                                             p9_image="<?php if(isset(CJSON::decode($templateData->p9,false)->pic)){ echo CJSON::decode($templateData->p9,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i5.jpg'; } ?>"
                                              p9_image_name="<?php if(isset(CJSON::decode($templateData->p9,false)->pic)){ echo CJSON::decode($templateData->p9,false)->pic; }else{ echo ''; } ?>">
                                             <div>
-                                                <div class="img"><img id="p9_image" src="<?php if(isset(CJSON::decode($templateData->p9,false)->pic)){ echo Yii::app()->request->baseUrl.'/upload/slider/'.CJSON::decode($templateData->p9,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i5.jpg'; } ?>"></div><div class="mod" style="display: none;">&nbsp;</div>
+                                                <div class="img"><img id="p9_image" src="<?php if(isset(CJSON::decode($templateData->p9,false)->pic)){ echo CJSON::decode($templateData->p9,false)->pic; }else{ echo Yii::app()->request->baseUrl.'/backtheme/'.$template_name.'/image/i5.jpg'; } ?>"></div><div class="mod" style="display: none;">&nbsp;</div>
                                                 <div class="text"><a id="p9_atext" href=""><?php if(isset(CJSON::decode($templateData->p9,false)->title)){ echo CJSON::decode($templateData->p9,false)->title; }else { echo '联系我们'; } ?></a></div><div class="mod" style="display: none;">&nbsp;</div>
                                             </div><div class="mod" style="display: none;">&nbsp;</div>
                                         </div>
@@ -135,11 +134,7 @@
                                 <?php foreach($sliderdata as $k=>$v):?>
                                 <div class="silder_box">
                                     <span>第<?php echo ($k+1); ?>张图片</span>
-                                    <div class="btn btn-info" style="width: 80px;height: 18px;">
-                                        选择图片
-                                        <input class="filecss fileupload" type="file" name="sliderimage" edit='<?php echo ($k+1); ?>'>
-                                    </div>
-                                    <button class="btn uploadbtn" edit='<?php echo ($k+1); ?>'>上传</button>
+                                        <input class="fileupload btn btn-info" type="button"name="sliderimage" edit='<?php echo ($k+1); ?>' value="上传图片">
                                     <div class="link_div">
                                         <span>链接页面</span>
                                         <select class="sliderselect" edit='<?php echo ($k+1); ?>'>
@@ -213,8 +208,8 @@
                                     </div>
                                     <div id="showimg<?php echo ($k+1); ?>" class="showimg">
                                         <?php if($v->id != 'null'): ?>
-                                            <img width='250px' height='100px' src="<?php echo Yii::app()->request->baseUrl;?>/upload/slider/<?php echo $v->pic; ?>">
-                                            <button onclick='delimage(this)' edit='<?php echo ($k+1); ?>' datadir='slider' data='<?php echo $v->pic; ?>'class='btn btn-mini btn-danger del_btn'>删除</button>
+                                            <img width='250px' height='100px' src="<?php echo $v->pic; ?>">
+                                            <button onclick='delimage(this)' edit='<?php echo ($k+1); ?>' data='<?php echo $v->pic; ?>'class='btn btn-mini btn-danger del_btn'>删除</button>
                                         <?php endif; ?>
                                     </div>
                                 </div>
@@ -312,17 +307,15 @@
                                     </div>
                                 </div>
 
-                                <div class="btn btn-info" style="width: 80px;height: 18px;">
-                                    选择图片
-                                    <input class="filecss nav_fileupload" type="file" name="sliderimage">
-                                </div>
-                                <button class="btn uploadbtn_nav" edit='4'>上传</button>
+                                <input class="nav_fileupload btn btn-info" type="button" name="sliderimage" value="上传图片">
                                 <div id="zhezhao_nav">
                                     <div id="loading_nav" class="loading">
                                         <span class="bar"><img src="<?php Yii::app()->request->baseUrl; ?>/images/loading.gif" /></span><span class="percent_nav">0%</span >
                                     </div>
                                 </div>
-                                <div id="showimg_nav" class="nav_image_calss"></div>
+                                <div id="showimg_nav" class="nav_image_calss">
+
+                                </div>
 
                                 <div class="form-actions">
                                     <button type="submit" id="nav_postbtn" class="btn btn-primary">保存</button>
@@ -407,61 +400,34 @@
             $('#naveditdiv').show();
         });
     });
-    $(".fileupload").each(function(){
-        $(this).click(function(){
-            var i = $(this).attr('edit');
-            var zhezhao = $("#zhezhao"+i);
-            zhezhao.hide();
-            if($("#myupload"+i).attr('action') == undefined){
-                $(this).wrap("<form id='myupload"+i+"' action='<?php Yii::app()->request->baseUrl; ?>/Upload/File' method='post' enctype='multipart/form-data'></form>");
-            }
-        });
-    });
 
-    $(".uploadbtn").each(function(){
-        $(this).click(function(){
-            var i = parseInt($(this).attr('edit'));
-            var percent = $('.percent'+i);
-            var showimg = $('#showimg'+i);
-            var zhezhao = $("#zhezhao"+i);
-            var btn = $(".btn span");
-            $("#myupload"+i).ajaxSubmit({
-                dataType:  'json',
-                beforeSend: function() {
-                    showimg.empty();
-                    zhezhao.show();
-                    var percentVal = '0%';
-                    percent.html(percentVal);
-                    btn.html("上传中...");
-                },
-                uploadProgress: function(event, position, total, percentComplete) {
-                    $("#zhezhao"+i).attr("class","mask opacity");
-                    $("#zhezhao"+i).css('width',$(window).width());
-                    $("#zhezhao"+i).css('height',$(window).height());
-                    var percentVal = percentComplete + '%';
-                    percent.html(percentVal);
-                    $("#loading"+i).css('margin-left',$(window).width()/2-50);
-                    $("#loading"+i).css('margin-top',$(window).height()/2-10);
-                },
-                success: function(data) {
-                    var img = "<?php echo Yii::app()->request->baseUrl;?>/upload/slider/"+data.pic;
-                    zhezhao.hide();
-                    showimg.html("<img width='250px' height='100px' src='"+img+"'><button onclick='delimage(this)' edit='"+i+"' datadir='slider' data='"+data.pic+"'class='btn btn-mini btn-danger del_btn'>删除</button>");
-                    changePic(i,data.pic);
-                    btn.html("添加附件");
-                },
-                error:function(xhr){
-                    btn.html("上传失败");
-                }
+
+    KindEditor.ready(function(K) {
+        var editor = K.editor({
+            allowFileManager : true ,
+            fileManagerJson : '<?php echo Yii::app()->request->baseUrl;?>/js/kind/php/file_manager_json.php?dir=image&s=<?php echo Yii::app()->session['user']->id;?>',
+            uploadJson : '<?php echo Yii::app()->request->baseUrl;?>/js/kind/php/upload_json.php?dir=image&s=<?php echo Yii::app()->session['user']->id;?>'
+        });
+        K('.fileupload').click(function() {
+            var editval = $(this).attr('edit');
+            var showimg = $('#showimg'+editval);
+            editor.loadPlugin('image', function() {
+                editor.plugin.imageDialog({
+                    clickFn : function(url, title, width, height, border, align) {
+                        showimg.html("<img width='250px' height='100px' src='"+url+"'><button onclick='delimage(this)' edit='"+editval+"' data='"+url+"'class='btn btn-mini btn-danger del_btn'>删除</button>");
+                        changePic(editval,url);
+                        editor.hideDialog();
+                    }
+                });
             });
         });
     });
 
+
     function delimage(obj){
-        var dir = $(obj).attr('datadir');
         var name = $(obj).attr('data');
         var i =  parseInt($(obj).attr('edit'));
-        $.post("<?php Yii::app()->request->baseUrl; ?>/Upload/Delimage", { dir: dir, name: name },function(json){
+        $.post("<?php Yii::app()->request->baseUrl; ?>/Upload/Delimage", {name: name },function(json){
             if(json.code == 0){
                 $(obj).parent().html("");
                 changePic(i,null);
@@ -489,9 +455,8 @@
     }
 
     function delinavmage(obj){
-        var dir = $(obj).attr('datadir');
         var name = $(obj).attr('data');
-        $.post("<?php Yii::app()->request->baseUrl; ?>/Upload/Delimage", { dir: dir, name: name },function(json){
+        $.post("<?php Yii::app()->request->baseUrl; ?>/Upload/Delimage", { name: name },function(json){
             if(json.code == 0){
                 $(obj).parent().html("");
                 $("#image_nav").val("");
@@ -591,50 +556,27 @@
     });
 
 
-    $(".nav_fileupload").click(function(){
-        var zhezhao = $("#nav_zhezhao");
-        zhezhao.hide();
-        if($("#myupload").attr('action') == undefined){
-            $(this).wrap("<form id='myupload' action='<?php Yii::app()->request->baseUrl; ?>/Upload/File' method='post' enctype='multipart/form-data'></form>");
-        }
-    });
-
-    $(".uploadbtn_nav").click(function(){
-        var percent = $('.percent_nav');
-        var showimg = $('#showimg_nav');
-        var zhezhao = $("#zhezhao_nav");
-        var image_nav = $("#image_nav");
-        var btn = $(".btn span");
-        $("#myupload").ajaxSubmit({
-            dataType:  'json',
-            beforeSend: function() {
-                showimg.empty();
-                zhezhao.show();
-                var percentVal = '0%';
-                percent.html(percentVal);
-                btn.html("上传中...");
-            },
-            uploadProgress: function(event, position, total, percentComplete) {
-                $("#zhezhao_nav").attr("class","mask opacity");
-                $("#zhezhao_nav").css('width',$(window).width());
-                $("#zhezhao_nav").css('height',$(window).height());
-                var percentVal = percentComplete + '%';
-                percent.html(percentVal);
-                $("#zhezhao_nav").css('margin-left',$(window).width()/2-50);
-                $("#zhezhao_nav").css('margin-top',$(window).height()/2-10);
-            },
-            success: function(data) {
-                var img = "<?php echo Yii::app()->request->baseUrl;?>/upload/slider/"+data.pic;
-                zhezhao.hide();
-                image_nav.val(data.pic);
-                showimg.html("<img width='140px' height='140px' src='"+img+"'><button onclick='delinavmage(this)' datadir='slider' data='"+data.pic+"'class='btn btn-mini btn-danger del_btn'>删除</button>");
-                btn.html("添加附件");
-            },
-            error:function(xhr){
-                btn.html("上传失败");
-            }
+    KindEditor.ready(function(K) {
+        var editor = K.editor({
+            allowFileManager : true ,
+            fileManagerJson : '<?php echo Yii::app()->request->baseUrl;?>/js/kind/php/file_manager_json.php?dir=image&s=<?php echo Yii::app()->session['user']->id;?>',
+            uploadJson : '<?php echo Yii::app()->request->baseUrl;?>/js/kind/php/upload_json.php?dir=image&s=<?php echo Yii::app()->session['user']->id;?>'
+        });
+        K('.nav_fileupload').click(function() {
+            var showimg = $('#showimg_nav');
+            var image_nav = $("#image_nav");
+            editor.loadPlugin('image', function() {
+                editor.plugin.imageDialog({
+                    clickFn : function(url, title, width, height, border, align) {
+                        showimg.html("<img width='140px' height='140px' src='"+url+"'><button onclick='delinavmage(this)' data='"+url+"'class='btn btn-mini btn-danger del_btn'>删除</button>");
+                        image_nav.val(url);
+                        editor.hideDialog();
+                    }
+                });
+            });
         });
     });
+
 
     $("#nav_postbtn").click(function(){
         var position = $("#position_nav").val();
@@ -670,12 +612,12 @@
        if(img_nav.length != 0){
            $.post("<?php Yii::app()->request->baseUrl; ?>/Weixin/Navsave",{site_id:site,template_id:template,position:position,navdata:navdata},function(data){
                 if(data.code == 0){
-                    $("#"+position+"_image").prop('src',"<?php echo Yii::app()->request->baseUrl;?>/upload/slider/"+img_nav)
+                    $("#"+position+"_image").prop('src',img_nav)
                     $("#"+position+"_atext").text(nav_title);
                     /* have problem */
                     $("#"+position+"_box").prop(position+'_nav_link',nav_link);
                     $("#"+position+"_box").prop(position+'_title',nav_title);
-                    $("#"+position+"_box").prop(position+'_image',"<?php echo Yii::app()->request->baseUrl;?>/upload/slider/"+img_nav);
+                    $("#"+position+"_box").prop(position+'_image',img_nav);
                     $('#naveditdiv').hide();
                     notif({
                         type: "success",

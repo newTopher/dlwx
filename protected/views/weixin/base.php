@@ -60,16 +60,20 @@
                             <div class="control-group">
                                 <label class="control-label" for="fileInput">微信回复消息配图</label>
                                 <div class="controls">
-                                    <div class="uploader" id="uniform-fileInput"><input class="input-file uniform_on" name="msg_image" type="file" size="19" style="opacity: 0;"><span class="filename">No file selected</span><span class="action">Choose File</span></div>
+
+                                        <input class="input-file uniform_on" name="msg_image" id="msg_image" type="hidden" size="19" value="<?php echo $webdata->msg_image; ?>">
+                                        <input type="button" class="btn btn-info" id="image1" value="选择图片" />
+
                                     <?php if(isset($webdata->msg_image)): ?>
                                         <div style="margin-top: 10px;margin-left: 2px;">
-                                            <img src="<?php echo Yii::app()->request->baseUrl.'/upload/wxwebsite/'.$webdata->msg_image; ?>" class="img-rounded"style="width: 160px; height: 100px;">
+                                            <img src="<?php echo $webdata->msg_image; ?>" class="img-rounded"style="width: 160px; height: 100px;">
                                         </div>
                                     <?php endif; ?>
 
                                     <p class="help-block"><span class="label label-important">注意</span>&nbsp;用户回复关键词后,返回的信息图片,建议尺寸720*400像素</p>
                                 </div>
                             </div>
+                            <!--
                             <div class="control-group">
                                 <label class="control-label" for="fileInput">微信官网封面图片</label>
                                 <div class="controls">
@@ -82,6 +86,7 @@
                                     <p class="help-block"><span class="label label-info">建议</span>&nbsp;尺寸640*1136像素</p>
                                 </div>
                             </div>
+                            -->
                             <div class="form-actions">
                                 <button type="submit" class="btn btn-primary">保存</button>
                                 <button class="btn">取消</button>
@@ -97,3 +102,22 @@
 
 </div>
 </div>
+<script type="text/javascript">
+    KindEditor.ready(function(K) {
+        var editor = K.editor({
+            allowFileManager : true ,
+            fileManagerJson : '<?php echo Yii::app()->request->baseUrl;?>/js/kind/php/file_manager_json.php?dir=image&s=<?php echo Yii::app()->session['user']->id;?>',
+            uploadJson : '<?php echo Yii::app()->request->baseUrl;?>/js/kind/php/upload_json.php?dir=image&s=<?php echo Yii::app()->session['user']->id;?>'
+        });
+        K('#image1').click(function() {
+            editor.loadPlugin('image', function() {
+                editor.plugin.imageDialog({
+                    clickFn : function(url, title, width, height, border, align) {
+                        K('#msg_image').val(url);
+                        editor.hideDialog();
+                    }
+                });
+            });
+        });
+    });
+</script>

@@ -125,18 +125,25 @@ class Controller extends CController
             $selectdata['tuandata'] = null;
         }
 
-        $urldata = UrllistModel::getUrldata();
+        $urldata = UrllistModel::getUrldataByUid(Yii::app()->session['user']->id);
         if($urldata){
             $selectdata['urldata'] = $urldata;
         }else{
             $selectdata['urldata'] = null;
         }
 
-        $sourcedata = SingleNewsMsgModel::getDataAllSingleNewsMsg();
+        $sourcedata = SingleNewsMsgModel::getDataAllSingleNewsMsg(Yii::app()->session['user']->id);
         if($sourcedata){
             $selectdata['sourcedata'] = $sourcedata;
         }else{
-            $selectdata['urldata'] = null;
+            $selectdata['sourcedata'] = null;
+        }
+
+        $liuyandata = LiuyanModel::getLiuyanByUid(Yii::app()->session['user']->id);
+        if($liuyandata){
+            $selectdata['liuyandata'] = $liuyandata;
+        }else{
+            $selectdata['liuyandata'] = null;
         }
 
         return $selectdata;

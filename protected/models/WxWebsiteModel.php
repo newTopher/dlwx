@@ -17,7 +17,6 @@ class WxWebsiteModel extends Ar{
     public $msg_title;
     public $msg_description;
     public $msg_image;
-    public $index_image;
     public $status;
     public $add_time;
     public $update_time;
@@ -53,9 +52,6 @@ class WxWebsiteModel extends Ar{
         );
         if(!empty($this->msg_image)){
             $data['msg_image']=$this->msg_image;
-        }
-        if(!empty($this->index_image)){
-            $data['index_image']=$this->index_image;
         }
         if(self::model()->updateByPk($this->id,$data)){
             return true;

@@ -101,6 +101,10 @@
                                             <option value="so_<?php echo $v->id; ?>"><?php echo $v->title; ?></option>
                                         <?php endforeach; ?>
                                     <?php endif; ?>
+                                    <?php if($selectdata['liuyandata'] != null): ?>
+                                        <optgroup label="-----------留言板模块----------"></optgroup>
+                                        <option value="liu_<?php echo $selectdata['liuyandata']->id; ?>" ><?php echo $selectdata['liuyandata']->name; ?></option>
+                                    <?php endif; ?>
                                 </select>
                             </div>
                         </div>

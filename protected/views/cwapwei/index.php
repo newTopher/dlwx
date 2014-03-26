@@ -42,11 +42,11 @@
     <div class="pub_time"><?php echo date("Y.m.d",$menudata->add_time); ?></div>
     <div class="head_logo">
         <div>
-            <span style="background-image:url('<?php echo Yii::app()->request->baseUrl; ?>/js/wapwei/chat_64px.png');"></span>
+            <span style="background-image:url('<?php echo Yii::app()->request->hostInfo; ?>/upload/weixin_headimg/<?php echo $userdata->fakeid.'.png'; ?>');"></span>
         </div>
         <div style="width:100%;">
             <label>
-                <a id="post-user" href="javascript::viewProfile();">点击关注<?php echo $webdata->webname_title; ?>
+                <a id="post-user" href="javascript::viewProfile();"><?php echo $webdata->webname_title; ?>
             </label>
             <div style="color:#ccc;"><?php echo $userdata->wx_account; ?></div>
         </div>

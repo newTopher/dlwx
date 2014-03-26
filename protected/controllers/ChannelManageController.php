@@ -15,7 +15,8 @@ class ChannelManageController extends Controller{
         $channelModel = new ChannelModel();
         $channelModel->uid =  Yii::app()->session['user']->id;
         $channel_data = $channelModel->getChannelByUid();
-        $this->render('index',array('msg'=>$msg,'channel_data'=>$channel_data));
+        $this->render('index',array('msg'=>$msg,'channel_data'=>$channel_data,'msg'=>Yii::app()->session['msg']));
+        Yii::app()->session['msg']='';
     }
 
     public function actionAddChannel(){
@@ -44,11 +45,14 @@ class ChannelManageController extends Controller{
                 $channelModel->text = $text;
             }
             if($channelModel->addChannel()){
-                $this->redirect(Yii::app()->request->baseUrl.'/ChannelManage/Index/msg/添加成功');
+                Yii::app()->session['msg'] = '添加成功';
+                $this->redirect(Yii::app()->request->baseUrl.'/ChannelManage/Index');
             }else{
+                Yii::app()->session['msg'] = '添加失败';
                 $this->render('addchannelview',array('msg'=>'添加失败'));
             }
         }else{
+            Yii::app()->session['msg'] = '栏目名称不能为空';
             $this->render('addchannelview',array('msg'=>'栏目名称不能为空'));
         }
     }
@@ -90,7 +94,8 @@ class ChannelManageController extends Controller{
                 $channelModel->linkid = null;
             }
             if($channelModel->updateChannel()){
-                $this->redirect(Yii::app()->request->baseUrl.'/ChannelManage/Index/msg/修改成功');
+                Yii::app()->session['msg'] = '修改成功';
+                $this->redirect(Yii::app()->request->baseUrl.'/ChannelManage/Index');
             }else{
                 $this->render('addchannelview',array('msg'=>'修改失败'));
             }
@@ -106,12 +111,15 @@ class ChannelManageController extends Controller{
             $channelModel->id = $id;
             $channelModel->uid = Yii::app()->session['user']->id;
             if($channelModel->delChannel()){
-                $this->redirect(Yii::app()->request->baseUrl.'/ChannelManage/Index/msg/删除成功');
+                Yii::app()->session['msg'] = '删除成功';
+                $this->redirect(Yii::app()->request->baseUrl.'/ChannelManage/Inde');
             }else{
-                $this->redirect(Yii::app()->request->baseUrl.'/ChannelManage/Index/msg/删除失败');
+                Yii::app()->session['msg'] = '删除失败';
+                $this->redirect(Yii::app()->request->baseUrl.'/ChannelManage/Index');
             }
         }else{
-            $this->redirect(Yii::app()->request->baseUrl.'/ChannelManage/Index/msg/操作失败');
+            Yii::app()->session['msg'] = '操作失败';
+            $this->redirect(Yii::app()->request->baseUrl.'/ChannelManage/Index');
         }
     }
 
@@ -122,12 +130,15 @@ class ChannelManageController extends Controller{
             $channelModel->id = $id;
             $channelModel->uid = Yii::app()->session['user']->id;
             if($channelModel->delsubChannel()){
-                $this->redirect(Yii::app()->request->baseUrl.'/ChannelManage/Index/msg/删除成功');
+                Yii::app()->session['msg'] = '删除成功';
+                $this->redirect(Yii::app()->request->baseUrl.'/ChannelManage/Index');
             }else{
-                $this->redirect(Yii::app()->request->baseUrl.'/ChannelManage/Index/msg/删除失败');
+                Yii::app()->session['msg'] = '删除失败';
+                $this->redirect(Yii::app()->request->baseUrl.'/ChannelManage/Index');
             }
         }else{
-            $this->redirect(Yii::app()->request->baseUrl.'/ChannelManage/Index/msg/操作失败');
+            Yii::app()->session['msg'] = '操作失败';
+            $this->redirect(Yii::app()->request->baseUrl.'/ChannelManage/Index');
         }
     }
 

@@ -14,8 +14,8 @@
     <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl;?>/js/jquery-ui-1.8.21.custom.min.js"></script>
     <title>万普微盟</title>
     <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-    <meta name="Keywords" content="微盟、微信营销、微信代运营、微信定制开发、微信托管、微网站、微商城、微营销">
-    <meta name="Description" content="微盟，国内最大的微信公众智能服务平台，微盟八大微体系：微菜单、微官网、微会员、微活动、微商城、微推送、微服务、微统计，企业微营销必备。">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
     <!-- Mobile Devices Support @begin -->
     <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
     <meta content="no-cache" http-equiv="pragma">

@@ -56,5 +56,9 @@
             return self::model()->findByAttributes(array('uid'=>$uid));
         }
 
+        static public function getLiuyanById($id){
+            return self::model()->findByPk(array('id'=>$id));
+        }
+
 
     }

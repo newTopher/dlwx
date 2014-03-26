@@ -15,7 +15,13 @@ class LiuyanManageController extends Controller{
         if(!$liuyanlist){
             $liuyanlist = null;
         }
-        $this->render('index',array('msg'=>Yii::app()->session['msg'],'liuyanlist'=>$liuyanlist));
+
+        $liuyanListModel = new LiuyanListModel();
+        $liuyanListModel->uid = Yii::app()->session['user']->id;
+        $liulistdata =$liuyanListModel->getAllLiuyanList();
+
+        $this->render('index',array('msg'=>Yii::app()->session['msg'],'liuyanlist'=>$liuyanlist,
+            'liulistdata'=>$liulistdata));
         Yii::app()->session['msg'] = '';
     }
 
@@ -25,6 +31,7 @@ class LiuyanManageController extends Controller{
         $index_title = Yii::app()->request->getParam('index_title');
         $index_image = Yii::app()->request->getParam('index_image');
         $description = Yii::app()->request->getParam('description');
+
         $liuyanModel = new LiuyanModel();
         $liuyanModel->name = $name;
         $liuyanModel->index_title = $index_title;
@@ -52,6 +59,8 @@ class LiuyanManageController extends Controller{
 
         }
 
+
     }
+
 
 }

@@ -6,7 +6,7 @@
             <h2>留言板设置</h2>
         </div>
 
-        <div class="box-content">
+        <div class="box-content" style="min-height: 550px;">
             <form class="form-horizontal" method="post" action="<?php echo Yii::app()->request->baseUrl; ?>/LiuyanManage/Insertliuyan">
                 <fieldset>
                     <input type="hidden" name="id" value="<?php if($liuyanlist != null){ echo $liuyanlist->id; }?>">
@@ -75,7 +75,47 @@
             </div>
         <?php endif;?>
 
+        <div class="box-header well">
+            <h2>留言列表</h2>
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>用户昵称</th>
+                <th>留言内容</th>
+                <th>留言时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php if($liulistdata): ?>
+                <?php foreach($liulistdata as $k=>$v): ?>
+                    <tr>
+                        <td><?php echo $v['one']['id']; ?></td>
+                        <td><?php echo $v['one']['name']; ?></td>
+                        <td><?php echo $v['one']['content']; ?></td>
+                        <td><?php echo date("Y-m-d H:i:s",$v['one']['add_time']); ?></td>
+                        <td>
+                            <a onclick="return confirm('确定要删除此条评论吗？')" href="<?php echo Yii::app()->request->baseUrl; ?>/AutoReplay/DelKeyword/id/<?php echo $v['one']['id']; ?>" class="btn btn-mini btn-danger">删除</a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            <?php else : ?>
+                <div class="alert alert-info" style="margin-top: 10px;">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>提示信息!</strong>您还没有添加任何关键词哦!.
+                </div>
+            <?php endif; ?>
+            </tbody>
+        </table>
+
     </div>
+
+
+
+
 </div>
 
 </div>

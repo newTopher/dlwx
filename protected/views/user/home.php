@@ -181,9 +181,21 @@
                     <tbody>
                     <?php if($userdata->open_weixin == 1): ?>
                     <tr>
-                        <td width="200px;">公众账号用户名</td>
-                        <td><?php echo $userdata->wx_account; ?></td>
+                        <td width="200px;">公众号头像</td>
+                        <td><img width="60px" height="60px" src="<?php echo Yii::app()->request->baseurl.'/upload/weixin_headimg/'.$userdata->fakeid.'.png'; ?>" ></td>
+                    </tr>
+                    <tr>
+                        <td width="200px;">公众账号名称</td>
+                        <td><?php echo $userdata->name; ?></td>
 
+                    </tr>
+                    <tr>
+                        <td width="200px;">微信公众账号</td>
+                        <td><?php echo $userdata->wx_account; ?></td>
+                    </tr>
+                    <tr>
+                        <td width="200px;">公众号二维码</td>
+                        <td><img width="100px" height="100px" src="<?php echo Yii::app()->request->baseurl.'/upload/weixin_qrcode/'.$userdata->fakeid.'.png'; ?>" ></td>
                     </tr>
                     <?php endif; ?>
                     <?php if($userdata->open_weixin == 1): ?>
@@ -242,25 +254,25 @@
                             <button type="button" class="close" data-dismiss="alert">×</button>
                             <strong>提示信息!</strong>  输入您的微信公众平台账号和密码为您智能绑定平台.
                         </div>
-                        <form method="post" action="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Autobind" class="form-horizontal">
+                        <form method="post" action="" class="form-horizontal">
                             <input type="hidden" name="id" value="10">
                             <fieldset>
 
                                 <div class="control-group">
                                     <label class="control-label" for="focusedInput">微信公众账号</label>
                                     <div class="controls">
-                                        <input class="input-xlarge focused" name="username" type="text" >
+                                        <input class="input-xlarge focused" id="wx_name" name="username" type="text" >
                                     </div>
                                 </div>
                                 <div class="control-group">
                                     <label class="control-label" for="focusedInput">密码</label>
                                     <div class="controls">
-                                        <input class="input-xlarge focused" name="pwd" type="password" >
+                                        <input class="input-xlarge focused" id="wx_pwd" name="pwd" type="password" >
                                     </div>
                                 </div>
 
                                 <div class="form-actions">
-                                    <button type="submit" class="btn btn-primary">保存</button>
+                                    <button type="button" id="auto_btn" class="btn btn-primary">保存</button>
                                     <button class="btn">取消</button>
                                 </div>
                             </fieldset>
@@ -278,5 +290,59 @@
 
 </div>
 </div>
+<script type="text/javascript">
+
+        $("#auto_btn").click(function(){
+            var wx_name = $("#wx_name").val();
+            var wx_pwd = $("#wx_pwd").val();
+            if(!wx_name){
+                notif({
+                    type: "warning",
+                    msg: "微信公众账号不能为空",
+                    position: "center",
+                    width:"all",
+                    height:100,
+                    opacity: 1
+                });
+                return false;
+            }
+            if(!wx_pwd){
+                notif({
+                    type: "warning",
+                    msg: "微信公众账号密码不能为空",
+                    position: "center",
+                    width:"all",
+                    height:100,
+                    opacity: 1
+                });
+                return false;
+            }
+
+            $.post('<?php Yii::app()->request->baseUrl;?>/Weixin/Autobind',{username:wx_name,pwd:wx_pwd},function(data){
+                if(data.code == 0){
+                    notif({
+                        type: "success",
+                        msg:'绑定成功,进入万普微盟平台',
+                        position: "center",
+                        width:"all",
+                        height:100,
+                        opacity: 1
+                    });
+                    $("#autoModal").modal('hide');
+                    window.location.reload();
+                }else{
+                    notif({
+                        type: "warning",
+                        msg: data.msg,
+                        position: "center",
+                        width:"all",
+                        height:100,
+                        opacity: 1
+                    });
+                    return false;
+                }
+            },'json');
+        });
+</script>
 
 

@@ -27,9 +27,8 @@ class UploadController extends Controller{
     }
 
     public function actionDelimage(){
-        $dir = Yii::app()->request->getParam('dir');
         $name = Yii::app()->request->getParam('name');
-        $path = Yii::getPathOfAlias('webroot').'/upload/'.$dir.'/'.$name;
+        $path = Yii::getPathOfAlias('webroot').$name;
         if(file_exists($path)){
             if(unlink($path)){
                 $result = array(

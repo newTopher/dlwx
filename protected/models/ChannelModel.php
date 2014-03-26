@@ -96,6 +96,17 @@ class ChannelModel extends Ar{
         return self::model()->findByPk(array('id'=>$id));
     }
 
+    static public function getPidChannel($pid){
+        $cdb = new CDbCriteria();
+        $cdb->addCondition('pid='.$pid);
+        $cdb->order='add_time desc';
+        if($data = self::model()->findAll($cdb)){
+            return $data;
+        }else{
+            return false;
+        }
+    }
+
 
 
 }

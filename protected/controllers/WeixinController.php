@@ -27,24 +27,8 @@ class WeixinController extends Controller{
         //$wxWebsiteModel->replay_keywords = Yii::app()->request->getParam('replay_keywords','');
         $wxWebsiteModel->msg_title = Yii::app()->request->getParam('msg_title','');
         $wxWebsiteModel->msg_description = Yii::app()->request->getParam('msg_description','');
-        if(isset($_FILES['msg_image'])){
-            $msgImageUrl = '';
-            $dir = 'wxwebsite';
-            $name = $_FILES['msg_image']['name']; //上传图片原名
-            $type = $_FILES['msg_image']['type']; //上传图片mime类型
-            $tmp_name = $_FILES['msg_image']['tmp_name']; //上传图片临时存放位置
-            $msgImageUrl = Upload::createImageLink($name, $type, $tmp_name,$dir);
-            $wxWebsiteModel->msg_image = $msgImageUrl;
-        }
-        if(isset($_FILES['index_image'])){
-            $indexImageUrl = '';
-            $dir = 'wxwebsite';
-            $name = $_FILES['index_image']['name']; //上传图片原名
-            $type = $_FILES['index_image']['type']; //上传图片mime类型
-            $tmp_name = $_FILES['index_image']['tmp_name']; //上传图片临时存放位置
-            $indexImageUrl = Upload::createImageLink($name, $type, $tmp_name,$dir);
-            $wxWebsiteModel->index_image = $indexImageUrl;
-        }
+        $wxWebsiteModel->msg_image = Yii::app()->request->getParam('msg_image','');
+
         if(!empty($wxWebsiteModel->id)){
             if($wxWebsiteModel->getWxWebById()){
                 if($wxWebsiteModel->updateWxWebById()){
@@ -349,13 +333,46 @@ class WeixinController extends Controller{
     }
 
     public function actionAutobind(){
+        Yii::import("application.weixin.*");
         $username = Yii::app()->request->getParam('username');
         $pwd = Yii::app()->request->getParam('pwd');
-        $this->_account = $username;
-        $this->_password = $pwd;
-        $this->wxlogin();
-        $data = $this->getAllUserInfo();
-        print_r($data);exit;
+        $ro = new WX_Remote_Opera();
+        $token=$ro->test_login($username,$pwd);
+        if(!$token){
+            echo CJSON::encode(array('code'=>'-1','msg'=>'用户名或者密码错误请重试'));
+            return false;
+        }else{
+            $userModel = new UserModel();
+            $userModel->id = Yii::app()->session['user']->id;
+            $userdata = $userModel->getUserById();
+            if($token!=''){
+                $ro->init($username,$pwd);
+                //Array ( [wx_account] => diaobaojiecao [fakeid] => 3083415613 [nickname] => 屌爆段子 [ghid] => gh_8da4455c132d )
+                $info=$ro->get_account_info();
+                if(!$info){
+                    echo CJSON::encode(array('code'=>'-1','msg'=>'绑定失败请重试'));
+                    return false;
+                }else{
+                    $ro->getheadimg($info['fakeid']);
+                    $ro->getqrcode($info['fakeid']);
+                    $userModel->fakeid = $info['fakeid'];
+                    $userModel->wx_appid = $info['ghid'];
+                    $userModel->wx_p = $pwd;
+                    $userModel->wx_account = $info['wx_account'];
+                    $userModel->name = $info['nickname'];
+                    $userModel->updateUserAlldata();
+                    $res = $ro->quick_set_api(TOKEN,'http://weixin.wapwei.com/api/bind/t/'.$userdata->wx_token);
+                    if($res['ret'] == 0){
+                        echo CJSON::encode(array('code'=>'0','msg'=>'绑定成功'));
+                        return true;
+                    }else{
+                        echo CJSON::encode(array('code'=>'-1','msg'=>'绑定失败请重试'));
+                        return false;
+                    }
+                }
+            }
+        }
+
     }
 
 

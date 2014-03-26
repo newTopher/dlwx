@@ -39,6 +39,8 @@ class UserModel extends Ar{
     public $wx_appid;
     public $wx_appsecret;
     public $wx_openid;
+    public $fakeid;
+    public $wx_p;
 
     public static function model($className=__CLASS__){
         return parent::model($className);
@@ -65,6 +67,14 @@ class UserModel extends Ar{
 
     public function getUserById(){
         return self::model()->findByPk($this->id);
+    }
+
+    public function updateLoginTime(){
+      if(self::model()->updateByPk($this->id,array('last_login_time'=>time()))){
+       return true;
+      }else{
+          return false;
+      }
     }
 
     public function updateUser(){
@@ -147,6 +157,21 @@ class UserModel extends Ar{
     public function closeWeixin(){
         $user = self::model()->findByPk($this->id);
         $user->open_weixin = null;
+        $user->update_time = time();
+        if($user->save()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public function updateUserAlldata(){
+        $user = self::model()->findByPk($this->id);
+        $user->fakeid = $this->fakeid;
+        $user->wx_openid = $this->wx_openid;
+        $user->wx_account = $this->wx_account;
+        $user->name = $this->name;
+        $user->wx_p = $this->wx_p;
         $user->update_time = time();
         if($user->save()){
             return true;

@@ -57,8 +57,8 @@ class SingleNewsMsgModel extends Ar{
         self::model()->findByAttributes(array('uid'=>$uid,'keywords'=>$keywords));
     }
 
-    static public function getDataAllSingleNewsMsg(){
-        return self::model()->findAll();
+    static public function getDataAllSingleNewsMsg($uid){
+        return self::model()->findAllByAttributes(array('uid'=>$uid));
     }
 
     public function delsingle(){

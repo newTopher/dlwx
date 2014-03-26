@@ -45,6 +45,7 @@ class ApiController extends CController {
                 }else{
                     $userModel = new UserModel();
                     $userModel->wx_token = $t;
+                    //file_put_contents('1.txt','123');
                     if($userModel->updateByToken()){
                         $this->valid();exit;
                     }else{
@@ -61,7 +62,7 @@ class ApiController extends CController {
         $nonce =  Yii::app()->request->getParam('nonce');
         $token = $this->token;
         $tmpArr = array($token, $timestamp, $nonce);
-        sort($tmpArr);
+        sort($tmpArr,SORT_STRING);
         $tmpStr = implode( $tmpArr );
         $tmpStr = sha1( $tmpStr );
         if( $tmpStr == $signature ){
@@ -73,6 +74,7 @@ class ApiController extends CController {
 
     public function valid(){
         $echoStr = Yii::app()->request->getParam('echostr');
+        //file_put_contents('1.txt',$echoStr);
         echo $echoStr;
     }
 
@@ -123,6 +125,8 @@ class ApiController extends CController {
                                     $this->getName($temp[1]);
                                 }else if($temp[0] == 'so'){
                                     $this->getSource($temp[1]);
+                                }else if($temp[0] == 'liu'){
+                                    $this->getLiuyan($temp[1]);
                                 }else{
                                     $this->nouseReplay();
                                 }
@@ -170,6 +174,8 @@ class ApiController extends CController {
                                     $this->getName($temp[1]);
                                 }else if($temp[0] == 'so'){
                                     $this->getSource($temp[1]);
+                                }else if($temp[0] == 'liu'){
+                                    $this->getLiuyan($temp[1]);
                                 }else{
                                     $this->nouseReplay();
                                 }
@@ -265,6 +271,8 @@ class ApiController extends CController {
                         $this->getName($temp[1]);
                     }else if($temp[0] == 'so'){
                         $this->getSource($temp[1]);
+                    }else if($temp[0] == 'liu'){
+                        $this->getLiuyan($temp[1]);
                     }else{
                         $this->nouseReplay();
                     }
@@ -321,6 +329,8 @@ class ApiController extends CController {
                     $this->getName($temp[1]);
                 }else if($temp[0] == 'so'){
                     $this->getSource($temp[1]);
+                }else if($temp[0] == 'liu'){
+                    $this->getLiuyan($temp[1]);
                 }else{
                     $this->insertReplay('nouse',null,1);
                 }
@@ -548,7 +558,7 @@ class ApiController extends CController {
         $data = new stdClass();
         $data->title = $webData->msg_title;
         $data->description = $webData->msg_description;
-        $data->picurl =  Yii::app()->request->hostInfo.'/upload/wxwebsite/'.$webData->msg_image;
+        $data->picurl =  Yii::app()->request->hostInfo.$webData->msg_image;
         $data->url = Yii::app()->request->hostInfo.'/W/I/sid/'.$this->userdata->id.'/f/'.$this->postObj->FromUserName;
         $this->insertReplay('WeiWebMsg','w_1',2);
         $this->responseImageText($data);
@@ -590,6 +600,23 @@ class ApiController extends CController {
         }
     }
 
+    /*
+     * 留言板
+     */
+    public function getLiuyan($id){
+        $liuyandata = LiuyanModel::getLiuyanById($id);
+        if($liuyandata){
+            $data = new stdClass();
+            $data->title = $liuyandata->index_title;
+            $data->description = $liuyandata->description;
+            $data->picurl =  Yii::app()->request->hostInfo.'/upload/slider/'.$liuyandata->index_image;
+            $data->url = Yii::app()->request->hostInfo.'/Liuwapwei/I/sid/'.$this->userdata->id.'/f/'.$this->postObj->FromUserName.'/s/'.$liuyandata->id;
+            $this->insertReplay('Liuyan','liu_'.$liuyandata->id,2);
+            $this->responseImageText($data);
+        }else{
+            return false;
+        }
+    }
 
     public function insertReplay($type,$data,$stype){
         $msglistModel = new MsgListModel();

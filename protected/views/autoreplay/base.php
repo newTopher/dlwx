@@ -102,6 +102,11 @@
                                                     <option value="so_<?php echo $v->id; ?>" <?php if($firstData != null){ if($firstData->source_id == 'so_'.$v->id){ echo 'selected';}} ?>><?php echo $v->title; ?></option>
                                                 <?php endforeach; ?>
                                             <?php endif; ?>
+
+                                            <?php if($selectdata['liuyandata'] != null): ?>
+                                                <optgroup label="-----------留言板模块----------"></optgroup>
+                                                <option value="liu_<?php echo $selectdata['liuyandata']->id; ?>" <?php if($firstData != null){ if($firstData->source_id == 'liu_'.$selectdata['liuyandata']->id){ echo 'selected';}} ?>><?php echo $selectdata['liuyandata']->name; ?></option>
+                                            <?php endif; ?>
                                         </select>
                                     </div>
                                 </div>
@@ -207,6 +212,11 @@
                                                 <?php foreach($selectdata['sourcedata'] as $k=>$v): ?>
                                                     <option value="so_<?php echo $v->id; ?>" <?php if($nouseData != null){ if($nouseData->source_id == 'so_'.$v->id){ echo 'selected';}} ?>><?php echo $v->title; ?></option>
                                                 <?php endforeach; ?>
+                                            <?php endif; ?>
+
+                                            <?php if($selectdata['liuyandata'] != null): ?>
+                                                <optgroup label="-----------留言板模块----------"></optgroup>
+                                                <option value="liu_<?php echo $selectdata['liuyandata']->id; ?>" <?php if($nouseData != null){ if($nouseData->source_id == 'liu_'.$selectdata['liuyandata']->id){ echo 'selected';}} ?>><?php echo $selectdata['liuyandata']->name; ?></option>
                                             <?php endif; ?>
                                         </select>
                                     </div>

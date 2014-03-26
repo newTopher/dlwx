@@ -1,4 +1,12 @@
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/ckeditor/ckeditor.js"></script>
+<script type="text/javascript">
+    $(function() {
+        var editor = KindEditor.create('textarea[name="text"]',{
+            allowFileManager : true ,
+            uploadJson : '<?php echo Yii::app()->request->baseUrl;?>/js/kind/php/upload_json.php?dir=image&s=<?php echo Yii::app()->session['user']->id;?>',
+            fileManagerJson : '<?php echo Yii::app()->request->baseUrl;?>/js/kind/php/file_manager_json.php?dir=image&s=<?php echo Yii::app()->session['user']->id;?>'
+        });
+    });
+</script>
 <div class="row-fluid">
     <div class="box span12">
         <div class="box-header well">
@@ -80,6 +88,11 @@
                                                 <option value="t_<?php echo $v->id; ?>"><?php echo $v->name; ?></option>
                                             <?php endforeach; ?>
                                         <?php endif; ?>
+
+                                        <?php if($selectdata['liuyandata'] != null): ?>
+                                            <optgroup label="-----------留言板模块----------"></optgroup>
+                                            <option value="liu_<?php echo $selectdata['liuyandata']->id; ?>"><?php echo $selectdata['liuyandata']->name; ?></option>
+                                        <?php endif; ?>
                                     </select>
                                     &nbsp; &nbsp;&nbsp;&nbsp;<span class="label label-important">注意</span>&nbsp;<font color='green'>使用链接形式将不能填写栏目内容</font>
                                 </div>
@@ -103,11 +116,8 @@
                             <div class="control-group" id="text_box">
                                 <label class="control-label" for="focusedInput">详细内容</label>
                                 <div class="controls">
-                                    <textarea name="text" id="text_content"></textarea>
+                                    <textarea name="text" style="width:800px;height:200px;" id="text_content"></textarea>
                                 </div>
-                                <script type="text/javascript">
-                                    CKEDITOR.replace( 'text' );
-                                </script>
                             </div>
                             <div class="form-actions">
                                 <button type="submit" id="sub_btn" class="btn btn-primary">保存</button>

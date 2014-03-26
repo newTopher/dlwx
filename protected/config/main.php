@@ -18,6 +18,7 @@ $config = array(
         'application.utils.*',
         'application.extensions.image.*',
         'application.extensions.helpers.*',
+        'application.weixin.*',
     ),
     'defaultController'=>"Index",
     'modules'=>array(

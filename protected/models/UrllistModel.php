@@ -44,8 +44,8 @@ class UrllistModel extends Ar{
         }
     }
 
-    static public function getUrldata(){
-        return self::model()->findAll();
+    static public function getUrldataByUid($uid){
+        return self::model()->findAllByAttributes(array('uid'=>$uid));
     }
 
 

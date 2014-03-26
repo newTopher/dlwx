@@ -7,13 +7,14 @@
         <div class="box-content">
             <div class="trade" style="width: 100%;height: 35px;line-height: 35px;padding: 15px;">
                 <a <?php if($trade_id == 0){ echo "class='btn btn-info'"; }else{ echo "class='btn'"; }?> href="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Templateselect/trade_id/0" class="cur">全部</a>
-                <a <?php if($trade_id == 1){ echo "class='btn btn-info'"; }else{ echo "class='btn'"; }?> href="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Templateselect/trade_id/1" class="">基础版</a>
+                <!--<a <?php if($trade_id == 1){ echo "class='btn btn-info'"; }else{ echo "class='btn'"; }?> href="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Templateselect/trade_id/1" class="">基础版</a>
                 <a <?php if($trade_id == 2){ echo "class='btn btn-info'"; }else{ echo "class='btn'"; }?> href="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Templateselect/trade_id/2" class="">餐饮</a>
                 <a <?php if($trade_id == 3){ echo "class='btn btn-info'"; }else{ echo "class='btn'"; }?> href="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Templateselect/trade_id/3" class="">旅游</a>
                 <a <?php if($trade_id == 4){ echo "class='btn btn-info'"; }else{ echo "class='btn'"; }?> href="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Templateselect/trade_id/4" class="">婚庆</a>
                 <a <?php if($trade_id == 5){ echo "class='btn btn-info'"; }else{ echo "class='btn'"; }?> href="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Templateselect/trade_id/5" class="">教育</a>
                 <a <?php if($trade_id == 6){ echo "class='btn btn-info'"; }else{ echo "class='btn'"; }?> href="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Templateselect/trade_id/6" class="">汽车</a>
                 <a <?php if($trade_id == 7){ echo "class='btn btn-info'"; }else{ echo "class='btn'"; }?> href="<?php echo Yii::app()->request->baseUrl; ?>/Weixin/Templateselect/trade_id/7" class="">酒店</a>
+            -->
             </div>
             <ul class="thumbnails gallery" id="<?php echo $trade_id;?>">
                 <?php foreach($list as $val):?>
@@ -37,7 +38,7 @@
             $(this).click(function(){
                 var trade_id = $(this).attr('trade_id');
                 var id = $(this).attr('id');
-                if(id > 21){
+                /*if(id > 21){
                     notif({
                         type: "warning",
                         msg: "您不可以选择此模板哦，您所用的为测试账号",
@@ -48,7 +49,10 @@
                     });
                     return false;
                 }
-                if(mytrade_id != trade_id){
+                */
+
+                //if(mytrade_id != trade_id){
+                if(false){
                     notif({
                         type: "warning",
                         msg: "您不可以选择此模板哦，请先确认自己可用的模板类型",
